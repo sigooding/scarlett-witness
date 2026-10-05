@@ -6,7 +6,6 @@ import { BLADE_RUNNER_ACT1 as S } from '../src/data/bladeRunnerAct1';
 import { BR_HD_SHEETS } from '../src/data/bladeRunnerHdAssets';
 import { createInitialState, meetsGating, resolveHotspot, validateStory, hotspotFiresOnWalkOver, hotspotLeavesScene } from '../src/logic';
 import { initialSim, availableDecisions, applyDecision, isStuck, type Decision } from '../src/game/decisions';
-import { stageHotspotApproachable, stageExitProbes, stageReturnPath } from '../src/game/stageNavigation';
 import { despillEdges, forgeFrameLayout } from '../src/studio/spriteForge';
 import { nextSceneMediaPlan } from '../src/game/scenePreload';
 import { EXPORT_PREVIEW_LIMIT, exportPreviewText, createPortableStoryBundle } from '../src/studio/exportBundle';
@@ -49,49 +48,6 @@ await test('canonical opening is Carson Street with McCoy’s equipment; revisit
   assert.equal(S.characters.find(c => c.id === 'br_cop')!.name, 'Officer Leary');
   assert.equal(S.characters.find(c => c.id === 'br_bryant')!.name, 'Lieutenant Guzza');
   assert.equal(scene('br_runciter_int').hotspots!.find(h => h.id === 'br_hs_lucy_talk')!.action.type, 'showText');
-});
-await test('every walkable room has an approachable local exit and return to LAPD WITHOUT a map', () => {
-  const noMap = { ...S, map: undefined };
-  for (const s of S.scenes.filter(s => s.nodeType === 'stage' && !s.isEnding)) {
-    assert.ok(stageExitProbes(noMap, s).some(e => e.open), s.id);
-    assert.ok(stageReturnPath(noMap, s.id, 'br_mainframe_hub'), s.id);
-    for (const h of s.hotspots ?? []) assert.equal(hotspotFiresOnWalkOver(h, s.stage!.hotspotTrigger), false, `${s.id}/${h.id}`);
-  }
-});
-await test('navigation audit detects a removed apartment exit; a map cannot conceal it', () => {
-  const broken: Story = structuredClone(S);
-  const apt = broken.scenes.find(s => s.id === 'br_mccoy_apt')!;
-  apt.hotspots = apt.hotspots!.filter(h => !hotspotLeavesScene(h));
-  assert.equal(stageReturnPath(broken, apt.id, 'br_mainframe_hub'), null);
-  assert.ok(stageReturnPath(broken, apt.id, 'br_mainframe_hub', undefined, true), 'explicit opt-in map report is separate');
-});
-await test('navigation audit rejects an exit sealed behind a wall even when its target exists', () => {
-  const room = structuredClone(scene('br_runciter_int'));
-  room.stage = { ...room.stage, spawn: { x: 90, y: 90 }, floor: { top: 70, bottom: 95 }, obstacles: [{ x: 40, y: 60, w: 20, h: 40 }] };
-  const exits = stageExitProbes(S, room).filter(e => e.target === 'br_runciter_ext');
-  assert.ok(exits.length); assert.ok(exits.every(e => !e.open && /walkable/.test(e.reason!)));
-});
-await test('shop disk is approachable; audit catches the old evidence marker placed against furniture', () => {
-  const shop = scene('br_runciter_int');
-  const disk = shop.hotspots!.find(h => h.id === 'br_hs_take_disk')!;
-  assert.ok(stageHotspotApproachable(shop, disk, createInitialState(S)));
-  const broken = { ...disk, bounds: { x: 22, y: 65, w: 10, h: 18 } };
-  assert.equal(stageHotspotApproachable(shop, broken, createInitialState(S)), false);
-});
-await test('every new-room interaction is approachable from EVERY authored entry, before and after either outcome', () => {
-  const rooms = ['br_zuben_evade','br_chinatown_alley','br_warehouse_stairs','br_zuben_warehouse','br_howie_street'];
-  for (const id of rooms) for (const flags of [[], ['br_zuben_fled','br_zuben_ambush'], ['br_zuben_resolved','br_zuben_spared','br_gaff_aftermath'], ['br_zuben_resolved','br_zuben_retired','br_gaff_aftermath']]) {
-    const source = scene(id), state = { ...createInitialState(S), activeFlags: new Set(flags) };
-    const spawns = { default: source.stage!.spawn!, ...source.stage!.entrySpawns };
-    for (const [entry, spawn] of Object.entries(spawns)) {
-      const from = { ...source, stage: { ...source.stage!, spawn } };
-      for (const h of from.hotspots ?? []) {
-        const resolved = resolveHotspot(h,state);
-        if (meetsGating(resolved.gating,state)) assert.ok(stageHotspotApproachable(from,resolved,state),`${id} from ${entry}: ${h.id} with ${flags}`);
-      }
-      assert.ok(stageReturnPath({ ...S, map: undefined, scenes: S.scenes.map(s=>s.id===id?from:s) },id,'br_mainframe_hub',state),`${id}/${entry}: local return`);
-    }
-  }
 });
 await test('ambush and Gaff debrief become harmless reviews; old resolved saves never revive Zuben', () => {
   const state = { ...createInitialState(S), activeFlags: new Set(['br_zuben_ambush','br_zuben_resolved','br_zuben_spared','br_gaff_aftermath']) };

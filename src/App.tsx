@@ -332,9 +332,6 @@ export default function App() {
     if (mode.kind === "studio" || mode.kind === "gallery") audio.setAmbient(null);
   }, [mode.kind, resolvedTitleTheme.musicUrl, startMenuMusic]);
 
-  const updatedHollywood = STORIES.find((s) => s.id === "hollywood-opening");
-  const hasEarlierHollywood = catalog.some((s) => s.id === "hollywood-opening" &&
-    s.scenes.find((scene) => scene.id === "hh-opening")?.stage?.quake?.fps?.presentation !== "classic");
   const allStories = useMemo(() => (imported ? [...catalog, imported] : catalog), [catalog, imported]);
   /** ★ FEATURED — the big banner cards at the top of the newsstand, in the
    *  order the author listed them. Unresolvable ids are skipped so a hidden
@@ -880,21 +877,6 @@ export default function App() {
                 {verticalRack ? "Grid View" : "Magazine Rack"}
               </button>
             </div>
-
-            {hasEarlierHollywood && updatedHollywood && <aside className="mt-5 border border-gold/60 bg-noir-950/95 p-4 font-type text-xs text-paper/80" aria-label="Hollywood update available">
-              <strong className="text-gold">Hollywood Holocaust: classic-engine update available</strong>
-              <p className="mt-2">Your saved Studio draft and published game have been kept. Try the updated built-in without replacing either, or export it for review in Studio.</p>
-              <div className="mt-3 flex flex-wrap gap-3">
-                <button className="border border-gold/60 px-3 py-2 text-gold hover:bg-gold/10" onClick={() => play(updatedHollywood)}>Play updated Hollywood</button>
-                <button className="border border-paper/40 px-3 py-2 hover:bg-paper/10" onClick={async () => {
-                  try {
-                    const bundle = await createPortableStoryBundle(updatedHollywood);
-                    await downloadReel({ ...bundle.story, assets: bundle.assets }, "hollywood-holocaust-classic-v6.reel.json");
-                    if (bundle.missing.length) say(`Export warning: ${bundle.missing.length} media reference(s) could not be bundled.`);
-                  } catch { say("Could not export the updated level. Your saved game is unchanged."); }
-                }}>Export updated built-in</button>
-              </div>
-            </aside>}
 
             {/* ★ FEATURED — the front page of the magazine rack. Set in
                 Studio → Global Title Page Theme → Featured cases. Ids that no

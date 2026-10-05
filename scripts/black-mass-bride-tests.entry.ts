@@ -165,7 +165,7 @@ function mediaFixture() {
     episodes: [{ id: 'episode', title: 'Episode', startSceneId: 'room', titleCardImage: file('episode'), posterImage: file('poster'), titleCardMusicUrl: file('episode-music', 'wav'), recapLines: [{ text: '', image: file('recap') }] }],
     scenes: [{ id: 'room', title: 'Room', background: `video:${file('scene', 'mp4')}`, musicUrl: file('music', 'wav'), ambientAudio: `mp3:${file('ambience', 'mp3')}`, sceneAudioUrl: file('scene-cue', 'ogg'), narrationAudioUrl: file('narration', 'mp3'), prose: shared,
       cinematic: cine('scene'), credits: { montage: [shared, file('montage')] }, choices: [{ id: 'drive', text: 'Drive', ride: { vehicleImage: file('ride-vehicle'), roadImage: file('ride-road'), horizonImage: file('ride-horizon'), dashboardImage: file('ride-dashboard'), crashImage: file('ride-crash'), traffic: [file('ride-traffic'), 'emoji:🚗'], driverSheet: sheet('ride-driver') } }],
-      stage: { playerImage: file('local-player'), playerSheet: sheet('local-player-sheet'), walkFrames: [file('walk-frame')], objectMenuIcon: file('local-verb'), npcs: [{ id: 'npc', image: file('npc'), sheet: sheet('npc-sheet') }], quake: { wallTexture: file('wall'), floorTexture: file('floor'), handImage: file('hand'), props: { barrel: `${file('barrel')}@0.75`, lamp: `${file('lamp')}@2`, emoji: 'emoji:🌲@2' } } },
+      stage: { playerImage: file('local-player'), playerSheet: sheet('local-player-sheet'), walkFrames: [file('walk-frame')], objectMenuIcon: file('local-verb'), npcs: [{ id: 'npc', image: file('npc'), sheet: sheet('npc-sheet') }] },
       hotspots: [{ id: 'object', label: 'Object', cursor: 'use', bounds: { x: 0, y: 0, w: 20, h: 20 }, image: file('object'), sheet: sheet('object-sheet'), itemAudio: { clue: file('item-reply', 'mp3') },
         action: { type: 'startDialogue', audioUrl: file('action', 'mp3'), sfxUrl: file('action-sfx', 'wav'), arcadeGame: { cabinetImage: file('cabinet') }, topics: [{ id: 'topic', label: 'Topic', beats: [beat('topic')] }], then: [{ type: 'showText', sfxUrl: file('chain', 'wav'), then: [{ type: 'showText', audioUrl: file('deep-chain', 'mp3') }] }] },
         verbs: { look: { type: 'showText', audioUrl: file('verb-line', 'mp3'), topics: [{ id: 'verb-topic', label: 'Verb topic', beats: [beat('verb-topic')] }] } },
@@ -202,7 +202,6 @@ await test('schema-complete portable export: nested beats, states, chains, sheet
     assert.equal(bundle.story.tagline, '/portable/not-media.svg');
     assert.match(bundle.story.scenes[0].background, /^video:asset:/);
     assert.match(bundle.story.scenes[0].ambientAudio!, /^mp3:asset:/);
-    assert.match(bundle.story.scenes[0].stage!.quake!.props!.barrel, /^asset:.*@0\.75$/);
     assert.ok(bundle.assets.some((a) => a.name.endsWith('.avif') && a.dataUrl.startsWith('data:image/avif;')));
     assert.ok(bundle.assets.some((a) => a.name.endsWith('.svg') && a.dataUrl.startsWith('data:image/svg+xml;')));
     // Genuine empty IndexedDB on the receiving side of this fixture.
@@ -212,16 +211,6 @@ await test('schema-complete portable export: nested beats, states, chains, sheet
     visitStoryMediaFields(resolved, ({ value }) => assert.match(value, /^(?:mp3:|video:)?data:/));
     assert.equal(JSON.stringify(f.story), before);
   } finally { globalThis.fetch = originalFetch; }
-});
-
-await test('deferred media setters still update Quake props without losing height suffixes', async () => {
-  const f = mediaFixture(); const fields: StoryMediaField[] = [];
-  visitStoryMediaFields(f.story, (field) => { if (field.label.startsWith('first-person prop')) fields.push(field); });
-  await Promise.resolve();
-  fields.forEach((f, i) => f.set(`asset:deferred-${i}`));
-  assert.equal(f.story.scenes[0].stage!.quake!.props!.barrel, 'asset:deferred-0@0.75');
-  assert.equal(f.story.scenes[0].stage!.quake!.props!.lamp, 'asset:deferred-1@2');
-  assert.equal(f.story.scenes[0].stage!.quake!.props!.emoji, 'emoji:🌲@2');
 });
 
 await test('compaction uses the same schema for nested data URLs and recorded-ambience prefixes', async () => {

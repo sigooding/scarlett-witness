@@ -657,6 +657,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "cardSeconds": 3.8,
     "cardMotion": "letterspace",
     "montage": [
+     "/film/img/montage/m1-neon-backstreet.jpg",
+     "/film/img/montage/m2-the-hive.jpg",
+     "/film/img/montage/m3-umbrella-bridge.jpg",
+     "/film/img/montage/m4-railway-rain.jpg",
      "/film/img/s1/377-the-hive-remembered.jpg",
      "/film/img/s14a/337-engine-off.jpg",
      "/film/img/s1/10-the-shot.jpg",
@@ -680,7 +684,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "choices": [],
    "autoAdvanceTargetSceneId": "nw_prologue",
-   "autoAdvanceDelaySeconds": 22,
    "autoAdvanceHideTimer": true
   },
   {
@@ -17242,9 +17245,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
-   "choiceDelaySeconds": 100,
    "autoAdvanceTargetSceneId": "nw_end",
-   "autoAdvanceDelaySeconds": 108,
    "autoAdvanceHideTimer": true
   },
   {

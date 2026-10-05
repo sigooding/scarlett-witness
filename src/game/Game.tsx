@@ -61,19 +61,14 @@ import {
   resolveBeatText,
   resolveRecap,
   resolveHotspot,
-  activeStageObstacles,
   sceneById,
   seasonEpisodes,
   CURSOR_ICON,
-  VERB_LABEL,
-  extraOccludes,
   inventoryDisplay,
   resolveCursor,
   resolveVerbAction,
   itemsConsumedBy,
-  verbsForScene,
   wrongVerbLine,
-  stageCaptionMs,
   uid,
   writeSave,
 } from "../logic";
@@ -102,10 +97,6 @@ import {
   plateStyle,
 } from "./Episode";
 import { Flowchart } from "./Flowchart";
-import { Stage } from "./Stage";
-import { FpsStage } from "./fps/FpsStage";
-import type { FpsSnapshot } from "./fps/types";
-import { QuakeStage, webglAvailable } from "./QuakeStage";
 import { InventoryDock } from "./InventoryDock";
 import { SheetSprite } from "./SheetSprite";
 import { sheetDrawable, type SpriteSheet } from "./spriteSheet";
@@ -134,14 +125,13 @@ import {
   scrollKeyframes,
 } from "./animation";
 import { prefersReducedMotion as prefersReducedMotionPure, usePrefersReducedMotion, reducedMotionCinematicMode, reducedMotionTransition } from "./useReducedMotion";
+import { CREDITS_TYPE_SPEED, creditsRollSeconds, creditsTiming, resolveCredits } from "../credits";
 import type {
   Choice,
   CinematicSettings,
-  CreditsLine,
   CreditsSettings,
   DialogueBeat,
   DialogueBoxTheme,
-  DialogueTopic,
   Episode,
   EpisodeProgress,
   ForegroundAnimation,
@@ -157,7 +147,6 @@ import type {
   JourneyStep,
   MeterKey,
   SceneNode,
-  StageScriptStep,
   Story,
 } from "../types";
 import { initGameSeedFromUrl, restoreRngSnapshot, rngSnapshot } from "./rng";
@@ -1733,8 +1722,6 @@ function Typewriter({
 /*  credits intro                                                      */
 /* ------------------------------------------------------------------ */
 
-const CREDITS_TYPE_SPEED = 42;
-
 /** Title-sequence typefaces. Each value is a CSS font stack backed by a web
  * font loaded in index.html. */
 const CREDITS_FONTS: Record<string, string> = {
@@ -1756,20 +1743,9 @@ const CREDITS_TRACKING: Record<string, { title: string; line: string }> = {
   type: { title: "0.08em", line: "0.26em" },
 };
 
-/** Resolve title / subtitle / role-name lines from the credits settings, falling
- * back to the scene's prose (line 1 = title, line 2 = subtitle, the rest =
- * name-only lines) so older stories and imports keep working. */
-function resolveCredits(prose: string, settings?: CreditsSettings): { title: string; subtitle: string; lines: CreditsLine[] } {
-  const p = prose
-    .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean)
-    .filter((l) => !/^(tap|touch|click|press)( to)? begin$/i.test(l));
-  const title = settings?.title ?? p[0] ?? "";
-  const subtitle = settings?.subtitle ?? p[1] ?? "";
-  const lines = settings?.lines?.length ? settings.lines : p.slice(2).map((name) => ({ role: "", name }));
-  return { title, subtitle, lines };
-}
+/* resolveCredits / creditsRollSeconds / the timing clamps live in
+ * src/credits.ts: the renderer and the scene pacing both read the same
+ * numbers, so a roll can never be timed by something other than itself. */
 
 /** A cross-dissolving montage of full-bleed stills, used as the backdrop to a
  * title sequence. Every still is mounted and stacked; only the active one is
@@ -1844,10 +1820,8 @@ function Credits({
   const { title, subtitle, lines } = useMemo(() => resolveCredits(prose, settings), [prose, settings]);
   const titleEntrance = settings?.titleEntrance ?? "fade-up";
   const style = settings?.style ?? "fade-up";
-  const stagger = Math.max(0, settings?.stagger ?? 0.4);
-  const duration = Math.max(0.1, settings?.duration ?? 0.85);
-  const scrollDur = Math.max(6, settings?.scrollDuration ?? 24);
-  const cardSeconds = Math.max(1.2, settings?.cardSeconds ?? 3.4);
+  // One set of clamps, shared with creditsRollSeconds() in src/credits.ts.
+  const { stagger, duration, scrollDuration: scrollDur, cardSeconds } = creditsTiming(settings);
   const accent = settings?.accentColor ?? "#2ad9d9";
   // A custom title colour swaps the neon gold for the author's pick and re-tints
   // the glow to match, so a yellow title-card doesn't sit in a gold haze.
@@ -1901,14 +1875,18 @@ function Credits({
       return;
     }
     if (style === "scroll") {
-      const t = window.setTimeout(() => onDoneRef.current(), 700);
+      // The roll is a CSS animation running exactly --credits-scroll-dur, so
+      // the sequence ends when the track does. (This used to fire after 700ms,
+      // which cut every scrolling credits roll off after three-quarters of a
+      // second and left the scene sitting on a moving card.)
+      const t = window.setTimeout(() => onDoneRef.current(), scrollDur * 1000);
       return () => window.clearTimeout(t);
     }
     if (titleEntrance === "typewriter" && !titleDone) return;
     const lastDelay = (titleEntrance === "typewriter" ? lines.length : 2 + lines.length) * stagger;
     const t = window.setTimeout(() => onDoneRef.current(), lastDelay * 1000 + duration * 1000 + 450);
     return () => window.clearTimeout(t);
-  }, [style, titleEntrance, titleDone, stagger, duration, lines.length, cardIdx, cards.length]);
+  }, [style, titleEntrance, titleDone, stagger, duration, scrollDur, lines.length, cardIdx, cards.length]);
 
   /* Wrap the whole title sequence in the gate. Three nested elements
    * because each one can only carry a single transform, and the point of
@@ -2895,32 +2873,8 @@ function CasePlayer({
   const [beatIdx, setBeatIdx] = useState(0);
   const [beatDone, setBeatDone] = useState(false);
   const [overlay, setOverlay] = useState<Overlay>(null);
-  /* STAGE nodes — conversation gate. A stage scene has no prose panel, so
-   * `proseAcknowledged` is true from entry; this gate decides whether the
-   * scene's conversation (its dialogueBeats → closing choices) is playing:
-   *   closed — walking the stage, markers live, no dialogue panel
-   *   open   — a startDialogue marker fired; beats play, then choices
-   *   done   — the conversation finished; back to walking
-   * Choices on a stage node ONLY ever show during "open". */
-  const [stageConvo, setStageConvo] = useState<"closed" | "open" | "done">("closed");
-  /** Which hotspot's conversation is playing — Stage freezes ONLY the NPC
-   *  linked to this marker (everyone else keeps patrolling). */
-  const [convoHotspotId, setConvoHotspotId] = useState<string | null>(null);
-  /* TOPIC-LIST DIALOGUE (opt-in). When a startDialogue marker carries
-   * `action.topics`, the conversation is a HUB of askable topics instead of
-   * the scene's linear beats. `topicConvo` holds the active hub (null = not in
-   * a topic conversation); `topicBeats` holds the topic currently playing its
-   * beats (null = sitting at the hub); `askedTopics` tracks which one-shot
-   * topics are already exhausted. Stories without topics never touch this. */
-  const [topicConvo, setTopicConvo] = useState<{ prompt: string; leaveLabel: string; topics: DialogueTopic[] } | null>(null);
-  const [topicBeats, setTopicBeats] = useState<DialogueBeat[] | null>(null);
-  const [askedTopics, setAskedTopics] = useState<Set<string>>(new Set());
-  /* STAGE caption bar — the showText / fail / enterCaption line that plays
-   * over a stage scene (subtitles, not the centre exam card). */
-  const [stageCaption, setStageCaption] = useState<{ text: string; kind: "info" | "fail"; label?: string; key: number } | null>(null);
   /** Rotates the "that doesn't work" lines so a repeated verb doesn't loop. */
   const wrongVerbSeed = useRef(0);
-  const stageCaptionTimer = useRef<number | null>(null);
   const [toasts, setToasts] = useState<Toast[]>([]);
   /* Subtitles presentation — a player-menu option.
    * "cinematic" (default): big pulp lettering centred over the art.
@@ -2960,18 +2914,14 @@ function CasePlayer({
     }
   }, []);
 
-  /* Pacing options — remembered per player.
-   * Auto: hands-off reading. Once a line finishes typing it advances on a
-   *   comfortable timer; stops at choices so the player still decides.
-   * Skip: fast-forward. Types instantly and steps with only a brief gap —
-   *   the replay pacing win, since the game already auto-skips revisits. */
-  /* Pacing: auto-advance (hands-off reading) and skip-text fast-forward are
-   * no longer player-facing — both start OFF every session and the menu no
-   * longer exposes toggles. Scene-authored auto-read
-   * (autoAdvanceTargetSceneId) still plays itself. */
+  /* Pacing — one option, remembered per player.
+   * ⏩ Auto-forward: hands-off reading. Once a line finishes typing it
+   * advances on a comfortable timer, and stops at choices so the player still
+   * decides. It starts OFF every session; the toggle lives on the dialogue
+   * panel. Scene-authored auto-read (autoAdvanceTargetSceneId) always plays
+   * itself, whether or not this is on. */
   const prefersReducedMotion = usePrefersReducedMotion();
   const [autoAdvance, setAutoAdvance] = useState(false);
-  const [skipMode, setSkipMode] = useState(false);
 
   /* "Reveal hotspots" — a momentary shimmer over every interactable zone so a
    * stuck player can see what's clickable without spoilers. Auto-clears after
@@ -3222,8 +3172,6 @@ function CasePlayer({
   // A save waiting to be applied on the next scene-entry pass, so restoring
   // does not get clobbered by the normal first-entry/reset logic.
   const restoreRef = useRef<GameSave | null>(null);
-  const fpsRoomsRef = useRef<Record<string, FpsSnapshot>>({});
-  const fpsRestoreEpoch = useRef(0);
   // Which quick-time choices have already fired their heartbeat sting, so it
   // only sounds once per choice per window. Reset when a new set of clocks is
   // initialised (scene entry / resume).
@@ -3238,8 +3186,18 @@ function CasePlayer({
   const scene = useMemo(() =>
     rawScene?.nodeType === "note" && !rawScene.prose ? { ...rawScene, prose: rawScene.title } : rawScene,
   [rawScene]);
-  /** STAGE node — free-roam walkable exploration. */
-  const isStage = scene?.nodeType === "stage";
+  /** CREDITS node — a title sequence that paces itself. The roll's own length
+   *  (cards × cardSeconds, or the scroll track, or the staggered list) is the
+   *  scene's clock; nothing else times it. */
+  const isCredits = scene?.nodeType === "credits";
+  const creditsRoll = useMemo(
+    () => (scene?.nodeType === "credits" ? creditsRollSeconds(scene.prose, scene.credits) : 0),
+    [scene]
+  );
+  /** How long this credits node actually runs: the roll, which an authored
+   *  `autoAdvanceDelaySeconds` may stretch (a longer music cue) but never cut
+   *  short. One number drives the timer, the progress rule and the skip. */
+  const creditsWait = isCredits && scene ? Math.max(scene.autoAdvanceDelaySeconds ?? 0, creditsRoll) : 0;
   /** NO-HUD layout (credits, cutscene, or a 🚶 stage with hideHud set):
    *  zero in-game chrome — no menu, meters, leads panel, chips, dock or
    *  sound/help corner. Subtitles, stage markers and the verb coin stay;
@@ -3255,61 +3213,11 @@ function CasePlayer({
    * in some environments). Only the flip moments — an `occludes` extra
    * gaining/losing the walker behind it — need a render, so the pos callback
    * diffs the membership set and setStates only when it changes. */
-  const occlSceneRef = useRef(scene);
-  occlSceneRef.current = scene;
-  const occlSetRef = useRef<Set<number>>(new Set<number>());
-  const [occludersInFront, setOccludersInFront] = useState<Set<number>>(() => new Set<number>());
-  /** Wide-stage camera pan (screen-%), reported by Stage. Only foreground
-   *  extras with an explicit `worldX` consume it. */
-  const [stageCam, setStageCam] = useState(0);
-  const handleWalkerPos = useCallback((p: { x: number; y: number }) => {
-    const scn = occlSceneRef.current;
-    if (!scn || scn.nodeType !== "stage") return;
-    const extras = scn.cinematic?.foregroundExtras ?? [];
-    const front = new Set<number>();
-    extras.forEach((e, i) => {
-      if (extraOccludes(e, p.y)) front.add(i);
-    });
-    const prev = occlSetRef.current;
-    if (prev.size === front.size && [...front].every((i) => prev.has(i))) return;
-    occlSetRef.current = front;
-    setOccludersInFront(front);
-  }, []);
-  // A fresh scene starts with a clean occlusion set (the Stage's first pos
-  // report repopulates it for the new room's extras).
-  useEffect(() => {
-    if (occlSetRef.current.size) {
-      occlSetRef.current = new Set<number>();
-      setOccludersInFront(new Set<number>());
-    }
-
-  }, [sceneId, entrySeq]);
-  /** The walker's current POSE (a named sheet animation, e.g. "bend") — set by
-   *  a `setPlayerPose` hotspot action, held until movement or another pose.
-   *  Transient presentation, so it lives here rather than in the save state. */
-  const [playerPose, setPlayerPose] = useState<string | null>(null);
-  /** Whether the current pose is a one-shot (play once, then revert). */
-  const [playerPoseOnce, setPlayerPoseOnce] = useState(false);
-  const hasOccluders = (scene?.cinematic?.foregroundExtras ?? []).some((e) => e.occludes);
-  /** Any layer pinned to the world rather than the viewport — only then does
-   *  the camera need reporting (an idle room shouldn't re-render on a pan). */
-  const hasWorldPinnedExtras = (scene?.cinematic?.foregroundExtras ?? []).some(
-    (e) => e.worldX !== undefined,
-  );
 
   /* ---- CURSOR ART: per-verb art (and the plain arrow) ---- */
   const [hoverCursor, setHoverCursor] = useState<CursorKind | null>(null);
-  /** The verb the coin is holding, reported by the Stage — in a coin room that
-   *  is the cursor, because the verb IS the cursor. */
-  const [coinVerb, setCoinVerb] = useState<VerbId | null>(null);
-  // The coin only exists on STAGE scenes; when the player walks off one into
-  // a classic scene the armed verb must NOT survive as that scene's cursor
-  // art (the leak showed the "Pick up" hand over every novel hotspot).
-  useEffect(() => {
-    if (!isStage) setCoinVerb(null);
-  }, [isStage, sceneId]);
   const [pointer, setPointer] = useState<{ x: number; y: number } | null>(null);
-  const cursorSlot = (hoverCursor ?? coinVerb ?? "default") as import("../logic").CursorSlot;
+  const cursorSlot = (hoverCursor ?? "default") as import("../logic").CursorSlot;
   const cursor = useMemo(() => resolveCursor(story, cursorSlot), [story, cursorSlot]);
   useEffect(() => {
     if (!cursor.animated) return;
@@ -3327,55 +3235,7 @@ function CasePlayer({
 
   // How THIS case shows what you're carrying (default: the classic chip rail,
   // so no existing game changes). See InventorySettings in src/types.ts.
-  const baseInvDisplay = useMemo(() => inventoryDisplay(story), [story]);
-  /** COIN vs DOCK — the verb coin is pinned bottom-left (Stage.tsx, the way a
-   *  LucasArts room puts it) and the inventory dock ALSO defaults bottom-left,
-   *  so on a verb-coin stage the dock's buttons sat on top of the coin and ate
-   *  its clicks: the verbs were visible but unreachable. When the room shows a
-   *  coin and the author has NOT chosen a corner, slide the dock to the
-   *  opposite bottom corner. An explicit `inventoryDisplay.anchor` always
-   *  wins, and non-coin scenes are untouched. */
-  const invDisplay = useMemo(() => {
-    const coinRoom =
-      scene?.nodeType === "stage" &&
-      !!scene.stage &&
-      (scene.stage.verbCoin || (scene.stage.objectVerbMenu && story.verbMenuEnabled !== false));
-    if (!coinRoom || story.inventoryDisplay?.anchor) return baseInvDisplay;
-    return { ...baseInvDisplay, anchor: "bottom-right" as const };
-  }, [baseInvDisplay, scene, story.inventoryDisplay?.anchor, story.verbMenuEnabled]);
-  /** Dropping an item on a scene object: 🚶 rooms walk there first, then USE
-   *  it (so the splice happens at the bike, not across the street); every
-   *  other scene fires it where it was dropped. */
-  const [dropRequest, setDropRequest] = useState<{ hotspotId: string; itemId: string; key: number } | null>(null);
-  /** SCRIPTED SEQUENCE ordered by a `runScript` hotspot on a 🚶 stage —
-   *  handed to Stage keyed (same shape of contract as dropRequest). Classic
-   *  graphic-novel scenes never see this: the action is stage-only. */
-  const [scriptRequest, setScriptRequest] = useState<{ steps: StageScriptStep[]; key: number; coverageTag?: string } | null>(null);
-  /** Room-entry script for the CURRENT stage scene, with its run-once flag
-   *  latch applied: undefined when there's no script or the flag says it
-   *  already played. Stage captures it at mount (scene-keyed remount). */
-  const stageEnterScript = useMemo(() => {
-    if (scene?.nodeType !== "stage") return undefined;
-    const steps = scene.stage?.enterScript;
-    if (!steps || steps.length === 0) return undefined;
-    const latch = scene.stage?.enterScriptFlag;
-    if (latch && state.activeFlags.has(latch)) return undefined;
-    return steps;
-    // Deliberately NOT keyed on state: the latch is checked on scene entry,
-    // and the effect below sets the flag right after — re-render must not
-    // yank the script out from under the Stage that just latched it.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sceneId, story]);
-  // Set the run-once flag the moment the entry script is served — save-proof:
-  // a save made during (or after) the cutscene never replays it.
-  useEffect(() => {
-    if (!stageEnterScript) return;
-    const latch = sceneById(story, sceneId)?.stage?.enterScriptFlag;
-    if (latch && !stateRef.current.activeFlags.has(latch)) {
-      setState((s) => applyConsequences(story, { setFlags: [latch] }, s));
-    }
-
-  }, [stageEnterScript, sceneId, story]);
+  const invDisplay = useMemo(() => inventoryDisplay(story), [story]);
   // Entering a NO-HUD scene while the menu / mixer / case file was open
   // would strand floating chrome whose trigger buttons just disappeared —
   // close it all on entry.
@@ -3386,19 +3246,12 @@ function CasePlayer({
     setShowCaseFile(false);
 
   }, [hudHidden, sceneId]);
-  const dropKey = useRef(0);
   const handleItemDrop = useCallback(
     (item: Item, hotspotId: string) => {
       const hs = (scene?.hotspots ?? []).find((h) => h.id === hotspotId);
       if (!hs) return;
-      if (scene?.nodeType === "stage") {
-        dropKey.current += 1;
-        setDropRequest({ hotspotId, itemId: item.id, key: dropKey.current });
-        return;
-      }
       activateRef.current?.(hs, { verb: "use", itemId: item.id });
     },
-
     [scene]
   );
   /** activateHotspot is declared further down; the drop handler reaches it
@@ -3492,33 +3345,6 @@ function CasePlayer({
     const id = uid();
     setToasts((t) => [...t.slice(-3), { id, text, kind }]);
     window.setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 4200);
-  }, []);
-
-  /* -------- stage caption bar --------
-   * On STAGE nodes, showText / locked-marker / entry lines play as a
-   * bottom subtitle that auto-fades (hold time scales with length) — the
-   * scene keeps breathing while it reads. Standard nodes keep the centre
-   * exam card; this is the stage's lighter touch. */
-  const showStageCaption = useCallback((text: string, kind: "info" | "fail" = "info", label?: string) => {
-    if (stageCaptionTimer.current !== null) window.clearTimeout(stageCaptionTimer.current);
-    setStageCaption({ text, kind, label, key: Date.now() });
-    stageCaptionTimer.current = window.setTimeout(() => {
-      setStageCaption(null);
-      stageCaptionTimer.current = null;
-      // DON'T cut narration that is still talking.
-      //
-      // The caption bar is a READING aid: stageCaptionMs is tuned for how
-      // long a subtitle should sit on screen and is capped at 5.2s. Spoken
-      // narration of the same sentence routinely runs 8-12s, so killing
-      // speech when the caption fades chopped the back half off almost
-      // every line in a walkable room (29 of this story's 36 stage lines).
-      //
-      // The caption still fades on its own schedule; the voice is simply
-      // allowed to finish. Anything that genuinely supersedes this line —
-      // a new caption, a new beat, leaving the scene — already calls
-      // stopSpeech() on its own path.
-      audio.stopSpeechIfIdle();
-    }, stageCaptionMs(text));
   }, []);
 
   // Auto-dismiss the "will remember that" card after a short hold.
@@ -3729,30 +3555,14 @@ function CasePlayer({
       setPressLieBeat(null);
       setLieWrong({});
       setLieBluff(null);
-      // Cinematic hold: a scene with `choiceDelaySeconds` keeps its choices (and
-      // on credits/cutscene nodes, its continue button) locked until the timer
-      // elapses. Only applied on first entry — revisits stay snappy.
-      setHoldRemaining(revisit ? 0 : Math.max(0, scene.choiceDelaySeconds ?? 0));
+      // Cinematic hold: a scene with `choiceDelaySeconds` keeps its choices
+      // locked until the timer elapses. Only applied on first entry — revisits
+      // stay snappy. Credits nodes are exempt: their own roll length paces
+      // them (see the scene auto-advance below), and a second hand-typed hold
+      // stacked on top of the roll is what made the end credits sit on the
+      // last card for another two minutes.
+      setHoldRemaining(revisit || scene.nodeType === "credits" ? 0 : Math.max(0, scene.choiceDelaySeconds ?? 0));
       setAutoAdvanceRemaining(0);
-    }
-    // STAGE nodes: the conversation gate resets with the scene (a restored
-    // mid-conversation save re-opens it at its saved beat below), and the
-    // entry caption plays once — the stage's opening narration.
-    if (scene.nodeType === "stage") {
-      setConvoHotspotId(null);
-      setStageConvo(restoring && restoring.beatIdx > 0 ? "open" : "closed");
-      setStageCaption(null);
-      setPlayerPose(null); // a fresh scene starts in its own default pose
-      setPlayerPoseOnce(false);
-      // Topic-list dialogue does not persist across a scene entry — a fresh
-      // room starts fresh (a restored save re-opens the plain beat queue, but
-      // a topic hub simply restarts clean the next time the marker fires).
-      setTopicConvo(null);
-      setTopicBeats(null);
-      setAskedTopics(new Set());
-      if (!restoring && scene.stage?.enterCaption) {
-        showStageCaption(scene.stage.enterCaption, "info");
-      }
     }
     audio.stopSpeech();
     if (narrationTimerRef.current !== null) {
@@ -3982,7 +3792,7 @@ function CasePlayer({
       pushToast("🔍 Look around the scene — evidence is hidden in the picture.", "info");
     }
     if (revisit && !restoring) pushToast(`Revisited: ${scene.title}. Previous narration skipped.`, "info");
-  }, [scene, sceneId, entrySeq, story, startSceneId, autoNarrate, overlay?.type, pushToast, goToScene, playProse, episode, episodeId, onEpisodeComplete, fadeOutAndStop, primedMusic, showStageCaption]);
+  }, [scene, sceneId, entrySeq, story, startSceneId, autoNarrate, overlay?.type, pushToast, goToScene, playProse, episode, episodeId, onEpisodeComplete, fadeOutAndStop, primedMusic]);
 
   // Heat bust — evaluated continuously, not just on scene arrival. Meter
   // gains from reply choices, pattern-puzzle outcomes and on-enter effects
@@ -4006,7 +3816,6 @@ function CasePlayer({
   const buildSave = useCallback((): GameSave => {
     return {
       storyId: story.id,
-      fpsRooms: structuredClone(fpsRoomsRef.current),
       // Where the seeded dice have got to. Absent (undefined) on an unseeded
       // run, so ordinary saves don't grow a field they can't use.
       rng: rngSnapshot() ?? undefined,
@@ -4063,8 +3872,6 @@ function CasePlayer({
       };
       // Stage the save so the scene-entry pass applies it without clobbering.
       restoreRef.current = save;
-      fpsRestoreEpoch.current++;
-      fpsRoomsRef.current = save.fpsRooms && typeof save.fpsRooms === "object" && !Array.isArray(save.fpsRooms) ? structuredClone(save.fpsRooms) : {};
       visitedRef.current = new Set(arr(save.visitedScenes));
       seenBeatIdsRef.current = new Set(arr(save.seenBeats));
       enteredRef.current = "";
@@ -4096,16 +3903,6 @@ function CasePlayer({
     },
     [story]
   );
-
-  // Long first-person rooms also autosave between scene transitions. Manual
-  // slots remain independent; a dead-player state doesn't replace a live auto.
-  useEffect(() => {
-    if (!scene?.stage?.quake?.fps) return;
-    const timer = window.setInterval(() => {
-      if ((fpsRoomsRef.current[sceneId]?.player.health ?? 0) > 0) writeSave(AUTO_SLOT, buildSave());
-    }, 5000);
-    return () => window.clearInterval(timer);
-  }, [scene?.stage?.quake?.fps, sceneId, buildSave]);
 
   /* -------- rewind one decision --------
    * Snapshot BEFORE a decision commits, so ↺ Rewind restores the world as it
@@ -4495,10 +4292,6 @@ function CasePlayer({
     [state.activeFlags, state.inventory, state.meters, state.characterTrust, state.memories]
   );
   const visibleBeats = useMemo(() => {
-    // Topic-list dialogue: while a chosen topic is playing, ITS beats are the
-    // queue (gated the same way), not the scene's. The scene's own beats are
-    // untouched — a topic marker and a linear-beat marker never overlap.
-    if (topicBeats) return topicBeats.filter((b) => meetsGating(b.conditionRule, stateRef.current));
     if (!scene?.dialogueBeats && !scene?.interrogation) return [];
     const beats = [...(scene.dialogueBeats ?? [])];
     // The interrogation's broke / clamped beats join the queue the moment
@@ -4524,7 +4317,7 @@ function CasePlayer({
     }
     return out;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scene, entrySeq, sceneId, beatsSignature, topicBeats]);
+  }, [scene, entrySeq, sceneId, beatsSignature]);
 
   /* Beats the player has played: everything the cursor has moved past is
    * remembered by id (story-wide, saved). Idempotent set-adds, so the queue
@@ -4587,24 +4380,13 @@ function CasePlayer({
   /* -------- beats advancement -------- */
   const holdActive = holdRemaining > 0;
   const sceneReady = proseAcknowledged && !holdActive;
-  // STAGE nodes: the conversation plays only between a startDialogue marker
-  // firing ("open") and its choices being exhausted ("done"). While walking,
-  // the beat queue holds at 0 and stays out of the way.
-  const stageTalking = isStage && stageConvo === "open";
-  const inBeats = proseAcknowledged && beatIdx < visibleBeats.length && (!isStage || stageTalking);
-  const interactive = sceneReady && !inBeats && (!isStage || stageTalking);
+  const inBeats = proseAcknowledged && beatIdx < visibleBeats.length;
+  const interactive = sceneReady && !inBeats;
   // An authored epilogue is still part of the story. The summary used to
   // cover it as soon as the prose finished, making every ending beat (and
   // its memory recall / recorded cue) unreadable. Prose-only endings retain
   // their original immediate-summary behavior.
   const endingReady = proseDone && (visibleBeats.length === 0 || (proseAcknowledged && !inBeats));
-  /** STAGE: true while the player is on the floor (markers live, WASD walks). */
-  const stageWalking = !!isStage && !stageTalking && sceneReady && !overlay && !inventoryModalOpen && !patternPuzzle && !esperModal && !vkModal && !mixerOpen;
-  // The keyboard handler reads the walking flag through a ref: the walk/
-  // talk flip must not re-bind the listener, and a stale closure must not
-  // eat WASD the frame a conversation closes.
-  const stageWalkingRef = useRef(false);
-  stageWalkingRef.current = stageWalking;
   const hasValidAutoAdvance = !!scene?.autoAdvanceTargetSceneId && story.scenes.some((candidate) => candidate.id === scene.autoAdvanceTargetSceneId);
   const currentBeat = inBeats ? visibleBeats[beatIdx] : null;
   /* The insert shot to actually display on the current beat. A beat's own
@@ -4694,7 +4476,7 @@ function CasePlayer({
     onRoutingBeat,
     busy:
       menuOpen || mixerOpen || inventoryModalOpen || !!overlay || !!patternPuzzle || !!esperModal ||
-      !!vkModal || !!partBreak || !!actMap || !!pendingAct || fading || !!topicConvo,
+      !!vkModal || !!partBreak || !!actMap || !!pendingAct || fading,
   });
   /** The choice rail is on screen: normally after the conversation, or over
    *  the last line when the scene is interruptible. */
@@ -4771,16 +4553,6 @@ function CasePlayer({
       return;
     }
     if (inBeats) {
-      // Topic-list dialogue: "back" on a topic's FIRST line returns to the
-      // hub (a stage has no prose to rewind into — rewinding there would
-      // strand the player).
-      if (topicBeats) {
-        audio.stopSpeech();
-        setTopicBeats(null);
-        setBeatIdx(0);
-        setBeatDone(false);
-        return;
-      }
       audio.stopSpeech();
       setBeatDone(false);
       setProseAcknowledged(false);
@@ -4793,7 +4565,7 @@ function CasePlayer({
       audio.stopSpeech();
       setProseAcknowledged(false);
     }
-  }, [proseAcknowledged, inBeats, beatIdx, visibleBeats.length, topicBeats]);
+  }, [proseAcknowledged, inBeats, beatIdx, visibleBeats.length]);
 
   // Jump straight back to the start of the current scene (the opening prose),
   // resetting the dialogue so it replays from the first line on continue.
@@ -4829,7 +4601,7 @@ function CasePlayer({
    * appears after STRANDED_GRACE_MS of the world staying empty, so a scene
    * that is about to carry the player onward never flashes it. */
   const strandedBusy =
-    !!overlay || menuOpen || mixerOpen || !!partBreak || !!actMap || !!pendingAct || !!topicConvo ||
+    !!overlay || menuOpen || mixerOpen || !!partBreak || !!actMap || !!pendingAct ||
     !!patternPuzzle || !!esperModal || !!vkModal || !!arcadeGame || !!rideChoice || !!pressLieBeat ||
     holdRemaining > 0 || !proseAcknowledged;
   const strandedVerdict = useMemo(
@@ -4844,13 +4616,12 @@ function CasePlayer({
           visitedScenes,
           expiredChoices,
           composure: iqComposure,
-          stageConvoOpen: stageConvo === "open",
           encounteredCharacters,
           lieWrongCounts: lieWrong,
         }),
         { scene, busy: strandedBusy, inBeats, episode }
       ),
-    [story, scene, sceneId, state, usedChoices, usedHotspots, visitedScenes, expiredChoices, iqComposure, stageConvo, encounteredCharacters, lieWrong, strandedBusy, inBeats, episode]
+    [story, scene, sceneId, state, usedChoices, usedHotspots, visitedScenes, expiredChoices, iqComposure, encounteredCharacters, lieWrong, strandedBusy, inBeats, episode]
   );
   const [strandedShown, setStrandedShown] = useState(false);
   const [strandedDismissed, setStrandedDismissed] = useState(false);
@@ -4893,49 +4664,6 @@ function CasePlayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sceneId, entrySeq, scene?.isEnding, state, usedChoices, usedHotspots, beatIdx, proseAcknowledged, strandedVerdict.stranded]);
 
-  /* -------- topic-list dialogue (opt-in) -------- */
-  // Pick a topic off the hub: mark it asked, record its flag, and play its
-  // beats through the normal beat queue (visibleBeats returns them while
-  // `topicBeats` is set).
-  const pickTopic = useCallback(
-    (topic: DialogueTopic) => {
-      audio.click();
-      if (topic.flagSet) {
-        setState((s) => ({ ...s, activeFlags: new Set(s.activeFlags).add(topic.flagSet!) }));
-      }
-      setAskedTopics((s) => new Set(s).add(topic.id));
-      setTopicBeats(topic.beats);
-      setBeatIdx(0);
-      setBeatDone(false);
-      setChoiceFocus(0);
-    },
-    []
-  );
-
-  // Leave the conversation: hand the stage back to the player.
-  const leaveTopic = useCallback(() => {
-    audio.click();
-    audio.stopSpeech();
-    setConvoHotspotId(null);
-    setStageConvo("done");
-    setTopicConvo(null);
-    setTopicBeats(null);
-    setAskedTopics(new Set());
-    setBeatIdx(0);
-    setBeatDone(false);
-  }, []);
-
-  // When a topic's beats run out, return to the hub (the topic stays in the
-  // list, exhausted or re-askable as authored) rather than closing the whole
-  // conversation.
-  useEffect(() => {
-    if (topicBeats && !inBeats && stageConvo === "open") {
-      setTopicBeats(null);
-      setBeatIdx(0);
-      setBeatDone(false);
-    }
-  }, [topicBeats, inBeats, stageConvo]);
-
   const skipCurrentText = useCallback(() => {
     audio.click();
     audio.stopSpeech();
@@ -4961,87 +4689,71 @@ function CasePlayer({
     }
   }, [proseDone, proseAcknowledged, inBeats, beatDone, onRoutingBeat, advanceBeat]);
 
-  /* -------- auto-advance / skip-read engine --------
-   * Drives the dialogue forward with no input. Skip types instantly and steps
-   * on a hair-trigger; Auto waits for the typewriter to finish, then advances
-   * on a comfortable timer. A scene-level auto-route also opts into this reader
-   * so prose-only / dialogue-only cutscenes can move on without the player
-   * pressing Continue first. Manual clicks win: each advance changes state,
-   * which cancels the pending timer and re-arms it for the next line, so the
-   * two never double-advance. */
+  /* -------- auto-forward reader --------
+   * Drives the dialogue forward with no input: the typewriter runs, the line
+   * holds long enough to read, then the next beat starts. It stops at choices,
+   * so the player still decides. A scene-level auto-route opts into the same
+   * reader, so a prose-only cutscene can move on without the player pressing
+   * Continue first. Manual clicks win: each advance changes state, which
+   * cancels the pending timer and re-arms it for the next line, so the two
+   * never double-advance.
+   *
+   * There is exactly ONE pacing toggle now. The old ⏭ skip fast-forward was a
+   * second copy of this loop with its own "only skip what you've already seen"
+   * bookkeeping, and the two fought over the same timers — it is gone, along
+   * with its state, its buttons and its HUD chip. */
   useEffect(() => {
-    const sceneAutoRead = hasValidAutoAdvance;
-    if ((!autoAdvance && !skipMode && !sceneAutoRead) || !scene || scene.isEnding) return;
+    // Runs when the player has ⏩ auto-forward on, or when the scene has an
+    // authored auto-route and so has to play itself.
+    if (!autoAdvance && !hasValidAutoAdvance) return;
+    if (!scene || scene.isEnding) return;
+    // A credits node paces itself — the roll owns the whole scene, and this
+    // reader used to acknowledge its prose 0.9s after the roll ended, tearing
+    // the sequence off screen and leaving a bare panel behind.
+    if (isCredits) return;
     if (overlay || menuOpen || holdActive) return;
-    // Credits / cutscene intros control their own timing — don't rush them,
-    // unless this scene explicitly has an auto-route and needs hands-off flow.
-    if ((scene.nodeType === "credits" || scene.nodeType === "cutscene") && !proseAcknowledged && !sceneAutoRead) return;
     if (!proseAcknowledged) {
-      if (!proseDone) {
-        // Skip finishes the typing instantly; Auto lets it run and re-arms
-        // when proseDone flips. Skip-only-seen: stop skip when hitting unseen prose.
-        if (skipMode) {
-          if (!visitedScenes.has(sceneId)) {
-            setSkipMode(false);
-            return;
-          }
-          const t = window.setTimeout(() => setProseDone(true), 50);
-          return () => window.clearTimeout(t);
-        }
-        return;
-      }
-      // proseDone -> proseAcknowledged
-      if (skipMode) {
-        if (!visitedScenes.has(sceneId)) {
-          setSkipMode(false);
-          return;
-        }
-      }
+      // Let the typewriter run, then hold a beat before the panel advances.
+      if (!proseDone) return;
       const t = window.setTimeout(() => {
-        // AUTO-ADVANCE — the typewriter has finished DRAWING the prose, which
-        // says nothing about whether the narrator has finished READING it.
-        // Cutting speech here truncated every long scene opener and all three
-        // endings (the gold ending narrates ~30s). Advance the panel, but let
-        // the voice run; a new beat or a scene change stops it properly.
+        // The typewriter finishing says nothing about whether the narrator has
+        // finished READING. Cutting speech here truncated every long scene
+        // opener and all three endings (the gold ending narrates ~30s).
+        // Advance the panel, but let the voice run; a new beat or a scene
+        // change stops it properly.
         audio.stopSpeechIfIdle();
         setProseAcknowledged(true);
-      }, skipMode ? 200 : 900);
+      }, 900);
       return () => window.clearTimeout(t);
     }
     if (inBeats) {
-      if (!beatDone) {
-        if (skipMode) {
-          if (currentBeat && !seenBeatIdsRef.current.has(currentBeat.id)) {
-            setSkipMode(false);
-            return;
-          }
-          const t = window.setTimeout(() => setBeatDone(true), 50);
-          return () => window.clearTimeout(t);
-        }
-        return;
-      }
+      if (!beatDone) return;
       // On the routing beat, the after-beat timer owns the cut — don't
       // advance the queue (which would revert the insert background) and
       // let the beat-route timer fire the leave.
       if (currentBeat === routingBeat && beatRouteValid) return;
-      if (skipMode && currentBeat && !seenBeatIdsRef.current.has(currentBeat.id)) {
-        setSkipMode(false);
-        return;
-      }
-      const t = window.setTimeout(() => {
-        setBeatDone(false);
-        setBeatIdx((i) => i + 1);
-      }, skipMode ? 350 : 1150);
-      return () => window.clearTimeout(t);
+      // The spoken line is usually longer than the subtitle's typed dwell, so
+      // a fixed timer chopped the narration in half. Hold a short reading beat
+      // after the text lands, then wait for the voice to actually finish
+      // before the next line starts (capped so a stuck clip can't stall us).
+      const startedAt = Date.now();
+      const iv = window.setInterval(() => {
+        const elapsed = Date.now() - startedAt;
+        const voiceDone = !audio.speechActive();
+        if ((voiceDone && elapsed >= 1150) || elapsed > 45000) {
+          window.clearInterval(iv);
+          setBeatDone(false);
+          setBeatIdx((i) => i + 1);
+        }
+      }, 250);
+      return () => window.clearInterval(iv);
     }
     // Choices are up — hands off until the player picks.
   }, [
     autoAdvance,
-    skipMode,
     hasValidAutoAdvance,
     scene,
-    sceneId,
-    visitedScenes,
+    isCredits,
     overlay,
     menuOpen,
     holdActive,
@@ -5125,7 +4837,7 @@ function CasePlayer({
     offeredChoicesRef.current = new Set();
   }, [story.id]);
   useEffect(() => {
-    if (!scene || scene.isEnding || !interactive || topicConvo) return;
+    if (!scene || scene.isEnding || !interactive) return;
     const offered = new Set<string>();
     for (const c of availableChoices) {
       if (!meetsGating(effectiveChoiceGating(c), state)) continue;
@@ -5136,24 +4848,7 @@ function CasePlayer({
       if (!prev.has(key)) markCoverage("offer", key);
     }
     offeredChoicesRef.current = offered;
-  }, [scene, sceneId, interactive, topicConvo, availableChoices, state, markCoverage]);
-
-  /* -------- stage conversation auto-close --------
-   * A conversation that has played out — beats done, and either no closing
-   * choices or every usable one spent/expired — hands the stage back to the
-   * player. Timed choices (the "decide now" pressure) that expire
-   * naturally close the conversation exactly the same way. */
-  useEffect(() => {
-    if (!isStage || stageConvo !== "open" || overlay || menuOpen) return;
-    // A topic hub stays open until the player picks "leave" — sitting at the
-    // hub (no beats, no choices) must not auto-close the conversation.
-    if (topicConvo) return;
-    if (!inBeats && !hasUsableChoice) {
-      setConvoHotspotId(null);
-      setStageConvo("done");
-      audio.stopSpeech();
-    }
-  }, [isStage, stageConvo, inBeats, hasUsableChoice, overlay, menuOpen, topicConvo]);
+  }, [scene, sceneId, interactive, availableChoices, state, markCoverage]);
 
   /* -------- quick-time prompt state (reactive) -------- */
   // A quick-time prompt is live while at least one QTE choice is still on the
@@ -5376,9 +5071,11 @@ function CasePlayer({
    * For pure cinematic / prose-only nodes: once the setup, dialogue and any
    * authored hold have finished, route to the configured target after a timer —
    * but only when there are no choices currently available. This lets authors
-   * build hands-off transitions without showing a dummy "Continue" choice. */
+   * build hands-off transitions without showing a dummy "Continue" choice.
+   * Credits nodes are exempt: the credits roll effect above owns them, paced by
+   * the roll itself rather than by this scene-ready timer. */
   useEffect(() => {
-    if (!scene || scene.isEnding || overlay || menuOpen || !interactive || hasUsableChoice) {
+    if (!scene || scene.isEnding || isCredits || overlay || menuOpen || !interactive || hasUsableChoice) {
       setAutoAdvanceRemaining(0);
       return;
     }
@@ -5406,17 +5103,19 @@ function CasePlayer({
       window.clearInterval(tick);
       window.clearTimeout(t);
     };
-  }, [scene, sceneId, hasValidAutoAdvance, overlay, menuOpen, interactive, hasUsableChoice, leaveFor]);
+  }, [scene, sceneId, hasValidAutoAdvance, isCredits, overlay, menuOpen, interactive, hasUsableChoice, leaveFor]);
 
   /* -------- after-beat auto route (insert shot that ends the scene) --------
    * AUTO mode: once the final beat has finished typing (and no menu/overlay is
    * up), hold for beatRouteDelay so the player can read it, then route to the
    * beat's target. The timer pauses under a menu/overlay exactly like the
-   * scene auto-advance timer. CONTINUE mode waits for advanceBeat() (the ▸
-   * Continue pill / Space), so no timer runs here. While this is pending the
-   * replacement background stays on screen — no revert to the plate. */
+   * scene auto-advance timer. CONTINUE mode shows the ▸ Continue pill / Space
+   * so the player can cut early, but a fallback timer still carries an idle
+   * player across — the button skips the wait, it never blocks the exit.
+   * While this is pending the replacement background stays on screen — no
+   * revert to the plate. */
   useEffect(() => {
-    if (!beatRouteReady || beatRouteMode !== "auto") {
+    if (!beatRouteReady) {
       setBeatRouteRemaining(0);
       return;
     }
@@ -5424,7 +5123,11 @@ function CasePlayer({
       return; // paused; resume on close
     }
     const target = beatRouteTarget as string;
-    const delay = Math.max(0, beatRouteDelay);
+    // AUTO cuts on its authored hold. CONTINUE still arms a generous fallback
+    // timer so an idle player is carried into the next scene instead of being
+    // left parked on the insert with a lone button — the button only ever
+    // skips the wait, never gates the exit.
+    const delay = beatRouteMode === "auto" ? Math.max(0, beatRouteDelay) : 6;
     setBeatRouteRemaining(delay);
     const go = () => {
       setBeatRouteRemaining(0);
@@ -5733,6 +5436,57 @@ function CasePlayer({
     [pickChoice]
   );
 
+  /* -------- credits roll --------
+   * A credits node is a piece of film, not a panel to click through: the title
+   * sequence plays to its end and the scene leaves on its own. One exit, two
+   * triggers — the player pressing "Skip title sequence", or the roll running
+   * out. `autoAdvanceDelaySeconds` may only STRETCH the roll (a longer music
+   * cue), never cut it short, so a hand-typed number can no longer end the
+   * sequence mid-card. */
+  const skipCredits = useCallback(() => {
+    if (scene?.nodeType !== "credits") return;
+    audio.stopSpeech();
+    const firstExit = availableChoices.find(
+      (c) => c.targetSceneId && meetsGating(effectiveChoiceGating(c), stateRef.current)
+    );
+    if (firstExit) {
+      pickChoice(firstExit);
+      return;
+    }
+    const target = scene.autoAdvanceTargetSceneId;
+    if (target && target !== scene.id && story.scenes.some((s) => s.id === target)) {
+      leaveFor(target, scene.partBreak);
+      return;
+    }
+    // Nowhere authored to go: settle the node instead of stranding the player
+    // behind a button that leads nowhere. The menu stays open to them.
+    setProseDone(true);
+    setProseAcknowledged(true);
+  }, [scene, availableChoices, pickChoice, leaveFor, story]);
+  // The roll timer must not restart because a memo identity changed, so it
+  // reads the exit through a ref.
+  const skipCreditsRef = useRef(skipCredits);
+  useEffect(() => {
+    skipCreditsRef.current = skipCredits;
+  }, [skipCredits]);
+
+  useEffect(() => {
+    if (!isCredits || !scene || scene.isEnding) return;
+    // The roll keeps playing behind an open menu or overlay — it is the
+    // picture, not a paused panel — so nothing here pauses it either.
+    const wait = creditsWait;
+    setAutoAdvanceRemaining(wait);
+    const tick = window.setInterval(() => setAutoAdvanceRemaining((s) => Math.max(0, s - 1)), 1000);
+    const t = window.setTimeout(() => {
+      setAutoAdvanceRemaining(0);
+      skipCreditsRef.current();
+    }, wait * 1000);
+    return () => {
+      window.clearInterval(tick);
+      window.clearTimeout(t);
+    };
+  }, [isCredits, scene, entrySeq, creditsWait]);
+
   /** Route out of a finished ride minigame. `won` = you ran the target down
    *  (apply the choice's consequences, head to targetSceneId); a crash applies
    *  the timed-out consequences and heads to timedOutTargetSceneId, the same
@@ -5998,7 +5752,6 @@ function CasePlayer({
 
   const activateHotspot = useCallback(
     (hs: Hotspot, ctx?: { verb?: VerbId; itemId?: string }) => {
-      const stageMode = sceneById(story, sceneId)?.nodeType === "stage";
       // MULTI-STATE: act on the object as it stands RIGHT NOW — the active
       // state's action/cursor/label override the base. Callers usually pass
       // the already-resolved view from the render; resolving again here is
@@ -6013,12 +5766,9 @@ function CasePlayer({
         if (!res.ok) {
           audio.fail();
           setInvestigatedThisVisit(true);
-          const itemName = ctx.itemId ? story.items.find((i) => i.id === ctx.itemId)?.name ?? ctx.itemId : "";
           const line = wrongVerbLine(ctx.verb, story, hs.wrongVerbText, wrongVerbSeed.current++);
-          const label = itemName ? `${VERB_LABEL[ctx.verb]} ${itemName.toLowerCase()}` : VERB_LABEL[ctx.verb];
-          if (stageMode) showStageCaption(line, "fail", label);
-          else setExamCard({ label: hs.label, text: line, kind: "fail" });
           if (soundOnRef.current && autoNarrate) audio.speak(line);
+          setExamCard({ label: hs.label, text: line, kind: "fail" });
           return;
         }
         act = res.action ?? hs.action;
@@ -6032,14 +5782,10 @@ function CasePlayer({
         // Trying a locked zone still counts as searching the scene.
         setInvestigatedThisVisit(true);
         const failText = hs.customFailMessage || gatingHint(hs.gating, story) || "That's locked up tighter than a nun's diary.";
-        if (stageMode) showStageCaption(failText, "fail", hs.label);
-        else setExamCard({ label: hs.label, text: failText, kind: "fail" });
+        setExamCard({ label: hs.label, text: failText, kind: "fail" });
         if (soundOnRef.current && autoNarrate) audio.speak(failText);
         return;
       }
-      // Playtest coverage: this STAGE marker actually fired (the gate passed
-      // and the verb resolved — a refusal above never counts).
-      if (stageMode) markCoverage("marker", `${sceneId}:${hs.id}`);
       // SOUND EFFECT — fires for EVERY action type, before the switch, so a
       // door creak plays whether the zone shows a line, grants an item or
       // walks you to another room. On the sfx bus, so it layers over the
@@ -6049,8 +5795,7 @@ function CasePlayer({
         case "showText": {
           audio.click();
           const examText = actText ?? act.text ?? "…";
-          if (stageMode) showStageCaption(examText, "info", hs.label);
-          else setExamCard({ label: hs.label, text: examText, kind: "info" });
+          setExamCard({ label: hs.label, text: examText, kind: "info" });
           {
             // Voiced like the beats: a recorded clip wins over the TTS
             // reader. A per-item reply uses its own clip (an overridden
@@ -6076,36 +5821,6 @@ function CasePlayer({
           }
           break;
         }
-        case "startDialogue":
-          // STAGE nodes: walk up to a character, talk — the scene's beats
-          // play as the conversation. The action's own flagSet/meterChange
-          // (a "talked to X" marker) still applies via completeHotspot.
-          audio.click();
-          if (act.topics && act.topics.length) {
-            // TOPIC-LIST conversation (opt-in): open a hub of askable topics
-            // instead of the scene's linear beats.
-            setTopicConvo({
-              prompt: act.topicPrompt ?? "What do you want to ask?",
-              leaveLabel: act.topicLeaveLabel ?? "Never mind",
-              topics: act.topics,
-            });
-            setTopicBeats(null);
-            setAskedTopics(new Set());
-            setBeatIdx(0);
-            setBeatDone(false);
-            setChoiceFocus(0);
-            setConvoHotspotId(hs.id);
-            setStageConvo("open");
-            completeHotspot(hs, undefined, act, markUsed);
-          } else if ((sceneById(story, sceneId)?.dialogueBeats?.length ?? 0) > 0) {
-            setBeatIdx(0);
-            setBeatDone(false);
-            setChoiceFocus(0);
-            setConvoHotspotId(hs.id);
-            setStageConvo("open");
-            completeHotspot(hs, undefined, act, markUsed);
-          }
-          break;
         case "goToScene":
           if (act.targetSceneId) {
             completeHotspot(hs, undefined, act, markUsed);
@@ -6118,41 +5833,13 @@ function CasePlayer({
           // pickup must not silently discard its description while showing
           // only the generic "Picked up" toast.
           const line = actText ?? act.text;
-          if (line) {
-            if (stageMode) showStageCaption(line, "info", hs.label);
-            else setExamCard({ label: hs.label, text: line, kind: "info" });
-          }
+          if (line) setExamCard({ label: hs.label, text: line, kind: "info" });
           const clip = ctx?.itemId ? hs.itemAudio?.[ctx.itemId] ?? act.audioUrl : act.audioUrl;
           if (clip) audio.playClip(clip);
           else if (line && soundOnRef.current && autoNarrate) audio.speak(line);
           completeHotspot(hs, undefined, act, markUsed);
           break;
         }
-        case "setPlayerPose":
-          // Switch the walker to a named animation (a "bend down"), once or
-          // held. Empty pose = back to idle/scene default.
-          audio.click();
-          setPlayerPose(act.playerPose ?? null);
-          setPlayerPoseOnce(!!act.playerPoseOnce);
-          completeHotspot(hs, undefined, act, markUsed);
-          break;
-        case "runScript":
-          // SCRIPTED SEQUENCE — stage-only cutscenes. A classic graphic-novel
-          // scene has no walkable floor to perform on: the action is ignored
-          // there (validateStory flags it at author time too), so the
-          // prose/choice flow can never be hijacked by a script.
-          if (!stageMode) {
-            pushToast("🎬 Scripted sequences only play on 🚶 walkable stages.", "info");
-            break;
-          }
-          if (act.script && act.script.length > 0) {
-            audio.click();
-            setScriptRequest({ steps: act.script, key: Date.now(), coverageTag: hs.id });
-          }
-          // flagSet/meterChange on the action still apply (and the marker is
-          // consumed unless the hotspot is repeatable, like any other).
-          completeHotspot(hs, undefined, { ...act, targetSceneId: undefined }, markUsed);
-          break;
         case "openBoard":
           setOverlay({ type: "board" });
           break;
@@ -6201,8 +5888,7 @@ function CasePlayer({
           }
           const useLine = actText ?? act.text;
           if (useLine) {
-            if (stageMode) showStageCaption(useLine, "info", hs.label);
-            else setExamCard({ label: hs.label, text: useLine, kind: "info" });
+            setExamCard({ label: hs.label, text: useLine, kind: "info" });
             // Per-item reply clips take priority over the action's own
             // recording; only the TTS reader falls all the way through.
             const over = actText != null && actText !== act.text;
@@ -6215,7 +5901,7 @@ function CasePlayer({
         }
       }
     },
-    [story, sceneId, pushToast, completeHotspot, autoNarrate, showStageCaption, usedHotspots, markCoverage]
+    [story, sceneId, pushToast, completeHotspot, autoNarrate, usedHotspots, markCoverage]
   );
 
   activateRef.current = activateHotspot;
@@ -6343,11 +6029,6 @@ function CasePlayer({
    * (the router respects it); the moment the gate opens it stops existing.
    * Resolved here, where the world state lives, and handed to the Stage as
    * the obstacle list the walker actually collides with. */
-  const stageActiveObstacles = useMemo(
-    () => activeStageObstacles(scene?.stage?.obstacles, state),
-    [scene, state]
-  );
-
   /* Searchable things left in this scene: anything that isn't a pure exit
    * and hasn't been read/collected yet. The end-of-scene nudge tells the
    * player these exist before the choices carry them off. */
@@ -6366,9 +6047,6 @@ function CasePlayer({
     !scene.isEnding &&
     scene.nodeType !== "credits" &&
     scene.nodeType !== "cutscene" &&
-    // STAGE: the markers on the floor ARE the discoverability — and the
-    // nudge's "examine" button would teleport-interact past the walking.
-    !isStage &&
     !overlay &&
     !investigatedThisVisit &&
     !investigateNudgeDismissed &&
@@ -6506,11 +6184,6 @@ function CasePlayer({
           }
         }
       }
-      // STAGE nodes — while walking the floor the keyboard belongs to the
-      // character (WASD/arrows in the Stage component); every reading-mode
-      // shortcut (continue, choice nav, A toggle) waits
-      // until a conversation is open.
-      if (stageWalkingRef.current) return;
       if ((e.code === "Space" || e.key === "Enter") && !overlay) {
         const tag = (e.target as HTMLElement).tagName;
         if (tag !== "BUTTON" && tag !== "INPUT" && tag !== "TEXTAREA") {
@@ -6544,7 +6217,7 @@ function CasePlayer({
           else goBack();
         }
       }
-      if (choicesLive && !topicConvo && availableChoices.length) {
+      if (choicesLive && availableChoices.length) {
         if (["ArrowDown", "s", "S"].includes(e.key)) {
           e.preventDefault();
           setChoiceFocus((f) => (f + 1) % availableChoices.length);
@@ -6573,7 +6246,7 @@ function CasePlayer({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [overlay, menuOpen, mixerOpen, partBreak, actMap, pendingAct, proseAcknowledged, proseDone, inBeats, choicesLive, cutInLive, availableChoices, choiceFocus, advanceBeat, pickChoice, pickCutIn, skipCurrentText, goBack, goToSceneStart, doRewindDecision, story, dialogueLog.length, topicConvo, soundOn, enableSound, triggerHint]);
+  }, [overlay, menuOpen, mixerOpen, partBreak, actMap, pendingAct, proseAcknowledged, proseDone, inBeats, choicesLive, cutInLive, availableChoices, choiceFocus, advanceBeat, pickChoice, pickCutIn, skipCurrentText, goBack, goToSceneStart, doRewindDecision, story, dialogueLog.length, soundOn, enableSound, triggerHint]);
 
   // Characters "on stage": anyone with talking frames (or a resting pose) who
   // speaks in this scene. The active speaker cycles their keyframes; the rest
@@ -6647,43 +6320,12 @@ function CasePlayer({
   const activeTransitionClass = sceneTransitionClass(activeTransition);
 
   // Single cinematic background helper
-  // TALK ZOOM — while a stage conversation plays, the ROOM eases in toward
-  // the talking pair (plate AND actors, one shared transform so the
-  // background zooms in lockstep with the characters) and back out when
-  // the floor is handed back. Origin sits on the conversation's marker —
-  // between the walker and who they're talking to — clamped inside the
-  // frame; a CSS transition does the easing both ways.
-  const talkHs =
-    stageConvo === "open" && convoHotspotId
-      ? (scene.hotspots ?? []).find((h) => h.id === convoHotspotId)
-      : undefined;
-  const dofOn = (bgCinematic as any)?.dofOnTalk !== false;
-  const dofBlurAmt = (bgCinematic as any)?.dofBlur ?? 2;
-  const isTalkDOF = dofOn && stageConvo === "open" && !!talkHs;
-  const talkZoomEase = {
-    transition: "transform 0.45s cubic-bezier(0.3, 0.7, 0.3, 1)",
-  };
-  const talkZoomStyle: React.CSSProperties = talkHs
-    ? {
-        ...talkZoomEase,
-        transform: "scale(1.22)",
-        transformOrigin: `${Math.min(86, Math.max(14, talkHs.bounds.x + talkHs.bounds.w / 2))}% ${Math.min(
-          82,
-          Math.max(30, talkHs.bounds.y + talkHs.bounds.h - 12),
-        )}%`,
-      }
-    : { ...talkZoomEase };
-  // DOF on talk: background plate blurs to focus on conversation, foreground extras stay sharp (toggleable in Studio)
-  const talkPlateDOFStyle: React.CSSProperties = isTalkDOF
-    ? { filter: `blur(${dofBlurAmt}px)`, transition: "filter 0.45s ease" }
-    : { filter: "blur(0px)", transition: "filter 0.45s ease" };
-
   // Optional authored aspect ratio: the same fitted box contains BOTH art
   // and stage geometry. Cropping a wide plate with background-size: cover
   // while leaving markers in viewport percentages misplaces every hotspot
   // on a portrait screen. Legacy scenes keep their full-viewport layout.
-  const roomRatio = isStage && !scene.stage?.quake ? scene.stage?.plateAspectRatio : undefined;
-  const fitRoom = typeof roomRatio === "number" && Number.isFinite(roomRatio) && roomRatio > 0;
+  const roomRatio = undefined;
+  const fitRoom = false;
   const roomFrame: React.CSSProperties | undefined = fitRoom ? {
     width: `min(100cqw, calc(100cqh * ${roomRatio}))`,
     height: `min(100cqh, calc(100cqw / ${roomRatio}))`,
@@ -6696,24 +6338,20 @@ function CasePlayer({
     // Examine zoom: magnify the plate toward the examined hotspot's centre.
     // It's applied to a WRAPPER (not the plate itself) because the plate's
     // cinematic animation already owns its own `transform` property.
-    // Stages skip it: only the plate would zoom while the walker/markers
-    // stayed put, sliding the art out from under the painted walk path.
-    const b = scene?.nodeType === "stage" ? undefined : examining?.hs.bounds;
+    const b = examining?.hs.bounds;
     const examineStyle: React.CSSProperties = {
       transform: b ? `scale(${examineZoom(b)})` : "scale(1)",
       transformOrigin: b ? `${b.x + b.w / 2}% ${b.y + b.h / 2}%` : "50% 50%",
       transition: "transform 0.55s cubic-bezier(0.3, 0.7, 0.3, 1)",
     };
-    const plateParallax = hasParallax(bgCinematic) && !b && !talkHs;
+    const plateParallax = hasParallax(bgCinematic) && !b;
     return (
       <div className="absolute inset-0 overflow-hidden" data-room-plate style={roomFrame}>
         <div
-          className={`absolute inset-0 will-change-transform ${plateParallax ? "parallax-plate parallax-idle" : ""} ${isTalkDOF ? "plate-dof-active" : ""}`}
+          className={`absolute inset-0 will-change-transform ${plateParallax ? "parallax-plate parallax-idle" : ""}`}
           style={{
             ...examineStyle,
             ...(plateParallax ? parallaxStyle(bgCinematic) : {}),
-            ...(talkHs ? talkZoomStyle : {}),
-            ...(isTalkDOF ? talkPlateDOFStyle : {}),
           }}
         >
           {resolvedBackground.startsWith("video:") ? (
@@ -6758,8 +6396,6 @@ function CasePlayer({
           <ForegroundExtras
             key={`fge-${sceneId}-${entrySeq}`}
             cinematic={bgCinematic}
-            {...(hasWorldPinnedExtras ? { cam: stageCam } : {})}
-            {...(occludersInFront.size ? { skip: occludersInFront } : {})}
           />
           {/* Keyed by scene entry so a foreground zoom animation replays fresh
               each time the player enters the scene (not only on first mount). */}
@@ -6965,188 +6601,6 @@ function CasePlayer({
         return live === 1 && !resolved ? <div className="iq-critical-vignette pointer-events-none absolute inset-0 z-[43]" aria-hidden /> : null;
       })()}
 
-      {/* STAGE node — the walkable layer. The Stage component draws
-          the floor, the walking character and the interaction markers, and
-          fires hotspots through activateHotspot exactly as a click would.
-          While a conversation is open (stageTalking) the stage sleeps. */}
-      {isStage && scene.stage && sceneReady && !scene.isEnding && !overlay && (() => {
-        // Where the walker appears depends on which room they came from
-        // (stage.entrySpawns), falling back to the room's own spawn.
-        const fromScene = prevSceneRef.current;
-        const entrySpawn = scene.stage.entrySpawns?.[fromScene ?? ""] ?? scene.stage.spawn;
-        // The room's plate for WIDE worlds (Stage pans it with the camera)
-        // AND the fill for walk-behind slices (they redraw this same image,
-        // clipped). Videos stay on Game's fixed plate — a <video> can't be
-        // CSS-clipped as a background. Gradients ARE passed so a walk-behind
-        // in a gradient room still covers the walker.
-        const wideBg =
-          scene.background && !scene.background.startsWith("video:")
-            ? assetBackground(scene.background)
-            : undefined;
-        // OPT-IN 3D — a stage carrying `quake` renders as a first-person
-        // billboard world instead of the 2D room. Same hotspot pipeline,
-        // same enter-script contract; only the geometry differs. No WebGL
-        // (or a DOM environment without a GL context) falls back to the
-        // classic 2D stage, so the room is never unplayable.
-        const quakeSettings = scene.stage?.quake && !scene.stage.quake.fps && webglAvailable() ? scene.stage.quake : undefined;
-        const fpsEpoch = fpsRestoreEpoch.current;
-        const stageEl = scene.stage.quake?.fps ? (
-          <FpsStage key={`fps-${sceneId}-${entrySeq}`} quake={scene.stage.quake} title={scene.title}
-            active={stageWalking} soundOn={soundOn} initialSnapshot={fpsRoomsRef.current[sceneId]}
-            onSnapshot={(snapshot) => { if (fpsEpoch === fpsRestoreEpoch.current) fpsRoomsRef.current[sceneId] = snapshot; }}
-            hotspots={visibleHotspots} unlocked={(hs) => meetsGating(hs.gating, state)}
-            onInteract={(hs) => activateHotspot(hs)} onMenu={() => setOverlay({ type: "quit" })}
-            onSave={() => setOverlay({ type: "save" })} onLoad={() => setOverlay({ type: "load" })}
-            onToggleSound={() => setSoundOn(v => !v)}
-          />
-        ) : quakeSettings ? (
-          <QuakeStage
-            key={`quake-${sceneId}`}
-            settings={{ ...scene.stage, npcs: scene.stage.npcs?.filter(npc => meetsGating(npc.gating, state)), playerSheet: scene.stage.playerSheet ?? story.playerSprite?.sheet }}
-            quake={quakeSettings}
-            hotspots={visibleHotspots}
-            unlocked={(hs) => meetsGating(hs.gating, state)}
-            onInteract={(hs) => activateHotspot(hs)}
-            onCaption={(text, kind) => showStageCaption(text, kind)}
-            {...(stageEnterScript ? { enterScript: stageEnterScript } : {})}
-            onScriptEffect={(eff) => {
-              if (eff.type === "setFlag") {
-                setState((s) => applyConsequences(story, { setFlags: [eff.flag] }, s));
-              } else if (eff.type === "goToScene") {
-                goToScene(eff.targetSceneId);
-              } else {
-                setPlayerPose(eff.pose ?? null);
-              }
-            }}
-            onScriptStep={({ index }) => markCoverage("cutscene", `${sceneId}:#${index}`)}
-          />
-        ) : (
-          <Stage
-            key={`stage-${sceneId}`}
-            activeObstacles={stageActiveObstacles}
-            settings={{
-              ...scene.stage,
-              npcs: scene.stage.npcs?.filter(npc => meetsGating(npc.gating, state)),
-              // Story-wide walker default (In-game theme → 🚶 Player character);
-              // a scene's own sprite overrides it.
-              playerSheet: scene.stage.playerSheet ?? story.playerSprite?.sheet,
-              playerImage: scene.stage.playerImage ?? story.playerSprite?.image,
-              // The skull pie's centrepiece (In-game theme → 💀 Verb menu
-              // icon); a scene can still override it with its own.
-              objectMenuIcon: scene.stage.objectMenuIcon ?? story.verbMenuIcon,
-              spawn: entrySpawn,
-              hints: hintActive ? "always" : scene.stage.hints,
-              // Story-wide kill-switch: verbMenuEnabled:false disables the
-              // object-first pie everywhere, even on scenes that opted in.
-              ...(story.verbMenuEnabled === false ? { objectVerbMenu: false, objectMenuHold: false } : {}),
-            }}
-            hotspots={visibleHotspots}
-            unlocked={(hs) => meetsGating(hs.gating, state)}
-            onInteract={(hs, ctx) => activateHotspot(hs, ctx)}
-            active={stageWalking}
-            pose={playerPose ?? scene.stage.playerPose}
-            poseOnce={playerPoseOnce}
-            onPoseEnd={() => {
-              setPlayerPose(null);
-              setPlayerPoseOnce(false);
-            }}
-            cursorStyle={cursorStyle}
-            onVerbChange={setCoinVerb}
-            {...(hasOccluders ? { onPosChange: handleWalkerPos } : {})}
-            {...(hasWorldPinnedExtras ? { onCamChange: setStageCam } : {})}
-            {...(dropRequest ? { dropRequest } : {})}
-            {...(scriptRequest ? { scriptRequest } : {})}
-            {...(stageEnterScript ? { enterScript: stageEnterScript } : {})}
-            onScriptEffect={(eff) => {
-              // Story-state side effects a cutscene step asks for — the
-              // stage performs, Game owns the consequences.
-              if (eff.type === "setFlag") {
-                setState((s) => applyConsequences(story, { setFlags: [eff.flag] }, s));
-              } else if (eff.type === "goToScene") {
-                goToScene(eff.targetSceneId);
-              } else {
-                setPlayerPose(eff.pose ?? null);
-                setPlayerPoseOnce(false);
-              }
-            }}
-            onScriptStep={({ tag, index }) => {
-              // Playtest coverage: this cutscene step actually ran. The
-              // entry script stores under an empty hotspot tag; a runScript
-              // hotspot under its own id (mirrored by the coverage report).
-              markCoverage("cutscene", `${sceneId}:${tag === "enter" ? "" : tag}#${index}`);
-            }}
-            verbs={scene.stage.verbCoin || (scene.stage.objectVerbMenu && story.verbMenuEnabled !== false) ? verbsForScene({ ...scene, hotspots: visibleHotspots }) : undefined}
-            convoHotspotId={stageConvo === "open" ? convoHotspotId : null}
-            inventory={state.inventory.map((i) => ({ id: i.id, name: i.name, icon: i.icon }))}
-            background={wideBg}
-            cinematic={bgCinematic}
-            onEdgeExit={(edge) => {
-              const ex = scene.stage?.exitEdges?.[edge];
-              // A half-authored edge (no target) must not strand the walker in
-              // a dead scene — refuse the exit instead of going nowhere.
-              if (!ex?.targetSceneId) return;
-              const fs = ex.flagSet;
-              if (fs) setState((s) => applyConsequences(story, { setFlags: [fs] }, s));
-              goToScene(ex.targetSceneId);
-            }}
-            onEdgeLocked={(_edge, line) => showStageCaption(line, "fail")}
-            edgeUnlocked={(edge) => {
-              const ex = scene.stage?.exitEdges?.[edge];
-              return ex ? meetsGating(ex.gating, state) : true;
-            }}
-          />
-        );
-        // Graded wrapper so the walker sprite matches the plate's colour
-        // grade; only added when a grade is active (a filter would otherwise
-        // change the containing block for no reason).
-        const g = spriteGradeStyle(bgCinematic);
-        // The zoom wrapper carries the SAME talkZoomStyle as the plate
-        // wrapper, so background and characters scale as one room.
-        // z-[47]: this wrapper carries talkZoomStyle, and a `transform`
-        // creates a STACKING CONTEXT — everything inside it (including the
-        // verb coin's z-[200]) is sealed in and sorts as one unit against its
-        // siblings. Without an explicit z-index the whole stage sorted below
-        // the walk-behind pass at z-[58], so a foreground prop covered the
-        // verb menu entirely. Giving the wrapper its own layer keeps the
-        // stage above the plate while the occluder pass still paints over the
-        // WALKER, which is what a walk-behind is for.
-        const stageZoomed = (
-          <div className="absolute inset-0 z-[47]" data-room-stage={fitRoom ? "fitted" : "legacy"} style={roomFrame}>
-          <div className="absolute inset-0 z-[47]" data-stage-world style={talkZoomStyle}>
-            {stageEl}
-            {/* WALK-BEHIND PASS — must live INSIDE this wrapper. talkZoomStyle
-                sets a transform, which creates a stacking context and seals
-                the whole stage (verb coin included) into one layer; a sibling
-                pass therefore painted over the coin and the dock no matter
-                what z it used. In here it sorts against the walker directly:
-                z-[160] clears the tallest walker (50 + y, so max ~150) while
-                staying under the stage's own z-[200] controls. It also pans
-                with the room, so a prop can no longer drift against the art. */}
-            {hasOccluders && occludersInFront.size > 0 && !overlay && (
-              <div className="pointer-events-none absolute inset-0 z-[160]" aria-hidden>
-                <ForegroundExtras
-                  key={`occl-${sceneId}-${entrySeq}`}
-                  cinematic={bgCinematic}
-                  {...(hasWorldPinnedExtras ? { cam: stageCam } : {})}
-                  only={occludersInFront}
-                />
-              </div>
-            )}
-          </div>
-          </div>
-        );
-        return g.filter ? (
-          <div className="pointer-events-none absolute inset-0 z-[45]" style={g}>
-            {stageZoomed}
-          </div>
-        ) : (
-          stageZoomed
-        );
-      })()}
-
-      {/* (the walk-behind pass now renders inside the stage wrapper above —
-          see the note there on stacking contexts) */}
-
       {/* ANIMATED CURSOR — a sprite that tracks the mouse when a verb's
           cursor art is a sheet (a reaching hand, a turning key). Drawn above
           everything, clicks pass straight through it. */}
@@ -7159,40 +6613,11 @@ function CasePlayer({
           <SheetSprite sheet={cursor.art.sheet} anim="loop" fallbacks={["idle"]} height={cursor.size} />
         </div>
       ) : null}
-
-      {/* STAGE caption bar — showText / locked / entry lines play as a
-          subtitle pinned to the TOP of the plate, well above the character:
-          the walker roams the bottom floor band, so a bottom-anchored bar
-          rendered right on top of them (and lingered for seconds) hid the
-          sprite mid-scene. */}
-      {isStage && stageCaption && !overlay && (
-        <div
-          key={stageCaption.key}
-          data-stage-caption
-          className={`stage-caption pointer-events-none absolute inset-x-0 top-[13%] z-[74] flex justify-center px-6`}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div
-            className={`max-w-2xl border bg-noir-950/92 px-4 py-2.5 text-center shadow-[0_6px_24px_rgba(0,0,0,0.55)] backdrop-blur-sm ${
-              stageCaption.kind === "fail" ? "border-crimson/60" : "border-gold/40"
-            }`}
-          >
-            {stageCaption.label && (
-              <span className={`mb-0.5 block font-pulp text-[9px] uppercase tracking-[0.25em] ${stageCaption.kind === "fail" ? "text-crimson/90" : "text-gold/85"}`}>
-                {stageCaption.label}
-              </span>
-            )}
-            <span className="block font-type text-sm leading-relaxed text-paper md:text-base">{stageCaption.text}</span>
-          </div>
-        </div>
-      )}
-
       {/* Hotspots become available once the scene setup has been read, including
           while dialogue plays. The dialogue panel sits above them and stops
           propagation, so this is intentional access rather than click-through.
-          STAGE nodes skip this layer entirely — their hotspots are rendered as
-          walkable markers by the Stage component above. */}
-      {sceneReady && !scene.isEnding && !overlay && !isStage && (
+          */}
+      {sceneReady && !scene.isEnding && !overlay && (
         <div className="absolute inset-0 z-[46] pointer-events-none" style={cursorStyle}>
           {visibleHotspots.map((hs) => {
             const unlocked = meetsGating(hs.gating, state);
@@ -7394,16 +6819,7 @@ function CasePlayer({
             {inBeats && <span className="font-type text-[9px] text-paper/35">talking…</span>}
           </div>
           <hr className="hud-rule mb-1.5" />
-          {/* STAGE nodes: no action list — the markers on the floor ARE the
-              action list. Point at the floor instead. */}
-          {isStage && (
-            <p className="font-type text-[10px] leading-snug text-paper/45">
-              {stageTalking
-                ? "Talking — the conversation is on screen."
-                : "🚶 Walk with WASD / arrows or click the floor · double-click to jog · H reveals markers · N talks to the nearest character · 1-9 pick coin verbs. 👁 looking works from right here."}
-            </p>
-          )}
-          {!isStage && (
+          {(
           <div className="space-y-1">
             {visibleHotspots.map((hs) => {
               const unlocked = meetsGating(hs.gating, state);
@@ -7436,13 +6852,10 @@ function CasePlayer({
       )}
       {!hudHidden && (
         <div className="pointer-events-none absolute left-3 top-3 z-40 flex flex-col items-start gap-1">
-          {(autoAdvance || skipMode || hintActive) && (
+          {(autoAdvance || hintActive) && (
             <div className="hud-chrome hud-frame flex items-center gap-1.5 px-2 py-1">
               {autoAdvance && (
                 <span className="hud-chip" data-kind="good">⏩ Auto</span>
-              )}
-              {skipMode && (
-                <span className="hud-chip" data-kind="good">⏭ Skip</span>
               )}
               {hintActive && (
                 <span className="hud-chip" data-kind="info">🔍 Hotspots</span>
@@ -7837,7 +7250,7 @@ function CasePlayer({
           actually models. It sits OUTSIDE the narrative panel on purpose: that
           panel is invisible while walking a 🚶 stage, and a stage room with
           every marker spent is exactly the dead end this is for. */}
-      {!topicConvo && sceneReady && !inBeats && !scene.isEnding && strandedShown && !strandedDismissed && (
+      {sceneReady && !inBeats && !scene.isEnding && strandedShown && !strandedDismissed && (
         <div className="absolute inset-x-0 bottom-0 z-[49] flex justify-center p-4 pl-24">
           <div
             className="pop-in pointer-events-auto max-w-2xl border-2 border-crimson/70 bg-noir-950/95 px-4 py-3 shadow-[0_4px_18px_rgba(0,0,0,0.45)] backdrop-blur-sm"
@@ -7916,14 +7329,9 @@ function CasePlayer({
         </div>
       )}
 
-      {/* narrative panel — pointer-events-auto so clicks stay contained.
-          STAGE nodes only raise it while a conversation plays; while walking,
-          the floor and its markers own the bottom of the frame. */}
+      {/* narrative panel — pointer-events-auto so clicks stay contained. */}
       <div
-        aria-hidden={isStage && !stageTalking}
         className={`absolute inset-x-0 bottom-0 z-[47] flex justify-center p-4 pl-24 ${
-          isStage && !stageTalking ? "invisible pointer-events-none" : ""
-        } ${
           scene.nodeType === "credits"
             ? // A montage is the point of the shot, so it stays visible: only the
               // plain (image-less) credits node gets the black scrim.
@@ -7951,20 +7359,23 @@ function CasePlayer({
           {/* cinematic hold countdown — a title sequence shouldn't show a
               stopwatch, so credits nodes get a quiet progress rule pinned to
               the bottom of the frame instead of the inline readout. */}
-          {holdActive && scene.nodeType === "credits" && (
+          {/* A title sequence shouldn't show a stopwatch, so credits nodes get
+              a quiet progress rule pinned to the bottom of the frame instead.
+              It reads the roll's own countdown, not a second authored timer. */}
+          {isCredits && !proseAcknowledged && creditsWait > 0 && (
             <div className="pointer-events-none absolute inset-x-0 bottom-8 flex flex-col items-center gap-2">
               <div className="h-px w-40 overflow-hidden bg-paper/15">
                 <div
                   className="h-full bg-gold/70"
                   style={{
-                    width: `${100 - (holdRemaining / Math.max(1, scene.choiceDelaySeconds ?? 1)) * 100}%`,
+                    width: `${100 - (autoAdvanceRemaining / creditsWait) * 100}%`,
                     transition: "width 1s linear",
                   }}
                 />
               </div>
             </div>
           )}
-          {holdActive && scene.nodeType !== "credits" && (
+          {holdActive && !isCredits && (
             <div className="mb-2 flex items-center justify-center gap-2">
               <span className="animate-pulse font-pulp text-[10px] uppercase tracking-[0.3em] text-gold">
                 ⏳ {holdRemaining}s
@@ -8158,40 +7569,33 @@ function CasePlayer({
                       </button>
                     )}
                     <button
-                      onClick={() => {
-                        if (autoAdvance) setAutoAdvance(false);
-                        else { setSkipMode(false); setAutoAdvance(true); }
-                      }}
+                      onClick={() => setAutoAdvance((v) => !v)}
                       className={`beat-ctl text-[10px] ${autoAdvance ? "border-neon text-neon bg-neon/10" : ""}`}
                       aria-pressed={autoAdvance}
-                      title="Auto-forward"
+                      title="Auto-forward: advance each line once it finishes typing"
                     >
                       ⏩ auto
                     </button>
-                    <button
-                      onClick={() => {
-                        if (skipMode) setSkipMode(false);
-                        else { setAutoAdvance(false); setSkipMode(true); }
-                      }}
-                      className={`beat-ctl text-[10px] ${skipMode ? "border-neon text-neon bg-neon/10" : ""}`}
-                      aria-pressed={skipMode}
-                      title="Skip seen only"
-                    >
-                      ⏭ skip
-                    </button>
                   </div>
-                ) : proseDone && !((scene.nodeType === "credits" || scene.nodeType === "cutscene") && holdActive) && (
+                ) : proseDone && !isCredits && !(scene.nodeType === "cutscene" && holdActive) && (
+                  /* A credits node deliberately has NO button. The roll ends
+                     and the film moves on by itself; the only control is
+                     "Skip title sequence" in the corner. The old "▸ Begin
+                     Case" button sat under the roll, appeared too late to be
+                     useful and — with no choices wired — acknowledged the
+                     prose and then went nowhere, which is what made the end
+                     credits look stuck. */
                   <button
                     onClick={() => {
                       audio.click();
-                      // Credits & cutscene nodes have no side-panel choices, so the
-                      // continue button must advance straight into the first choice.
-                      const firstExit = scene.nodeType === "credits" || scene.nodeType === "cutscene"
-                        ? availableChoices.find((c) => c.targetSceneId)
-                        : undefined;
-                      if (firstExit) {
-                        pickChoice(firstExit);
-                        return;
+                      // A cutscene node has no side-panel choices, so its
+                      // continue button advances straight into the first choice.
+                      if (scene.nodeType === "cutscene") {
+                        const firstExit = availableChoices.find((c) => c.targetSceneId);
+                        if (firstExit) {
+                          pickChoice(firstExit);
+                          return;
+                        }
                       }
                       // Moving from prose into dialogue must cut the scene's
                       // recorded narration — otherwise the MP3 keeps droning
@@ -8200,18 +7604,14 @@ function CasePlayer({
                       setProseAcknowledged(true);
                     }}
                     className={
-                      scene.nodeType === "credits"
-                        ? "mt-6 border-2 border-gold bg-gold/15 px-6 py-2.5 font-pulp text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold/35"
-                        : scene.nodeType === "cutscene"
-                          ? "mt-6 border border-paper/40 px-5 py-2 font-pulp text-xs uppercase tracking-[0.2em] text-paper/80 hover:border-neon hover:text-neon"
-                          : "mt-3 font-pulp text-[10px] uppercase tracking-widest text-gold hover:underline"
+                      scene.nodeType === "cutscene"
+                        ? "mt-6 border border-paper/40 px-5 py-2 font-pulp text-xs uppercase tracking-[0.2em] text-paper/80 hover:border-neon hover:text-neon"
+                        : "mt-3 font-pulp text-[10px] uppercase tracking-widest text-gold hover:underline"
                     }
                   >
-                    {scene.nodeType === "credits"
-                      ? "▸ Begin Case"
-                      : scene.nodeType === "cutscene"
-                        ? "▸ Continue"
-                        : `▸ continue to ${visibleBeats.length ? "dialogue" : "choices"}`}
+                    {scene.nodeType === "cutscene"
+                      ? "▸ Continue"
+                      : `▸ continue to ${visibleBeats.length ? "dialogue" : "choices"}`}
                   </button>
                 )}
               </div>
@@ -8340,12 +7740,7 @@ function CasePlayer({
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        if (autoAdvance) {
-                          setAutoAdvance(false);
-                        } else {
-                          setSkipMode(false);
-                          setAutoAdvance(true);
-                        }
+                        setAutoAdvance((v) => !v);
                       }}
                       className={`beat-ctl ${autoAdvance ? "border-neon text-neon bg-neon/10" : ""}`}
                       data-active={autoAdvance || undefined}
@@ -8354,74 +7749,17 @@ function CasePlayer({
                     >
                       ⏩ auto
                     </button>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (skipMode) {
-                          setSkipMode(false);
-                        } else {
-                          setAutoAdvance(false);
-                          setSkipMode(true);
-                        }
-                      }}
-                      className={`beat-ctl ${skipMode ? "border-neon text-neon bg-neon/10" : ""}`}
-                      data-active={skipMode || undefined}
-                      title="Skip: fast-forward only through seen dialogue (stops at unseen)"
-                      aria-pressed={skipMode}
-                    >
-                      ⏭ skip
-                    </button>
                     </div>
                   </div>
                 )}
               </div>
             )}
           </div>
-
-          {/* TOPIC-LIST HUB — a topic conversation replaces the scene's choices
-              with the askable questions; the leave option ends the talk. */}
-          {topicConvo && !topicBeats && stageConvo === "open" && (
-            <div className="mt-2 space-y-1.5" role="menu" aria-label="Conversation topics">
-              <div className="font-pulp text-[10px] uppercase tracking-[0.25em] text-gold">{topicConvo.prompt}</div>
-              {topicConvo.topics
-                .filter((t) => meetsGating(t.gating, state))
-                .map((t, i) => {
-                  const exhausted = !t.repeatable && askedTopics.has(t.id);
-                  return (
-                    <button
-                      key={t.id}
-                      role="menuitem"
-                      disabled={exhausted}
-                      onClick={() => pickTopic(t)}
-                      className={`pop-in flex w-full items-center gap-2 rounded-xl border border-cyan-neon/40 bg-cyan-neon/10 px-3 py-2.5 text-left font-pulp text-base leading-tight text-cyan-neon transition-all hover:-translate-y-0.5 hover:border-cyan-neon/80 hover:bg-cyan-neon/20 backdrop-blur-sm shadow-[0_4px_18px_rgba(0,0,0,0.45)] ${
-                        exhausted ? "opacity-40 cursor-not-allowed hover:translate-y-0" : ""
-                      }`}
-                      style={{ animationDelay: `${i * 70}ms` }}
-                    >
-                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border bg-noir-800/90 font-pulp text-[10px]">
-                        {exhausted ? "✓" : i + 1}
-                      </span>
-                      <span className="flex-1">{t.label}</span>
-                    </button>
-                  );
-                })}
-              <button
-                role="menuitem"
-                onClick={leaveTopic}
-                className="pop-in mt-1 flex w-full items-center gap-2 border-l-4 border-noir-600 bg-noir-950/90 px-3 py-2 text-left font-pulp text-base leading-tight text-paper/70 transition-all hover:-translate-y-0.5 hover:bg-noir-700/95 backdrop-blur-sm shadow-[0_4px_18px_rgba(0,0,0,0.45)]"
-                style={{ animationDelay: `${Math.min(6, topicConvo.topics.length + 1) * 70}ms` }}
-              >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border bg-noir-800/90 font-pulp text-[10px]">👋</span>
-                <span className="flex-1">{topicConvo.leaveLabel}</span>
-              </button>
-            </div>
-          )}
-
           {/* choices — credits/cutscene nodes auto-advance via the centered continue
               button when a choice is wired; if none is (or the author left the
               target blank), fall back to showing the choices so the player can
               never get trapped on a cinematic node. */}
-          {!topicConvo && choicesLive && !scene.isEnding && availableChoices.length > 0 && (
+          {choicesLive && !scene.isEnding && availableChoices.length > 0 && (
             <>
               {/* Big on-screen quick-time prompt banner. */}
               {qteActive && (
@@ -8853,13 +8191,16 @@ function CasePlayer({
         </div>
       )}
 
-      {scene.nodeType === "credits" && !proseAcknowledged && !proseDone && !holdActive && !overlay && (
+      {/* Skip the title sequence. Up for the WHOLE roll — it used to be gated
+          on `!proseDone && !holdActive`, which on the end credits left it
+          visible for about a tenth of a second and unclickable, so the only
+          way out of a two-minute roll was to sit through it. */}
+      {isCredits && !proseAcknowledged && !overlay && (
         <button
           className="absolute bottom-5 right-5 z-[60] rounded border border-paper/30 bg-noir-950/85 px-4 py-2 font-type text-xs text-paper/80 hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
           onClick={() => {
-            const firstExit = availableChoices.find((c) => c.targetSceneId && meetsGating(effectiveChoiceGating(c), state));
-            if (firstExit) pickChoice(firstExit);
-            else setProseDone(true);
+            audio.click();
+            skipCredits();
           }}
         >
           Skip title sequence

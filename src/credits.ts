@@ -1,4 +1,4 @@
-import type { CreditsSettings } from "./types";
+import type { CreditsLine, CreditsSettings } from "./types";
 
 /* ------------------------------------------------------------------ */
 /*  Credits-intro look presets                                        */
@@ -598,4 +598,81 @@ export function applyCreditsPreset(id: CreditsPresetId, current?: CreditsSetting
   const p = CREDITS_PRESETS[id];
   if (!p) return { ...(current ?? {}) };
   return { ...(current ?? {}), ...p.look };
+}
+
+/* ------------------------------------------------------------------ */
+/*  How long the roll actually runs                                    */
+/* ------------------------------------------------------------------ */
+/* A credits node used to be paced by two hand-typed numbers on the scene
+ * (`choiceDelaySeconds` to hold the frame, `autoAdvanceDelaySeconds` to
+ * leave), which had nothing to do with the animation actually playing.
+ * Authored too short and the film cut mid-roll; authored too long and the
+ * player sat on the last card staring at nothing. Both numbers are now
+ * optional: the roll's own length paces the scene, and
+ * `autoAdvanceDelaySeconds` only ever EXTENDS it (a longer music cue, say).
+ *
+ * The maths here mirrors `Credits` in src/game/Game.tsx exactly, and the
+ * component reads its scroll timer from this module, so the two cannot
+ * drift apart again.
+ */
+
+/** ms per character for the title's typewriter entrance. Shared with the
+ * renderer so a computed roll length includes the real typing time. */
+export const CREDITS_TYPE_SPEED = 42;
+
+/** The clamps the renderer applies to each timing knob. Exposed so the
+ * computed length can never disagree with what is on screen. */
+export const creditsTiming = (settings?: CreditsSettings) => ({
+  cardSeconds: Math.max(1.2, settings?.cardSeconds ?? CREDITS_DEFAULTS.cardSeconds!),
+  stagger: Math.max(0, settings?.stagger ?? CREDITS_DEFAULTS.stagger!),
+  duration: Math.max(0.1, settings?.duration ?? CREDITS_DEFAULTS.duration!),
+  scrollDuration: Math.max(6, settings?.scrollDuration ?? CREDITS_DEFAULTS.scrollDuration!),
+});
+
+/** Resolve title / subtitle / role-name lines from the credits settings,
+ * falling back to the scene's prose (line 1 = title, line 2 = subtitle, the
+ * rest = name-only lines) so older stories and imports keep working. A legacy
+ * "tap to begin" instruction line is dropped — nothing waits for a tap now. */
+export function resolveCredits(
+  prose: string,
+  settings?: CreditsSettings
+): { title: string; subtitle: string; lines: CreditsLine[] } {
+  const p = prose
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .filter((l) => !/^(tap|touch|click|press)( to)? begin$/i.test(l));
+  const title = settings?.title ?? p[0] ?? "";
+  const subtitle = settings?.subtitle ?? p[1] ?? "";
+  const lines = settings?.lines?.length ? settings.lines : p.slice(2).map((name) => ({ role: "", name }));
+  return { title, subtitle, lines };
+}
+
+/** How many cards a `cards`-style sequence shows: the title, the subtitle
+ * when there is one, then every credit line. */
+export function creditsCardCount(prose: string, settings?: CreditsSettings): number {
+  const { title, subtitle, lines } = resolveCredits(prose, settings);
+  return (title ? 1 : 0) + (subtitle ? 1 : 0) + lines.length;
+}
+
+/** Seconds the title sequence takes to play itself, start to finish. This is
+ * the scene's real pacing on a credits node — the roll ends, the film moves
+ * on. `autoAdvanceDelaySeconds` may only stretch it, never shorten it. */
+export function creditsRollSeconds(prose: string, settings?: CreditsSettings): number {
+  const { title, lines } = resolveCredits(prose, settings);
+  const t = creditsTiming(settings);
+  const style = settings?.style ?? CREDITS_DEFAULTS.style!;
+
+  if (style === "cards") {
+    return creditsCardCount(prose, settings) * t.cardSeconds;
+  }
+  if (style === "scroll") {
+    return t.scrollDuration;
+  }
+  // "fade-up": everything staggers into place and holds. With a typewriter
+  // title the list waits for the typing to finish before it starts.
+  const typing = settings?.titleEntrance === "typewriter" ? (title.length * CREDITS_TYPE_SPEED) / 1000 : 0;
+  const lastDelay =
+    (settings?.titleEntrance === "typewriter" ? lines.length : 2 + lines.length) * t.stagger;
+  return typing + lastDelay + t.duration + 0.45;
 }
