@@ -1,4 +1,3 @@
-import { validateFpsRoom } from "./game/fps/validate";
 import { interruptBlockedByBeatRoute, timerFlavour } from "./game/conversationTimer";
 import { sceneRoutes, storyEdges, visitHotspotActions, type StoryEdge } from "./sceneRoutes";
 import { spriteSheetIssues } from "./game/spriteSheet";
@@ -2776,7 +2775,6 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
     if ((sc.dialogueBeats ?? []).length > 0 && !(sc.hotspots ?? []).some((h) => hotspotReachableActions(h).some((a) => a.type === "startDialogue")))
       issues.push({ severity: "warning", sceneId: sc.id, message: `${label} has dialogue beats but no "Start conversation" (🗣) hotspot — nobody can trigger the conversation. Add a talk marker (Hotspots tab → action type "🗣 Start conversation").` });
     if (sc.stage) {
-      if (sc.stage.quake?.fps) validateFpsRoom(sc.stage.quake, sc.hotspots).forEach(issue => issues.push({...issue, sceneId: sc.id}));
       const ratio = sc.stage.plateAspectRatio;
       if (ratio !== undefined && (!Number.isFinite(ratio) || ratio < 0.25 || ratio > 6))
         issues.push({ severity: "error", sceneId: sc.id, message: `${label}: room aspect ratio must be a finite width / height between 0.25 and 6, or left empty for fill-screen framing.` });
@@ -3299,10 +3297,7 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
   if (!isLinearFilm) {
     if (!victories.length)
       issues.push({ severity: "error", sceneId: null, message: "No victory ending exists — the player cannot win this case." });
-    // Combat rooms lose through their health-zero / restart screen rather
-    // than fabricating an unreachable narrative game-over node.
-    const combatLoss = story.scenes.some(s => { const f=s.stage?.quake?.fps; return f && Array.isArray(f.entities) && Array.isArray(f.sprites) && f.entities.some(e => f.sprites.some(d => d.id === e.sprite && d.kind === "enemy")); });
-    if (!failures.length && !combatLoss)
+    if (!failures.length)
       issues.push({ severity: "warning", sceneId: null, message: "No game-over ending exists — there is no real risk of losing." });
   }
   if (!story.briefing?.objective)

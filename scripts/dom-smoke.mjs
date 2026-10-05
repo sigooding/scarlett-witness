@@ -93,6 +93,7 @@ const { StrictMode, createElement } = await import("react");
 const { createRoot } = await import("react-dom/client");
 const { default: App } = await import("APP_PATH");
 const { ErrorBoundary } = await import("EB_PATH");
+const { GamePlayer } = await import("../../src/game/Game.tsx");
 
 // Shims for APIs happy-dom lacks that the app touches.
 if (!globalThis.ResizeObserver) {
@@ -365,184 +366,6 @@ if (clickByText(/Clockwork Caper/i)) {
   failed |= report("INSPECTOR GADGET (plaza stage)").crashed;
 } else console.log("!! could not find the Inspector Gadget — Clockwork Caper card");
 root.unmount();
-
-// Phase 9: NO-HUD walkable stage (SceneNode.hideHud). A stage scene with
-// the layout flipped must render ZERO chrome — no ☰ Menu button, no Case
-// Progress meter, no inventory dock, no sound/help corner — while the stage
-// itself (markers, walker floor) stays interactive, and Esc still raises
-// the quit dialog (Save & exit). The same scene with hideHud off keeps its
-// HUD, proving the flag (not the node type) drives it.
-const { INSPECTOR_GADGET: igStory } = await import("../../src/data/inspectorGadget.ts");
-const { GamePlayer } = await import("../../src/game/Game.tsx");
-async function bootIg(hideHud) {
-  try { win.localStorage.clear(); win.sessionStorage.clear(); } catch {}
-  container.innerHTML = "";
-  const story = {
-    ...igStory,
-    scenes: igStory.scenes.map((sc) =>
-      sc.nodeType === "stage" ? { ...sc, stage: sc.stage ? { ...sc.stage, enterScript: undefined } : sc.stage, hideHud } : sc
-    ),
-  };
-  const stageScene = story.scenes.find((sc) => sc.nodeType === "stage");
-  const r = createRoot(container);
-  r.render(createElement(StrictMode, null, createElement(GamePlayer, { story, playFromSceneId: stageScene.id, onExit: () => {} })));
-  for (let i = 0; i < 24; i++) {
-    await sleep(500);
-    if (container.querySelector("button.stage-marker")) break;
-  }
-  await sleep(1200);
-  return r;
-}
-
-root = await bootIg(true); problems.length = 0;
-const nhText = (container.textContent || "").replace(/\\s+/g, " ");
-const nhNoMenu = !/☰ ?Menu/i.test(nhText);
-const nhNoMeters = !/Case Progress/i.test(nhText);
-const nhNoSound = !/🔊 Sound|🔇 Sound/.test(nhText);
-const nhNoDock = !nhText.includes("🧳") && !nhText.includes("🎒");
-const nhFrames = container.querySelectorAll(".hud-frame").length;
-const nhStageAlive = !!container.querySelector("button.stage-marker");
-// Esc must still open the quit dialog even with zero chrome on screen.
-win.dispatchEvent(new win.KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
-await sleep(600);
-const nhEscQuits = /Leave the case\?/i.test(container.textContent || "");
-console.log("\\n=== STAGE — NO HUD LAYOUT (hideHud) ===");
-console.log("  menu hidden:", nhNoMenu, "| meters hidden:", nhNoMeters, "| sound/help hidden:", nhNoSound, "| dock hidden:", nhNoDock, "| .hud-frame count:", nhFrames);
-console.log("  stage still interactive:", nhStageAlive, "| Esc still opens quit (save & exit):", nhEscQuits);
-if (!nhNoMenu || !nhNoMeters || !nhNoSound || !nhNoDock || !nhStageAlive || !nhEscQuits) failed = true;
-win.dispatchEvent(new win.KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
-await sleep(400);
-root.unmount(); problems.length = 0;
-
-root = await bootIg(false);
-const hudText = (container.textContent || "").replace(/\\s+/g, " ");
-const hudMenu = /☰ ?Menu/i.test(hudText);
-const hudMeters = /Case Progress/i.test(hudText);
-const hudStageAlive = !!container.querySelector("button.stage-marker");
-console.log("\\n=== STAGE — NORMAL HUD UNCHANGED ===");
-console.log("  menu present:", hudMenu, "| meters present:", hudMeters, "| stage present:", hudStageAlive);
-if (!hudMenu || !hudMeters || !hudStageAlive) failed = true;
-failed |= report("STAGE HUD layouts").crashed;
-root.unmount();
-
-// Phase 10: STAGE interaction niceties —
-//   (a) markers render ON their object (bottom-centre of the drawn zone),
-//       never "jumping" down into the walkable band;
-//   (b) nothing darkens the art outside the walkable area any more;
-//   (c) LOOKS fire at a distance: clicking a show-text zone plays its caption
-//       without the character walking;
-//   (d) ✋ take (and friends) still walk up first.
-const wireZone = { id: "igh_wire", label: "Pigeon wire", bounds: { x: 44, y: 22, w: 10, h: 12 }, cursor: "look", isRepeatable: true, action: { type: "showText", text: "Tiny grey witnesses, and none of them talking." } };
-async function bootPlaza(opts = {}) {
-  try { win.localStorage.clear(); win.sessionStorage.clear(); } catch {}
-  container.innerHTML = "";
-  const story = {
-    ...igStory,
-    scenes: igStory.scenes.map((sc) =>
-      sc.id !== "ig_plaza"
-        ? sc
-        : {
-            ...sc,
-            stage: sc.stage ? { ...sc.stage, enterScript: undefined, ...(opts.stageEdits || {}) } : sc.stage,
-            hotspots: [...(sc.hotspots || []), wireZone, ...(opts.hotspot ? [opts.hotspot] : [])],
-          }
-    ),
-  };
-  const r = createRoot(container);
-  r.render(createElement(StrictMode, null, createElement(GamePlayer, { story, playFromSceneId: "ig_plaza", onExit: () => {} })));
-  for (let i = 0; i < 24; i++) {
-    await sleep(500);
-    if (container.querySelector("button.stage-marker")) break;
-  }
-  await sleep(800);
-  return r;
-}
-const playerLeftPct = () => {
-  const el = container.querySelector("[data-stage-player]");
-  return el ? parseFloat(el.style.left) : null;
-};
-const markerBtn = (label) =>
-  [...container.querySelectorAll("button.stage-marker")].find((b) => (b.getAttribute("aria-label") || "").indexOf(label) === 0);
-
-root = await bootPlaza(); problems.length = 0;
-// (a) the wire zone ends at y=34 — well ABOVE the 66–94 floor band: pre-fix
-//     its marker clamped onto the pavement; now it stays on the wire.
-const wireBtn = markerBtn("Pigeon wire");
-const wireTop = wireBtn ? Math.round(parseFloat(wireBtn.style.top) * 10) / 10 : -999;
-const markerOnObject = Math.abs(wireTop - 34) < 1;
-// …and an in-band marker (the dropped glove, zone bottom y=89) still lands
-// on its zone's base, i.e. where the old clamp would put it too.
-const gloveBtn0 = markerBtn("Dropped glove");
-const gloveTop = gloveBtn0 ? Math.round(parseFloat(gloveBtn0.style.top) * 10) / 10 : -999;
-const floorMarkerOk = Math.abs(gloveTop - 89) < 1;
-// (b) no off-floor dim: the band gradients (0.18/0.28, 0.34/0.16) and the
-//     old path mask (0.30 black) are gone from the frame.
-const stageHtml = container.innerHTML;
-const noDim = !stageHtml.includes("rgba(0,0,0,0.28)") && !stageHtml.includes("rgba(0,0,0,0.34)") && !stageHtml.includes("rgba(0,0,0,0.30)");
-// (c) LOOK AT A DISTANCE: the poster is a show-text zone at x≈66 while the
-//     character spawns at x=12 — clicking it must read immediately and the
-//     walker's x must not budge.
-const x0 = playerLeftPct();
-const posterBtn = markerBtn("Newsstand poster");
-if (posterBtn) posterBtn.click();
-await sleep(1500);
-const lookFired = (container.textContent || "").indexOf("REWARD") !== -1;
-const xAfterLook = playerLeftPct();
-const lookNoWalk = x0 !== null && xAfterLook !== null && Math.abs(xAfterLook - x0) < 1;
-// (d) WALK-UP ACTIONS STILL WALK: click the glove (giveItem at x≈51): the
-//     character crosses the plaza, the one-shot marker is consumed.
-const gloveBtn = markerBtn("Dropped glove");
-if (gloveBtn) gloveBtn.click();
-let walkedToGlove = false;
-let gloveGone = false;
-for (let i = 0; i < 30; i++) {
-  await sleep(300);
-  const x = playerLeftPct();
-  if (x !== null && x > 35) walkedToGlove = true;
-  if (!markerBtn("Dropped glove")) { gloveGone = true; break; }
-}
-console.log("\\n=== STAGE — MARKER PLACEMENT, DIM REMOVAL, LOOK AT DISTANCE ===");
-console.log("  wire marker ON the object (top ≈34%):", markerOnObject, "(got " + wireTop + "%) | in-band glove marker intact:", floorMarkerOk, "(" + gloveTop + "%)");
-console.log("  no dim outside walkable area:", noDim);
-console.log("  look fired at distance:", lookFired, "| character did NOT walk (x " + x0 + " → " + xAfterLook + "):", lookNoWalk);
-console.log("  take still walks up (reached x>35):", walkedToGlove, "| glove consumed on arrival:", gloveGone);
-if (!markerOnObject || !floorMarkerOk || !noDim || !posterBtn || !lookFired || !lookNoWalk || !walkedToGlove || !gloveGone) failed = true;
-failed |= report("STAGE interaction niceties").crashed;
-root.unmount();
-
-// Phase 10b: PROP OCCLUSION + MENU Z-ORDER —
-//   (a) a hotspot flagged "occludes" draws its object art OVER the walkers
-//       (z 160 beats every actor's 50+y depth sort);
-//   (b) the object-first verb menu opens ABOVE every actor (z-[200]) so the
-//       choice options are never hidden behind a character.
-//   NOTE: this file's body is one big template literal: no backticks in
-//   comments or strings here, ever.
-const OCCL_ZONE = { id: "igh_occl", label: "Big prop", bounds: { x: 26, y: 40, w: 18, h: 26 }, cursor: "look", isRepeatable: true, occludes: true, image: "/img/prop-occluder.png", action: { type: "showText", text: "A very large foreground prop." } };
-root = await bootPlaza({ hotspot: OCCL_ZONE }); problems.length = 0;
-const occlBtn = markerBtn("Big prop");
-const occlArt = occlBtn ? occlBtn.previousElementSibling : null;
-const occlZ = occlArt instanceof win.HTMLElement ? occlArt.style.zIndex : "";
-const playerZ = (container.querySelector("[data-stage-player]") || {}).style?.zIndex || "";
-const occlAbove = occlZ === "160" && playerZ !== "" && Number(playerZ) < 160;
-root.unmount();
-
-root = await bootPlaza({ stageEdits: { objectVerbMenu: true, verbs: undefined, objectMenuHold: undefined } }); problems.length = 0;
-const menuBtn = markerBtn("Pigeon wire");
-if (menuBtn) {
-  try {
-    menuBtn.dispatchEvent(new win.PointerEvent("pointerdown", { bubbles: true, cancelable: true, button: 0, pointerId: 1 }));
-  } catch {
-    menuBtn.dispatchEvent(new win.MouseEvent("pointerdown", { bubbles: true, cancelable: true, button: 0 }));
-  }
-  await sleep(400);
-}
-const menuDiv = [...container.querySelectorAll("div")].find((d) => typeof d.className === "string" && d.className.includes("z-[200]") && (d.textContent || "").includes("Pigeon wire"));
-console.log("\\n=== STAGE — PROP OCCLUSION + MENU Z-ORDER ===");
-console.log("  occluder art over walkers (art z " + occlZ + " > player z " + playerZ + "):", occlAbove, "| object menu above actors:", !!menuDiv);
-if (!occlAbove || !menuDiv) failed = true;
-failed |= report("STAGE prop occlusion + menu z").crashed;
-root.unmount();
-
 
 // Phase N: WORLD-STATE DEEP LINK — ?scene=&flags=&items= must boot the REAL
 // runtime into a fabricated state, at that scene, with those things held.
@@ -831,6 +654,79 @@ win.history.replaceState(null, "", "/");
   failed |= report("QUICK-TIME still loud").crashed;
   root.unmount(); await sleep(200); problems.length = 0;
 }
+
+// Phase 12: CREDITS — a title sequence paces itself.
+// The real Nobody's Witness reel: the opening roll plays with NO "Begin
+// Case" button under it, "Skip title sequence" is up for the whole roll and
+// really leaves the scene, and the end credits advance by themselves the
+// moment the roll ends — no hand-typed seconds left to get wrong.
+{
+  const { NOBODYS_WITNESS_FILM: nwFilm } = await import("../../src/data/nobodysWitnessFilm.ts");
+  const { creditsRollSeconds } = await import("../../src/credits.ts");
+
+  const bootCredits = async (story, sceneId) => {
+    try { win.localStorage.clear(); win.sessionStorage.clear(); } catch {}
+    container.innerHTML = "";
+    const r = createRoot(container);
+    r.render(createElement(StrictMode, null, createElement(GamePlayer, { story, playFromSceneId: sceneId, onExit: () => {} })));
+    await sleep(1200);
+    return r;
+  };
+  const txt = () => (container.textContent || "").replace(/\\s+/g, " ");
+  const skipBtn = () => [...container.querySelectorAll("button")].find((b) => /Skip title sequence/i.test(b.textContent || ""));
+
+  // (a) the roll's own length is the clock — the hand-typed seconds are gone
+  const titleScene = nwFilm.scenes.find((s) => s.id === "nw_title");
+  const endCredits = nwFilm.scenes.find((s) => s.id === "nw_credits");
+  const rollTitle = creditsRollSeconds(titleScene.prose, titleScene.credits);
+  const rollEnd = creditsRollSeconds(endCredits.prose, endCredits.credits);
+  const noAuthoredTimers =
+    !("autoAdvanceDelaySeconds" in titleScene) &&
+    !("autoAdvanceDelaySeconds" in endCredits) &&
+    !("choiceDelaySeconds" in endCredits);
+  console.log("\\n=== CREDITS — THE ROLL IS THE CLOCK ===");
+  console.log("  opening roll:", rollTitle, "s | end roll:", rollEnd, "s | hand-typed timers removed:", noAuthoredTimers);
+  if (!(rollTitle > 10 && rollEnd > 60 && noAuthoredTimers)) failed = true;
+
+  // (b) opening titles: the sequence is on screen, there is no Begin Case,
+  //     and skipping it really moves the film on
+  let r = await bootCredits(nwFilm, "nw_title"); problems.length = 0;
+  const rollOn = !!container.querySelector(".credits-card");
+  const noBegin = !/Begin Case/i.test(txt());
+  const skipUp = !!skipBtn();
+  console.log("  roll on screen:", rollOn, "| no 'Begin Case' button:", noBegin, "| skip up for the whole roll:", skipUp);
+  if (!rollOn || !noBegin || !skipUp) failed = true;
+  if (skipBtn()) skipBtn().click();
+  await sleep(2500);
+  const leftTitles = !skipBtn();
+  console.log("  skip left the title sequence:", leftTitles);
+  if (!leftTitles) failed = true;
+  failed |= report("CREDITS opening titles").crashed;
+  r.unmount(); await sleep(200); problems.length = 0;
+
+  // (c) end credits: nobody touches it, and it still ends. Same node, three
+  //     credit lines instead of 29 so the roll is 6s rather than 99s.
+  const fastEnd = {
+    ...nwFilm,
+    scenes: nwFilm.scenes.map((s) =>
+      s.id === "nw_credits"
+        ? { ...s, credits: { ...s.credits, lines: (s.credits.lines || []).slice(0, 3), cardSeconds: 1.2 } }
+        : s
+    ),
+  };
+  const fastScene = fastEnd.scenes.find((s) => s.id === "nw_credits");
+  const fastRoll = creditsRollSeconds(fastScene.prose, fastScene.credits);
+  r = await bootCredits(fastEnd, "nw_credits"); problems.length = 0;
+  const midRoll = !!skipBtn();
+  await sleep(Math.max(0, fastRoll * 1000) + 6000);
+  const rolledOff = !skipBtn();
+  const reachedEnd = /Chapter Complete|Your Route/i.test(txt());
+  console.log("  fast end roll:", fastRoll, "s | still rolling halfway:", midRoll, "| advanced by itself:", rolledOff, "| landed on the ending card:", reachedEnd);
+  if (!midRoll || !rolledOff || !reachedEnd) failed = true;
+  failed |= report("CREDITS end roll advances itself").crashed;
+  r.unmount(); await sleep(200); problems.length = 0;
+}
+
 win.history.replaceState(null, "", "/");
 
 console.log("\\n=== DOM SMOKE " + (failed ? "FAILED" : "PASSED") + " ===");

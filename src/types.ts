@@ -1422,8 +1422,6 @@ export interface StageObstacle {
  *  ids) and `npcs` (npc ids). Everything else about the scene — hotspot
  *  actions, gating, dialogue, the enter script — is unchanged. */
 export interface QuakeModeSettings {
-  /** Sprite-action extension; omitted rooms keep the original Quake renderer. */
-  fps?: import("./game/fps/types").FpsSettings;
   /** The grid map, one string per row. */
   map: string[];
   /** Capital letter → hotspot id: that hotspot's marker sprite is anchored
@@ -2448,8 +2446,6 @@ export interface JourneyStep {
 }
 
 export interface GameSave {
-  /** Per-room first-person progress, including position, combat and doors. */
-  fpsRooms?: Record<string, import("./game/fps/types").FpsSnapshot>;
   /** Save-slot schema version (see SAVE_SCHEMA / migrateSave in logic.ts).
    *  Absent on saves written before versioning existed — those ARE v1.
    *  Reads refuse versions NEWER than the running build rather than

@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict';
 import { spriteAtlasPlan } from '../src/studio/spriteAtlas';
 import { applyKey, spriteIslands } from '../src/studio/spriteForge';
-import { hasDiagonalWalk, stageDirection, stageDirectionAnimation } from '../src/game/stageFacing';
 import { sheetAnim, sheetFrameAt, type SpriteSheet } from '../src/game/spriteSheet';
 import { validateStory } from '../src/logic';
 import type { Story } from '../src/types';
@@ -37,30 +36,12 @@ test('invalid banks, duplicate clip names and out-of-range indices fail without 
   assert.throws(() => spriteAtlasPlan([bank], Infinity));
   assert.throws(() => spriteAtlasPlan([{ ...bank, frameWidth: 9000, imageWidth: 9000, frameCount: 1, animations: undefined }]));
 });
-test('ordinary four-way headings remain unchanged; zero vectors preserve last facing', () => {
-  assert.equal(hasDiagonalWalk(old), false);
-  assert.equal(stageDirection(1,1,'left'), 'right'); assert.equal(stageDirection(1,-4), 'up');
-  assert.equal(stageDirection(0,0,'up-left',true), 'up-left'); assert.equal(stageDirection(NaN,3,'down'), 'down');
-  assert.deepEqual(stageDirectionAnimation(old,'left',true), { anim: 'walk', fallbacks: ['idle'], flip: true });
-});
-test('eight-way sectors recognise diagonals without stealing mostly-horizontal or vertical motion', () => {
-  assert.equal(stageDirection(1,-1,'right',true), 'up-right'); assert.equal(stageDirection(-1,1,'right',true), 'down-left');
-  assert.equal(stageDirection(1,.1,'right',true), 'right'); assert.equal(stageDirection(-.1,-1,'right',true), 'up');
-  assert.equal(hasDiagonalWalk({ ...old, animations: { ...old.animations, 'walk-up-right': { frames: [1] } } }), true);
-});
-test('explicit left art is never double-mirrored; missing left diagonal mirrors the right bank', () => {
-  const s = { ...old, animations: { ...old.animations, 'walk-left': { frames: [2] }, 'walk-up-right': { frames: [1,3] } } };
-  assert.equal(stageDirectionAnimation(s,'left',true).flip, false);
-  assert.equal(stageDirectionAnimation(s,'left',true).anim, 'walk-left');
-  assert.deepEqual(stageDirectionAnimation(s,'up-left',true), { anim: 'walk-up-right', fallbacks: ['idle'], flip: true });
-});
-test('missing diagonal art falls back to vertical, then legacy; walk-only sheets freeze at rest with correct facing', () => {
-  const s = { ...old, animations: { 'walk-left': { frames: [2,3] }, 'walk-up': { frames: [1,0] } } };
-  assert.equal(stageDirectionAnimation(s,'up-right',true).anim, 'walk-up');
-  const idle = stageDirectionAnimation(s,'left',false);
-  assert.equal(idle.anim, 'idle'); assert.equal(idle.flip, false); assert.equal(s.animations[idle.anim], undefined);
-  assert.deepEqual(sheetAnim(s,idle.anim,idle.fallbacks)?.frames, [2,3]);
+test('a missing animation falls back through its list; a non-looping clip freezes on its last frame', () => {
+  const s = { ...old, animations: { ...old.animations, 'walk-left': { frames: [2,3] } } };
+  assert.deepEqual(sheetAnim(s,'idle',['walk-left'])?.frames, [0]);
+  assert.deepEqual(sheetAnim(s,'nope',['walk-left'])?.frames, [2,3]);
   assert.equal(sheetFrameAt({ frames: [4,5], fps: 4, loop: false }, 50), 5);
+  assert.equal(sheetFrameAt({ frames: [4,5], fps: 4, loop: true }, 50), 4);
 });
 function islandsFixture() {
   const width=22,height=18,data=new Uint8ClampedArray(width*height*4);

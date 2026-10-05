@@ -69,24 +69,6 @@ export function visitStoryMediaFields(story: Story, visit: (field: StoryMediaFie
       field(n, "image", `stage NPC "${n.id}" image`);
       field(n.sheet, "image", `stage NPC "${n.id}" sheet`);
     });
-    field(sc.stage?.quake, "wallTexture", "first-person wall texture");
-    field(sc.stage?.quake, "floorTexture", "first-person floor texture");
-    field(sc.stage?.quake, "handImage", "first-person hand image");
-    const fps = sc.stage?.quake?.fps;
-    field(fps, "skyImage", "first-person sky");
-    field(fps?.effects, "impactImage", "first-person impact effect");
-    frames(fps?.effects?.explosionImages, "first-person explosion frame");
-    fps?.materials?.forEach(m => field(m, "image", `first-person material "${m.id}"`));
-    fps?.sprites?.forEach(s => { field(s, "image", `first-person sprite "${s.id}"`); field(s, "brokenImage", `first-person broken sprite "${s.id}"`); field(s.sheet, "image", `first-person sheet "${s.id}"`); });
-    fps?.weapons?.forEach(w => { field(w, "image", `first-person weapon "${w.id}"`); field(w.sheet, "image", `first-person weapon sheet "${w.id}"`); });
-    // Props have an optional @height suffix that is geometry, not part of the URL.
-    const props = sc.stage?.quake?.props;
-    if (props) for (const key of Object.keys(props)) {
-      const raw = props[key];
-      const suffix = /@-?\d+(?:\.\d+)?(?:@-?\d+(?:\.\d+)?)?$/.exec(raw)?.[0] ?? "";
-      const value = suffix ? raw.slice(0, -suffix.length) : raw;
-      if (value && !value.startsWith("emoji:")) visit({ value, label: `first-person prop "${key}"`, sceneId, kind: "image", set: (next) => { props[key] = next + suffix; } });
-    }
     cinematic(sc.cinematic, "scene");
     frames(sc.credits?.montage, "credits montage image");
     sc.hotspots?.forEach((h) => {

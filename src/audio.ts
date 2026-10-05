@@ -926,13 +926,20 @@ class AudioEngine {
    * Use `stopSpeech()` when the line is genuinely superseded (new beat, scene
    * change, player pressed Continue).
    */
-  stopSpeechIfIdle() {
+  /** True while a TTS line or a recorded voice clip is still sounding.
+   *  Lets auto-readers hold the current line until the narration finishes
+   *  instead of chopping it when the next subtitle arrives. */
+  speechActive(): boolean {
     const speaking =
       typeof window !== "undefined" &&
       "speechSynthesis" in window &&
       (window.speechSynthesis.speaking || window.speechSynthesis.pending);
     const clipPlaying = !!this.clip && !this.clip.paused && !this.clip.ended;
-    if (speaking || clipPlaying) return;
+    return speaking || clipPlaying;
+  }
+
+  stopSpeechIfIdle() {
+    if (this.speechActive()) return;
     this.stopSpeech();
   }
 

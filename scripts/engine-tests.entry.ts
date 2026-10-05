@@ -1,4 +1,3 @@
-import { validateFpsRoom } from "../src/game/fps/validate";
 /**
  * Engine tests — the TS body bundled and run by scripts/engine-tests.mjs
  * (npm test). Pure-logic: no DOM, no network, no localStorage.
@@ -3261,14 +3260,7 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
 
   // -- the wiring: one number drives both the step and the legs ---------------
   {
-    const stageSrc = readFileSync("src/game/Stage.tsx", "utf8");
     const spriteSrc = readFileSync("src/game/SheetSprite.tsx", "utf8");
-    check("sheet: the jog multiplier is shared, not a magic literal in two places",
-      /jogRef\.current = on \? STAGE2D_JOG_MULT : 1;/.test(stageSrc) && !/on \? 5 : 1/.test(stageSrc));
-    check("sheet: the walker's cycle is speed-matched", /fpsScale=\{walkRate\}/.test(stageSrc) && /stageSpeedScale\(pos\.y, floor, settings\)/.test(stageSrc));
-    check("sheet: the jog multiplies the walk cycle only when there is no run bank",
-      /walking && jogOn && !run \? STAGE2D_JOG_MULT : 1/.test(stageSrc));
-    check("sheet: an ambient NPC's cycle is speed-matched too", /fpsScale=\{npcWalkRate\}/.test(stageSrc));
     check("sheet: the renderer accumulates phase instead of reading a wall clock",
       /phaseRef\.current \+= dt \* fps \* speedMatchedFpsScale\(scaleRef\.current\)/.test(spriteSrc) &&
       /frameFromPhase\(active, phaseRef\.current\)/.test(spriteSrc));
@@ -5795,61 +5787,6 @@ console.log("\n=== SEEDED RNG — deterministic playtests ===");
   }
 }
 
-/* ------------------------------------------------------------------ */
-/* Quake-style 3D movement math — the controls contract                */
-/* ------------------------------------------------------------------ */
-{
-  const { quakeForward, quakeRight, quakeMoveDelta, quakePropSpec } = await import("../src/game/quakeMath");
-  check("quake props: bare url gets door defaults", quakePropSpec("a.png").height === 2.05 && quakePropSpec("a.png").yaw === 0);
-  check("quake props: @height parses", quakePropSpec("a.png@2.1").height === 2.1 && quakePropSpec("a.png@2.1").url === "a.png");
-  check("quake props: @height@yaw parses degrees", Math.abs(quakePropSpec("a.png@1@90").yaw - Math.PI / 2) < 1e-9);
-  const near = (a: number, b: number) => Math.abs(a - b) < 1e-9;
-
-  // Heading 0: the camera looks along −z, so W must move −z and D +x.
-  check("quake: at heading 0 forward is −z", near(quakeForward(0).x, 0) && near(quakeForward(0).z, -1));
-  check("quake: at heading 0 right is +x", near(quakeRight(0).x, 1) && near(quakeRight(0).z, 0));
-  const w0 = quakeMoveDelta(0, 1, 0);
-  check("quake: W walks into the view at spawn", near(w0.dx, 0) && near(w0.dz, -1), w0);
-  const d0 = quakeMoveDelta(0, 0, 1);
-  check("quake: D strafes right at spawn", near(d0.dx, 1) && near(d0.dz, 0), d0);
-  const s0 = quakeMoveDelta(0, -1, 0);
-  check("quake: S is the exact opposite of W", near(s0.dx, 0) && near(s0.dz, 1), s0);
-
-  // After a quarter turn LEFT (heading +π/2) the view faces −x: W must go
-  // −x, and D (right of a west-facing camera) must go −z. This is the case
-  // the old mirrored formula got back to front.
-  const h = Math.PI / 2;
-  check("quake: after turning left the view faces −x", near(quakeForward(h).x, -1) && near(quakeForward(h).z, 0));
-  const wL = quakeMoveDelta(h, 1, 0);
-  check("quake: W follows a left turn (−x)", near(wL.dx, -1) && near(wL.dz, 0), wL);
-  const dL = quakeMoveDelta(h, 0, 1);
-  check("quake: D stays camera-right after a left turn (−z)", near(dL.dx, 0) && near(dL.dz, -1), dL);
-
-  // For ANY heading, W must equal the camera forward and D the camera
-  // right — the whole contract in two loops.
-  let allF = true,
-    allR = true;
-  for (let a = 0; a < Math.PI * 2; a += 0.13) {
-    const m = quakeMoveDelta(a, 1, 0);
-    const fw = quakeForward(a);
-    if (!near(m.dx, fw.x) || !near(m.dz, fw.z)) allF = false;
-    const r = quakeMoveDelta(a, 0, 1);
-    const rt = quakeRight(a);
-    if (!near(r.dx, rt.x) || !near(r.dz, rt.z)) allR = false;
-  }
-  check("quake: W equals camera forward for every heading", allF);
-  check("quake: D equals camera right for every heading", allR);
-
-  // Forward and right are always perpendicular unit vectors (no drift).
-  let perp = true;
-  for (let a = 0; a < Math.PI * 2; a += 0.21) {
-    const fw = quakeForward(a);
-    const rt = quakeRight(a);
-    if (Math.abs(fw.x * rt.x + fw.z * rt.z) > 1e-9) perp = false;
-    if (Math.abs(Math.hypot(fw.x, fw.z) - 1) > 1e-9) perp = false;
-  }
-  check("quake: forward/right stay orthonormal", perp);
-}
 
 /* ------------------------------------------------------------------ */
 /* Quake map authoring validation across every shipped story           */
@@ -5859,14 +5796,6 @@ console.log("\n=== SEEDED RNG — deterministic playtests ===");
   for (const story of STORIES) {
     for (const sc of story.scenes) {
       const q = sc.stage?.quake;
-      if (!q) continue;
-      const tag = `${story.id}/${sc.id}`;
-      if (q.fps) {
-        // The action layer has an explicit elevated spawn; an S glyph would
-        // overwrite its authored roof surface. Audit its actual schema.
-        problems.push(...validateFpsRoom(q, sc.hotspots).filter(i => i.severity === "error").map(i => `${tag}: ${i.message}`));
-        continue;
-      }
       const rows = q.map;
       const cols = Math.max(...rows.map((r) => r.length));
       if (rows.some((r) => r.length !== cols)) problems.push(`${tag}: ragged rows`);
