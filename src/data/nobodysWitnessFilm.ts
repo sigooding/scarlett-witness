@@ -318,124 +318,128 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 1560,
    "y": 1600
   },
-  "nw_s73": {
+  "nw_s72_b": {
    "x": 1940,
+   "y": 1600
+  },
+  "nw_s73": {
+   "x": 2320,
    "y": 1600
   },
   "nw_s74": {
-   "x": 2320,
+   "x": 2700,
    "y": 1600
   },
   "nw_s75": {
-   "x": 2700,
+   "x": 3080,
    "y": 1600
   },
   "nw_s76": {
-   "x": 3080,
+   "x": 3460,
    "y": 1600
   },
   "nw_s77": {
-   "x": 3460,
+   "x": 3840,
    "y": 1600
   },
   "nw_s78": {
-   "x": 3840,
+   "x": 4220,
    "y": 1600
   },
   "nw_s79": {
-   "x": 4220,
-   "y": 1600
+   "x": 40,
+   "y": 1860
   },
   "nw_s80": {
-   "x": 40,
+   "x": 420,
    "y": 1860
   },
   "nw_s81": {
-   "x": 420,
+   "x": 800,
    "y": 1860
   },
   "nw_s82": {
-   "x": 800,
+   "x": 1180,
    "y": 1860
   },
   "nw_s82a": {
-   "x": 1180,
+   "x": 1560,
    "y": 1860
   },
   "nw_s83": {
-   "x": 1560,
+   "x": 1940,
    "y": 1860
   },
   "nw_s84": {
-   "x": 1940,
+   "x": 2320,
    "y": 1860
   },
   "nw_s85": {
-   "x": 2320,
+   "x": 2700,
    "y": 1860
   },
   "nw_s86": {
-   "x": 2700,
+   "x": 3080,
    "y": 1860
   },
   "nw_s87": {
-   "x": 3080,
+   "x": 3460,
    "y": 1860
   },
   "nw_s88": {
-   "x": 3460,
+   "x": 3840,
    "y": 1860
   },
   "nw_s89": {
-   "x": 3840,
-   "y": 1860
-  },
-  "nw_s90": {
    "x": 4220,
    "y": 1860
   },
-  "nw_s91": {
+  "nw_s90": {
    "x": 40,
    "y": 2120
   },
-  "nw_s92": {
+  "nw_s91": {
    "x": 420,
    "y": 2120
   },
-  "nw_s93": {
+  "nw_s92": {
    "x": 800,
    "y": 2120
   },
-  "nw_s94": {
+  "nw_s93": {
    "x": 1180,
    "y": 2120
   },
-  "nw_s95": {
+  "nw_s94": {
    "x": 1560,
    "y": 2120
   },
-  "nw_s96": {
+  "nw_s95": {
    "x": 1940,
    "y": 2120
   },
-  "nw_s98": {
+  "nw_s96": {
    "x": 2320,
    "y": 2120
   },
-  "nw_s99a": {
+  "nw_s98": {
    "x": 2700,
    "y": 2120
   },
-  "nw_s100": {
+  "nw_s99a": {
    "x": 3080,
    "y": 2120
   },
-  "nw_credits": {
+  "nw_s100": {
    "x": 3460,
    "y": 2120
   },
-  "nw_end": {
+  "nw_credits": {
    "x": 3840,
+   "y": 2120
+  },
+  "nw_end": {
+   "x": 4220,
    "y": 2120
   }
  },
@@ -657,10 +661,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "cardSeconds": 3.8,
     "cardMotion": "letterspace",
     "montage": [
-     "/film/img/montage/m1-neon-backstreet.jpg",
-     "/film/img/montage/m2-the-hive.jpg",
-     "/film/img/montage/m3-umbrella-bridge.jpg",
-     "/film/img/montage/m4-railway-rain.jpg",
      "/film/img/s1/377-the-hive-remembered.jpg",
      "/film/img/s14a/337-engine-off.jpg",
      "/film/img/s1/10-the-shot.jpg",
@@ -684,6 +684,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "choices": [],
    "autoAdvanceTargetSceneId": "nw_prologue",
+   "autoAdvanceDelaySeconds": 22,
    "autoAdvanceHideTimer": true
   },
   {
@@ -12632,7 +12633,33 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Your sister was found tonight. I'm very sorry. She died a short time ago.",
      "audioUrl": "/film/voice/s72/86-ishida-your-sister-was-found-tonight-i.mp3",
      "expression": "v.o."
-    },
+    }
+   ],
+   "hotspots": [],
+   "choices": [],
+   "autoAdvanceTargetSceneId": "nw_s72_b",
+   "autoAdvanceDelaySeconds": 1.5,
+   "autoAdvanceHideTimer": true
+  },
+  {
+   "id": "nw_s72_b",
+   "title": "72 — The call (cont.)",
+   "background": "/film/img/s72/70-the-call.jpg",
+   "prose": "",
+   "ambientAudio": "rain",
+   "particles": "drizzle",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "cut",
+   "transitionSpeed": 0.2,
+   "musicMode": "track",
+   "musicUrl": "/film/audio/bad-guy.mp3",
+   "musicFadeSeconds": 5,
+   "dialogueBeats": [
     {
      "id": "nw_b1069",
      "characterId": "nw_narrator",
@@ -12800,9 +12827,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     }
    ],
-   "musicMode": "track",
-   "musicUrl": "/film/audio/midnight-in-the-rain.mp3",
-   "musicFadeSeconds": 6,
    "hotspots": [],
    "choices": [],
    "autoAdvanceTargetSceneId": "nw_s74",
@@ -13607,6 +13631,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
+   "musicMode": "track",
+   "musicUrl": "/film/audio/midnight-in-the-rain.mp3",
+   "musicFadeSeconds": 5,
    "dialogueBeats": [
     {
      "id": "nw_b1154",
@@ -17245,7 +17272,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
+   "choiceDelaySeconds": 100,
    "autoAdvanceTargetSceneId": "nw_end",
+   "autoAdvanceDelaySeconds": 108,
    "autoAdvanceHideTimer": true
   },
   {
