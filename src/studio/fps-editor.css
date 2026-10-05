@@ -1,0 +1,188 @@
+.fps-editor {
+  padding: 12px;
+  border: 1px solid #497e80;
+  background: #111d22;
+  color: #d9e1d9;
+  font:
+    11px/1.45 system-ui,
+    sans-serif;
+  min-width: 0;
+}
+.fps-editor header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.fps-editor header strong {
+  letter-spacing: 0.15em;
+  color: #d4c086;
+  font-size: 11px;
+}
+.fps-editor p {
+  font-size: 10px;
+  line-height: 1.55;
+  color: #91aaa9;
+  margin: 8px 0;
+}
+.fps-editor code {
+  font-size: 10px;
+  color: #bea77b;
+  overflow-wrap: anywhere;
+}
+.fps-editor nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 12px 0;
+}
+.fps-editor button {
+  padding: 7px 9px;
+  min-height: 32px;
+  font-size: 10px;
+  border: 1px solid #50676b;
+  background: #203036;
+  color: #dbe0d5;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 3px 4px 3px 0;
+}
+.fps-editor button[aria-pressed="true"] {
+  background: #365353;
+  border-color: #c8ad76;
+  color: #f6dfb4;
+}
+.fps-editor button:hover {
+  background: #3a5156;
+}
+.fps-editor button:focus-visible,
+.fps-editor input:focus-visible,
+.fps-editor select:focus-visible,
+.fps-editor svg:focus-visible {
+  outline: 2px solid #e9c780;
+  outline-offset: 2px;
+}
+.fps-editor label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 10px;
+  color: #b8cdcb;
+  margin: 7px 0;
+  min-width: 0;
+}
+.fps-editor input,
+.fps-editor select,
+.fps-editor textarea {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  background: #0b161b;
+  color: #e7e4d5;
+  border: 1px solid #41565e;
+  border-radius: 3px;
+  padding: 7px;
+  font: 11px/1.4 monospace;
+}
+.fps-editor textarea {
+  resize: vertical;
+}
+.fps-editor select[multiple] {
+  min-height: 76px;
+}
+.fps-editor fieldset {
+  border: 1px solid #425c60;
+  padding: 12px;
+  margin: 12px 0;
+  min-width: 0;
+}
+.fps-editor legend {
+  font-size: 10px;
+  color: #ceb17e;
+  padding: 0 6px;
+}
+.fps-editor .fps-editor-check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.fps-editor-check input {
+  width: 15px;
+  height: 15px;
+}
+.fps-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.fps-editor-map {
+  margin: 8px 0;
+  background: #12181c;
+  border: 1px solid #617270;
+  overflow: auto;
+}
+.fps-editor-map svg {
+  display: block;
+  min-height: 210px;
+  width: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+.fps-editor-asset img {
+  max-height: 100px;
+  max-width: 100%;
+  image-rendering: pixelated;
+  background: repeating-conic-gradient(#172229 0% 25%, #28333a 0% 50%) 0 0/16px
+    16px;
+  object-fit: contain;
+}
+.fps-editor-asset input[type="file"] {
+  font-size: 10px;
+}
+.fps-editor details {
+  padding: 8px 0;
+  border-bottom: 1px solid #33494e;
+}
+.fps-editor summary {
+  cursor: pointer;
+  color: #d8bf8b;
+}
+.fps-editor-wide {
+  position: fixed;
+  inset: 24px;
+  z-index: 1000;
+  overflow: auto;
+  padding: 22px;
+  box-shadow: 0 0 0 40px #000b;
+}
+.fps-editor-wide header {
+  position: sticky;
+  top: -22px;
+  background: #111d22;
+  z-index: 2;
+  padding: 12px 0;
+}
+.fps-editor-wide .fps-editor-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(260px, 1fr);
+  gap: 22px;
+}
+.fps-editor-wide .fps-editor-map svg {
+  max-height: 65vh;
+}
+.fps-editor-wide > fieldset {
+  max-width: 700px;
+}
+@media (max-width: 700px) {
+  .fps-editor-wide {
+    inset: 5px;
+    padding: 12px;
+  }
+  .fps-editor-wide .fps-editor-map-layout {
+    display: block;
+  }
+  .fps-editor-wide .fps-editor-map svg {
+    max-height: 50vh;
+  }
+}

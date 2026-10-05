@@ -1,0 +1,36 @@
+node_modules/
+dist/
+dist_electron/
+.env
+scripts/.tmp-dom-smoke/
+scripts/.tmp-studio-probe/
+scripts/.tmp-caption-probe/
+scripts/.tmp-stage-beta/
+scripts/.tmp-arcade-beta/
+
+# South Park asset prep: raw chroma plates + job lists (scratch, regenerated)
+scripts/.tmp-sp-*/
+scripts/.tmp-sp-patch*.py
+scripts/.tmp-studio-beta/
+
+# Neon Salt art-room intermediates: raw magenta sprite plates and FX source
+# JPEGs. The SHIPPED assets are the forged sheets (sprites/) and alpha PNGs
+# (fx/) built from these; the sources are large and regenerable.
+public/img/*/src/
+
+# Real-browser Studio/runtime regression artifacts
+/test-results/
+/playwright-report/
+
+# Studio export drafts: self-contained .reel.json bundles with base64 media run
+# to tens of MB and must not be committed. Export to a folder outside the repo
+# (or a release asset) and pass the path explicitly to
+# scripts/import-draft-to-src.mjs / scripts/ie-roundtrip/real-file.mjs.
+*.reel.json
+
+# zone-map.mjs renders these hotspot overlays on demand (needs ImageMagick);
+# they are eyeballing aids, not source art — regenerate instead of committing.
+zone-maps/
+
+# Local QA logs, browser binaries, generated intermediates (not shipping art)
+.cache/

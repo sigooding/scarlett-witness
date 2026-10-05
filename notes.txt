@@ -1,0 +1,57 @@
+
+
+2. Desktop (Electron) build — real files on disk too.
+The desktop app copies every upload into the game-media folder as an actual .mp3 file: uploads/<story-id>/<asset-id>-<name>.mp3 — under the app's public//dist/ folder in dev, or %APPDATA%/<app>/game-media/uploads/... in a packaged build — so you get real files you can see, copy, or back up, plus the same IndexedDB row.
+
+Your work autosaves to this browser only — it lives in this browser's storage, not in your repo or on GitHub, and clearing the browser erases it. Export a .reel.json to keep a permanent copy, stored OUTSIDE the repo (large exports are gitignored — see .gitignore).
+
+for each new story in studio can they have setting for the gameplay theme. i.e. change fonts and sizes colours and layout?
+
+can i have option to select beats on a scene and move or cut to new empty scene (only selected beats and in play order). and an option to duplicate a scene and new version is not connected
+
+author save files in electron — replace the .reel.json blob download with real files on disk.
+players already get this (saves/<story>/slot-N.sreel, native Save/Open dialogs over IPC); authors don't.
+Studio still exports via a browser blob download even in the desktop app, which can be silently blocked
+(there's already a "Download was blocked — use Copy and paste" fallback for exactly that).
+what it'd buy: native Save/Open dialogs; real Ctrl+S that overwrites the file you opened instead of
+dropping "story-id (3).reel.json" in Downloads; and the big one — media as sidecar files instead of
+base64. every asset is currently inlined at +33%, which is why the drafts in the repo root are 71MB and
+46MB. a .screel bundle (zip: story.json + media/) would cut that a lot and stay diffable.
+keep JSON as the format, just add a container — don't invent a binary format or you lose the ability to
+open and hand-fix a draft, and the existing import path breaks. .reel.json stays importable forever,
+blob download stays as the browser fallback. reuse the scarlet-saves:export/import IPC shape.
+
+split up Studio.tsx — it's 16,368 lines / 844KB in one file.
+Babel gives up on it every rebuild ("code generator has deoptimised the styling ... exceeds the max of
+500KB" — we're at 844KB, so 1.7x over) and Fast Refresh keeps invalidating instead of hot-swapping, which
+is why editing one panel reloads half the app. this is costing hot-reload speed right now, it's not
+housekeeping for later.
+
+do it INCREMENTALLY, one component per commit, never a big-bang split. after each one: npx tsc --noEmit,
+npm test, and check the dev server still hot-reloads. if a move turns into a rewrite, put it back — the
+point is to relocate code, not redesign it.
+
+the good news: the biggest editors are already top-level functions (not nested in StudioInner), so they
+only need their props typed and an import added. rough order, biggest win first:
+  [DONE] shared leaves -> studioLeaves.tsx (Field, inputCls, CollapsibleSection, CommitTextArea,
+         plus bgStyle + mediaField which the cinematic block needed)
+  [DONE] CinematicControls (+ CinematicPreview, ForegroundPositionEditor) -> CinematicControls.tsx
+         ~2,140 lines. only needed 2 symbols from Studio.tsx, both moved to the leaves.
+  StageFloorEditor         1,155
+  CharacterEditor            510
+  HotspotCanvas              409
+  NpcPlatePreview            222
+  MapEditor                  202
+
+progress: 16,368 -> 14,017 lines, 844KB -> 732KB. STILL OVER the 500KB ceiling (1.5x, was 1.7x) so the
+Babel warning has NOT gone yet. the remaining top-level editors are only ~2,500 lines between them, so
+even doing all of them lands around 620KB — still over. the warning only really goes away once
+StudioInner is broken up.
+
+StudioInner itself is ~9,450 lines and is the hard part — leave it until last, and only then consider
+splitting it by tab (scene / dialogue / hotspots / stage / theme) since each tab is already a distinct
+block of JSX.
+
+before any of it, pull the shared leaves into their own module or the extracted files will re-import from
+Studio.tsx and create cycles: Field (used 570x), inputCls (261x), CollapsibleSection (73x),
+CommitTextArea (4x). none are currently used outside Studio.tsx, so moving them is safe.

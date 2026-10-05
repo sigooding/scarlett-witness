@@ -1,0 +1,761 @@
+.fps-root {
+  --fps-hud-height: 88px;
+  position: absolute;
+  inset: 0;
+  background: #15191d;
+  color: #efd6a1;
+  font-family: "Courier New", monospace;
+  overflow: hidden;
+  outline: none;
+  isolation: isolate;
+}
+.fps-view {
+  position: absolute;
+  inset: 0 0 var(--fps-hud-height);
+}
+.fps-root button {
+  font:
+    700 11px/1.3 "Courier New",
+    monospace;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: 1px solid #6c706c;
+  background: #293035;
+  color: #ead8ae;
+  padding: 9px 12px;
+  min-height: 34px;
+  border-radius: 2px;
+}
+.fps-root button:hover,
+.fps-root button:focus-visible {
+  background: #4a4940;
+  outline: 2px solid #e9c479;
+  outline-offset: 2px;
+}
+.fps-root button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.fps-topline {
+  position: absolute;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: linear-gradient(#111b, transparent);
+  padding: 12px 14px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.13em;
+  z-index: 3;
+  pointer-events: none;
+  text-shadow: 1px 2px #000;
+}
+.fps-topline > div {
+  display: flex;
+  gap: 5px;
+  pointer-events: auto;
+}
+.fps-topline button {
+  background: #192125c9;
+  min-height: 28px;
+  padding: 5px 8px;
+  font-size: 10px;
+}
+.fps-crosshair {
+  position: absolute;
+  left: 50%;
+  top: calc((100% - var(--fps-hud-height)) / 2);
+  transform: translate(-50%, -50%);
+  font: 28px/1 monospace;
+  color: #eee9ba;
+  text-shadow:
+    1px 1px #000,
+    -1px -1px #000;
+  pointer-events: none;
+  z-index: 2;
+}
+.fps-notice {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  text-align: center;
+  padding: 8px 14px;
+  color: #f8d89a;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  background: #171e21a8;
+  pointer-events: none;
+  z-index: 3;
+}
+.fps-use {
+  position: absolute;
+  bottom: calc(var(--fps-hud-height) + 22px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111d;
+  padding: 9px 15px;
+  border: 1px solid #a99567;
+  color: #ffdb91;
+  font-size: 14px;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}
+.fps-hurt {
+  position: absolute;
+  inset: 0 0 var(--fps-hud-height);
+  box-shadow: inset 0 0 140px 45px #bf2913a0;
+  pointer-events: none;
+  z-index: 3;
+}
+.fps-hud {
+  position: absolute;
+  inset: auto 0 0;
+  height: var(--fps-hud-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border-top: 4px ridge #777a76;
+  background: repeating-linear-gradient(
+    0deg,
+    #262e32 0px,
+    #262e32 2px,
+    #2b3438 2px,
+    #2b3438 4px
+  );
+  box-shadow: inset 0 5px 10px #0b0c0dcc;
+  z-index: 4;
+}
+.fps-hud > div {
+  padding: 0 27px;
+  border-right: 2px groove #6d706a;
+  min-width: 115px;
+  line-height: 1.1;
+}
+.fps-hud small {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  color: #b9bdb2;
+}
+.fps-hud strong {
+  display: block;
+  font-size: 43px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  color: #f0ca7c;
+  text-shadow: 3px 3px #161b1e;
+  line-height: 1;
+}
+.fps-hud .fps-hud-gear {
+  display: grid;
+  gap: 4px;
+  font-size: 10px;
+  color: #c5bfab;
+  min-width: 170px;
+}
+.fps-hud-gear b {
+  color: #f3cb7c;
+}
+.fps-hud .fps-hud-help {
+  font-size: 10px;
+  line-height: 1.65;
+  color: #a4afa9;
+  border: 0;
+}
+.fps-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080f14bb;
+  backdrop-filter: blur(2px);
+  padding: 20px;
+}
+.fps-overlay section {
+  width: min(620px, 100%);
+  max-height: calc(100% - 32px);
+  overflow-y: auto;
+  background: linear-gradient(140deg, #30383af5, #151c21f5);
+  border: 1px solid #a58b57;
+  box-shadow:
+    0 20px 70px #000b,
+    inset 0 0 0 6px #161d20;
+  padding: 36px;
+  text-align: center;
+}
+.fps-kicker {
+  font-size: 10px !important;
+  color: #97aaa5 !important;
+  letter-spacing: 0.2em;
+}
+.fps-overlay h2 {
+  margin: 18px 0;
+  color: #f4d296;
+  font:
+    bold clamp(24px, 4vw, 38px) / 1.06 "Arial Narrow",
+    Impact,
+    sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.fps-overlay p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #d4d1b8;
+  margin: 12px 0;
+}
+.fps-overlay .fps-controls {
+  font-size: 11px;
+  color: #9fb2ae;
+}
+.fps-overlay small {
+  display: block;
+  color: #80918e;
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+.fps-menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0 0;
+}
+.fps-menu-buttons button {
+  min-height: 44px;
+}
+.fps-menu-buttons .fps-primary {
+  background: #b79352;
+  color: #171d20;
+  border-color: #f1d095;
+  font-size: 13px;
+  padding: 12px 24px;
+}
+.fps-automap {
+  position: absolute;
+  top: 55px;
+  right: 16px;
+  width: min(370px, 55vw);
+  padding: 12px;
+  background: #10191feb;
+  border: 1px solid #9a946f;
+  z-index: 5;
+  pointer-events: none;
+}
+.fps-automap h3 {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  margin: 0 0 8px;
+}
+.fps-automap svg {
+  width: 100%;
+  max-height: 60vh;
+}
+.fps-touch {
+  display: none;
+}
+@media (pointer: coarse), (max-width: 700px) {
+  .fps-touch {
+    display: flex;
+    position: absolute;
+    bottom: calc(var(--fps-hud-height) + 10px);
+    left: 12px;
+    right: 12px;
+    justify-content: space-between;
+    align-items: end;
+    pointer-events: none;
+    z-index: 4;
+  }
+  .fps-touch > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(3, 44px);
+    gap: 3px;
+  }
+  .fps-touch > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .fps-touch button {
+    pointer-events: auto;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px;
+    background: #152126ad;
+    touch-action: none;
+    font-size: 13px;
+    user-select: none;
+  }
+  .fps-hud > div {
+    padding: 0 10px;
+    min-width: 68px;
+  }
+  .fps-hud strong {
+    font-size: 32px;
+  }
+  .fps-hud small {
+    font-size: 8px;
+    letter-spacing: 0.06em;
+  }
+  .fps-hud .fps-hud-gear {
+    min-width: 105px;
+    font-size: 8px;
+  }
+  .fps-hud .fps-hud-help {
+    display: none;
+  }
+  .fps-topline {
+    padding: 8px;
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+  .fps-topline > span {
+    max-width: 40%;
+  }
+  .fps-topline button {
+    font-size: 8px;
+    padding: 5px;
+  }
+  .fps-topline button[aria-label="Toggle first-person sound"] {
+    display: none;
+  }
+  .fps-use {
+    font-size: 11px;
+    bottom: 260px;
+    max-width: 80%;
+    width: max-content;
+  }
+  .fps-notice {
+    font-size: 11px;
+    top: 50px;
+    max-width: 95%;
+    width: max-content;
+    max-width: calc(100% - 24px);
+  }
+  .fps-overlay {
+    padding: 10px;
+  }
+  .fps-overlay section {
+    padding: 24px 16px;
+  }
+  .fps-overlay h2 {
+    font-size: 28px;
+  }
+  .fps-overlay p {
+    font-size: 12px;
+  }
+  .fps-overlay .fps-controls {
+    font-size: 10px;
+  }
+}
+
+/* E1L1's original-style presentation is opt-in. The generic FPS starter and
+   previously published games retain their existing HUD and menus. */
+@font-face {
+  font-family: "Reel Sector";
+  src: url("/fonts/reel-sector.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.fps-classic {
+  --fps-hud-height: clamp(88px, 10.3vw, 128px);
+  background: #080b0b;
+  font-family: "Reel Sector", monospace;
+}
+.fps-classic .fps-topline {
+  padding: 10px 14px;
+  letter-spacing: 0;
+  background: none;
+  font-size: 10px;
+  color: #cccbb9;
+}
+.fps-classic .fps-topline > span { opacity: 0.5; }
+.fps-classic .fps-topline button {
+  font-family: "Reel Sector", monospace;
+  background: #131511c9;
+  border-color: #505045;
+  color: #aeae96;
+  font-size: 9px;
+  border-radius: 0;
+}
+.fps-classic .fps-notice {
+  left: 16px;
+  top: 44px;
+  max-width: min(75%, 920px);
+  transform: none;
+  padding: 0;
+  text-align: left;
+  background: none;
+  color: #ecebca;
+  text-transform: uppercase;
+  font-size: clamp(10px, 1.24vw, 16px);
+  line-height: 1.6;
+  font-weight: normal;
+  text-shadow: 2px 2px #11140c;
+}
+.fps-classic .fps-crosshair {
+  color: #a6ce58;
+  font: 16px/1 monospace;
+  text-shadow: 1px 1px #142009;
+}
+.fps-classic .fps-use {
+  border: 0;
+  background: #0c100bd9;
+  font-family: "Reel Sector", monospace;
+  padding: 7px 12px;
+  font-size: 10px;
+  line-height: 1.7;
+  color: #dedaa0;
+}
+.fps-nightvision {
+  position: absolute;
+  inset: 0 0 var(--fps-hud-height);
+  z-index: 1;
+  pointer-events: none;
+  background: #0a803b23;
+  box-shadow: inset 0 0 130px #073314b0;
+  mix-blend-mode: screen;
+}
+.fps-classic-hud {
+  background: repeating-linear-gradient(90deg, #0000 0 3px, #00000009 3px 4px),
+    linear-gradient(#8e8d7d 0, #66685e 6%, #77796f 12%, #5f6159 70%, #42463e 100%);
+  border-top: 4px ridge #9a9b88;
+  box-shadow: inset 0 2px #b2b39c, inset 0 -5px #252b24;
+  padding: 6px 1vw 9px;
+  gap: 0;
+  justify-content: center;
+}
+.fps-classic-hud > div {
+  height: 100%;
+  min-width: 0;
+  padding: 4px clamp(8px, 1.2vw, 18px) 0;
+  border-right: 3px ridge #86897a;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.fps-classic-hud > div:last-child { border-right: 0; }
+.fps-classic-hud small {
+  font-family: "Reel Sector", monospace;
+  font-size: clamp(8px, 0.94vw, 12px);
+  line-height: 1;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: #202920;
+  text-shadow: 1px 1px #979e85;
+  margin-bottom: 5px;
+}
+.fps-classic-hud strong {
+  color: #f0c45a;
+  font-family: "Reel Sector", monospace;
+  font-size: clamp(32px, 4.6vw, 62px);
+  font-weight: normal;
+  line-height: 1.05;
+  letter-spacing: -0.07em;
+  text-shadow: 2px 0 #795124, 0 2px #795124, 3px 3px #20261d;
+  min-width: 2.1em;
+}
+.fps-classic-hud .is-critical strong { color: #fd6240; }
+.fps-classic-hud .fps-hud-emblem { padding: 2px 18px 0 4px; border-right: 0; }
+.fps-hud-emblem svg { width: clamp(38px, 4.3vw, 58px); color: #c2b768; filter: drop-shadow(2px 2px #252d20); }
+.fps-hud-emblem span { font-size: 10px; color: #242b20; margin-top: 4px; letter-spacing: 0.14em; }
+.fps-weapon-name {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  font-size: 8px;
+  color: #d8d8b5;
+  text-shadow: 1px 1px #31372b;
+  text-transform: uppercase;
+}
+.fps-classic-hud .fps-classic-weapons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  column-gap: 10px;
+  row-gap: 4px;
+  min-width: 252px;
+}
+.fps-classic-weapons button {
+  font-family: "Reel Sector", monospace;
+  padding: 1px 0;
+  min-height: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  border: 0;
+  color: #343c31;
+  background: transparent;
+  border-radius: 0;
+  opacity: 1;
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: -0.04em;
+  text-shadow: 1px 1px #8a8e79;
+}
+.fps-classic-weapons button:disabled { cursor: default; }
+.fps-classic-weapons button.is-owned { color: #e8c15c; text-shadow: 1px 1px #242c1c; }
+.fps-classic-weapons button.is-selected b { color: #ffed96; }
+.fps-classic-weapons b { margin-right: 3px; font-weight: normal; }
+.fps-classic-weapons i { font-style: normal; font-size: 8px; opacity: 0.65; }
+.fps-classic-hud .fps-classic-inventory { min-width: 176px; padding-right: 10px; padding-left: 10px; }
+.fps-item-slot { display: flex; justify-content: center; align-items: center; gap: 3px; }
+.fps-item-slot button {
+  border: 0;
+  background: transparent;
+  min-height: 28px;
+  min-width: 18px;
+  padding: 0;
+  color: #202c22;
+  font-size: 23px;
+}
+.fps-item-slot .fps-inventory-use {
+  display: grid;
+  grid-template-columns: 44px 38px;
+  grid-template-rows: 24px 14px;
+  align-items: center;
+  column-gap: 6px;
+  font: 12px/1 "Reel Sector", monospace;
+  text-shadow: 1px 1px #262f22;
+  color: #efc563;
+}
+.fps-inventory-use img { width: 44px; height: 36px; object-fit: contain; grid-row: span 2; image-rendering: pixelated; }
+.fps-inventory-use em { font-style: normal; font-size: 8px; color: #313e2e; text-shadow: 1px 1px #888f7b; }
+.fps-inventory-use em.is-active { color: #a6f27e; text-shadow: 1px 1px #253421; }
+.fps-empty-item { grid-row: span 2; font-family: monospace; font-size: 25px; color: #434c3e; text-shadow: 1px 1px #969c83; }
+.fps-item-name { color: #232e23; text-shadow: 1px 1px #969c83; font-size: 7px; line-height: 1.8; margin-top: 3px; }
+.fps-classic-hud .fps-classic-access { min-width: 108px; padding-right: 0; }
+.fps-card-lights { display: flex; gap: 6px; justify-content: center; margin: 3px 0 10px; }
+.fps-card { width: 19px; height: 11px; background: #373f33; border: 2px inset #888a72; display: block; position: relative; }
+.fps-card.is-owned.blue { background: #79a8dc; box-shadow: inset 1px 1px #c1def0; }
+.fps-card.is-owned.red { background: #ee5543; box-shadow: inset 1px 1px #fcbd7e; }
+.fps-card.is-owned.yellow { background: #e4c866; box-shadow: inset 1px 1px #fff1a0; }
+.fps-card > span { font-size: 0; }
+.fps-hud-tally { color: #242e22; font-size: 8px; white-space: nowrap; text-shadow: 1px 1px #929a7c; }
+.fps-hud-tally b { font-weight: normal; }
+.fps-classic .fps-overlay { background: #040805c9; backdrop-filter: none; }
+.fps-classic .fps-overlay section {
+  width: min(690px, 100%);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 28px 20px;
+}
+.fps-duke-wordmark { color: #e6c06b; font: 90px/0.86 "Bebas Neue", Impact, sans-serif; letter-spacing: -0.025em; transform: skew(-4deg); text-shadow: 1px 1px #fff0ac, 3px 3px #977139, 6px 6px #3c2f1e, 8px 8px #090c06; margin-bottom: 25px; }
+.fps-duke-wordmark span { display: block; }
+.fps-duke-wordmark b { display: inline-block; font-weight: normal; color: #dc5b2e; font-size: 66px; line-height: 0.9; margin-top: 9px; }
+.fps-classic .fps-overlay .fps-kicker { color: #9a9e7c !important; font: 9px/1.8 "Reel Sector", monospace; letter-spacing: 0; }
+.fps-classic .fps-overlay h2 { font: clamp(20px, 2.3vw, 30px)/1.5 "Reel Sector", monospace; color: #e96035; text-shadow: 2px 2px #5b2110, 3px 3px #070a05; letter-spacing: -0.03em; margin: 18px 0; }
+.fps-classic .fps-overlay p { font: 11px/1.8 "Reel Sector", monospace; color: #cecb9e; }
+.fps-classic .fps-overlay .fps-controls { color: #9d9f86; font: 10px/1.8 "Courier New", monospace; }
+.fps-classic .fps-menu-buttons { gap: 8px; margin-top: 20px; }
+.fps-classic .fps-menu-buttons button { background: #272c21; border: 2px outset #85866a; color: #d9c777; border-radius: 0; font: 11px/1.6 "Reel Sector", monospace; padding: 10px 14px; }
+.fps-classic .fps-menu-buttons .fps-primary { color: #ffda77; background: #4a432a; border-color: #bfa461; display: inline-flex; align-items: center; gap: 10px; font-size: 14px; }
+.fps-menu-mark { width: 23px; height: 23px; color: #e7bf53; }
+.fps-classic .fps-overlay small { font: 9px/1.6 "Courier New", monospace; color: #828972; max-width: 480px; margin: 22px auto 0; }
+.fps-classic .fps-automap { background: #090808f2; border: 1px solid #453932; padding: 18px; width: min(470px, 75vw); }
+.fps-classic .fps-automap h3 { font-weight: normal; letter-spacing: 0; font-size: 10px; }
+.fps-map-stats { font-size: 8px; line-height: 1.9; margin-top: 10px; color: #a9a181; }
+@media (max-width: 1050px) {
+  .fps-classic-hud .fps-hud-emblem { display: none; }
+  .fps-classic-hud .fps-classic-weapons { min-width: 213px; padding-inline: 8px; column-gap: 5px; }
+  .fps-classic-hud .fps-classic-inventory { min-width: 150px; padding-inline: 6px; }
+  .fps-classic-hud .fps-classic-access { min-width: 87px; padding-inline: 8px 0; }
+}
+@media (max-width: 700px) {
+  .fps-classic { --fps-hud-height: 88px; }
+  .fps-classic-hud { padding: 4px 3px 7px; }
+  .fps-classic-hud > div { padding: 3px 6px 0; border-right-width: 2px; }
+  .fps-classic-hud .fps-classic-weapons { display: none; }
+  .fps-classic-hud .fps-classic-inventory { min-width: 0; width: 115px; padding: 4px 3px 0; }
+  .fps-classic-hud .fps-classic-access { min-width: 0; width: 60px; padding: 4px 3px 0; }
+  .fps-classic-hud strong { font-size: clamp(27px, 6vw, 39px); min-width: 1.9em; }
+  .fps-classic-hud small { font-size: 7px; margin-bottom: 8px; }
+  .fps-classic-hud .fps-item-slot .fps-inventory-use { grid-template-columns: 28px 30px; font-size: 9px; column-gap: 2px; }
+  .fps-inventory-use img { width: 28px; height: 30px; }
+  .fps-item-slot { gap: 0; }
+  .fps-item-name { font-size: 5px; }
+  .fps-card-lights { gap: 2px; }
+  .fps-card { width: 14px; }
+  .fps-hud-tally { font-size: 6px; }
+  .fps-weapon-name { font-size: 6px; }
+  .fps-classic .fps-notice { left: 10px; top: 43px; font-size: 9px; max-width: calc(100% - 20px); width: auto; }
+  .fps-classic .fps-use { bottom: 351px; font-size: 8px; }
+  .fps-classic .fps-topline > span { display: none; }
+  .fps-classic .fps-topline { justify-content: end; padding: 7px; }
+  .fps-duke-wordmark { font-size: 66px; margin-bottom: 20px; }
+  .fps-duke-wordmark b { font-size: 48px; }
+  .fps-classic .fps-overlay h2 { font-size: 20px; }
+  .fps-classic .fps-overlay p { font-size: 9px; }
+  .fps-classic .fps-overlay .fps-controls { font-size: 9px; }
+  .fps-classic .fps-menu-buttons .fps-primary { font-size: 11px; }
+}
+@media (max-height: 620px) {
+  .fps-classic .fps-overlay section { padding-block: 10px; }
+  .fps-duke-wordmark { font-size: 54px; margin-bottom: 12px; }
+  .fps-duke-wordmark b { font-size: 36px; }
+  .fps-classic .fps-overlay h2 { margin: 10px 0; font-size: 19px; }
+  .fps-classic .fps-overlay .fps-controls { font-size: 9px; }
+}
+.fps-touch-loadout { display: none; }
+@media (pointer: coarse), (max-width: 700px) {
+  .fps-touch-loadout { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; position: absolute; bottom: calc(var(--fps-hud-height) + 12px); left: 151px; right: 96px; z-index: 5; }
+  .fps-touch-loadout button { font-size: 8px; min-height: 36px; padding: 5px 7px; background: #152016c9; touch-action: none; }
+}
+.fps-classic .fps-skill-select { display: inline-flex; align-items: center; gap: 14px; margin: 3px auto 0; font: 9px/1.5 "Reel Sector", monospace; text-transform: uppercase; color: #a4a686; }
+.fps-classic .fps-skill-select select { padding: 8px 12px; border: 1px solid #7d7956; color: #e8ce72; background: #1d2419; border-radius: 0; font: 10px/1.4 "Reel Sector", monospace; }
+
+/* ---- Quake presentation: brown metal strip, gold numerals, slot numbers ---- */
+.fps-quake-hud {
+  background: repeating-linear-gradient(90deg, #0000 0 3px, #0000000c 3px 4px),
+    linear-gradient(#6d5841 0, #55432f 10%, #6a5238 22%, #4d3c2a 78%, #33281b 100%);
+  border-top: 4px ridge #8a7155;
+  box-shadow: inset 0 2px #9d8262, inset 0 -5px #241b12;
+  padding: 6px 1vw 9px;
+  gap: 0;
+  justify-content: center;
+}
+.fps-quake-hud > div {
+  height: 100%;
+  min-width: 0;
+  padding: 4px clamp(8px, 1.2vw, 18px) 0;
+  border-right: 3px ridge #7a624a;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.fps-quake-hud > div:last-child { border-right: 0; }
+.fps-quake-hud small {
+  font-family: "Reel Sector", monospace;
+  font-size: clamp(8px, 0.94vw, 12px);
+  line-height: 1;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  color: #3a2d1f;
+  text-shadow: 1px 1px #8d7659;
+  margin-bottom: 5px;
+}
+.fps-quake-hud strong {
+  color: #d9a441;
+  font-family: "Reel Sector", monospace;
+  font-size: clamp(32px, 4.6vw, 62px);
+  font-weight: normal;
+  line-height: 1.05;
+  letter-spacing: -0.07em;
+  text-shadow: 2px 0 #6b4a1c, 0 2px #6b4a1c, 3px 3px #17100a;
+  min-width: 2.1em;
+}
+.fps-quake-hud .is-critical strong { color: #fd4c2f; text-shadow: 2px 0 #7c1d0c, 0 2px #7c1d0c, 3px 3px #170a05; }
+.fps-quake-emblem {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.1;
+  letter-spacing: 0.12em;
+  color: #d9a441;
+  text-shadow: 1px 1px #fff2c0, 3px 3px #3a2310, 4px 4px #0a0602;
+  border-right: 0 !important;
+  padding-inline: 12px 14px !important;
+}
+.fps-quake-hud .fps-quake-weapons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+  column-gap: 10px;
+  row-gap: 3px;
+  min-width: 292px;
+}
+.fps-quake-weapons button {
+  font-family: "Reel Sector", monospace;
+  padding: 1px 0;
+  min-height: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  border: 0;
+  color: #4a3826;
+  background: transparent;
+  border-radius: 0;
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: -0.04em;
+  text-shadow: 1px 1px #86714f;
+}
+.fps-quake-weapons button:disabled { cursor: default; }
+.fps-quake-weapons button.is-owned { color: #e2b558; text-shadow: 1px 1px #1c140c; }
+.fps-quake-weapons button.is-selected b { color: #ffeaa8; }
+.fps-quake-weapons button.is-selected i { color: #ffeaa8; }
+.fps-quake-weapons b { margin-right: 3px; font-weight: normal; }
+.fps-quake-weapons i { font-style: normal; font-size: 8px; opacity: 0.8; text-transform: uppercase; }
+.fps-quake-hud .fps-quake-items { min-width: 118px; padding-inline: 10px; gap: 4px; }
+.fps-quake-biosuit {
+  font-family: "Reel Sector", monospace;
+  font-size: 10px;
+  padding: 3px 6px;
+  min-height: 0;
+  border: 1px solid #7a624a;
+  background: #3c2f20;
+  color: #8d7958;
+  text-shadow: 1px 1px #1c140c;
+  border-radius: 0;
+  letter-spacing: 0.08em;
+}
+.fps-quake-biosuit.is-owned { color: #e2b558; border-color: #a8875c; }
+.fps-quake-biosuit.is-active { color: #ffeaa8; background: #57422c; }
+.fps-quake-quad { font-size: 8px; color: #6d5a3e; letter-spacing: 0.12em; text-transform: uppercase; }
+.fps-quake-quad.is-active { color: #ffcf4d; text-shadow: 1px 1px #3a2310; }
+.fps-quake .fps-overlay { background: #0a0603d9; backdrop-filter: none; }
+.fps-quake .fps-overlay section {
+  width: min(690px, 100%);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 28px 20px;
+}
+.fps-quake-wordmark { color: #b98a3c; font: 104px/0.82 "Bebas Neue", Impact, sans-serif; letter-spacing: 0.14em; text-shadow: 1px 1px #f7d99a, 3px 3px #6d4a1b, 6px 6px #241505, 8px 8px #050302; margin-bottom: 25px; }
+.fps-quake .fps-overlay .fps-kicker { color: #8a7155 !important; font: 9px/1.8 "Reel Sector", monospace; letter-spacing: 0.08em; }
+.fps-quake .fps-overlay h2 { font: clamp(20px, 2.3vw, 30px)/1.5 "Reel Sector", monospace; color: #d9a441; text-shadow: 2px 2px #4a3115, 3px 3px #0a0602; letter-spacing: -0.03em; margin: 18px 0; }
+.fps-quake .fps-overlay p { font: 11px/1.8 "Reel Sector", monospace; color: #c9b189; }
+.fps-quake .fps-overlay .fps-controls { color: #8f7c5f; font: 10px/1.8 "Courier New", monospace; }
+.fps-quake .fps-skill-select { display: inline-flex; align-items: center; gap: 14px; margin: 3px auto 0; font: 9px/1.5 "Reel Sector", monospace; text-transform: uppercase; color: #8f7c5f; }
+.fps-quake .fps-skill-select select { padding: 8px 12px; border: 1px solid #6d5a3e; color: #e2b558; background: #1c140c; border-radius: 0; font: 10px/1.4 "Reel Sector", monospace; }
+.fps-quake .fps-notice { color: #ffcf4d; text-shadow: 1px 1px #3a2310; }
+.fps-quake .fps-crosshair { border-color: #d9a441; }
+@media (max-width: 700px) {
+  .fps-quake-hud { padding: 4px 3px 7px; }
+  .fps-quake-hud > div { padding: 3px 6px 0; border-right-width: 2px; }
+  .fps-quake-hud .fps-quake-weapons { display: none; }
+  .fps-quake-hud .fps-quake-items { min-width: 0; width: 100px; padding: 4px 3px 0; }
+  .fps-quake-hud strong { font-size: clamp(27px, 6vw, 39px); min-width: 1.9em; }
+  .fps-quake-hud small { font-size: 7px; margin-bottom: 8px; }
+  .fps-quake-emblem { font-size: 24px; }
+  .fps-quake-wordmark { font-size: 64px; margin-bottom: 20px; }
+  .fps-quake .fps-overlay h2 { font-size: 20px; }
+  .fps-quake .fps-overlay p { font-size: 9px; }
+  .fps-quake .fps-overlay .fps-controls { font-size: 9px; }
+  .fps-quake .fps-menu-buttons .fps-primary { font-size: 11px; }
+  .fps-quake .fps-use { bottom: 351px; font-size: 8px; }
+  .fps-quake .fps-notice { left: 10px; top: 43px; font-size: 9px; max-width: calc(100% - 20px); width: auto; }
+}
+@media (max-height: 620px) {
+  .fps-quake .fps-overlay section { padding-block: 10px; }
+  .fps-quake-wordmark { font-size: 52px; margin-bottom: 12px; }
+  .fps-quake .fps-overlay h2 { margin: 10px 0; font-size: 19px; }
+  .fps-quake .fps-overlay .fps-controls { font-size: 9px; }
+}

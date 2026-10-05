@@ -1,0 +1,258 @@
+================================================================================
+SCARLET REEL — DEVELOPMENT, DEPLOYMENT & MEDIA PROTECTION NOTES
+================================================================================
+Companion to the engine. Everything here is how the game is actually built,
+tested, packaged and shipped, plus how your music/media are (and aren't)
+protected in the compiled app.
+
+--------------------------------------------------------------------------------
+1. THE MENTAL MODEL — WHERE EVERYTHING LIVES
+--------------------------------------------------------------------------------
+The repo IS the game. Studio's browser storage is only a workbench; the
+committed files are the deliverable.
+
+  Story data (scenes, beats, choices, flags, endings)
+      src/data/<story>.ts          e.g. nobodysWitnessDraft.ts
+      src/data/stories.ts          the catalogue — a story is playable when
+                                   it is imported here
+  Scene art                         public/img/...      (stable /img/... paths;
+                                   new files dropped in are picked up by the
+                                   Studio image browser automatically)
+  Voice MP3s (ElevenLabs, per line) public/voices/<person>/<scene>/<line>.mp3
+  Music / SFX                       public/*.mp3 (and similar)
+  Engine + game code                src/
+  Desktop shell                     electron/main.cjs + electron/preload.cjs
+  Packaging config                  "build" block in package.json
+
+Save locations (per machine, NOT in the repo):
+
+  Author work (custom stories + media)
+      Web:   this browser's localStorage + IndexedDB
+      Exe:   %APPDATA%\Scarlet Reel  (Windows)
+      Backup: Export a .reel.json — self-contained, bundles ALL media
+              including voice MP3s. The export envelope is
+              { ...story, assets: MediaAsset[] } and old exports import
+              into new builds and vice versa.
+
+  Player saves (gameplay)
+      Web:   localStorage only (no bridge in the browser)
+      Exe:   localStorage (source of truth) mirrored to real files:
+             %APPDATA%\Scarlet Reel\saves\<story>\[<episode>\]slot-<n>.sreel
+      Player can Export/Import a .sreel and open the saves folder
+      (native File menu: Save Game Ctrl+S, Load Game Ctrl+O, Quit Ctrl+Q).
+      Saves survive app updates; they are keyed by STORY ID (and scene id),
+      so keep story ids stable across releases.
+
+--------------------------------------------------------------------------------
+2. COMMAND CHEAT SHEET
+--------------------------------------------------------------------------------
+  npm run dev                  Vite dev server (browser development, :5173)
+  npm run desktop:dev-live     Vite dev server + Electron pointed at it.
+                               THE story-development loop: hot reload AND
+                               ElevenLabs MP3s auto-saving to
+                               public/voices/<person>/<scene>/ . Reuses a
+                               dev server already running on the port.
+  npm run desktop:preview      Build, then run the BUILT bundle in Electron.
+                               Final QA only — a rebuild per code change.
+  npm run desktop:pack         electron-builder unpacked dir (no installer)
+  npm run desktop:dist         Build + NSIS installer (+portable) in
+                               dist_electron/. RUN ON WINDOWS for the exe.
+  npm run bot                  Automated playthrough bot: plays a case over
+                               and over through the pure decision surface
+                               (src/game/decisions.ts) and reports crashes,
+                               dead ends, unreached scenes/choices/endings and
+                               coverage growth. Prefers never-taken branches.
+                                 npm run bot -- --story neon-diner --runs 1000
+                                 npm run bot -- --seed unlucky --verbose
+                                 npm run bot -- --coverage cov.json --out cov.json
+                                 npm run bot -- --links   (deep link per problem)
+  npm test                     Full suite: engine tests (node
+                               scripts/engine-tests.mjs), media round-trip
+                               (scripts/ie-roundtrip), DOM smoke
+                               (scripts/dom-smoke.mjs) and the walking-stage
+                               beta (scripts/beta/stage-harness.mjs —
+                               `npm run test:stage` runs it alone)
+  npm run check                Setup check: node version, deps, and that
+                               EVERY asset referenced by a playable story
+                               exists on disk under public/.
+  npx tsc --noEmit             Type check (vite build does NOT type-check)
+  npm run build                Single-file Vite build (dist/index.html)
+
+FIRST-PERSON ENGINE / HOLLYWOOD HAND-OFF: docs/first-person.md
+CLASSIC E1L1 FIDELITY / ENGINE v6: docs/hollywood-classic-v6.md
+  npm run test:fps is the fast physics/combat/authoring gate. Browser cases
+  remain separate. Export Studio work; browser autosave is not a Git backup.
+
+FAST ITERATION / NEXT-PASS HAND-OFF: docs/fast-testing.md
+  Run the smallest relevant Node suite or filtered browser case while editing.
+  Keep a current-source Vite server warm; do not rebuild/reinstall per tweak.
+  The full sequence below is the sign-off for a completed content/engine pass,
+  not the loop for every keystroke. Documentation-only edits need link/command
+  checks and git diff --check, not another full gameplay run.
+
+Final validation for EVERY completed content/engine pass (fixed order):
+  1. npm run check
+  2. npx tsc --noEmit
+  3. npm test
+  4. npm run build
+  5. Studio "Check" button (validateStory: dead ends, fully-gated scenes,
+     dangling targets, phantom item gates, broken recipes) + "Repair"
+     for the auto-fixable ones.
+  6. Playtest every route in npm run desktop:dev-live — gold path AND all
+     branches, endings, episode transitions, timers, heat-bust.
+
+--------------------------------------------------------------------------------
+3. DEVELOPING A STORY TO PRODUCTION (Nobody's Witness plan)
+--------------------------------------------------------------------------------
+Phase 1 — Lock the identity BEFORE content freezes.
+  The story is currently id "nobodys-witness-draft" in
+  src/data/nobodysWitnessDraft.ts. For production, rename once, early, to a
+  final id (e.g. "nobodys-witness") and file (nobodysWitness.ts). Do NOT do
+  this after players have progress — saves, auto-checkpoints and .sreel
+  files are all keyed by story id and would be orphaned. Scene-id renames
+  later are safer (a save pointing at a missing scene falls back to the
+  story opening).
+
+Phase 2 — The development loop, per content chunk.
+  1. Author: next stretch of script gets authored into the data file (paste
+     the script in a session, or lay it out visually in Studio).
+  2. Iterate with focused checks (docs/fast-testing.md), then run section 2's
+     full validation once the content chunk is stable.
+  3. Playtest in the shipping shell (desktop:dev-live).
+  4. Commit per feature — the git history is the changelog.
+
+Phase 3 — Media & voice production (everything lands in the repo).
+  - Final scene art -> public/img/ (the Studio pickers pick up new files).
+  - Hotspot object images (e.g. the transparent cup at Mabel's Station) use
+    the existing transparent-hotspot-image feature.
+  - Voice: People tab -> assign each character's ElevenLabs voice ID;
+    Beats tab -> "Generate MP3" line by line (credit confirm every time).
+    Files land in public/voices/<person>/<scene>/<line>.mp3.
+    Regenerating a line overwrites the same file; "Clear the MP3" unlinks
+    the line but leaves the file on disk (delete it manually if unwanted).
+    git add public/voices and commit with the story.
+  - Music/ambience -> public/.
+
+Phase 4 — Production build (on Windows).
+  1. Bump "version" out of 0.0.0 in package.json (NSIS stamps it).
+  2. Optional: "win.icon"; optional: add "portable" to win.target for a
+     standalone single-exe distribution.
+  3. Final QA with npm run desktop:preview (the BUILT bundle).
+  4. npm run desktop:dist -> NSIS installer (+ portable exe) in
+     dist_electron/.
+  5. Ship. Future updates = story/media commit -> PR -> rebuild. Player
+     saves survive because they key off the stable story id. If an update
+     ever needs to deliberately reset player data, use the CONTENT_REVISION
+     mechanism in src/App.tsx (REVISION_RESETS) — it backs affected keys up
+     to *-backup-pre-r<n> before clearing.
+
+--------------------------------------------------------------------------------
+4. GITHUB WORKFLOW
+--------------------------------------------------------------------------------
+  - Source of truth: the repo. Branch -> commit -> push -> PR -> merge.
+  - Story + media + engine all live in the repo, so a merge IS a release
+    candidate; the exe is just a packaging step on top (Phase 4).
+  - Arena agent sessions work a branch (arena/<id>); when a session's PR is
+    merged the session closes and cannot push anymore — start a new session
+    to push/PR the next batch. (Several local commits from the
+    ElevenLabs-voice-files / save-files / export work sat on the branch
+    waiting for exactly this.)
+  - KEEP THE REPO PRIVATE if it contains your music (see section 5 — a
+    public repo exposes the source of every asset, in full history, making
+    any packaged-app protection moot).
+
+--------------------------------------------------------------------------------
+5. MEDIA PROTECTION — YOUR MUSIC IN THE PACKAGED APP
+--------------------------------------------------------------------------------
+Honest answer: asar is an ARCHIVE, not encryption. Today the packaged app
+ships every public/ file (mp3s, mp4, art) as plain files inside
+resources/app.asar. One command extracts them all:
+
+    npx asar extract resources\app.asar out
+
+...and while the game plays, the media load from predictable URLs visible
+in devtools. So NO, the music is not hidden in the current packaging.
+
+The hard limit: the app runs on the user's machine, and audio must be
+decoded to plain bytes in RAM to play. Nothing short of kernel-level DRM
+vendor protection (Denuvo territory, AAA-scale, overkill here) stops a
+determined person. The goal is to stop CASUAL theft (soundtrack rips) by
+raising the effort from "one command" to "real reverse engineering".
+
+Tiers, in order:
+
+  Tier 1 — Keep the repo private (1 minute, do it now).
+           The biggest hole: a public repo exposes every asset in full
+           git history, making everything else pointless.
+
+  Tier 2 — Terms of use (small, do now).
+           Copyright in the music is automatic — it's yours from the moment
+           it's created. An NSIS install-time notice + a line on the title
+           screen turns "found a file" into "infringement".
+
+  Tier 3 — Build-time encryption + custom protocol (a day's work, do as
+           the LAST engineering pass, after content is complete, because it
+           changes how ALL audio/video loads):
+             - Vite build plugin encrypts public/ audio/video (AES) at
+               build time; only ciphertext ships in the asar.
+             - Renderer loads media through a custom scarlet-media://
+               protocol; the Electron MAIN process decrypts and streams —
+               plaintext never touches disk, no static URL to grab.
+             - Browser/dev flow is untouched; only the packaged build is
+               protected.
+           What it kills: browsing the asar for mp3s, copying media URLs
+           from devtools. What it can't kill: capturing decoded audio from
+           RAM, or a determined reverse engineer. That is the correct
+           level for an indie story game.
+
+--------------------------------------------------------------------------------
+END OF NOTES
+================================================================================
+
+
+10 September 2026 — Blade Runner HD pass 2
+------------------------------------------
+- 10 new source plates -> seven HD cast sheets/portraits + three rooms. Existing
+  shop cropped to remove a baked-in cop; legacy inventory plates downsampled to
+  768px WebP (not new generations). Asset rebuild uses the actual Studio forge.
+- Canonical Carson Street opening, Leary/Guzza/Howie/Gordo/Zuben, recoverable
+  timed pot dodge, alley/warehouse mercy or retirement, distinct VidPhon and
+  evidence/upload/outcome filing gates. 22-scene WIP; older extension retained.
+- Pointer intent owns walking; keyboard/ground cancel, compact marker hitboxes,
+  one pointer dispatch, transparent inventory gaps, feet-stable scaling.
+- Test-panel navigation and clue-approach audit shares the runtime wall slide.
+  It is a fresh-state probe, NOT an exhaustive earned-state playthrough.
+- Gated actors/optional markers; hide walker; scroll offsets; correct alpha-mask
+  recipe; smooth sprite-forge scale preservation; photography-friendly default.
+- Real browser tests exposed a blocked disk approach, export textarea freeze,
+  and native Chromium failure on a giant IndexedDB getAll. Fixed via authored
+  approach, bounded preview with full downloadable/copyable file, cursor reads.
+- Actual manual text, public text and in-app manual updated; PDF is regenerated
+  from the same text. Final test status lives in docs/blade-runner-hd-pass-2.md.
+- Needs another art/content pass: full directional animation, legacy cast/rooms,
+  dedicated chase/alley, Gaff aftermath and original mechanics/dialogue fidelity.
+  This is an AI-illustrated fan recreation, not a complete/exact remaster.
+- Final screenshot correction: centred counter-flipped NPC/player speech and
+  re-cut the windscreen's left aperture/monitor exclusion from existing masks;
+  browser checks compare the full dashboard AND monitor, including after resize.
+- Final BR: 20 focused + 11 browser pass; isolated Stage beta 155 pass; strict
+  lint/TypeScript/build/setup pass. Full browser run 35/37: two first-person
+  combat tours still fail. A concurrent Stage-beta NPC timeout passed isolated;
+  record this timing sensitivity. Full npm test passed at bc106ee. See pass notes.
+
+
+BLADE RUNNER HD PASS 3 — 10 SEPTEMBER 2026
+----------------------------------------
+Delivery: arena/01a08857-scarlet-reel, PR #73 (not merged into main).
+Ten-source allocation retained with hashes. 25 scenes, 54 poses / eight HD
+actors, 83 media assets; real directional/rest/action banks, staged dodge,
+alley/stairs/door ambush, Gaff aftermath and surveillance-specific ESPER crops.
+Studio: silhouette islands, flat RGB key, multi-bank atlas assembly, shared
+8-heading preview, conversation motion and per-state repetition override.
+A real browser route exposed the no-furniture concave-floor shortcut defect;
+A* now routes around the floor itself. Every new-room entry/approach is covered.
+Final: full npm test pass (engine1574, BR23, atlas12, Stage155, Studio beta76);
+BR Playwright14/14; strict lint, tsc, build and setup clean. Actual text/public/
+PDF/in-app manuals updated. Previous two FPS Playwright combat failures remain
+unresolved; whole Playwright suite was not rerun or declared green this pass.
+See docs/blade-runner-hd-pass-3.md for provenance, scope and next-art needs.

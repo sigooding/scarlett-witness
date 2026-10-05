@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nobody’s Witness — a film in Tokyo rain." />
+    <title>Nobody’s Witness</title>
+  </head>
+  <body>
+    <!-- Boot placeholder. If the app mounts, React replaces this immediately.
+         If it does NOT, the page would otherwise be blank white with no clue
+         why — so this stays visible and the inline script below fills in the
+         actual reason (JS disabled, a module that failed to load, or an early
+         throw). A white screen must never be silent. -->
+    <div id="root">
+      <div id="boot-fallback" style="
+        position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+        background:#0a0b0e; color:#f4ecdd; padding:24px;
+        font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;">
+        <div style="max-width:640px; border:2px solid #e8b647; background:#101217; padding:22px;">
+          <div style="color:#e8b647; letter-spacing:.3em; text-transform:uppercase; font-size:11px;">
+            Scarlet Reel
+          </div>
+          <h1 style="font-size:19px; margin:8px 0 12px; color:#f4ecdd;">Still loading…</h1>
+          <p style="color:#8d8579; margin:0 0 12px;">
+            If this message stays on screen, the app did not start. The reason
+            appears below once detected.
+          </p>
+          <pre id="boot-reason" style="
+            white-space:pre-wrap; color:#ff5f56; background:#0a0b0e;
+            border:1px solid #23252b; padding:12px; margin:0 0 14px; max-height:220px; overflow:auto;">
+checking…</pre>
+          <p style="color:#8d8579; margin:0;">
+            Try <a href="/diagnose.html" style="color:#2ad9d9;">/diagnose.html</a>
+            → “Fix it”, then reload. Run <code style="color:#e8b647;">npm run check</code>
+            to verify your local setup.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Capture the earliest failures, before any module code runs.
+      window.__bootErrors = [];
+      // "ResizeObserver loop..." is a benign browser notice, not a failure —
+      // reporting it as a boot error would be actively misleading.
+      function bootBenign(m) {
+        return !!m && (m.indexOf("ResizeObserver loop") !== -1 || m === "Script error.");
+      }
+      addEventListener("error", function (e) {
+        if (bootBenign(e.message)) return;
+        window.__bootErrors.push(
+          e.message + (e.filename ? "\n  at " + e.filename + ":" + e.lineno : "")
+        );
+        var r = document.getElementById("boot-reason");
+        if (r) r.textContent = window.__bootErrors.join("\n\n");
+      });
+      addEventListener("unhandledrejection", function (e) {
+        var msg = e.reason && e.reason.message ? e.reason.message : String(e.reason);
+        if (bootBenign(msg)) return;
+        window.__bootErrors.push("Unhandled promise rejection: " + msg);
+        var r = document.getElementById("boot-reason");
+        if (r) r.textContent = window.__bootErrors.join("\n\n");
+      });
+      // If nothing has mounted after a few seconds, say something useful.
+      setTimeout(function () {
+        var fb = document.getElementById("boot-fallback");
+        if (!fb) return; // React mounted and replaced it — all good
+        var r = document.getElementById("boot-reason");
+        if (r && !window.__bootErrors.length) {
+          r.textContent =
+            "No JavaScript error was reported, but the app never mounted.\n\n" +
+            "Most likely: the module script did not load. Check the browser\n" +
+            "console and the Network tab for /src/main.tsx.";
+        }
+      }, 5000);
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
