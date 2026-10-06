@@ -1213,7 +1213,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b32",
      "characterId": "nw_mara",
      "text": "It's okay — I'll get someone — Ambulance. I'll call. Ambulance.",
-     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3"
+     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3",
+     "background": "video:/film/video/14-lipsync.mp4",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.6
     },
     {
      "id": "nw_b33",

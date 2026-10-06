@@ -44,6 +44,12 @@ for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "am
   const from = resolve(src, "public/audio/sfx", `${f}.mp3`);
   if (existsSync(from)) cpSync(from, resolve(root, "public/film/sfx", `${f}.mp3`));
 }
+// Talking shots: a lip-synced clip stands in for the still while the line is spoken (the clip carries no sound), then the still returns.
+const CLIPS = existsSync(resolve(src, "src/story/clips.ts"))
+  ? Object.fromEntries([...readFileSync(resolve(src, "src/story/clips.ts"), "utf8").matchAll(/"(\/voice\/[^"]+)":\s*"(\/video\/[^"]+)"/g)].map(m => [m[1], m[2]]))
+  : {};
+mkdirSync(resolve(root, "public/film/video"), { recursive: true });
+for (const v of Object.values(CLIPS)) if (existsSync(resolve(src, "public", v.slice(1)))) cpSync(resolve(src, "public", v.slice(1)), resolve(root, "public/film", v.slice(1)));
 const bedFor = sc => {
   const h = `${sc.heading} ${sc.place}`.toUpperCase();
   if (/HIVE|STOREROOM|PASSAGES|THROUGH THE ROOMS|KANEKO/.test(h)) return "hive";
@@ -139,7 +145,13 @@ film.scenes.forEach((sc, si) => {
         const f = { text: p.text };
         if (p.audioUrl) f.audioUrl = p.audioUrl; else if (st.t === "text") f.silent = true;
         if (st.t === "line" && st.note && pi === 0) f.expression = st.note;
-        if (pi === 0 && pendingBg) { Object.assign(f, bgFields(pendingBg)); pendingBg = null; }
+        const clip = st.t === "line" && p.audioUrl && CLIPS[p.audioUrl.replace(/^\/film/, "")];
+        if (clip) {
+          // the video replaces the picture for this line; the next beat puts the still back
+          const still = pendingBg ?? lastBg;
+          Object.assign(f, { background: `video:${P(clip)}`, cinematic: camera(still ?? clip), backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.6 });
+          pendingBg = still;
+        } else if (pi === 0 && pendingBg) { Object.assign(f, bgFields(pendingBg)); pendingBg = null; }
         if (pi === 0 && caption && st.t === "text") { f.text = `${caption}\n\n${f.text}`; caption = null; }
         beats.push(beat(st.t === "line" ? st.who : null, f));
       });
