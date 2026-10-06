@@ -2128,7 +2128,7 @@ function BeatBackground({
   return (
     <>
       {layers.map((l) => {
-        const { className: cinClass, style: cinStyle } = cinematicLayer(l.cinematic, l.background, { reducedMotion: prefersReducedMotionPure() });
+        const { className: cinClass, style: cinStyle } = cinematicLayer(l.cinematic, l.background.startsWith("video:") ? "" : l.background, { reducedMotion: prefersReducedMotionPure() });
         const animClass = l.exiting ? "beatbg-out" : `beatbg-in-${transitionName}`;
         const pOn = hasParallax(l.cinematic);
         return (
@@ -2137,6 +2137,18 @@ function BeatBackground({
             className={`absolute inset-0 z-[2] ${animClass}`}
             style={{ "--beatbg-speed": `${speed}s` } as React.CSSProperties}
           >
+            {l.background.startsWith("video:") ? (
+              /* A beat may swap the picture for a clip (a lip-synced talking shot): it plays once, silent, and holds its last frame. */
+              <video
+                src={l.background.slice(6)}
+                autoPlay
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 h-full w-full object-cover"
+                style={spriteGradeStyle(l.cinematic)}
+              />
+            ) : (
             <div className={`absolute inset-0 ${pOn ? "parallax-plate" : ""}`} style={pOn ? parallaxStyle(l.cinematic) : undefined}>
               <div className={`absolute inset-0 ${cinClass}`} style={cinStyle}>
                 <LightGlow cinematic={l.cinematic} />
@@ -2144,6 +2156,7 @@ function BeatBackground({
                 <CinematicOverlays cinematic={l.cinematic} />
               </div>
             </div>
+            )}
             {pOn && <ParallaxMidLayers cinematic={l.cinematic} />}
             <div className={`${pOn ? "parallax-fg " : ""}absolute inset-0`} style={spriteGradeStyle(l.cinematic)}>
               <ForegroundExtras cinematic={l.cinematic} />
