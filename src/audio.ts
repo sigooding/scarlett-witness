@@ -484,7 +484,7 @@ class AudioEngine {
       this.ambientHandle = null;
     }
     if (!id || id === "none") return;
-    const handle = this.buildAmbient(ctx, id);
+    const handle = this.buildMix(ctx, id);
     if (handle) {
       handle.gain.gain.setValueAtTime(0.0001, ctx.currentTime);
       handle.gain.gain.setTargetAtTime(1, ctx.currentTime, 1.2);
@@ -492,8 +492,35 @@ class AudioEngine {
     }
   }
 
-  private buildAmbient(ctx: AudioContext, id: string): { gain: GainNode; stop: () => void } | null {
-    const bus = this.buses.ambient!;
+  /** An ambient id may layer several parts with "+": a built-in preset ("rain") and recorded loops ("file:/film/sfx/amb-hive.mp3"). */
+  private buildMix(ctx: AudioContext, id: string): { gain: GainNode; stop: () => void } | null {
+    const parts = id.split("+").map((p) => p.trim()).filter(Boolean);
+    if (parts.length === 1 && !parts[0].startsWith("file:")) return this.buildAmbient(ctx, parts[0]);
+    const mix = ctx.createGain();
+    mix.connect(this.buses.ambient!);
+    const stops: (() => void)[] = [];
+    let dead = false;
+    for (const part of parts) {
+      if (part.startsWith("file:")) {
+        const url = part.slice(5);
+        void fetch(url).then((r) => r.arrayBuffer()).then((b) => ctx.decodeAudioData(b)).then((buf) => {
+          if (dead) return;
+          const src = ctx.createBufferSource();
+          const g = ctx.createGain();
+          src.buffer = buf; src.loop = true; g.gain.value = 0.8;
+          src.connect(g).connect(mix); src.start();
+          stops.push(() => { try { src.stop(); } catch { /* noop */ } });
+        }).catch(() => undefined);
+      } else {
+        const h = this.buildAmbient(ctx, part, mix);
+        if (h) stops.push(h.stop);
+      }
+    }
+    return { gain: mix, stop: () => { dead = true; stops.forEach((fn) => fn()); } };
+  }
+
+  private buildAmbient(ctx: AudioContext, id: string, dest?: AudioNode): { gain: GainNode; stop: () => void } | null {
+    const bus = dest ?? this.buses.ambient!;
     const out = ctx.createGain();
     out.connect(bus);
     const stops: (() => void)[] = [];

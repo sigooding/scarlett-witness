@@ -13,7 +13,7 @@ const P = p => `/film${p}`;
 for (const dir of ["img", "voice"]) mkdirSync(resolve(root, "public/film", dir), { recursive: true });
 for (const dir of ["img", "voice"]) cpSync(resolve(src, "public", dir), resolve(root, "public/film", dir), { recursive: true });
 mkdirSync(resolve(root, "public/film/audio"), { recursive: true });
-for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
+for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
 
 const nice = s => s.toLowerCase().replace(/(^|[\s.-])([a-z])/g, (_, a, b) => a + b.toUpperCase());
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
@@ -37,7 +37,30 @@ function splitLine(text, voice) {
   return out.filter(o => o.text).map(({ text, audioUrl }) => ({ text, audioUrl }));
 }
 
-const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime" };
+const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", heels: "heels-run", car: "car-pass" };
+// Recorded atmosphere: copy the loops from the visual novel and pick one per scene from its slugline (same rule as the VN's beds.ts).
+mkdirSync(resolve(root, "public/film/sfx"), { recursive: true });
+for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "amb-vending", "amb-office", "heels-run", "car-pass"]) {
+  const from = resolve(src, "public/audio/sfx", `${f}.mp3`);
+  if (existsSync(from)) cpSync(from, resolve(root, "public/film/sfx", `${f}.mp3`));
+}
+const bedFor = sc => {
+  const h = `${sc.heading} ${sc.place}`.toUpperCase();
+  if (/HIVE|STOREROOM|PASSAGES|THROUGH THE ROOMS|KANEKO/.test(h)) return "hive";
+  if (/APARTMENT|MARA'S|VERA'S|HOME/.test(h) && !sc.exterior) return "room-tone";
+  if (/OFFICE/.test(h)) return "office";
+  if (/\bBAR\b/.test(h) && !sc.exterior) return "bar";
+  if (sc.exterior && /BACKSTREET|VENDING|ALLEY|LANE/.test(h)) return "vending";
+  if (sc.exterior) return "city-traffic";
+  return null;
+};
+// Director: indoors (INT. and not EXT.) there is no rain, neither the sound nor the falling particles.
+const indoors = sc => /^\s*INT\b/i.test(sc.heading) && !/EXT/i.test(sc.heading);
+const ambientOf = sc => {
+  const bed = bedFor(sc);
+  const have = bed && existsSync(resolve(root, "public/film/sfx", `amb-${bed}.mp3`));
+  return [sc.rain > 0 && !indoors(sc) ? "rain" : "", have ? `file:${P(`/sfx/amb-${bed}.mp3`)}` : ""].filter(Boolean).join("+");
+};
 let beatNo = 0;
 const hash = str => [...str].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7);
 const FOCI = ["50% 45%", "35% 50%", "65% 50%", "50% 60%", "42% 38%", "60% 42%"];
@@ -80,15 +103,35 @@ scenes.push({
   dialogueBeats: PRO.map(([text, k]) => beat("KANEKO", { text, audioUrl: P(`/voice/prologue/${k}.mp3`) })),
 });
 
+const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain" };
+const lookOf = sc => ({
+  ambientAudio: ambientOf(sc),
+  particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
+  hideHud: true, letterbox: true,
+});
 film.scenes.forEach((sc, si) => {
-  const beats = [];
-  let bgNow = null, pendingBg = null, caption = null;
-  let bg0 = null;
+  let beats = [];
+  let pendingBg = null, caption = null, bg0 = null, lastBg = null, part = 0;
+  let music = null;   // scene-level music for the node being built
+  const close = () => {
+    scenes.push({
+      id: `nw_s${sc.id}${part ? `_${"abcdefgh"[part]}` : ""}`.toLowerCase(), title: `${sc.n} — ${sc.title}${part ? " (cont.)" : ""}`,
+      background: (part ? lastBg : bg0) ?? "gradient:linear-gradient(#000,#000)", prose: part ? "" : `${sc.heading}`, ...lookOf(sc),
+      transition: part ? "cut" : "fade-black", transitionSpeed: part ? 0.2 : 1.1, ...(music ?? {}), dialogueBeats: beats,
+    });
+    beats = []; part++; music = null;
+  };
   for (const st of sc.steps) {
-    if (st.t === "bg") { pendingBg = P(st.src); bg0 ??= pendingBg; }
+    if (st.t === "bg") { pendingBg = P(st.src); bg0 ??= pendingBg; lastBg = pendingBg; }
     else if (st.t === "insert") caption = st.text;
     else if (st.t === "sfx") carry = SFX[st.id] ? P(`/sfx/${SFX[st.id]}.mp3`) : carry;
-    else if (st.t === "black") pendingBg = "gradient:linear-gradient(#000,#000)";
+    else if (st.t === "music") {
+      // music is per scene node in this engine: a cue part-way through a scene starts a continuation node
+      const cue = st.id === "off" ? { musicMode: "none", musicFadeSeconds: 4 } : { musicMode: "track", musicUrl: P(`/audio/${MUSIC[st.id] ?? "midnight-in-the-rain"}.mp3`), musicFadeSeconds: 5 };
+      if (beats.length) { const carried = pendingBg; close(); pendingBg = carried; }
+      music = cue;
+    }
+    else if (st.t === "black") { pendingBg = "gradient:linear-gradient(#000,#000)"; lastBg = pendingBg; }
     else if (st.t === "card") beats.push(beat(null, { text: st.text.toUpperCase(), silent: true, ...(pendingBg ? bgFields(pendingBg) : {}) })), (pendingBg = null);
     else if (st.t === "text" || st.t === "line") {
       const pieces = st.t === "line" ? splitLine(st.text, st.voice) : [{ text: st.text }];
@@ -104,17 +147,8 @@ film.scenes.forEach((sc, si) => {
   }
   // a shot with no words still gets its moment
   if (pendingBg) beats.push(beat(null, { text: "·", silent: true, ...bgFields(pendingBg) }));
-  scenes.push({
-    id: `nw_s${sc.id}`.toLowerCase(), title: `${sc.n} — ${sc.title}`, background: bg0 ?? "gradient:linear-gradient(#000,#000)",
-    prose: `${sc.heading}`, ...(sc.rain > 0 ? { ambientAudio: "rain" } : { ambientAudio: "" }),
-    particles: sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
-    hideHud: true, letterbox: true, transition: si === 0 ? "fade-black" : "fade-black", transitionSpeed: 1.1, dialogueBeats: beats,
-  });
+  close();
 });
-// the score: enters in scene 75 and runs to the end, as in the screenplay
-const scoreScene = film.scenes.findIndex(s => s.steps.some(st => st.t === "music"));
-if (scoreScene >= 0) Object.assign(scenes[scoreScene + 1], { musicMode: "track", musicUrl: P("/audio/midnight-in-the-rain.mp3"), musicFadeSeconds: 6 });
-
 // link everything in a line, finishing on the credits ending
 const cast = [...characters.values()].filter(c => c.id !== "nw_narrator").map(c => c.name);
 const stills = film.scenes.flatMap(sc => sc.steps.filter(st => st.t === "bg").map(st => st.src));
