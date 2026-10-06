@@ -16952,7 +16952,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1432",
      "characterId": "nw_narrator",
-     "text": "A tiny place in a brick railway arch near the station. Six new stools, the same height as the old ones. Steam. One warm bulb.",
+     "text": "A tiny place in a brick railway arch near the station. Steam. One warm bulb.",
      "silent": true
     },
     {
@@ -16998,7 +16998,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1437",
      "characterId": "nw_narrator",
-     "text": "Kaneko ladles. JACK sits on the second stool. The third is empty.",
+     "text": "Kaneko ladles. JACK sits at the counter, a bowl in front of him, a space beside him.",
      "silent": true,
      "background": "/film/img/s100/158-the-third-stool.jpg",
      "cinematic": {
@@ -17026,7 +17026,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1439",
      "characterId": "nw_narrator",
-     "text": "She stands a moment. Counts the stools. Sits on the third.",
+     "text": "She stands a moment. Then she sits down beside him.",
      "silent": true,
      "background": "/film/img/s100/161-stool-three.jpg",
      "cinematic": {
