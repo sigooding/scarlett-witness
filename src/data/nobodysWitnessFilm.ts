@@ -769,7 +769,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "1 — The backstreet",
    "background": "/film/img/s1/01-backstreet.jpg",
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -1333,7 +1333,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "2 — The small bar",
    "background": "/film/img/s2/19-the-bar.jpg",
    "prose": "INT. SMALL BAR, KANDA - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-bar.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -1601,7 +1601,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "3 — Three days later",
    "background": "/film/img/s3/29-apartment-block.jpg",
    "prose": "EXT. VERA'S APARTMENT BUILDING - DUSK",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -1674,7 +1674,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "4 — Vera's apartment",
    "background": "/film/img/s4/33-the-apartment.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -3093,7 +3093,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "8 — We're closed",
    "background": "/film/img/s8/160-were-closed.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-bar.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -3254,7 +3254,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "9 — Behind the counter",
    "background": "/film/img/s9/162-miss.jpg",
    "prose": "EXT. KANDA STREET - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -3422,7 +3422,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "10 — Who calls me that?",
    "background": "/film/img/s10/164-depends-whos-calling.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -3803,7 +3803,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "11 — Two men laughing",
    "background": "/film/img/s11/243-the-box.jpg",
    "prose": "INT. JACK'S OFFICE - LATER",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -4042,7 +4042,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "12 — The strap",
    "background": "/film/img/s12/168-the-strap.jpg",
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -4270,7 +4270,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "14 — Someone who meant to come back",
    "background": "/film/img/s14/182-someone-who-meant-to-come-back.jpg",
    "prose": "INT. MARA'S APARTMENT - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -5117,7 +5117,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "15 — Forgotten by the city",
    "background": "/film/img/s15/184-a-gap-in-someones-teeth.jpg",
    "prose": "EXT. THE HIVE - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -5208,7 +5208,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "16 — Everybody sees him",
    "background": "/film/img/s16/249-the-chair.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -5322,7 +5322,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "17 — You got old",
    "background": "/film/img/s17/187-you-got-old.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -5545,7 +5545,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "18 — After the last train",
    "background": "/film/img/s18/283-the-letter.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -5662,7 +5662,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "19 — Past midnight",
    "background": "/film/img/s19/190-she-stands-aside.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -5713,7 +5713,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "20 — Prove it",
    "background": "/film/img/s20/309-the-voicemail.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -6041,7 +6041,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "21 — Footsteps on the stairs",
    "background": "/film/img/s21/193-footsteps-on-the-stairs.jpg",
    "prose": "INT. JACK'S OFFICE - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -6488,7 +6488,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "23 — You never call",
    "background": "/film/img/s23/197-you-never-call.jpg",
    "prose": "EXT. YAKITORI STALL, UNDER THE TRACKS - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -6739,7 +6739,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "25 — The number 114",
    "background": "/film/img/s25/200-the-number-114.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -7411,7 +7411,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "27 — The old song",
    "background": "/film/img/s27/202-the-old-song.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -7480,7 +7480,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "27 — She was here",
    "background": "/film/img/s27a/290-daylight-again.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-bar.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -7732,7 +7732,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "28 — The sea wall steps",
    "background": "/film/img/s28/203-the-sea-wall-steps.jpg",
    "prose": "EXT. FISHING TOWN, BOSO COAST - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -7997,7 +7997,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "30 — A light ahead",
    "background": "/film/img/s30/205-a-light-ahead.jpg",
    "prose": "EXT. COUNTRY HIGHWAY - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8048,7 +8048,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "31 — The only car",
    "background": "/film/img/s31/169-the-only-car.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8379,7 +8379,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "36 — Come back safe anyway",
    "background": "/film/img/s36/208-come-back-safe-anyway.jpg",
    "prose": "INT. VERA'S APARTMENT - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -8617,7 +8617,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "38 — Four black sedans",
    "background": "/film/img/s38/173-four-black-sedans.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8998,7 +8998,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "43 — Wet tin",
    "background": "/film/img/s43/211-wet-tin.jpg",
    "prose": "EXT. ROADSIDE INN, KITCHEN ROOF - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -9326,7 +9326,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "47 — Mud and impacts",
    "background": "/film/img/s47/222-mud-and-impacts.jpg",
    "prose": "EXT. ROADSIDE INN, BACK YARD - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -9458,7 +9458,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "49 — No need to chase",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
    "prose": "EXT. ROADSIDE INN, BACK YARD - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -9633,7 +9633,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "51 — The model, corrected",
    "background": "/film/img/s51/310-the-model-at-dawn.jpg",
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAWN",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -9712,7 +9712,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "52 — She pulls him in",
    "background": "/film/img/s52/218-she-pulls-him-in.jpg",
    "prose": "INT. VERA'S APARTMENT - DAWN",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -9775,7 +9775,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "53 — Pink water",
    "background": "/film/img/s53/219-pink-water.jpg",
    "prose": "INT. VERA'S APARTMENT, BATHROOM - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -10159,7 +10159,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "54 — Everything is still there",
    "background": "/film/img/s54/220-everything-is-still-there.jpg",
    "prose": "EXT. OLD TOBACCO KIOSK - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -10246,7 +10246,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "55 — They match",
    "background": "/film/img/s55/221-they-match.jpg",
    "prose": "INT. THE HIVE, PASSAGES - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -10327,7 +10327,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "56 — The third stool",
    "background": "/film/img/s56/223-the-third-stool.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -10448,7 +10448,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "57 — Three feet away",
    "background": "/film/img/s57/224-three-feet-away.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -10529,7 +10529,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "58 — Bring her",
    "background": "/film/img/s58/225-bring-her.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -10626,7 +10626,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "59 — It rings. Nobody answers.",
    "background": "/film/img/s59/364-the-kotatsu.jpg",
    "prose": "EXT. THE HIVE - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -10753,7 +10753,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "60 — I want my sister",
    "background": "/film/img/s60/227-i-want-my-sister.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -11023,7 +11023,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "62 — Like a date",
    "background": "/film/img/s62/229-like-a-date.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -11277,7 +11277,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "63 — Not another day",
    "background": "/film/img/s63a/293-the-sedan-waits.jpg",
    "prose": "EXT. UENO, UNDER THE RAILWAY ARCHES - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -11424,7 +11424,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "64 — Behind the counter",
    "background": "/film/img/s64/231-behind-the-counter.jpg",
    "prose": "INT. SMALL BAR, KANDA - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-bar.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -11514,7 +11514,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "65 — The wine-red dress",
    "background": "/film/img/s65/232-the-wine-red-dress.jpg",
    "prose": "INT. VERA'S APARTMENT - EVENING",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -11762,7 +11762,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "67 — A different clock",
    "background": "/film/img/s67/234-a-different-clock.jpg",
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -11819,7 +11819,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "68 — Rice balls for the car",
    "background": "/film/img/s68/235-rice-balls-for-the-car.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -11907,7 +11907,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "69 — Vera would love this",
    "background": "/film/img/s69/236-vera-would-love-this.jpg",
    "prose": "INT. THE HIVE, PASSAGES - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -12052,7 +12052,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "70 — Position",
    "background": "/film/img/s70/237-position.jpg",
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -12218,7 +12218,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "71 — Everyone's awake",
    "background": "/film/img/s71/313-drawings-in-the-water.jpg",
    "prose": "INT. THE HIVE, PASSAGE - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -12621,7 +12621,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "73 — Vera runs",
    "background": "/film/img/s73/69-vera-runs.jpg",
    "prose": "EXT. TOKYO STREETS - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -12772,7 +12772,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "74 — The empty street",
    "background": "/film/img/s74/74-twenty-metres-apart.jpg",
    "prose": "EXT. EMPTY STREET UNDER THE TRACKS - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -13305,7 +13305,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "76 — The lighter",
    "background": "/film/img/s76/82-on-the-floor.jpg",
    "prose": "INT. VERA'S APARTMENT - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -13442,7 +13442,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "77 — The envelope",
    "background": "/film/img/s77/85-the-desk-lamp.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -13555,7 +13555,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "78 — No name",
    "background": "/film/img/s78/88-the-walkway.jpg",
    "prose": "EXT. VERA'S APARTMENT BUILDING, CORRIDOR - DAWN",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -13687,7 +13687,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "79 — Her father's handwriting",
    "background": "/film/img/s79/91-grey-light.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-room-tone.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -14133,7 +14133,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "81 — Without a toast",
    "background": "/film/img/s81/100-the-bar-in-daylight.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-bar.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -14628,7 +14628,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "83 — It's just a face",
    "background": "/film/img/s83/109-the-fortieth-floor.jpg",
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAY",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-office.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -14911,7 +14911,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "84 — Three feet away",
    "background": "/film/img/s84/115-the-storeroom.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15210,7 +15210,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "85 — The Hive is watching",
    "background": "/film/img/s85/119-single-file.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15283,7 +15283,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "86 — Fifty years",
    "background": "/film/img/s86/121-the-shutter.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15403,7 +15403,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "87 — The main switch",
    "background": "/film/img/s87/124-the-repairman.jpg",
    "prose": "INT. THE HIVE, RADIO REPAIR SHOP - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15470,7 +15470,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "88 — Its own dark",
    "background": "/film/img/s88/126-dark.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15555,7 +15555,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "89 — The unlit lighter",
    "background": "/film/img/s89/128-by-touch.jpg",
    "prose": "INT. THE HIVE, STAIRWELL - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15640,7 +15640,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "90 — Through the rooms",
    "background": "/film/img/s90/130-the-roof.jpg",
    "prose": "INT. THE HIVE, THROUGH THE ROOMS - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "particleConfig": {
     "density": 0.35,
@@ -15869,7 +15869,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "91 — The ladder under the train",
    "background": "/film/img/s91/132-the-rails-sing.jpg",
    "prose": "EXT. THE HIVE, REAR WALL BY THE VIADUCT - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -15976,7 +15976,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "92 — Until us",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "prose": "EXT. STREET BELOW THE VIADUCT - MOMENTS LATER",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -16082,7 +16082,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "93 — He knows this car",
    "background": "/film/img/s93/137-he-knows-this-car.jpg",
    "prose": "EXT. POLICE STATION - NIGHT",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -16161,7 +16161,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "94 — The lit window",
    "background": "/film/img/s94/139-only-tea.jpg",
    "prose": "EXT. POLICE STATION / INT. BLACK SEDAN - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -16283,7 +16283,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "95 — Taillights",
    "background": "/film/img/s95/142-taillights.jpg",
    "prose": "EXT. TOKYO STREET - CONTINUOUS",
-   "ambientAudio": "rain",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -16456,7 +16456,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "98 — The rain has stopped",
    "background": "/film/img/s98/153-the-rain-has-stopped.jpg",
    "prose": "EXT. ROOFTOP OF JACK'S BUILDING - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.9,
@@ -16814,7 +16814,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "99 — The Hive coming down, then the plaza",
    "background": "/film/img/s99/156-cut-open.jpg",
    "prose": "EXT. THE HIVE / THE PLAZA, WHERE THE HIVE WAS - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.9,
@@ -16967,7 +16967,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "100 — The city goes on",
    "background": "/film/img/s100/320-the-news-nobody-watches.jpg",
    "prose": "INT. KANEKO'S NEW COUNTER - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,

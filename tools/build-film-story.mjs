@@ -37,7 +37,28 @@ function splitLine(text, voice) {
   return out.filter(o => o.text).map(({ text, audioUrl }) => ({ text, audioUrl }));
 }
 
-const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime" };
+const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", heels: "heels-run", car: "car-pass" };
+// Recorded atmosphere: copy the loops from the visual novel and pick one per scene from its slugline (same rule as the VN's beds.ts).
+mkdirSync(resolve(root, "public/film/sfx"), { recursive: true });
+for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "amb-vending", "amb-office", "heels-run", "car-pass"]) {
+  const from = resolve(src, "public/audio/sfx", `${f}.mp3`);
+  if (existsSync(from)) cpSync(from, resolve(root, "public/film/sfx", `${f}.mp3`));
+}
+const bedFor = sc => {
+  const h = `${sc.heading} ${sc.place}`.toUpperCase();
+  if (/HIVE|STOREROOM|PASSAGES|THROUGH THE ROOMS|KANEKO/.test(h)) return "hive";
+  if (/APARTMENT|MARA'S|VERA'S|HOME/.test(h) && !sc.exterior) return "room-tone";
+  if (/OFFICE/.test(h)) return "office";
+  if (/\bBAR\b/.test(h) && !sc.exterior) return "bar";
+  if (sc.exterior && /BACKSTREET|VENDING|ALLEY|LANE/.test(h)) return "vending";
+  if (sc.exterior) return "city-traffic";
+  return null;
+};
+const ambientOf = sc => {
+  const bed = bedFor(sc);
+  const have = bed && existsSync(resolve(root, "public/film/sfx", `amb-${bed}.mp3`));
+  return [sc.rain > 0 ? "rain" : "", have ? `file:${P(`/sfx/amb-${bed}.mp3`)}` : ""].filter(Boolean).join("+");
+};
 let beatNo = 0;
 const hash = str => [...str].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7);
 const FOCI = ["50% 45%", "35% 50%", "65% 50%", "50% 60%", "42% 38%", "60% 42%"];
@@ -82,7 +103,7 @@ scenes.push({
 
 const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain" };
 const lookOf = sc => ({
-  ...(sc.rain > 0 ? { ambientAudio: "rain" } : { ambientAudio: "" }),
+  ambientAudio: ambientOf(sc),
   particles: sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
   hideHud: true, letterbox: true,
 });
