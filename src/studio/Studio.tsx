@@ -9060,11 +9060,11 @@ function StudioInner({
                     </Field>
                     </CollapsibleSection>
                     <CollapsibleSection id={`beat-${b.id}-bg`} title="🖼 Background & camera">
-                    <Field label="🖼 Replacement background image (persists over later beats by default — see options below)">
+                    <Field label="🖼 Replacement background image or 🎞 video clip (persists over later beats by default — see options below)">
                       <div className="flex gap-1">
                         <input
                           className={inputCls}
-                          placeholder="/img/scene.jpg or gradient:… (leave blank for scene default)"
+                          placeholder="/img/scene.jpg, gradient:… or video:/path.mp4 (leave blank for scene default)"
                           value={mediaField(b.background)}
                           onChange={(e) =>
                             mutate((d) => {
@@ -9081,6 +9081,17 @@ function StudioInner({
                             mutate((d) => {
                               const s = d.scenes.find((x) => x.id === scene.id)!;
                               s.dialogueBeats!.find((x) => x.id === b.id)!.background = `asset:${assetId}`;
+                            })
+                          }
+                        />
+                        <MediaUploadButton
+                          storyId={story.id}
+                          accept="video/*"
+                          label="🎞 Video"
+                          onUploaded={(_url, assetId) =>
+                            mutate((d) => {
+                              const s = d.scenes.find((x) => x.id === scene.id)!;
+                              s.dialogueBeats!.find((x) => x.id === b.id)!.background = `video:asset:${assetId}`;
                             })
                           }
                         />
@@ -9112,7 +9123,16 @@ function StudioInner({
                           placeholder="🖼 or browse the image library… (leave blank for scene default)"
                         />
                       </div>
-                      {b.background && (
+                      {b.background && b.background.startsWith("video:") && (
+                        <video
+                          className="mt-1 h-24 w-full border border-noir-600 object-cover"
+                          src={(media(b.background) ?? b.background).replace(/^video:/, "")}
+                          muted
+                          controls
+                          playsInline
+                        />
+                      )}
+                      {b.background && !b.background.startsWith("video:") && (
                         <div
                           className="mt-1 h-14 w-full border border-noir-600"
                           style={bgStyle(media(b.background) ?? b.background)}
@@ -9166,7 +9186,7 @@ function StudioInner({
                           </Field>
                         </div>
                       )}
-                      {b.background && (
+                      {b.background && !b.background.startsWith("video:") && (
                         <div className="mt-1 space-y-2 border border-gold/20 bg-gold/5 p-2">
                           <div className="font-pulp text-[9px] uppercase tracking-widest text-gold">
                             🎬 Beat camera — zoom to subject &amp; motion
