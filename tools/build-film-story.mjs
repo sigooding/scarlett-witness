@@ -54,10 +54,12 @@ const bedFor = sc => {
   if (sc.exterior) return "city-traffic";
   return null;
 };
+// Director: indoors (INT. and not EXT.) there is no rain, neither the sound nor the falling particles.
+const indoors = sc => /^\s*INT\b/i.test(sc.heading) && !/EXT/i.test(sc.heading);
 const ambientOf = sc => {
   const bed = bedFor(sc);
   const have = bed && existsSync(resolve(root, "public/film/sfx", `amb-${bed}.mp3`));
-  return [sc.rain > 0 ? "rain" : "", have ? `file:${P(`/sfx/amb-${bed}.mp3`)}` : ""].filter(Boolean).join("+");
+  return [sc.rain > 0 && !indoors(sc) ? "rain" : "", have ? `file:${P(`/sfx/amb-${bed}.mp3`)}` : ""].filter(Boolean).join("+");
 };
 let beatNo = 0;
 const hash = str => [...str].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7);
@@ -104,7 +106,7 @@ scenes.push({
 const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain" };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
-  particles: sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
+  particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
   hideHud: true, letterbox: true,
 });
 film.scenes.forEach((sc, si) => {
