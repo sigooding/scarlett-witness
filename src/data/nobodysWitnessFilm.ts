@@ -929,6 +929,22 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Somewhere nearby, a pedestrian crossing CHIMES its old melody for an empty intersection. Over and over. No one crosses.",
      "silent": true,
+     "background": "/film/img/s1/383-the-empty-lane.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/crossing.mp3"
     },
     {
@@ -1740,14 +1756,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "VERA VOSS (29) sits at the low table. Two cups. Hers holds cold tea. The other is empty and clean, set out as though someone is expected.",
      "silent": true,
-     "background": "/film/img/s4/36-vera-at-the-table.jpg",
+     "background": "/film/img/s4/385-the-empty-place.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
+      "mode": "pan",
+      "focalPoint": "50% 45%",
       "zoomDuration": 14,
-      "panDirection": "left",
+      "panDirection": "right",
       "panDistance": 2,
-      "dollyDirection": "left",
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
@@ -1864,7 +1880,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b72",
      "characterId": "nw_narrator",
      "text": "The old television murmurs to itself.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s4/386-at-the-window.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 16,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b73",
@@ -12626,7 +12658,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1075",
      "characterId": "nw_narrator",
      "text": "The phone is still in her fist, the call still lit on its screen: ISHIDA. She is not running away from anything. She is running toward the one address she has left. The Hive, and wherever they have laid her sister down. The elevated railway glows at the far end of the street, and she runs at it as if she could still get there in time.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s73/387-the-street-too-long.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1076",
@@ -12672,7 +12720,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1080",
      "characterId": "nw_narrator",
      "text": "Just beyond it, at a crossing, the old melody chimes for her, and she runs through it on red.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s73/388-through-the-crossing.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1081",
@@ -17215,18 +17279,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "montage": [
      "/film/img/s1/01-backstreet.jpg",
      "/film/img/s2/22-not-his-business.jpg",
-     "/film/img/s5/47-he-stops-typing.jpg",
-     "/film/img/s7/65-the-evidence-bag.jpg",
-     "/film/img/s14/183-the-sketchbook.jpg",
-     "/film/img/s20/309-the-voicemail.jpg",
-     "/film/img/s25/369-the-drawing.jpg",
-     "/film/img/s33/206-the-window-swollen-shut.jpg",
-     "/film/img/s50/216-hand-starts-to-shake.jpg",
+     "/film/img/s5/44-dripping-umbrella.jpg",
+     "/film/img/s7/63-the-detectives-room.jpg",
+     "/film/img/s14/270-packed-and-zipped.jpg",
+     "/film/img/s18/189-after-the-last-train.jpg",
+     "/film/img/s25/200-the-number-114.jpg",
+     "/film/img/s32/171-upstairs-at-the-end.jpg",
+     "/film/img/s49/215-no-need-to-chase.jpg",
      "/film/img/s63/231-the-box.jpg",
-     "/film/img/s74/73-two-small-figures.jpg",
-     "/film/img/s80/97-where-to-find-them.jpg",
-     "/film/img/s84/117-both-wrong.jpg",
-     "/film/img/s92/136-until-us.jpg"
+     "/film/img/s74/74-twenty-metres-apart.jpg",
+     "/film/img/s80/95-ishida-doesnt-look-up.jpg",
+     "/film/img/s84/116-thats-me.jpg",
+     "/film/img/s92/135-below-the-viaduct.jpg"
     ],
     "montageSeconds": 7.5,
     "montageTransition": "dissolve",
