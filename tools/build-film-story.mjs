@@ -37,10 +37,10 @@ function splitLine(text, voice) {
   return out.filter(o => o.text).map(({ text, audioUrl }) => ({ text, audioUrl }));
 }
 
-const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", heels: "heels-run", car: "car-pass" };
+const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", car: "car-pass" };
 // Recorded atmosphere: copy the loops from the visual novel and pick one per scene from its slugline (same rule as the VN's beds.ts).
 mkdirSync(resolve(root, "public/film/sfx"), { recursive: true });
-for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "amb-vending", "amb-office", "heels-run", "car-pass"]) {
+for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "amb-vending", "amb-office", "car-pass"]) {
   const from = resolve(src, "public/audio/sfx", `${f}.mp3`);
   if (existsSync(from)) cpSync(from, resolve(root, "public/film/sfx", `${f}.mp3`));
 }

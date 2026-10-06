@@ -12708,7 +12708,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1078",
      "characterId": "nw_narrator",
      "text": "The song comes up under the rain, and she cannot hear it over her own breath. Her heels on wet pavement. Her breath. A car passing, its tyres hissing.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-pass.mp3"
     },
     {
      "id": "nw_b1079",
