@@ -2140,14 +2140,17 @@ function BeatBackground({
             {l.background.startsWith("video:") ? (
               /* A beat may swap the picture for a clip (a lip-synced talking shot): it plays once, silent, and holds its last frame. */
               <video
-                src={l.background.slice(6)}
                 autoPlay
                 muted
                 playsInline
                 preload="auto"
                 className="absolute inset-0 h-full w-full object-cover"
                 style={spriteGradeStyle(l.cinematic)}
-              />
+              >
+                {/* Browsers without H.264 (some Chromium builds) fall through to a .webm beside the .mp4. */}
+                <source src={assetBackground(l.background).slice(6)} />
+                {/\.mp4(\?.*)?$/i.test(l.background) && <source src={assetBackground(l.background).slice(6).replace(/\.mp4/i, ".webm")} type="video/webm" />}
+              </video>
             ) : (
             <div className={`absolute inset-0 ${pOn ? "parallax-plate" : ""}`} style={pOn ? parallaxStyle(l.cinematic) : undefined}>
               <div className={`absolute inset-0 ${cinClass}`} style={cinStyle}>
