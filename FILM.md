@@ -36,3 +36,5 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 **Music cues (7 October 2026, later).** The engine now fades to a new `musicLevel` when the next scene keeps the same track (it used to ignore it), so a cue can build: *Dark Hills Blues* starts quietly in scene 18 (0.2), swells to 0.7 over 10 s as the montage begins; the same under 52 → 53 → montage. *The Show* (`public/film/audio/the-show.mp3`) comes in under scene 100 (0.3) and swells to full over 12 s into the credits. The levels and fade lengths are in `src/film/studio-edits.json` (`musicLevel` 0–1, `musicFadeSeconds`).
 
 **Narration.** Every scene has `autoNarrate: false` (Studio → Audio → "Auto-play prose voice on first scene entry" off), set in the generator, so the browser voice never reads the scene prose; the recorded takes still play.
+
+**Scene 78.** The "midnight in the rain" cue is removed (the scene is music-off, 4 s fade); the opening-scene score `midnight-in-the-rain-v6.mp3` is a different file and stays.

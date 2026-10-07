@@ -13869,9 +13869,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
-   "musicMode": "track",
-   "musicUrl": "/film/audio/midnight-in-the-rain.mp3",
-   "musicFadeSeconds": 5,
+   "musicMode": "none",
+   "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
      "id": "nw_b1155",
