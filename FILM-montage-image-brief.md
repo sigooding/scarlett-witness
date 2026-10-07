@@ -1,30 +1,33 @@
-# Montage image brief (12 stills, 2 montages)
+# Montage image direction (12 stills, 2 montages)
 
-Use for every image: **16:9, 1920×1080, cinematic night photograph, 1975 Tokyo, wet streets, fine film grain.**
+These are story-specific, auto-cycling six-shot sequences (5 seconds per still), not a separate visual style. Match the finished film: **grounded contemporary Tokyo neo-noir, cinematic photographic realism, 16:9 at 1920×1080, restrained 35mm grain, cool slate / blue-green shadows, practical fluorescent and tungsten light, wet city surfaces, natural exposure and subtle highlight halation.** Avoid sepia / 1970s amber treatment and legible generated signage, logos, titles, borders, or watermarks.
 
-Look (put this first, and keep it short, because generators over-apply any colour you name):
-**Low-key and dark: most of the frame is near-black and deep neutral grey. Muted, desaturated, restrained colour. Light comes only from small, dim sources (a window, a lamp, a sign), never a general glow. Slightly underexposed. Plain, observational, Ozu-like framing. Not orange, not golden, not glowing.**
-Do NOT name amber, orange or gold in the prompt. Name the light sources instead ("a single lit window", "a bare bulb"). If a result is still too warm, add: *"neutral white balance, colour temperature 4500K, desaturated"* and lower the exposure.
-Faces turned away or in shadow. Jack: tired man in his fifties, dark overcoat. Vera: young woman, hair tied back.
+Keep the film's established continuity: Jack is a tired, salt-and-pepper-haired man in his fifties, usually in a charcoal coat; Vera is a young blonde woman, often in a cream knit under a dark coat. Faces may be shown when the beat calls for them; these are not forced silhouettes.
 
-Replace the placeholders in `public/film/img/` with the same file names. Each still holds 5 seconds.
+The current stills live at `public/film/img/montage18/01–06.jpg` and `public/film/img/montage53/01–06.jpg`.
 
-## montage18 — Jack goes to the Hive (after the phone call "Come back. Alone. After the last train.")
+## montage18 — after Jack hears “Come back. Alone. After the last train.”
+
+A solitary route from the office back to Kaneko's hidden noodle counter: phone call, descent, the last train, then the emptied Hive. The sequence moves from close interior details to wider, more anonymous city frames.
+
 | File | Image |
 |---|---|
-| `montage18/01.jpg` | Jack leaving his office building, coat collar up, a doorway lamp behind him, rain falling through the light. |
-| `montage18/02.jpg` | The wet street seen through a car's windscreen at night, streetlights smeared by rain and wipers, tail-lights ahead. |
-| `montage18/03.jpg` | An empty elevated station platform, the last train arriving, its lit windows sliding past, one figure waiting. |
-| `montage18/04.jpg` | Jack alone in a train carriage, his reflection in the dark window, city lights streaming by outside. |
-| `montage18/05.jpg` | Bird's-eye view over the city at night: a dark grid of streets, the elevated line, small red lights on towers, low cloud. |
-| `montage18/06.jpg` | A narrow covered arcade after midnight, shutters down, a single bare bulb burning far down at the end. |
+| `montage18/01.jpg` | Jack's reflection in the rain-streaked office window, with the rotary phone, sketchbook, and folded letter on the desk after the call. |
+| `montage18/02.jpg` | Jack seen from behind, descending the wet concrete stairwell from his office toward the street. |
+| `montage18/03.jpg` | A nearly empty road below the elevated line as the last train passes overhead; Jack waits small in the frame. |
+| `montage18/04.jpg` | The tiled station passage after the last train, Jack walking away toward the dark stairs. |
+| `montage18/05.jpg` | Jack entering the closed, rain-damp covered arcade of the Hive, its shutters and pipes receding into shadow. |
+| `montage18/06.jpg` | The half-shuttered noodle-counter entrance, a bare bulb glowing behind the curtain and Jack paused outside. |
 
-## montage53 — after scenes 52 and 53 play in full ("She pulls him in", "Pink water", the kiss, the promise); then on to the newspaper office
+## montage53 — the night after “Pink water” and the kiss
+
+Keep all six images at night, with the intimate apartment frames opening out into the city. This night-time treatment is deliberately atmospheric; the sequence closes on a clear exterior establishing view before the next scene.
+
 | File | Image |
 |---|---|
-| `montage53/01.jpg` | The apartment block at night, one third-floor window lit, rain falling through the lamplight. |
-| `montage53/02.jpg` | The city from her window, a scatter of small lights, a few small red ones on far towers. |
-| `montage53/03.jpg` | A phone lying face down on a table beside a lamp, the room quiet. |
-| `montage53/04.jpg` | The waterfront at night: lamps reflected in black water, an empty quay, one red buoy light. |
-| `montage53/05.jpg` | An elevated train crossing the city, windows lit, seen from above. |
-| `montage53/06.jpg` | The same window at first light, the rain easing, pale light on the wet glass. |
+| `montage53/01.jpg` | The washbasin with diluted pink water, damp cloth, plaster packet, and Vera's phone face-down on the tiled ledge, lit by a weak bathroom bulb. |
+| `montage53/02.jpg` | Jack and Vera share a silent pause in the dark kitchen; rain and city lights beyond the window, one small warm practical. |
+| `montage53/03.jpg` | Vera's hand beside a faded family snapshot of her father and two girls outside a noodle counter, lit by a table lamp. |
+| `montage53/04.jpg` | Vera holds the old photograph at a rain-streaked window; the night city and her reflection overlap in the glass. |
+| `montage53/05.jpg` | **Exterior:** a wide, rain-wet view of the apartment block at night, one third-floor window glowing beneath the elevated rail. |
+| `montage53/06.jpg` | **Exterior:** an elevated train moves through the rain-dark residential district, seen from a wet side street after midnight. |
