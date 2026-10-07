@@ -444,10 +444,6 @@
     "bodyFont": "elegant",
     "headingFont": "elegant",
     "hudTheme": "midnight-teal",
-    "textScale": 1.1,
-    "bordered": true,
-    "backgroundOpacity": 0.85,
-    "backdropBlur": 2,
-    "reserveLines": 3
+    "textScale": 1.1
   }
 }
