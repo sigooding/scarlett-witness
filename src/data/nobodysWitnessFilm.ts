@@ -455,11 +455,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   "bodyFont": "elegant",
   "headingFont": "elegant",
   "hudTheme": "midnight-teal",
-  "textScale": 1.1,
-  "bordered": true,
-  "backgroundOpacity": 0.85,
-  "backdropBlur": 2,
-  "reserveLines": 3
+  "textScale": 1.1
  },
  "briefing": {
   "gameInfo": "The film, played as a graphic novel: the screenplay's scenes, the storyboard pictures and the recorded voices.",
