@@ -45,14 +45,22 @@ const studioPlayKey = (token: string) => `scarlet-studio-play-${token}`;
 // Content metadata is diagnostic only. App updates must never delete author work.
 const CONTENT_REVISION = "40";
 
+// The subheading under the title. A browser that still holds the previous default keeps up with it; a tagline the
+// author typed in the Studio is left alone.
+const NEW_TAGLINE = "An interactive visual novel";
+const OLD_TAGLINE = "A film in Tokyo rain";
+
 export function loadGlobalTitleTheme(): TitleTheme {
   try {
     const raw = localStorage.getItem(GLOBAL_TITLE_THEME_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const saved = JSON.parse(raw) as TitleTheme;
+      return saved.tagline === OLD_TAGLINE ? { ...saved, tagline: NEW_TAGLINE } : saved;
+    }
   } catch { /* ignore */ }
   return {
     titleText: "Nobody’s Witness",
-    tagline: "A film in Tokyo rain",
+    tagline: NEW_TAGLINE,
     bgImageUrl: "/img/bg-alley.jpg",
     neonColor: "#e8a24a",
     // The newest case gets the front page out of the box, so the featured
@@ -826,7 +834,7 @@ export default function App() {
                 Headphones recommended
               </div>
               <div className="font-type text-xs uppercase tracking-[0.5em] text-cyan-neon neon-cyan mt-1">
-                {resolvedTitleTheme.tagline || "A film in Tokyo rain"}
+                {resolvedTitleTheme.tagline || NEW_TAGLINE}
               </div>
               <h1 className="neon-flicker-custom font-pulp mt-2 text-6xl uppercase md:text-7xl">
                 {resolvedTitleTheme.titleText || "Nobody’s Witness"}

@@ -656,10 +656,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "Opening titles",
    "nodeType": "credits",
    "background": "/film/img/s1/377-the-hive-remembered.jpg",
-   "prose": "Nobody's Witness\nA film in Tokyo rain",
+   "prose": "Nobody's Witness\nAn interactive visual novel",
    "credits": {
     "title": "Nobody's Witness",
-    "subtitle": "A film in Tokyo rain",
+    "subtitle": "An interactive visual novel",
     "lines": [
      {
       "role": "A film of",

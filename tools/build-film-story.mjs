@@ -96,8 +96,8 @@ const PRO = [
 const keyStills = ["/img/s1/377-the-hive-remembered.jpg", "/img/s14a/337-engine-off.jpg", "/img/s1/10-the-shot.jpg", "/img/s2/21-mara-bursts-in.jpg"].filter(f => existsSync(resolve(root, "public/film", f.slice(1))));
 scenes.push({
   id: "nw_title", title: "Opening titles", nodeType: "credits", background: P(keyStills[0]),
-  prose: "Nobody's Witness\nA film in Tokyo rain",
-  credits: { title: "Nobody's Witness", subtitle: "A film in Tokyo rain", lines: [{ role: "A film of", name: "Tokyo in the rain" }, { role: "Starring", name: "Jack · Vera · Mara" }], font: "type", style: "cards", cardSeconds: 3.8, cardMotion: "letterspace", montage: keyStills.map(P), montageSeconds: 4.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#eceae4", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
+  prose: "Nobody's Witness\nAn interactive visual novel",
+  credits: { title: "Nobody's Witness", subtitle: "An interactive visual novel", lines: [{ role: "A film of", name: "Tokyo in the rain" }, { role: "Starring", name: "Jack · Vera · Mara" }], font: "type", style: "cards", cardSeconds: 3.8, cardMotion: "letterspace", montage: keyStills.map(P), montageSeconds: 4.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#eceae4", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
   musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 2, ambientAudio: "", transition: "fade-black", transitionSpeed: 1.5,
   dialogueBeats: [], hotspots: [], choices: [],
 });
