@@ -5167,19 +5167,29 @@ function CasePlayer({
     // left parked on the insert with a lone button — the button only ever
     // skips the wait, never gates the exit.
     const delay = beatRouteMode === "auto" ? Math.max(0, beatRouteDelay) : 6;
-    setBeatRouteRemaining(delay);
     const go = () => {
       setBeatRouteRemaining(0);
       audio.stopSpeech();
       leaveFor(target, scene?.partBreak);
     };
-    if (delay <= 0) {
-      const t = window.setTimeout(go, 0);
-      return () => window.clearTimeout(t);
-    }
-    const tick = window.setInterval(() => setBeatRouteRemaining((s) => Math.max(0, s - 1)), 1000);
-    const t = window.setTimeout(go, delay * 1000);
+    // The hold counts from the end of the recorded line, not from the end of the typing: the voice is usually
+    // longer than the subtitle's typed dwell, and cutting on a fixed timer chopped the last take (capped at 45 s).
+    let tick = 0, t = 0;
+    const arm = () => {
+      setBeatRouteRemaining(delay);
+      if (delay <= 0) { t = window.setTimeout(go, 0); return; }
+      tick = window.setInterval(() => setBeatRouteRemaining((s) => Math.max(0, s - 1)), 1000);
+      t = window.setTimeout(go, delay * 1000);
+    };
+    const waitStart = Date.now();
+    const wait = window.setInterval(() => {
+      if (!audio.speechActive() || Date.now() - waitStart > 45000) {
+        window.clearInterval(wait);
+        arm();
+      }
+    }, 250);
     return () => {
+      window.clearInterval(wait);
       window.clearInterval(tick);
       window.clearTimeout(t);
     };
