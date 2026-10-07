@@ -2041,7 +2041,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "5 — The front counter",
    "background": "/film/img/s5/43-the-front-counter.jpg",
    "prose": "INT. POLICE STATION, FRONT COUNTER - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -2278,7 +2278,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "6 — The interview room",
    "background": "/film/img/s6/51-the-interview-room.jpg",
    "prose": "INT. POLICE STATION, INTERVIEW ROOM - MOMENTS LATER",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -3009,7 +3009,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "7 — The detectives' room",
    "background": "/film/img/s7/63-the-detectives-room.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -5444,7 +5444,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "17 — You got old",
    "background": "/film/img/s17/187-you-got-old.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -5834,7 +5834,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "19 — Past midnight",
    "background": "/film/img/s19/190-she-stands-aside.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -6380,7 +6380,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "22 — Somewhere like this",
    "background": "/film/img/s22/195-somewhere-like-this.jpg",
    "prose": "INT. ALL-NIGHT NOODLE COUNTER, UNDER THE TRACKS - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -6681,7 +6681,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "23 — You never call",
    "background": "/film/img/s23/197-you-never-call.jpg",
    "prose": "EXT. YAKITORI STALL, UNDER THE TRACKS - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -7442,7 +7442,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "26 — The second hand",
    "background": "/film/img/s26/202-the-lighter.jpg",
    "prose": "INT. YAMANOTE LINE TRAIN - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-train-yamanote.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -7941,7 +7941,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "28 — The sea wall steps",
    "background": "/film/img/s28/203-the-sea-wall-steps.jpg",
    "prose": "EXT. FISHING TOWN, BOSO COAST - DAY",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-harbour.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8217,7 +8217,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "30 — A light ahead",
    "background": "/film/img/s30/205-a-light-ahead.jpg",
    "prose": "EXT. COUNTRY HIGHWAY - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8270,7 +8270,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "31 — The only car",
    "background": "/film/img/s31/169-the-only-car.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8856,7 +8856,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "38 — Four black sedans",
    "background": "/film/img/s38/173-four-black-sedans.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -9583,7 +9583,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "47 — Mud and impacts",
    "background": "/film/img/s47/222-mud-and-impacts.jpg",
    "prose": "EXT. ROADSIDE INN, BACK YARD - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -9721,7 +9721,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "49 — No need to chase",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
    "prose": "EXT. ROADSIDE INN, BACK YARD - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -10309,7 +10309,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "53 — There was no car",
    "background": "/film/img/s53a/297-the-glass-office.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
-   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -10660,7 +10660,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "56 — The third stool",
    "background": "/film/img/s56/223-the-third-stool.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -10866,7 +10866,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "58 — Bring her",
    "background": "/film/img/s58/225-bring-her.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -11219,7 +11219,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "61 — Nine o'clock",
    "background": "/film/img/s61/228-nine-oclock.jpg",
    "prose": "INT. ISHIDA'S CAR - NIGHT",
-   "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3",
+   "ambientAudio": "file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -12015,7 +12015,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "66 — Waiting for someone",
    "background": "/film/img/s66/233-waiting-for-someone.jpg",
    "prose": "INT. HOTEL LOUNGE - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -12792,7 +12792,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "72 — The call",
    "background": "/film/img/s72/69-the-wait.jpg",
    "prose": "INT. HOTEL LOUNGE - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -14326,7 +14326,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "80 — Where to find them",
    "background": "/film/img/s80/94-the-long-room.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -14674,7 +14674,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "82 — Start with my part",
    "background": "/film/img/s82/104-the-newsroom.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
-   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -14909,7 +14909,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "82 — The notebook photocopied",
    "background": "/film/img/s82a/300-at-the-edge-of-the-newsroom.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM, CORRIDOR - LATER",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -15772,7 +15772,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "86 — Fifty years",
    "background": "/film/img/s86/121-the-shutter.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -16674,7 +16674,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "94 — The lit window",
    "background": "/film/img/s94/139-only-tea.jpg",
    "prose": "EXT. POLICE STATION / INT. BLACK SEDAN - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -16854,7 +16854,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "96 — A minute fast",
    "background": "/film/img/s96/143-the-box.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - MORNING",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -16979,7 +16979,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "98 — The rain has stopped",
    "background": "/film/img/s98/153-the-rain-has-stopped.jpg",
    "prose": "EXT. ROOFTOP OF JACK'S BUILDING - DAY",
-   "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-rooftop-wind.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.9,
@@ -17517,7 +17517,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "100 — The city goes on",
    "background": "/film/img/s100/320-the-news-nobody-watches.jpg",
    "prose": "INT. KANEKO'S NEW COUNTER - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
