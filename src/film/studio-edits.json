@@ -196,10 +196,12 @@
       "tv-murmur"
     ],
     "nw_s53a": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-newsroom"
     ],
     "nw_s82": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-newsroom"
     ],
     "nw_s90": [
       "tv-murmur"
@@ -214,13 +216,88 @@
       "rain-tin-roof"
     ],
     "nw_s61": [
-      "rain-tin-roof"
+      "loop-car-idle-rain"
     ],
     "nw_s12": [
       "vending-hum"
     ],
     "nw_s74": [
       "vending-hum"
+    ],
+    "nw_s26": [
+      "loop-train-yamanote"
+    ],
+    "nw_s5": [
+      "loop-police-station"
+    ],
+    "nw_s6": [
+      "loop-police-station"
+    ],
+    "nw_s7": [
+      "loop-police-station"
+    ],
+    "nw_s80": [
+      "loop-police-station"
+    ],
+    "nw_s96": [
+      "loop-police-station"
+    ],
+    "nw_s82a": [
+      "loop-newsroom"
+    ],
+    "nw_s17": [
+      "loop-noodle-counter"
+    ],
+    "nw_s19": [
+      "loop-noodle-counter"
+    ],
+    "nw_s22": [
+      "loop-noodle-counter"
+    ],
+    "nw_s56": [
+      "loop-noodle-counter"
+    ],
+    "nw_s58": [
+      "loop-noodle-counter"
+    ],
+    "nw_s86": [
+      "loop-noodle-counter"
+    ],
+    "nw_s100": [
+      "loop-noodle-counter"
+    ],
+    "nw_s66": [
+      "loop-hotel-lounge"
+    ],
+    "nw_s72": [
+      "loop-hotel-lounge"
+    ],
+    "nw_s30": [
+      "loop-roadside-night"
+    ],
+    "nw_s31": [
+      "loop-roadside-night"
+    ],
+    "nw_s38": [
+      "loop-roadside-night"
+    ],
+    "nw_s47": [
+      "loop-roadside-night"
+    ],
+    "nw_s49": [
+      "loop-roadside-night"
+    ],
+    "nw_s28": [
+      "loop-harbour"
+    ],
+    "nw_s98": [
+      "loop-rooftop-wind"
+    ],
+    "nw_s23": [
+      "loop-yakitori-grill"
+    ],
+    "nw_s94": [
+      "loop-car-idle-rain"
     ]
   },
   "sfx": [
