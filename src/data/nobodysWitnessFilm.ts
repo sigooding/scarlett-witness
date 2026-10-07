@@ -8,7 +8,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
  "tagline": "Tokyo as a memory that is still happening.",
  "gameKind": "vn",
  "coverImage": "/film/img/s14a/337-engine-off.jpg",
- "startSceneId": "nw_title",
+ "startSceneId": "nw_s1",
  "layout": {
   "nw_title": {
    "x": 40,
@@ -761,14 +761,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b5",
      "characterId": "nw_kaneko",
      "text": "Now the land is worth more than we are. Everything is going. We are just slower.",
-     "audioUrl": "/film/voice/prologue/hive5.mp3"
+     "audioUrl": "/film/voice/prologue/hive5.mp3",
+     "afterBeatTargetSceneId": "nw_s3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1,
+     "backgroundRevert": true
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s1",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s1",
@@ -1342,14 +1343,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s2",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
    "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s2",
-   "autoAdvanceDelaySeconds": 1,
-   "autoAdvanceHideTimer": true,
    "musicMode": "track",
    "musicUrl": "/film/audio/midnight-in-the-rain-v6.mp3",
    "musicLevel": 0.35
@@ -1618,7 +1619,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    ],
    "hotspots": [],
    "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s3",
+   "autoAdvanceTargetSceneId": "nw_title",
    "autoAdvanceDelaySeconds": 1.5,
    "autoAdvanceHideTimer": true
   },

@@ -192,22 +192,31 @@ scenes.forEach((s, i) => {
   }
 });
 
-// Edits made in the Studio and kept in src/film/studio-edits.json (the title design and song, the music for scenes 1 and 3):
+let startSceneId = scenes[0].id;
+// Edits made in the Studio and kept in src/film/studio-edits.json (the title design and song, the music for scenes 1 and 3, the running order):
 // applied over the generated scenes so a rebuild does not lose them. A null value removes the field.
 const editsFile = resolve(root, "src/film/studio-edits.json");
 if (existsSync(editsFile)) {
-  const edits = JSON.parse(readFileSync(editsFile, "utf8")).scenes ?? {};
-  for (const [id, fields] of Object.entries(edits)) {
+  const file = JSON.parse(readFileSync(editsFile, "utf8"));
+  const set = (o, fields) => { for (const [k, v] of Object.entries(fields)) { if (v === null) delete o[k]; else o[k] = v; } };
+  for (const [id, fields] of Object.entries(file.scenes ?? {})) {
     const sc = scenes.find(x => x.id === id);
     if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
-    for (const [k, v] of Object.entries(fields)) { if (v === null) delete sc[k]; else sc[k] = v; }
+    set(sc, fields);
   }
+  // beats: { sceneId: { last: {...fields} } } — the scene's last beat ("After this beat — cut to scene")
+  for (const [id, byBeat] of Object.entries(file.beats ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (!sc?.dialogueBeats?.length) { console.warn(`studio-edits: no beats in ${id}`); continue; }
+    if (byBeat.last) set(sc.dialogueBeats[sc.dialogueBeats.length - 1], byBeat.last);
+  }
+  if (file.startSceneId) startSceneId = file.startSceneId;
 }
 
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));
 const story = {
   id: "nobodys-witness-film", pulpPaper: false, title: "Nobody's Witness", tagline: "Tokyo as a memory that is still happening.", gameKind: "vn",
-  coverImage: P("/img/s14a/337-engine-off.jpg"), startSceneId: scenes[0].id, layout,
+  coverImage: P("/img/s14a/337-engine-off.jpg"), startSceneId, layout,
   briefing: { gameInfo: "The film, played as a graphic novel: the screenplay's scenes, the storyboard pictures and the recorded voices.", objective: "Watch it through.", winConditions: ["Reach the credits."], loseConditions: [] },
   characters: [...characters.values()].map(c => ({ ...c, avatarUrl: "", trustMeter: 0 })), items: [], scenes,
 };
