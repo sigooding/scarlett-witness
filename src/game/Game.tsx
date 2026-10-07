@@ -2938,6 +2938,16 @@ function CasePlayer({
    * itself, whether or not this is on. */
   const prefersReducedMotion = usePrefersReducedMotion();
   const [autoAdvance, setAutoAdvance] = useState(false);
+  /* Auto-continue — scenes that carry an authored route (the film) used to play
+   * themselves with no way to stop them. The same ⏩ button now switches that
+   * authored reading on and off; the choice is remembered. Off, each line waits
+   * for a click and the scene ends on a "▸ Next scene" button. */
+  const [autoContinue, setAutoContinue] = useState(() => {
+    try { return localStorage.getItem("scarlet-reel-auto-continue") !== "off"; } catch { return true; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem("scarlet-reel-auto-continue", autoContinue ? "on" : "off"); } catch { /* storage unavailable */ }
+  }, [autoContinue]);
 
   /* "Reveal hotspots" — a momentary shimmer over every interactable zone so a
    * stuck player can see what's clickable without spoilers. Auto-clears after
@@ -4403,7 +4413,12 @@ function CasePlayer({
   // its memory recall / recorded cue) unreadable. Prose-only endings retain
   // their original immediate-summary behavior.
   const endingReady = proseDone && (visibleBeats.length === 0 || (proseAcknowledged && !inBeats));
-  const hasValidAutoAdvance = !!scene?.autoAdvanceTargetSceneId && story.scenes.some((candidate) => candidate.id === scene.autoAdvanceTargetSceneId);
+  const hasAuthoredRoute = !!scene?.autoAdvanceTargetSceneId && story.scenes.some((candidate) => candidate.id === scene.autoAdvanceTargetSceneId);
+  // The authored route only plays itself while auto-continue is on; credits keep their own roll.
+  const hasValidAutoAdvance = hasAuthoredRoute && (autoContinue || scene?.nodeType === "credits");
+  // What the ⏩ button shows and switches: the authored reading where a scene has one, else the player's own auto-forward.
+  const autoOn = hasAuthoredRoute ? autoContinue : autoAdvance;
+  const toggleAuto = () => (hasAuthoredRoute ? setAutoContinue((v) => !v) : setAutoAdvance((v) => !v));
   const currentBeat = inBeats ? visibleBeats[beatIdx] : null;
   /* The insert shot to actually display on the current beat. A beat's own
    * replacement image PERSISTS by default: it stays up through later beats
@@ -4722,6 +4737,7 @@ function CasePlayer({
     // Runs when the player has ⏩ auto-forward on, or when the scene has an
     // authored auto-route and so has to play itself.
     if (!autoAdvance && !hasValidAutoAdvance) return;
+    if (hasAuthoredRoute && !autoContinue && !autoAdvance) return;
     if (!scene || scene.isEnding) return;
     // A credits node paces itself — the roll owns the whole scene, and this
     // reader used to acknowledge its prose 0.9s after the roll ended, tearing
@@ -4768,6 +4784,8 @@ function CasePlayer({
   }, [
     autoAdvance,
     hasValidAutoAdvance,
+    hasAuthoredRoute,
+    autoContinue,
     scene,
     isCredits,
     overlay,
@@ -6868,9 +6886,9 @@ function CasePlayer({
       )}
       {!hudHidden && (
         <div className="pointer-events-none absolute left-3 top-3 z-40 flex flex-col items-start gap-1">
-          {(autoAdvance || hintActive) && (
+          {(autoOn || hintActive) && (
             <div className="hud-chrome hud-frame flex items-center gap-1.5 px-2 py-1">
-              {autoAdvance && (
+              {autoOn && (
                 <span className="hud-chip" data-kind="good">⏩ Auto</span>
               )}
               {hintActive && (
@@ -7585,10 +7603,10 @@ function CasePlayer({
                       </button>
                     )}
                     <button
-                      onClick={() => setAutoAdvance((v) => !v)}
-                      className={`beat-ctl text-[10px] ${autoAdvance ? "border-neon text-neon bg-neon/10" : ""}`}
-                      aria-pressed={autoAdvance}
-                      title="Auto-forward: advance each line once it finishes typing"
+                      onClick={toggleAuto}
+                      className={`beat-ctl text-[10px] ${autoOn ? "border-neon text-neon bg-neon/10" : ""}`}
+                      aria-pressed={autoOn}
+                      title="Auto-continue: advance each line and scene on its own (click to turn off)"
                     >
                       ⏩ auto
                     </button>
@@ -7756,12 +7774,12 @@ function CasePlayer({
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        setAutoAdvance((v) => !v);
+                        toggleAuto();
                       }}
-                      className={`beat-ctl ${autoAdvance ? "border-neon text-neon bg-neon/10" : ""}`}
-                      data-active={autoAdvance || undefined}
-                      title="Auto-forward: advances after typing completes"
-                      aria-pressed={autoAdvance}
+                      className={`beat-ctl ${autoOn ? "border-neon text-neon bg-neon/10" : ""}`}
+                      data-active={autoOn || undefined}
+                      title="Auto-continue: advances after typing completes (click to turn off)"
+                      aria-pressed={autoOn}
                     >
                       ⏩ auto
                     </button>
@@ -7919,7 +7937,22 @@ function CasePlayer({
           {/* cinematic nodes (credits/cutscene) with no reachable choices get a
               visible escape hatch — otherwise they'd silently strand the player
               with no HUD and no way forward. */}
-          {interactive && !scene.isEnding && !hasValidAutoAdvance && (scene.nodeType === "credits" || scene.nodeType === "cutscene") && availableChoices.length === 0 && (
+          {interactive && !scene.isEnding && hasAuthoredRoute && !autoContinue && scene.nodeType !== "credits" && !hasUsableChoice && proseAcknowledged && (!inBeats || beatDone) && (
+            <div className="mt-2 text-center">
+              <button
+                onClick={() => {
+                  audio.click();
+                  audio.stopSpeech();
+                  leaveFor(scene.autoAdvanceTargetSceneId as string, scene.partBreak);
+                }}
+                className="border border-paper/40 px-4 py-1.5 font-pulp text-[10px] uppercase tracking-widest text-paper/80 hover:border-neon hover:text-neon"
+              >
+                ▸ Next scene
+              </button>
+            </div>
+          )}
+
+          {interactive && !scene.isEnding && !hasValidAutoAdvance && !hasAuthoredRoute && (scene.nodeType === "credits" || scene.nodeType === "cutscene") && availableChoices.length === 0 && (
             <div className="mt-2 border border-crimson/50 bg-crimson/10 p-3 text-center">
               <p className="font-type text-[11px] text-crimson">
                 This {scene.nodeType} node has no choices wired — there's nowhere to go.
