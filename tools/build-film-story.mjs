@@ -209,6 +209,7 @@ for (const m of edits.montages ?? []) {
 }
 scenes.forEach((s, i) => {
   s.hotspots ??= [];
+  s.autoNarrate = false;   // no text-to-speech reading of the scene prose (Studio → Audio → Narration); the recorded voices are the beats
   if (!s.isEnding) {
     s.choices = [];
     if (s.dialogueBeats.length) {
