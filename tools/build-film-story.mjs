@@ -195,7 +195,7 @@ for (const m of edits.montages ?? []) {
   const montage = {
     id: m.id, title: m.title, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
     credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: m.images.map(P), montageSeconds: m.seconds ?? 5, montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
-    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: 2, transition: "fade-black", transitionSpeed: 1.2,
+    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: m.musicFadeSeconds ?? 2, transition: "fade-black", transitionSpeed: 1.2,
     dialogueBeats: [], hotspots: [], choices: [],
   };
   const fresh = [montage];
@@ -209,6 +209,7 @@ for (const m of edits.montages ?? []) {
 }
 scenes.forEach((s, i) => {
   s.hotspots ??= [];
+  s.autoNarrate = false;   // no text-to-speech reading of the scene prose (Studio → Audio → Narration); the recorded voices are the beats
   if (!s.isEnding) {
     s.choices = [];
     if (s.dialogueBeats.length) {

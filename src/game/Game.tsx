@@ -3709,6 +3709,11 @@ function CasePlayer({
       // switches to it; a scene re-using the SAME track keeps it running
       // without restarting.
       if (musicSrcRef.current !== musicUrl) startTrack(musicUrl);
+      else if (scene.musicLevel !== undefined && scene.musicLevel >= 0 && scene.musicLevel !== musicLevelRef.current && sceneAudioRef.current) {
+        // Same track, new level: swell or ease to it over the scene's fade, so a cue can build across scenes.
+        musicLevelRef.current = scene.musicLevel;
+        fadeAudio(sceneAudioRef.current, audio.volumes.master * audio.volumes.music * scene.musicLevel * audio.duckFactor, fadeMs);
+      }
     } else {
       // Inherit: leave whatever is playing untouched (sync mute state only).
       const a = sceneAudioRef.current;
