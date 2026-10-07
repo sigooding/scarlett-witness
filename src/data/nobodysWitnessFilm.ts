@@ -1596,32 +1596,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b53",
-     "characterId": "nw_narrator",
-     "text": "Over black: RAIN.",
-     "silent": true,
-     "background": "gradient:linear-gradient(#000,#000)",
-     "backgroundTransition": "fade-black",
-     "backgroundTransitionSpeed": 0.8
-    },
-    {
-     "id": "nw_b54",
-     "characterId": "nw_narrator",
-     "text": "NOBODY'S WITNESS",
-     "silent": true
-    },
-    {
      "id": "nw_b55",
      "characterId": "nw_narrator",
      "text": "MAIN TITLES",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_title",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_title",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s3",
@@ -1687,14 +1672,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s4",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
    "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s4",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true,
    "musicMode": "none"
   },
   {
@@ -2010,14 +1995,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b78",
      "characterId": "nw_narrator",
      "text": "The door closes behind her. Through the wall, the song on the neighbour's radio ends. A DJ murmurs something. Rain.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s5",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s5",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s5",
@@ -2245,14 +2230,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s6",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s6",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s6",
@@ -2974,14 +2959,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s7",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s7",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s7",
@@ -3107,14 +3092,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s8",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s8",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s8",
@@ -3268,14 +3253,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b179",
      "characterId": "nw_narrator",
      "text": "Okada looks at the umbrella for a long moment.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s9",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s9",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s9",
@@ -3436,14 +3421,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s10",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s10",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s10",
@@ -3818,14 +3803,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b244",
      "characterId": "nw_narrator",
      "text": "Jack sits very still.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s11",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s11",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s11",
@@ -4058,14 +4043,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b266",
      "characterId": "nw_narrator",
      "text": "A train passes. The photograph of the two laughing men trembles on the desk.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s12",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s12",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s12",
@@ -4287,14 +4272,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/clank.mp3"
+     "sfxUrl": "/film/sfx/clank.mp3",
+     "afterBeatTargetSceneId": "nw_s14",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s14",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s14",
@@ -4592,14 +4577,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b323",
      "characterId": "nw_narrator",
      "text": "She hesitates, then nods. He closes the sketchbook and puts it under his arm, and says nothing else about it.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s14a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s14a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s14a",
@@ -5172,14 +5157,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s15",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s15",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s15",
@@ -5263,14 +5248,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s16",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s16",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s16",
@@ -5377,14 +5362,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s17",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s17",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s17",
@@ -5600,14 +5585,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s18",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s18",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s18",
@@ -5717,14 +5702,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b432",
      "characterId": "nw_narrator",
      "text": "The line clicks dead.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s19",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s19",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s19",
@@ -5768,14 +5753,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s20",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s20",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s20",
@@ -6098,14 +6083,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b469",
      "characterId": "nw_jack",
      "text": "I promise.",
-     "audioUrl": "/film/voice/s20/284-jack-i-promise.mp3"
+     "audioUrl": "/film/voice/s20/284-jack-i-promise.mp3",
+     "afterBeatTargetSceneId": "nw_s21",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s21",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s21",
@@ -6253,14 +6238,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s22",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s22",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s22",
@@ -6546,14 +6531,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b512",
      "characterId": "nw_narrator",
      "text": "He doesn't wake her. He sits there until the counterman begins stacking chairs.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s23",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s23",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s23",
@@ -6797,14 +6782,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b534",
      "characterId": "nw_narrator",
      "text": "It is exactly what he needed to hear. That is what makes it dangerous.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s25",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s25",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s25",
@@ -7084,14 +7069,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b570",
      "characterId": "nw_mara",
      "text": "Good. Make her eat breakfast. She never eats breakfast.",
-     "audioUrl": "/film/voice/s25/258-mara-good-pause-make-her-eat-breakfast.mp3"
+     "audioUrl": "/film/voice/s25/258-mara-good-pause-make-her-eat-breakfast.mp3",
+     "afterBeatTargetSceneId": "nw_s25a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s25a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s25a",
@@ -7299,14 +7284,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b594",
      "characterId": "nw_narrator",
      "text": "She reaches for her purse. He is already at the till, paying. Too much. The woman behind the counter doesn't mention it.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s26",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s26",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s26",
@@ -7470,14 +7455,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b616",
      "characterId": "nw_narrator",
      "text": "Out of the window, Tokyo circles past. Rooftops. Laundry. Rain.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s27",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s27",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s27",
@@ -7539,14 +7524,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b621",
      "characterId": "nw_narrator",
      "text": "WIDE: two small figures crossing an empty road while the city's old song plays for them.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s27a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s27a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s27a",
@@ -7792,14 +7777,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b646",
      "characterId": "nw_narrator",
      "text": "Vera takes the card.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s28",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s28",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s28",
@@ -7843,14 +7828,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s29",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s29",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s29",
@@ -8064,14 +8049,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s30",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s30",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s30",
@@ -8115,14 +8100,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s31",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s31",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s31",
@@ -8172,14 +8157,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s32",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s32",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s32",
@@ -8263,14 +8248,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s33",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s33",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s33",
@@ -8344,14 +8329,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b683",
      "characterId": "nw_narrator",
      "text": "Jack notices the window. He notices everything. That is the point of the scene, and nobody in it knows it.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s34",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s34",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s34",
@@ -8401,14 +8386,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b686",
      "characterId": "nw_narrator",
      "text": "He takes out his phone. No signal.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s35",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s35",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s35",
@@ -8446,14 +8431,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s36",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s36",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s36",
@@ -8598,14 +8583,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b703",
      "characterId": "nw_narrator",
      "text": "Vera looks at the phone. Jack looks at the payphone. Both of them hold on a moment longer than they need to.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s37",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s37",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s37",
@@ -8685,14 +8670,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b711",
      "characterId": "nw_narrator",
      "text": "Jack looks at the truck. He says nothing.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s38",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s38",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s38",
@@ -8742,14 +8727,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s39",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s39",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s39",
@@ -8839,14 +8824,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b721",
      "characterId": "nw_narrator",
      "text": "Downstairs, the baseball crowd CHEERS on the TV.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s40",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s40",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s40",
@@ -8930,14 +8915,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b727",
      "characterId": "nw_narrator",
      "text": "The souvenir case shatters. The CRT keeps playing baseball.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s41",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s41",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s41",
@@ -9003,14 +8988,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b730",
      "characterId": "nw_narrator",
      "text": "Jack is already through the bathroom door.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s42",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s42",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s42",
@@ -9066,14 +9051,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b734",
      "characterId": "nw_narrator",
      "text": "He hauls himself through.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s43",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s43",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s43",
@@ -9111,14 +9096,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s44",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s44",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s44",
@@ -9192,14 +9177,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b742",
      "characterId": "nw_narrator",
      "text": "He moves up the corridor toward the lobby, keeping low along the wall.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s45",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s45",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s45",
@@ -9331,14 +9316,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b753",
      "characterId": "nw_narrator",
      "text": "No one answers it. It rings and rings.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s46",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s46",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s46",
@@ -9394,14 +9379,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b757",
      "characterId": "nw_narrator",
      "text": "He shuts the door. He goes out the back.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s47",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s47",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s47",
@@ -9457,14 +9442,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s48",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s48",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s48",
@@ -9526,14 +9511,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b766",
      "characterId": "nw_narrator",
      "text": "He turns the key again. The engine catches. Roars.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s49",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s49",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s49",
@@ -9602,14 +9587,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Behind them, inside the lobby, the pink payphone is still ringing.",
      "silent": true,
-     "sfxUrl": "/film/sfx/phone.mp3"
+     "sfxUrl": "/film/sfx/phone.mp3",
+     "afterBeatTargetSceneId": "nw_s50",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s50",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s50",
@@ -9701,14 +9686,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b782",
      "characterId": "nw_narrator",
      "text": "He drives on. The wipers beat. He doesn't want to think it. He thinks it anyway.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s51",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s51",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s51",
@@ -9780,14 +9765,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s52",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s52",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s52",
@@ -9843,14 +9828,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s53",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s53",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s53",
@@ -10054,14 +10039,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b816",
      "characterId": "nw_narrator",
      "text": "It is another promise. He is collecting them.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s53a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s53a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s53a",
@@ -10227,14 +10212,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s54",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s54",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s54",
@@ -10314,14 +10299,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b841",
      "characterId": "nw_old_tobacconist",
      "text": "Everything is still there. Until it isn't.",
-     "audioUrl": "/film/voice/s54/222-oldtobacconist-everything-is-still-there-until-it.mp3"
+     "audioUrl": "/film/voice/s54/222-oldtobacconist-everything-is-still-there-until-it.mp3",
+     "afterBeatTargetSceneId": "nw_s55",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s55",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s55",
@@ -10395,14 +10380,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s56",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s56",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s56",
@@ -10516,14 +10501,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s57",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s57",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s57",
@@ -10597,14 +10582,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b866",
      "characterId": "nw_narrator",
      "text": "Her hand drops.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s58",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s58",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s58",
@@ -10694,14 +10679,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s59",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s59",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s59",
@@ -10821,14 +10806,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b885",
      "characterId": "nw_jack",
      "text": "Yes.",
-     "audioUrl": "/film/voice/s59/228-jack-yes.mp3"
+     "audioUrl": "/film/voice/s59/228-jack-yes.mp3",
+     "afterBeatTargetSceneId": "nw_s60",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s60",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s60",
@@ -10944,14 +10929,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b899",
      "characterId": "nw_narrator",
      "text": "Mara looks at him. She believes him.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s61",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s61",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s61",
@@ -11091,14 +11076,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b917",
      "characterId": "nw_narrator",
      "text": "Jack looks out at the rain. For the first time in twenty years, he lets himself believe it.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s62",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s62",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s62",
@@ -11214,14 +11199,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b931",
      "characterId": "nw_narrator",
      "text": "They cross. She takes his arm.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s63",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s63",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s63",
@@ -11345,14 +11330,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b941",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The lockers rattle in their rows, all of them at once, like a room full of doors being tried.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s63a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s63a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s63a",
@@ -11492,14 +11477,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s64",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s64",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s64",
@@ -11585,14 +11570,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b960",
      "characterId": "nw_okada",
      "text": "You said that about my daughter.",
-     "audioUrl": "/film/voice/s64/233-okada-that-s-what-people-say-the.mp3"
+     "audioUrl": "/film/voice/s64/233-okada-that-s-what-people-say-the.mp3",
+     "afterBeatTargetSceneId": "nw_s65",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s65",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s65",
@@ -11724,14 +11709,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b974",
      "characterId": "nw_narrator",
      "text": "She goes. Through the wall, the song plays on.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s66",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s66",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s66",
@@ -11833,14 +11818,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s67",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s67",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s67",
@@ -11890,14 +11875,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s68",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s68",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s68",
@@ -11978,14 +11963,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_jack",
      "text": "It's time.",
      "audioUrl": "/film/voice/s68/237-jack-it-s-time.mp3",
-     "expression": "o.s."
+     "expression": "o.s.",
+     "afterBeatTargetSceneId": "nw_s69",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s69",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s69",
@@ -12123,14 +12108,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1009",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The building trembles. They walk on.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s70",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s70",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s70",
@@ -12290,14 +12275,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1030",
      "characterId": "nw_narrator",
      "text": "Jack goes after her, low, as bullets chew the doorframe above his head.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s71",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s71",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s71",
@@ -12483,14 +12468,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1053",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The bulbs swing. The whole building trembles, the way it always does.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s72",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s72",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s72",
@@ -12630,14 +12615,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_ishida",
      "text": "Your sister was found tonight. I'm very sorry. She died a short time ago.",
      "audioUrl": "/film/voice/s72/86-ishida-your-sister-was-found-tonight-i.mp3",
-     "expression": "v.o."
+     "expression": "v.o.",
+     "afterBeatTargetSceneId": "nw_s72_b",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s72_b",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s72_b",
@@ -12693,14 +12678,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1074",
      "characterId": "nw_narrator",
      "text": "The blue umbrella stays where she left it, leaning against the empty stool.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s73",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s73",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s73",
@@ -12845,14 +12830,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s74",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s74",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s74",
@@ -13208,14 +13193,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1128",
      "characterId": "nw_narrator",
      "text": "The shot holds. Long enough that it becomes hard to watch. There is nothing Jack can say. Nothing that fixes it.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s75",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s75",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s75",
@@ -13378,14 +13363,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "gradient:linear-gradient(#000,#000)",
      "backgroundTransition": "fade-black",
-     "backgroundTransitionSpeed": 0.8
+     "backgroundTransitionSpeed": 0.8,
+     "afterBeatTargetSceneId": "nw_s76",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s76",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s76",
@@ -13517,14 +13502,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1147",
      "characterId": "nw_narrator",
      "text": "She still loves him. She hates herself for it.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s77",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s77",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s77",
@@ -13631,14 +13616,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1154",
      "characterId": "nw_narrator",
      "text": "He writes nothing.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s78",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s78",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s78",
@@ -13763,14 +13748,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1161",
      "characterId": "nw_narrator",
      "text": "DANIEL VOSS.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s79",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s79",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s79",
@@ -14000,14 +13985,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1185",
      "characterId": "nw_narrator",
      "text": "She has been given back her father and taken Jack away in the same hour. She doesn't know which to feel first.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s80",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s80",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s80",
@@ -14221,14 +14206,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s81",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s81",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s81",
@@ -14344,14 +14329,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s82",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s82",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s82",
@@ -14577,14 +14562,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s82a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s82a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s82a",
@@ -14738,14 +14723,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s83",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s83",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s83",
@@ -15035,14 +15020,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s84",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s84",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s84",
@@ -15357,14 +15342,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1310",
      "characterId": "nw_narrator",
      "text": "The bulb goes on swinging.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s85",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s85",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s85",
@@ -15430,14 +15415,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s86",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s86",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s86",
@@ -15555,14 +15540,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1322",
      "characterId": "nw_narrator",
      "text": "She pushes them toward the back.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s87",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s87",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s87",
@@ -15622,14 +15607,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s88",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s88",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s88",
@@ -15707,14 +15692,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s89",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s89",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s89",
@@ -15792,14 +15777,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1334",
      "characterId": "nw_narrator",
      "text": "She puts the lighter back unlit, and climbs.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s90",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s90",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s90",
@@ -16021,14 +16006,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1347",
      "characterId": "nw_narrator",
      "text": "The last room is in the rear wing, and it is empty: a window over the foot of the viaduct, its shutter open. An iron fire ladder bolted to the wall outside, going down into the dark.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s91",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s91",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s91",
@@ -16128,14 +16113,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s92",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s92",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s92",
@@ -16237,14 +16222,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1362",
      "characterId": "nw_narrator",
      "text": "He has no answer to that. She doesn't need one.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s93",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s93",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s93",
@@ -16316,14 +16301,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s94",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s94",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s94",
@@ -16439,14 +16424,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s95",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s95",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s95",
@@ -16490,14 +16475,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1374",
      "characterId": "nw_narrator",
      "text": "It turns a corner. Gone.",
-     "silent": true
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s96",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s96",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s96",
@@ -16613,14 +16598,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s98",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s98",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s98",
@@ -16994,14 +16979,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s99a",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s99a",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s99a",
@@ -17147,14 +17132,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s100",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s100",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_s100",
@@ -17322,14 +17307,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_credits",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_credits",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "choices": []
   },
   {
    "id": "nw_credits",

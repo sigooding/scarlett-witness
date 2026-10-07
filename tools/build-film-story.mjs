@@ -188,7 +188,12 @@ scenes.forEach((s, i) => {
   s.hotspots ??= [];
   if (!s.isEnding) {
     s.choices = [];
-    Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : 1.5, autoAdvanceHideTimer: true });
+    if (s.dialogueBeats.length) {
+      // "After this beat — cut to scene": the last beat hands over to the next scene, so the scene's own background never shows between them
+      Object.assign(s.dialogueBeats[s.dialogueBeats.length - 1], { afterBeatTargetSceneId: scenes[i + 1].id, afterBeatMode: "auto", afterBeatDelaySeconds: 1 });
+    } else {
+      Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : 1.5, autoAdvanceHideTimer: true });
+    }
   }
 });
 
@@ -203,6 +208,11 @@ if (existsSync(editsFile)) {
     const sc = scenes.find(x => x.id === id);
     if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
     set(sc, fields);
+  }
+  // dropBeats: { sceneId: [1-based beat numbers] } — beats taken out in the Studio (unwanted title cards)
+  for (const [id, nums] of Object.entries(file.dropBeats ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (sc) sc.dialogueBeats = sc.dialogueBeats.filter((_, k) => !nums.includes(k + 1));
   }
   // beats: { sceneId: { last: {...fields} } } — the scene's last beat ("After this beat — cut to scene")
   for (const [id, byBeat] of Object.entries(file.beats ?? {})) {

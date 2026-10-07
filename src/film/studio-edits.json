@@ -1,87 +1,100 @@
 {
- "note": "Edits made in the Studio (exported 7 Oct 2026, nobodys-witness-film.reel.nodata.json) that build-film-story.mjs applies on top of the generated film: the opening-titles design and song, the music for scenes 1 and 3, and the running order: scene 1, scene 2, the opening titles, the prologue, then scene 3 (each hand-off is 'After this beat — cut to scene' on the last beat). A null value removes the field.",
- "scenes": {
-  "nw_title": {
-   "background": "/film/img/montage/m4-railway-rain.jpg",
-   "credits": {
-    "title": "Nobody's Witness",
-    "subtitle": "An interactive visual novel",
-    "lines": [
-     {
-      "role": "A film of",
-      "name": "Tokyo in the rain"
-     },
-     {
-      "role": "Starring",
-      "name": "Jack · Vera · Mara"
-     }
-    ],
-    "font": "elegant",
-    "style": "cards",
-    "cardSeconds": 4.6,
-    "cardMotion": "fade",
-    "montage": [
-     "/film/img/s1/377-the-hive-remembered.jpg",
-     "/film/img/montage/m4-railway-rain.jpg",
-     "/film/img/s75/80-the-machine-waits.jpg",
-     "/film/img/s75/314-the-empty-crossing.jpg",
-     "/film/img/s31/169-the-only-car.jpg",
-     "/film/img/s14a/334-the-mirror.jpg"
-    ],
-    "montageSeconds": 6.5,
-    "montageTransition": "dissolve",
-    "montageLoop": true,
-    "titleColor": "#e7dfd1",
-    "accentColor": "#8aa03b",
-    "titleEntrance": "fade-up",
-    "gateWeave": "subtle",
-    "stagger": 0.2,
-    "duration": 1.2,
-    "scrollDuration": 24
-   },
-   "musicUrl": "/film/audio/title-song.mp3",
-   "musicFadeSeconds": 0.1,
-   "musicLevel": 1.05,
-   "letterbox": true,
-   "autoAdvanceDelaySeconds": 300,
-   "autoAdvanceHideTimer": null
+  "note": "Edits made in the Studio (exported 7 Oct 2026, nobodys-witness-film.reel.nodata.json) that build-film-story.mjs applies on top of the generated film: the opening-titles design and song, the music for scenes 1 and 3, and the running order: scene 1, scene 2, the opening titles, the prologue, then scene 3 (each hand-off is 'After this beat — cut to scene' on the last beat). A null value removes the field.",
+  "scenes": {
+    "nw_title": {
+      "background": "/film/img/montage/m4-railway-rain.jpg",
+      "credits": {
+        "title": "Nobody's Witness",
+        "subtitle": "An interactive visual novel",
+        "lines": [
+          {
+            "role": "A film of",
+            "name": "Tokyo in the rain"
+          },
+          {
+            "role": "Starring",
+            "name": "Jack · Vera · Mara"
+          }
+        ],
+        "font": "elegant",
+        "style": "cards",
+        "cardSeconds": 4.6,
+        "cardMotion": "fade",
+        "montage": [
+          "/film/img/s1/377-the-hive-remembered.jpg",
+          "/film/img/montage/m4-railway-rain.jpg",
+          "/film/img/s75/80-the-machine-waits.jpg",
+          "/film/img/s75/314-the-empty-crossing.jpg",
+          "/film/img/s31/169-the-only-car.jpg",
+          "/film/img/s14a/334-the-mirror.jpg"
+        ],
+        "montageSeconds": 6.5,
+        "montageTransition": "dissolve",
+        "montageLoop": true,
+        "titleColor": "#e7dfd1",
+        "accentColor": "#8aa03b",
+        "titleEntrance": "fade-up",
+        "gateWeave": "subtle",
+        "stagger": 0.2,
+        "duration": 1.2,
+        "scrollDuration": 24
+      },
+      "musicUrl": "/film/audio/title-song.mp3",
+      "musicFadeSeconds": 0.1,
+      "musicLevel": 1.05,
+      "letterbox": true,
+      "autoAdvanceDelaySeconds": 300,
+      "autoAdvanceHideTimer": null
+    },
+    "nw_s1": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/midnight-in-the-rain-v6.mp3",
+      "musicLevel": 0.35,
+      "autoAdvanceTargetSceneId": null,
+      "autoAdvanceDelaySeconds": null,
+      "autoAdvanceHideTimer": null
+    },
+    "nw_s3": {
+      "musicMode": "none"
+    },
+    "nw_s2": {
+      "autoAdvanceTargetSceneId": null
+    },
+    "nw_prologue": {
+      "autoAdvanceTargetSceneId": null,
+      "autoAdvanceDelaySeconds": null,
+      "autoAdvanceHideTimer": null
+    }
   },
-  "nw_s1": {
-   "musicMode": "track",
-   "musicUrl": "/film/audio/midnight-in-the-rain-v6.mp3",
-   "musicLevel": 0.35,
-   "autoAdvanceTargetSceneId": null,
-   "autoAdvanceDelaySeconds": null,
-   "autoAdvanceHideTimer": null
+  "startSceneId": "nw_s1",
+  "beats": {
+    "nw_s1": {
+      "last": {
+        "afterBeatTargetSceneId": "nw_s2",
+        "afterBeatMode": "auto",
+        "afterBeatDelaySeconds": 1
+      }
+    },
+    "nw_prologue": {
+      "last": {
+        "afterBeatTargetSceneId": "nw_s3",
+        "afterBeatMode": "auto",
+        "afterBeatDelaySeconds": 1,
+        "backgroundRevert": true
+      }
+    },
+    "nw_s2": {
+      "last": {
+        "afterBeatTargetSceneId": "nw_title",
+        "afterBeatMode": "auto",
+        "afterBeatDelaySeconds": 1
+      }
+    }
   },
-  "nw_s3": {
-   "musicMode": "none"
-  },
-  "nw_s2": {
-   "autoAdvanceTargetSceneId": "nw_title"
-  },
-  "nw_prologue": {
-   "autoAdvanceTargetSceneId": null,
-   "autoAdvanceDelaySeconds": null,
-   "autoAdvanceHideTimer": null
+  "dropBeats": {
+    "nw_s2": [
+      14,
+      15
+    ]
   }
- },
- "startSceneId": "nw_s1",
- "beats": {
-  "nw_s1": {
-   "last": {
-    "afterBeatTargetSceneId": "nw_s2",
-    "afterBeatMode": "auto",
-    "afterBeatDelaySeconds": 1
-   }
-  },
-  "nw_prologue": {
-   "last": {
-    "afterBeatTargetSceneId": "nw_s3",
-    "afterBeatMode": "auto",
-    "afterBeatDelaySeconds": 1,
-    "backgroundRevert": true
-   }
-  }
- }
 }
