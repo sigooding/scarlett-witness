@@ -192,6 +192,18 @@ scenes.forEach((s, i) => {
   }
 });
 
+// Edits made in the Studio and kept in src/film/studio-edits.json (the title design and song, the music for scenes 1 and 3):
+// applied over the generated scenes so a rebuild does not lose them. A null value removes the field.
+const editsFile = resolve(root, "src/film/studio-edits.json");
+if (existsSync(editsFile)) {
+  const edits = JSON.parse(readFileSync(editsFile, "utf8")).scenes ?? {};
+  for (const [id, fields] of Object.entries(edits)) {
+    const sc = scenes.find(x => x.id === id);
+    if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
+    for (const [k, v] of Object.entries(fields)) { if (v === null) delete sc[k]; else sc[k] = v; }
+  }
+}
+
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));
 const story = {
   id: "nobodys-witness-film", pulpPaper: false, title: "Nobody's Witness", tagline: "Tokyo as a memory that is still happening.", gameKind: "vn",

@@ -655,7 +655,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_title",
    "title": "Opening titles",
    "nodeType": "credits",
-   "background": "/film/img/s1/377-the-hive-remembered.jpg",
+   "background": "/film/img/montage/m4-railway-rain.jpg",
    "prose": "Nobody's Witness\nAn interactive visual novel",
    "credits": {
     "title": "Nobody's Witness",
@@ -670,27 +670,32 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "name": "Jack · Vera · Mara"
      }
     ],
-    "font": "type",
+    "font": "elegant",
     "style": "cards",
-    "cardSeconds": 3.8,
-    "cardMotion": "letterspace",
+    "cardSeconds": 4.6,
+    "cardMotion": "fade",
     "montage": [
      "/film/img/s1/377-the-hive-remembered.jpg",
-     "/film/img/s14a/337-engine-off.jpg",
-     "/film/img/s1/10-the-shot.jpg",
-     "/film/img/s2/21-mara-bursts-in.jpg"
+     "/film/img/montage/m4-railway-rain.jpg",
+     "/film/img/s75/80-the-machine-waits.jpg",
+     "/film/img/s75/314-the-empty-crossing.jpg",
+     "/film/img/s31/169-the-only-car.jpg",
+     "/film/img/s14a/334-the-mirror.jpg"
     ],
-    "montageSeconds": 4.5,
+    "montageSeconds": 6.5,
     "montageTransition": "dissolve",
     "montageLoop": true,
-    "titleColor": "#eceae4",
-    "accentColor": "#e8a24a",
+    "titleColor": "#e7dfd1",
+    "accentColor": "#8aa03b",
     "titleEntrance": "fade-up",
-    "gateWeave": "subtle"
+    "gateWeave": "subtle",
+    "stagger": 0.2,
+    "duration": 1.2,
+    "scrollDuration": 24
    },
    "musicMode": "track",
-   "musicUrl": "/film/audio/nobodys-witness.mp3",
-   "musicFadeSeconds": 2,
+   "musicUrl": "/film/audio/title-song.mp3",
+   "musicFadeSeconds": 0.1,
    "ambientAudio": "",
    "transition": "fade-black",
    "transitionSpeed": 1.5,
@@ -698,8 +703,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "choices": [],
    "autoAdvanceTargetSceneId": "nw_prologue",
-   "autoAdvanceDelaySeconds": 22,
-   "autoAdvanceHideTimer": true
+   "autoAdvanceDelaySeconds": 300,
+   "musicLevel": 1.05,
+   "letterbox": true
   },
   {
    "id": "nw_prologue",
@@ -1342,8 +1348,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "choices": [],
    "autoAdvanceTargetSceneId": "nw_s2",
-   "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "autoAdvanceDelaySeconds": 1,
+   "autoAdvanceHideTimer": true,
+   "musicMode": "track",
+   "musicUrl": "/film/audio/midnight-in-the-rain-v6.mp3",
+   "musicLevel": 0.35
   },
   {
    "id": "nw_s2",
@@ -1684,7 +1693,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "autoAdvanceTargetSceneId": "nw_s4",
    "autoAdvanceDelaySeconds": 1.5,
-   "autoAdvanceHideTimer": true
+   "autoAdvanceHideTimer": true,
+   "musicMode": "none"
   },
   {
    "id": "nw_s4",
