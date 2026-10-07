@@ -184,6 +184,29 @@ scenes.push({
   dialogueBeats: [], hotspots: [], choices: [],
   endingData: { tier: "victory-gold", headline: "NOBODY'S WITNESS", recap: "Tokyo as a memory that is still happening." },
 });
+// Montage scenes (src/film/studio-edits.json "montages"): a run of stills over a track, auto-cycling, inserted after a scene or
+// part-way through one (the scene is split after `afterBeat`, 1-based, and its remaining beats play after the montage).
+const editsFile = resolve(root, "src/film/studio-edits.json");
+const edits = existsSync(editsFile) ? JSON.parse(readFileSync(editsFile, "utf8")) : {};
+for (const m of edits.montages ?? []) {
+  const at = scenes.findIndex(x => x.id === m.after);
+  if (at < 0) { console.warn(`montage ${m.id}: no scene ${m.after}`); continue; }
+  const host = scenes[at];
+  const montage = {
+    id: m.id, title: m.title, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
+    credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: m.images.map(P), montageSeconds: m.seconds ?? 5, montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
+    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: 2, transition: "fade-black", transitionSpeed: 1.2,
+    dialogueBeats: [], hotspots: [], choices: [],
+  };
+  const fresh = [montage];
+  if (m.afterBeat) {
+    const rest = host.dialogueBeats.splice(m.afterBeat);
+    const lastBg = [...host.dialogueBeats].reverse().find(b => b.background)?.background ?? host.background;
+    const { id: _id, title: _t, dialogueBeats: _b, ...look } = host;
+    fresh.push({ ...look, id: `${host.id}_b`, title: `${host.title} (cont.)`, background: lastBg, prose: "", transition: "cut", transitionSpeed: 0.2, musicMode: "none", musicFadeSeconds: 3, dialogueBeats: rest });
+  }
+  scenes.splice(at + 1, 0, ...fresh);
+}
 scenes.forEach((s, i) => {
   s.hotspots ??= [];
   if (!s.isEnding) {
@@ -192,7 +215,7 @@ scenes.forEach((s, i) => {
       // "After this beat — cut to scene": the last beat hands over to the next scene, so the scene's own background never shows between them
       Object.assign(s.dialogueBeats[s.dialogueBeats.length - 1], { afterBeatTargetSceneId: scenes[i + 1].id, afterBeatMode: "auto", afterBeatDelaySeconds: 1 });
     } else {
-      Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : 1.5, autoAdvanceHideTimer: true });
+      Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : s.credits?.montage ? s.credits.montage.length * s.credits.montageSeconds : 1.5, autoAdvanceHideTimer: true });
     }
   }
 });
@@ -200,9 +223,8 @@ scenes.forEach((s, i) => {
 let startSceneId = scenes[0].id;
 // Edits made in the Studio and kept in src/film/studio-edits.json (the title design and song, the music for scenes 1 and 3, the running order):
 // applied over the generated scenes so a rebuild does not lose them. A null value removes the field.
-const editsFile = resolve(root, "src/film/studio-edits.json");
 if (existsSync(editsFile)) {
-  const file = JSON.parse(readFileSync(editsFile, "utf8"));
+  const file = edits;
   const set = (o, fields) => { for (const [k, v] of Object.entries(fields)) { if (v === null) delete o[k]; else o[k] = v; } };
   for (const [id, fields] of Object.entries(file.scenes ?? {})) {
     const sc = scenes.find(x => x.id === id);

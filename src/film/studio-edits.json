@@ -96,5 +96,40 @@
       14,
       15
     ]
-  }
+  },
+  "montages": [
+    {
+      "id": "nw_m52",
+      "title": "Montage — the city, to her door",
+      "after": "nw_s52",
+      "images": [
+        "/img/montage52/01.jpg",
+        "/img/montage52/02.jpg",
+        "/img/montage52/03.jpg",
+        "/img/montage52/04.jpg",
+        "/img/montage52/05.jpg",
+        "/img/montage52/06.jpg"
+      ],
+      "seconds": 5,
+      "musicUrl": "/audio/dark-hills-blues.mp3",
+      "musicLevel": 0.6
+    },
+    {
+      "id": "nw_m53",
+      "title": "Montage — the kiss",
+      "after": "nw_s53",
+      "afterBeat": 21,
+      "images": [
+        "/img/montage53/01.jpg",
+        "/img/montage53/02.jpg",
+        "/img/montage53/03.jpg",
+        "/img/montage53/04.jpg",
+        "/img/montage53/05.jpg",
+        "/img/montage53/06.jpg"
+      ],
+      "seconds": 5,
+      "musicUrl": "/audio/dark-hills-blues.mp3",
+      "musicLevel": 0.6
+    }
+  ]
 }
