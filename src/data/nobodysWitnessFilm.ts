@@ -234,228 +234,220 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 2700,
    "y": 1080
   },
-  "nw_m52": {
-   "x": 3080,
-   "y": 1080
-  },
   "nw_s53": {
-   "x": 3460,
+   "x": 3080,
    "y": 1080
   },
   "nw_m53": {
-   "x": 3840,
-   "y": 1080
-  },
-  "nw_s53_b": {
-   "x": 4220,
+   "x": 3460,
    "y": 1080
   },
   "nw_s53a": {
-   "x": 40,
-   "y": 1340
+   "x": 3840,
+   "y": 1080
   },
   "nw_s54": {
-   "x": 420,
-   "y": 1340
+   "x": 4220,
+   "y": 1080
   },
   "nw_s55": {
-   "x": 800,
+   "x": 40,
    "y": 1340
   },
   "nw_s56": {
-   "x": 1180,
+   "x": 420,
    "y": 1340
   },
   "nw_s57": {
-   "x": 1560,
+   "x": 800,
    "y": 1340
   },
   "nw_s58": {
-   "x": 1940,
+   "x": 1180,
    "y": 1340
   },
   "nw_s59": {
-   "x": 2320,
+   "x": 1560,
    "y": 1340
   },
   "nw_s60": {
-   "x": 2700,
+   "x": 1940,
    "y": 1340
   },
   "nw_s61": {
-   "x": 3080,
+   "x": 2320,
    "y": 1340
   },
   "nw_s62": {
-   "x": 3460,
+   "x": 2700,
    "y": 1340
   },
   "nw_s63": {
-   "x": 3840,
+   "x": 3080,
    "y": 1340
   },
   "nw_s63a": {
-   "x": 4220,
+   "x": 3460,
    "y": 1340
   },
   "nw_s64": {
-   "x": 40,
-   "y": 1600
+   "x": 3840,
+   "y": 1340
   },
   "nw_s65": {
-   "x": 420,
-   "y": 1600
+   "x": 4220,
+   "y": 1340
   },
   "nw_s66": {
-   "x": 800,
+   "x": 40,
    "y": 1600
   },
   "nw_s67": {
-   "x": 1180,
+   "x": 420,
    "y": 1600
   },
   "nw_s68": {
-   "x": 1560,
+   "x": 800,
    "y": 1600
   },
   "nw_s69": {
-   "x": 1940,
+   "x": 1180,
    "y": 1600
   },
   "nw_s70": {
-   "x": 2320,
+   "x": 1560,
    "y": 1600
   },
   "nw_s71": {
-   "x": 2700,
+   "x": 1940,
    "y": 1600
   },
   "nw_s72": {
-   "x": 3080,
+   "x": 2320,
    "y": 1600
   },
   "nw_s72_b": {
-   "x": 3460,
+   "x": 2700,
    "y": 1600
   },
   "nw_s73": {
-   "x": 3840,
+   "x": 3080,
    "y": 1600
   },
   "nw_s74": {
-   "x": 4220,
+   "x": 3460,
    "y": 1600
   },
   "nw_s75": {
-   "x": 40,
-   "y": 1860
+   "x": 3840,
+   "y": 1600
   },
   "nw_s76": {
-   "x": 420,
-   "y": 1860
+   "x": 4220,
+   "y": 1600
   },
   "nw_s77": {
-   "x": 800,
+   "x": 40,
    "y": 1860
   },
   "nw_s78": {
-   "x": 1180,
+   "x": 420,
    "y": 1860
   },
   "nw_s79": {
-   "x": 1560,
+   "x": 800,
    "y": 1860
   },
   "nw_s80": {
-   "x": 1940,
+   "x": 1180,
    "y": 1860
   },
   "nw_s81": {
-   "x": 2320,
+   "x": 1560,
    "y": 1860
   },
   "nw_s82": {
-   "x": 2700,
+   "x": 1940,
    "y": 1860
   },
   "nw_s82a": {
-   "x": 3080,
+   "x": 2320,
    "y": 1860
   },
   "nw_s83": {
-   "x": 3460,
+   "x": 2700,
    "y": 1860
   },
   "nw_s84": {
-   "x": 3840,
+   "x": 3080,
    "y": 1860
   },
   "nw_s85": {
-   "x": 4220,
+   "x": 3460,
    "y": 1860
   },
   "nw_s86": {
-   "x": 40,
-   "y": 2120
+   "x": 3840,
+   "y": 1860
   },
   "nw_s87": {
-   "x": 420,
-   "y": 2120
+   "x": 4220,
+   "y": 1860
   },
   "nw_s88": {
-   "x": 800,
+   "x": 40,
    "y": 2120
   },
   "nw_s89": {
-   "x": 1180,
+   "x": 420,
    "y": 2120
   },
   "nw_s90": {
-   "x": 1560,
+   "x": 800,
    "y": 2120
   },
   "nw_s91": {
-   "x": 1940,
+   "x": 1180,
    "y": 2120
   },
   "nw_s92": {
-   "x": 2320,
+   "x": 1560,
    "y": 2120
   },
   "nw_s93": {
-   "x": 2700,
+   "x": 1940,
    "y": 2120
   },
   "nw_s94": {
-   "x": 3080,
+   "x": 2320,
    "y": 2120
   },
   "nw_s95": {
-   "x": 3460,
+   "x": 2700,
    "y": 2120
   },
   "nw_s96": {
-   "x": 3840,
+   "x": 3080,
    "y": 2120
   },
   "nw_s98": {
-   "x": 4220,
+   "x": 3460,
    "y": 2120
   },
   "nw_s99a": {
+   "x": 3840,
+   "y": 2120
+  },
+  "nw_s100": {
+   "x": 4220,
+   "y": 2120
+  },
+  "nw_credits": {
    "x": 40,
    "y": 2380
   },
-  "nw_s100": {
-   "x": 420,
-   "y": 2380
-  },
-  "nw_credits": {
-   "x": 800,
-   "y": 2380
-  },
   "nw_end": {
-   "x": 1180,
+   "x": 420,
    "y": 2380
   }
  },
@@ -9885,53 +9877,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_m52",
+     "afterBeatTargetSceneId": "nw_s53",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
    "choices": []
-  },
-  {
-   "id": "nw_m52",
-   "title": "Montage — the city, to her door",
-   "nodeType": "credits",
-   "background": "/film/img/montage52/01.jpg",
-   "prose": "",
-   "hideHud": true,
-   "letterbox": true,
-   "credits": {
-    "title": "",
-    "subtitle": "",
-    "lines": [],
-    "style": "cards",
-    "cardSeconds": 1,
-    "montage": [
-     "/film/img/montage52/01.jpg",
-     "/film/img/montage52/02.jpg",
-     "/film/img/montage52/03.jpg",
-     "/film/img/montage52/04.jpg",
-     "/film/img/montage52/05.jpg",
-     "/film/img/montage52/06.jpg"
-    ],
-    "montageSeconds": 5,
-    "montageTransition": "dissolve",
-    "montageLoop": false,
-    "gateWeave": "subtle"
-   },
-   "musicMode": "track",
-   "musicUrl": "/film/audio/dark-hills-blues.mp3",
-   "musicLevel": 0.6,
-   "musicFadeSeconds": 2,
-   "transition": "fade-black",
-   "transitionSpeed": 1.2,
-   "dialogueBeats": [],
-   "hotspots": [],
-   "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s53",
-   "autoAdvanceDelaySeconds": 30,
-   "autoAdvanceHideTimer": true
   },
   {
    "id": "nw_s53",
@@ -10105,6 +10057,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b811",
      "characterId": "nw_narrator",
      "text": "It is quiet, and brief, and it changes everything.",
+     "silent": true
+    },
+    {
+     "id": "nw_b812",
+     "characterId": "nw_narrator",
+     "text": "When it ends, she rests her forehead against his.",
+     "silent": true
+    },
+    {
+     "id": "nw_b813",
+     "characterId": "nw_vera",
+     "text": "Don't go anywhere else without telling me.",
+     "audioUrl": "/film/voice/s53/275-vera-don-t-go-anywhere-else-without.mp3"
+    },
+    {
+     "id": "nw_b814",
+     "characterId": "nw_jack",
+     "text": "I won't.",
+     "audioUrl": "/film/voice/s53/275-jack-i-won-t.mp3"
+    },
+    {
+     "id": "nw_b815",
+     "characterId": "nw_narrator",
+     "text": "When she turns to wring out the cloth, he reaches over and turns her phone face-down.",
+     "silent": true
+    },
+    {
+     "id": "nw_b816",
+     "characterId": "nw_narrator",
+     "text": "It is another promise. He is collecting them.",
      "silent": true,
      "afterBeatTargetSceneId": "nw_m53",
      "afterBeatMode": "auto",
@@ -10116,7 +10098,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_m53",
-   "title": "Montage — the kiss",
+   "title": "Montage — the night after Pink water",
    "nodeType": "credits",
    "background": "/film/img/montage53/01.jpg",
    "prose": "",
@@ -10150,64 +10132,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
-   "autoAdvanceTargetSceneId": "nw_s53_b",
+   "autoAdvanceTargetSceneId": "nw_s53a",
    "autoAdvanceDelaySeconds": 30,
    "autoAdvanceHideTimer": true
-  },
-  {
-   "background": "/film/img/s53/275-the-kiss.jpg",
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
-   "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
-   "hideHud": true,
-   "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.2,
-   "id": "nw_s53_b",
-   "title": "53 — Pink water (cont.)",
-   "musicMode": "none",
-   "musicFadeSeconds": 3,
-   "dialogueBeats": [
-    {
-     "id": "nw_b812",
-     "characterId": "nw_narrator",
-     "text": "When it ends, she rests her forehead against his.",
-     "silent": true
-    },
-    {
-     "id": "nw_b813",
-     "characterId": "nw_vera",
-     "text": "Don't go anywhere else without telling me.",
-     "audioUrl": "/film/voice/s53/275-vera-don-t-go-anywhere-else-without.mp3"
-    },
-    {
-     "id": "nw_b814",
-     "characterId": "nw_jack",
-     "text": "I won't.",
-     "audioUrl": "/film/voice/s53/275-jack-i-won-t.mp3"
-    },
-    {
-     "id": "nw_b815",
-     "characterId": "nw_narrator",
-     "text": "When she turns to wring out the cloth, he reaches over and turns her phone face-down.",
-     "silent": true
-    },
-    {
-     "id": "nw_b816",
-     "characterId": "nw_narrator",
-     "text": "It is another promise. He is collecting them.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s53a",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
-    }
-   ],
-   "hotspots": [],
-   "choices": []
   },
   {
    "id": "nw_s53a",

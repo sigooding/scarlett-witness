@@ -1,4 +1,4 @@
-# Montage image brief (18 stills, 3 montages)
+# Montage image brief (12 stills, 2 montages)
 
 Use for every image: **16:9, 1920×1080, cinematic night photograph, 1975-feeling Tokyo, wet streets, film grain.**
 Palette: **warm amber and deep brown shadow, lit by tungsten and sodium lamps. No cold blue or teal. A few small red accents in the lights only (a tail-light, a neon sign, a lampshade).**
@@ -16,22 +16,12 @@ Replace the placeholders in `public/film/img/` with the same file names. Each st
 | `montage18/05.jpg` | Bird's-eye view over the city at night: a grid of amber streets, the elevated line, small red lights on towers, low cloud. |
 | `montage18/06.jpg` | A narrow covered arcade after midnight, shutters down, a single bare bulb burning far down at the end. |
 
-## montage52 — after "She pulls him in" (before Pink water)
+## montage53 — after scenes 52 and 53 play in full ("She pulls him in", "Pink water", the kiss, the promise); then on to the newspaper office
 | File | Image |
 |---|---|
-| `montage52/01.jpg` | Vera's apartment door closing, a strip of warm hallway light on the floor. |
-| `montage52/02.jpg` | A bedside lamp with a faded red shade lighting a small room, an overcoat dropped over a chair. |
-| `montage52/03.jpg` | Rain on her window, the lit city blurred beyond the glass in amber. |
-| `montage52/04.jpg` | The waterfront at night: lamps reflected in black water, an empty quay, one red buoy light. |
-| `montage52/05.jpg` | An elevated train crossing the city, windows glowing amber, seen from above. |
-| `montage52/06.jpg` | The apartment block at night, one third-floor window lit warm, rain in the lamplight. |
-
-## montage53 — the kiss (between "…it changes everything." and "When it ends…")
-| File | Image |
-|---|---|
-| `montage53/01.jpg` | Close on two hands, hers over his, in warm lamplight. |
-| `montage53/02.jpg` | Her bathroom mirror, steam on the glass, a small lamp glowing amber behind it. |
-| `montage53/03.jpg` | The lit window from outside, rain falling past it, two shapes behind the curtain. |
-| `montage53/04.jpg` | The city from her window, a thousand amber lights, a few red ones on the far towers. |
-| `montage53/05.jpg` | A phone lying face down on a table, a lamp beside it, the room quiet. |
-| `montage53/06.jpg` | Rain running down the window glass, amber light behind it, softly out of focus. |
+| `montage53/01.jpg` | The apartment block at night, one third-floor window lit warm, rain falling through the lamplight. |
+| `montage53/02.jpg` | The city from her window, a thousand amber lights, a few small red ones on far towers. |
+| `montage53/03.jpg` | A phone lying face down on a table beside a lamp, the room quiet. |
+| `montage53/04.jpg` | The waterfront at night: lamps reflected in black water, an empty quay, one red buoy light. |
+| `montage53/05.jpg` | An elevated train crossing the city, windows glowing amber, seen from above. |
+| `montage53/06.jpg` | The same window at first light, the rain easing, warm gold on the wet glass. |
