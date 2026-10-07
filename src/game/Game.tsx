@@ -4173,7 +4173,7 @@ function CasePlayer({
 
   // Resume straight into a save slot (the newsstand "▶ Resume" path).
   useEffect(() => {
-    if (!resumeSlot) return;
+    if (resumeSlot === undefined) return;
     const save = readSave(story.id, resumeSlot, episodeId);
     if (save) restoreSave(save);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -8876,7 +8876,7 @@ export function GamePlayer({
     deepLink.warnings.forEach((w) => console.warn(`[deep-link] ${w}`));
   }, [deepLink]);
   // A resume is the player's own progress; never clobber it with a link.
-  const linkActive = !!deepLink && !resumeSlot && !resumeEpisodeId;
+  const linkActive = !!deepLink && resumeSlot === undefined && !resumeEpisodeId;
   const linkScene = linkActive ? deepLink.sceneId : undefined;
 
   // Non-episodic stories keep the original one-shot behaviour untouched.
@@ -8985,7 +8985,7 @@ function SeasonPlayer({
   // A "▶ Resume" from the newsstand should drop straight into the chapter that
   // save belongs to, skipping the season screen and the title card.
   const [phase, setPhase] = useState<SeasonPhase>(() => {
-    if (resumeSlot) {
+    if (resumeSlot !== undefined) {
       // Prefer the episode the newsstand actually resolved the save from —
       // slot numbers repeat across episodes, so searching by slot alone can
       // land on the wrong chapter.
@@ -9015,7 +9015,7 @@ function SeasonPlayer({
       setFinished(null);
       runSeq.current += 1;
       const runKey = runSeq.current;
-      if (slot) {
+      if (slot !== undefined) {
         setPhase({ kind: "play", episode, resumeSlot: slot, runKey });
         return;
       }

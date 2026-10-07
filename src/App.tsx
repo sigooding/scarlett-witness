@@ -393,7 +393,7 @@ export default function App() {
     // consumes the primer for the scene it is entering) and would otherwise
     // keep playing over the resumed scene until the player quit. Music priming
     // is safe on resume: an unused primer is paused when the scene mounts.
-    const primedNarration = resumeSlot || resumeEpisodeId ? null : primeOpeningNarration(story);
+    const primedNarration = resumeSlot !== undefined || resumeEpisodeId ? null : primeOpeningNarration(story);
     // An episodic season opens on its season screen, not on a scene, so there
     // is no opening track to prime — the episode's music starts after the
     // title card, well inside a later user gesture.
