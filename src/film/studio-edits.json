@@ -102,6 +102,11 @@
       "musicUrl": "/film/audio/the-show.mp3",
       "musicLevel": 1.0,
       "musicFadeSeconds": 12
+    },
+    "nw_s78": {
+      "musicMode": "none",
+      "musicUrl": null,
+      "musicFadeSeconds": 4
     }
   },
   "startSceneId": "nw_s1",
