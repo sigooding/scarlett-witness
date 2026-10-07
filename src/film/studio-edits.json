@@ -68,14 +68,14 @@
     "nw_s52": {
       "musicMode": "track",
       "musicUrl": "/film/audio/dark-hills-blues.mp3",
-      "musicLevel": 0.3,
-      "musicFadeSeconds": 3
+      "musicLevel": 0.2,
+      "musicFadeSeconds": 4
     },
     "nw_s53": {
       "musicMode": "track",
       "musicUrl": "/film/audio/dark-hills-blues.mp3",
       "musicLevel": 0.3,
-      "musicFadeSeconds": 3
+      "musicFadeSeconds": 6
     },
     "nw_s19": {
       "musicMode": "none",
@@ -84,6 +84,24 @@
     "nw_s53a": {
       "musicMode": "none",
       "musicFadeSeconds": 4
+    },
+    "nw_s18": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/dark-hills-blues.mp3",
+      "musicLevel": 0.2,
+      "musicFadeSeconds": 6
+    },
+    "nw_s100": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/the-show.mp3",
+      "musicLevel": 0.3,
+      "musicFadeSeconds": 5
+    },
+    "nw_credits": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/the-show.mp3",
+      "musicLevel": 1.0,
+      "musicFadeSeconds": 12
     }
   },
   "startSceneId": "nw_s1",
@@ -132,7 +150,8 @@
       ],
       "seconds": 5,
       "musicUrl": "/audio/dark-hills-blues.mp3",
-      "musicLevel": 0.6
+      "musicLevel": 0.7,
+      "musicFadeSeconds": 10
     },
     {
       "id": "nw_m53",
@@ -148,7 +167,8 @@
       ],
       "seconds": 5,
       "musicUrl": "/audio/dark-hills-blues.mp3",
-      "musicLevel": 0.6
+      "musicLevel": 0.7,
+      "musicFadeSeconds": 10
     }
   ],
   "ambientAdd": {

@@ -5731,7 +5731,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/dark-hills-blues.mp3",
+   "musicLevel": 0.2,
+   "musicFadeSeconds": 6
   },
   {
    "id": "nw_m18",
@@ -5762,8 +5766,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
-   "musicLevel": 0.6,
-   "musicFadeSeconds": 2,
+   "musicLevel": 0.7,
+   "musicFadeSeconds": 10,
    "transition": "fade-black",
    "transitionSpeed": 1.2,
    "dialogueBeats": [],
@@ -9916,8 +9920,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
-   "musicLevel": 0.3,
-   "musicFadeSeconds": 3
+   "musicLevel": 0.2,
+   "musicFadeSeconds": 4
   },
   {
    "id": "nw_s53",
@@ -10132,7 +10136,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
    "musicLevel": 0.3,
-   "musicFadeSeconds": 3
+   "musicFadeSeconds": 6
   },
   {
    "id": "nw_m53",
@@ -10163,8 +10167,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
-   "musicLevel": 0.6,
-   "musicFadeSeconds": 2,
+   "musicLevel": 0.7,
+   "musicFadeSeconds": 10,
    "transition": "fade-black",
    "transitionSpeed": 1.2,
    "dialogueBeats": [],
@@ -17460,7 +17464,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/the-show.mp3",
+   "musicLevel": 0.3,
+   "musicFadeSeconds": 5
   },
   {
    "id": "nw_credits",
@@ -17626,8 +17634,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "gateWeave": "subtle"
    },
    "musicMode": "track",
-   "musicUrl": "/film/audio/nobodys-witness.mp3",
-   "musicFadeSeconds": 4,
+   "musicUrl": "/film/audio/the-show.mp3",
+   "musicFadeSeconds": 12,
    "ambientAudio": "",
    "transition": "fade-black",
    "transitionSpeed": 2,
@@ -17637,7 +17645,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choiceDelaySeconds": 100,
    "autoAdvanceTargetSceneId": "nw_end",
    "autoAdvanceDelaySeconds": 108,
-   "autoAdvanceHideTimer": true
+   "autoAdvanceHideTimer": true,
+   "musicLevel": 1
   },
   {
    "id": "nw_end",
