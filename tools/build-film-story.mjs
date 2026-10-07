@@ -242,6 +242,19 @@ if (existsSync(editsFile)) {
     if (!sc?.dialogueBeats?.length) { console.warn(`studio-edits: no beats in ${id}`); continue; }
     if (byBeat.last) set(sc.dialogueBeats[sc.dialogueBeats.length - 1], byBeat.last);
   }
+  // ambientAdd: { sceneId: [loop names in public/film/sfx] } — recorded loops layered under the scene's atmosphere
+  for (const [id, names] of Object.entries(file.ambientAdd ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
+    sc.ambientAudio = [sc.ambientAudio, ...names.map(n => `file:${P(`/sfx/${n}.mp3`)}`)].filter(Boolean).join("+");
+  }
+  // sfx: [{ scene, find, file, volume }] — a one-shot on the beat whose text contains `find` (the scene's later parts included)
+  for (const e of file.sfx ?? []) {
+    const beat = scenes.filter(x => x.id === e.scene || x.id.startsWith(`${e.scene}_`)).flatMap(x => x.dialogueBeats).find(b => b.text?.includes(e.find));
+    if (!beat) { console.warn(`studio-edits: no beat in ${e.scene} containing "${e.find}"`); continue; }
+    if (beat.sfxUrl) console.warn(`studio-edits: ${e.scene} "${e.find}" already had ${beat.sfxUrl}`);
+    Object.assign(beat, { sfxUrl: P(`/sfx/${e.file}.mp3`), sfxVolume: e.volume ?? 0.7 });
+  }
   if (file.startSceneId) startSceneId = file.startSceneId;
 }
 

@@ -30,3 +30,5 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 **Montages (7 October 2026; image brief in `FILM-montage-image-brief.md`).** A second, `nw_m18`, plays after scene 18 (Jack to the Hive; `montage18/01–06.jpg`). `studio-edits.json` → `montages` inserts auto-cycling still sequences with a track: `nw_m53` after scene 53 (scenes 52 and 53 play in full first). The track also runs quietly under scenes 52 and 53 and stops after the montage. Six stills, 5 s apiece, over `public/film/audio/dark-hills-blues.mp3`. Replace `public/film/img/montage53/01–06.jpg` with the real pictures (same file names; the committed ones are placeholders copied from existing boards).
+
+**Sound effects (7 October 2026).** The new effects in `public/film/sfx/` are renamed (`tv-murmur`, `coin-insert`, `coins-in`, `car-engine-start`, `car-start-idle`, `car-driving-away`, `car-interior-driving`, `rain-tin-roof`, `vending-hum`, `train-inside-1/2`) and placed from `src/film/studio-edits.json`: `ambientAdd` layers a loop under a scene's atmosphere; `sfx` puts a one-shot on the beat whose text contains `find`. `car-start-idle` is not placed yet.

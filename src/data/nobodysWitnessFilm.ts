@@ -1195,7 +1195,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/car-driving-away.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b30",
@@ -1368,7 +1370,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "2 — The small bar",
    "background": "/film/img/s2/19-the-bar.jpg",
    "prose": "INT. SMALL BAR, KANDA - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-bar.mp3",
+   "ambientAudio": "file:/film/sfx/amb-bar.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -1695,7 +1697,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "4 — Vera's apartment",
    "background": "/film/img/s4/33-the-apartment.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -3595,7 +3597,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b216",
      "characterId": "nw_narrator",
      "text": "He doesn't answer. Another train passes. The blinds shiver.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b217",
@@ -4054,7 +4058,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s12",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -4065,7 +4071,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "12 — The strap",
    "background": "/film/img/s12/168-the-strap.jpg",
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3+file:/film/sfx/vending-hum.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -4092,7 +4098,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b269",
      "characterId": "nw_narrator",
      "text": "The vending machine at the corner. He feeds it a coin. A can of hot coffee drops.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/coin-insert.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b270",
@@ -5071,7 +5079,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/car-driving-away.mp3",
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b377",
@@ -5107,7 +5117,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b382",
      "characterId": "nw_narrator",
      "text": "3:40 a.m. The amber sign at the far end goes dark. Jack starts the engine.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-engine-start.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b383",
@@ -5168,7 +5180,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s15",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/car-interior-driving.mp3",
+     "sfxVolume": 0.5
     }
    ],
    "hotspots": [],
@@ -6242,7 +6256,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b478",
      "characterId": "nw_narrator",
      "text": "A train passes. The blinds shiver.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b479",
@@ -6367,7 +6383,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b488",
@@ -6461,7 +6479,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b500",
      "characterId": "nw_narrator",
      "text": "A train. The cups tremble.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b501",
@@ -6553,7 +6573,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b510",
      "characterId": "nw_narrator",
      "text": "He sits and watches her breathe. A train passes. Her coffee cup, near her elbow, trembles toward the edge of the counter.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b511",
@@ -6804,7 +6826,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b533",
@@ -7133,7 +7157,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "25 — Breakfast",
    "background": "/film/img/s25a/287-breakfast.jpg",
    "prose": "INT. TINY BREAKFAST COUNTER, NEAR THE STATION - MORNING",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8221,7 +8245,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "32 — Just one night",
    "background": "/film/img/s32/170-just-one-night.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8393,7 +8417,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "34 — Twenty years of Januaries",
    "background": "/film/img/s34/172-twenty-years-of-januaries.jpg",
    "prose": "INT. ROADSIDE INN, JACK'S ROOM - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8484,7 +8508,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s36",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/coins-in.mp3",
+     "sfxVolume": 0.8
     }
    ],
    "hotspots": [],
@@ -8791,7 +8817,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "39 — The curtain gap",
    "background": "/film/img/s39/174-he-has-heard-the-gravel.jpg",
    "prose": "INT. ROADSIDE INN, JACK'S ROOM - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8888,7 +8914,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "40 — Plaster rains down",
    "background": "/film/img/s40/176-were-closed.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9115,7 +9141,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "43 — Wet tin",
    "background": "/film/img/s43/211-wet-tin.jpg",
    "prose": "EXT. ROADSIDE INN, KITCHEN ROOF - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -9564,7 +9590,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s49",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/car-engine-start.mp3",
+     "sfxVolume": 0.8
     }
    ],
    "hotspots": [],
@@ -10151,7 +10179,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "53 — There was no car",
    "background": "/film/img/s53a/297-the-glass-office.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -10446,7 +10474,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b845",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The building trembles.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b846",
@@ -10793,7 +10823,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "59 — It rings. Nobody answers.",
    "background": "/film/img/s59/364-the-kotatsu.jpg",
    "prose": "EXT. THE HIVE - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -11043,7 +11073,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "61 — Nine o'clock",
    "background": "/film/img/s61/228-nine-oclock.jpg",
    "prose": "INT. ISHIDA'S CAR - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -11433,7 +11463,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s63a",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -11549,7 +11581,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b949",
      "characterId": "nw_narrator",
      "text": "A last train pulls out overhead. The arches shake.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b950",
@@ -12211,7 +12245,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s70",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -12434,7 +12470,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1036",
      "characterId": "nw_narrator",
      "text": "Outside, a car door slams. An engine revs. Tyres on wet asphalt. Going.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-driving-away.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b1037",
@@ -12571,7 +12609,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s72",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -12944,7 +12984,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "74 — The empty street",
    "background": "/film/img/s74/74-twenty-metres-apart.jpg",
    "prose": "EXT. EMPTY STREET UNDER THE TRACKS - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -14443,7 +14483,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "82 — Start with my part",
    "background": "/film/img/s82/104-the-newsroom.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -15401,7 +15441,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1306",
      "characterId": "nw_narrator",
      "text": "Silence. A train passes overhead. The bulb swings.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-2.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1307",
@@ -15891,7 +15933,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "90 — Through the rooms",
    "background": "/film/img/s90/130-the-roof.jpg",
    "prose": "INT. THE HIVE, THROUGH THE ROOMS - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -16569,7 +16611,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/car-driving-away.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1374",
@@ -17273,7 +17317,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1443",
      "characterId": "nw_narrator",
      "text": "A train goes over. The bottles tick against each other and settle.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train-inside-1.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1444",

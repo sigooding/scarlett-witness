@@ -150,5 +150,192 @@
       "musicUrl": "/audio/dark-hills-blues.mp3",
       "musicLevel": 0.6
     }
+  ],
+  "ambientAdd": {
+    "nw_s2": [
+      "tv-murmur"
+    ],
+    "nw_s4": [
+      "tv-murmur"
+    ],
+    "nw_s25a": [
+      "tv-murmur"
+    ],
+    "nw_s32": [
+      "tv-murmur"
+    ],
+    "nw_s39": [
+      "tv-murmur"
+    ],
+    "nw_s40": [
+      "tv-murmur"
+    ],
+    "nw_s53a": [
+      "tv-murmur"
+    ],
+    "nw_s82": [
+      "tv-murmur"
+    ],
+    "nw_s90": [
+      "tv-murmur"
+    ],
+    "nw_s34": [
+      "rain-tin-roof"
+    ],
+    "nw_s43": [
+      "rain-tin-roof"
+    ],
+    "nw_s59": [
+      "rain-tin-roof"
+    ],
+    "nw_s61": [
+      "rain-tin-roof"
+    ],
+    "nw_s12": [
+      "vending-hum"
+    ],
+    "nw_s74": [
+      "vending-hum"
+    ]
+  },
+  "sfx": [
+    {
+      "scene": "nw_s12",
+      "find": "He feeds it a coin",
+      "file": "coin-insert",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s35",
+      "find": "feeding it coins",
+      "file": "coins-in",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "Jack starts the engine",
+      "file": "car-engine-start",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "A small engine starts, out of sight",
+      "file": "car-interior-driving",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "the white car pulls out and goes",
+      "file": "car-driving-away",
+      "volume": 0.4
+    },
+    {
+      "scene": "nw_s48",
+      "find": "The engine catches. Roars.",
+      "file": "car-engine-start",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s71",
+      "find": "engine revs",
+      "file": "car-driving-away",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s95",
+      "find": "The black car recedes",
+      "file": "car-driving-away",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s1",
+      "find": "It pulls away and takes the long way round",
+      "file": "car-driving-away",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s10",
+      "find": "Another train passes. The blinds shiver",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s11",
+      "find": "A train passes. The photograph",
+      "file": "train-inside-1",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s21",
+      "find": "A train passes. The blinds shiver",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s22",
+      "find": "Every few minutes, a train rumbles",
+      "file": "train-inside-1",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s22",
+      "find": "A train. The cups tremble",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s22",
+      "find": "A train passes. Her coffee cup",
+      "file": "train-inside-1",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s23",
+      "find": "A train roars overhead",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s55",
+      "find": "A train passes overhead. The building trembles",
+      "file": "train-inside-1",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s63",
+      "find": "The lockers rattle",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s63a",
+      "find": "A last train pulls out overhead",
+      "file": "train-inside-1",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s69",
+      "find": "A train passes overhead. The building trembles",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s71",
+      "find": "A train passes overhead. The bulbs swing",
+      "file": "train-inside-1",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s84",
+      "find": "A train passes overhead. The bulb swings",
+      "file": "train-inside-2",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s100",
+      "find": "A train goes over",
+      "file": "train-inside-1",
+      "volume": 0.6
+    }
   ]
 }
