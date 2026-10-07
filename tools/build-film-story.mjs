@@ -184,18 +184,84 @@ scenes.push({
   dialogueBeats: [], hotspots: [], choices: [],
   endingData: { tier: "victory-gold", headline: "NOBODY'S WITNESS", recap: "Tokyo as a memory that is still happening." },
 });
+// Montage scenes (src/film/studio-edits.json "montages"): a run of stills over a track, auto-cycling, inserted after a scene or
+// part-way through one (the scene is split after `afterBeat`, 1-based, and its remaining beats play after the montage).
+const editsFile = resolve(root, "src/film/studio-edits.json");
+const edits = existsSync(editsFile) ? JSON.parse(readFileSync(editsFile, "utf8")) : {};
+for (const m of edits.montages ?? []) {
+  const at = scenes.findIndex(x => x.id === m.after);
+  if (at < 0) { console.warn(`montage ${m.id}: no scene ${m.after}`); continue; }
+  const host = scenes[at];
+  const montage = {
+    id: m.id, title: m.title, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
+    credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: m.images.map(P), montageSeconds: m.seconds ?? 5, montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
+    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: 2, transition: "fade-black", transitionSpeed: 1.2,
+    dialogueBeats: [], hotspots: [], choices: [],
+  };
+  const fresh = [montage];
+  if (m.afterBeat) {
+    const rest = host.dialogueBeats.splice(m.afterBeat);
+    const lastBg = [...host.dialogueBeats].reverse().find(b => b.background)?.background ?? host.background;
+    const { id: _id, title: _t, dialogueBeats: _b, ...look } = host;
+    fresh.push({ ...look, id: `${host.id}_b`, title: `${host.title} (cont.)`, background: lastBg, prose: "", transition: "cut", transitionSpeed: 0.2, musicMode: "none", musicFadeSeconds: 3, dialogueBeats: rest });
+  }
+  scenes.splice(at + 1, 0, ...fresh);
+}
 scenes.forEach((s, i) => {
   s.hotspots ??= [];
   if (!s.isEnding) {
     s.choices = [];
-    Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : 1.5, autoAdvanceHideTimer: true });
+    if (s.dialogueBeats.length) {
+      // "After this beat — cut to scene": the last beat hands over to the next scene, so the scene's own background never shows between them
+      Object.assign(s.dialogueBeats[s.dialogueBeats.length - 1], { afterBeatTargetSceneId: scenes[i + 1].id, afterBeatMode: "auto", afterBeatDelaySeconds: 1 });
+    } else {
+      Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : s.credits?.montage ? s.credits.montage.length * s.credits.montageSeconds : 1.5, autoAdvanceHideTimer: true });
+    }
   }
 });
+
+let startSceneId = scenes[0].id;
+// Edits made in the Studio and kept in src/film/studio-edits.json (the title design and song, the music for scenes 1 and 3, the running order):
+// applied over the generated scenes so a rebuild does not lose them. A null value removes the field.
+if (existsSync(editsFile)) {
+  const file = edits;
+  const set = (o, fields) => { for (const [k, v] of Object.entries(fields)) { if (v === null) delete o[k]; else o[k] = v; } };
+  for (const [id, fields] of Object.entries(file.scenes ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
+    set(sc, fields);
+  }
+  // dropBeats: { sceneId: [1-based beat numbers] } — beats taken out in the Studio (unwanted title cards)
+  for (const [id, nums] of Object.entries(file.dropBeats ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (sc) sc.dialogueBeats = sc.dialogueBeats.filter((_, k) => !nums.includes(k + 1));
+  }
+  // beats: { sceneId: { last: {...fields} } } — the scene's last beat ("After this beat — cut to scene")
+  for (const [id, byBeat] of Object.entries(file.beats ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (!sc?.dialogueBeats?.length) { console.warn(`studio-edits: no beats in ${id}`); continue; }
+    if (byBeat.last) set(sc.dialogueBeats[sc.dialogueBeats.length - 1], byBeat.last);
+  }
+  // ambientAdd: { sceneId: [loop names in public/film/sfx] } — recorded loops layered under the scene's atmosphere
+  for (const [id, names] of Object.entries(file.ambientAdd ?? {})) {
+    const sc = scenes.find(x => x.id === id);
+    if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
+    sc.ambientAudio = [sc.ambientAudio, ...names.map(n => `file:${P(`/sfx/${n}.mp3`)}`)].filter(Boolean).join("+");
+  }
+  // sfx: [{ scene, find, file, volume }] — a one-shot on the beat whose text contains `find` (the scene's later parts included)
+  for (const e of file.sfx ?? []) {
+    const beat = scenes.filter(x => x.id === e.scene || x.id.startsWith(`${e.scene}_`)).flatMap(x => x.dialogueBeats).find(b => b.text?.includes(e.find));
+    if (!beat) { console.warn(`studio-edits: no beat in ${e.scene} containing "${e.find}"`); continue; }
+    if (beat.sfxUrl) console.warn(`studio-edits: ${e.scene} "${e.find}" already had ${beat.sfxUrl}`);
+    Object.assign(beat, { sfxUrl: P(`/sfx/${e.file}.mp3`), sfxVolume: e.volume ?? 0.7 });
+  }
+  if (file.startSceneId) startSceneId = file.startSceneId;
+}
 
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));
 const story = {
   id: "nobodys-witness-film", pulpPaper: false, title: "Nobody's Witness", tagline: "Tokyo as a memory that is still happening.", gameKind: "vn",
-  coverImage: P("/img/s14a/337-engine-off.jpg"), startSceneId: scenes[0].id, layout,
+  coverImage: P("/img/s14a/337-engine-off.jpg"), startSceneId, layout,
   briefing: { gameInfo: "The film, played as a graphic novel: the screenplay's scenes, the storyboard pictures and the recorded voices.", objective: "Watch it through.", winConditions: ["Reach the credits."], loseConditions: [] },
   characters: [...characters.values()].map(c => ({ ...c, avatarUrl: "", trustMeter: 0 })), items: [], scenes,
 };
