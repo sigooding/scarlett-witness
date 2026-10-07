@@ -209,6 +209,7 @@ for (const m of edits.montages ?? []) {
 }
 scenes.forEach((s, i) => {
   s.hotspots ??= [];
+  s.noTypewriter = true;   // the recorded voice sets the pace; the words are simply there
   s.autoNarrate = false;   // no text-to-speech reading of the scene prose (Studio → Audio → Narration); the recorded voices are the beats
   if (!s.isEnding) {
     s.choices = [];
@@ -222,6 +223,7 @@ scenes.forEach((s, i) => {
 });
 
 let startSceneId = scenes[0].id;
+let dialogueBox;
 // Edits made in the Studio and kept in src/film/studio-edits.json (the title design and song, the music for scenes 1 and 3, the running order):
 // applied over the generated scenes so a rebuild does not lose them. A null value removes the field.
 if (existsSync(editsFile)) {
@@ -257,12 +259,14 @@ if (existsSync(editsFile)) {
     Object.assign(beat, { sfxUrl: P(`/sfx/${e.file}.mp3`), sfxVolume: e.volume ?? 0.7 });
   }
   if (file.startSceneId) startSceneId = file.startSceneId;
+  // dialogueBox: the story-wide look of the reading panel (Studio → In-game theme: fonts, size, HUD colour scheme)
+  if (file.dialogueBox) dialogueBox = file.dialogueBox;
 }
 
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));
 const story = {
   id: "nobodys-witness-film", pulpPaper: false, title: "Nobody's Witness", tagline: "Tokyo as a memory that is still happening.", gameKind: "vn",
-  coverImage: P("/img/s14a/337-engine-off.jpg"), startSceneId, layout,
+  coverImage: P("/img/s14a/337-engine-off.jpg"), startSceneId, layout, ...(dialogueBox ? { dialogueBox } : {}),
   briefing: { gameInfo: "The film, played as a graphic novel: the screenplay's scenes, the storyboard pictures and the recorded voices.", objective: "Watch it through.", winConditions: ["Reach the credits."], loseConditions: [] },
   characters: [...characters.values()].map(c => ({ ...c, avatarUrl: "", trustMeter: 0 })), items: [], scenes,
 };

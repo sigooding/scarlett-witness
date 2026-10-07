@@ -451,6 +451,16 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "y": 2380
   }
  },
+ "dialogueBox": {
+  "bodyFont": "elegant",
+  "headingFont": "elegant",
+  "hudTheme": "midnight-teal",
+  "textScale": 1.1,
+  "bordered": true,
+  "backgroundOpacity": 0.85,
+  "backdropBlur": 2,
+  "reserveLines": 3
+ },
  "briefing": {
   "gameInfo": "The film, played as a graphic novel: the screenplay's scenes, the storyboard pictures and the recorded voices.",
   "objective": "Watch it through.",
@@ -710,6 +720,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_prologue",
    "autoAdvanceDelaySeconds": 300,
@@ -778,6 +789,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -1362,6 +1374,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "track",
@@ -1619,6 +1632,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -1693,6 +1707,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "none"
@@ -2017,6 +2032,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -2253,6 +2269,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -2983,6 +3000,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -3117,6 +3135,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -3279,6 +3298,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -3448,6 +3468,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -3833,6 +3854,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -4076,6 +4098,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -4308,6 +4331,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -4614,6 +4638,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -5201,6 +5226,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -5293,6 +5319,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -5408,6 +5435,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -5632,6 +5660,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -5750,6 +5779,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "track",
@@ -5793,6 +5823,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_s19",
    "autoAdvanceDelaySeconds": 30,
@@ -5847,6 +5878,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "none",
@@ -6180,6 +6212,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -6338,6 +6371,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -6638,6 +6672,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -6892,6 +6927,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -7180,6 +7216,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -7396,6 +7433,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -7568,6 +7606,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -7638,6 +7677,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -7892,6 +7932,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -7944,6 +7985,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8166,6 +8208,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8218,6 +8261,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8276,6 +8320,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8368,6 +8413,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8450,6 +8496,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8508,6 +8555,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8556,6 +8604,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8709,6 +8758,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8797,6 +8847,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8855,6 +8906,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -8953,6 +9005,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9045,6 +9098,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9119,6 +9173,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9183,6 +9238,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9229,6 +9285,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9311,6 +9368,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9451,6 +9509,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9515,6 +9574,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9579,6 +9639,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9651,6 +9712,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9728,6 +9790,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9828,6 +9891,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9908,6 +9972,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -9972,6 +10037,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "track",
@@ -10188,6 +10254,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "track",
@@ -10231,6 +10298,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_s53a",
    "autoAdvanceDelaySeconds": 30,
@@ -10407,6 +10475,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "none",
@@ -10497,6 +10566,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -10581,6 +10651,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -10703,6 +10774,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -10785,6 +10857,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -10883,6 +10956,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11011,6 +11085,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11135,6 +11210,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11283,6 +11359,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11407,6 +11484,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11541,6 +11619,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11691,6 +11770,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11785,6 +11865,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -11925,6 +12006,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12035,6 +12117,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12093,6 +12176,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12182,6 +12266,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12330,6 +12415,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12498,6 +12584,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12696,6 +12783,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12844,6 +12932,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -12908,6 +12997,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -13061,6 +13151,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -13425,6 +13516,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -13596,6 +13688,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -13736,6 +13829,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -13851,6 +13945,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -13983,6 +14078,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -14221,6 +14317,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -14443,6 +14540,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -14567,6 +14665,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -14801,6 +14900,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -14963,6 +15063,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -15261,6 +15362,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -15586,6 +15688,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -15660,6 +15763,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -15786,6 +15890,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -15854,6 +15959,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -15940,6 +16046,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16026,6 +16133,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16256,6 +16364,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16364,6 +16473,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16474,6 +16584,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16554,6 +16665,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16678,6 +16790,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16732,6 +16845,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -16856,6 +16970,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -17238,6 +17353,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -17392,6 +17508,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": []
   },
@@ -17570,6 +17687,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
+   "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
    "musicMode": "track",
@@ -17750,6 +17868,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "choices": [],
    "choiceDelaySeconds": 100,
+   "noTypewriter": true,
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_end",
    "autoAdvanceDelaySeconds": 108,
@@ -17770,6 +17889,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "headline": "NOBODY'S WITNESS",
     "recap": "Tokyo as a memory that is still happening."
    },
+   "noTypewriter": true,
    "autoNarrate": false
   }
  ]
