@@ -99,6 +99,22 @@
   },
   "montages": [
     {
+      "id": "nw_m18",
+      "title": "Montage — to the Hive, after the last train",
+      "after": "nw_s18",
+      "images": [
+        "/img/montage18/01.jpg",
+        "/img/montage18/02.jpg",
+        "/img/montage18/03.jpg",
+        "/img/montage18/04.jpg",
+        "/img/montage18/05.jpg",
+        "/img/montage18/06.jpg"
+      ],
+      "seconds": 5,
+      "musicUrl": "/audio/dark-hills-blues.mp3",
+      "musicLevel": 0.6
+    },
+    {
       "id": "nw_m52",
       "title": "Montage — the city, to her door",
       "after": "nw_s52",
