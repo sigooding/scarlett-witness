@@ -80,6 +80,17 @@ const bgFields = (bg, extra = {}) => bg.startsWith("gradient:")
   ? { background: bg, backgroundTransition: "fade-black", backgroundTransitionSpeed: 0.8, ...extra }
   : { background: bg, cinematic: camera(bg), backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.9, ...extra };
 let carry = null;
+/** Sentence-aware chunks of at most `max` characters (a single longer sentence stays whole). */
+const chunkText = (text, max = 140) => {
+  if (text.length <= max) return [text];
+  const sentences = text.split(/(?<=[.!?…]["”')]?)\s+/);
+  const out = [];
+  for (const sent of sentences) {
+    if (out.length && out[out.length - 1].length + 1 + sent.length <= max) out[out.length - 1] += " " + sent;
+    else out.push(sent);
+  }
+  return out;
+};
 const beat = (who, fields) => { const b = { id: `nw_b${++beatNo}`, characterId: charOf(who), ...fields }; if (carry) { b.sfxUrl = carry; carry = null; } return b; };
 const scenes = [];
 const first = film.scenes[0];
@@ -140,7 +151,9 @@ film.scenes.forEach((sc, si) => {
     else if (st.t === "black") { pendingBg = "gradient:linear-gradient(#000,#000)"; lastBg = pendingBg; }
     else if (st.t === "card") beats.push(beat(null, { text: st.text.toUpperCase(), silent: true, ...(pendingBg ? bgFields(pendingBg) : {}) })), (pendingBg = null);
     else if (st.t === "text" || st.t === "line") {
-      const pieces = st.t === "line" ? splitLine(st.text, st.voice) : [{ text: st.text }];
+      // Silent narration is cut at sentence ends into pieces of at most ~140 characters, so a long action paragraph never fills the screen
+      // (a recorded line stays whole: its take is one file).
+      const pieces = st.t === "line" ? splitLine(st.text, st.voice) : chunkText(st.text).map(text => ({ text }));
       pieces.forEach((p, pi) => {
         const f = { text: p.text };
         if (p.audioUrl) f.audioUrl = p.audioUrl; else if (st.t === "text") f.silent = true;
@@ -237,7 +250,8 @@ if (existsSync(editsFile)) {
   // dropBeats: { sceneId: [1-based beat numbers] } — beats taken out in the Studio (unwanted title cards)
   for (const [id, nums] of Object.entries(file.dropBeats ?? {})) {
     const sc = scenes.find(x => x.id === id);
-    if (sc) sc.dialogueBeats = sc.dialogueBeats.filter((_, k) => !nums.includes(k + 1));
+    // numbers are 1-based beat positions; strings are the beat's exact text (stable when long narration is split)
+    if (sc) sc.dialogueBeats = sc.dialogueBeats.filter((b, k) => !nums.includes(k + 1) && !nums.includes(b.text));
   }
   // beats: { sceneId: { last: {...fields} } } — the scene's last beat ("After this beat — cut to scene")
   for (const [id, byBeat] of Object.entries(file.beats ?? {})) {

@@ -930,7 +930,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b13",
      "characterId": "nw_narrator",
-     "text": "The rain thickens. She slips into the barbershop doorway, behind the scooter and the crates, and presses back into the shadow to shelter from the rain. The beer crates will hide her from anyone in the lane. She hopes. She isn't sure she wants to walk in at all.",
+     "text": "The rain thickens.",
      "silent": true,
      "background": "/film/img/s1/06-barbershop-doorway.jpg",
      "cinematic": {
@@ -951,6 +951,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
     },
     {
      "id": "nw_b14",
+     "characterId": "nw_narrator",
+     "text": "She slips into the barbershop doorway, behind the scooter and the crates, and presses back into the shadow to shelter from the rain.",
+     "silent": true
+    },
+    {
+     "id": "nw_b15",
+     "characterId": "nw_narrator",
+     "text": "The beer crates will hide her from anyone in the lane. She hopes. She isn't sure she wants to walk in at all.",
+     "silent": true
+    },
+    {
+     "id": "nw_b16",
      "characterId": "nw_narrator",
      "text": "Somewhere nearby, a pedestrian crossing CHIMES its old melody for an empty intersection. Over and over. No one crosses.",
      "silent": true,
@@ -973,15 +985,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/crossing.mp3"
     },
     {
-     "id": "nw_b15",
+     "id": "nw_b17",
      "characterId": "nw_narrator",
      "text": "Footsteps. Hurried. Uneven.",
      "silent": true
     },
     {
-     "id": "nw_b16",
+     "id": "nw_b18",
      "characterId": "nw_narrator",
-     "text": "An OLD MAN (70s) in a cheap raincoat and a grey flat cap comes in from the road, one hand pressed to his side as if something is hidden there. He keeps looking back.",
+     "text": "An OLD MAN (70s) in a cheap raincoat and a grey flat cap comes in from the road, one hand pressed to his side as if something is hidden there.",
      "silent": true,
      "background": "/film/img/s1/07-old-man.jpg",
      "cinematic": {
@@ -1001,13 +1013,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b17",
+     "id": "nw_b19",
+     "characterId": "nw_narrator",
+     "text": "He keeps looking back.",
+     "silent": true
+    },
+    {
+     "id": "nw_b20",
      "characterId": "nw_narrator",
      "text": "Mara sees him. Looks at the scrap.",
      "silent": true
     },
     {
-     "id": "nw_b18",
+     "id": "nw_b21",
      "characterId": "nw_narrator",
      "text": "She leans out of the shadow. The red bird clip catches the street light.",
      "silent": true,
@@ -1029,7 +1047,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b19",
+     "id": "nw_b22",
      "characterId": "nw_narrator",
      "text": "He sees it. He stops, six metres short of her. For one second his whole face changes.",
      "silent": true,
@@ -1051,7 +1069,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b20",
+     "id": "nw_b23",
      "characterId": "nw_narrator",
      "text": "Then he shakes his head. Barely. A man refusing a stranger. And he turns his back on her, slowly, to face the road.",
      "silent": true,
@@ -1073,9 +1091,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b21",
+     "id": "nw_b24",
      "characterId": "nw_narrator",
-     "text": "Behind him, at the mouth of the lane, headlights. A black sedan pulls across the opening and stops, blocking it. Its high beams shine straight down the lane, lighting the rain in long white columns.",
+     "text": "Behind him, at the mouth of the lane, headlights. A black sedan pulls across the opening and stops, blocking it.",
      "silent": true,
      "background": "/film/img/s1/332-the-sedan-blocks-the-lane.jpg",
      "cinematic": {
@@ -1095,15 +1113,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b22",
+     "id": "nw_b25",
+     "characterId": "nw_narrator",
+     "text": "Its high beams shine straight down the lane, lighting the rain in long white columns.",
+     "silent": true
+    },
+    {
+     "id": "nw_b26",
      "characterId": "nw_narrator",
      "text": "Two MEN get out and walk in, black silhouettes against the glare. Black clothes. Masks. They don't run.",
      "silent": true
     },
     {
-     "id": "nw_b23",
+     "id": "nw_b27",
      "characterId": "nw_narrator",
-     "text": "The old man doesn't move. He stands between them and Mara's doorway, a small figure in the white light, his shadow stretching long down the lane toward her.",
+     "text": "The old man doesn't move.",
      "silent": true,
      "background": "/film/img/s1/333-the-white-light.jpg",
      "cinematic": {
@@ -1123,13 +1147,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b24",
+     "id": "nw_b28",
+     "characterId": "nw_narrator",
+     "text": "He stands between them and Mara's doorway, a small figure in the white light, his shadow stretching long down the lane toward her.",
+     "silent": true
+    },
+    {
+     "id": "nw_b29",
      "characterId": "nw_old_man",
      "text": "After twenty years.",
      "audioUrl": "/film/voice/s1/09-oldman-twenty-years.mp3"
     },
     {
-     "id": "nw_b25",
+     "id": "nw_b30",
      "characterId": "nw_narrator",
      "text": "A suppressed SHOT. Flat and ordinary, like a door closing.",
      "silent": true,
@@ -1152,13 +1182,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/suppressed-shot.mp3"
     },
     {
-     "id": "nw_b26",
+     "id": "nw_b31",
      "characterId": "nw_narrator",
      "text": "The old man folds onto the street.",
      "silent": true
     },
     {
-     "id": "nw_b27",
+     "id": "nw_b32",
      "characterId": "nw_narrator",
      "text": "One of the masked men touches his ear.",
      "silent": true,
@@ -1180,15 +1210,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b28",
+     "id": "nw_b33",
      "characterId": "nw_masked_man",
      "text": "First position done. Moving to second.",
      "audioUrl": "/film/voice/s1/12-maskedman-first-position-done-moving-to-second.mp3"
     },
     {
-     "id": "nw_b29",
+     "id": "nw_b34",
      "characterId": "nw_narrator",
-     "text": "They walk back to the sedan. They don't hurry. They never look at the doorway. It pulls away and takes the long way round the block, its high beams swinging off the lane.",
+     "text": "They walk back to the sedan. They don't hurry. They never look at the doorway.",
      "silent": true,
      "background": "/film/img/s1/13-taillights-gone.jpg",
      "cinematic": {
@@ -1205,12 +1235,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b35",
+     "characterId": "nw_narrator",
+     "text": "It pulls away and takes the long way round the block, its high beams swinging off the lane.",
+     "silent": true,
      "sfxUrl": "/film/sfx/car-driving-away.mp3",
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b30",
+     "id": "nw_b36",
      "characterId": "nw_narrator",
      "text": "Mara runs to the old man. Her bag slides off her shoulder and spills across the wet street. She doesn't notice.",
      "silent": true,
@@ -1232,13 +1268,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b31",
+     "id": "nw_b37",
      "characterId": "nw_mara",
      "text": "Mr. Sakai?",
      "audioUrl": "/film/voice/s1/14-mara-trembling-voice-mr-sakai.mp3"
     },
     {
-     "id": "nw_b32",
+     "id": "nw_b38",
      "characterId": "nw_mara",
      "text": "It's okay — I'll get someone — Ambulance. I'll call. Ambulance.",
      "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3",
@@ -1260,7 +1296,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.6
     },
     {
-     "id": "nw_b33",
+     "id": "nw_b39",
      "characterId": "nw_narrator",
      "text": "His hand comes out of his coat with something small and brass in it. He presses it into her palm and closes her fingers over it.",
      "silent": true,
@@ -1282,25 +1318,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b34",
+     "id": "nw_b40",
      "characterId": "nw_old_man",
      "text": "Don't let them have it.",
      "audioUrl": "/film/voice/s1/15-oldman-strained-don-t-let-them-have.mp3"
     },
     {
-     "id": "nw_b35",
+     "id": "nw_b41",
      "characterId": "nw_mara",
      "text": "Have what? I don't —",
      "audioUrl": "/film/voice/s1/15-mara-bewildered-have-what-i-don-t.mp3"
     },
     {
-     "id": "nw_b36",
+     "id": "nw_b42",
      "characterId": "nw_narrator",
      "text": "He's gone. Rain in his open eyes.",
      "silent": true
     },
     {
-     "id": "nw_b37",
+     "id": "nw_b43",
      "characterId": "nw_narrator",
      "text": "In her hand: a small brass key on a stamped number tag.",
      "silent": true,
@@ -1322,7 +1358,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b38",
+     "id": "nw_b44",
      "characterId": "nw_narrator",
      "text": "At the other end of the street, the amber glow of a bar. Mara runs for it.",
      "silent": true,
@@ -1344,7 +1380,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b39",
+     "id": "nw_b45",
      "characterId": "nw_narrator",
      "text": "Behind her, on the street: her purse, open in the rain.",
      "silent": true,
@@ -1394,9 +1430,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b40",
+     "id": "nw_b46",
      "characterId": "nw_narrator",
-     "text": "Six stools and a counter. Shelves of bottles glowing amber. On a high shelf, an old CRT television plays a late-night variety show, sound low. Rain drums on the roof.",
+     "text": "Six stools and a counter. Shelves of bottles glowing amber.",
      "silent": true,
      "background": "/film/img/s2/19-the-bar.jpg",
      "cinematic": {
@@ -1416,9 +1452,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b41",
+     "id": "nw_b47",
      "characterId": "nw_narrator",
-     "text": "A man in a raincoat on the far stool, a notebook beside a beer gone flat: the JOURNALIST (40s). Nobody behind the counter. Crates clatter somewhere in the back.",
+     "text": "On a high shelf, an old CRT television plays a late-night variety show, sound low. Rain drums on the roof.",
+     "silent": true
+    },
+    {
+     "id": "nw_b48",
+     "characterId": "nw_narrator",
+     "text": "A man in a raincoat on the far stool, a notebook beside a beer gone flat: the JOURNALIST (40s). Nobody behind the counter.",
      "silent": true,
      "background": "/film/img/s2/20-the-journalist.jpg",
      "cinematic": {
@@ -1438,7 +1480,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b42",
+     "id": "nw_b49",
+     "characterId": "nw_narrator",
+     "text": "Crates clatter somewhere in the back.",
+     "silent": true
+    },
+    {
+     "id": "nw_b50",
      "characterId": "nw_narrator",
      "text": "Mara bursts in, the key in her fist.",
      "silent": true,
@@ -1460,13 +1508,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b43",
+     "id": "nw_b51",
      "characterId": "nw_journalist",
      "text": "Miss Voss?",
      "audioUrl": "/film/voice/s2/21-journalist-startled-miss-voss.mp3"
     },
     {
-     "id": "nw_b44",
+     "id": "nw_b52",
      "characterId": "nw_narrator",
      "text": "He knows her name. Before she can answer, the door opens behind her. Rain noise.",
      "silent": true,
@@ -1488,14 +1536,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b45",
+     "id": "nw_b53",
      "characterId": "nw_masked_man",
      "text": "Shitsurei shimasu.",
      "audioUrl": "/film/voice/s2/25-maskedman-shitsurei-shimasu.mp3",
      "expression": "in japanese"
     },
     {
-     "id": "nw_b46",
+     "id": "nw_b54",
      "characterId": "nw_narrator",
      "text": "Mara is behind the counter before she knows she's moved.",
      "silent": true,
@@ -1517,13 +1565,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b47",
+     "id": "nw_b55",
      "characterId": "nw_journalist",
      "text": "Where is he?",
      "audioUrl": "/film/voice/s2/25-journalist-where-is-he.mp3"
     },
     {
-     "id": "nw_b48",
+     "id": "nw_b56",
      "characterId": "nw_narrator",
      "text": "Two shots. On the high shelf, the television audience laughs.",
      "silent": true,
@@ -1546,9 +1594,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/shot2.mp3"
     },
     {
-     "id": "nw_b49",
+     "id": "nw_b57",
      "characterId": "nw_narrator",
-     "text": "Behind the counter, Mara folds herself into the gap between the crates and the ice bin. A hair clip slides out of her wet hair and skitters under the shelf. She doesn't breathe.",
+     "text": "Behind the counter, Mara folds herself into the gap between the crates and the ice bin.",
      "silent": true,
      "background": "/film/img/s2/308-clip-under-the-shelf.jpg",
      "cinematic": {
@@ -1568,13 +1616,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b50",
+     "id": "nw_b58",
+     "characterId": "nw_narrator",
+     "text": "A hair clip slides out of her wet hair and skitters under the shelf. She doesn't breathe.",
+     "silent": true
+    },
+    {
+     "id": "nw_b59",
      "characterId": "nw_masked_man",
      "text": "Second position done.",
      "audioUrl": "/film/voice/s2/27-maskedman-second-position-done.mp3"
     },
     {
-     "id": "nw_b51",
+     "id": "nw_b60",
      "characterId": "nw_narrator",
      "text": "He takes one step toward the counter. A voice in his earpiece: one word. He turns and goes.",
      "silent": true,
@@ -1596,7 +1650,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b52",
+     "id": "nw_b61",
      "characterId": "nw_narrator",
      "text": "The door swings shut. The television laughs again.",
      "silent": true,
@@ -1618,7 +1672,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b55",
+     "id": "nw_b64",
      "characterId": "nw_narrator",
      "text": "MAIN TITLES",
      "silent": true,
@@ -1649,15 +1703,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b56",
+     "id": "nw_b65",
      "characterId": "nw_narrator",
      "text": "THREE DAYS LATER",
      "silent": true
     },
     {
-     "id": "nw_b57",
+     "id": "nw_b66",
      "characterId": "nw_narrator",
-     "text": "An old four-story apartment block squeezed between newer buildings. Laundry left out on a balcony, getting rained on. A train slides past on the elevated line behind it, windows lit, and the whole building trembles faintly.",
+     "text": "An old four-story apartment block squeezed between newer buildings. Laundry left out on a balcony, getting rained on.",
      "silent": true,
      "background": "/film/img/s3/30-the-elevated-line.jpg",
      "cinematic": {
@@ -1677,7 +1731,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b58",
+     "id": "nw_b67",
+     "characterId": "nw_narrator",
+     "text": "A train slides past on the elevated line behind it, windows lit, and the whole building trembles faintly.",
+     "silent": true
+    },
+    {
+     "id": "nw_b68",
      "characterId": "nw_narrator",
      "text": "One window on the third floor is lit.",
      "silent": true,
@@ -1725,9 +1785,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b59",
+     "id": "nw_b69",
      "characterId": "nw_narrator",
-     "text": "Small and tidy. Grey light through rain-streaked glass. A smartphone on the table; an old boxy television in the corner. Nothing here quite belongs to one decade.",
+     "text": "Small and tidy. Grey light through rain-streaked glass. A smartphone on the table; an old boxy television in the corner.",
      "silent": true,
      "background": "/film/img/s4/33-the-apartment.jpg",
      "cinematic": {
@@ -1747,7 +1807,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b60",
+     "id": "nw_b70",
+     "characterId": "nw_narrator",
+     "text": "Nothing here quite belongs to one decade.",
+     "silent": true
+    },
+    {
+     "id": "nw_b71",
      "characterId": "nw_narrator",
      "text": "By the door, in the umbrella stand: a pale blue umbrella. Bone dry.",
      "silent": true,
@@ -1769,9 +1835,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b61",
+     "id": "nw_b72",
      "characterId": "nw_narrator",
-     "text": "On a shelf, one framed photograph, its colors gone warm and faded. A Tokyo street, twenty years ago. An American man in a rumpled suit, smiling, holding the hands of two small girls: VERA (9), serious, and MARA (4), mid-laugh. Behind them, the sign of a noodle shop.",
+     "text": "On a shelf, one framed photograph, its colors gone warm and faded. A Tokyo street, twenty years ago.",
      "silent": true,
      "background": "/film/img/s4/35-the-photograph.jpg",
      "cinematic": {
@@ -1791,7 +1857,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b62",
+     "id": "nw_b73",
+     "characterId": "nw_narrator",
+     "text": "An American man in a rumpled suit, smiling, holding the hands of two small girls: VERA (9), serious, and MARA (4), mid-laugh.",
+     "silent": true
+    },
+    {
+     "id": "nw_b74",
+     "characterId": "nw_narrator",
+     "text": "Behind them, the sign of a noodle shop.",
+     "silent": true
+    },
+    {
+     "id": "nw_b75",
      "characterId": "nw_narrator",
      "text": "VERA VOSS (29) sits at the low table. Two cups. Hers holds cold tea. The other is empty and clean, set out as though someone is expected.",
      "silent": true,
@@ -1813,19 +1891,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b63",
+     "id": "nw_b76",
      "characterId": "nw_narrator",
-     "text": "Through the thin wall, a neighbour's radio plays an old ballad, muffled: a woman's voice, a slow saxophone, a song from another decade. Vera doesn't seem to hear it.",
+     "text": "Through the thin wall, a neighbour's radio plays an old ballad, muffled: a woman's voice, a slow saxophone, a song from another decade.",
      "silent": true
     },
     {
-     "id": "nw_b64",
+     "id": "nw_b77",
+     "characterId": "nw_narrator",
+     "text": "Vera doesn't seem to hear it.",
+     "silent": true
+    },
+    {
+     "id": "nw_b78",
      "characterId": "nw_narrator",
      "text": "Her phone lies face up in front of her. She calls. Waits.",
      "silent": true
     },
     {
-     "id": "nw_b65",
+     "id": "nw_b79",
      "characterId": "nw_mara",
      "text": "It's Mara. You know what to do.",
      "audioUrl": "/film/voice/s4/37-mara-bright-it-s-mara-you-know.mp3",
@@ -1848,13 +1932,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b66",
+     "id": "nw_b80",
      "characterId": "nw_narrator",
      "text": "BEEP.",
      "silent": true
     },
     {
-     "id": "nw_b67",
+     "id": "nw_b81",
      "characterId": "nw_narrator",
      "text": "Vera opens her mouth. For a moment, nothing.",
      "silent": true,
@@ -1876,7 +1960,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b68",
+     "id": "nw_b82",
      "characterId": "nw_vera",
      "text": "It's me again. I'm not angry anymore. I wasn't really angry then, either. Whatever that man wants, it doesn't matter.",
      "audioUrl": "/film/voice/s4/39-vera-tired-it-s-me-again-i.mp3",
@@ -1898,25 +1982,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b69",
+     "id": "nw_b83",
      "characterId": "nw_vera",
      "text": "I just — You left your umbrella. You'll get soaked.",
      "audioUrl": "/film/voice/s4/39-vera-voice-breaking-you-left-your-umbrella.mp3"
     },
     {
-     "id": "nw_b70",
+     "id": "nw_b84",
      "characterId": "nw_vera",
      "text": "Just call me. You don't have to say anything. Just call, so I know.",
      "audioUrl": "/film/voice/s4/39-vera-pleading-just-call-me-you-don.mp3"
     },
     {
-     "id": "nw_b71",
+     "id": "nw_b85",
      "characterId": "nw_narrator",
      "text": "She hangs up.",
      "silent": true
     },
     {
-     "id": "nw_b72",
+     "id": "nw_b86",
      "characterId": "nw_narrator",
      "text": "The old television murmurs to itself.",
      "silent": true,
@@ -1938,14 +2022,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b73",
+     "id": "nw_b87",
      "characterId": "nw_news_reporter",
      "text": "...police in Kanda are investigating a double shooting in a small bar in the early hours of Sunday. Two men were killed. Officers say it appears to be a dispute between criminal groups. No arrests have been made...",
      "audioUrl": "/film/voice/s4/40-newsreporter-measured-police-in-kanda-are-investigating.mp3",
      "expression": "on tv"
     },
     {
-     "id": "nw_b74",
+     "id": "nw_b88",
      "characterId": "nw_weather_announcer",
      "text": "...rain continuing through the rest of the week...",
      "audioUrl": "/film/voice/s4/40-weatherannouncer-rain-continuing-through-the-rest-of.mp3",
@@ -1968,7 +2052,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b75",
+     "id": "nw_b89",
      "characterId": "nw_narrator",
      "text": "She looks at the umbrella by the door. At the clean, empty cup. At the photograph.",
      "silent": true,
@@ -1990,13 +2074,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b76",
+     "id": "nw_b90",
      "characterId": "nw_narrator",
      "text": "She stands. Puts on her coat. Hesitates at the door.",
      "silent": true
     },
     {
-     "id": "nw_b77",
+     "id": "nw_b91",
      "characterId": "nw_narrator",
      "text": "Then she takes the blue umbrella. Mara's umbrella.",
      "silent": true,
@@ -2018,7 +2102,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b78",
+     "id": "nw_b92",
      "characterId": "nw_narrator",
      "text": "The door closes behind her. Through the wall, the song on the neighbour's radio ends. A DJ murmurs something. Rain.",
      "silent": true,
@@ -2049,9 +2133,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b79",
+     "id": "nw_b93",
      "characterId": "nw_narrator",
-     "text": "Fluorescent tubes, one of them flickering. A long counter. Faded posters about pickpockets and traffic safety. An old fax machine beside a new flat monitor. A wall clock that runs a minute fast.",
+     "text": "Fluorescent tubes, one of them flickering. A long counter. Faded posters about pickpockets and traffic safety.",
      "silent": true,
      "background": "/film/img/s5/43-the-front-counter.jpg",
      "cinematic": {
@@ -2071,7 +2155,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b80",
+     "id": "nw_b94",
+     "characterId": "nw_narrator",
+     "text": "An old fax machine beside a new flat monitor. A wall clock that runs a minute fast.",
+     "silent": true
+    },
+    {
+     "id": "nw_b95",
      "characterId": "nw_narrator",
      "text": "Vera stands at the counter, the closed blue umbrella dripping onto the linoleum.",
      "silent": true,
@@ -2093,9 +2183,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b81",
+     "id": "nw_b96",
      "characterId": "nw_narrator",
-     "text": "A YOUNG OFFICER takes her details with polite boredom. Vera's Japanese is fluent, but careful and slightly formal — learned as a child, relearned as an adult.",
+     "text": "A YOUNG OFFICER takes her details with polite boredom.",
      "silent": true,
      "background": "/film/img/s5/45-the-young-officer.jpg",
      "cinematic": {
@@ -2115,31 +2205,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b82",
+     "id": "nw_b97",
+     "characterId": "nw_narrator",
+     "text": "Vera's Japanese is fluent, but careful and slightly formal — learned as a child, relearned as an adult.",
+     "silent": true
+    },
+    {
+     "id": "nw_b98",
      "characterId": "nw_young_officer",
      "text": "Your sister's age?",
      "audioUrl": "/film/voice/s5/45-youngofficer-your-sister-s-age.mp3"
     },
     {
-     "id": "nw_b83",
+     "id": "nw_b99",
      "characterId": "nw_vera",
      "text": "Twenty-four.",
      "audioUrl": "/film/voice/s5/45-vera-twenty-four.mp3"
     },
     {
-     "id": "nw_b84",
+     "id": "nw_b100",
      "characterId": "nw_young_officer",
      "text": "Adults sometimes go away for a few days. Especially foreigners. It's usually —",
      "audioUrl": "/film/voice/s5/45-youngofficer-adults-sometimes-go-away-for-a.mp3"
     },
     {
-     "id": "nw_b85",
+     "id": "nw_b101",
      "characterId": "nw_vera",
      "text": "She doesn't. Not without telling me.",
      "audioUrl": "/film/voice/s5/45-vera-firmly-she-doesn-t-not-without.mp3"
     },
     {
-     "id": "nw_b86",
+     "id": "nw_b102",
      "characterId": "nw_narrator",
      "text": "He types the name. ON THE MONITOR: MARA VOSS.",
      "silent": true,
@@ -2161,13 +2257,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b87",
+     "id": "nw_b103",
      "characterId": "nw_narrator",
      "text": "He stops typing.",
      "silent": true
     },
     {
-     "id": "nw_b88",
+     "id": "nw_b104",
      "characterId": "nw_narrator",
      "text": "He looks at the screen a moment too long. Then he picks up the desk phone and turns away from her.",
      "silent": true,
@@ -2189,7 +2285,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b89",
+     "id": "nw_b105",
      "characterId": "nw_young_officer",
      "text": "Yes. That name. Yes — the sister is here now.",
      "audioUrl": "/film/voice/s5/48-youngofficer-guarded-yes-that-name-yes-the.mp3",
@@ -2211,13 +2307,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b90",
+     "id": "nw_b106",
      "characterId": "nw_narrator",
      "text": "He hangs up. His manner has changed. Politer.",
      "silent": true
     },
     {
-     "id": "nw_b91",
+     "id": "nw_b107",
      "characterId": "nw_young_officer",
      "text": "Someone will be right with you.",
      "audioUrl": "/film/voice/s5/50-youngofficer-politely-someone-will-be-right-with.mp3",
@@ -2239,7 +2335,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b92",
+     "id": "nw_b108",
      "characterId": "nw_narrator",
      "text": "Vera looks at him. He doesn't meet her eyes.",
      "silent": true,
@@ -2286,7 +2382,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b93",
+     "id": "nw_b109",
      "characterId": "nw_narrator",
      "text": "Small. A table, two chairs, a box of tissues nobody has touched in years. Rain on a frosted window.",
      "silent": true,
@@ -2308,7 +2404,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b94",
+     "id": "nw_b110",
      "characterId": "nw_narrator",
      "text": "DETECTIVE ISHIDA (50s) sets a paper cup of tea in front of Vera. Gentle. Unhurried. Tired, in a way that looks like decency.",
      "silent": true,
@@ -2330,7 +2426,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b95",
+     "id": "nw_b111",
      "characterId": "nw_ishida",
      "text": "You must be cold.",
      "audioUrl": "/film/voice/s6/54-ishida-gently-you-must-be-cold.mp3",
@@ -2352,7 +2448,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b96",
+     "id": "nw_b112",
      "characterId": "nw_narrator",
      "text": "His English is excellent.",
      "silent": true,
@@ -2374,7 +2470,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b97",
+     "id": "nw_b113",
      "characterId": "nw_vera",
      "text": "I speak Japanese.",
      "audioUrl": "/film/voice/s6/55-vera-coolly-i-speak-japanese.mp3",
@@ -2396,31 +2492,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b98",
+     "id": "nw_b114",
      "characterId": "nw_ishida",
      "text": "Of course. But this is a difficult thing. It is easier in your own language.",
      "audioUrl": "/film/voice/s6/55-ishida-of-course-but-this-is-a.mp3"
     },
     {
-     "id": "nw_b99",
+     "id": "nw_b115",
      "characterId": "nw_narrator",
      "text": "A small beat. She lets it go. For now.",
      "silent": true
     },
     {
-     "id": "nw_b100",
+     "id": "nw_b116",
      "characterId": "nw_vera",
      "text": "The officer made a phone call the moment he had my sister's name. Then you came.",
      "audioUrl": "/film/voice/s6/55-vera-the-officer-looked-at-the-screen.mp3"
     },
     {
-     "id": "nw_b101",
+     "id": "nw_b117",
      "characterId": "nw_ishida",
      "text": "A foreign passport. We like to take care with these things.",
      "audioUrl": "/film/voice/s6/55-ishida-nothing-is-wrong-we-just-like.mp3"
     },
     {
-     "id": "nw_b102",
+     "id": "nw_b118",
      "characterId": "nw_narrator",
      "text": "He slides a form across the table, and a pen. MISSING PERSON, in Japanese, with an English line beneath.",
      "silent": true,
@@ -2442,13 +2538,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b103",
+     "id": "nw_b119",
      "characterId": "nw_ishida",
      "text": "Name. Height. What she was wearing, if you know.",
      "audioUrl": "/film/voice/s6/321-ishida-name-height-what-she-was-wearing.mp3"
     },
     {
-     "id": "nw_b104",
+     "id": "nw_b120",
      "characterId": "nw_narrator",
      "text": "She fills it in. Her handwriting is fast and square. Ishida reads it upside down as she writes, without seeming to.",
      "silent": true,
@@ -2470,49 +2566,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b105",
+     "id": "nw_b121",
      "characterId": "nw_ishida",
      "text": "Voss. You grew up here?",
      "audioUrl": "/film/voice/s6/322-ishida-voss-you-grew-up-here.mp3"
     },
     {
-     "id": "nw_b106",
+     "id": "nw_b122",
      "characterId": "nw_vera",
      "text": "Until I was nine.",
      "audioUrl": "/film/voice/s6/56-vera-until-i-was-nine-what-s.mp3"
     },
     {
-     "id": "nw_b107",
+     "id": "nw_b123",
      "characterId": "nw_ishida",
      "text": "And your parents? They are in America?",
      "audioUrl": "/film/voice/s6/322-ishida-and-your-parents-they-are-in.mp3"
     },
     {
-     "id": "nw_b108",
+     "id": "nw_b124",
      "characterId": "nw_vera",
      "text": "My mother is. My father died.",
      "audioUrl": "/film/voice/s6/322-vera-my-mother-is-my-father-died.mp3"
     },
     {
-     "id": "nw_b109",
+     "id": "nw_b125",
      "characterId": "nw_ishida",
      "text": "Here?",
      "audioUrl": "/film/voice/s6/322-ishida-here.mp3"
     },
     {
-     "id": "nw_b110",
+     "id": "nw_b126",
      "characterId": "nw_vera",
      "text": "Here. When I was a child.",
      "audioUrl": "/film/voice/s6/322-vera-here-when-i-was-a-child.mp3"
     },
     {
-     "id": "nw_b111",
+     "id": "nw_b127",
      "characterId": "nw_ishida",
      "text": "I'm sorry. Did your sister ever talk about him?",
      "audioUrl": "/film/voice/s6/322-ishida-gently-i-m-sorry-pause-did.mp3"
     },
     {
-     "id": "nw_b112",
+     "id": "nw_b128",
      "characterId": "nw_narrator",
      "text": "The pen stops.",
      "silent": true,
@@ -2534,27 +2630,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b113",
+     "id": "nw_b129",
      "characterId": "nw_vera",
      "text": "She was four. She doesn't remember him.",
      "audioUrl": "/film/voice/s6/323-vera-evenly-she-was-four-she-doesn.mp3"
     },
     {
-     "id": "nw_b114",
+     "id": "nw_b130",
      "characterId": "nw_narrator",
      "text": "It is not quite an answer. Ishida lets it be one.",
      "silent": true
     },
     {
-     "id": "nw_b115",
+     "id": "nw_b131",
      "characterId": "nw_ishida",
      "text": "A recent photograph?",
      "audioUrl": "/film/voice/s6/324-ishida-a-recent-photograph.mp3"
     },
     {
-     "id": "nw_b116",
+     "id": "nw_b132",
      "characterId": "nw_narrator",
-     "text": "Vera takes her wallet from her bag. From behind her card, a small square passport photo: MARA, unsmiling for once, a strand of hair across her eyes.",
+     "text": "Vera takes her wallet from her bag.",
      "silent": true,
      "background": "/film/img/s6/324-the-passport-photo.jpg",
      "cinematic": {
@@ -2574,19 +2670,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b117",
+     "id": "nw_b133",
+     "characterId": "nw_narrator",
+     "text": "From behind her card, a small square passport photo: MARA, unsmiling for once, a strand of hair across her eyes.",
+     "silent": true
+    },
+    {
+     "id": "nw_b134",
      "characterId": "nw_vera",
      "text": "She gave me two when she renewed. In case.",
      "audioUrl": "/film/voice/s6/324-vera-she-gave-me-two-when-she.mp3"
     },
     {
-     "id": "nw_b118",
+     "id": "nw_b135",
      "characterId": "nw_ishida",
      "text": "In case.",
      "audioUrl": "/film/voice/s6/324-ishida-in-case.mp3"
     },
     {
-     "id": "nw_b119",
+     "id": "nw_b136",
      "characterId": "nw_narrator",
      "text": "He takes it by the edges. Looks at it a moment. Sets it on the form, squares it to the corner.",
      "silent": true,
@@ -2608,13 +2710,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b120",
+     "id": "nw_b137",
      "characterId": "nw_ishida",
      "text": "When did you last see her?",
      "audioUrl": "/film/voice/s6/56-ishida-when-did-you-last-see-your.mp3"
     },
     {
-     "id": "nw_b121",
+     "id": "nw_b138",
      "characterId": "nw_vera",
      "text": "Thursday. At my apartment. We had dinner.",
      "audioUrl": "/film/voice/s6/56-vera-three-days-ago-at-my-apartment.mp3",
@@ -2636,25 +2738,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b122",
+     "id": "nw_b139",
      "characterId": "nw_ishida",
      "text": "And how did she seem?",
      "audioUrl": "/film/voice/s6/57-ishida-and-how-did-she-seem.mp3"
     },
     {
-     "id": "nw_b123",
+     "id": "nw_b140",
      "characterId": "nw_narrator",
      "text": "Vera hesitates.",
      "silent": true
     },
     {
-     "id": "nw_b124",
+     "id": "nw_b141",
      "characterId": "nw_vera",
      "text": "Normal.",
      "audioUrl": "/film/voice/s6/57-vera-hesitantly-normal.mp3"
     },
     {
-     "id": "nw_b125",
+     "id": "nw_b142",
      "characterId": "nw_narrator",
      "text": "Ishida waits, kindly, as if he knows there is more. She doesn't give it.",
      "silent": true,
@@ -2676,25 +2778,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b126",
+     "id": "nw_b143",
      "characterId": "nw_ishida",
      "text": "Did she ever speak of your family? Anything she had been thinking about?",
      "audioUrl": "/film/voice/s6/57-ishida-did-she-ever-speak-of-your.mp3"
     },
     {
-     "id": "nw_b127",
+     "id": "nw_b144",
      "characterId": "nw_vera",
      "text": "No.",
      "audioUrl": "/film/voice/s6/57-vera-no.mp3"
     },
     {
-     "id": "nw_b128",
+     "id": "nw_b145",
      "characterId": "nw_ishida",
      "text": "Did she mention Kanda? Friends there? Work?",
      "audioUrl": "/film/voice/s6/58-ishida-did-she-ever-mention-kanda-friends.mp3"
     },
     {
-     "id": "nw_b129",
+     "id": "nw_b146",
      "characterId": "nw_vera",
      "text": "Kanda? No. Why —",
      "audioUrl": "/film/voice/s6/58-vera-kanda-no-why.mp3",
@@ -2716,49 +2818,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b130",
+     "id": "nw_b147",
      "characterId": "nw_narrator",
      "text": "She stops. Something arrives in her face.",
      "silent": true
     },
     {
-     "id": "nw_b131",
+     "id": "nw_b148",
      "characterId": "nw_vera",
      "text": "The shootings. In Kanda. It was on the news.",
      "audioUrl": "/film/voice/s6/58-vera-realising-the-shootings-in-kanda-it.mp3"
     },
     {
-     "id": "nw_b132",
+     "id": "nw_b149",
      "characterId": "nw_narrator",
      "text": "Ishida says nothing. That is its own answer.",
      "silent": true
     },
     {
-     "id": "nw_b133",
+     "id": "nw_b150",
      "characterId": "nw_vera",
      "text": "Is she hurt?",
      "audioUrl": "/film/voice/s6/58-vera-is-she-hurt.mp3"
     },
     {
-     "id": "nw_b134",
+     "id": "nw_b151",
      "characterId": "nw_ishida",
      "text": "We have no reason to believe she is hurt.",
      "audioUrl": "/film/voice/s6/58-ishida-we-have-no-reason-to-believe.mp3"
     },
     {
-     "id": "nw_b135",
+     "id": "nw_b152",
      "characterId": "nw_vera",
      "text": "That's not the same as saying she isn't.",
      "audioUrl": "/film/voice/s6/58-vera-that-s-not-the-same-as.mp3"
     },
     {
-     "id": "nw_b136",
+     "id": "nw_b153",
      "characterId": "nw_ishida",
      "text": "Miss Voss —",
      "audioUrl": "/film/voice/s6/59-ishida-miss-voss.mp3"
     },
     {
-     "id": "nw_b137",
+     "id": "nw_b154",
      "characterId": "nw_vera",
      "text": "Is she dead?",
      "audioUrl": "/film/voice/s6/59-vera-urgently-is-she-dead.mp3",
@@ -2780,25 +2882,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b138",
+     "id": "nw_b155",
      "characterId": "nw_ishida",
      "text": "We have no reason to believe so.",
      "audioUrl": "/film/voice/s6/59-ishida-no-reason-she-is-dead.mp3"
     },
     {
-     "id": "nw_b139",
+     "id": "nw_b156",
      "characterId": "nw_narrator",
      "text": "She hears it: the careful, official shape of the sentence. Her hand tightens around the paper cup.",
      "silent": true
     },
     {
-     "id": "nw_b140",
+     "id": "nw_b157",
      "characterId": "nw_vera",
      "text": "Stop saying that. Stop saying what you have no reason to believe and tell me what you know.",
      "audioUrl": "/film/voice/s6/59-vera-angry-stop-saying-that-stop-saying.mp3"
     },
     {
-     "id": "nw_b141",
+     "id": "nw_b158",
      "characterId": "nw_narrator",
      "text": "The cup crumples in her fist. Hot tea runs over her fingers and onto the table, across the corner of the form. She doesn't seem to feel it.",
      "silent": true,
@@ -2820,37 +2922,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b142",
+     "id": "nw_b159",
      "characterId": "nw_ishida",
      "text": "What I know is that two men were killed in Kanda, and that it is a matter between criminal groups. And that your sister is a young woman who has not called her sister for three days. Those may be two separate things.",
      "audioUrl": "/film/voice/s6/59-ishida-what-i-know-is-that-two.mp3"
     },
     {
-     "id": "nw_b143",
+     "id": "nw_b160",
      "characterId": "nw_vera",
      "text": "May be.",
      "audioUrl": "/film/voice/s6/60-vera-may-be.mp3"
     },
     {
-     "id": "nw_b144",
+     "id": "nw_b161",
      "characterId": "nw_ishida",
      "text": "May be.",
      "audioUrl": "/film/voice/s6/60-ishida-may-be.mp3"
     },
     {
-     "id": "nw_b145",
+     "id": "nw_b162",
      "characterId": "nw_narrator",
      "text": "Ishida takes a tissue from the box, the first in years, and offers it. She doesn't take it. He sets it down beside her hand.",
      "silent": true
     },
     {
-     "id": "nw_b146",
+     "id": "nw_b163",
      "characterId": "nw_narrator",
      "text": "When she speaks again, it's in Japanese. Low. Precise. Every word placed.",
      "silent": true
     },
     {
-     "id": "nw_b147",
+     "id": "nw_b164",
      "characterId": "nw_vera",
      "text": "She is my sister. I have been calling her for days. If you know where she is, tell me.",
      "audioUrl": "/film/voice/s6/61-vera-low-controlled-she-is-my-sister.mp3",
@@ -2872,37 +2974,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b148",
+     "id": "nw_b165",
      "characterId": "nw_narrator",
      "text": "Ishida looks at her a long moment. When he answers, it is in Japanese too, for the first time. Formal. A door closing.",
      "silent": true
     },
     {
-     "id": "nw_b149",
+     "id": "nw_b166",
      "characterId": "nw_ishida",
      "text": "I do not know where she is. That is the truth. And if, on the off chance, she did see something she should not have, then the safest place for her is wherever she is now. And the safest thing you can do is nothing.",
      "audioUrl": "/film/voice/s6/61-ishida-quietly-i-do-not-know-where.mp3"
     },
     {
-     "id": "nw_b150",
+     "id": "nw_b167",
      "characterId": "nw_narrator",
      "text": "Silence. Rain on the frosted window.",
      "silent": true
     },
     {
-     "id": "nw_b151",
+     "id": "nw_b168",
      "characterId": "nw_narrator",
      "text": "He switches back to English, gentle again, as if the last minute didn't happen.",
      "silent": true
     },
     {
-     "id": "nw_b152",
+     "id": "nw_b169",
      "characterId": "nw_ishida",
      "text": "Go home, Miss Voss. Keep your phone on. If she calls, call me first. Any hour.",
      "audioUrl": "/film/voice/s6/62-ishida-go-home-miss-voss-keep-your.mp3"
     },
     {
-     "id": "nw_b153",
+     "id": "nw_b170",
      "characterId": "nw_narrator",
      "text": "He slides his card across the wet table. She looks at it. Then takes it. Stands. Picks up the blue umbrella.",
      "silent": true,
@@ -2924,31 +3026,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b154",
+     "id": "nw_b171",
      "characterId": "nw_narrator",
      "text": "At the door:",
      "silent": true
     },
     {
-     "id": "nw_b155",
+     "id": "nw_b172",
      "characterId": "nw_vera",
      "text": "You would have told me if she was dead. Wouldn't you?",
      "audioUrl": "/film/voice/s6/62-vera-you-would-have-told-me-if.mp3"
     },
     {
-     "id": "nw_b156",
+     "id": "nw_b173",
      "characterId": "nw_ishida",
      "text": "Of course, I'm sure we will find her, you have my word.",
      "audioUrl": "/film/voice/s6/62-ishida-of-course.mp3"
     },
     {
-     "id": "nw_b157",
+     "id": "nw_b174",
      "characterId": "nw_narrator",
      "text": "She looks at him. She can't tell. She goes. The door closes behind her.",
      "silent": true
     },
     {
-     "id": "nw_b158",
+     "id": "nw_b175",
      "characterId": "nw_narrator",
      "text": "Ishida sits alone a moment. He wipes the spilled tea from the table with the tissue, slowly, carefully, until there is no trace of it.",
      "silent": true,
@@ -2970,9 +3072,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b159",
+     "id": "nw_b176",
      "characterId": "nw_narrator",
-     "text": "Then he picks up the passport photo, dry at the edges, looks at Mara's face, and slides it into his inside pocket. The form he leaves where it is.",
+     "text": "Then he picks up the passport photo, dry at the edges, looks at Mara's face, and slides it into his inside pocket.",
      "silent": true,
      "background": "/film/img/s6/327-the-inside-pocket.jpg",
      "cinematic": {
@@ -2989,7 +3091,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b177",
+     "characterId": "nw_narrator",
+     "text": "The form he leaves where it is.",
+     "silent": true,
      "afterBeatTargetSceneId": "nw_s7",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
@@ -3017,7 +3125,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b160",
+     "id": "nw_b178",
      "characterId": "nw_narrator",
      "text": "Rows of cluttered desks under humming fluorescent light. Most are empty at this hour. A radio plays low somewhere.",
      "silent": true,
@@ -3039,7 +3147,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b161",
+     "id": "nw_b179",
      "characterId": "nw_narrator",
      "text": "Ishida sits at his desk and opens the bottom drawer. The two drawers above it stay closed.",
      "silent": true,
@@ -3061,7 +3169,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b162",
+     "id": "nw_b180",
      "characterId": "nw_narrator",
      "text": "THE DRAWER\n\nInside the drawer, sealed together in one clear evidence bag: Mara's purse and the torn strap, coiled beside it. Still damp.",
      "silent": true,
@@ -3083,7 +3191,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b163",
+     "id": "nw_b181",
      "characterId": "nw_narrator",
      "text": "He looks at it a long moment. Closes the drawer.",
      "silent": true,
@@ -3105,7 +3213,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b164",
+     "id": "nw_b182",
      "characterId": "nw_narrator",
      "text": "On the wall, the clock runs a minute fast.",
      "silent": true,
@@ -3152,7 +3260,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b165",
+     "id": "nw_b183",
      "characterId": "nw_narrator",
      "text": "The same bar in flat grey daylight. It looks smaller without the night. Chairs up on the counter. The CRT television is dark.",
      "silent": true,
@@ -3174,67 +3282,67 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b166",
+     "id": "nw_b184",
      "characterId": "nw_narrator",
      "text": "Where the journalist fell, there is a new rubber floor mat, too clean for this room.",
      "silent": true
     },
     {
-     "id": "nw_b167",
+     "id": "nw_b185",
      "characterId": "nw_narrator",
      "text": "OKADA (60s), the bar's owner, mops around it without looking at it. He has the stillness of a man who hasn't slept.",
      "silent": true
     },
     {
-     "id": "nw_b168",
+     "id": "nw_b186",
      "characterId": "nw_narrator",
      "text": "The door opens. Vera, the blue umbrella in her hand.",
      "silent": true
     },
     {
-     "id": "nw_b169",
+     "id": "nw_b187",
      "characterId": "nw_okada",
      "text": "We're closed.",
      "audioUrl": "/film/voice/s8/162-okada-flatly-we-re-closed.mp3"
     },
     {
-     "id": "nw_b170",
+     "id": "nw_b188",
      "characterId": "nw_narrator",
      "text": "Vera holds up her phone: a photo of Mara, laughing at a party, a paper crown on her head.",
      "silent": true
     },
     {
-     "id": "nw_b171",
+     "id": "nw_b189",
      "characterId": "nw_vera",
      "text": "My sister. Four nights ago. Was she here?",
      "audioUrl": "/film/voice/s8/162-vera-carefully-my-sister-four-nights-ago.mp3"
     },
     {
-     "id": "nw_b172",
+     "id": "nw_b190",
      "characterId": "nw_narrator",
      "text": "Okada looks at the photo for exactly one second.",
      "silent": true
     },
     {
-     "id": "nw_b173",
+     "id": "nw_b191",
      "characterId": "nw_okada",
      "text": "No.",
      "audioUrl": "/film/voice/s8/162-okada-pause-no.mp3"
     },
     {
-     "id": "nw_b174",
+     "id": "nw_b192",
      "characterId": "nw_vera",
      "text": "You didn't look.",
      "audioUrl": "/film/voice/s8/162-vera-you-didn-t-look.mp3"
     },
     {
-     "id": "nw_b175",
+     "id": "nw_b193",
      "characterId": "nw_okada",
      "text": "I looked. No.",
      "audioUrl": "/film/voice/s8/162-okada-i-looked-no.mp3"
     },
     {
-     "id": "nw_b176",
+     "id": "nw_b194",
      "characterId": "nw_narrator",
      "text": "His eyes go, just once, to the far end of the counter. Then back to the mop.",
      "silent": true,
@@ -3256,13 +3364,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b177",
+     "id": "nw_b195",
      "characterId": "nw_narrator",
      "text": "Vera sees it. She doesn't push. She bows, small and polite, and leaves.",
      "silent": true
     },
     {
-     "id": "nw_b178",
+     "id": "nw_b196",
      "characterId": "nw_narrator",
      "text": "She has left the blue umbrella leaning against a stool.",
      "silent": true,
@@ -3284,7 +3392,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b179",
+     "id": "nw_b197",
      "characterId": "nw_narrator",
      "text": "Okada looks at the umbrella for a long moment.",
      "silent": true,
@@ -3315,20 +3423,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b180",
+     "id": "nw_b198",
      "characterId": "nw_narrator",
      "text": "Rain. Vera walks away down the narrow street, no umbrella, head down.",
      "silent": true
     },
     {
-     "id": "nw_b181",
+     "id": "nw_b199",
      "characterId": "nw_okada",
      "text": "Miss.",
      "audioUrl": "/film/voice/s9/164-okada-out-of-breath-miss.mp3",
      "expression": "o.s."
     },
     {
-     "id": "nw_b182",
+     "id": "nw_b200",
      "characterId": "nw_narrator",
      "text": "She turns. Okada stands in the bar doorway holding the blue umbrella, out of breath, as if deciding something cost him more than the walk.",
      "silent": true,
@@ -3350,7 +3458,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b183",
+     "id": "nw_b201",
      "characterId": "nw_narrator",
      "text": "He hands it to her. Then he holds out his other hand. In it: the small red enamel bird clip.",
      "silent": true,
@@ -3372,73 +3480,73 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b184",
+     "id": "nw_b202",
      "characterId": "nw_narrator",
      "text": "Vera stops breathing.",
      "silent": true
     },
     {
-     "id": "nw_b185",
+     "id": "nw_b203",
      "characterId": "nw_vera",
      "text": "It was mine. She took it when we were kids. She never gave it back.",
      "audioUrl": "/film/voice/s9/165-vera-shaken-it-was-mine-she-took.mp3"
     },
     {
-     "id": "nw_b186",
+     "id": "nw_b204",
      "characterId": "nw_narrator",
      "text": "She has said it in English, without realizing. Okada doesn't understand the words. He understands her face.",
      "silent": true
     },
     {
-     "id": "nw_b187",
+     "id": "nw_b205",
      "characterId": "nw_okada",
      "text": "Behind the counter. After.",
      "audioUrl": "/film/voice/s9/165-okada-behind-the-counter-after.mp3"
     },
     {
-     "id": "nw_b188",
+     "id": "nw_b206",
      "characterId": "nw_vera",
      "text": "Did you give this to the police?",
      "audioUrl": "/film/voice/s9/165-vera-did-you-give-this-to-the.mp3"
     },
     {
-     "id": "nw_b189",
+     "id": "nw_b207",
      "characterId": "nw_okada",
      "text": "They didn't ask.",
      "audioUrl": "/film/voice/s9/165-okada-they-didn-t-ask.mp3"
     },
     {
-     "id": "nw_b190",
+     "id": "nw_b208",
      "characterId": "nw_narrator",
      "text": "He takes a business card from his apron and presses it into her hand. Old, soft at the corners, handwritten on the back.",
      "silent": true
     },
     {
-     "id": "nw_b191",
+     "id": "nw_b209",
      "characterId": "nw_okada",
      "text": "Not the police. Him.",
      "audioUrl": "/film/voice/s9/165-okada-not-the-police-him.mp3"
     },
     {
-     "id": "nw_b192",
+     "id": "nw_b210",
      "characterId": "nw_vera",
      "text": "Who is he?",
      "audioUrl": "/film/voice/s9/165-vera-who-is-he.mp3"
     },
     {
-     "id": "nw_b193",
+     "id": "nw_b211",
      "characterId": "nw_okada",
      "text": "He found my daughter once. When no one else would look.",
      "audioUrl": "/film/voice/s9/165-okada-he-found-my-daughter-once-pause.mp3"
     },
     {
-     "id": "nw_b194",
+     "id": "nw_b212",
      "characterId": "nw_narrator",
      "text": "He goes back inside before she can thank him.",
      "silent": true
     },
     {
-     "id": "nw_b195",
+     "id": "nw_b213",
      "characterId": "nw_narrator",
      "text": "Vera looks at the card. Printed in English and in katakana: JACK. INVESTIGATIONS. An address. No surname.",
      "silent": true,
@@ -3485,32 +3593,56 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b196",
+     "id": "nw_b214",
      "characterId": "nw_narrator",
-     "text": "Second floor of an old building pressed against the elevated railway. One room. Frosted glass door, JACK hand-lettered on it in English and in katakana.",
+     "text": "Second floor of an old building pressed against the elevated railway. One room.",
      "silent": true
     },
     {
-     "id": "nw_b197",
+     "id": "nw_b215",
      "characterId": "nw_narrator",
-     "text": "A desk. A black rotary phone. Filing cabinets. A small CRT television on the cabinet, muted, playing an old black-and-white samurai film. A sofa that has clearly been slept on.",
+     "text": "Frosted glass door, JACK hand-lettered on it in English and in katakana.",
      "silent": true
     },
     {
-     "id": "nw_b198",
+     "id": "nw_b216",
+     "characterId": "nw_narrator",
+     "text": "A desk. A black rotary phone. Filing cabinets. A small CRT television on the cabinet, muted, playing an old black-and-white samurai film.",
+     "silent": true
+    },
+    {
+     "id": "nw_b217",
+     "characterId": "nw_narrator",
+     "text": "A sofa that has clearly been slept on.",
+     "silent": true
+    },
+    {
+     "id": "nw_b218",
      "characterId": "nw_narrator",
      "text": "A TRAIN passes outside. The blinds shiver. A spoon rattles in an empty cup. Then silence again.",
      "silent": true,
      "sfxUrl": "/film/sfx/train.mp3"
     },
     {
-     "id": "nw_b199",
+     "id": "nw_b219",
      "characterId": "nw_narrator",
-     "text": "JACK (48) sits at the desk eating a convenience-store rice ball, watching the silent swordsmen. Handsome once, in a way he stopped maintaining. A good coat, badly kept. He flicks an old steel lighter open and shut, open and shut. There are no cigarettes anywhere.",
+     "text": "JACK (48) sits at the desk eating a convenience-store rice ball, watching the silent swordsmen.",
      "silent": true
     },
     {
-     "id": "nw_b200",
+     "id": "nw_b220",
+     "characterId": "nw_narrator",
+     "text": "Handsome once, in a way he stopped maintaining. A good coat, badly kept. He flicks an old steel lighter open and shut, open and shut.",
+     "silent": true
+    },
+    {
+     "id": "nw_b221",
+     "characterId": "nw_narrator",
+     "text": "There are no cigarettes anywhere.",
+     "silent": true
+    },
+    {
+     "id": "nw_b222",
      "characterId": "nw_narrator",
      "text": "A knock on the frosted glass. Vera comes in, wet, the blue umbrella dripping.",
      "silent": true,
@@ -3532,97 +3664,97 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b201",
+     "id": "nw_b223",
      "characterId": "nw_vera",
      "text": "Are you the one they call Jack?",
      "audioUrl": "/film/voice/s10/166-vera-are-you-the-one-they-call.mp3"
     },
     {
-     "id": "nw_b202",
+     "id": "nw_b224",
      "characterId": "nw_jack",
      "text": "Who calls me that?",
      "audioUrl": "/film/voice/s10/166-jack-dryly-depends-who-s-calling.mp3"
     },
     {
-     "id": "nw_b203",
+     "id": "nw_b225",
      "characterId": "nw_vera",
      "text": "Mr. Okada. The bar in Kanda.",
      "audioUrl": "/film/voice/s10/166-vera-mr-okada-the-bar-in-kanda.mp3"
     },
     {
-     "id": "nw_b204",
+     "id": "nw_b226",
      "characterId": "nw_narrator",
      "text": "Jack puts the rice ball down.",
      "silent": true
     },
     {
-     "id": "nw_b205",
+     "id": "nw_b227",
      "characterId": "nw_jack",
      "text": "Sit down.",
      "audioUrl": "/film/voice/s10/166-jack-calmly-sit-down.mp3"
     },
     {
-     "id": "nw_b206",
+     "id": "nw_b228",
      "characterId": "nw_narrator",
      "text": "She sits. He doesn't switch to English. He lets her speak in the language she chose. She notices.",
      "silent": true
     },
     {
-     "id": "nw_b207",
+     "id": "nw_b229",
      "characterId": "nw_vera",
      "text": "My sister has been missing for four days. The police say to go home and wait.",
      "audioUrl": "/film/voice/s10/166-vera-evenly-my-sister-has-been-missing.mp3"
     },
     {
-     "id": "nw_b208",
+     "id": "nw_b230",
      "characterId": "nw_jack",
      "text": "I don't do missing persons. People who go missing usually want to.",
      "audioUrl": "/film/voice/s10/166-jack-flatly-i-don-t-do-missing.mp3"
     },
     {
-     "id": "nw_b209",
+     "id": "nw_b231",
      "characterId": "nw_narrator",
      "text": "She places the red bird clip on his desk.",
      "silent": true
     },
     {
-     "id": "nw_b210",
+     "id": "nw_b232",
      "characterId": "nw_vera",
      "text": "She was in that bar. The night two men were shot there.",
      "audioUrl": "/film/voice/s10/166-vera-steadily-she-was-in-that-bar.mp3"
     },
     {
-     "id": "nw_b211",
+     "id": "nw_b233",
      "characterId": "nw_narrator",
      "text": "Jack looks at the clip for a long moment. The lighter stops.",
      "silent": true
     },
     {
-     "id": "nw_b212",
+     "id": "nw_b234",
      "characterId": "nw_jack",
      "text": "What did the police tell you?",
      "audioUrl": "/film/voice/s10/166-jack-what-did-the-police-tell-you.mp3"
     },
     {
-     "id": "nw_b213",
+     "id": "nw_b235",
      "characterId": "nw_vera",
      "text": "To go home.",
      "audioUrl": "/film/voice/s10/167-vera-to-go-home.mp3"
     },
     {
-     "id": "nw_b214",
+     "id": "nw_b236",
      "characterId": "nw_jack",
      "text": "It's good advice.",
      "audioUrl": "/film/voice/s10/167-jack-wearily-it-s-good-advice.mp3"
     },
     {
-     "id": "nw_b215",
+     "id": "nw_b237",
      "characterId": "nw_vera",
      "text": "Is it yours, too?",
      "audioUrl": "/film/voice/s10/167-vera-is-it-yours-too.mp3"
     },
     {
-     "id": "nw_b216",
+     "id": "nw_b238",
      "characterId": "nw_narrator",
      "text": "He doesn't answer. Another train passes. The blinds shiver.",
      "silent": true,
@@ -3630,21 +3762,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b217",
+     "id": "nw_b239",
      "characterId": "nw_jack",
      "text": "Do you have photographs of her?",
      "audioUrl": "/film/voice/s10/167-jack-do-you-have-photographs-of-her.mp3"
     },
     {
-     "id": "nw_b218",
+     "id": "nw_b240",
      "characterId": "nw_narrator",
      "text": "She takes an envelope from her bag. As she pulls out the photos, something slides out with them and falls face up on the desk:",
      "silent": true
     },
     {
-     "id": "nw_b219",
+     "id": "nw_b241",
      "characterId": "nw_narrator",
-     "text": "The old framed photograph from her shelf, taken out of its frame. Twenty years ago. The American man in the rumpled suit. The two small girls. The noodle shop sign behind them.",
+     "text": "The old framed photograph from her shelf, taken out of its frame. Twenty years ago. The American man in the rumpled suit.",
      "silent": true,
      "background": "/film/img/s10/165-face-up.jpg",
      "cinematic": {
@@ -3664,45 +3796,51 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b220",
+     "id": "nw_b242",
+     "characterId": "nw_narrator",
+     "text": "The two small girls. The noodle shop sign behind them.",
+     "silent": true
+    },
+    {
+     "id": "nw_b243",
      "characterId": "nw_narrator",
      "text": "Jack looks at it.",
      "silent": true
     },
     {
-     "id": "nw_b221",
+     "id": "nw_b244",
      "characterId": "nw_narrator",
      "text": "He does not move. On the TV behind him, a sword is drawn in total silence.",
      "silent": true
     },
     {
-     "id": "nw_b222",
+     "id": "nw_b245",
      "characterId": "nw_vera",
      "text": "That's us. Before we left.",
      "audioUrl": "/film/voice/s10/167-vera-that-s-us-pause-before-we.mp3"
     },
     {
-     "id": "nw_b223",
+     "id": "nw_b246",
      "characterId": "nw_narrator",
      "text": "She has slipped into English. So does he, quietly.",
      "silent": true
     },
     {
-     "id": "nw_b224",
+     "id": "nw_b247",
      "characterId": "nw_jack",
      "text": "Your father.",
      "audioUrl": "/film/voice/s10/167-jack-softly-your-father.mp3"
     },
     {
-     "id": "nw_b225",
+     "id": "nw_b248",
      "characterId": "nw_vera",
      "text": "He died. That year. Here.",
      "audioUrl": "/film/voice/s10/167-vera-quietly-he-died-pause-that-year.mp3"
     },
     {
-     "id": "nw_b226",
+     "id": "nw_b249",
      "characterId": "nw_narrator",
-     "text": "Jack picks the photograph up by its edges, carefully, the way you'd handle evidence. Or something fragile. He looks a moment too long at the noodle shop sign. Then he sets it down, face up, and squares it to the edge of the desk.",
+     "text": "Jack picks the photograph up by its edges, carefully, the way you'd handle evidence. Or something fragile.",
      "silent": true,
      "background": "/film/img/s10/166-by-its-edges.jpg",
      "cinematic": {
@@ -3722,103 +3860,109 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b227",
+     "id": "nw_b250",
+     "characterId": "nw_narrator",
+     "text": "He looks a moment too long at the noodle shop sign. Then he sets it down, face up, and squares it to the edge of the desk.",
+     "silent": true
+    },
+    {
+     "id": "nw_b251",
      "characterId": "nw_jack",
      "text": "I'm sorry.",
      "audioUrl": "/film/voice/s10/168-jack-quietly-i-m-sorry.mp3"
     },
     {
-     "id": "nw_b228",
+     "id": "nw_b252",
      "characterId": "nw_vera",
      "text": "It was a long time ago.",
      "audioUrl": "/film/voice/s10/168-vera-it-was-a-long-time-ago.mp3"
     },
     {
-     "id": "nw_b229",
+     "id": "nw_b253",
      "characterId": "nw_jack",
      "text": "Yes.",
      "audioUrl": "/film/voice/s10/168-jack-yes.mp3"
     },
     {
-     "id": "nw_b230",
+     "id": "nw_b254",
      "characterId": "nw_narrator",
      "text": "A beat.",
      "silent": true
     },
     {
-     "id": "nw_b231",
+     "id": "nw_b255",
      "characterId": "nw_jack",
      "text": "Ten thousand yen a day. Plus expenses. I'll need a key to her apartment, her phone number, her friends, where she worked, where she drank.",
      "audioUrl": "/film/voice/s10/168-jack-businesslike-ten-thousand-yen-a-day.mp3"
     },
     {
-     "id": "nw_b232",
+     "id": "nw_b256",
      "characterId": "nw_vera",
      "text": "So you'll look.",
      "audioUrl": "/film/voice/s10/168-vera-so-you-ll-look.mp3"
     },
     {
-     "id": "nw_b233",
+     "id": "nw_b257",
      "characterId": "nw_jack",
      "text": "I'll look.",
      "audioUrl": "/film/voice/s10/168-jack-i-ll-look.mp3"
     },
     {
-     "id": "nw_b234",
+     "id": "nw_b258",
      "characterId": "nw_narrator",
      "text": "She gathers the photographs. Leaves the red bird clip where it is. He doesn't give it back, and she doesn't ask.",
      "silent": true
     },
     {
-     "id": "nw_b235",
+     "id": "nw_b259",
      "characterId": "nw_narrator",
      "text": "At the door, she stops.",
      "silent": true
     },
     {
-     "id": "nw_b236",
+     "id": "nw_b260",
      "characterId": "nw_vera",
      "text": "Mr. Okada said you found his daughter.",
      "audioUrl": "/film/voice/s10/244-vera-mr-okada-said-you-found-his.mp3"
     },
     {
-     "id": "nw_b237",
+     "id": "nw_b261",
      "characterId": "nw_jack",
      "text": "I found her.",
      "audioUrl": "/film/voice/s10/244-jack-i-found-her.mp3"
     },
     {
-     "id": "nw_b238",
+     "id": "nw_b262",
      "characterId": "nw_vera",
      "text": "Was she alive?",
      "audioUrl": "/film/voice/s10/244-vera-was-she-alive.mp3"
     },
     {
-     "id": "nw_b239",
+     "id": "nw_b263",
      "characterId": "nw_narrator",
      "text": "Jack looks at her. The honest answer is in the pause.",
      "silent": true
     },
     {
-     "id": "nw_b240",
+     "id": "nw_b264",
      "characterId": "nw_jack",
      "text": "Her Japanese. Your sister's. Is it good?",
      "audioUrl": "/film/voice/s10/244-jack-long-pause-her-japanese-your-sister.mp3"
     },
     {
-     "id": "nw_b241",
+     "id": "nw_b265",
      "characterId": "nw_vera",
      "text": "Some. Badly.",
      "audioUrl": "/film/voice/s10/244-vera-some-badly.mp3"
     },
     {
-     "id": "nw_b242",
+     "id": "nw_b266",
      "characterId": "nw_jack",
      "text": "Then she stands out. That helps.",
      "audioUrl": "/film/voice/s10/244-jack-then-she-stands-out-that-helps.mp3"
     },
     {
-     "id": "nw_b243",
+     "id": "nw_b267",
      "characterId": "nw_narrator",
      "text": "Vera nods. Goes. Through the frosted glass, her shape goes down the stairs and is gone.",
      "silent": true,
@@ -3840,7 +3984,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b244",
+     "id": "nw_b268",
      "characterId": "nw_narrator",
      "text": "Jack sits very still.",
      "silent": true,
@@ -3871,15 +4015,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b245",
+     "id": "nw_b269",
      "characterId": "nw_narrator",
      "text": "Past midnight. Only the desk lamp and the grey flicker of the television, now showing static.",
      "silent": true
     },
     {
-     "id": "nw_b246",
+     "id": "nw_b270",
      "characterId": "nw_narrator",
-     "text": "Jack crouches at the grey steel cupboard under the window, pulls its door open and takes out a cardboard box he has kept behind the files. Dust on the lid. He hasn't opened it in years.",
+     "text": "Jack crouches at the grey steel cupboard under the window, pulls its door open and takes out a cardboard box he has kept behind the files.",
      "silent": true,
      "background": "/film/img/s11/243-the-box.jpg",
      "cinematic": {
@@ -3899,15 +4043,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b247",
+     "id": "nw_b271",
+     "characterId": "nw_narrator",
+     "text": "Dust on the lid. He hasn't opened it in years.",
+     "silent": true
+    },
+    {
+     "id": "nw_b272",
      "characterId": "nw_narrator",
      "text": "Inside: a police notebook. An old ID card with a younger face. A folded newspaper clipping.",
      "silent": true
     },
     {
-     "id": "nw_b248",
+     "id": "nw_b273",
      "characterId": "nw_narrator",
-     "text": "THE CLIPPING\n\nAn English-language newspaper, yellowed. A small headline: AMERICAN INSURANCE INVESTIGATOR FOUND DEAD - POLICE RULE SUICIDE. A photograph: the same man from Vera's picture. The caption: DANIEL VOSS, 41.",
+     "text": "THE CLIPPING\n\nAn English-language newspaper, yellowed. A small headline: AMERICAN INSURANCE INVESTIGATOR FOUND DEAD - POLICE RULE SUICIDE.",
      "silent": true,
      "background": "/film/img/s11/244-daniel-voss-41.jpg",
      "cinematic": {
@@ -3927,9 +4077,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b249",
+     "id": "nw_b274",
      "characterId": "nw_narrator",
-     "text": "Beneath the clipping, one more photograph. Two men at a tiny noodle counter, laughing, steam in the air: DANIEL VOSS, and a much younger JACK, still in a cheap police-issue suit.",
+     "text": "A photograph: the same man from Vera's picture. The caption: DANIEL VOSS, 41.",
+     "silent": true
+    },
+    {
+     "id": "nw_b275",
+     "characterId": "nw_narrator",
+     "text": "Beneath the clipping, one more photograph.",
      "silent": true,
      "background": "/film/img/s11/167-two-men-laughing.jpg",
      "cinematic": {
@@ -3949,96 +4105,102 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b250",
+     "id": "nw_b276",
+     "characterId": "nw_narrator",
+     "text": "Two men at a tiny noodle counter, laughing, steam in the air: DANIEL VOSS, and a much younger JACK, still in a cheap police-issue suit.",
+     "silent": true
+    },
+    {
+     "id": "nw_b277",
      "characterId": "nw_narrator",
      "text": "Behind them, the same noodle shop sign.",
      "silent": true
     },
     {
-     "id": "nw_b251",
+     "id": "nw_b278",
      "characterId": "nw_narrator",
      "text": "Jack looks at it for a long time.",
      "silent": true
     },
     {
-     "id": "nw_b252",
+     "id": "nw_b279",
      "characterId": "nw_narrator",
      "text": "Then he dials the rotary phone. It takes a long time to dial.",
      "silent": true
     },
     {
-     "id": "nw_b253",
+     "id": "nw_b280",
      "characterId": "nw_ishida",
      "text": "It's late, Jack.",
      "audioUrl": "/film/voice/s11/251-ishida-tired-it-s-late-jack.mp3",
      "expression": "v.o. · filtered"
     },
     {
-     "id": "nw_b254",
+     "id": "nw_b281",
      "characterId": "nw_jack",
      "text": "The Voss girl came to see me.",
      "audioUrl": "/film/voice/s11/251-jack-the-voss-girl-came-to-see.mp3"
     },
     {
-     "id": "nw_b255",
+     "id": "nw_b282",
      "characterId": "nw_ishida",
      "text": "I know.",
      "audioUrl": "/film/voice/s11/251-ishida-i-know.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b256",
+     "id": "nw_b283",
      "characterId": "nw_narrator",
      "text": "Silence on the line. Rain on the window.",
      "silent": true
     },
     {
-     "id": "nw_b257",
+     "id": "nw_b284",
      "characterId": "nw_jack",
      "text": "Her sister was in that bar.",
      "audioUrl": "/film/voice/s11/251-jack-low-her-sister-was-in-that.mp3"
     },
     {
-     "id": "nw_b258",
+     "id": "nw_b285",
      "characterId": "nw_ishida",
      "text": "The sister is a missing persons case. The bar is a gang matter. Two separate things.",
      "audioUrl": "/film/voice/s11/251-ishida-the-sister-is-a-missing-persons.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b259",
+     "id": "nw_b286",
      "characterId": "nw_jack",
      "text": "And the old man in the street?",
      "audioUrl": "/film/voice/s11/251-jack-and-the-old-man-in-the.mp3"
     },
     {
-     "id": "nw_b260",
+     "id": "nw_b287",
      "characterId": "nw_ishida",
      "text": "Sakai. Yes. That Sakai. I know what you're thinking. Old debts, old enemies. It's a gang matter.",
      "audioUrl": "/film/voice/s11/251-ishida-sakai-pause-yes-that-sakai-i.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b261",
+     "id": "nw_b288",
      "characterId": "nw_jack",
      "text": "Twenty years, Ishida.",
      "audioUrl": "/film/voice/s11/251-jack-pause-twenty-years-ishida.mp3"
     },
     {
-     "id": "nw_b262",
+     "id": "nw_b289",
      "characterId": "nw_narrator",
      "text": "A long pause.",
      "silent": true
     },
     {
-     "id": "nw_b263",
+     "id": "nw_b290",
      "characterId": "nw_ishida",
      "text": "Go to sleep, Jack. You found enough twenty years ago. You're too old to be haunted.",
      "audioUrl": "/film/voice/s11/251-ishida-gently-go-to-sleep-jack-you.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b264",
+     "id": "nw_b291",
      "characterId": "nw_narrator",
      "text": "The line goes dead.",
      "silent": true,
@@ -4060,7 +4222,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b265",
+     "id": "nw_b292",
      "characterId": "nw_narrator",
      "text": "Jack holds the receiver a moment longer. He sets it down. Flicks the lighter open. Shut.",
      "silent": true,
@@ -4082,7 +4244,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b266",
+     "id": "nw_b293",
      "characterId": "nw_narrator",
      "text": "A train passes. The photograph of the two laughing men trembles on the desk.",
      "silent": true,
@@ -4115,19 +4277,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b267",
+     "id": "nw_b294",
      "characterId": "nw_narrator",
      "text": "The street from the cold open. The rain hasn't stopped in four days.",
      "silent": true
     },
     {
-     "id": "nw_b268",
+     "id": "nw_b295",
      "characterId": "nw_narrator",
      "text": "Jack walks it slowly, a cheap clear plastic umbrella over his head. Not searching. Looking.",
      "silent": true
     },
     {
-     "id": "nw_b269",
+     "id": "nw_b296",
      "characterId": "nw_narrator",
      "text": "The vending machine at the corner. He feeds it a coin. A can of hot coffee drops.",
      "silent": true,
@@ -4135,38 +4297,38 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8
     },
     {
-     "id": "nw_b270",
+     "id": "nw_b297",
      "characterId": "nw_vending_machine",
      "text": "Thank you very much.",
      "audioUrl": "/film/voice/s12/170-vendingmachine-cheerfully-thank-you-very-much.mp3",
      "expression": "recorded"
     },
     {
-     "id": "nw_b271",
+     "id": "nw_b298",
      "characterId": "nw_narrator",
      "text": "He holds the can without drinking it and looks at the spot where Sakai died. Nothing there now. Rain on asphalt.",
      "silent": true
     },
     {
-     "id": "nw_b272",
+     "id": "nw_b299",
      "characterId": "nw_narrator",
      "text": "He turns and looks at the barbershop doorway. Steps into it. Stands exactly where Mara stood.",
      "silent": true
     },
     {
-     "id": "nw_b273",
+     "id": "nw_b300",
      "characterId": "nw_narrator",
      "text": "From here, he can see the whole street. And, at the far end, the small lit sign of Okada's bar.",
      "silent": true
     },
     {
-     "id": "nw_b274",
+     "id": "nw_b301",
      "characterId": "nw_narrator",
      "text": "He looks at the barbershop pole beside him. Crouches.",
      "silent": true
     },
     {
-     "id": "nw_b275",
+     "id": "nw_b302",
      "characterId": "nw_narrator",
      "text": "Caught on a rough metal edge at knee height: a short twist of torn leather strap.",
      "silent": true,
@@ -4188,13 +4350,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b276",
+     "id": "nw_b303",
      "characterId": "nw_narrator",
      "text": "He doesn't touch it. He looks from the strap, to the spot where Sakai fell, to the bar sign. Reconstructing it.",
      "silent": true
     },
     {
-     "id": "nw_b277",
+     "id": "nw_b304",
      "characterId": "nw_narrator",
      "text": "A shutter RATTLES up above him. A BARBER (80s), in pajamas, looks down from the upstairs window.",
      "silent": true,
@@ -4216,91 +4378,97 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b278",
+     "id": "nw_b305",
      "characterId": "nw_barber",
      "text": "Police again?",
      "audioUrl": "/film/voice/s12/247-barber-grumbling-police-again.mp3"
     },
     {
-     "id": "nw_b279",
+     "id": "nw_b306",
      "characterId": "nw_jack",
      "text": "Not for a long time.",
      "audioUrl": "/film/voice/s12/247-jack-not-for-a-long-time.mp3"
     },
     {
-     "id": "nw_b280",
+     "id": "nw_b307",
      "characterId": "nw_narrator",
      "text": "The barber considers him.",
      "silent": true
     },
     {
-     "id": "nw_b281",
+     "id": "nw_b308",
      "characterId": "nw_barber",
      "text": "I told them. I was asleep. I heard the shot. Then a car.",
      "audioUrl": "/film/voice/s12/247-barber-i-told-them-i-was-asleep.mp3"
     },
     {
-     "id": "nw_b282",
+     "id": "nw_b309",
      "characterId": "nw_jack",
      "text": "One car?",
      "audioUrl": "/film/voice/s12/247-jack-one-car.mp3"
     },
     {
-     "id": "nw_b283",
+     "id": "nw_b310",
      "characterId": "nw_barber",
      "text": "One car. Twice. It left. Then it came back.",
      "audioUrl": "/film/voice/s12/247-barber-one-car-twice-pause-it-left.mp3"
     },
     {
-     "id": "nw_b284",
+     "id": "nw_b311",
      "characterId": "nw_narrator",
      "text": "Jack looks down the empty street.",
      "silent": true
     },
     {
-     "id": "nw_b285",
+     "id": "nw_b312",
      "characterId": "nw_jack",
      "text": "Why come back?",
      "audioUrl": "/film/voice/s12/247-jack-quietly-why-come-back.mp3"
     },
     {
-     "id": "nw_b286",
+     "id": "nw_b313",
      "characterId": "nw_narrator",
      "text": "Jack doesn't answer. He looks down the street at the drains, the doorways, the gutter: everywhere a small thing could fall.",
      "silent": true
     },
     {
-     "id": "nw_b287",
+     "id": "nw_b314",
      "characterId": "nw_narrator",
      "text": "The barber shrugs and pulls the shutter down.",
      "silent": true
     },
     {
-     "id": "nw_b288",
+     "id": "nw_b315",
      "characterId": "nw_narrator",
      "text": "He looks again at the doorway. At the bar sign. At the torn strap.",
      "silent": true
     },
     {
-     "id": "nw_b289",
+     "id": "nw_b316",
      "characterId": "nw_narrator",
      "text": "She was here. She saw it. She ran there. She saw that too.",
      "silent": true
     },
     {
-     "id": "nw_b290",
+     "id": "nw_b317",
      "characterId": "nw_narrator",
      "text": "And whatever they came back for, she has it.",
      "silent": true
     },
     {
-     "id": "nw_b291",
+     "id": "nw_b318",
      "characterId": "nw_narrator",
-     "text": "He looks down the empty street at the bar sign. And one more question he can't answer yet: what was an American girl doing in a Kanda backstreet at one in the morning?",
+     "text": "He looks down the empty street at the bar sign.",
      "silent": true
     },
     {
-     "id": "nw_b292",
+     "id": "nw_b319",
+     "characterId": "nw_narrator",
+     "text": "And one more question he can't answer yet: what was an American girl doing in a Kanda backstreet at one in the morning?",
+     "silent": true
+    },
+    {
+     "id": "nw_b320",
      "characterId": "nw_narrator",
      "text": "Jack drops the unopened coffee into the recycling bin. The can CLANKS. The crossing melody starts up somewhere, for no one.",
      "silent": true,
@@ -4348,19 +4516,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b293",
+     "id": "nw_b321",
      "characterId": "nw_narrator",
-     "text": "A tiny studio in an old building. Grey daylight. Clothes on every surface. Sketches taped to the walls: pencil, charcoal, cheap watercolour. Trains. Rooftops. Laundry lines. Faces on the subway.",
+     "text": "A tiny studio in an old building. Grey daylight. Clothes on every surface. Sketches taped to the walls: pencil, charcoal, cheap watercolour.",
      "silent": true
     },
     {
-     "id": "nw_b294",
+     "id": "nw_b322",
+     "characterId": "nw_narrator",
+     "text": "Trains. Rooftops. Laundry lines. Faces on the subway.",
+     "silent": true
+    },
+    {
+     "id": "nw_b323",
      "characterId": "nw_narrator",
      "text": "The room smells of someone who meant to come back.",
      "silent": true
     },
     {
-     "id": "nw_b295",
+     "id": "nw_b324",
      "characterId": "nw_narrator",
      "text": "Vera stands just inside the door. She hasn't taken her coat off. Jack moves through the room slowly, touching nothing yet. Looking.",
      "silent": true,
@@ -4382,37 +4556,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b296",
+     "id": "nw_b325",
      "characterId": "nw_jack",
      "text": "When were you last here?",
      "audioUrl": "/film/voice/s14/184-jack-when-were-you-last-here.mp3"
     },
     {
-     "id": "nw_b297",
+     "id": "nw_b326",
      "characterId": "nw_vera",
      "text": "A week ago. She made me coffee. It was terrible.",
      "audioUrl": "/film/voice/s14/184-vera-wryly-a-week-ago-she-made.mp3"
     },
     {
-     "id": "nw_b298",
+     "id": "nw_b327",
      "characterId": "nw_narrator",
      "text": "Jack opens the fridge. Milk. A half-eaten cake in a box. He closes it.",
      "silent": true
     },
     {
-     "id": "nw_b299",
+     "id": "nw_b328",
      "characterId": "nw_jack",
      "text": "She wasn't planning to disappear.",
      "audioUrl": "/film/voice/s14/184-jack-quietly-she-wasn-t-planning-to.mp3"
     },
     {
-     "id": "nw_b300",
+     "id": "nw_b329",
      "characterId": "nw_vera",
      "text": "No.",
      "audioUrl": "/film/voice/s14/184-vera-no.mp3"
     },
     {
-     "id": "nw_b301",
+     "id": "nw_b330",
      "characterId": "nw_narrator",
      "text": "He crouches by the futon. A suitcase underneath, packed and zipped. He looks at it, then at Vera.",
      "silent": true,
@@ -4434,25 +4608,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b302",
+     "id": "nw_b331",
      "characterId": "nw_vera",
      "text": "That was for America. She'd booked a flight. Next month.",
      "audioUrl": "/film/voice/s14/270-vera-quietly-that-was-for-america-she.mp3"
     },
     {
-     "id": "nw_b303",
+     "id": "nw_b332",
      "characterId": "nw_jack",
      "text": "You didn't want her to go.",
      "audioUrl": "/film/voice/s14/270-jack-you-didn-t-want-her-to.mp3"
     },
     {
-     "id": "nw_b304",
+     "id": "nw_b333",
      "characterId": "nw_vera",
      "text": "I didn't want her to run away again. That's what I said. The night she left. That she always runs.",
      "audioUrl": "/film/voice/s14/270-vera-i-didn-t-want-her-to.mp3"
     },
     {
-     "id": "nw_b305",
+     "id": "nw_b334",
      "characterId": "nw_narrator",
      "text": "She looks at the wall of drawings, not at him.",
      "silent": true,
@@ -4474,39 +4648,39 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b306",
+     "id": "nw_b335",
      "characterId": "nw_vera",
      "text": "It was about Dad. It's always about Dad. She wanted to dig it all up. Who he was here. Why he — I told her to leave him dead. She said I was the one who ran.",
      "audioUrl": "/film/voice/s14/270-vera-voice-breaking-it-was-about-dad.mp3"
     },
     {
-     "id": "nw_b307",
+     "id": "nw_b336",
      "characterId": "nw_vera",
      "text": "All the way back here, chasing a ghost, and I won't even look at it. I told her to go, then.",
      "audioUrl": "/film/voice/s14/270-vera-bitterly-she-said-i-was-the.mp3"
     },
     {
-     "id": "nw_b308",
+     "id": "nw_b337",
      "characterId": "nw_vera",
      "text": "Go home. Those were the last things I said to her.",
      "audioUrl": "/film/voice/s14/270-vera-quietly-i-told-her-to-go.mp3"
     },
     {
-     "id": "nw_b309",
+     "id": "nw_b338",
      "characterId": "nw_narrator",
      "text": "Jack says nothing. He knows better than to comfort it away.",
      "silent": true
     },
     {
-     "id": "nw_b310",
+     "id": "nw_b339",
      "characterId": "nw_narrator",
      "text": "On the desk: a thick sketchbook, its cover soft with use. Jack opens it.",
      "silent": true
     },
     {
-     "id": "nw_b311",
+     "id": "nw_b340",
      "characterId": "nw_narrator",
-     "text": "Page after page of the same place. A tiny noodle counter under a railway. Six stools. A curtain. A hand-painted sign. Drawn over and over, from different angles, in different years of her hand — a child's crayon version taped inside the cover, the newest in careful ink.",
+     "text": "Page after page of the same place. A tiny noodle counter under a railway. Six stools. A curtain. A hand-painted sign.",
      "silent": true,
      "background": "/film/img/s14/183-the-sketchbook.jpg",
      "cinematic": {
@@ -4526,25 +4700,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b312",
+     "id": "nw_b341",
+     "characterId": "nw_narrator",
+     "text": "Drawn over and over, from different angles, in different years of her hand — a child's crayon version taped inside the cover, the newest in careful ink.",
+     "silent": true
+    },
+    {
+     "id": "nw_b342",
      "characterId": "nw_jack",
      "text": "She drew this a lot.",
      "audioUrl": "/film/voice/s14/185-jack-she-drew-this-a-lot.mp3"
     },
     {
-     "id": "nw_b313",
+     "id": "nw_b343",
      "characterId": "nw_narrator",
      "text": "Vera glances over.",
      "silent": true
     },
     {
-     "id": "nw_b314",
+     "id": "nw_b344",
      "characterId": "nw_vera",
      "text": "Since she was little. It's from a story I used to tell her. About the noodle shop Dad took us to. She was too young to remember it, so I told her. She made it up from what I said. It's not real.",
      "audioUrl": "/film/voice/s14/185-vera-since-she-was-little-it-s.mp3"
     },
     {
-     "id": "nw_b315",
+     "id": "nw_b345",
      "characterId": "nw_narrator",
      "text": "Jack turns a page. The sign, in careful ink. Every stroke of the kanji correct.",
      "silent": true,
@@ -4566,31 +4746,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b316",
+     "id": "nw_b346",
      "characterId": "nw_narrator",
      "text": "He has seen this sign. Twice this week. Once in a photograph on Vera's shelf. Once in a box in his own cupboard.",
      "silent": true
     },
     {
-     "id": "nw_b317",
+     "id": "nw_b347",
      "characterId": "nw_jack",
      "text": "Can I borrow this?",
      "audioUrl": "/film/voice/s14/185-jack-can-i-borrow-this.mp3"
     },
     {
-     "id": "nw_b318",
+     "id": "nw_b348",
      "characterId": "nw_vera",
      "text": "Why?",
      "audioUrl": "/film/voice/s14/185-vera-why.mp3"
     },
     {
-     "id": "nw_b319",
+     "id": "nw_b349",
      "characterId": "nw_narrator",
      "text": "Jack doesn't answer. He looks at the drawing a moment too long.",
      "silent": true
     },
     {
-     "id": "nw_b320",
+     "id": "nw_b350",
      "characterId": "nw_narrator",
      "text": "Vera takes the hair clip out of her coat pocket and sets it on the sketchbook.",
      "silent": true,
@@ -4612,19 +4792,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b321",
+     "id": "nw_b351",
      "characterId": "nw_vera",
      "text": "Take this too. It's mine. She stole it.",
      "audioUrl": "/film/voice/s14/363-vera-wryly-take-this-too-it-s.mp3"
     },
     {
-     "id": "nw_b322",
+     "id": "nw_b352",
      "characterId": "nw_narrator",
      "text": "He takes both.",
      "silent": true
     },
     {
-     "id": "nw_b323",
+     "id": "nw_b353",
      "characterId": "nw_narrator",
      "text": "She hesitates, then nods. He closes the sketchbook and puts it under his arm, and says nothing else about it.",
      "silent": true,
@@ -4655,9 +4835,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b324",
+     "id": "nw_b354",
      "characterId": "nw_narrator",
-     "text": "Rain. Wipers. Kanda's wet streets slide past the windscreen. From the rear-view mirror, on a loop of string, the red bird clip swings with each turn.",
+     "text": "Rain. Wipers. Kanda's wet streets slide past the windscreen.",
      "silent": true,
      "background": "/film/img/s14a/334-the-mirror.jpg",
      "cinematic": {
@@ -4677,19 +4857,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b325",
+     "id": "nw_b355",
+     "characterId": "nw_narrator",
+     "text": "From the rear-view mirror, on a loop of string, the red bird clip swings with each turn.",
+     "silent": true
+    },
+    {
+     "id": "nw_b356",
      "characterId": "nw_narrator",
      "text": "In the mirror, behind it: a pair of headlights. The same distance, every turn. Never closer, never farther.",
      "silent": true
     },
     {
-     "id": "nw_b326",
+     "id": "nw_b357",
      "characterId": "nw_narrator",
-     "text": "Jack watches them. One hand goes into his coat pocket and closes around the lighter. He takes a corner a shade too fast, then slow. The headlights follow, dipped, patient.",
+     "text": "Jack watches them. One hand goes into his coat pocket and closes around the lighter. He takes a corner a shade too fast, then slow.",
      "silent": true
     },
     {
-     "id": "nw_b327",
+     "id": "nw_b358",
+     "characterId": "nw_narrator",
+     "text": "The headlights follow, dipped, patient.",
+     "silent": true
+    },
+    {
+     "id": "nw_b359",
      "characterId": "nw_narrator",
      "text": "He stops at the mouth of the lane, exactly where the sedan stopped, and kills the engine and lights.",
      "silent": true,
@@ -4711,31 +4903,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b328",
+     "id": "nw_b360",
      "characterId": "nw_narrator",
      "text": "Forty metres back, the headlights slow. Stop. Go out.",
      "silent": true
     },
     {
-     "id": "nw_b329",
+     "id": "nw_b361",
      "characterId": "nw_narrator",
      "text": "He waits, long enough to be sure. Then he gets out and walks back along the wet road toward the dark car, one hand in his pocket.",
      "silent": true
     },
     {
-     "id": "nw_b330",
+     "id": "nw_b362",
      "characterId": "nw_narrator",
      "text": "A small, boxy, maroon hatchback, its glass steamed. He raps on the driver's window with a knuckle.",
      "silent": true
     },
     {
-     "id": "nw_b331",
+     "id": "nw_b363",
      "characterId": "nw_narrator",
      "text": "It winds down. Vera, both hands on the wheel.",
      "silent": true
     },
     {
-     "id": "nw_b332",
+     "id": "nw_b364",
      "characterId": "nw_narrator",
      "text": "He takes his hand from his pocket. The old steel lighter, open, unlit.",
      "silent": true,
@@ -4757,93 +4949,93 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b333",
+     "id": "nw_b365",
      "characterId": "nw_vera",
      "text": "Is that what you were holding?",
      "audioUrl": "/film/voice/s14a/336-vera-dryly-is-that-what-you-were.mp3"
     },
     {
-     "id": "nw_b334",
+     "id": "nw_b366",
      "characterId": "nw_jack",
      "text": "It's what I had.",
      "audioUrl": "/film/voice/s14a/336-jack-dryly-it-s-what-i-had.mp3"
     },
     {
-     "id": "nw_b335",
+     "id": "nw_b367",
      "characterId": "nw_narrator",
      "text": "He snaps it shut.",
      "silent": true
     },
     {
-     "id": "nw_b336",
+     "id": "nw_b368",
      "characterId": "nw_jack",
      "text": "Forty metres. Twenty minutes. You never once lost me.",
      "audioUrl": "/film/voice/s14a/336-jack-evenly-forty-metres-short-pause-twenty.mp3"
     },
     {
-     "id": "nw_b337",
+     "id": "nw_b369",
      "characterId": "nw_vera",
      "text": "Is that bad?",
      "audioUrl": "/film/voice/s14a/336-vera-curious-is-that-bad.mp3"
     },
     {
-     "id": "nw_b338",
+     "id": "nw_b370",
      "characterId": "nw_jack",
      "text": "It's what a professional does.",
      "audioUrl": "/film/voice/s14a/336-jack-dryly-it-s-what-a-professional.mp3"
     },
     {
-     "id": "nw_b339",
+     "id": "nw_b371",
      "characterId": "nw_vera",
      "text": "Who did you think I was?",
      "audioUrl": "/film/voice/s14a/336-vera-curious-who-did-you-think-i.mp3"
     },
     {
-     "id": "nw_b340",
+     "id": "nw_b372",
      "characterId": "nw_jack",
      "text": "Somebody who'd be worse company.",
      "audioUrl": "/film/voice/s14a/336-jack-dryly-somebody-who-d-be-worse.mp3"
     },
     {
-     "id": "nw_b341",
+     "id": "nw_b373",
      "characterId": "nw_vera",
      "text": "You said you'd look. You didn't say where. I waited outside your office.",
      "audioUrl": "/film/voice/s14a/336-vera-evenly-you-said-you-d-look.mp3"
     },
     {
-     "id": "nw_b342",
+     "id": "nw_b374",
      "characterId": "nw_jack",
      "text": "If you can follow me, so can they.",
      "audioUrl": "/film/voice/s14a/336-jack-evenly-if-you-can-follow-me.mp3"
     },
     {
-     "id": "nw_b343",
+     "id": "nw_b375",
      "characterId": "nw_narrator",
      "text": "She hadn't thought of that. She looks past him at the empty road.",
      "silent": true
     },
     {
-     "id": "nw_b344",
+     "id": "nw_b376",
      "characterId": "nw_vera",
      "text": "I brought food.",
      "audioUrl": "/film/voice/s14a/336-vera-gently-i-brought-food.mp3"
     },
     {
-     "id": "nw_b345",
+     "id": "nw_b377",
      "characterId": "nw_narrator",
      "text": "He sighs the sigh of a man who has lost an argument he was never allowed to make.",
      "silent": true
     },
     {
-     "id": "nw_b346",
+     "id": "nw_b378",
      "characterId": "nw_jack",
      "text": "Park round the corner, then get in mine. One car is a man waiting. Two is somebody watching.",
      "audioUrl": "/film/voice/s14a/336-jack-tired-park-round-the-corner-then.mp3"
     },
     {
-     "id": "nw_b347",
+     "id": "nw_b379",
      "characterId": "nw_narrator",
-     "text": "LATER. Engine off. Rain on the windscreen, no wipers; the glass turns the lane into smears of light. At the far end, small and amber, the bar sign.",
+     "text": "LATER. Engine off. Rain on the windscreen, no wipers; the glass turns the lane into smears of light.",
      "silent": true,
      "background": "/film/img/s14a/337-engine-off.jpg",
      "cinematic": {
@@ -4863,98 +5055,104 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b348",
+     "id": "nw_b380",
+     "characterId": "nw_narrator",
+     "text": "At the far end, small and amber, the bar sign.",
+     "silent": true
+    },
+    {
+     "id": "nw_b381",
      "characterId": "nw_narrator",
      "text": "Vera shakes the blue umbrella out onto his floor. From a paper bag, two convenience-store rice balls. She holds one out.",
      "silent": true
     },
     {
-     "id": "nw_b349",
+     "id": "nw_b382",
      "characterId": "nw_vera",
      "text": "You were eating one when I came in. I assumed it was a lifestyle.",
      "audioUrl": "/film/voice/s14a/337-vera-dryly-you-were-eating-one-when.mp3"
     },
     {
-     "id": "nw_b350",
+     "id": "nw_b383",
      "characterId": "nw_jack",
      "text": "This is a stakeout. Nothing happens.",
      "audioUrl": "/film/voice/s14a/337-jack-dryly-this-is-a-stakeout-nothing.mp3"
     },
     {
-     "id": "nw_b351",
+     "id": "nw_b384",
      "characterId": "nw_vera",
      "text": "Then I won't miss anything.",
      "audioUrl": "/film/voice/s14a/337-vera-gently-then-i-won-t-miss.mp3"
     },
     {
-     "id": "nw_b352",
+     "id": "nw_b385",
      "characterId": "nw_narrator",
      "text": "He takes it. Their fingers don't touch. Both notice that they don't.",
      "silent": true
     },
     {
-     "id": "nw_b353",
+     "id": "nw_b386",
      "characterId": "nw_narrator",
      "text": "They watch the lane.",
      "silent": true
     },
     {
-     "id": "nw_b354",
+     "id": "nw_b387",
      "characterId": "nw_vera",
      "text": "What are we waiting for?",
      "audioUrl": "/film/voice/s14a/337-vera-curious-what-are-we-waiting-for.mp3"
     },
     {
-     "id": "nw_b355",
+     "id": "nw_b388",
      "characterId": "nw_jack",
      "text": "Whoever comes back.",
      "audioUrl": "/film/voice/s14a/337-jack-evenly-whoever-comes-back.mp3"
     },
     {
-     "id": "nw_b356",
+     "id": "nw_b389",
      "characterId": "nw_vera",
      "text": "Back?",
      "audioUrl": "/film/voice/s14a/337-vera-evenly-back.mp3"
     },
     {
-     "id": "nw_b357",
+     "id": "nw_b390",
      "characterId": "nw_jack",
      "text": "Someone came back to this street that night. Nobody comes back for what they already have.",
      "audioUrl": "/film/voice/s14a/337-jack-evenly-someone-came-back-to-this.mp3"
     },
     {
-     "id": "nw_b358",
+     "id": "nw_b391",
      "characterId": "nw_vera",
      "text": "What didn't they have?",
      "audioUrl": "/film/voice/s14a/337-vera-curious-what-didn-t-they-have.mp3"
     },
     {
-     "id": "nw_b359",
+     "id": "nw_b392",
      "characterId": "nw_jack",
      "text": "I don't know yet.",
      "audioUrl": "/film/voice/s14a/337-jack-evenly-i-don-t-know-yet.mp3"
     },
     {
-     "id": "nw_b360",
+     "id": "nw_b393",
      "characterId": "nw_narrator",
      "text": "A TRAIN passes somewhere behind them. The mirror trembles, and the red bird swings. Vera watches it.",
      "silent": true,
      "sfxUrl": "/film/sfx/train.mp3"
     },
     {
-     "id": "nw_b361",
+     "id": "nw_b394",
      "characterId": "nw_vera",
      "text": "Is that for luck?",
      "audioUrl": "/film/voice/s14a/337-vera-gently-is-that-for-luck.mp3"
     },
     {
-     "id": "nw_b362",
+     "id": "nw_b395",
      "characterId": "nw_jack",
      "text": "It's so I don't lose it.",
      "audioUrl": "/film/voice/s14a/337-jack-dryly-it-s-so-i-don.mp3"
     },
     {
-     "id": "nw_b363",
+     "id": "nw_b396",
      "characterId": "nw_narrator",
      "text": "A long silence. The rice ball in her lap, unwrapped, uneaten.",
      "silent": true,
@@ -4976,25 +5174,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b364",
+     "id": "nw_b397",
      "characterId": "nw_vera",
      "text": "I told her she always runs.",
      "audioUrl": "/film/voice/s14a/339-vera-weakly-i-told-her-she-always.mp3"
     },
     {
-     "id": "nw_b365",
+     "id": "nw_b398",
      "characterId": "nw_jack",
      "text": "You said.",
      "audioUrl": "/film/voice/s14a/339-jack-evenly-you-said.mp3"
     },
     {
-     "id": "nw_b366",
+     "id": "nw_b399",
      "characterId": "nw_vera",
      "text": "It's the last thing I —",
      "audioUrl": "/film/voice/s14a/339-vera-voice-breaking-it-s-the-last.mp3"
     },
     {
-     "id": "nw_b367",
+     "id": "nw_b400",
      "characterId": "nw_jack",
      "text": "Runners don't pack. They leave with what they're wearing. Your sister had a suitcase zipped under the bed and a flight booked home. Whatever happened to her, she wasn't running from you.",
      "audioUrl": "/film/voice/s14a/339-jack-evenly-runners-don-t-pack-they.mp3",
@@ -5016,33 +5214,39 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b368",
+     "id": "nw_b401",
      "characterId": "nw_vera",
      "text": "You don't know that.",
      "audioUrl": "/film/voice/s14a/339-vera-pleading-you-don-t-know-that.mp3"
     },
     {
-     "id": "nw_b369",
+     "id": "nw_b402",
      "characterId": "nw_jack",
      "text": "No. But I'd bet on it.",
      "audioUrl": "/film/voice/s14a/339-jack-evenly-no-pause-but-i-d.mp3"
     },
     {
-     "id": "nw_b370",
+     "id": "nw_b403",
      "characterId": "nw_narrator",
      "text": "She looks at him for the first time since she sat down. He is looking at the lane. He doesn't look back.",
      "silent": true
     },
     {
-     "id": "nw_b371",
+     "id": "nw_b404",
      "characterId": "nw_narrator",
-     "text": "A figure at the road end, under a black umbrella tilted low, face lost beneath it. He walks past the car (both of them sink an inch in their seats) and into the lane.",
+     "text": "A figure at the road end, under a black umbrella tilted low, face lost beneath it.",
      "silent": true
     },
     {
-     "id": "nw_b372",
+     "id": "nw_b405",
      "characterId": "nw_narrator",
-     "text": "He goes to the bar's shuttered door. Tries the handle. Stands under the amber sign, looking up and down the lane. Then he turns back toward the road, and the umbrella swings toward the car.",
+     "text": "He walks past the car (both of them sink an inch in their seats) and into the lane.",
+     "silent": true
+    },
+    {
+     "id": "nw_b406",
+     "characterId": "nw_narrator",
+     "text": "He goes to the bar's shuttered door. Tries the handle. Stands under the amber sign, looking up and down the lane.",
      "silent": true,
      "background": "/film/img/s14a/340-the-shuttered-door.jpg",
      "cinematic": {
@@ -5062,7 +5266,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b373",
+     "id": "nw_b407",
+     "characterId": "nw_narrator",
+     "text": "Then he turns back toward the road, and the umbrella swings toward the car.",
+     "silent": true
+    },
+    {
+     "id": "nw_b408",
      "characterId": "nw_narrator",
      "text": "Jack's arm goes out across Vera, pressing her back into the seat. Not looking. Reflex.",
      "silent": true,
@@ -5084,21 +5294,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b374",
+     "id": "nw_b409",
      "characterId": "nw_narrator",
-     "text": "The umbrella holds on them. Then turns away. The man walks to a small white car further up the road, and gets in. He doesn't start it. He sits.",
+     "text": "The umbrella holds on them. Then turns away. The man walks to a small white car further up the road, and gets in. He doesn't start it.",
      "silent": true
     },
     {
-     "id": "nw_b375",
+     "id": "nw_b410",
+     "characterId": "nw_narrator",
+     "text": "He sits.",
+     "silent": true
+    },
+    {
+     "id": "nw_b411",
      "characterId": "nw_narrator",
      "text": "Jack looks at his own arm, still across her chest, as if it belonged to someone else. He takes it back.",
      "silent": true
     },
     {
-     "id": "nw_b376",
+     "id": "nw_b412",
      "characterId": "nw_narrator",
-     "text": "They sit very still. After a long time, the white car pulls out and goes, without hurry. Jack finds a pencil stub, smooths the paper bag flat on his knee, and writes the plate number on it.",
+     "text": "They sit very still. After a long time, the white car pulls out and goes, without hurry.",
      "silent": true,
      "background": "/film/img/s14a/342-the-plate.jpg",
      "cinematic": {
@@ -5120,37 +5336,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.4
     },
     {
-     "id": "nw_b377",
+     "id": "nw_b413",
+     "characterId": "nw_narrator",
+     "text": "Jack finds a pencil stub, smooths the paper bag flat on his knee, and writes the plate number on it.",
+     "silent": true
+    },
+    {
+     "id": "nw_b414",
      "characterId": "nw_vera",
      "text": "Is that routine? Watching a bar after a shooting?",
      "audioUrl": "/film/voice/s14a/342-vera-curious-is-that-routine-watching-a.mp3"
     },
     {
-     "id": "nw_b378",
+     "id": "nw_b415",
      "characterId": "nw_jack",
      "text": "Probably.",
      "audioUrl": "/film/voice/s14a/342-jack-evenly-probably.mp3"
     },
     {
-     "id": "nw_b379",
+     "id": "nw_b416",
      "characterId": "nw_narrator",
      "text": "He folds the bag once and puts it inside his coat.",
      "silent": true
     },
     {
-     "id": "nw_b380",
+     "id": "nw_b417",
      "characterId": "nw_vera",
      "text": "You don't think so.",
      "audioUrl": "/film/voice/s14a/342-vera-evenly-you-don-t-think-so.mp3"
     },
     {
-     "id": "nw_b381",
+     "id": "nw_b418",
      "characterId": "nw_jack",
      "text": "I think it's a plate number.",
      "audioUrl": "/film/voice/s14a/342-jack-dryly-i-think-it-s-a.mp3"
     },
     {
-     "id": "nw_b382",
+     "id": "nw_b419",
      "characterId": "nw_narrator",
      "text": "3:40 a.m. The amber sign at the far end goes dark. Jack starts the engine.",
      "silent": true,
@@ -5158,45 +5380,45 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.7
     },
     {
-     "id": "nw_b383",
+     "id": "nw_b420",
      "characterId": "nw_jack",
      "text": "Call me when you go somewhere.",
      "audioUrl": "/film/voice/s14a/343-jack-evenly-call-me-when-you-go.mp3"
     },
     {
-     "id": "nw_b384",
+     "id": "nw_b421",
      "characterId": "nw_vera",
      "text": "I will.",
      "audioUrl": "/film/voice/s14a/343-vera-evenly-i-will.mp3"
     },
     {
-     "id": "nw_b385",
+     "id": "nw_b422",
      "characterId": "nw_jack",
      "text": "That's a lie.",
      "audioUrl": "/film/voice/s14a/343-jack-dryly-that-s-a-lie.mp3"
     },
     {
-     "id": "nw_b386",
+     "id": "nw_b423",
      "characterId": "nw_vera",
      "text": "Yes.",
      "audioUrl": "/film/voice/s14a/343-vera-flatly-yes.mp3"
     },
     {
-     "id": "nw_b387",
+     "id": "nw_b424",
      "characterId": "nw_narrator",
      "text": "She sets the rice ball on his dashboard, still untouched, and gets out.",
      "silent": true
     },
     {
-     "id": "nw_b388",
+     "id": "nw_b425",
      "characterId": "nw_narrator",
      "text": "In the mirror he watches the blue umbrella go up the wet road and round the corner, and the dark take it.",
      "silent": true
     },
     {
-     "id": "nw_b389",
+     "id": "nw_b426",
      "characterId": "nw_narrator",
-     "text": "A small engine starts, out of sight. Headlights swing across the end of the road and away. Jack counts ten. Then he pulls out after them, forty metres back. Never closer. Never farther.",
+     "text": "A small engine starts, out of sight. Headlights swing across the end of the road and away. Jack counts ten.",
      "silent": true,
      "background": "/film/img/s14a/343-forty-metres-back.jpg",
      "cinematic": {
@@ -5214,11 +5436,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s15",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
      "sfxUrl": "/film/sfx/car-interior-driving.mp3",
      "sfxVolume": 0.5
+    },
+    {
+     "id": "nw_b427",
+     "characterId": "nw_narrator",
+     "text": "Then he pulls out after them, forty metres back. Never closer. Never farther.",
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s15",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
@@ -5243,15 +5471,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b390",
+     "id": "nw_b428",
      "characterId": "nw_narrator",
      "text": "Rain. A wide street of new glass towers and chain stores.",
      "silent": true
     },
     {
-     "id": "nw_b391",
+     "id": "nw_b429",
      "characterId": "nw_narrator",
-     "text": "Between two towers, a long white construction hoarding: KUROSE DEVELOPMENT, and a painted plaza full of smiling people who don't exist. Behind it, low and dark and patched, the Hive.",
+     "text": "Between two towers, a long white construction hoarding: KUROSE DEVELOPMENT, and a painted plaza full of smiling people who don't exist.",
      "silent": true,
      "background": "/film/img/s15/184-a-gap-in-someones-teeth.jpg",
      "cinematic": {
@@ -5271,25 +5499,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b392",
+     "id": "nw_b430",
      "characterId": "nw_narrator",
-     "text": "A dense, self-built block of stacked homes and workshops rising eleven storeys, balconies bolted onto balconies, air conditioners and pipes and laundry and hand-painted signs, all of it crushed together under the curve of the elevated railway. The city has grown up around it and forgotten it is there.",
+     "text": "Behind it, low and dark and patched, the Hive.",
      "silent": true
     },
     {
-     "id": "nw_b393",
+     "id": "nw_b431",
      "characterId": "nw_narrator",
-     "text": "At the back, the tower steps down to a low rear wing pressed hard against the concrete railway viaduct, its roof level with the tracks. Old neon signs hang dead on its face. Even in daylight the Hive sits in its own haze of steam and kitchen smoke, as if it had its own weather.",
+     "text": "A dense, self-built block of stacked homes and workshops rising eleven storeys, balconies bolted onto balconies, air conditioners and pipes and laundry and hand-painted signs, all of it crushed together under the curve of the elevated railway.",
      "silent": true
     },
     {
-     "id": "nw_b394",
+     "id": "nw_b432",
+     "characterId": "nw_narrator",
+     "text": "The city has grown up around it and forgotten it is there.",
+     "silent": true
+    },
+    {
+     "id": "nw_b433",
+     "characterId": "nw_narrator",
+     "text": "At the back, the tower steps down to a low rear wing pressed hard against the concrete railway viaduct, its roof level with the tracks.",
+     "silent": true
+    },
+    {
+     "id": "nw_b434",
+     "characterId": "nw_narrator",
+     "text": "Old neon signs hang dead on its face.",
+     "silent": true
+    },
+    {
+     "id": "nw_b435",
+     "characterId": "nw_narrator",
+     "text": "Even in daylight the Hive sits in its own haze of steam and kitchen smoke, as if it had its own weather.",
+     "silent": true
+    },
+    {
+     "id": "nw_b436",
      "characterId": "nw_narrator",
      "text": "Jack stands on the pavement with the sketchbook under his coat. He looks up at the Hive for a long moment, as if at someone he used to know.",
      "silent": true
     },
     {
-     "id": "nw_b395",
+     "id": "nw_b437",
      "characterId": "nw_narrator",
      "text": "Then he goes in.",
      "silent": true,
@@ -5336,15 +5588,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b396",
+     "id": "nw_b438",
      "characterId": "nw_narrator",
-     "text": "Narrow corridors, barely shoulder-wide, lit by bare bulbs. Water drips from somewhere above and runs along the floor in a thin shining line. Pipes overhead. Wires everywhere. What daylight gets in comes in thin cold shafts from gaps far overhead, thick with drifting steam.",
+     "text": "Narrow corridors, barely shoulder-wide, lit by bare bulbs. Water drips from somewhere above and runs along the floor in a thin shining line.",
      "silent": true
     },
     {
-     "id": "nw_b397",
+     "id": "nw_b439",
      "characterId": "nw_narrator",
-     "text": "Doors stand open onto other lives. A MAN at a bench mending radios, a dozen of them murmuring different stations at once. A FAMILY eating dinner at four in the afternoon, the TV loud. An OLD WOMAN asleep in front of a sumo match. A dentist's chair behind a curtain, a hand-lettered price list taped to the wall.",
+     "text": "Pipes overhead. Wires everywhere. What daylight gets in comes in thin cold shafts from gaps far overhead, thick with drifting steam.",
+     "silent": true
+    },
+    {
+     "id": "nw_b440",
+     "characterId": "nw_narrator",
+     "text": "Doors stand open onto other lives. A MAN at a bench mending radios, a dozen of them murmuring different stations at once.",
      "silent": true,
      "background": "/film/img/s16/249-the-chair.jpg",
      "cinematic": {
@@ -5364,7 +5622,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b398",
+     "id": "nw_b441",
+     "characterId": "nw_narrator",
+     "text": "A FAMILY eating dinner at four in the afternoon, the TV loud. An OLD WOMAN asleep in front of a sumo match.",
+     "silent": true
+    },
+    {
+     "id": "nw_b442",
+     "characterId": "nw_narrator",
+     "text": "A dentist's chair behind a curtain, a hand-lettered price list taped to the wall.",
+     "silent": true
+    },
+    {
+     "id": "nw_b443",
      "characterId": "nw_narrator",
      "text": "Jack walks through it all. Nobody stops him. Everybody sees him.",
      "silent": true,
@@ -5386,26 +5656,26 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b399",
+     "id": "nw_b444",
      "characterId": "nw_narrator",
      "text": "A TRAIN passes overhead. The whole building trembles. Dust sifts down through the bulb light. Nobody looks up.",
      "silent": true,
      "sfxUrl": "/film/sfx/train.mp3"
     },
     {
-     "id": "nw_b400",
+     "id": "nw_b445",
      "characterId": "nw_narrator",
      "text": "He turns a corner and stops.",
      "silent": true
     },
     {
-     "id": "nw_b401",
+     "id": "nw_b446",
      "characterId": "nw_narrator",
      "text": "The noodle counter. Six stools. The curtain. The hand-painted sign, faded almost to nothing but unmistakable.",
      "silent": true
     },
     {
-     "id": "nw_b402",
+     "id": "nw_b447",
      "characterId": "nw_narrator",
      "text": "It is exactly the drawing.",
      "silent": true,
@@ -5452,19 +5722,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b403",
+     "id": "nw_b448",
      "characterId": "nw_narrator",
      "text": "Steam. A single fluorescent tube. Two customers slurping in silence at the far end.",
      "silent": true
     },
     {
-     "id": "nw_b404",
+     "id": "nw_b449",
      "characterId": "nw_narrator",
      "text": "Behind the counter, KANEKO (70s), tiny and sharp-eyed, works a pot with long chopsticks. She looks up as Jack sits at the counter.",
      "silent": true
     },
     {
-     "id": "nw_b405",
+     "id": "nw_b450",
      "characterId": "nw_narrator",
      "text": "She looks at him for a long time. Longer than a stranger would.",
      "silent": true,
@@ -5486,31 +5756,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b406",
+     "id": "nw_b451",
      "characterId": "nw_kaneko",
      "text": "You got old.",
      "audioUrl": "/film/voice/s17/189-kaneko-dryly-you-got-old.mp3"
     },
     {
-     "id": "nw_b407",
+     "id": "nw_b452",
      "characterId": "nw_jack",
      "text": "So did you.",
      "audioUrl": "/film/voice/s17/189-jack-so-did-you.mp3"
     },
     {
-     "id": "nw_b408",
+     "id": "nw_b453",
      "characterId": "nw_kaneko",
      "text": "I was already old. You were a boy in a cheap suit, the only foreign face on the force. Japanese papers, American face. You came here with the American.",
      "audioUrl": "/film/voice/s17/189-kaneko-i-was-already-old-you-were.mp3"
     },
     {
-     "id": "nw_b409",
+     "id": "nw_b454",
      "characterId": "nw_kaneko",
      "text": "Everything is going. We are just slower.",
      "audioUrl": "/film/voice/s13/181-kaneko-everything-is-going-we-are-just.mp3"
     },
     {
-     "id": "nw_b410",
+     "id": "nw_b455",
      "characterId": "nw_narrator",
      "text": "Jack looks at the counter under his hands.",
      "silent": true,
@@ -5532,37 +5802,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b411",
+     "id": "nw_b456",
      "characterId": "nw_jack",
      "text": "I'm looking for his daughter. The younger one.",
      "audioUrl": "/film/voice/s17/189-jack-quietly-i-m-looking-for-his.mp3"
     },
     {
-     "id": "nw_b412",
+     "id": "nw_b457",
      "characterId": "nw_narrator",
      "text": "Kaneko's chopsticks don't pause.",
      "silent": true
     },
     {
-     "id": "nw_b413",
+     "id": "nw_b458",
      "characterId": "nw_kaneko",
      "text": "The little one? She was four years old. She ate rice with her fingers.",
      "audioUrl": "/film/voice/s17/189-kaneko-flatly-the-little-one-she-was.mp3"
     },
     {
-     "id": "nw_b414",
+     "id": "nw_b459",
      "characterId": "nw_jack",
      "text": "She's twenty-four now. And someone wants to kill her.",
      "audioUrl": "/film/voice/s17/189-jack-she-s-twenty-four-now-and.mp3"
     },
     {
-     "id": "nw_b415",
+     "id": "nw_b460",
      "characterId": "nw_narrator",
      "text": "The two customers at the end of the counter have stopped slurping.",
      "silent": true
     },
     {
-     "id": "nw_b416",
+     "id": "nw_b461",
      "characterId": "nw_narrator",
      "text": "Kaneko sets a bowl of noodles in front of Jack.",
      "silent": true,
@@ -5584,19 +5854,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b417",
+     "id": "nw_b462",
      "characterId": "nw_kaneko",
      "text": "Eat. Then go. There is no one here but us.",
      "audioUrl": "/film/voice/s17/189-kaneko-gruffly-eat-then-go-pause-there.mp3"
     },
     {
-     "id": "nw_b418",
+     "id": "nw_b463",
      "characterId": "nw_narrator",
      "text": "Jack eats. Slowly. He finishes everything.",
      "silent": true
     },
     {
-     "id": "nw_b419",
+     "id": "nw_b464",
      "characterId": "nw_narrator",
      "text": "He puts down more money than the bowl costs, far more, and a business card on top of it.",
      "silent": true,
@@ -5618,19 +5888,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b420",
+     "id": "nw_b465",
      "characterId": "nw_jack",
      "text": "He always paid too much, too.",
      "audioUrl": "/film/voice/s17/189-jack-quietly-he-always-paid-too-much.mp3"
     },
     {
-     "id": "nw_b421",
+     "id": "nw_b466",
      "characterId": "nw_narrator",
      "text": "He goes. Kaneko looks at the card for a long moment.",
      "silent": true
     },
     {
-     "id": "nw_b422",
+     "id": "nw_b467",
      "characterId": "nw_narrator",
      "text": "Behind the curtain, in the dark of the storeroom, something moves.",
      "silent": true,
@@ -5677,31 +5947,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b423",
+     "id": "nw_b468",
      "characterId": "nw_narrator",
      "text": "Rain. The old television plays static. Jack sits in the dark, the sketchbook open on the desk.",
      "silent": true
     },
     {
-     "id": "nw_b424",
+     "id": "nw_b469",
      "characterId": "nw_narrator",
-     "text": "He turns to the last page. Tucked inside the back cover: a letter, folded small, creased as though it had been crumpled into a ball and smoothed flat again.",
+     "text": "He turns to the last page.",
      "silent": true
     },
     {
-     "id": "nw_b425",
+     "id": "nw_b470",
+     "characterId": "nw_narrator",
+     "text": "Tucked inside the back cover: a letter, folded small, creased as though it had been crumpled into a ball and smoothed flat again.",
+     "silent": true
+    },
+    {
+     "id": "nw_b471",
      "characterId": "nw_narrator",
      "text": "He unfolds it under the lamp. Cheap lined paper. Careful, laborious English handwriting.",
      "silent": true
     },
     {
-     "id": "nw_b426",
+     "id": "nw_b472",
      "characterId": "nw_narrator",
-     "text": "THE LETTER\n\n\"Miss Voss. Your father did not kill himself. I can prove it. I have kept his papers for twenty years. I am old and I am ill and I do not want to carry them any more. Please telephone.\" A phone number. The signature: T. SAKAI.",
+     "text": "THE LETTER\n\n\"Miss Voss. Your father did not kill himself. I can prove it. I have kept his papers for twenty years.",
      "silent": true
     },
     {
-     "id": "nw_b427",
+     "id": "nw_b473",
+     "characterId": "nw_narrator",
+     "text": "I am old and I am ill and I do not want to carry them any more. Please telephone.\" A phone number. The signature: T. SAKAI.",
+     "silent": true
+    },
+    {
+     "id": "nw_b474",
      "characterId": "nw_narrator",
      "text": "The envelope folded inside it is addressed to VERA VOSS.",
      "silent": true,
@@ -5723,26 +6005,26 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b428",
+     "id": "nw_b475",
      "characterId": "nw_narrator",
      "text": "Jack reads the letter twice. Then he looks at the name on the envelope for a long time.",
      "silent": true
     },
     {
-     "id": "nw_b429",
+     "id": "nw_b476",
      "characterId": "nw_narrator",
      "text": "The black rotary phone RINGS.",
      "silent": true,
      "sfxUrl": "/film/sfx/phone.mp3"
     },
     {
-     "id": "nw_b430",
+     "id": "nw_b477",
      "characterId": "nw_narrator",
      "text": "He answers. Listens.",
      "silent": true
     },
     {
-     "id": "nw_b431",
+     "id": "nw_b478",
      "characterId": "nw_kaneko",
      "text": "Come back. Alone. After the last train.",
      "audioUrl": "/film/voice/s18/191-kaneko-urgently-come-back-alone-after-the.mp3",
@@ -5765,7 +6047,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b432",
+     "id": "nw_b479",
      "characterId": "nw_narrator",
      "text": "The line clicks dead.",
      "silent": true,
@@ -5842,13 +6124,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b433",
+     "id": "nw_b480",
      "characterId": "nw_narrator",
      "text": "Past midnight. The shutter half down. The fluorescent tube is off; only a single bulb burns.",
      "silent": true
     },
     {
-     "id": "nw_b434",
+     "id": "nw_b481",
      "characterId": "nw_narrator",
      "text": "Kaneko lifts the curtain to the storeroom and stands aside.",
      "silent": true,
@@ -5897,32 +6179,32 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b435",
+     "id": "nw_b482",
      "characterId": "nw_narrator",
      "text": "Flour sacks. The futon. The bare bulb.",
      "silent": true
     },
     {
-     "id": "nw_b436",
+     "id": "nw_b483",
      "characterId": "nw_narrator",
      "text": "MARA sits on the futon with her knees up and her phone to her ear, listening.",
      "silent": true
     },
     {
-     "id": "nw_b437",
+     "id": "nw_b484",
      "characterId": "nw_vera",
      "text": "You left your umbrella. You'll get soaked.",
      "audioUrl": "/film/voice/s13/182-vera-voice-breaking-you-left-your-umbrella.mp3",
      "expression": "v.o. · filtered"
     },
     {
-     "id": "nw_b438",
+     "id": "nw_b485",
      "characterId": "nw_vera",
      "text": "Just call me. You don't have to say anything. Just call, so I know.",
      "audioUrl": "/film/voice/s13/182-vera-pleading-just-call-me-you-don.mp3"
     },
     {
-     "id": "nw_b439",
+     "id": "nw_b486",
      "characterId": "nw_narrator",
      "text": "The message ends. She plays it again.",
      "silent": true,
@@ -5944,7 +6226,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b440",
+     "id": "nw_b487",
      "characterId": "nw_narrator",
      "text": "Jack is in the doorway. She scrambles back against the wall.",
      "silent": true,
@@ -5966,19 +6248,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b441",
+     "id": "nw_b488",
      "characterId": "nw_jack",
      "text": "My name is Jack. Your sister hired me.",
      "audioUrl": "/film/voice/s20/193-jack-my-name-is-jack-your-sister.mp3"
     },
     {
-     "id": "nw_b442",
+     "id": "nw_b489",
      "characterId": "nw_mara",
      "text": "Prove it.",
      "audioUrl": "/film/voice/s20/193-mara-shakily-prove-it.mp3"
     },
     {
-     "id": "nw_b443",
+     "id": "nw_b490",
      "characterId": "nw_narrator",
      "text": "Jack sets her sketchbook on a flour sack between them, with the hair clip on top.",
      "silent": true,
@@ -6000,31 +6282,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b444",
+     "id": "nw_b491",
      "characterId": "nw_narrator",
      "text": "Mara stares at it.",
      "silent": true
     },
     {
-     "id": "nw_b445",
+     "id": "nw_b492",
      "characterId": "nw_jack",
      "text": "She says it was hers. She says you stole it when you were kids and never gave it back.",
      "audioUrl": "/film/voice/s20/194-jack-she-says-it-was-hers-she.mp3"
     },
     {
-     "id": "nw_b446",
+     "id": "nw_b493",
      "characterId": "nw_narrator",
      "text": "Something in Mara's face gives way.",
      "silent": true
     },
     {
-     "id": "nw_b447",
+     "id": "nw_b494",
      "characterId": "nw_mara",
      "text": "It was never hers. Dad gave it to me. She just says that.",
      "audioUrl": "/film/voice/s20/194-mara-tearfully-it-was-never-hers-dad.mp3"
     },
     {
-     "id": "nw_b448",
+     "id": "nw_b495",
      "characterId": "nw_narrator",
      "text": "She pulls the sketchbook into her lap.",
      "silent": true,
@@ -6046,13 +6328,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b449",
+     "id": "nw_b496",
      "characterId": "nw_narrator",
      "text": "She almost laughs, and then she is crying, silently, pressing the back of her wrist against her mouth.",
      "silent": true
     },
     {
-     "id": "nw_b450",
+     "id": "nw_b497",
      "characterId": "nw_narrator",
      "text": "Jack waits. He doesn't go to her. He sits down on a flour sack, slowly, making himself smaller.",
      "silent": true,
@@ -6074,97 +6356,97 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b451",
+     "id": "nw_b498",
      "characterId": "nw_mara",
      "text": "Is she okay? Is she — does she know you're —",
      "audioUrl": "/film/voice/s20/194-mara-desperately-is-she-okay-is-she.mp3"
     },
     {
-     "id": "nw_b452",
+     "id": "nw_b499",
      "characterId": "nw_narrator",
      "text": "He doesn't answer. So she asks again.",
      "silent": true
     },
     {
-     "id": "nw_b453",
+     "id": "nw_b500",
      "characterId": "nw_mara",
      "text": "Is she okay?",
      "audioUrl": "/film/voice/s20/194-mara-bitterly-is-she-okay.mp3"
     },
     {
-     "id": "nw_b454",
+     "id": "nw_b501",
      "characterId": "nw_jack",
      "text": "She's been calling you. She hasn't slept.",
      "audioUrl": "/film/voice/s20/194-jack-she-s-been-calling-you-she.mp3"
     },
     {
-     "id": "nw_b455",
+     "id": "nw_b502",
      "characterId": "nw_mara",
      "text": "I know. I listen to them.",
      "audioUrl": "/film/voice/s20/194-mara-flatly-i-know-i-listen-to.mp3"
     },
     {
-     "id": "nw_b456",
+     "id": "nw_b503",
      "characterId": "nw_jack",
      "text": "Why were you in Kanda, Mara?",
      "audioUrl": "/film/voice/s20/194-jack-why-were-you-in-kanda-mara.mp3"
     },
     {
-     "id": "nw_b457",
+     "id": "nw_b504",
      "characterId": "nw_narrator",
      "text": "She looks at him. Decides.",
      "silent": true
     },
     {
-     "id": "nw_b458",
+     "id": "nw_b505",
      "characterId": "nw_mara",
      "text": "He wrote to Vera. Mr. Sakai. She threw it in the bin without even answering. I took it out. I called him. He said he had Dad's papers. He said to come to the bar at one o'clock. There'd be a man from a newspaper there too, so it couldn't be buried again.",
      "audioUrl": "/film/voice/s20/194-mara-he-wrote-to-vera-mr-sakai.mp3"
     },
     {
-     "id": "nw_b459",
+     "id": "nw_b506",
      "characterId": "nw_mara",
      "text": "I sent them both a photo so they'd know me. He wrote back one line. \"You have his face.\"",
      "audioUrl": "/film/voice/s20/194-mara-i-sent-them-both-a-photo.mp3"
     },
     {
-     "id": "nw_b460",
+     "id": "nw_b507",
      "characterId": "nw_jack",
      "text": "Vera doesn't know you went.",
      "audioUrl": "/film/voice/s20/194-jack-vera-doesn-t-know-you-went.mp3"
     },
     {
-     "id": "nw_b461",
+     "id": "nw_b508",
      "characterId": "nw_mara",
      "text": "We had a fight about it. I called her a coward. And I'm the one hiding in a storeroom. Don't tell her I'm here.",
      "audioUrl": "/film/voice/s20/284-mara-we-had-a-fight-about-it.mp3"
     },
     {
-     "id": "nw_b462",
+     "id": "nw_b509",
      "characterId": "nw_jack",
      "text": "She's your sister.",
      "audioUrl": "/film/voice/s20/284-jack-she-s-your-sister.mp3"
     },
     {
-     "id": "nw_b463",
+     "id": "nw_b510",
      "characterId": "nw_mara",
      "text": "They have my purse. My passport. They know my name. They know where I live, where she lives, all of it. If she knows where I am, she'll come here. She won't be able to help it. And they'll follow her. They'll use her to get to me. And then they'll kill her too.",
      "audioUrl": "/film/voice/s20/284-mara-urgently-they-have-my-purse-they.mp3"
     },
     {
-     "id": "nw_b464",
+     "id": "nw_b511",
      "characterId": "nw_jack",
      "text": "You don't know that.",
      "audioUrl": "/film/voice/s20/284-jack-you-don-t-know-that.mp3"
     },
     {
-     "id": "nw_b465",
+     "id": "nw_b512",
      "characterId": "nw_mara",
      "text": "I watched them shoot two men like they were switching off lights.",
      "audioUrl": "/film/voice/s20/284-mara-tearfully-i-watched-them-shoot-two.mp3"
     },
     {
-     "id": "nw_b466",
+     "id": "nw_b513",
      "characterId": "nw_narrator",
      "text": "Silence. The bulb hums.",
      "silent": true,
@@ -6186,19 +6468,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b467",
+     "id": "nw_b514",
      "characterId": "nw_mara",
      "text": "Promise me.",
      "audioUrl": "/film/voice/s20/284-mara-promise-me.mp3"
     },
     {
-     "id": "nw_b468",
+     "id": "nw_b515",
      "characterId": "nw_narrator",
      "text": "Jack looks at her for a long moment. Twenty years of silence sit behind his eyes.",
      "silent": true
     },
     {
-     "id": "nw_b469",
+     "id": "nw_b516",
      "characterId": "nw_jack",
      "text": "I promise.",
      "audioUrl": "/film/voice/s20/284-jack-i-promise.mp3",
@@ -6229,13 +6511,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b470",
+     "id": "nw_b517",
      "characterId": "nw_narrator",
      "text": "Grey light. Rain on the window. Jack hasn't slept. He is in yesterday's shirt.",
      "silent": true
     },
     {
-     "id": "nw_b471",
+     "id": "nw_b518",
      "characterId": "nw_narrator",
      "text": "Footsteps on the stairs. The frosted glass. Vera's shape.",
      "silent": true,
@@ -6257,37 +6539,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b472",
+     "id": "nw_b519",
      "characterId": "nw_narrator",
      "text": "She comes in carrying two coffees in paper cups. She puts one on his desk.",
      "silent": true
     },
     {
-     "id": "nw_b473",
+     "id": "nw_b520",
      "characterId": "nw_vera",
      "text": "You look terrible.",
      "audioUrl": "/film/voice/s21/195-vera-dryly-you-look-terrible.mp3"
     },
     {
-     "id": "nw_b474",
+     "id": "nw_b521",
      "characterId": "nw_jack",
      "text": "Thank you.",
      "audioUrl": "/film/voice/s21/195-jack-thank-you.mp3"
     },
     {
-     "id": "nw_b475",
+     "id": "nw_b522",
      "characterId": "nw_narrator",
      "text": "She sits. She doesn't take her coat off. She waits.",
      "silent": true
     },
     {
-     "id": "nw_b476",
+     "id": "nw_b523",
      "characterId": "nw_vera",
      "text": "Did you find anything?",
      "audioUrl": "/film/voice/s21/195-vera-did-you-find-anything.mp3"
     },
     {
-     "id": "nw_b477",
+     "id": "nw_b524",
      "characterId": "nw_narrator",
      "text": "The sketchbook is on the desk between them. Jack's hand rests on its cover.",
      "silent": true,
@@ -6309,7 +6591,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b478",
+     "id": "nw_b525",
      "characterId": "nw_narrator",
      "text": "A train passes. The blinds shiver.",
      "silent": true,
@@ -6317,31 +6599,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b479",
+     "id": "nw_b526",
      "characterId": "nw_jack",
      "text": "Not yet.",
      "audioUrl": "/film/voice/s21/271-jack-evenly-not-yet.mp3"
     },
     {
-     "id": "nw_b480",
+     "id": "nw_b527",
      "characterId": "nw_narrator",
      "text": "She nods. Believes him. That's the worst part.",
      "silent": true
     },
     {
-     "id": "nw_b481",
+     "id": "nw_b528",
      "characterId": "nw_vera",
      "text": "Okay. Okay. Tomorrow, then.",
      "audioUrl": "/film/voice/s21/271-vera-gently-okay-pause-okay-tomorrow-then.mp3"
     },
     {
-     "id": "nw_b482",
+     "id": "nw_b529",
      "characterId": "nw_narrator",
      "text": "She stands. At the door she hesitates, as though she wants to say something else. She doesn't. She goes.",
      "silent": true
     },
     {
-     "id": "nw_b483",
+     "id": "nw_b530",
      "characterId": "nw_narrator",
      "text": "Jack sits very still. He picks up the coffee she brought him and holds it without drinking, the way he held the can at the vending machine.",
      "silent": true,
@@ -6388,9 +6670,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b484",
+     "id": "nw_b531",
      "characterId": "nw_narrator",
-     "text": "A different place: a narrow standing-and-stools counter wedged into a brick railway arch. A ticket machine by the door. Yellowed menus on the wall. A radio behind the counter plays baseball, low.",
+     "text": "A different place: a narrow standing-and-stools counter wedged into a brick railway arch. A ticket machine by the door.",
      "silent": true,
      "background": "/film/img/s22/195-somewhere-like-this.jpg",
      "cinematic": {
@@ -6410,19 +6692,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b485",
+     "id": "nw_b532",
+     "characterId": "nw_narrator",
+     "text": "Yellowed menus on the wall. A radio behind the counter plays baseball, low.",
+     "silent": true
+    },
+    {
+     "id": "nw_b533",
      "characterId": "nw_narrator",
      "text": "11:40 p.m. by the clock over the door.",
      "silent": true
     },
     {
-     "id": "nw_b486",
+     "id": "nw_b534",
      "characterId": "nw_narrator",
      "text": "Vera and Jack sit side by side at the counter. Empty bowls. Two coffees in thick white cups. They have been here a long time.",
      "silent": true
     },
     {
-     "id": "nw_b487",
+     "id": "nw_b535",
      "characterId": "nw_narrator",
      "text": "Every few minutes, a train rumbles overhead, and the cups tremble in their saucers.",
      "silent": true,
@@ -6446,73 +6734,73 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b488",
+     "id": "nw_b536",
      "characterId": "nw_vera",
      "text": "He used to bring us somewhere like this. Dad. After work. Mara would fall asleep on the counter and he'd carry her home.",
      "audioUrl": "/film/voice/s22/197-vera-he-used-to-bring-us-somewhere.mp3"
     },
     {
-     "id": "nw_b489",
+     "id": "nw_b537",
      "characterId": "nw_jack",
      "text": "And you?",
      "audioUrl": "/film/voice/s22/197-jack-and-you.mp3"
     },
     {
-     "id": "nw_b490",
+     "id": "nw_b538",
      "characterId": "nw_vera",
      "text": "I stayed awake. I wanted to hear everything he said to the man who made the noodles. I didn't understand any of it. I just liked that he was different here. Lighter. I think he was happy here. Before.",
      "audioUrl": "/film/voice/s22/197-vera-i-stayed-awake-i-wanted-to.mp3"
     },
     {
-     "id": "nw_b491",
+     "id": "nw_b539",
      "characterId": "nw_narrator",
      "text": "Jack looks down at his cup.",
      "silent": true
     },
     {
-     "id": "nw_b492",
+     "id": "nw_b540",
      "characterId": "nw_vera",
      "text": "They said he killed himself. My mother never talked about it. Not once. We went home and it was as if Tokyo never happened.",
      "audioUrl": "/film/voice/s22/197-vera-they-said-he-killed-himself-my.mp3"
     },
     {
-     "id": "nw_b493",
+     "id": "nw_b541",
      "characterId": "nw_jack",
      "text": "Do you believe it?",
      "audioUrl": "/film/voice/s22/197-jack-do-you-believe-it.mp3"
     },
     {
-     "id": "nw_b494",
+     "id": "nw_b542",
      "characterId": "nw_narrator",
      "text": "She thinks about it for a long time.",
      "silent": true
     },
     {
-     "id": "nw_b495",
+     "id": "nw_b543",
      "characterId": "nw_vera",
      "text": "I believe he was sad. I don't know if I believe the rest. A man wrote to me last week. He said Dad didn't do it. He said the police knew.",
      "audioUrl": "/film/voice/s22/197-vera-i-believe-he-was-sad-i.mp3"
     },
     {
-     "id": "nw_b496",
+     "id": "nw_b544",
      "characterId": "nw_narrator",
      "text": "Jack keeps his eyes on his bowl.",
      "silent": true
     },
     {
-     "id": "nw_b497",
+     "id": "nw_b545",
      "characterId": "nw_jack",
      "text": "What did you do?",
      "audioUrl": "/film/voice/s22/197-jack-carefully-what-did-you-do.mp3"
     },
     {
-     "id": "nw_b498",
+     "id": "nw_b546",
      "characterId": "nw_vera",
      "text": "I threw it in the bin. Because if it's true, then someone did it. And nobody looked. Twenty years, and nobody even looked.",
      "audioUrl": "/film/voice/s22/197-vera-i-threw-it-in-the-bin.mp3"
     },
     {
-     "id": "nw_b499",
+     "id": "nw_b547",
      "characterId": "nw_narrator",
      "text": "Jack is very still. The letter is in the inside pocket of his coat. He doesn't move to touch it.",
      "silent": true,
@@ -6534,7 +6822,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b500",
+     "id": "nw_b548",
      "characterId": "nw_narrator",
      "text": "A train. The cups tremble.",
      "silent": true,
@@ -6542,7 +6830,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b501",
+     "id": "nw_b549",
      "characterId": "nw_vera",
      "text": "You're very easy to talk to. It's annoying.",
      "audioUrl": "/film/voice/s22/285-vera-you-re-very-easy-to-talk.mp3",
@@ -6564,7 +6852,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b502",
+     "id": "nw_b550",
      "characterId": "nw_jack",
      "text": "I get paid to listen.",
      "audioUrl": "/film/voice/s22/285-jack-i-get-paid-to-listen.mp3",
@@ -6586,49 +6874,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b503",
+     "id": "nw_b551",
      "characterId": "nw_vera",
      "text": "You're not getting paid right now.",
      "audioUrl": "/film/voice/s22/285-vera-you-re-not-getting-paid-right.mp3"
     },
     {
-     "id": "nw_b504",
+     "id": "nw_b552",
      "characterId": "nw_narrator",
      "text": "He has no answer to that.",
      "silent": true
     },
     {
-     "id": "nw_b505",
+     "id": "nw_b553",
      "characterId": "nw_narrator",
      "text": "She rests her head on her folded arms on the counter. Just for a moment. Her eyes close.",
      "silent": true
     },
     {
-     "id": "nw_b506",
+     "id": "nw_b554",
      "characterId": "nw_vera",
      "text": "You're the first person I've trusted since she disappeared. Did you know that?",
      "audioUrl": "/film/voice/s22/285-vera-drowsily-you-re-the-first-person.mp3"
     },
     {
-     "id": "nw_b507",
+     "id": "nw_b555",
      "characterId": "nw_narrator",
      "text": "Jack looks at her. His mouth opens. The truth is right there.",
      "silent": true
     },
     {
-     "id": "nw_b508",
+     "id": "nw_b556",
      "characterId": "nw_jack",
      "text": "Vera —",
      "audioUrl": "/film/voice/s22/285-jack-vera.mp3"
     },
     {
-     "id": "nw_b509",
+     "id": "nw_b557",
      "characterId": "nw_narrator",
      "text": "But she is asleep.",
      "silent": true
     },
     {
-     "id": "nw_b510",
+     "id": "nw_b558",
      "characterId": "nw_narrator",
      "text": "He sits and watches her breathe. A train passes. Her coffee cup, near her elbow, trembles toward the edge of the counter.",
      "silent": true,
@@ -6636,7 +6924,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b511",
+     "id": "nw_b559",
      "characterId": "nw_narrator",
      "text": "He reaches over and moves it back from the edge. Carefully. Quietly. So it won't wake her.",
      "silent": true,
@@ -6658,7 +6946,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b512",
+     "id": "nw_b560",
      "characterId": "nw_narrator",
      "text": "He doesn't wake her. He sits there until the counterman begins stacking chairs.",
      "silent": true,
@@ -6689,19 +6977,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b513",
+     "id": "nw_b561",
      "characterId": "nw_narrator",
      "text": "Smoke. Red paper lanterns. Salarymen at plastic tables under a railway bridge, talking too loud.",
      "silent": true
     },
     {
-     "id": "nw_b514",
+     "id": "nw_b562",
      "characterId": "nw_narrator",
      "text": "Ishida sits alone at a corner table with a beer and a plate of skewers. Jack sits down opposite him.",
      "silent": true
     },
     {
-     "id": "nw_b515",
+     "id": "nw_b563",
      "characterId": "nw_ishida",
      "text": "You never call me unless you want something.",
      "audioUrl": "/film/voice/s23/199-ishida-wearily-you-never-call-me-unless.mp3",
@@ -6723,13 +7011,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b516",
+     "id": "nw_b564",
      "characterId": "nw_jack",
      "text": "Sakai.",
      "audioUrl": "/film/voice/s23/199-jack-sakai.mp3"
     },
     {
-     "id": "nw_b517",
+     "id": "nw_b565",
      "characterId": "nw_narrator",
      "text": "Ishida sighs. Turns a skewer over with his chopsticks.",
      "silent": true,
@@ -6751,37 +7039,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b518",
+     "id": "nw_b566",
      "characterId": "nw_ishida",
      "text": "You already know what he was. In the bubble years he cleared land. Old tenants who wouldn't sell. First he'd bring flowers. Then he'd bring men. Then something would happen. A fire, sometimes.",
      "audioUrl": "/film/voice/s23/199-ishida-you-already-know-what-he-was.mp3"
     },
     {
-     "id": "nw_b519",
+     "id": "nw_b567",
      "characterId": "nw_jack",
      "text": "The Shiohama fire.",
      "audioUrl": "/film/voice/s23/199-jack-the-shiohama-fire.mp3"
     },
     {
-     "id": "nw_b520",
+     "id": "nw_b568",
      "characterId": "nw_ishida",
      "text": "Among others. The journalist in the bar was from the Toto Shimbun. He'd been asking about the redevelopment money. Who owns what. Whose friends vote on what. The usual. Sakai called him a week ago. We think Sakai wanted to confess something before he died. He had cancer. Months left.",
      "audioUrl": "/film/voice/s23/199-ishida-among-others-pause-the-journalist-in.mp3"
     },
     {
-     "id": "nw_b521",
+     "id": "nw_b569",
      "characterId": "nw_jack",
      "text": "Confess what?",
      "audioUrl": "/film/voice/s23/199-jack-confess-what.mp3"
     },
     {
-     "id": "nw_b522",
+     "id": "nw_b570",
      "characterId": "nw_ishida",
      "text": "Who knows. An old man's conscience. It's very common.",
      "audioUrl": "/film/voice/s23/199-ishida-who-knows-an-old-man-s.mp3"
     },
     {
-     "id": "nw_b523",
+     "id": "nw_b571",
      "characterId": "nw_narrator",
      "text": "Jack watches him.",
      "silent": true,
@@ -6803,49 +7091,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b524",
+     "id": "nw_b572",
      "characterId": "nw_jack",
      "text": "Why are you telling me all this?",
      "audioUrl": "/film/voice/s23/199-jack-why-are-you-telling-me-all.mp3"
     },
     {
-     "id": "nw_b525",
+     "id": "nw_b573",
      "characterId": "nw_narrator",
      "text": "Ishida puts down his chopsticks.",
      "silent": true
     },
     {
-     "id": "nw_b526",
+     "id": "nw_b574",
      "characterId": "nw_ishida",
      "text": "Because you'll find out anyway. And because I would rather you heard it from me than from someone who wants to hurt you. Twenty years ago I told you to sign that report. You were young. You did what your senior told you. That was on me, not on you.",
      "audioUrl": "/film/voice/s23/199-ishida-because-you-ll-find-out-anyway.mp3"
     },
     {
-     "id": "nw_b527",
+     "id": "nw_b575",
      "characterId": "nw_jack",
      "text": "I still signed it.",
      "audioUrl": "/film/voice/s23/199-jack-i-still-signed-it.mp3"
     },
     {
-     "id": "nw_b528",
+     "id": "nw_b576",
      "characterId": "nw_ishida",
      "text": "And I've carried it too. Every day. Whatever Sakai hid, Jack, if you find it, bring it to me. Not to the department. To me. I'll know what to do with it this time.",
      "audioUrl": "/film/voice/s23/199-ishida-and-i-ve-carried-it-too.mp3"
     },
     {
-     "id": "nw_b529",
+     "id": "nw_b577",
      "characterId": "nw_jack",
      "text": "Sakai had a wife.",
      "audioUrl": "/film/voice/s23/199-jack-sakai-had-a-wife.mp3"
     },
     {
-     "id": "nw_b530",
+     "id": "nw_b578",
      "characterId": "nw_ishida",
      "text": "Separated. A fishing town on the Boso coast. The police have spoken to her. She gave us nothing.",
      "audioUrl": "/film/voice/s23/199-ishida-separated-a-fishing-town-on-the.mp3"
     },
     {
-     "id": "nw_b531",
+     "id": "nw_b579",
      "characterId": "nw_narrator",
      "text": "He takes a napkin, writes an address on it in careful longhand, and slides it across the table. Nothing in his face at all.",
      "silent": true,
@@ -6867,7 +7155,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b532",
+     "id": "nw_b580",
      "characterId": "nw_narrator",
      "text": "A long pause. A train roars overhead. The lanterns sway.",
      "silent": true,
@@ -6891,7 +7179,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b533",
+     "id": "nw_b581",
      "characterId": "nw_narrator",
      "text": "Jack nods slowly.",
      "silent": true,
@@ -6913,7 +7201,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b534",
+     "id": "nw_b582",
      "characterId": "nw_narrator",
      "text": "It is exactly what he needed to hear. That is what makes it dangerous.",
      "silent": true,
@@ -6944,7 +7232,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b535",
+     "id": "nw_b583",
      "characterId": "nw_narrator",
      "text": "The bulb. The flour sacks. Mara sits cross-legged on the futon. Jack sits against the opposite wall.",
      "silent": true,
@@ -6966,67 +7254,67 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b536",
+     "id": "nw_b584",
      "characterId": "nw_narrator",
      "text": "The curtain moves. Kaneko brings in a bowl of rice, steam rising into the bulb light.",
      "silent": true
     },
     {
-     "id": "nw_b537",
+     "id": "nw_b585",
      "characterId": "nw_kaneko",
      "text": "Eat.",
      "audioUrl": "/film/voice/s13/181-kaneko-gruffly-eat.mp3"
     },
     {
-     "id": "nw_b538",
+     "id": "nw_b586",
      "characterId": "nw_mara",
      "text": "Thank you. Has anyone... come? Asking?",
      "audioUrl": "/film/voice/s13/181-mara-hesitantly-thank-you-has-anyone-come.mp3"
     },
     {
-     "id": "nw_b539",
+     "id": "nw_b587",
      "characterId": "nw_kaneko",
      "text": "Nobody comes here who isn't lost.",
      "audioUrl": "/film/voice/s13/181-kaneko-flatly-nobody-comes-here-who-isn.mp3"
     },
     {
-     "id": "nw_b540",
+     "id": "nw_b588",
      "characterId": "nw_narrator",
      "text": "She puts the bowl in Mara's hands. The curtain falls shut behind her.",
      "silent": true
     },
     {
-     "id": "nw_b541",
+     "id": "nw_b589",
      "characterId": "nw_narrator",
      "text": "The rice goes cold in Mara's lap. They talk quietly, as if the building is listening. It is.",
      "silent": true
     },
     {
-     "id": "nw_b542",
+     "id": "nw_b590",
      "characterId": "nw_mara",
      "text": "Mr. Sakai said \"twenty years.\" Before they shot him. Like he'd been expecting them for twenty years.",
      "audioUrl": "/film/voice/s25/202-mara-mr-sakai-said-twenty-years-before.mp3"
     },
     {
-     "id": "nw_b543",
+     "id": "nw_b591",
      "characterId": "nw_jack",
      "text": "He probably had.",
      "audioUrl": "/film/voice/s25/202-jack-he-probably-had.mp3"
     },
     {
-     "id": "nw_b544",
+     "id": "nw_b592",
      "characterId": "nw_mara",
      "text": "He knew me. He saw me in the doorway and stopped. And at the end he pressed the key into my hand. \"Don't let them have it.\"",
      "audioUrl": "/film/voice/s25/202-mara-tearfully-he-knew-me-he-saw.mp3"
     },
     {
-     "id": "nw_b545",
+     "id": "nw_b593",
      "characterId": "nw_narrator",
      "text": "Jack looks down at his hands.",
      "silent": true
     },
     {
-     "id": "nw_b546",
+     "id": "nw_b594",
      "characterId": "nw_narrator",
      "text": "Beside the futon, held down by a flour scoop: a stack of loose pages covered in pencil. He turns the top one toward the bulb.",
      "silent": true,
@@ -7048,61 +7336,67 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b547",
+     "id": "nw_b595",
      "characterId": "nw_narrator",
-     "text": "A drawing from floor level. The underside of a counter. A crate of bottles. Two pairs of shoes. A stool going over. An outflung hand. In the corner, small: 1:07. Beside the shoes, in her careful block capitals: EXCUSE ME.",
+     "text": "A drawing from floor level. The underside of a counter. A crate of bottles. Two pairs of shoes. A stool going over. An outflung hand.",
      "silent": true
     },
     {
-     "id": "nw_b548",
+     "id": "nw_b596",
+     "characterId": "nw_narrator",
+     "text": "In the corner, small: 1:07. Beside the shoes, in her careful block capitals: EXCUSE ME.",
+     "silent": true
+    },
+    {
+     "id": "nw_b597",
      "characterId": "nw_jack",
      "text": "You drew this.",
      "audioUrl": "/film/voice/s25/202-jack-you-drew-this.mp3"
     },
     {
-     "id": "nw_b549",
+     "id": "nw_b598",
      "characterId": "nw_mara",
      "text": "It's the only thing I know how to do with it. If I don't put it on paper it just keeps happening. That's what he said when he came into the bar. \"Excuse me.\" Like a customer. He said it in the lane too, before —",
      "audioUrl": "/film/voice/s25/202-mara-it-s-the-only-thing-i.mp3"
     },
     {
-     "id": "nw_b550",
+     "id": "nw_b599",
      "characterId": "nw_narrator",
      "text": "She doesn't finish.",
      "silent": true
     },
     {
-     "id": "nw_b551",
+     "id": "nw_b600",
      "characterId": "nw_narrator",
      "text": "Jack sets the page down exactly where it was.",
      "silent": true
     },
     {
-     "id": "nw_b552",
+     "id": "nw_b601",
      "characterId": "nw_mara",
      "text": "And then in the bar, the man said, \"Where is he?\" He was waiting for the old man. They were supposed to meet.",
      "audioUrl": "/film/voice/s25/202-mara-and-then-in-the-bar-the.mp3"
     },
     {
-     "id": "nw_b553",
+     "id": "nw_b602",
      "characterId": "nw_jack",
      "text": "Sakai was bringing him something.",
      "audioUrl": "/film/voice/s25/202-jack-sakai-was-bringing-him-something.mp3"
     },
     {
-     "id": "nw_b554",
+     "id": "nw_b603",
      "characterId": "nw_narrator",
      "text": "Mara opens her fist. The coin-locker key on its worn tag.",
      "silent": true
     },
     {
-     "id": "nw_b555",
+     "id": "nw_b604",
      "characterId": "nw_mara",
      "text": "This.",
      "audioUrl": "/film/voice/s25/202-mara-this.mp3"
     },
     {
-     "id": "nw_b556",
+     "id": "nw_b605",
      "characterId": "nw_narrator",
      "text": "Jack takes it. Turns it over under the bulb. The number on the worn tag, still legible: 114.",
      "silent": true,
@@ -7124,85 +7418,85 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b557",
+     "id": "nw_b606",
      "characterId": "nw_jack",
      "text": "It's not a station locker. They clear those every three days.",
      "audioUrl": "/film/voice/s25/258-jack-it-s-not-a-station-locker.mp3"
     },
     {
-     "id": "nw_b558",
+     "id": "nw_b607",
      "characterId": "nw_mara",
      "text": "Then what is it?",
      "audioUrl": "/film/voice/s25/258-mara-then-what-is-it.mp3"
     },
     {
-     "id": "nw_b559",
+     "id": "nw_b608",
      "characterId": "nw_jack",
      "text": "Somewhere he paid for. For a long time.",
      "audioUrl": "/film/voice/s25/258-jack-somewhere-he-paid-for-for-a.mp3"
     },
     {
-     "id": "nw_b560",
+     "id": "nw_b609",
      "characterId": "nw_narrator",
      "text": "He hands it back. She looks surprised.",
      "silent": true
     },
     {
-     "id": "nw_b561",
+     "id": "nw_b610",
      "characterId": "nw_jack",
      "text": "Keep it. Until I know what it opens. It's safer with you than with me.",
      "audioUrl": "/film/voice/s25/258-jack-keep-it-until-i-know-what.mp3"
     },
     {
-     "id": "nw_b562",
+     "id": "nw_b611",
      "characterId": "nw_mara",
      "text": "Why?",
      "audioUrl": "/film/voice/s25/258-mara-why.mp3"
     },
     {
-     "id": "nw_b563",
+     "id": "nw_b612",
      "characterId": "nw_jack",
      "text": "Because nobody knows where you are.",
      "audioUrl": "/film/voice/s25/258-jack-because-nobody-knows-where-you-are.mp3"
     },
     {
-     "id": "nw_b564",
+     "id": "nw_b613",
      "characterId": "nw_narrator",
      "text": "Mara closes her hand around the key. She looks at him properly for the first time.",
      "silent": true
     },
     {
-     "id": "nw_b565",
+     "id": "nw_b614",
      "characterId": "nw_mara",
      "text": "Is she eating?",
      "audioUrl": "/film/voice/s25/258-mara-is-she-eating.mp3"
     },
     {
-     "id": "nw_b566",
+     "id": "nw_b615",
      "characterId": "nw_jack",
      "text": "What?",
      "audioUrl": "/film/voice/s25/258-jack-what.mp3"
     },
     {
-     "id": "nw_b567",
+     "id": "nw_b616",
      "characterId": "nw_mara",
      "text": "Vera. She forgets to eat when she's upset. She just drinks coffee. Is she eating?",
      "audioUrl": "/film/voice/s25/258-mara-vera-she-forgets-to-eat-when.mp3"
     },
     {
-     "id": "nw_b568",
+     "id": "nw_b617",
      "characterId": "nw_narrator",
      "text": "Jack thinks of the counter at 11:40 p.m. The empty bowls.",
      "silent": true
     },
     {
-     "id": "nw_b569",
+     "id": "nw_b618",
      "characterId": "nw_jack",
      "text": "Last night she had noodles.",
      "audioUrl": "/film/voice/s25/258-jack-last-night-she-had-noodles.mp3"
     },
     {
-     "id": "nw_b570",
+     "id": "nw_b619",
      "characterId": "nw_mara",
      "text": "Good. Make her eat breakfast. She never eats breakfast.",
      "audioUrl": "/film/voice/s25/258-mara-good-pause-make-her-eat-breakfast.mp3",
@@ -7233,19 +7527,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b571",
+     "id": "nw_b620",
      "characterId": "nw_narrator",
-     "text": "A coffee counter no wider than a corridor. Six seats, a glass siphon bubbling over a flame, toast cut as thick as a paperback. A CRT on the shelf shows a morning cooking show, sound low. The window is fogged from the inside.",
+     "text": "A coffee counter no wider than a corridor. Six seats, a glass siphon bubbling over a flame, toast cut as thick as a paperback.",
      "silent": true
     },
     {
-     "id": "nw_b572",
+     "id": "nw_b621",
+     "characterId": "nw_narrator",
+     "text": "A CRT on the shelf shows a morning cooking show, sound low. The window is fogged from the inside.",
+     "silent": true
+    },
+    {
+     "id": "nw_b622",
      "characterId": "nw_narrator",
      "text": "Vera sits with her coat still on and her phone face up beside her, already looking at the door as though the day has started without her.",
      "silent": true
     },
     {
-     "id": "nw_b573",
+     "id": "nw_b623",
      "characterId": "nw_narrator",
      "text": "Jack sets a plate down in front of her: thick toast, a boiled egg, a small dish of pickled cabbage that nobody asked for.",
      "silent": true,
@@ -7267,49 +7567,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b574",
+     "id": "nw_b624",
      "characterId": "nw_vera",
      "text": "What's this?",
      "audioUrl": "/film/voice/s25a/287-vera-what-s-this.mp3"
     },
     {
-     "id": "nw_b575",
+     "id": "nw_b625",
      "characterId": "nw_jack",
      "text": "Breakfast.",
      "audioUrl": "/film/voice/s25a/287-jack-breakfast.mp3"
     },
     {
-     "id": "nw_b576",
+     "id": "nw_b626",
      "characterId": "nw_vera",
      "text": "I don't eat breakfast.",
      "audioUrl": "/film/voice/s25a/287-vera-i-don-t-eat-breakfast.mp3"
     },
     {
-     "id": "nw_b577",
+     "id": "nw_b627",
      "characterId": "nw_jack",
      "text": "You drink coffee until the afternoon and then you forget to eat.",
      "audioUrl": "/film/voice/s25a/287-jack-you-drink-coffee-until-the-afternoon.mp3"
     },
     {
-     "id": "nw_b578",
+     "id": "nw_b628",
      "characterId": "nw_vera",
      "text": "Has someone been reporting on me?",
      "audioUrl": "/film/voice/s25a/287-vera-teasing-has-someone-been-reporting-on.mp3"
     },
     {
-     "id": "nw_b579",
+     "id": "nw_b629",
      "characterId": "nw_narrator",
      "text": "He says nothing. She looks at the plate. She looks at him. She picks up the toast, mostly to end the conversation.",
      "silent": true
     },
     {
-     "id": "nw_b580",
+     "id": "nw_b630",
      "characterId": "nw_vera",
      "text": "You sound like my sister.",
      "audioUrl": "/film/voice/s25a/288-vera-you-sound-like-my-sister.mp3"
     },
     {
-     "id": "nw_b581",
+     "id": "nw_b631",
      "characterId": "nw_narrator",
      "text": "Jack's hand stops on his cup.",
      "silent": true,
@@ -7331,73 +7631,79 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b582",
+     "id": "nw_b632",
      "characterId": "nw_narrator",
      "text": "Vera doesn't see it. She is looking at the cooking show.",
      "silent": true
     },
     {
-     "id": "nw_b583",
+     "id": "nw_b633",
      "characterId": "nw_vera",
      "text": "She used to stand over me with a plate. Twenty-four years old, bossing me around my own kitchen. She'd have liked you. She likes anyone who's stubborn.",
      "audioUrl": "/film/voice/s25a/288-vera-she-used-to-stand-over-me.mp3"
     },
     {
-     "id": "nw_b584",
+     "id": "nw_b634",
      "characterId": "nw_jack",
      "text": "She sounds like she was right.",
      "audioUrl": "/film/voice/s25a/288-jack-she-sounds-like-she-was-right.mp3"
     },
     {
-     "id": "nw_b585",
+     "id": "nw_b635",
      "characterId": "nw_vera",
      "text": "Was. Is. I keep saying was.",
      "audioUrl": "/film/voice/s25a/288-vera-was-pause-is-i-keep-saying.mp3"
     },
     {
-     "id": "nw_b586",
+     "id": "nw_b636",
      "characterId": "nw_jack",
      "text": "Is.",
      "audioUrl": "/film/voice/s25a/288-jack-gently-is.mp3"
     },
     {
-     "id": "nw_b587",
+     "id": "nw_b637",
      "characterId": "nw_narrator",
      "text": "She bites the toast. Chews. Her face changes, the way a person's face does when she finds out she was hungry.",
      "silent": true
     },
     {
-     "id": "nw_b588",
+     "id": "nw_b638",
      "characterId": "nw_narrator",
      "text": "She eats the egg. She eats the cabbage. On the television a chef lifts a lid and steam fills the frame.",
      "silent": true
     },
     {
-     "id": "nw_b589",
+     "id": "nw_b639",
      "characterId": "nw_narrator",
-     "text": "Jack watches her eat, the way he watched her sleep. It is the easiest hour he has spent in twenty years, and he knows exactly what it is costing.",
+     "text": "Jack watches her eat, the way he watched her sleep.",
      "silent": true
     },
     {
-     "id": "nw_b590",
+     "id": "nw_b640",
+     "characterId": "nw_narrator",
+     "text": "It is the easiest hour he has spent in twenty years, and he knows exactly what it is costing.",
+     "silent": true
+    },
+    {
+     "id": "nw_b641",
      "characterId": "nw_narrator",
      "text": "She wipes her fingers on a paper napkin.",
      "silent": true
     },
     {
-     "id": "nw_b591",
+     "id": "nw_b642",
      "characterId": "nw_vera",
      "text": "Thank you.",
      "audioUrl": "/film/voice/s25a/289-vera-thank-you.mp3"
     },
     {
-     "id": "nw_b592",
+     "id": "nw_b643",
      "characterId": "nw_jack",
      "text": "For what?",
      "audioUrl": "/film/voice/s25a/289-jack-for-what.mp3"
     },
     {
-     "id": "nw_b593",
+     "id": "nw_b644",
      "characterId": "nw_vera",
      "text": "For making me.",
      "audioUrl": "/film/voice/s25a/289-vera-for-making-me.mp3",
@@ -7419,7 +7725,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b594",
+     "id": "nw_b645",
      "characterId": "nw_narrator",
      "text": "She reaches for her purse. He is already at the till, paying. Too much. The woman behind the counter doesn't mention it.",
      "silent": true,
@@ -7450,129 +7756,135 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b595",
+     "id": "nw_b646",
      "characterId": "nw_narrator",
-     "text": "A green-striped commuter train circling the city. Rain on the windows. Afternoon light, grey and soft. The carriage is half empty: schoolkids, an old man asleep, a woman with shopping.",
+     "text": "A green-striped commuter train circling the city. Rain on the windows. Afternoon light, grey and soft.",
      "silent": true
     },
     {
-     "id": "nw_b596",
+     "id": "nw_b647",
+     "characterId": "nw_narrator",
+     "text": "The carriage is half empty: schoolkids, an old man asleep, a woman with shopping.",
+     "silent": true
+    },
+    {
+     "id": "nw_b648",
      "characterId": "nw_narrator",
      "text": "Vera and Jack sit side by side. Nowhere to go. Just riding the loop.",
      "silent": true
     },
     {
-     "id": "nw_b597",
+     "id": "nw_b649",
      "characterId": "nw_vera",
      "text": "Dad used to do this when he couldn't think. Ride the whole loop. An hour. He said Tokyo was a clock and the Yamanote was the second hand.",
      "audioUrl": "/film/voice/s26/203-vera-dad-used-to-do-this-when.mp3"
     },
     {
-     "id": "nw_b598",
+     "id": "nw_b650",
      "characterId": "nw_jack",
      "text": "Did it help?",
      "audioUrl": "/film/voice/s26/203-jack-did-it-help.mp3"
     },
     {
-     "id": "nw_b599",
+     "id": "nw_b651",
      "characterId": "nw_vera",
      "text": "I don't know. He did it a lot at the end.",
      "audioUrl": "/film/voice/s26/203-vera-i-don-t-know-he-did.mp3"
     },
     {
-     "id": "nw_b600",
+     "id": "nw_b652",
      "characterId": "nw_narrator",
      "text": "The train sways. Her shoulder settles against his.",
      "silent": true
     },
     {
-     "id": "nw_b601",
+     "id": "nw_b653",
      "characterId": "nw_narrator",
      "text": "She takes his hand without asking and turns it over. The old steel lighter is in his palm; he has been flicking it without knowing.",
      "silent": true
     },
     {
-     "id": "nw_b602",
+     "id": "nw_b654",
      "characterId": "nw_narrator",
      "text": "She takes it. Opens it. Closes it. Opens it.",
      "silent": true
     },
     {
-     "id": "nw_b603",
+     "id": "nw_b655",
      "characterId": "nw_vera",
      "text": "You don't smoke.",
      "audioUrl": "/film/voice/s26/257-vera-you-don-t-smoke.mp3"
     },
     {
-     "id": "nw_b604",
+     "id": "nw_b656",
      "characterId": "nw_jack",
      "text": "I quit.",
      "audioUrl": "/film/voice/s26/257-jack-i-quit.mp3"
     },
     {
-     "id": "nw_b605",
+     "id": "nw_b657",
      "characterId": "nw_vera",
      "text": "When?",
      "audioUrl": "/film/voice/s26/257-vera-when.mp3"
     },
     {
-     "id": "nw_b606",
+     "id": "nw_b658",
      "characterId": "nw_jack",
      "text": "Twenty years ago.",
      "audioUrl": "/film/voice/s26/257-jack-twenty-years-ago.mp3"
     },
     {
-     "id": "nw_b607",
+     "id": "nw_b659",
      "characterId": "nw_vera",
      "text": "And you still carry the lighter.",
      "audioUrl": "/film/voice/s26/257-vera-and-you-still-carry-the-lighter.mp3"
     },
     {
-     "id": "nw_b608",
+     "id": "nw_b660",
      "characterId": "nw_jack",
      "text": "Habit.",
      "audioUrl": "/film/voice/s26/257-jack-habit.mp3"
     },
     {
-     "id": "nw_b609",
+     "id": "nw_b661",
      "characterId": "nw_vera",
      "text": "That's not a habit. That's a promise you don't trust yourself to keep.",
      "audioUrl": "/film/voice/s26/257-vera-that-s-not-a-habit-that.mp3"
     },
     {
-     "id": "nw_b610",
+     "id": "nw_b662",
      "characterId": "nw_narrator",
      "text": "He looks at her. She has no idea how true that is.",
      "silent": true
     },
     {
-     "id": "nw_b611",
+     "id": "nw_b663",
      "characterId": "nw_narrator",
      "text": "She tries to give it back. He closes her fingers around it.",
      "silent": true
     },
     {
-     "id": "nw_b612",
+     "id": "nw_b664",
      "characterId": "nw_jack",
      "text": "Keep it.",
      "audioUrl": "/film/voice/s26/257-jack-keep-it.mp3"
     },
     {
-     "id": "nw_b613",
+     "id": "nw_b665",
      "characterId": "nw_vera",
      "text": "Why?",
      "audioUrl": "/film/voice/s26/257-vera-why.mp3"
     },
     {
-     "id": "nw_b614",
+     "id": "nw_b666",
      "characterId": "nw_jack",
      "text": "Because I quit.",
      "audioUrl": "/film/voice/s26/257-jack-because-i-quit.mp3"
     },
     {
-     "id": "nw_b615",
+     "id": "nw_b667",
      "characterId": "nw_narrator",
-     "text": "She looks at the lighter in her hand. Then she puts it in her coat pocket. And her head comes to rest on his shoulder, as if it has always belonged there.",
+     "text": "She looks at the lighter in her hand. Then she puts it in her coat pocket.",
      "silent": true,
      "background": "/film/img/s26/201-the-second-hand.jpg",
      "cinematic": {
@@ -7592,7 +7904,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b616",
+     "id": "nw_b668",
+     "characterId": "nw_narrator",
+     "text": "And her head comes to rest on his shoulder, as if it has always belonged there.",
+     "silent": true
+    },
+    {
+     "id": "nw_b669",
      "characterId": "nw_narrator",
      "text": "Out of the window, Tokyo circles past. Rooftops. Laundry. Rain.",
      "silent": true,
@@ -7623,27 +7941,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b617",
+     "id": "nw_b670",
      "characterId": "nw_narrator",
      "text": "A small intersection.",
      "silent": true
     },
     {
-     "id": "nw_b618",
+     "id": "nw_b671",
      "characterId": "nw_narrator",
      "text": "Rain.",
      "silent": true
     },
     {
-     "id": "nw_b619",
+     "id": "nw_b672",
      "characterId": "nw_narrator",
      "text": "The crossing signal turns green and the old melody begins to CHIME.",
      "silent": true
     },
     {
-     "id": "nw_b620",
+     "id": "nw_b673",
      "characterId": "nw_narrator",
-     "text": "Vera and Jack cross in the rain, laughing at something, sharing his cheap plastic umbrella that's too small for two. Her shoulder gets wet. His gets wet. Neither of them cares.",
+     "text": "Vera and Jack cross in the rain, laughing at something, sharing his cheap plastic umbrella that's too small for two. Her shoulder gets wet.",
      "silent": true,
      "background": "/film/img/s27/203-too-small.jpg",
      "cinematic": {
@@ -7663,7 +7981,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b621",
+     "id": "nw_b674",
+     "characterId": "nw_narrator",
+     "text": "His gets wet. Neither of them cares.",
+     "silent": true
+    },
+    {
+     "id": "nw_b675",
      "characterId": "nw_narrator",
      "text": "WIDE: two small figures crossing an empty road while the city's old song plays for them.",
      "silent": true,
@@ -7694,7 +8018,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b622",
+     "id": "nw_b676",
      "characterId": "nw_narrator",
      "text": "The bar in daylight again. The rubber mat is still there, still too clean. Okada is polishing a glass that is already polished.",
      "silent": true,
@@ -7716,7 +8040,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b623",
+     "id": "nw_b677",
      "characterId": "nw_narrator",
      "text": "Vera comes in without the umbrella this time. Okada sees her and doesn't say we're closed.",
      "silent": true,
@@ -7738,43 +8062,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b624",
+     "id": "nw_b678",
      "characterId": "nw_vera",
      "text": "Mr. Okada. You said he found your daughter.",
      "audioUrl": "/film/voice/s27a/290-vera-mr-okada-you-said-he-found.mp3"
     },
     {
-     "id": "nw_b625",
+     "id": "nw_b679",
      "characterId": "nw_narrator",
      "text": "Okada goes on polishing.",
      "silent": true
     },
     {
-     "id": "nw_b626",
+     "id": "nw_b680",
      "characterId": "nw_okada",
      "text": "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. He didn't bring her home. She didn't want to come. He told me where she was, and he told me not to go. Write, he said. Wait.",
      "audioUrl": "/film/voice/s27a/290-okada-she-was-fifteen-she-went-to.mp3"
     },
     {
-     "id": "nw_b627",
+     "id": "nw_b681",
      "characterId": "nw_vera",
      "text": "Was he right?",
      "audioUrl": "/film/voice/s27a/290-vera-was-he-right.mp3"
     },
     {
-     "id": "nw_b628",
+     "id": "nw_b682",
      "characterId": "nw_okada",
      "text": "She has two children now. I hated him for a year.",
      "audioUrl": "/film/voice/s27a/290-okada-she-has-two-children-now-pause.mp3"
     },
     {
-     "id": "nw_b629",
+     "id": "nw_b683",
      "characterId": "nw_narrator",
      "text": "He sets the glass down.",
      "silent": true
     },
     {
-     "id": "nw_b630",
+     "id": "nw_b684",
      "characterId": "nw_okada",
      "text": "He finds things. And then he carries them by himself. I have never seen him put anything down.",
      "audioUrl": "/film/voice/s27a/291-okada-he-finds-things-and-then-he.mp3",
@@ -7796,43 +8120,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b631",
+     "id": "nw_b685",
      "characterId": "nw_vera",
      "text": "Is that a warning?",
      "audioUrl": "/film/voice/s27a/291-vera-is-that-a-warning.mp3"
     },
     {
-     "id": "nw_b632",
+     "id": "nw_b686",
      "characterId": "nw_okada",
      "text": "It's a description.",
      "audioUrl": "/film/voice/s27a/291-okada-it-s-a-description.mp3"
     },
     {
-     "id": "nw_b633",
+     "id": "nw_b687",
      "characterId": "nw_narrator",
      "text": "Vera looks along the counter, to the far end, where his eyes went the first time.",
      "silent": true
     },
     {
-     "id": "nw_b634",
+     "id": "nw_b688",
      "characterId": "nw_vera",
      "text": "Show me where.",
      "audioUrl": "/film/voice/s27a/291-vera-where-did-you-find-the-clip.mp3"
     },
     {
-     "id": "nw_b635",
+     "id": "nw_b689",
      "characterId": "nw_narrator",
      "text": "Okada lifts the counter flap: the gap between the crates and the ice bin.",
      "silent": true
     },
     {
-     "id": "nw_b636",
+     "id": "nw_b690",
      "characterId": "nw_narrator",
-     "text": "She goes through. Crouches behind the far end, between the crates and the shelves, exactly where Mara crouched. She sees what Mara saw: the underside of the counter, the crate of empty bottles, the place where the stool went over, the dark screen of the television on the ceiling.",
+     "text": "She goes through. Crouches behind the far end, between the crates and the shelves, exactly where Mara crouched.",
      "silent": true
     },
     {
-     "id": "nw_b637",
+     "id": "nw_b691",
+     "characterId": "nw_narrator",
+     "text": "She sees what Mara saw: the underside of the counter, the crate of empty bottles, the place where the stool went over, the dark screen of the television on the ceiling.",
+     "silent": true
+    },
+    {
+     "id": "nw_b692",
      "characterId": "nw_vera",
      "text": "She was here.",
      "audioUrl": "/film/voice/s27a/292-vera-she-was-here.mp3",
@@ -7854,31 +8184,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b638",
+     "id": "nw_b693",
      "characterId": "nw_okada",
      "text": "I was in the back. Moving crates. I heard all of it. I stood there with a crate in my arms and I did not move. That is why I gave you the clip. He said \"excuse me\" when he came in. Like a customer.",
      "audioUrl": "/film/voice/s27a/292-okada-i-was-in-the-back-moving.mp3"
     },
     {
-     "id": "nw_b639",
+     "id": "nw_b694",
      "characterId": "nw_narrator",
      "text": "Vera stays where she is on the floor.",
      "silent": true
     },
     {
-     "id": "nw_b640",
+     "id": "nw_b695",
      "characterId": "nw_vera",
      "text": "She would have stayed very still. She has never been still in her life.",
      "audioUrl": "/film/voice/s27a/292-vera-she-would-have-stayed-very-still.mp3"
     },
     {
-     "id": "nw_b641",
+     "id": "nw_b696",
      "characterId": "nw_okada",
      "text": "People learn.",
      "audioUrl": "/film/voice/s27a/292-okada-people-learn.mp3"
     },
     {
-     "id": "nw_b642",
+     "id": "nw_b697",
      "characterId": "nw_narrator",
      "text": "Vera looks up at the dead television. Somewhere in the dark glass, her own face.",
      "silent": true,
@@ -7900,25 +8230,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b643",
+     "id": "nw_b698",
      "characterId": "nw_narrator",
      "text": "For the first time she lets herself think it clearly: her sister saw two men die, and has not called.",
      "silent": true
     },
     {
-     "id": "nw_b644",
+     "id": "nw_b699",
      "characterId": "nw_narrator",
      "text": "Okada takes a card from his apron and sets it on the counter. TOTO SHIMBUN. The journalist's name in katakana: KONDO.",
      "silent": true
     },
     {
-     "id": "nw_b645",
+     "id": "nw_b700",
      "characterId": "nw_okada",
      "text": "He left it the week before. He said he was meeting someone. He said it would be a good week. I couldn't call them. I couldn't say what I heard.",
      "audioUrl": "/film/voice/s27a/292-okada-he-left-it-the-week-before.mp3"
     },
     {
-     "id": "nw_b646",
+     "id": "nw_b701",
      "characterId": "nw_narrator",
      "text": "Vera takes the card.",
      "silent": true,
@@ -7949,13 +8279,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b647",
+     "id": "nw_b702",
      "characterId": "nw_narrator",
-     "text": "Grey sea. Grey sky. Rain on the slipway. Boats pulled up on a concrete slipway. A single road of low houses, their paint scoured by salt wind.",
+     "text": "Grey sea. Grey sky. Rain on the slipway. Boats pulled up on a concrete slipway.",
      "silent": true
     },
     {
-     "id": "nw_b648",
+     "id": "nw_b703",
+     "characterId": "nw_narrator",
+     "text": "A single road of low houses, their paint scoured by salt wind.",
+     "silent": true
+    },
+    {
+     "id": "nw_b704",
      "characterId": "nw_narrator",
      "text": "Jack's old car, parked on the sea wall. He gets out, pulls up his collar against the wind, and walks.",
      "silent": true,
@@ -8002,49 +8338,55 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b649",
+     "id": "nw_b705",
      "characterId": "nw_narrator",
-     "text": "A small room. A kotatsu table. A television with the sound off. A Buddhist altar in the corner: a new photograph of Sakai, younger, smiling in a way that doesn't suit him.",
+     "text": "A small room. A kotatsu table. A television with the sound off.",
      "silent": true
     },
     {
-     "id": "nw_b650",
+     "id": "nw_b706",
+     "characterId": "nw_narrator",
+     "text": "A Buddhist altar in the corner: a new photograph of Sakai, younger, smiling in a way that doesn't suit him.",
+     "silent": true
+    },
+    {
+     "id": "nw_b707",
      "characterId": "nw_narrator",
      "text": "MRS. SAKAI (70s), small and hard, pours Jack tea she doesn't want to pour.",
      "silent": true
     },
     {
-     "id": "nw_b651",
+     "id": "nw_b708",
      "characterId": "nw_mrs_sakai",
      "text": "We haven't lived together in fifteen years. The police already came.",
      "audioUrl": "/film/voice/s29/206-mrssakai-we-haven-t-lived-together-in.mp3"
     },
     {
-     "id": "nw_b652",
+     "id": "nw_b709",
      "characterId": "nw_jack",
      "text": "I'm not the police.",
      "audioUrl": "/film/voice/s29/206-jack-i-m-not-the-police.mp3"
     },
     {
-     "id": "nw_b653",
+     "id": "nw_b710",
      "characterId": "nw_mrs_sakai",
      "text": "Then what are you?",
      "audioUrl": "/film/voice/s29/206-mrssakai-then-what-are-you.mp3"
     },
     {
-     "id": "nw_b654",
+     "id": "nw_b711",
      "characterId": "nw_narrator",
      "text": "Jack thinks about it.",
      "silent": true
     },
     {
-     "id": "nw_b655",
+     "id": "nw_b712",
      "characterId": "nw_jack",
      "text": "Someone who owes a man a debt. A long time ago. The same kind of debt your husband owed.",
      "audioUrl": "/film/voice/s29/206-jack-someone-who-owes-a-man-a.mp3"
     },
     {
-     "id": "nw_b656",
+     "id": "nw_b713",
      "characterId": "nw_narrator",
      "text": "She studies him. Then she looks at the photograph on the altar.",
      "silent": true,
@@ -8066,7 +8408,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b657",
+     "id": "nw_b714",
      "characterId": "nw_mrs_sakai",
      "text": "He started going to temple last year. Him. Temple. He sat there for hours. I thought he'd gone soft in the head. Last month he wrote a letter. In English. Him. He made me check the spelling. To an American girl. When the doctor told him, he said he was glad. He said now he could stop being afraid of the wrong thing.",
      "audioUrl": "/film/voice/s29/273-mrssakai-he-started-going-to-temple-last.mp3",
@@ -8088,7 +8430,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b658",
+     "id": "nw_b715",
      "characterId": "nw_jack",
      "text": "Did he ever pay rent on something? Somewhere that wasn't his home?",
      "audioUrl": "/film/voice/s29/273-jack-did-he-ever-pay-rent-on.mp3",
@@ -8110,27 +8452,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b659",
+     "id": "nw_b716",
      "characterId": "nw_narrator",
      "text": "She looks at him sharply.",
      "silent": true
     },
     {
-     "id": "nw_b660",
+     "id": "nw_b717",
      "characterId": "nw_mrs_sakai",
      "text": "Every January. Cash, in an envelope. Twenty years. Even after he left, the receipts kept coming here.",
      "audioUrl": "/film/voice/s29/273-mrssakai-every-january-cash-in-an-envelope.mp3"
     },
     {
-     "id": "nw_b661",
+     "id": "nw_b718",
      "characterId": "nw_mrs_sakai",
      "text": "He left these here. Maybe on purpose.",
      "audioUrl": "/film/voice/s29/273-mrssakai-he-left-these-here-maybe-on.mp3"
     },
     {
-     "id": "nw_b662",
+     "id": "nw_b719",
      "characterId": "nw_narrator",
-     "text": "She takes a rubber-banded bundle of receipts from the altar drawer. Carbon copies, handwritten, yellowed. The top one: KATO RENTAL LOCKERS, UENO.",
+     "text": "She takes a rubber-banded bundle of receipts from the altar drawer. Carbon copies, handwritten, yellowed.",
      "silent": true,
      "background": "/film/img/s29/273-the-receipts.jpg",
      "cinematic": {
@@ -8150,7 +8492,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b663",
+     "id": "nw_b720",
+     "characterId": "nw_narrator",
+     "text": "The top one: KATO RENTAL LOCKERS, UENO.",
+     "silent": true
+    },
+    {
+     "id": "nw_b721",
      "characterId": "nw_narrator",
      "text": "Jack unfolds it. A rubber stamp, faded. Handwritten: No. 114. Paid in full.",
      "silent": true,
@@ -8172,13 +8520,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b664",
+     "id": "nw_b722",
      "characterId": "nw_narrator",
      "text": "He looks up. She is watching him with an expression he can't read. Grief, maybe. Or relief.",
      "silent": true
     },
     {
-     "id": "nw_b665",
+     "id": "nw_b723",
      "characterId": "nw_mrs_sakai",
      "text": "Whatever it is, it was heavier than me. He carried it longer.",
      "audioUrl": "/film/voice/s29/273-mrssakai-whatever-it-is-it-was-heavier.mp3",
@@ -8225,13 +8573,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b666",
+     "id": "nw_b724",
      "characterId": "nw_narrator",
      "text": "Rain. Black fields. Jack's old car, one headlight dimmer than the other, the only thing moving for miles.",
      "silent": true
     },
     {
-     "id": "nw_b667",
+     "id": "nw_b725",
      "characterId": "nw_narrator",
      "text": "Ahead, a light. A sign on a pole, half its bulbs dead: a roadside inn.",
      "silent": true,
@@ -8278,19 +8626,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b668",
+     "id": "nw_b726",
      "characterId": "nw_narrator",
-     "text": "Two storeys of weathered wood and a tin roof, set back from the highway behind a gravel lot. A beer vending machine glowing by the entrance. A faded sign. The kind of place that was modern once, in about 1975.",
+     "text": "Two storeys of weathered wood and a tin roof, set back from the highway behind a gravel lot. A beer vending machine glowing by the entrance.",
      "silent": true
     },
     {
-     "id": "nw_b669",
+     "id": "nw_b727",
+     "characterId": "nw_narrator",
+     "text": "A faded sign. The kind of place that was modern once, in about 1975.",
+     "silent": true
+    },
+    {
+     "id": "nw_b728",
      "characterId": "nw_narrator",
      "text": "A pickup truck, older than the building's paint, is parked crooked behind it.",
      "silent": true
     },
     {
-     "id": "nw_b670",
+     "id": "nw_b729",
      "characterId": "nw_narrator",
      "text": "Jack pulls into the lot. The only car.",
      "silent": true,
@@ -8337,31 +8691,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b671",
+     "id": "nw_b730",
      "characterId": "nw_narrator",
-     "text": "A small, warm, faded room. A pink public payphone on the wall. A glass case of souvenir keyrings nobody has bought in decades. A CRT television on a shelf showing a night baseball game, the crowd murmuring.",
+     "text": "A small, warm, faded room. A pink public payphone on the wall. A glass case of souvenir keyrings nobody has bought in decades.",
      "silent": true
     },
     {
-     "id": "nw_b672",
+     "id": "nw_b731",
+     "characterId": "nw_narrator",
+     "text": "A CRT television on a shelf showing a night baseball game, the crowd murmuring.",
+     "silent": true
+    },
+    {
+     "id": "nw_b732",
      "characterId": "nw_narrator",
      "text": "MRS. NODA (70s) comes out from the back, drying her hands. MR. NODA (70s) doesn't look away from the baseball.",
      "silent": true
     },
     {
-     "id": "nw_b673",
+     "id": "nw_b733",
      "characterId": "nw_mrs_noda",
      "text": "Just one night?",
      "audioUrl": "/film/voice/s32/172-mrsnoda-just-one-night.mp3"
     },
     {
-     "id": "nw_b674",
+     "id": "nw_b734",
      "characterId": "nw_jack",
      "text": "Just one.",
      "audioUrl": "/film/voice/s32/172-jack-just-one.mp3"
     },
     {
-     "id": "nw_b675",
+     "id": "nw_b735",
      "characterId": "nw_narrator",
      "text": "She hands him a heavy old key on a wooden tag.",
      "silent": true,
@@ -8383,7 +8743,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b676",
+     "id": "nw_b736",
      "characterId": "nw_mrs_noda",
      "text": "Upstairs, at the end. The bath is shared, I'm sorry. I'll show you. The light doesn't work properly.",
      "audioUrl": "/film/voice/s32/173-mrsnoda-upstairs-at-the-end-the-bath.mp3",
@@ -8430,37 +8790,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b677",
+     "id": "nw_b737",
      "characterId": "nw_narrator",
      "text": "She leads him down a narrow wooden corridor. Past the kitchen: pots, a steel counter, a back door with a bolt.",
      "silent": true
     },
     {
-     "id": "nw_b678",
+     "id": "nw_b738",
      "characterId": "nw_mrs_noda",
      "text": "Kitchen. If you want tea, just take it. The back door sticks. My husband says he'll fix it. He's said so since the Olympics.",
      "audioUrl": "/film/voice/s33/208-mrsnoda-kitchen-if-you-want-tea-just.mp3"
     },
     {
-     "id": "nw_b679",
+     "id": "nw_b739",
      "characterId": "nw_jack",
      "text": "Which Olympics?",
      "audioUrl": "/film/voice/s33/208-jack-which-olympics.mp3"
     },
     {
-     "id": "nw_b680",
+     "id": "nw_b740",
      "characterId": "nw_mrs_noda",
      "text": "Exactly.",
      "audioUrl": "/film/voice/s33/208-mrsnoda-dryly-exactly.mp3"
     },
     {
-     "id": "nw_b681",
+     "id": "nw_b741",
      "characterId": "nw_narrator",
      "text": "She opens a door: a small tiled bathroom, a deep wooden tub, one high window over it, fogged with steam and swollen shut in its frame.",
      "silent": true
     },
     {
-     "id": "nw_b682",
+     "id": "nw_b742",
      "characterId": "nw_mrs_noda",
      "text": "If it's too steamy, the window opens. If you hit it hard enough.",
      "audioUrl": "/film/voice/s33/208-mrsnoda-if-it-s-too-steamy-the.mp3",
@@ -8482,7 +8842,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b683",
+     "id": "nw_b743",
      "characterId": "nw_narrator",
      "text": "Jack notices the window. He notices everything. That is the point of the scene, and nobody in it knows it.",
      "silent": true,
@@ -8513,15 +8873,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b684",
+     "id": "nw_b744",
      "characterId": "nw_narrator",
      "text": "Tatami. A low table. A thin futon already laid out. Rain loud on the tin roof.",
      "silent": true
     },
     {
-     "id": "nw_b685",
+     "id": "nw_b745",
      "characterId": "nw_narrator",
-     "text": "Jack sits at the table with Sakai's receipts spread out in front of him under the lamp. KATO RENTAL LOCKERS - UENO. No. 114. Twenty years of Januaries.",
+     "text": "Jack sits at the table with Sakai's receipts spread out in front of him under the lamp. KATO RENTAL LOCKERS - UENO. No. 114.",
      "silent": true,
      "background": "/film/img/s34/173-no-114.jpg",
      "cinematic": {
@@ -8541,7 +8901,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b686",
+     "id": "nw_b746",
+     "characterId": "nw_narrator",
+     "text": "Twenty years of Januaries.",
+     "silent": true
+    },
+    {
+     "id": "nw_b747",
      "characterId": "nw_narrator",
      "text": "He takes out his phone. No signal.",
      "silent": true,
@@ -8572,7 +8938,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b687",
+     "id": "nw_b748",
      "characterId": "nw_narrator",
      "text": "Mr. Noda asleep in front of the baseball. Jack at the pink payphone, feeding it coins.",
      "silent": true,
@@ -8621,80 +8987,80 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b688",
+     "id": "nw_b749",
      "characterId": "nw_narrator",
      "text": "Vera on the floor with her back against the bed, the apartment dark around her. Her phone rings. Unknown number. She answers fast.",
      "silent": true
     },
     {
-     "id": "nw_b689",
+     "id": "nw_b750",
      "characterId": "nw_vera",
      "text": "Mara?",
      "audioUrl": "/film/voice/s36/210-vera-mara.mp3"
     },
     {
-     "id": "nw_b690",
+     "id": "nw_b751",
      "characterId": "nw_jack",
      "text": "It's me.",
      "audioUrl": "/film/voice/s36/210-jack-it-s-me.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b691",
+     "id": "nw_b752",
      "characterId": "nw_narrator",
      "text": "A beat. Disappointment, then something else.",
      "silent": true
     },
     {
-     "id": "nw_b692",
+     "id": "nw_b753",
      "characterId": "nw_vera",
      "text": "Where are you? You sound like you're calling from 1985.",
      "audioUrl": "/film/voice/s36/210-vera-where-are-you-you-sound-like.mp3"
     },
     {
-     "id": "nw_b693",
+     "id": "nw_b754",
      "characterId": "nw_jack",
      "text": "The coast. An inn off the highway. The phone is pink.",
      "audioUrl": "/film/voice/s36/210-jack-the-countryside-there-s-no-signal.mp3"
     },
     {
-     "id": "nw_b694",
+     "id": "nw_b755",
      "characterId": "nw_narrator",
      "text": "She almost laughs.",
      "silent": true
     },
     {
-     "id": "nw_b695",
+     "id": "nw_b756",
      "characterId": "nw_vera",
      "text": "Did you find anything?",
      "audioUrl": "/film/voice/s36/210-vera-did-you-find-anything.mp3"
     },
     {
-     "id": "nw_b696",
+     "id": "nw_b757",
      "characterId": "nw_narrator",
      "text": "Jack looks at the receipts in his hand.",
      "silent": true
     },
     {
-     "id": "nw_b697",
+     "id": "nw_b758",
      "characterId": "nw_jack",
      "text": "Maybe. I'll know tomorrow.",
      "audioUrl": "/film/voice/s36/210-jack-maybe-i-ll-know-tomorrow.mp3"
     },
     {
-     "id": "nw_b698",
+     "id": "nw_b759",
      "characterId": "nw_vera",
      "text": "Come back safe.",
      "audioUrl": "/film/voice/s36/210-vera-come-back-safe.mp3"
     },
     {
-     "id": "nw_b699",
+     "id": "nw_b760",
      "characterId": "nw_jack",
      "text": "It's just an inn. There's an old couple and a baseball game.",
      "audioUrl": "/film/voice/s36/210-jack-it-s-just-an-inn-there.mp3"
     },
     {
-     "id": "nw_b700",
+     "id": "nw_b761",
      "characterId": "nw_vera",
      "text": "Come back safe anyway.",
      "audioUrl": "/film/voice/s36/210-vera-come-back-safe-anyway.mp3",
@@ -8716,13 +9082,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b701",
+     "id": "nw_b762",
      "characterId": "nw_narrator",
      "text": "He hears her breathing on the line. Neither of them hangs up.",
      "silent": true
     },
     {
-     "id": "nw_b702",
+     "id": "nw_b763",
      "characterId": "nw_narrator",
      "text": "The coins run out. The line goes dead.",
      "silent": true,
@@ -8744,7 +9110,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b703",
+     "id": "nw_b764",
      "characterId": "nw_narrator",
      "text": "Vera looks at the phone. Jack looks at the payphone. Both of them hold on a moment longer than they need to.",
      "silent": true,
@@ -8775,43 +9141,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b704",
+     "id": "nw_b765",
      "characterId": "nw_narrator",
      "text": "Jack can't sleep. He wanders back down the corridor.",
      "silent": true
     },
     {
-     "id": "nw_b705",
+     "id": "nw_b766",
      "characterId": "nw_narrator",
      "text": "The kitchen's back door stands open to the rain. Mrs. Noda sits on the step outside under the eave, smoking.",
      "silent": true
     },
     {
-     "id": "nw_b706",
+     "id": "nw_b767",
      "characterId": "nw_mrs_noda",
      "text": "Don't tell my husband.",
      "audioUrl": "/film/voice/s37/211-mrsnoda-don-t-tell-my-husband.mp3"
     },
     {
-     "id": "nw_b707",
+     "id": "nw_b768",
      "characterId": "nw_jack",
      "text": "I quit.",
      "audioUrl": "/film/voice/s37/211-jack-i-quit.mp3"
     },
     {
-     "id": "nw_b708",
+     "id": "nw_b769",
      "characterId": "nw_mrs_noda",
      "text": "Then you'll understand why I don't want him to know.",
      "audioUrl": "/film/voice/s37/211-mrsnoda-then-you-ll-understand-why-i.mp3"
     },
     {
-     "id": "nw_b709",
+     "id": "nw_b770",
      "characterId": "nw_narrator",
-     "text": "She offers the pack anyway. He shakes his head. He stands in the doorway and looks out: a muddy yard, a gate onto a farm track, and the old pickup parked crooked across the path.",
+     "text": "She offers the pack anyway. He shakes his head.",
      "silent": true
     },
     {
-     "id": "nw_b710",
+     "id": "nw_b771",
+     "characterId": "nw_narrator",
+     "text": "He stands in the doorway and looks out: a muddy yard, a gate onto a farm track, and the old pickup parked crooked across the path.",
+     "silent": true
+    },
+    {
+     "id": "nw_b772",
      "characterId": "nw_mrs_noda",
      "text": "Sorry about the truck. He parks it like he's drunk. He's never drunk. The keys are always in it. Who would steal that?",
      "audioUrl": "/film/voice/s37/211-mrsnoda-sorry-about-the-truck-he-parks.mp3",
@@ -8833,7 +9205,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b711",
+     "id": "nw_b773",
      "characterId": "nw_narrator",
      "text": "Jack looks at the truck. He says nothing.",
      "silent": true,
@@ -8864,19 +9236,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b712",
+     "id": "nw_b774",
      "characterId": "nw_narrator",
      "text": "Later. 2 a.m. Rain.",
      "silent": true
     },
     {
-     "id": "nw_b713",
+     "id": "nw_b775",
      "characterId": "nw_narrator",
      "text": "The highway. Empty. Then headlights.",
      "silent": true
     },
     {
-     "id": "nw_b714",
+     "id": "nw_b776",
      "characterId": "nw_narrator",
      "text": "One car. Two. Three. Four. Black sedans, one after another, slowing, turning in, gravel crunching.",
      "silent": true,
@@ -8923,13 +9295,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b715",
+     "id": "nw_b777",
      "characterId": "nw_narrator",
      "text": "Jack's eyes open in the dark. He has heard the gravel.",
      "silent": true
     },
     {
-     "id": "nw_b716",
+     "id": "nw_b778",
      "characterId": "nw_narrator",
      "text": "He goes to the window. Lifts one corner of the thin curtain.",
      "silent": true,
@@ -8951,9 +9323,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b717",
+     "id": "nw_b779",
      "characterId": "nw_narrator",
-     "text": "HIS POV THROUGH THE CURTAIN GAP: four black cars in an arc across the lot, headlights on, rain visible only inside the beams. Eight MEN step out, two from each car. Black clothes. Masks. Compact submachine guns held low and easy.",
+     "text": "HIS POV THROUGH THE CURTAIN GAP: four black cars in an arc across the lot, headlights on, rain visible only inside the beams.",
      "silent": true,
      "background": "/film/img/s39/175-the-curtain-gap.jpg",
      "cinematic": {
@@ -8973,25 +9345,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b718",
+     "id": "nw_b780",
+     "characterId": "nw_narrator",
+     "text": "Eight MEN step out, two from each car. Black clothes. Masks. Compact submachine guns held low and easy.",
+     "silent": true
+    },
+    {
+     "id": "nw_b781",
      "characterId": "nw_narrator",
      "text": "They don't rush. They split without speaking. Two toward the entrance. Two around the back. Two toward the side. Two stay by the cars.",
      "silent": true
     },
     {
-     "id": "nw_b719",
+     "id": "nw_b782",
      "characterId": "nw_narrator",
      "text": "Jack lets the curtain fall.",
      "silent": true
     },
     {
-     "id": "nw_b720",
+     "id": "nw_b783",
      "characterId": "nw_narrator",
      "text": "He moves fast and quietly: sweeps the receipts into his jacket, pulls on his shoes, takes nothing else.",
      "silent": true
     },
     {
-     "id": "nw_b721",
+     "id": "nw_b784",
      "characterId": "nw_narrator",
      "text": "Downstairs, the baseball crowd CHEERS on the TV.",
      "silent": true,
@@ -9022,7 +9400,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b722",
+     "id": "nw_b785",
      "characterId": "nw_narrator",
      "text": "The front door opens. Two masked men step in, weapons up.",
      "silent": true,
@@ -9044,25 +9422,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b723",
+     "id": "nw_b786",
      "characterId": "nw_narrator",
-     "text": "The first is the MASKED LEADER (40s), a man in a plain dark suit, nothing about him to remember. His face stays behind the mask. The man who touched his earpiece in the Kanda rain.",
+     "text": "The first is the MASKED LEADER (40s), a man in a plain dark suit, nothing about him to remember. His face stays behind the mask.",
      "silent": true
     },
     {
-     "id": "nw_b724",
+     "id": "nw_b787",
+     "characterId": "nw_narrator",
+     "text": "The man who touched his earpiece in the Kanda rain.",
+     "silent": true
+    },
+    {
+     "id": "nw_b788",
      "characterId": "nw_narrator",
      "text": "Mr. Noda wakes in his chair. Stares.",
      "silent": true
     },
     {
-     "id": "nw_b725",
+     "id": "nw_b789",
      "characterId": "nw_mr_noda",
      "text": "We're closed —",
      "audioUrl": "/film/voice/s40/178-mrnoda-we-re-closed.mp3"
     },
     {
-     "id": "nw_b726",
+     "id": "nw_b790",
      "characterId": "nw_narrator",
      "text": "A burst of suppressed fire into the ceiling. Plaster rains down. Mr. Noda throws himself behind the counter.",
      "silent": true,
@@ -9084,7 +9468,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b727",
+     "id": "nw_b791",
      "characterId": "nw_narrator",
      "text": "The souvenir case shatters. The CRT keeps playing baseball.",
      "silent": true,
@@ -9115,7 +9499,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b728",
+     "id": "nw_b792",
      "characterId": "nw_narrator",
      "text": "Jack at the top of the stairs. He hears boots below. He goes the other way, toward the bath.",
      "silent": true,
@@ -9137,9 +9521,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b729",
+     "id": "nw_b793",
      "characterId": "nw_narrator",
-     "text": "Behind him, a masked man reaches the top of the stairs and fires down the corridor. The paper screens along one wall burst apart in a line of holes.",
+     "text": "Behind him, a masked man reaches the top of the stairs and fires down the corridor.",
      "silent": true,
      "background": "/film/img/s41/179-same-wood.jpg",
      "cinematic": {
@@ -9159,7 +9543,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b730",
+     "id": "nw_b794",
+     "characterId": "nw_narrator",
+     "text": "The paper screens along one wall burst apart in a line of holes.",
+     "silent": true
+    },
+    {
+     "id": "nw_b795",
      "characterId": "nw_narrator",
      "text": "Jack is already through the bathroom door.",
      "silent": true,
@@ -9190,19 +9580,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b731",
+     "id": "nw_b796",
      "characterId": "nw_narrator",
-     "text": "Dark. Steam still hanging. Jack climbs onto the edge of the deep tub and hits the swollen window frame with the heel of his hand. Once. Twice. It won't move.",
+     "text": "Dark. Steam still hanging. Jack climbs onto the edge of the deep tub and hits the swollen window frame with the heel of his hand. Once.",
      "silent": true
     },
     {
-     "id": "nw_b732",
+     "id": "nw_b797",
+     "characterId": "nw_narrator",
+     "text": "Twice. It won't move.",
+     "silent": true
+    },
+    {
+     "id": "nw_b798",
      "characterId": "nw_narrator",
      "text": "Boots in the corridor.",
      "silent": true
     },
     {
-     "id": "nw_b733",
+     "id": "nw_b799",
      "characterId": "nw_narrator",
      "text": "The third time, he hits it with everything he has. The frame cracks open. Rain pours in.",
      "silent": true,
@@ -9224,7 +9620,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b734",
+     "id": "nw_b800",
      "characterId": "nw_narrator",
      "text": "He hauls himself through.",
      "silent": true,
@@ -9255,7 +9651,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b735",
+     "id": "nw_b801",
      "characterId": "nw_narrator",
      "text": "A low slope of wet tin below the bathroom window. Jack drops onto it, slides, catches the gutter, and swings down —",
      "silent": true,
@@ -9302,19 +9698,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b736",
+     "id": "nw_b802",
      "characterId": "nw_narrator",
      "text": "— through the open back door into the kitchen, where Mrs. Noda is crouched on the floor behind the steel counter, rigid with fear.",
      "silent": true
     },
     {
-     "id": "nw_b737",
+     "id": "nw_b803",
      "characterId": "nw_narrator",
      "text": "He grabs her arm, pulls her low toward the pantry, opens it, puts her inside.",
      "silent": true
     },
     {
-     "id": "nw_b738",
+     "id": "nw_b804",
      "characterId": "nw_jack",
      "text": "Stay. Whatever you hear.",
      "audioUrl": "/film/voice/s44/214-jack-stay-whatever-you-hear.mp3",
@@ -9336,25 +9732,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b739",
+     "id": "nw_b805",
      "characterId": "nw_mrs_noda",
      "text": "My husband —",
      "audioUrl": "/film/voice/s44/214-mrsnoda-my-husband.mp3"
     },
     {
-     "id": "nw_b740",
+     "id": "nw_b806",
      "characterId": "nw_jack",
      "text": "I'll get him.",
      "audioUrl": "/film/voice/s44/214-jack-i-ll-get-him.mp3"
     },
     {
-     "id": "nw_b741",
+     "id": "nw_b807",
      "characterId": "nw_narrator",
      "text": "He closes the pantry door on her.",
      "silent": true
     },
     {
-     "id": "nw_b742",
+     "id": "nw_b808",
      "characterId": "nw_narrator",
      "text": "He moves up the corridor toward the lobby, keeping low along the wall.",
      "silent": true,
@@ -9385,19 +9781,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b743",
+     "id": "nw_b809",
      "characterId": "nw_narrator",
-     "text": "From the corridor, Jack can see the lobby. One masked man stands in the middle of the room, weapon up, covering the stairs. The other has gone up.",
+     "text": "From the corridor, Jack can see the lobby. One masked man stands in the middle of the room, weapon up, covering the stairs.",
      "silent": true
     },
     {
-     "id": "nw_b744",
+     "id": "nw_b810",
+     "characterId": "nw_narrator",
+     "text": "The other has gone up.",
+     "silent": true
+    },
+    {
+     "id": "nw_b811",
      "characterId": "nw_narrator",
      "text": "Mr. Noda is behind the counter, out of the gunman's line of sight. He sees Jack. Jack puts a finger to his lips.",
      "silent": true
     },
     {
-     "id": "nw_b745",
+     "id": "nw_b812",
      "characterId": "nw_narrator",
      "text": "Jack reaches out and flips the lobby light switch. DARK.",
      "silent": true,
@@ -9419,38 +9821,44 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b746",
+     "id": "nw_b813",
      "characterId": "nw_narrator",
      "text": "Only the TV lights the room now: blue, flickering.",
      "silent": true
     },
     {
-     "id": "nw_b747",
+     "id": "nw_b814",
      "characterId": "nw_narrator",
-     "text": "The masked man spins and fires toward the corridor. The shots stitch across the wall above Jack's head. One tears through the beer vending machine by the door.",
+     "text": "The masked man spins and fires toward the corridor. The shots stitch across the wall above Jack's head.",
      "silent": true
     },
     {
-     "id": "nw_b748",
+     "id": "nw_b815",
+     "characterId": "nw_narrator",
+     "text": "One tears through the beer vending machine by the door.",
+     "silent": true
+    },
+    {
+     "id": "nw_b816",
      "characterId": "nw_narrator",
      "text": "It lights up and CHIMES:",
      "silent": true
     },
     {
-     "id": "nw_b749",
+     "id": "nw_b817",
      "characterId": "nw_vending_machine",
      "text": "Thank you very much.",
      "audioUrl": "/film/voice/s45/180-vendingmachine-thank-you-very-much.mp3",
      "expression": "recorded"
     },
     {
-     "id": "nw_b750",
+     "id": "nw_b818",
      "characterId": "nw_narrator",
      "text": "The gunman flinches toward the sound.",
      "silent": true
     },
     {
-     "id": "nw_b751",
+     "id": "nw_b819",
      "characterId": "nw_narrator",
      "text": "In that half-second, Jack is across the dark lobby, behind the counter. He grabs Mr. Noda by the collar and drags him down the corridor.",
      "silent": true,
@@ -9472,7 +9880,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b752",
+     "id": "nw_b820",
      "characterId": "nw_narrator",
      "text": "On the wall, the pink payphone starts to RING.",
      "silent": true,
@@ -9495,7 +9903,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/phone.mp3"
     },
     {
-     "id": "nw_b753",
+     "id": "nw_b821",
      "characterId": "nw_narrator",
      "text": "No one answers it. It rings and rings.",
      "silent": true,
@@ -9526,7 +9934,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b754",
+     "id": "nw_b822",
      "characterId": "nw_narrator",
      "text": "Jack pushes Mr. Noda into the pantry beside his wife. The old couple clutch each other in the dark.",
      "silent": true,
@@ -9548,19 +9956,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b755",
+     "id": "nw_b823",
      "characterId": "nw_narrator",
      "text": "Jack looks at them.",
      "silent": true
     },
     {
-     "id": "nw_b756",
+     "id": "nw_b824",
      "characterId": "nw_jack",
      "text": "I'm sorry.",
      "audioUrl": "/film/voice/s46/215-jack-i-m-sorry.mp3"
     },
     {
-     "id": "nw_b757",
+     "id": "nw_b825",
      "characterId": "nw_narrator",
      "text": "He shuts the door. He goes out the back.",
      "silent": true,
@@ -9591,25 +9999,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b758",
+     "id": "nw_b826",
      "characterId": "nw_narrator",
      "text": "Rain. Mud. The farm gate. The pickup truck.",
      "silent": true
     },
     {
-     "id": "nw_b759",
+     "id": "nw_b827",
      "characterId": "nw_narrator",
      "text": "A masked man comes round the side of the building. Sees him.",
      "silent": true
     },
     {
-     "id": "nw_b760",
+     "id": "nw_b828",
      "characterId": "nw_narrator",
-     "text": "Jack runs. Gunfire kicks up mud behind him. He dives behind the truck. Bullets punch through the bodywork above his head, through the tailgate, through a wheel.",
+     "text": "Jack runs. Gunfire kicks up mud behind him. He dives behind the truck.",
      "silent": true
     },
     {
-     "id": "nw_b761",
+     "id": "nw_b829",
+     "characterId": "nw_narrator",
+     "text": "Bullets punch through the bodywork above his head, through the tailgate, through a wheel.",
+     "silent": true
+    },
+    {
+     "id": "nw_b830",
      "characterId": "nw_narrator",
      "text": "He yanks open the driver's door and pulls himself in, flat along the seat.",
      "silent": true,
@@ -9656,7 +10070,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b762",
+     "id": "nw_b831",
      "characterId": "nw_narrator",
      "text": "The keys are in the ignition, exactly where she said.",
      "silent": true,
@@ -9678,25 +10092,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b763",
+     "id": "nw_b832",
      "characterId": "nw_narrator",
      "text": "He turns them. The engine coughs. Dies.",
      "silent": true
     },
     {
-     "id": "nw_b764",
+     "id": "nw_b833",
      "characterId": "nw_narrator",
      "text": "The windscreen cracks as a round goes through it.",
      "silent": true
     },
     {
-     "id": "nw_b765",
+     "id": "nw_b834",
      "characterId": "nw_jack",
      "text": "Come on. Come on.",
      "audioUrl": "/film/voice/s48/216-jack-come-on-come-on.mp3"
     },
     {
-     "id": "nw_b766",
+     "id": "nw_b835",
      "characterId": "nw_narrator",
      "text": "He turns the key again. The engine catches. Roars.",
      "silent": true,
@@ -9729,19 +10143,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b767",
+     "id": "nw_b836",
      "characterId": "nw_narrator",
-     "text": "The truck lurches forward and smashes through the farm gate. Two masked men throw themselves aside. The truck fishtails through the mud onto the farm track, then onto the highway.",
+     "text": "The truck lurches forward and smashes through the farm gate. Two masked men throw themselves aside.",
      "silent": true
     },
     {
-     "id": "nw_b768",
+     "id": "nw_b837",
+     "characterId": "nw_narrator",
+     "text": "The truck fishtails through the mud onto the farm track, then onto the highway.",
+     "silent": true
+    },
+    {
+     "id": "nw_b838",
      "characterId": "nw_narrator",
      "text": "The eight men walk out into the lot, one by one, and stand in the headlights of their cars, watching the single red taillight shrink into the rain.",
      "silent": true
     },
     {
-     "id": "nw_b769",
+     "id": "nw_b839",
      "characterId": "nw_narrator",
      "text": "They don't chase him. They don't need to.",
      "silent": true,
@@ -9763,19 +10183,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b770",
+     "id": "nw_b840",
      "characterId": "nw_narrator",
      "text": "The MASKED LEADER touches his earpiece.",
      "silent": true
     },
     {
-     "id": "nw_b771",
+     "id": "nw_b841",
      "characterId": "nw_masked_leader",
      "text": "He's gone. He has what she gave him.",
      "audioUrl": "/film/voice/s49/217-maskedleader-he-s-gone-he-has-what.mp3"
     },
     {
-     "id": "nw_b772",
+     "id": "nw_b842",
      "characterId": "nw_narrator",
      "text": "Behind them, inside the lobby, the pink payphone is still ringing.",
      "silent": true,
@@ -9807,13 +10227,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b773",
+     "id": "nw_b843",
      "characterId": "nw_narrator",
      "text": "Grey light. Empty highway. Rain through the shattered windscreen.",
      "silent": true
     },
     {
-     "id": "nw_b774",
+     "id": "nw_b844",
      "characterId": "nw_narrator",
      "text": "Jack drives with one hand. Blood runs from his hairline down the side of his face. His shirt is dark with it at the shoulder.",
      "silent": true,
@@ -9835,49 +10255,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b775",
+     "id": "nw_b845",
      "characterId": "nw_narrator",
      "text": "He looks in the mirror. No one.",
      "silent": true
     },
     {
-     "id": "nw_b776",
+     "id": "nw_b846",
      "characterId": "nw_narrator",
      "text": "He reaches into his jacket. The receipts are still there, soaked and creased.",
      "silent": true
     },
     {
-     "id": "nw_b777",
+     "id": "nw_b847",
      "characterId": "nw_narrator",
      "text": "He breathes. Only now does his hand start to shake.",
      "silent": true
     },
     {
-     "id": "nw_b778",
+     "id": "nw_b848",
      "characterId": "nw_narrator",
      "text": "Then the thought arrives, and his face changes.",
      "silent": true
     },
     {
-     "id": "nw_b779",
+     "id": "nw_b849",
      "characterId": "nw_narrator",
      "text": "Only two people knew where he was going tonight. He counts them silently.",
      "silent": true
     },
     {
-     "id": "nw_b780",
+     "id": "nw_b850",
      "characterId": "nw_narrator",
      "text": "Ishida. He asked Ishida for the widow's address.",
      "silent": true
     },
     {
-     "id": "nw_b781",
+     "id": "nw_b851",
      "characterId": "nw_narrator",
      "text": "And Vera. He called her from a pink payphone and told her it was just an inn.",
      "silent": true
     },
     {
-     "id": "nw_b782",
+     "id": "nw_b852",
      "characterId": "nw_narrator",
      "text": "He drives on. The wipers beat. He doesn't want to think it. He thinks it anyway.",
      "silent": true,
@@ -9908,15 +10328,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b783",
+     "id": "nw_b853",
      "characterId": "nw_narrator",
-     "text": "The fortieth floor. Glass on three sides. Tokyo spread out below in the rain like a circuit board. The glass walls grey with dawn. Nobody in the leather chairs.",
+     "text": "The fortieth floor. Glass on three sides. Tokyo spread out below in the rain like a circuit board. The glass walls grey with dawn.",
      "silent": true
     },
     {
-     "id": "nw_b784",
+     "id": "nw_b854",
      "characterId": "nw_narrator",
-     "text": "The model of the redevelopment on its long table: glass towers, sponge trees, a broad white plaza. At the plaza's edge sits one small, dark, patched block, out of place among the towers. The Hive.",
+     "text": "Nobody in the leather chairs.",
+     "silent": true
+    },
+    {
+     "id": "nw_b855",
+     "characterId": "nw_narrator",
+     "text": "The model of the redevelopment on its long table: glass towers, sponge trees, a broad white plaza.",
      "silent": true,
      "background": "/film/img/s51/310-the-model-at-dawn.jpg",
      "cinematic": {
@@ -9936,13 +10362,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b785",
+     "id": "nw_b856",
+     "characterId": "nw_narrator",
+     "text": "At the plaza's edge sits one small, dark, patched block, out of place among the towers. The Hive.",
+     "silent": true
+    },
+    {
+     "id": "nw_b857",
      "characterId": "nw_narrator",
      "text": "A man's hand, clean, with an expensive watch, lifts the Hive out of the model and sets it on a tray beside a cup of tea.",
      "silent": true
     },
     {
-     "id": "nw_b786",
+     "id": "nw_b858",
      "characterId": "nw_narrator",
      "text": "The plaza underneath is already finished. Tiny painted people cross it.",
      "silent": true,
@@ -9989,25 +10421,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b787",
+     "id": "nw_b859",
      "characterId": "nw_narrator",
      "text": "A knock at the door. Vera opens it in a sweater, barely awake.",
      "silent": true
     },
     {
-     "id": "nw_b788",
+     "id": "nw_b860",
      "characterId": "nw_narrator",
      "text": "Jack. Soaked. Blood dried down the side of his face.",
      "silent": true
     },
     {
-     "id": "nw_b789",
+     "id": "nw_b861",
      "characterId": "nw_vera",
      "text": "Oh my God.",
      "audioUrl": "/film/voice/s52/220-vera-oh-my-god.mp3"
     },
     {
-     "id": "nw_b790",
+     "id": "nw_b862",
      "characterId": "nw_narrator",
      "text": "She pulls him in.",
      "silent": true,
@@ -10058,43 +10490,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b791",
+     "id": "nw_b863",
      "characterId": "nw_narrator",
-     "text": "A small tiled bathroom. Jack sits on the closed toilet. Vera kneels in front of him with a bowl of warm water and a cloth, cleaning the cut at his hairline.",
+     "text": "A small tiled bathroom. Jack sits on the closed toilet.",
      "silent": true
     },
     {
-     "id": "nw_b792",
+     "id": "nw_b864",
+     "characterId": "nw_narrator",
+     "text": "Vera kneels in front of him with a bowl of warm water and a cloth, cleaning the cut at his hairline.",
+     "silent": true
+    },
+    {
+     "id": "nw_b865",
      "characterId": "nw_narrator",
      "text": "He watches her face while she works. Very closely. As though he is trying to read something written there.",
      "silent": true
     },
     {
-     "id": "nw_b793",
+     "id": "nw_b866",
      "characterId": "nw_vera",
      "text": "Who did this?",
      "audioUrl": "/film/voice/s53/221-vera-who-did-this.mp3"
     },
     {
-     "id": "nw_b794",
+     "id": "nw_b867",
      "characterId": "nw_jack",
      "text": "I don't know.",
      "audioUrl": "/film/voice/s53/221-jack-i-don-t-know.mp3"
     },
     {
-     "id": "nw_b795",
+     "id": "nw_b868",
      "characterId": "nw_vera",
      "text": "You don't know?",
      "audioUrl": "/film/voice/s53/221-vera-you-don-t-know.mp3"
     },
     {
-     "id": "nw_b796",
+     "id": "nw_b869",
      "characterId": "nw_jack",
      "text": "Two that I saw. Masks. They didn't introduce themselves.",
      "audioUrl": "/film/voice/s53/221-jack-two-that-i-saw-masks-they.mp3"
     },
     {
-     "id": "nw_b797",
+     "id": "nw_b870",
      "characterId": "nw_narrator",
      "text": "She wrings out the cloth. Pink water.",
      "silent": true,
@@ -10116,79 +10554,85 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b798",
+     "id": "nw_b871",
      "characterId": "nw_vera",
      "text": "You told me it was just an inn.",
      "audioUrl": "/film/voice/s53/221-vera-you-told-me-it-was-just.mp3"
     },
     {
-     "id": "nw_b799",
+     "id": "nw_b872",
      "characterId": "nw_jack",
      "text": "It was just an inn.",
      "audioUrl": "/film/voice/s53/221-jack-it-was-just-an-inn.mp3"
     },
     {
-     "id": "nw_b800",
+     "id": "nw_b873",
      "characterId": "nw_narrator",
      "text": "Jack's eyes go to Vera's phone on the edge of the bath, where it has sat all night in case Mara calls. He stops.",
      "silent": true
     },
     {
-     "id": "nw_b801",
+     "id": "nw_b874",
      "characterId": "nw_narrator",
      "text": "She looks up and catches him watching her.",
      "silent": true
     },
     {
-     "id": "nw_b802",
+     "id": "nw_b875",
      "characterId": "nw_vera",
      "text": "What?",
      "audioUrl": "/film/voice/s53/221-vera-what.mp3"
     },
     {
-     "id": "nw_b803",
+     "id": "nw_b876",
      "characterId": "nw_narrator",
-     "text": "He doesn't answer. He's still watching. Measuring. She sees something in his look that she doesn't understand, and it frightens her more than the blood.",
+     "text": "He doesn't answer. He's still watching. Measuring.",
      "silent": true
     },
     {
-     "id": "nw_b804",
+     "id": "nw_b877",
+     "characterId": "nw_narrator",
+     "text": "She sees something in his look that she doesn't understand, and it frightens her more than the blood.",
+     "silent": true
+    },
+    {
+     "id": "nw_b878",
      "characterId": "nw_vera",
      "text": "Jack. What?",
      "audioUrl": "/film/voice/s53/221-vera-jack-what.mp3"
     },
     {
-     "id": "nw_b805",
+     "id": "nw_b879",
      "characterId": "nw_narrator",
      "text": "He looks at her hands: careful, steady, stained pink. At her face: exhausted, afraid for him.",
      "silent": true
     },
     {
-     "id": "nw_b806",
+     "id": "nw_b880",
      "characterId": "nw_narrator",
      "text": "Whatever he was looking for, it isn't there. It was never there.",
      "silent": true
     },
     {
-     "id": "nw_b807",
+     "id": "nw_b881",
      "characterId": "nw_jack",
      "text": "Nothing. I'm sorry. Nothing.",
      "audioUrl": "/film/voice/s53/221-jack-nothing-i-m-sorry-nothing.mp3"
     },
     {
-     "id": "nw_b808",
+     "id": "nw_b882",
      "characterId": "nw_narrator",
      "text": "She puts a plaster on the cut, very gently. Her hand stays on his face a moment after.",
      "silent": true
     },
     {
-     "id": "nw_b809",
+     "id": "nw_b883",
      "characterId": "nw_narrator",
      "text": "He covers her hand with his.",
      "silent": true
     },
     {
-     "id": "nw_b810",
+     "id": "nw_b884",
      "characterId": "nw_narrator",
      "text": "And then, without either of them deciding, she kisses him. Or he kisses her. It doesn't matter which.",
      "silent": true,
@@ -10210,37 +10654,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b811",
+     "id": "nw_b885",
      "characterId": "nw_narrator",
      "text": "It is quiet, and brief, and it changes everything.",
      "silent": true
     },
     {
-     "id": "nw_b812",
+     "id": "nw_b886",
      "characterId": "nw_narrator",
      "text": "When it ends, she rests her forehead against his.",
      "silent": true
     },
     {
-     "id": "nw_b813",
+     "id": "nw_b887",
      "characterId": "nw_vera",
      "text": "Don't go anywhere else without telling me.",
      "audioUrl": "/film/voice/s53/275-vera-don-t-go-anywhere-else-without.mp3"
     },
     {
-     "id": "nw_b814",
+     "id": "nw_b888",
      "characterId": "nw_jack",
      "text": "I won't.",
      "audioUrl": "/film/voice/s53/275-jack-i-won-t.mp3"
     },
     {
-     "id": "nw_b815",
+     "id": "nw_b889",
      "characterId": "nw_narrator",
      "text": "When she turns to wring out the cloth, he reaches over and turns her phone face-down.",
      "silent": true
     },
     {
-     "id": "nw_b816",
+     "id": "nw_b890",
      "characterId": "nw_narrator",
      "text": "It is another promise. He is collecting them.",
      "silent": true,
@@ -10317,9 +10761,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b817",
+     "id": "nw_b891",
      "characterId": "nw_narrator",
-     "text": "An old newspaper office. Stacks of paper. Desks jammed together. Televisions on the walls showing three different channels. Nobody under fifty looks up from a screen.",
+     "text": "An old newspaper office. Stacks of paper. Desks jammed together. Televisions on the walls showing three different channels.",
      "silent": true,
      "background": "/film/img/s53a/297-the-glass-office.jpg",
      "cinematic": {
@@ -10339,73 +10783,85 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b818",
+     "id": "nw_b892",
      "characterId": "nw_narrator",
-     "text": "Vera stands at the door of a glass-walled office at the back, KONDO's card in her hand. HARADA (50s), the editor, grey-haired, sleeves rolled, is finishing a call. She sees the card and ends it without hurry.",
+     "text": "Nobody under fifty looks up from a screen.",
      "silent": true
     },
     {
-     "id": "nw_b819",
+     "id": "nw_b893",
+     "characterId": "nw_narrator",
+     "text": "Vera stands at the door of a glass-walled office at the back, KONDO's card in her hand.",
+     "silent": true
+    },
+    {
+     "id": "nw_b894",
+     "characterId": "nw_narrator",
+     "text": "HARADA (50s), the editor, grey-haired, sleeves rolled, is finishing a call. She sees the card and ends it without hurry.",
+     "silent": true
+    },
+    {
+     "id": "nw_b895",
      "characterId": "nw_narrator",
      "text": "On her desk, a framed photograph of the journalist from the bar, laughing at an office party.",
      "silent": true
     },
     {
-     "id": "nw_b820",
+     "id": "nw_b896",
      "characterId": "nw_harada",
      "text": "You're not a reporter.",
      "audioUrl": "/film/voice/s53a/297-harada-you-re-not-a-reporter.mp3"
     },
     {
-     "id": "nw_b821",
+     "id": "nw_b897",
      "characterId": "nw_vera",
      "text": "My sister was in that bar.",
      "audioUrl": "/film/voice/s53a/297-vera-my-sister-was-in-that-bar.mp3"
     },
     {
-     "id": "nw_b822",
+     "id": "nw_b898",
      "characterId": "nw_narrator",
      "text": "Harada looks at her for a long time. Then at the photograph. She points at the chair.",
      "silent": true
     },
     {
-     "id": "nw_b823",
+     "id": "nw_b899",
      "characterId": "nw_harada",
      "text": "We have had a letter from lawyers already. Kondo was six months on the redevelopment money. Who owns what. Whose friends sit on which committee. He never touched a gang in his life.",
      "audioUrl": "/film/voice/s53a/297-harada-we-have-had-a-letter-from.mp3"
     },
     {
-     "id": "nw_b824",
+     "id": "nw_b900",
      "characterId": "nw_vera",
      "text": "The police say it's a gang matter.",
      "audioUrl": "/film/voice/s53a/297-vera-the-police-say-it-s-a.mp3"
     },
     {
-     "id": "nw_b825",
+     "id": "nw_b901",
      "characterId": "nw_harada",
      "text": "The police say what they are told.",
      "audioUrl": "/film/voice/s53a/297-harada-the-police-say-what-they-are.mp3"
     },
     {
-     "id": "nw_b826",
+     "id": "nw_b902",
      "characterId": "nw_vera",
      "text": "Did he say who he was meeting?",
      "audioUrl": "/film/voice/s53a/297-vera-did-he-say-who-he-was.mp3"
     },
     {
-     "id": "nw_b827",
+     "id": "nw_b903",
      "characterId": "nw_harada",
      "text": "One o'clock, Kanda, an old man who wanted to talk. He told two people. Me. And a detective.",
      "audioUrl": "/film/voice/s53a/297-harada-one-o-clock-kanda-an-old.mp3"
     },
     {
-     "id": "nw_b828",
+     "id": "nw_b904",
      "characterId": "nw_vera",
      "text": "Which detective?",
      "audioUrl": "/film/voice/s53a/297-vera-which-detective.mp3"
     },
     {
-     "id": "nw_b829",
+     "id": "nw_b905",
      "characterId": "nw_harada",
      "text": "He didn't say. He said the detective had promised to keep a car nearby. There was no car.",
      "audioUrl": "/film/voice/s53a/297-harada-he-didn-t-say-he-said.mp3",
@@ -10427,25 +10883,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b830",
+     "id": "nw_b906",
      "characterId": "nw_narrator",
      "text": "Vera sits very still.",
      "silent": true
     },
     {
-     "id": "nw_b831",
+     "id": "nw_b907",
      "characterId": "nw_vera",
      "text": "Will you print it?",
      "audioUrl": "/film/voice/s53a/298-vera-will-you-print-it.mp3"
     },
     {
-     "id": "nw_b832",
+     "id": "nw_b908",
      "characterId": "nw_harada",
      "text": "Print what? A dead man's diary? Bring me something with a name on it.",
      "audioUrl": "/film/voice/s53a/298-harada-print-what-a-dead-man-s.mp3"
     },
     {
-     "id": "nw_b833",
+     "id": "nw_b909",
      "characterId": "nw_narrator",
      "text": "Vera writes her number on the back of Kondo's card and leaves it on the desk, beside the photograph.",
      "silent": true,
@@ -10494,31 +10950,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b834",
+     "id": "nw_b910",
      "characterId": "nw_narrator",
-     "text": "A tiny kiosk wedged into the corner of a shopping arcade. An OLD TOBACCONIST (80s) behind a window full of cigarette cartons and lottery tickets.",
+     "text": "A tiny kiosk wedged into the corner of a shopping arcade.",
      "silent": true
     },
     {
-     "id": "nw_b835",
+     "id": "nw_b911",
+     "characterId": "nw_narrator",
+     "text": "An OLD TOBACCONIST (80s) behind a window full of cigarette cartons and lottery tickets.",
+     "silent": true
+    },
+    {
+     "id": "nw_b912",
      "characterId": "nw_narrator",
      "text": "Vera holds up the old photograph. The American man, two small girls, the noodle shop sign.",
      "silent": true
     },
     {
-     "id": "nw_b836",
+     "id": "nw_b913",
      "characterId": "nw_vera",
      "text": "My father worked near here, a long time ago. Do you know this place?",
      "audioUrl": "/film/voice/s54/222-vera-my-father-worked-near-here-a.mp3"
     },
     {
-     "id": "nw_b837",
+     "id": "nw_b914",
      "characterId": "nw_narrator",
      "text": "The tobacconist puts on his glasses. Looks. Smiles with all his remaining teeth.",
      "silent": true
     },
     {
-     "id": "nw_b838",
+     "id": "nw_b915",
      "characterId": "nw_old_tobacconist",
      "text": "Kaneko's. Of course. In the Hive. Not for long, though. They're knocking it all down.",
      "audioUrl": "/film/voice/s54/222-oldtobacconist-kaneko-s-of-course-in-the.mp3",
@@ -10540,19 +11002,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b839",
+     "id": "nw_b916",
      "characterId": "nw_narrator",
      "text": "Vera stares at him.",
      "silent": true
     },
     {
-     "id": "nw_b840",
+     "id": "nw_b917",
      "characterId": "nw_vera",
      "text": "It's still there?",
      "audioUrl": "/film/voice/s54/222-vera-it-s-still-there.mp3"
     },
     {
-     "id": "nw_b841",
+     "id": "nw_b918",
      "characterId": "nw_old_tobacconist",
      "text": "Everything is still there. Until it isn't.",
      "audioUrl": "/film/voice/s54/222-oldtobacconist-everything-is-still-there-until-it.mp3",
@@ -10583,25 +11045,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b842",
+     "id": "nw_b919",
      "characterId": "nw_narrator",
-     "text": "Vera walks through the narrow corridors with the photograph in her hand, looking at everything as though she's trying to remember it. Bare bulbs. Dripping water. The radio repairman's dozen murmuring stations. Daylight falls in thin cold shafts through the steam.",
+     "text": "Vera walks through the narrow corridors with the photograph in her hand, looking at everything as though she's trying to remember it.",
      "silent": true
     },
     {
-     "id": "nw_b843",
+     "id": "nw_b920",
      "characterId": "nw_narrator",
-     "text": "At a turning she stops, then takes the left without looking, the way you take a stair you've climbed a thousand times. A hand-painted sign for a DENTIST, one flight up. A RADIO REPAIRMAN at his bench under a bare bulb glances up at her and back down. Through a half-open door, an OLD WOMAN watches sumo on a television the size of a bread box.",
+     "text": "Bare bulbs. Dripping water. The radio repairman's dozen murmuring stations. Daylight falls in thin cold shafts through the steam.",
      "silent": true
     },
     {
-     "id": "nw_b844",
+     "id": "nw_b921",
+     "characterId": "nw_narrator",
+     "text": "At a turning she stops, then takes the left without looking, the way you take a stair you've climbed a thousand times.",
+     "silent": true
+    },
+    {
+     "id": "nw_b922",
+     "characterId": "nw_narrator",
+     "text": "A hand-painted sign for a DENTIST, one flight up. A RADIO REPAIRMAN at his bench under a bare bulb glances up at her and back down.",
+     "silent": true
+    },
+    {
+     "id": "nw_b923",
+     "characterId": "nw_narrator",
+     "text": "Through a half-open door, an OLD WOMAN watches sumo on a television the size of a bread box.",
+     "silent": true
+    },
+    {
+     "id": "nw_b924",
      "characterId": "nw_narrator",
      "text": "Vera puts her hand flat on the wall, low, where a child's hand would reach.",
      "silent": true
     },
     {
-     "id": "nw_b845",
+     "id": "nw_b925",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The building trembles.",
      "silent": true,
@@ -10609,19 +11089,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b846",
+     "id": "nw_b926",
      "characterId": "nw_narrator",
      "text": "She stops. Turns a corner.",
      "silent": true
     },
     {
-     "id": "nw_b847",
+     "id": "nw_b927",
      "characterId": "nw_narrator",
      "text": "The noodle counter. The sign.",
      "silent": true
     },
     {
-     "id": "nw_b848",
+     "id": "nw_b928",
      "characterId": "nw_narrator",
      "text": "She stands there for a long moment, holding the photograph up beside the real thing. They match.",
      "silent": true,
@@ -10668,49 +11148,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b849",
+     "id": "nw_b929",
      "characterId": "nw_narrator",
      "text": "Lunchtime. Steam. Three customers.",
      "silent": true
     },
     {
-     "id": "nw_b850",
+     "id": "nw_b930",
      "characterId": "nw_narrator",
      "text": "Vera sits at the counter.",
      "silent": true
     },
     {
-     "id": "nw_b851",
+     "id": "nw_b931",
      "characterId": "nw_narrator",
      "text": "Kaneko turns from the pot, glances at her, and goes on working.",
      "silent": true
     },
     {
-     "id": "nw_b852",
+     "id": "nw_b932",
      "characterId": "nw_vera",
      "text": "I'm sorry, I don't know what to order. I was here when I was a child. With my father. He always sat here.",
      "audioUrl": "/film/voice/s56/225-vera-i-m-sorry-i-don-t.mp3"
     },
     {
-     "id": "nw_b853",
+     "id": "nw_b933",
      "characterId": "nw_narrator",
      "text": "She takes the old photograph from her bag and sets it on the counter: the American man, two small girls, the noodle shop sign.",
      "silent": true
     },
     {
-     "id": "nw_b854",
+     "id": "nw_b934",
      "characterId": "nw_narrator",
      "text": "Kaneko looks at the photograph for a long moment. Then at Vera. She freezes, just for a second.",
      "silent": true
     },
     {
-     "id": "nw_b855",
+     "id": "nw_b935",
      "characterId": "nw_kaneko",
      "text": "He always paid too much.",
      "audioUrl": "/film/voice/s56/225-kaneko-he-always-paid-too-much.mp3"
     },
     {
-     "id": "nw_b856",
+     "id": "nw_b936",
      "characterId": "nw_narrator",
      "text": "Vera's breath catches.",
      "silent": true,
@@ -10732,19 +11212,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b857",
+     "id": "nw_b937",
      "characterId": "nw_vera",
      "text": "You remember him?",
      "audioUrl": "/film/voice/s56/225-vera-you-remember-him.mp3"
     },
     {
-     "id": "nw_b858",
+     "id": "nw_b938",
      "characterId": "nw_kaneko",
      "text": "And you. You ate everything on his plate.",
      "audioUrl": "/film/voice/s56/266-kaneko-and-you-you-ate-everything-on.mp3"
     },
     {
-     "id": "nw_b859",
+     "id": "nw_b939",
      "characterId": "nw_narrator",
      "text": "She sets a bowl of noodles in front of Vera. Vera looks at it. Her eyes fill.",
      "silent": true,
@@ -10791,13 +11271,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b860",
+     "id": "nw_b940",
      "characterId": "nw_narrator",
      "text": "On the other side of the curtain, three feet away.",
      "silent": true
     },
     {
-     "id": "nw_b861",
+     "id": "nw_b941",
      "characterId": "nw_narrator",
      "text": "Mara stands pressed against the wall with both hands over her mouth. She has heard her sister's voice. She is shaking.",
      "silent": true,
@@ -10819,31 +11299,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b862",
+     "id": "nw_b942",
      "characterId": "nw_narrator",
      "text": "Through the thin gap at the edge of the curtain she can see the back of Vera's head.",
      "silent": true
     },
     {
-     "id": "nw_b863",
+     "id": "nw_b943",
      "characterId": "nw_narrator",
      "text": "Mara takes one step toward the curtain. Her hand lifts to it.",
      "silent": true
     },
     {
-     "id": "nw_b864",
+     "id": "nw_b944",
      "characterId": "nw_narrator",
      "text": "She stops.",
      "silent": true
     },
     {
-     "id": "nw_b865",
+     "id": "nw_b945",
      "characterId": "nw_narrator",
      "text": "She thinks of the purse in the rain. Of the two men falling. Of her sister being followed through these corridors.",
      "silent": true
     },
     {
-     "id": "nw_b866",
+     "id": "nw_b946",
      "characterId": "nw_narrator",
      "text": "Her hand drops.",
      "silent": true,
@@ -10874,7 +11354,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b867",
+     "id": "nw_b947",
      "characterId": "nw_narrator",
      "text": "Vera eats. All of it. She laughs once, at nothing, wiping her eyes.",
      "silent": true,
@@ -10896,37 +11376,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b868",
+     "id": "nw_b948",
      "characterId": "nw_vera",
      "text": "My sister would love this place. She's never seen it. She only knows it from my stories. When I find her, I'll bring her here.",
      "audioUrl": "/film/voice/s58/227-vera-my-sister-would-love-this-place.mp3"
     },
     {
-     "id": "nw_b869",
+     "id": "nw_b949",
      "characterId": "nw_narrator",
      "text": "Kaneko's chopsticks stop moving in the pot. She doesn't look up.",
      "silent": true
     },
     {
-     "id": "nw_b870",
+     "id": "nw_b950",
      "characterId": "nw_kaneko",
      "text": "Yes. Bring her.",
      "audioUrl": "/film/voice/s58/227-kaneko-yes-bring-her.mp3"
     },
     {
-     "id": "nw_b871",
+     "id": "nw_b951",
      "characterId": "nw_narrator",
      "text": "Vera puts money on the counter. Too much. Kaneko notices and says nothing.",
      "silent": true
     },
     {
-     "id": "nw_b872",
+     "id": "nw_b952",
      "characterId": "nw_narrator",
      "text": "Vera goes, lighter than she has been for the whole film.",
      "silent": true
     },
     {
-     "id": "nw_b873",
+     "id": "nw_b953",
      "characterId": "nw_narrator",
      "text": "Behind the curtain, Mara slides down the wall to the floor.",
      "silent": true,
@@ -10973,13 +11453,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b874",
+     "id": "nw_b954",
      "characterId": "nw_narrator",
-     "text": "Rain. By the Hive's narrow entrance, under a tin awning, a green public payphone. JACK stands at it with the receiver to his ear. It's ringing.",
+     "text": "Rain. By the Hive's narrow entrance, under a tin awning, a green public payphone. JACK stands at it with the receiver to his ear.",
      "silent": true
     },
     {
-     "id": "nw_b875",
+     "id": "nw_b955",
+     "characterId": "nw_narrator",
+     "text": "It's ringing.",
+     "silent": true
+    },
+    {
+     "id": "nw_b956",
      "characterId": "nw_narrator",
      "text": "MRS. SAKAI'S HOUSE\n\nThe kotatsu. The altar. The television on with the sound off. A teacup on its side on the tatami. The phone rings in the empty room.",
      "silent": true,
@@ -11001,7 +11487,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b876",
+     "id": "nw_b957",
      "characterId": "nw_narrator",
      "text": "THE HIVE\n\nVera comes out of the Hive's narrow entrance, glowing.",
      "silent": true,
@@ -11023,55 +11509,55 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b877",
+     "id": "nw_b958",
      "characterId": "nw_vera",
      "text": "Jack! It's still here. The noodle shop from the photo. It's real. The same woman — she remembered Dad. She remembered me.",
      "audioUrl": "/film/voice/s59/228-vera-jack-it-s-still-here-the.mp3"
     },
     {
-     "id": "nw_b878",
+     "id": "nw_b959",
      "characterId": "nw_narrator",
      "text": "Jack keeps the receiver to his ear. It rings.",
      "silent": true
     },
     {
-     "id": "nw_b879",
+     "id": "nw_b960",
      "characterId": "nw_vera",
      "text": "And I went to the newspaper. Harada, the editor. She says Kondo told two people about the one o'clock. Her. And a detective, who promised to keep a car nearby.",
      "audioUrl": "/film/voice/s59/228-vera-and-i-went-to-the-newspaper.mp3"
     },
     {
-     "id": "nw_b880",
+     "id": "nw_b961",
      "characterId": "nw_jack",
      "text": "Later.",
      "audioUrl": "/film/voice/s59/228-jack-later.mp3"
     },
     {
-     "id": "nw_b881",
+     "id": "nw_b962",
      "characterId": "nw_vera",
      "text": "Jack. A detective.",
      "audioUrl": "/film/voice/s59/228-vera-jack-a-detective.mp3"
     },
     {
-     "id": "nw_b882",
+     "id": "nw_b963",
      "characterId": "nw_jack",
      "text": "Later. Please.",
      "audioUrl": "/film/voice/s59/228-jack-later-please.mp3"
     },
     {
-     "id": "nw_b883",
+     "id": "nw_b964",
      "characterId": "nw_narrator",
      "text": "It rings. Nobody answers. He hangs up.",
      "silent": true
     },
     {
-     "id": "nw_b884",
+     "id": "nw_b965",
      "characterId": "nw_vera",
      "text": "When we find Mara, I'm bringing her here. She'll finally see it.",
      "audioUrl": "/film/voice/s59/228-vera-when-we-find-mara-i-m.mp3"
     },
     {
-     "id": "nw_b885",
+     "id": "nw_b966",
      "characterId": "nw_jack",
      "text": "Yes.",
      "audioUrl": "/film/voice/s59/228-jack-yes.mp3",
@@ -11102,61 +11588,73 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b886",
+     "id": "nw_b967",
      "characterId": "nw_narrator",
-     "text": "The bulb. Mara sits on the futon with her knees pulled up. Her face is swollen from crying. On the wall beside her, taped up with rice-paper tape: a new drawing, still smudged. The noodle counter from behind the curtain. The back of a head.",
+     "text": "The bulb. Mara sits on the futon with her knees pulled up. Her face is swollen from crying.",
      "silent": true
     },
     {
-     "id": "nw_b887",
+     "id": "nw_b968",
+     "characterId": "nw_narrator",
+     "text": "On the wall beside her, taped up with rice-paper tape: a new drawing, still smudged. The noodle counter from behind the curtain.",
+     "silent": true
+    },
+    {
+     "id": "nw_b969",
+     "characterId": "nw_narrator",
+     "text": "The back of a head.",
+     "silent": true
+    },
+    {
+     "id": "nw_b970",
      "characterId": "nw_narrator",
      "text": "Jack crouches in front of her.",
      "silent": true
     },
     {
-     "id": "nw_b888",
+     "id": "nw_b971",
      "characterId": "nw_mara",
      "text": "She was right there. She was right there and I —",
      "audioUrl": "/film/voice/s60/229-mara-she-was-right-there-she-was.mp3"
     },
     {
-     "id": "nw_b889",
+     "id": "nw_b972",
      "characterId": "nw_jack",
      "text": "You did the right thing.",
      "audioUrl": "/film/voice/s60/229-jack-you-did-the-right-thing.mp3"
     },
     {
-     "id": "nw_b890",
+     "id": "nw_b973",
      "characterId": "nw_mara",
      "text": "Did I? She said she'd bring me here. When she finds me. She was so happy.",
      "audioUrl": "/film/voice/s60/229-mara-did-i-she-said-she-d.mp3"
     },
     {
-     "id": "nw_b891",
+     "id": "nw_b974",
      "characterId": "nw_narrator",
      "text": "She wipes her face with the heel of her hand.",
      "silent": true
     },
     {
-     "id": "nw_b892",
+     "id": "nw_b975",
      "characterId": "nw_jack",
      "text": "If she found this place, other people can.",
      "audioUrl": "/film/voice/s60/229-jack-if-she-found-this-place-other.mp3"
     },
     {
-     "id": "nw_b893",
+     "id": "nw_b976",
      "characterId": "nw_mara",
      "text": "I know.",
      "audioUrl": "/film/voice/s60/229-mara-i-know.mp3"
     },
     {
-     "id": "nw_b894",
+     "id": "nw_b977",
      "characterId": "nw_mara",
      "text": "Find what it opens. And then this ends. I don't want to hide any more. I want my sister.",
      "audioUrl": "/film/voice/s60/229-mara-find-what-it-opens-and-then.mp3"
     },
     {
-     "id": "nw_b895",
+     "id": "nw_b978",
      "characterId": "nw_narrator",
      "text": "She takes the key from around her neck, on a shoelace, and puts it in his hand. Its worn tag reads 114.",
      "silent": true,
@@ -11178,25 +11676,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b896",
+     "id": "nw_b979",
      "characterId": "nw_jack",
      "text": "Tomorrow night I'm moving you out of here. Somewhere safe, outside Tokyo. A police car and a house. Someone I trust.",
      "audioUrl": "/film/voice/s60/229-jack-tomorrow-night-i-m-moving-you.mp3"
     },
     {
-     "id": "nw_b897",
+     "id": "nw_b980",
      "characterId": "nw_mara",
      "text": "And then?",
      "audioUrl": "/film/voice/s60/229-mara-and-then.mp3"
     },
     {
-     "id": "nw_b898",
+     "id": "nw_b981",
      "characterId": "nw_jack",
      "text": "And then I tell her everything.",
      "audioUrl": "/film/voice/s60/229-jack-and-then-i-tell-her-everything.mp3"
     },
     {
-     "id": "nw_b899",
+     "id": "nw_b982",
      "characterId": "nw_narrator",
      "text": "Mara looks at him. She believes him.",
      "silent": true,
@@ -11227,7 +11725,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b900",
+     "id": "nw_b983",
      "characterId": "nw_narrator",
      "text": "Parked under an elevated expressway. Rain drumming on the roof. The dashboard glow.",
      "silent": true,
@@ -11249,103 +11747,103 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b901",
+     "id": "nw_b984",
      "characterId": "nw_narrator",
      "text": "Ishida behind the wheel. Jack in the passenger seat. Neither looks at the other.",
      "silent": true
     },
     {
-     "id": "nw_b902",
+     "id": "nw_b985",
      "characterId": "nw_ishida",
      "text": "The inn. I heard this morning. Thank God. The widow's file went through the department the day I pulled it. Someone read it. I am looking for him.",
      "audioUrl": "/film/voice/s61/230-ishida-the-inn-i-heard-this-morning.mp3"
     },
     {
-     "id": "nw_b903",
+     "id": "nw_b986",
      "characterId": "nw_narrator",
      "text": "Jack studies the side of his face. It is the answer he needs. He takes it.",
      "silent": true
     },
     {
-     "id": "nw_b904",
+     "id": "nw_b987",
      "characterId": "nw_jack",
      "text": "I have a witness. From the bar.",
      "audioUrl": "/film/voice/s61/230-jack-i-have-a-witness-from-the.mp3"
     },
     {
-     "id": "nw_b905",
+     "id": "nw_b988",
      "characterId": "nw_narrator",
      "text": "A pause. Ishida's expression doesn't change at all. That is the tell, and only we know it.",
      "silent": true
     },
     {
-     "id": "nw_b906",
+     "id": "nw_b989",
      "characterId": "nw_ishida",
      "text": "The sister.",
      "audioUrl": "/film/voice/s61/230-ishida-the-sister.mp3"
     },
     {
-     "id": "nw_b907",
+     "id": "nw_b990",
      "characterId": "nw_jack",
      "text": "I need a safe car. A safe house outside the city. No paperwork. No department. Just you.",
      "audioUrl": "/film/voice/s61/230-jack-i-need-a-safe-car-a.mp3"
     },
     {
-     "id": "nw_b908",
+     "id": "nw_b991",
      "characterId": "nw_ishida",
      "text": "When?",
      "audioUrl": "/film/voice/s61/230-ishida-when.mp3"
     },
     {
-     "id": "nw_b909",
+     "id": "nw_b992",
      "characterId": "nw_jack",
      "text": "Tomorrow night.",
      "audioUrl": "/film/voice/s61/230-jack-tomorrow-night.mp3"
     },
     {
-     "id": "nw_b910",
+     "id": "nw_b993",
      "characterId": "nw_narrator",
      "text": "Ishida nods slowly, as if thinking it through. As if it costs him something.",
      "silent": true
     },
     {
-     "id": "nw_b911",
+     "id": "nw_b994",
      "characterId": "nw_ishida",
      "text": "Nine o'clock. The service road behind the Hive, by the railway pillars. A grey car. My driver. I'll arrange the house myself. And Sakai's thing?",
      "audioUrl": "/film/voice/s61/230-ishida-nine-o-clock-the-service-road.mp3"
     },
     {
-     "id": "nw_b912",
+     "id": "nw_b995",
      "characterId": "nw_narrator",
      "text": "Jack turns and looks at him. Ishida keeps his eyes on the rain on the windscreen.",
      "silent": true
     },
     {
-     "id": "nw_b913",
+     "id": "nw_b996",
      "characterId": "nw_ishida",
      "text": "Where else would the Voss girl go? You took me there yourself. Twenty years ago.",
      "audioUrl": "/film/voice/s61/230-ishida-where-else-would-the-voss-girl.mp3"
     },
     {
-     "id": "nw_b914",
+     "id": "nw_b997",
      "characterId": "nw_narrator",
      "text": "Jack looks at Ishida's hands on the wheel. He doesn't ask.",
      "silent": true
     },
     {
-     "id": "nw_b915",
+     "id": "nw_b998",
      "characterId": "nw_jack",
      "text": "I'll bring it to you. When she's safe.",
      "audioUrl": "/film/voice/s61/230-jack-i-ll-bring-it-to-you.mp3"
     },
     {
-     "id": "nw_b916",
+     "id": "nw_b999",
      "characterId": "nw_ishida",
      "text": "Good. You've done well, Jack. This time you've done well.",
      "audioUrl": "/film/voice/s61/230-ishida-good-you-ve-done-well-jack.mp3"
     },
     {
-     "id": "nw_b917",
+     "id": "nw_b1000",
      "characterId": "nw_narrator",
      "text": "Jack looks out at the rain. For the first time in twenty years, he lets himself believe it.",
      "silent": true,
@@ -11376,79 +11874,79 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b918",
+     "id": "nw_b1001",
      "characterId": "nw_narrator",
      "text": "The same small intersection as before. The signal is red. Vera and Jack stand at the kerb under his cheap plastic umbrella.",
      "silent": true
     },
     {
-     "id": "nw_b919",
+     "id": "nw_b1002",
      "characterId": "nw_jack",
      "text": "Tomorrow night. Will you have dinner with me?",
      "audioUrl": "/film/voice/s62/231-jack-tomorrow.mp3"
     },
     {
-     "id": "nw_b920",
+     "id": "nw_b1003",
      "characterId": "nw_narrator",
      "text": "She looks at him, surprised.",
      "silent": true
     },
     {
-     "id": "nw_b921",
+     "id": "nw_b1004",
      "characterId": "nw_vera",
      "text": "Like a date?",
      "audioUrl": "/film/voice/s62/231-vera-like-a-date.mp3"
     },
     {
-     "id": "nw_b922",
+     "id": "nw_b1005",
      "characterId": "nw_jack",
      "text": "Like a date.",
      "audioUrl": "/film/voice/s62/231-jack-like-a-date.mp3"
     },
     {
-     "id": "nw_b923",
+     "id": "nw_b1006",
      "characterId": "nw_vera",
      "text": "Jack, my sister —",
      "audioUrl": "/film/voice/s62/231-vera-my-sister.mp3"
     },
     {
-     "id": "nw_b924",
+     "id": "nw_b1007",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s62/231-jack-i-know.mp3"
     },
     {
-     "id": "nw_b925",
+     "id": "nw_b1008",
      "characterId": "nw_jack",
      "text": "There's something I need to tell you. I want to tell you properly. Not in an office. Not on a train.",
      "audioUrl": "/film/voice/s62/231-jack-something-to-tell.mp3"
     },
     {
-     "id": "nw_b926",
+     "id": "nw_b1009",
      "characterId": "nw_narrator",
      "text": "She searches his face. Whatever she finds there makes her smile. Properly. For the first time in the film.",
      "silent": true
     },
     {
-     "id": "nw_b927",
+     "id": "nw_b1010",
      "characterId": "nw_vera",
      "text": "Okay.",
      "audioUrl": "/film/voice/s62/231-vera-okay.mp3"
     },
     {
-     "id": "nw_b928",
+     "id": "nw_b1011",
      "characterId": "nw_jack",
      "text": "The old hotel by the station. The lounge. Ten o'clock.",
      "audioUrl": "/film/voice/s62/231-jack-old-hotel.mp3"
     },
     {
-     "id": "nw_b929",
+     "id": "nw_b1012",
      "characterId": "nw_vera",
      "text": "Ten o'clock.",
      "audioUrl": "/film/voice/s62/231-vera-ten-oclock.mp3"
     },
     {
-     "id": "nw_b930",
+     "id": "nw_b1013",
      "characterId": "nw_narrator",
      "text": "The signal turns green. The old melody begins to CHIME.",
      "silent": true,
@@ -11470,7 +11968,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b931",
+     "id": "nw_b1014",
      "characterId": "nw_narrator",
      "text": "They cross. She takes his arm.",
      "silent": true,
@@ -11501,21 +11999,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b932",
+     "id": "nw_b1015",
      "characterId": "nw_narrator",
-     "text": "A narrow room under a railway arch, lined floor to ceiling with battered grey steel lockers, each one numbered in fading paint. A single fluorescent tube. A sign in faded letters: MONTHLY. YEARLY. NO QUESTIONS.",
+     "text": "A narrow room under a railway arch, lined floor to ceiling with battered grey steel lockers, each one numbered in fading paint.",
      "silent": true
     },
     {
-     "id": "nw_b933",
+     "id": "nw_b1016",
+     "characterId": "nw_narrator",
+     "text": "A single fluorescent tube. A sign in faded letters: MONTHLY. YEARLY. NO QUESTIONS.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1017",
      "characterId": "nw_narrator",
      "text": "At a desk by the door, a CARETAKER (80s) sleeps with his head on a ledger.",
      "silent": true
     },
     {
-     "id": "nw_b934",
+     "id": "nw_b1018",
      "characterId": "nw_narrator",
-     "text": "Jack opens a locker with Mara's key. Inside: a padded envelope, taped shut. Under it, a small black notebook, water-stained, its cover gone soft with age.",
+     "text": "Jack opens a locker with Mara's key. Inside: a padded envelope, taped shut.",
      "silent": true,
      "background": "/film/img/s63/230-no-questions.jpg",
      "cinematic": {
@@ -11535,7 +12039,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b935",
+     "id": "nw_b1019",
+     "characterId": "nw_narrator",
+     "text": "Under it, a small black notebook, water-stained, its cover gone soft with age.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1020",
      "characterId": "nw_narrator",
      "text": "In the envelope, a single cassette tape in a cracked plastic case, labelled in a shaking hand: SHIOHAMA.",
      "silent": true,
@@ -11557,7 +12067,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b936",
+     "id": "nw_b1021",
      "characterId": "nw_narrator",
      "text": "He opens the notebook. English handwriting. On the flyleaf: DANIEL VOSS.",
      "silent": true,
@@ -11579,31 +12089,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b937",
+     "id": "nw_b1022",
      "characterId": "nw_narrator",
      "text": "Jack stands very still.",
      "silent": true
     },
     {
-     "id": "nw_b938",
+     "id": "nw_b1023",
      "characterId": "nw_narrator",
      "text": "He turns pages. The handwriting grows faster, more anxious. And then a page near the end, and a line underlined twice.",
      "silent": true
     },
     {
-     "id": "nw_b939",
+     "id": "nw_b1024",
      "characterId": "nw_narrator",
      "text": "He reads it. We don't see what it says. We see his face.",
      "silent": true
     },
     {
-     "id": "nw_b940",
+     "id": "nw_b1025",
      "characterId": "nw_narrator",
      "text": "He closes it. The notebook goes inside his coat. The envelope he carries in his hand.",
      "silent": true
     },
     {
-     "id": "nw_b941",
+     "id": "nw_b1026",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The lockers rattle in their rows, all of them at once, like a room full of doors being tried.",
      "silent": true,
@@ -11636,13 +12146,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b942",
+     "id": "nw_b1027",
      "characterId": "nw_narrator",
-     "text": "A row of brick arches with shops in them: shuttered, lit, shuttered. Rain running down the ironwork. Jack comes out of the locker room with his coat buttoned over the notebook and something flat inside it.",
+     "text": "A row of brick arches with shops in them: shuttered, lit, shuttered. Rain running down the ironwork.",
      "silent": true
     },
     {
-     "id": "nw_b943",
+     "id": "nw_b1028",
+     "characterId": "nw_narrator",
+     "text": "Jack comes out of the locker room with his coat buttoned over the notebook and something flat inside it.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1029",
      "characterId": "nw_narrator",
      "text": "At the far end of the arch, a black sedan sits with its lights off and its engine running.",
      "silent": true,
@@ -11664,21 +12180,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b944",
+     "id": "nw_b1030",
      "characterId": "nw_narrator",
      "text": "Jack doesn't look at it. He walks.",
      "silent": true
     },
     {
-     "id": "nw_b945",
+     "id": "nw_b1031",
      "characterId": "nw_narrator",
      "text": "Behind him, the sedan's lights come on. It follows at walking pace.",
      "silent": true
     },
     {
-     "id": "nw_b946",
+     "id": "nw_b1032",
      "characterId": "nw_narrator",
-     "text": "He turns into a doorway of noise: a PACHINKO PARLOUR, a wall of steel balls and light and a hundred people staring at their machines. He walks straight through, between the rows, out through the fire door at the back and into an alley of dripping air conditioners.",
+     "text": "He turns into a doorway of noise: a PACHINKO PARLOUR, a wall of steel balls and light and a hundred people staring at their machines.",
      "silent": true,
      "background": "/film/img/s63a/294-through-the-parlour.jpg",
      "cinematic": {
@@ -11698,15 +12214,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b947",
+     "id": "nw_b1033",
+     "characterId": "nw_narrator",
+     "text": "He walks straight through, between the rows, out through the fire door at the back and into an alley of dripping air conditioners.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1034",
      "characterId": "nw_narrator",
      "text": "He waits. Watches the far end of the alley.",
      "silent": true
     },
     {
-     "id": "nw_b948",
+     "id": "nw_b1035",
      "characterId": "nw_narrator",
-     "text": "Two men in dark coats run past the mouth of it, scanning, and are gone. Behind them, in the street, the sedan crawls along the kerb and stops. Someone inside is speaking into a sleeve. We can't hear it. We can see him give up.",
+     "text": "Two men in dark coats run past the mouth of it, scanning, and are gone.",
      "silent": true,
      "background": "/film/img/s63a/295-they-give-up.jpg",
      "cinematic": {
@@ -11726,7 +12248,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b949",
+     "id": "nw_b1036",
+     "characterId": "nw_narrator",
+     "text": "Behind them, in the street, the sedan crawls along the kerb and stops. Someone inside is speaking into a sleeve. We can't hear it.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1037",
+     "characterId": "nw_narrator",
+     "text": "We can see him give up.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1038",
      "characterId": "nw_narrator",
      "text": "A last train pulls out overhead. The arches shake.",
      "silent": true,
@@ -11734,13 +12268,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b950",
+     "id": "nw_b1039",
      "characterId": "nw_narrator",
      "text": "Jack takes the cassette from inside his coat and looks at it, in the light of a vending machine.",
      "silent": true
     },
     {
-     "id": "nw_b951",
+     "id": "nw_b1040",
      "characterId": "nw_narrator",
      "text": "He can't carry it any more. Not another day.",
      "silent": true,
@@ -11787,31 +12321,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b952",
+     "id": "nw_b1041",
      "characterId": "nw_narrator",
      "text": "Okada's bar. Late. No customers. The CRT television is off.",
      "silent": true
     },
     {
-     "id": "nw_b953",
+     "id": "nw_b1042",
      "characterId": "nw_narrator",
      "text": "Jack slides the cassette case across the counter.",
      "silent": true
     },
     {
-     "id": "nw_b954",
+     "id": "nw_b1043",
      "characterId": "nw_jack",
      "text": "Keep this for me. Don't tell anyone. Not the police. Not me, if I ask you with someone standing behind me.",
      "audioUrl": "/film/voice/s64/233-jack-keep-this-for-me-don-t.mp3"
     },
     {
-     "id": "nw_b955",
+     "id": "nw_b1044",
      "characterId": "nw_narrator",
      "text": "Okada looks at the tape. Then he takes it, lifts the lid of the old cash drawer, removes the tray, and puts the tape underneath.",
      "silent": true
     },
     {
-     "id": "nw_b956",
+     "id": "nw_b1045",
      "characterId": "nw_okada",
      "text": "Behind the counter. Like the girl's clip.",
      "audioUrl": "/film/voice/s64/233-okada-behind-the-counter-like-the-girl.mp3",
@@ -11833,25 +12367,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b957",
+     "id": "nw_b1046",
      "characterId": "nw_okada",
      "text": "The girl?",
      "audioUrl": "/film/voice/s64/233-okada-curious-the-girl.mp3"
     },
     {
-     "id": "nw_b958",
+     "id": "nw_b1047",
      "characterId": "nw_narrator",
      "text": "He pours Jack a drink. Jack doesn't drink it.",
      "silent": true
     },
     {
-     "id": "nw_b959",
+     "id": "nw_b1048",
      "characterId": "nw_jack",
      "text": "Safe. Tomorrow it'll be over.",
      "audioUrl": "/film/voice/s64/233-jack-tomorrow-it-ll-be-over.mp3"
     },
     {
-     "id": "nw_b960",
+     "id": "nw_b1049",
      "characterId": "nw_okada",
      "text": "You said that about my daughter.",
      "audioUrl": "/film/voice/s64/233-okada-that-s-what-people-say-the.mp3",
@@ -11882,31 +12416,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b961",
+     "id": "nw_b1050",
      "characterId": "nw_narrator",
      "text": "Rain on the window. The last grey light.",
      "silent": true
     },
     {
-     "id": "nw_b962",
+     "id": "nw_b1051",
      "characterId": "nw_narrator",
-     "text": "Vera stands on a chair and lifts down a flat cardboard box from the top of the wardrobe. Dust on the lid. Her mother's handwriting on the side, in marker: TOKYO.",
+     "text": "Vera stands on a chair and lifts down a flat cardboard box from the top of the wardrobe. Dust on the lid.",
      "silent": true
     },
     {
-     "id": "nw_b963",
+     "id": "nw_b1052",
+     "characterId": "nw_narrator",
+     "text": "Her mother's handwriting on the side, in marker: TOKYO.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1053",
      "characterId": "nw_narrator",
      "text": "She opens it on the bed.",
      "silent": true
     },
     {
-     "id": "nw_b964",
+     "id": "nw_b1054",
      "characterId": "nw_narrator",
-     "text": "Inside, folded in tissue paper that has gone yellow: a dress. Wine red. Silk. The kind of dress a young woman wore to an expensive restaurant in 1990 and never wore again.",
+     "text": "Inside, folded in tissue paper that has gone yellow: a dress. Wine red. Silk.",
      "silent": true
     },
     {
-     "id": "nw_b965",
+     "id": "nw_b1055",
+     "characterId": "nw_narrator",
+     "text": "The kind of dress a young woman wore to an expensive restaurant in 1990 and never wore again.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1056",
      "characterId": "nw_narrator",
      "text": "Vera holds it up against herself in the mirror. For a moment she is someone else. Her mother, maybe.",
      "silent": true,
@@ -11928,37 +12474,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b966",
+     "id": "nw_b1057",
      "characterId": "nw_narrator",
      "text": "Through the thin wall, the neighbour's radio begins to play the same old ballad from before: the woman's voice, the slow saxophone.",
      "silent": true
     },
     {
-     "id": "nw_b967",
+     "id": "nw_b1058",
      "characterId": "nw_narrator",
      "text": "LATER:",
      "silent": true
     },
     {
-     "id": "nw_b968",
+     "id": "nw_b1059",
      "characterId": "nw_narrator",
-     "text": "Vera at the small mirror by the window, in the red dress, doing her makeup. She is out of practice. She wipes off the lipstick and does it again. Her hands aren't quite steady.",
+     "text": "Vera at the small mirror by the window, in the red dress, doing her makeup. She is out of practice.",
      "silent": true
     },
     {
-     "id": "nw_b969",
+     "id": "nw_b1060",
+     "characterId": "nw_narrator",
+     "text": "She wipes off the lipstick and does it again. Her hands aren't quite steady.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1061",
      "characterId": "nw_narrator",
      "text": "She looks at herself for a long time. She almost looks happy. She doesn't quite trust it.",
      "silent": true
     },
     {
-     "id": "nw_b970",
+     "id": "nw_b1062",
      "characterId": "nw_narrator",
      "text": "She picks up her bag. Puts in her phone. Then, after a moment, the old steel lighter.",
      "silent": true
     },
     {
-     "id": "nw_b971",
+     "id": "nw_b1063",
      "characterId": "nw_narrator",
      "text": "At the door she stops by the umbrella stand. The pale blue umbrella.",
      "silent": true,
@@ -11980,19 +12532,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b972",
+     "id": "nw_b1064",
      "characterId": "nw_narrator",
      "text": "She takes it.",
      "silent": true
     },
     {
-     "id": "nw_b973",
+     "id": "nw_b1065",
      "characterId": "nw_vera",
      "text": "Borrowing it. You'll get it back.",
      "audioUrl": "/film/voice/s65/277-vera-borrowing-it-you-ll-get-it.mp3"
     },
     {
-     "id": "nw_b974",
+     "id": "nw_b1066",
      "characterId": "nw_narrator",
      "text": "She goes. Through the wall, the song plays on.",
      "silent": true,
@@ -12023,31 +12575,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b975",
+     "id": "nw_b1067",
      "characterId": "nw_narrator",
-     "text": "An old hotel built in the Showa years for a future that never quite came. Amber light. Brass rails. Deep leather chairs. Bottles glowing behind the bar like a shrine.",
+     "text": "An old hotel built in the Showa years for a future that never quite came. Amber light. Brass rails. Deep leather chairs.",
      "silent": true
     },
     {
-     "id": "nw_b976",
+     "id": "nw_b1068",
+     "characterId": "nw_narrator",
+     "text": "Bottles glowing behind the bar like a shrine.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1069",
      "characterId": "nw_narrator",
      "text": "In the corner, a PIANIST (60s) in a white jacket plays standards, softly, to almost no one.",
      "silent": true
     },
     {
-     "id": "nw_b977",
+     "id": "nw_b1070",
      "characterId": "nw_narrator",
      "text": "A clock above the bar: 9:58.",
      "silent": true
     },
     {
-     "id": "nw_b978",
+     "id": "nw_b1071",
      "characterId": "nw_narrator",
-     "text": "Vera comes in, shaking the rain from the blue umbrella. People turn to look at her, briefly. She is beautiful and doesn't know where to put her hands.",
+     "text": "Vera comes in, shaking the rain from the blue umbrella. People turn to look at her, briefly.",
      "silent": true
     },
     {
-     "id": "nw_b979",
+     "id": "nw_b1072",
+     "characterId": "nw_narrator",
+     "text": "She is beautiful and doesn't know where to put her hands.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1073",
      "characterId": "nw_narrator",
      "text": "She sits at the bar. Leans the blue umbrella against the next stool.",
      "silent": true,
@@ -12069,25 +12633,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b980",
+     "id": "nw_b1074",
      "characterId": "nw_bartender",
      "text": "For you?",
      "audioUrl": "/film/voice/s66/235-bartender-for-you.mp3"
     },
     {
-     "id": "nw_b981",
+     "id": "nw_b1075",
      "characterId": "nw_vera",
      "text": "I'm waiting for someone. A gin and tonic. Please.",
      "audioUrl": "/film/voice/s66/235-vera-i-m-waiting-for-someone-pause.mp3"
     },
     {
-     "id": "nw_b982",
+     "id": "nw_b1076",
      "characterId": "nw_narrator",
      "text": "She looks at the door.",
      "silent": true
     },
     {
-     "id": "nw_b983",
+     "id": "nw_b1077",
      "characterId": "nw_narrator",
      "text": "The clock: 10:00.",
      "silent": true,
@@ -12134,19 +12698,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b984",
+     "id": "nw_b1078",
      "characterId": "nw_narrator",
      "text": "Earlier. The clock is a different clock here: 8:52 on a lit sign above a closed garage.",
      "silent": true
     },
     {
-     "id": "nw_b985",
+     "id": "nw_b1079",
      "characterId": "nw_narrator",
      "text": "A narrow road running under the elevated railway. A row of massive concrete pillars. Puddles. One sodium lamp.",
      "silent": true
     },
     {
-     "id": "nw_b986",
+     "id": "nw_b1080",
      "characterId": "nw_narrator",
      "text": "A grey sedan waits beside the pillars, engine running, wipers slow.",
      "silent": true,
@@ -12193,37 +12757,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b987",
+     "id": "nw_b1081",
      "characterId": "nw_narrator",
-     "text": "Mara puts on a borrowed coat. She has a small cloth bag: a toothbrush, the cardigan, the sketchbook pages she tore from the wall, all but the drawings from behind the curtain, which she leaves taped where they are. The loose pages of the bar, drawn from the floor, she folds in four and puts in the bag with the rest.",
+     "text": "Mara puts on a borrowed coat.",
      "silent": true
     },
     {
-     "id": "nw_b988",
+     "id": "nw_b1082",
+     "characterId": "nw_narrator",
+     "text": "She has a small cloth bag: a toothbrush, the cardigan, the sketchbook pages she tore from the wall, all but the drawings from behind the curtain, which she leaves taped where they are.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1083",
+     "characterId": "nw_narrator",
+     "text": "The loose pages of the bar, drawn from the floor, she folds in four and puts in the bag with the rest.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1084",
      "characterId": "nw_narrator",
      "text": "Kaneko stands in the curtain. She hands Mara a small parcel wrapped in newspaper.",
      "silent": true
     },
     {
-     "id": "nw_b989",
+     "id": "nw_b1085",
      "characterId": "nw_kaneko",
      "text": "Rice balls. For the car.",
      "audioUrl": "/film/voice/s68/237-kaneko-rice-balls-for-the-car.mp3"
     },
     {
-     "id": "nw_b990",
+     "id": "nw_b1086",
      "characterId": "nw_narrator",
      "text": "Mara takes them. She doesn't know what to say.",
      "silent": true
     },
     {
-     "id": "nw_b991",
+     "id": "nw_b1087",
      "characterId": "nw_mara",
      "text": "Thank you. For —",
      "audioUrl": "/film/voice/s68/237-mara-thank-you-for.mp3"
     },
     {
-     "id": "nw_b992",
+     "id": "nw_b1088",
      "characterId": "nw_kaneko",
      "text": "Come back with your sister. Sit on the stools. Both of you. Eat everything.",
      "audioUrl": "/film/voice/s68/237-kaneko-come-back-with-your-sister-sit.mp3",
@@ -12245,13 +12821,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b993",
+     "id": "nw_b1089",
      "characterId": "nw_narrator",
      "text": "Mara bows, too deep, clumsy. Kaneko, unexpectedly, puts a hand on her head. Just for a second. Like a grandmother.",
      "silent": true
     },
     {
-     "id": "nw_b994",
+     "id": "nw_b1090",
      "characterId": "nw_jack",
      "text": "It's time.",
      "audioUrl": "/film/voice/s68/237-jack-it-s-time.mp3",
@@ -12283,19 +12859,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b995",
+     "id": "nw_b1091",
      "characterId": "nw_narrator",
-     "text": "Jack leads Mara through the narrow corridors. Bare bulbs. Dripping pipes. The radio repairman looks up from his bench as they pass, and nods.",
+     "text": "Jack leads Mara through the narrow corridors. Bare bulbs. Dripping pipes.",
      "silent": true
     },
     {
-     "id": "nw_b996",
+     "id": "nw_b1092",
+     "characterId": "nw_narrator",
+     "text": "The radio repairman looks up from his bench as they pass, and nods.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1093",
      "characterId": "nw_narrator",
      "text": "Doors open onto other lives. A family watching television. A man asleep. A girl practising the violin, badly.",
      "silent": true
     },
     {
-     "id": "nw_b997",
+     "id": "nw_b1094",
      "characterId": "nw_narrator",
      "text": "Mara looks at all of it as if memorising it.",
      "silent": true,
@@ -12317,49 +12899,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b998",
+     "id": "nw_b1095",
      "characterId": "nw_mara",
      "text": "Vera would love this.",
      "audioUrl": "/film/voice/s69/238-mara-vera-would-love-this.mp3"
     },
     {
-     "id": "nw_b999",
+     "id": "nw_b1096",
      "characterId": "nw_jack",
      "text": "You can bring her.",
      "audioUrl": "/film/voice/s69/238-jack-you-can-bring-her.mp3"
     },
     {
-     "id": "nw_b1000",
+     "id": "nw_b1097",
      "characterId": "nw_mara",
      "text": "When it's over, you'll tell her? Everything?",
      "audioUrl": "/film/voice/s69/238-mara-when-it-s-over-you-ll.mp3"
     },
     {
-     "id": "nw_b1001",
+     "id": "nw_b1098",
      "characterId": "nw_jack",
      "text": "Tonight. I'm meeting her at ten.",
      "audioUrl": "/film/voice/s69/238-jack-tonight-i-m-meeting-her-at.mp3"
     },
     {
-     "id": "nw_b1002",
+     "id": "nw_b1099",
      "characterId": "nw_narrator",
      "text": "She stops walking. Looks at him.",
      "silent": true
     },
     {
-     "id": "nw_b1003",
+     "id": "nw_b1100",
      "characterId": "nw_mara",
      "text": "Meeting her?",
      "audioUrl": "/film/voice/s69/238-mara-meeting-her.mp3"
     },
     {
-     "id": "nw_b1004",
+     "id": "nw_b1101",
      "characterId": "nw_jack",
      "text": "For dinner.",
      "audioUrl": "/film/voice/s69/238-jack-for-dinner.mp3"
     },
     {
-     "id": "nw_b1005",
+     "id": "nw_b1102",
      "characterId": "nw_narrator",
      "text": "Mara studies him. And then, for the first time, she smiles. A real one. Her sister's smile.",
      "silent": true,
@@ -12381,25 +12963,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1006",
+     "id": "nw_b1103",
      "characterId": "nw_mara",
      "text": "Oh. Oh, I see.",
      "audioUrl": "/film/voice/s69/279-mara-oh-oh-i-see.mp3"
     },
     {
-     "id": "nw_b1007",
+     "id": "nw_b1104",
      "characterId": "nw_jack",
      "text": "It's not —",
      "audioUrl": "/film/voice/s69/279-jack-it-s-not.mp3"
     },
     {
-     "id": "nw_b1008",
+     "id": "nw_b1105",
      "characterId": "nw_mara",
      "text": "It is. It's fine. It's good. She deserves someone who looks for things.",
      "audioUrl": "/film/voice/s69/279-mara-it-is-it-s-fine-it.mp3"
     },
     {
-     "id": "nw_b1009",
+     "id": "nw_b1106",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The building trembles. They walk on.",
      "silent": true,
@@ -12432,80 +13014,86 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1010",
+     "id": "nw_b1107",
      "characterId": "nw_narrator",
      "text": "Jack and Mara come out of a narrow back door of the Hive into the rain.",
      "silent": true
     },
     {
-     "id": "nw_b1011",
+     "id": "nw_b1108",
      "characterId": "nw_narrator",
-     "text": "The grey sedan waits beside the pillars, twenty metres away. A DRIVER in a dark coat gets out and opens the rear door for them. Polite. Professional. He bows slightly as they come.",
+     "text": "The grey sedan waits beside the pillars, twenty metres away. A DRIVER in a dark coat gets out and opens the rear door for them. Polite.",
      "silent": true
     },
     {
-     "id": "nw_b1012",
+     "id": "nw_b1109",
+     "characterId": "nw_narrator",
+     "text": "Professional. He bows slightly as they come.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1110",
      "characterId": "nw_narrator",
      "text": "Jack walks Mara toward it. Halfway there.",
      "silent": true
     },
     {
-     "id": "nw_b1013",
+     "id": "nw_b1111",
      "characterId": "nw_driver",
      "text": "Shitsurei shimasu.",
      "audioUrl": "/film/voice/s70/239-driver-excuse-me.mp3",
      "expression": "in japanese"
     },
     {
-     "id": "nw_b1014",
+     "id": "nw_b1112",
      "characterId": "nw_narrator",
      "text": "He says it the way you would to a passenger.",
      "silent": true
     },
     {
-     "id": "nw_b1015",
+     "id": "nw_b1113",
      "characterId": "nw_narrator",
      "text": "Mara stops dead.",
      "silent": true
     },
     {
-     "id": "nw_b1016",
+     "id": "nw_b1114",
      "characterId": "nw_narrator",
      "text": "She has heard those words before. In the rain. Over a dying man.",
      "silent": true
     },
     {
-     "id": "nw_b1017",
+     "id": "nw_b1115",
      "characterId": "nw_mara",
      "text": "That's them.",
      "audioUrl": "/film/voice/s70/239-mara-that-s-them.mp3"
     },
     {
-     "id": "nw_b1018",
+     "id": "nw_b1116",
      "characterId": "nw_jack",
      "text": "What?",
      "audioUrl": "/film/voice/s70/239-jack-what.mp3"
     },
     {
-     "id": "nw_b1019",
+     "id": "nw_b1117",
      "characterId": "nw_mara",
      "text": "That's what he said. Before he shot him. \"Excuse me.\"",
      "audioUrl": "/film/voice/s70/239-mara-that-s-what-he-said-before.mp3"
     },
     {
-     "id": "nw_b1020",
+     "id": "nw_b1118",
      "characterId": "nw_narrator",
      "text": "The driver lifts his wrist to his mouth and murmurs into his sleeve, very quietly:",
      "silent": true
     },
     {
-     "id": "nw_b1021",
+     "id": "nw_b1119",
      "characterId": "nw_driver",
      "text": "Position.",
      "audioUrl": "/film/voice/s70/239-driver-position.mp3"
     },
     {
-     "id": "nw_b1022",
+     "id": "nw_b1120",
      "characterId": "nw_narrator",
      "text": "Jack looks at the driver. The driver looks at Jack. And in that look, both men understand.",
      "silent": true,
@@ -12527,50 +13115,50 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1023",
+     "id": "nw_b1121",
      "characterId": "nw_narrator",
      "text": "Jack shoves Mara back toward the Hive door.",
      "silent": true
     },
     {
-     "id": "nw_b1024",
+     "id": "nw_b1122",
      "characterId": "nw_jack",
      "text": "Run!",
      "audioUrl": "/film/voice/s70/239-jack-urgently-run.mp3"
     },
     {
-     "id": "nw_b1025",
+     "id": "nw_b1123",
      "characterId": "nw_narrator",
      "text": "From the dark between the pillars: muzzle flashes. Suppressed shots, flat and ordinary.",
      "silent": true,
      "sfxUrl": "/film/sfx/suppressed-shot.mp3"
     },
     {
-     "id": "nw_b1026",
+     "id": "nw_b1124",
      "characterId": "nw_narrator",
      "text": "Jack draws Mara down behind a dumpster. Rounds clang off the steel. The driver pulls a weapon from his coat.",
      "silent": true
     },
     {
-     "id": "nw_b1027",
+     "id": "nw_b1125",
      "characterId": "nw_narrator",
      "text": "Mara breaks for the Hive door. Five metres. Three.",
      "silent": true
     },
     {
-     "id": "nw_b1028",
+     "id": "nw_b1126",
      "characterId": "nw_narrator",
      "text": "A shot.",
      "silent": true
     },
     {
-     "id": "nw_b1029",
+     "id": "nw_b1127",
      "characterId": "nw_narrator",
      "text": "She stumbles. Keeps going. Falls through the doorway.",
      "silent": true
     },
     {
-     "id": "nw_b1030",
+     "id": "nw_b1128",
      "characterId": "nw_narrator",
      "text": "Jack goes after her, low, as bullets chew the doorframe above his head.",
      "silent": true,
@@ -12601,37 +13189,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1031",
+     "id": "nw_b1129",
      "characterId": "nw_narrator",
      "text": "Jack drags the door shut behind him and throws the bolt. Pounding on the door. Shots through it, splintering the wood.",
      "silent": true
     },
     {
-     "id": "nw_b1032",
+     "id": "nw_b1130",
      "characterId": "nw_narrator",
      "text": "Mara is on the floor of the narrow passage, her back against the wall. She is holding her side. Her hand is dark and wet.",
      "silent": true
     },
     {
-     "id": "nw_b1033",
+     "id": "nw_b1131",
      "characterId": "nw_narrator",
      "text": "Jack kneels, presses his hands over hers.",
      "silent": true
     },
     {
-     "id": "nw_b1034",
+     "id": "nw_b1132",
      "characterId": "nw_jack",
      "text": "Stay with me. Mara. Stay with me.",
      "audioUrl": "/film/voice/s71/240-jack-desperately-stay-with-me-mara-stay.mp3"
     },
     {
-     "id": "nw_b1035",
+     "id": "nw_b1133",
      "characterId": "nw_narrator",
-     "text": "Above them, a window opens. Then another. Lights snap on, one after another, up through the whole building: the thousand windows of the Hive waking.",
+     "text": "Above them, a window opens. Then another.",
      "silent": true
     },
     {
-     "id": "nw_b1036",
+     "id": "nw_b1134",
+     "characterId": "nw_narrator",
+     "text": "Lights snap on, one after another, up through the whole building: the thousand windows of the Hive waking.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1135",
      "characterId": "nw_narrator",
      "text": "Outside, a car door slams. An engine revs. Tyres on wet asphalt. Going.",
      "silent": true,
@@ -12639,75 +13233,81 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8
     },
     {
-     "id": "nw_b1037",
+     "id": "nw_b1136",
      "characterId": "nw_narrator",
      "text": "And far away, finally, sirens.",
      "silent": true
     },
     {
-     "id": "nw_b1038",
+     "id": "nw_b1137",
      "characterId": "nw_narrator",
      "text": "Mara looks up at all the light.",
      "silent": true
     },
     {
-     "id": "nw_b1039",
+     "id": "nw_b1138",
      "characterId": "nw_mara",
      "text": "Everyone's awake.",
      "audioUrl": "/film/voice/s71/240-mara-weakly-everyone-s-awake.mp3"
     },
     {
-     "id": "nw_b1040",
+     "id": "nw_b1139",
      "characterId": "nw_jack",
      "text": "Yes. Everyone's awake. Help's coming.",
      "audioUrl": "/film/voice/s71/240-jack-yes-everyone-s-awake-help-s.mp3"
     },
     {
-     "id": "nw_b1041",
+     "id": "nw_b1140",
      "characterId": "nw_narrator",
      "text": "Mara's hand finds his wrist. Her grip is weak.",
      "silent": true
     },
     {
-     "id": "nw_b1042",
+     "id": "nw_b1141",
      "characterId": "nw_mara",
      "text": "Jack.",
      "audioUrl": "/film/voice/s71/240-mara-weakly-jack.mp3"
     },
     {
-     "id": "nw_b1043",
+     "id": "nw_b1142",
      "characterId": "nw_jack",
      "text": "I'm here.",
      "audioUrl": "/film/voice/s71/240-jack-i-m-here.mp3"
     },
     {
-     "id": "nw_b1044",
+     "id": "nw_b1143",
      "characterId": "nw_mara",
      "text": "Tell her I'm sorry.",
      "audioUrl": "/film/voice/s71/240-mara-weakly-tell-her-i-m-sorry.mp3"
     },
     {
-     "id": "nw_b1045",
+     "id": "nw_b1144",
      "characterId": "nw_jack",
      "text": "You'll tell her. Tonight. I'll bring her here, you can —",
      "audioUrl": "/film/voice/s71/240-jack-you-ll-tell-her-tonight-i.mp3"
     },
     {
-     "id": "nw_b1046",
+     "id": "nw_b1145",
      "characterId": "nw_mara",
      "text": "Tell her.",
      "audioUrl": "/film/voice/s71/240-mara-weakly-tell-her.mp3"
     },
     {
-     "id": "nw_b1047",
+     "id": "nw_b1146",
      "characterId": "nw_narrator",
-     "text": "Doors open along the passage. Faces in the bulb light: the RADIO REPAIRMAN in his vest, the OLD WOMAN from the sumo room, KANEKO running, still in her apron.",
+     "text": "Doors open along the passage.",
      "silent": true
     },
     {
-     "id": "nw_b1048",
+     "id": "nw_b1147",
      "characterId": "nw_narrator",
-     "text": "Mara's cloth bag has split open on the floor. Rice balls. A toothbrush. The cardigan. Pages of drawings, soaking in the thin shining stream that runs along the floor.",
+     "text": "Faces in the bulb light: the RADIO REPAIRMAN in his vest, the OLD WOMAN from the sumo room, KANEKO running, still in her apron.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1148",
+     "characterId": "nw_narrator",
+     "text": "Mara's cloth bag has split open on the floor. Rice balls. A toothbrush. The cardigan.",
      "silent": true,
      "background": "/film/img/s71/313-drawings-in-the-water.jpg",
      "cinematic": {
@@ -12727,27 +13327,33 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1049",
+     "id": "nw_b1149",
+     "characterId": "nw_narrator",
+     "text": "Pages of drawings, soaking in the thin shining stream that runs along the floor.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1150",
      "characterId": "nw_narrator",
      "text": "While Jack holds Mara, Kaneko kneels and begins, very carefully, to pick up the pages. The old woman kneels beside her and helps.",
      "silent": true
     },
     {
-     "id": "nw_b1050",
+     "id": "nw_b1151",
      "characterId": "nw_narrator",
      "text": "Her eyes stay on the lights above. Then they stop moving.",
      "silent": true
     },
     {
-     "id": "nw_b1051",
+     "id": "nw_b1152",
      "characterId": "nw_narrator",
      "text": "Jack doesn't let go of her hand.",
      "silent": true
     },
     {
-     "id": "nw_b1052",
+     "id": "nw_b1153",
      "characterId": "nw_narrator",
-     "text": "Kaneko sinks down beside them in the narrow passage. She doesn't cry. She takes off her apron and folds it and places it gently under Mara's head, as though that still matters.",
+     "text": "Kaneko sinks down beside them in the narrow passage. She doesn't cry.",
      "silent": true,
      "background": "/film/img/s71/238-everyones-awake.jpg",
      "cinematic": {
@@ -12767,7 +13373,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1053",
+     "id": "nw_b1154",
+     "characterId": "nw_narrator",
+     "text": "She takes off her apron and folds it and places it gently under Mara's head, as though that still matters.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1155",
      "characterId": "nw_narrator",
      "text": "A train passes overhead. The bulbs swing. The whole building trembles, the way it always does.",
      "silent": true,
@@ -12800,13 +13412,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1054",
+     "id": "nw_b1156",
      "characterId": "nw_narrator",
      "text": "The clock above the bar: 11:52.",
      "silent": true
     },
     {
-     "id": "nw_b1055",
+     "id": "nw_b1157",
      "characterId": "nw_narrator",
      "text": "Vera's gin and tonic sits untouched. The ice has melted. The lime has sunk.",
      "silent": true,
@@ -12828,74 +13440,74 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1056",
+     "id": "nw_b1158",
      "characterId": "nw_narrator",
      "text": "The pianist plays something slow. The same old ballad from the neighbour's radio, only now on a piano, stripped of its words.",
      "silent": true
     },
     {
-     "id": "nw_b1057",
+     "id": "nw_b1159",
      "characterId": "nw_narrator",
      "text": "Vera looks at the door. At her phone. No messages.",
      "silent": true
     },
     {
-     "id": "nw_b1058",
+     "id": "nw_b1160",
      "characterId": "nw_narrator",
      "text": "She takes out the lighter and turns it over in her fingers. Open. Shut.",
      "silent": true
     },
     {
-     "id": "nw_b1059",
+     "id": "nw_b1161",
      "characterId": "nw_bartender",
      "text": "Another?",
      "audioUrl": "/film/voice/s72/85-bartender-another.mp3"
     },
     {
-     "id": "nw_b1060",
+     "id": "nw_b1162",
      "characterId": "nw_vera",
      "text": "No. Thank you.",
      "audioUrl": "/film/voice/s72/85-vera-no-thank-you.mp3"
     },
     {
-     "id": "nw_b1061",
+     "id": "nw_b1163",
      "characterId": "nw_narrator",
      "text": "She almost laughs at herself. She looks down at the red dress. She feels foolish, and then hurt, and then angry.",
      "silent": true
     },
     {
-     "id": "nw_b1062",
+     "id": "nw_b1164",
      "characterId": "nw_narrator",
      "text": "Her phone RINGS.",
      "silent": true
     },
     {
-     "id": "nw_b1063",
+     "id": "nw_b1165",
      "characterId": "nw_narrator",
      "text": "She grabs it. The screen: ISHIDA.",
      "silent": true
     },
     {
-     "id": "nw_b1064",
+     "id": "nw_b1166",
      "characterId": "nw_narrator",
      "text": "Her face changes. She answers.",
      "silent": true
     },
     {
-     "id": "nw_b1065",
+     "id": "nw_b1167",
      "characterId": "nw_vera",
      "text": "Hello?",
      "audioUrl": "/film/voice/s72/86-vera-hello.mp3"
     },
     {
-     "id": "nw_b1066",
+     "id": "nw_b1168",
      "characterId": "nw_ishida",
      "text": "Miss Voss. I'm so sorry to call so late.",
      "audioUrl": "/film/voice/s72/86-ishida-gently-miss-voss-i-m-so.mp3",
      "expression": "v.o. · filtered"
     },
     {
-     "id": "nw_b1067",
+     "id": "nw_b1169",
      "characterId": "nw_narrator",
      "text": "She knows. From his voice, she already knows. She stands up.",
      "silent": true,
@@ -12917,7 +13529,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1068",
+     "id": "nw_b1170",
      "characterId": "nw_ishida",
      "text": "Your sister was found tonight. I'm very sorry. She died a short time ago.",
      "audioUrl": "/film/voice/s72/86-ishida-your-sister-was-found-tonight-i.mp3",
@@ -12952,38 +13564,38 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicFadeSeconds": 5,
    "dialogueBeats": [
     {
-     "id": "nw_b1069",
+     "id": "nw_b1171",
      "characterId": "nw_narrator",
      "text": "Vera doesn't move. The piano plays on.",
      "silent": true
     },
     {
-     "id": "nw_b1070",
+     "id": "nw_b1172",
      "characterId": "nw_ishida",
      "text": "She was with Mr. Jack. He had been hiding her for several days, it seems. In the Hive. I'm sorry. I thought you knew.",
      "audioUrl": "/film/voice/s72/86-ishida-she-was-with-mr-jack-he.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1071",
+     "id": "nw_b1173",
      "characterId": "nw_narrator",
      "text": "The phone slowly lowers from her ear.",
      "silent": true
     },
     {
-     "id": "nw_b1072",
+     "id": "nw_b1174",
      "characterId": "nw_narrator",
      "text": "The pianist plays. The clock ticks. Somewhere a glass is set down.",
      "silent": true
     },
     {
-     "id": "nw_b1073",
+     "id": "nw_b1175",
      "characterId": "nw_narrator",
      "text": "Vera walks out of the lounge. Not running yet. Walking very carefully, as if the floor might give way.",
      "silent": true
     },
     {
-     "id": "nw_b1074",
+     "id": "nw_b1176",
      "characterId": "nw_narrator",
      "text": "The blue umbrella stays where she left it, leaning against the empty stool.",
      "silent": true,
@@ -13014,7 +13626,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1075",
+     "id": "nw_b1177",
      "characterId": "nw_narrator",
      "text": "Vera comes out of the hotel into the rain and starts to run.",
      "silent": true,
@@ -13036,9 +13648,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1076",
+     "id": "nw_b1178",
      "characterId": "nw_narrator",
-     "text": "The phone is still in her fist, the call still lit on its screen: ISHIDA. She is not running away from anything. She is running toward the one address she has left. The Hive, and wherever they have laid her sister down. The elevated railway glows at the far end of the street, and she runs at it as if she could still get there in time.",
+     "text": "The phone is still in her fist, the call still lit on its screen: ISHIDA. She is not running away from anything.",
      "silent": true,
      "background": "/film/img/s73/387-the-street-too-long.jpg",
      "cinematic": {
@@ -13058,9 +13670,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1077",
+     "id": "nw_b1179",
      "characterId": "nw_narrator",
-     "text": "Not elegantly. Badly. In heels, in the red dress, no coat, no umbrella. Slipping. Stumbling. Stopping for half a second because she can't breathe, then forcing herself on.",
+     "text": "She is running toward the one address she has left. The Hive, and wherever they have laid her sister down.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1180",
+     "characterId": "nw_narrator",
+     "text": "The elevated railway glows at the far end of the street, and she runs at it as if she could still get there in time.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1181",
+     "characterId": "nw_narrator",
+     "text": "Not elegantly. Badly. In heels, in the red dress, no coat, no umbrella. Slipping. Stumbling.",
      "silent": true,
      "background": "/film/img/s73/70-not-elegantly-badly.jpg",
      "cinematic": {
@@ -13080,26 +13704,38 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1078",
+     "id": "nw_b1182",
+     "characterId": "nw_narrator",
+     "text": "Stopping for half a second because she can't breathe, then forcing herself on.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1183",
      "characterId": "nw_narrator",
      "text": "Rain plasters her hair to her face. Her mascara runs.",
      "silent": true
     },
     {
-     "id": "nw_b1079",
+     "id": "nw_b1184",
      "characterId": "nw_narrator",
-     "text": "The song comes up under the rain, and she cannot hear it over her own breath. Her heels on wet pavement. Her breath. A car passing, its tyres hissing.",
+     "text": "The song comes up under the rain, and she cannot hear it over her own breath. Her heels on wet pavement. Her breath.",
      "silent": true,
      "sfxUrl": "/film/sfx/car-pass.mp3"
     },
     {
-     "id": "nw_b1080",
+     "id": "nw_b1185",
+     "characterId": "nw_narrator",
+     "text": "A car passing, its tyres hissing.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1186",
      "characterId": "nw_narrator",
      "text": "She runs past a vending machine. It glows, indifferent. She keeps going; the machine falls behind her.",
      "silent": true
     },
     {
-     "id": "nw_b1081",
+     "id": "nw_b1187",
      "characterId": "nw_narrator",
      "text": "Just beyond it, at a crossing, the old melody chimes for her, and she runs through it on red.",
      "silent": true,
@@ -13121,7 +13757,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1082",
+     "id": "nw_b1188",
      "characterId": "nw_narrator",
      "text": "One heel skids. Her ankle turns. The shoe comes off and stays behind in a puddle. She doesn't stop. She runs on in one shoe.",
      "silent": true,
@@ -13168,37 +13804,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1083",
+     "id": "nw_b1189",
      "characterId": "nw_narrator",
-     "text": "A long, empty street beside the elevated railway. Shuttered shops. A row of vending machines, their cold white light the only light, rain falling through it in columns. The black road shining like water.",
+     "text": "A long, empty street beside the elevated railway. Shuttered shops.",
      "silent": true
     },
     {
-     "id": "nw_b1084",
+     "id": "nw_b1190",
+     "characterId": "nw_narrator",
+     "text": "A row of vending machines, their cold white light the only light, rain falling through it in columns. The black road shining like water.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1191",
      "characterId": "nw_narrator",
      "text": "In a city of fourteen million people, no one else is here.",
      "silent": true
     },
     {
-     "id": "nw_b1085",
+     "id": "nw_b1192",
      "characterId": "nw_narrator",
      "text": "Jack walks out of the dark from the direction of the Hive. His coat is soaked. His hands are dark. He has not washed them.",
      "silent": true
     },
     {
-     "id": "nw_b1086",
+     "id": "nw_b1193",
      "characterId": "nw_narrator",
      "text": "He sees her at the far end of the street.",
      "silent": true
     },
     {
-     "id": "nw_b1087",
+     "id": "nw_b1194",
      "characterId": "nw_narrator",
      "text": "He stops under the awning of a closed shop.",
      "silent": true
     },
     {
-     "id": "nw_b1088",
+     "id": "nw_b1195",
      "characterId": "nw_narrator",
      "text": "Vera slows. Stops. Twenty metres apart.",
      "silent": true,
@@ -13220,67 +13862,73 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1089",
+     "id": "nw_b1196",
      "characterId": "nw_narrator",
      "text": "For a moment neither of them says anything. She is crying, almost silently.",
      "silent": true
     },
     {
-     "id": "nw_b1090",
+     "id": "nw_b1197",
      "characterId": "nw_narrator",
      "text": "Jack takes one step toward her.",
      "silent": true
     },
     {
-     "id": "nw_b1091",
+     "id": "nw_b1198",
      "characterId": "nw_narrator",
      "text": "She shakes her head.",
      "silent": true
     },
     {
-     "id": "nw_b1092",
+     "id": "nw_b1199",
      "characterId": "nw_vera",
      "text": "Don't.",
      "audioUrl": "/film/voice/s74/74-vera-dont.mp3"
     },
     {
-     "id": "nw_b1093",
+     "id": "nw_b1200",
      "characterId": "nw_narrator",
      "text": "He stops.",
      "silent": true
     },
     {
-     "id": "nw_b1094",
+     "id": "nw_b1201",
      "characterId": "nw_narrator",
-     "text": "She looks at him. There is something almost childlike in her face now. Not rage. Disbelief. As though she is still hoping he will tell her that what she's heard is wrong.",
+     "text": "She looks at him. There is something almost childlike in her face now. Not rage. Disbelief.",
      "silent": true
     },
     {
-     "id": "nw_b1095",
+     "id": "nw_b1202",
+     "characterId": "nw_narrator",
+     "text": "As though she is still hoping he will tell her that what she's heard is wrong.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1203",
      "characterId": "nw_narrator",
      "text": "She walks toward him. Slowly. One shoe, one bare foot on the wet road.",
      "silent": true
     },
     {
-     "id": "nw_b1096",
+     "id": "nw_b1204",
      "characterId": "nw_vera",
      "text": "You knew.",
      "audioUrl": "/film/voice/s74/74-vera-you-knew.mp3"
     },
     {
-     "id": "nw_b1097",
+     "id": "nw_b1205",
      "characterId": "nw_narrator",
      "text": "Jack doesn't answer.",
      "silent": true
     },
     {
-     "id": "nw_b1098",
+     "id": "nw_b1206",
      "characterId": "nw_narrator",
      "text": "Her face changes. That silence is the answer.",
      "silent": true
     },
     {
-     "id": "nw_b1099",
+     "id": "nw_b1207",
      "characterId": "nw_narrator",
      "text": "She hits him. Not a big cinematic slap. One desperate blow against his chest with her fist.",
      "silent": true,
@@ -13302,133 +13950,133 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1100",
+     "id": "nw_b1208",
      "characterId": "nw_narrator",
      "text": "He takes it.",
      "silent": true
     },
     {
-     "id": "nw_b1101",
+     "id": "nw_b1209",
      "characterId": "nw_narrator",
      "text": "She hits him again. Then again.",
      "silent": true
     },
     {
-     "id": "nw_b1102",
+     "id": "nw_b1210",
      "characterId": "nw_vera",
      "text": "You knew where she was.",
      "audioUrl": "/film/voice/s74/75-vera-where-she-was.mp3"
     },
     {
-     "id": "nw_b1103",
+     "id": "nw_b1211",
      "characterId": "nw_narrator",
      "text": "He says nothing. He can't. Behind his silence is a promise to a dead girl, and the audience knows it, and Vera doesn't.",
      "silent": true
     },
     {
-     "id": "nw_b1104",
+     "id": "nw_b1212",
      "characterId": "nw_narrator",
      "text": "She hits him again, weaker. And then the anger drains out of her all at once. Her hands just fall.",
      "silent": true
     },
     {
-     "id": "nw_b1105",
+     "id": "nw_b1213",
      "characterId": "nw_vera",
      "text": "Why didn't you tell me?",
      "audioUrl": "/film/voice/s74/75-vera-why-didnt-you.mp3"
     },
     {
-     "id": "nw_b1106",
+     "id": "nw_b1214",
      "characterId": "nw_narrator",
      "text": "Jack opens his mouth. Nothing comes.",
      "silent": true
     },
     {
-     "id": "nw_b1107",
+     "id": "nw_b1215",
      "characterId": "nw_vera",
      "text": "She was waiting for me.",
      "audioUrl": "/film/voice/s74/75-vera-waiting-for-me.mp3"
     },
     {
-     "id": "nw_b1108",
+     "id": "nw_b1216",
      "characterId": "nw_narrator",
      "text": "That line is almost inaudible.",
      "silent": true
     },
     {
-     "id": "nw_b1109",
+     "id": "nw_b1217",
      "characterId": "nw_narrator",
      "text": "Jack looks away.",
      "silent": true
     },
     {
-     "id": "nw_b1110",
+     "id": "nw_b1218",
      "characterId": "nw_vera",
      "text": "And I was waiting for you.",
      "audioUrl": "/film/voice/s74/75-vera-waiting-for-you.mp3"
     },
     {
-     "id": "nw_b1111",
+     "id": "nw_b1219",
      "characterId": "nw_vera",
      "text": "And you were with her.",
      "audioUrl": "/film/voice/s74/75-vera-with-her.mp3"
     },
     {
-     "id": "nw_b1112",
+     "id": "nw_b1220",
      "characterId": "nw_narrator",
      "text": "Jack closes his eyes.",
      "silent": true
     },
     {
-     "id": "nw_b1113",
+     "id": "nw_b1221",
      "characterId": "nw_narrator",
      "text": "And that is when Vera finally breaks. Not screaming. She simply folds. Her knees hit the wet pavement.",
      "silent": true
     },
     {
-     "id": "nw_b1114",
+     "id": "nw_b1222",
      "characterId": "nw_narrator",
      "text": "Jack drops down instinctively, reaching for her.",
      "silent": true
     },
     {
-     "id": "nw_b1115",
+     "id": "nw_b1223",
      "characterId": "nw_narrator",
      "text": "Her hands grab the front of his coat. She holds on. For one second it looks as if she is going to let him hold her.",
      "silent": true
     },
     {
-     "id": "nw_b1116",
+     "id": "nw_b1224",
      "characterId": "nw_narrator",
      "text": "Then she realises whose coat it is.",
      "silent": true
     },
     {
-     "id": "nw_b1117",
+     "id": "nw_b1225",
      "characterId": "nw_narrator",
      "text": "She pushes him away.",
      "silent": true
     },
     {
-     "id": "nw_b1118",
+     "id": "nw_b1226",
      "characterId": "nw_narrator",
      "text": "And sits there, in the rain, in the red dress.",
      "silent": true
     },
     {
-     "id": "nw_b1119",
+     "id": "nw_b1227",
      "characterId": "nw_narrator",
      "text": "Jack kneels a few feet away. He doesn't touch her again.",
      "silent": true
     },
     {
-     "id": "nw_b1120",
+     "id": "nw_b1228",
      "characterId": "nw_narrator",
      "text": "WIDE. EXTREME WIDE.",
      "silent": true
     },
     {
-     "id": "nw_b1121",
+     "id": "nw_b1229",
      "characterId": "nw_narrator",
      "text": "Two small figures on a huge, empty, shining street. The vending machines hum. The rain falls through their light.",
      "silent": true,
@@ -13450,15 +14098,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1122",
+     "id": "nw_b1230",
      "characterId": "nw_narrator",
      "text": "Every sound drops away except the rain.",
      "silent": true
     },
     {
-     "id": "nw_b1123",
+     "id": "nw_b1231",
      "characterId": "nw_narrator",
-     "text": "In the black water beside Vera, her reflection. And in the reflection, for less than a second, the street is slightly different: a shutter open that is closed, a warm light in a window that is dark, and a figure under a pale blue umbrella who could be Mara, or could be no one.",
+     "text": "In the black water beside Vera, her reflection.",
      "silent": true,
      "background": "/film/img/s74/76-the-reflection.jpg",
      "cinematic": {
@@ -13478,31 +14126,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1124",
+     "id": "nw_b1232",
+     "characterId": "nw_narrator",
+     "text": "And in the reflection, for less than a second, the street is slightly different: a shutter open that is closed, a warm light in a window that is dark, and a figure under a pale blue umbrella who could be Mara, or could be no one.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1233",
      "characterId": "nw_narrator",
      "text": "It is gone.",
      "silent": true
     },
     {
-     "id": "nw_b1125",
+     "id": "nw_b1234",
      "characterId": "nw_narrator",
      "text": "Vera covers her face with her hands.",
      "silent": true
     },
     {
-     "id": "nw_b1126",
+     "id": "nw_b1235",
      "characterId": "nw_narrator",
      "text": "Above them, an elevated train passes, a long ribbon of lit windows. Inside, strangers sleep, read, stare at their phones. Nobody looks down.",
      "silent": true
     },
     {
-     "id": "nw_b1127",
+     "id": "nw_b1236",
      "characterId": "nw_narrator",
      "text": "Only now does the SCORE enter: sparse and mournful, as if coming from very far away.",
      "silent": true
     },
     {
-     "id": "nw_b1128",
+     "id": "nw_b1237",
      "characterId": "nw_narrator",
      "text": "The shot holds. Long enough that it becomes hard to watch. There is nothing Jack can say. Nothing that fixes it.",
      "silent": true,
@@ -13533,13 +14187,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1129",
+     "id": "nw_b1238",
      "characterId": "nw_narrator",
      "text": "Still frames. No people.",
      "silent": true
     },
     {
-     "id": "nw_b1130",
+     "id": "nw_b1239",
      "characterId": "nw_narrator",
      "text": "— A single red high-heeled shoe lying in a puddle on an empty street, rain dimpling the water around it.",
      "silent": true,
@@ -13561,7 +14215,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1131",
+     "id": "nw_b1240",
      "characterId": "nw_narrator",
      "text": "— The hotel lounge, empty, the chairs up. The pale blue umbrella still leaning against the bar stool.",
      "silent": true,
@@ -13583,7 +14237,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1132",
+     "id": "nw_b1241",
      "characterId": "nw_narrator",
      "text": "— The Hive at night, the noodle shop shutter down, its old sign still faintly glowing.",
      "silent": true,
@@ -13605,7 +14259,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1133",
+     "id": "nw_b1242",
      "characterId": "nw_narrator",
      "text": "— The vending machine on the empty street, humming, lit, waiting for no one.",
      "silent": true,
@@ -13627,7 +14281,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1134",
+     "id": "nw_b1243",
      "characterId": "nw_narrator",
      "text": "— A small television in a shop window, showing only static.",
      "silent": true,
@@ -13649,9 +14303,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1135",
+     "id": "nw_b1244",
      "characterId": "nw_narrator",
-     "text": "— The pedestrian crossing from 27 and 62. Empty. The signal turns green for no one, and the old melody CHIMES across the wet street, all the way to the end.",
+     "text": "— The pedestrian crossing from 27 and 62. Empty.",
      "silent": true,
      "background": "/film/img/s75/314-the-empty-crossing.jpg",
      "cinematic": {
@@ -13671,7 +14325,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1136",
+     "id": "nw_b1245",
+     "characterId": "nw_narrator",
+     "text": "The signal turns green for no one, and the old melody CHIMES across the wet street, all the way to the end.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1246",
      "characterId": "nw_narrator",
      "text": "·",
      "silent": true,
@@ -13705,15 +14365,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1137",
+     "id": "nw_b1247",
      "characterId": "nw_narrator",
      "text": "Darkness. Rain on the window.",
      "silent": true
     },
     {
-     "id": "nw_b1138",
+     "id": "nw_b1248",
      "characterId": "nw_narrator",
-     "text": "Vera sits on the floor with her back against the bed, still in the ruined red dress, mascara dried on her face. One shoe. The phone lights her face. A contact: MOM. She presses it.",
+     "text": "Vera sits on the floor with her back against the bed, still in the ruined red dress, mascara dried on her face. One shoe.",
      "silent": true,
      "background": "/film/img/s76/315-the-number-pressed.jpg",
      "cinematic": {
@@ -13733,39 +14393,45 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1139",
+     "id": "nw_b1249",
+     "characterId": "nw_narrator",
+     "text": "The phone lights her face. A contact: MOM. She presses it.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1250",
      "characterId": "nw_narrator",
      "text": "Far away, in another morning, it's answered.",
      "silent": true
     },
     {
-     "id": "nw_b1140",
+     "id": "nw_b1251",
      "characterId": "nw_mother",
      "text": "Vera? Honey?",
      "audioUrl": "/film/voice/s76/315-mother-warmly-vera-honey.mp3",
      "expression": "v.o. · filtered"
     },
     {
-     "id": "nw_b1141",
+     "id": "nw_b1252",
      "characterId": "nw_narrator",
      "text": "Vera opens her mouth. Nothing comes.",
      "silent": true
     },
     {
-     "id": "nw_b1142",
+     "id": "nw_b1253",
      "characterId": "nw_mother",
      "text": "Vera?",
      "audioUrl": "/film/voice/s76/315-mother-calling-out-vera.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1143",
+     "id": "nw_b1254",
      "characterId": "nw_narrator",
      "text": "She ends the call. The screen goes dark.",
      "silent": true
     },
     {
-     "id": "nw_b1144",
+     "id": "nw_b1255",
      "characterId": "nw_narrator",
      "text": "In her hand, the old steel lighter.",
      "silent": true,
@@ -13787,13 +14453,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1145",
+     "id": "nw_b1256",
      "characterId": "nw_narrator",
      "text": "She opens it. Closes it. Opens it.",
      "silent": true
     },
     {
-     "id": "nw_b1146",
+     "id": "nw_b1257",
      "characterId": "nw_narrator",
      "text": "She should throw it away. She holds it against her chest instead, and bends over it, and cries without making a sound.",
      "silent": true,
@@ -13815,7 +14481,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1147",
+     "id": "nw_b1258",
      "characterId": "nw_narrator",
      "text": "She still loves him. She hates herself for it.",
      "silent": true,
@@ -13846,7 +14512,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1148",
+     "id": "nw_b1259",
      "characterId": "nw_narrator",
      "text": "The desk lamp. Static on the TV. Jack sits in his wet coat at the desk. He still hasn't washed his hands.",
      "silent": true,
@@ -13868,28 +14534,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1149",
+     "id": "nw_b1260",
      "characterId": "nw_narrator",
      "text": "On the desk: Daniel Voss's notebook.",
      "silent": true
     },
     {
-     "id": "nw_b1150",
+     "id": "nw_b1261",
      "characterId": "nw_narrator",
      "text": "He hears her voice. Over and over. Not the words from tonight. The words from the noodle counter at 11:40.",
      "silent": true
     },
     {
-     "id": "nw_b1151",
+     "id": "nw_b1262",
      "characterId": "nw_vera",
      "text": "You're the first person I've trusted since she disappeared.",
      "audioUrl": "/film/voice/s77/87-vera-drowsily-you-re-the-first-person.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1152",
+     "id": "nw_b1263",
      "characterId": "nw_narrator",
-     "text": "He opens the drawer. Takes out a clean envelope. Takes Sakai's letter from his coat, smooths it once more along its crease, and folds it inside the notebook's cover. Puts the notebook in the envelope.",
+     "text": "He opens the drawer. Takes out a clean envelope.",
      "silent": true,
      "background": "/film/img/s77/86-the-clean-envelope.jpg",
      "cinematic": {
@@ -13909,7 +14575,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1153",
+     "id": "nw_b1264",
+     "characterId": "nw_narrator",
+     "text": "Takes Sakai's letter from his coat, smooths it once more along its crease, and folds it inside the notebook's cover.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1265",
+     "characterId": "nw_narrator",
+     "text": "Puts the notebook in the envelope.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1266",
      "characterId": "nw_narrator",
      "text": "He picks up a pen to write something on the envelope. He holds it over the paper for a long time.",
      "silent": true,
@@ -13931,7 +14609,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1154",
+     "id": "nw_b1267",
      "characterId": "nw_narrator",
      "text": "He writes nothing.",
      "silent": true,
@@ -13964,7 +14642,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
-     "id": "nw_b1155",
+     "id": "nw_b1268",
      "characterId": "nw_narrator",
      "text": "Grey light. An open-air walkway along the third floor. Rain dripping from the railing.",
      "silent": true,
@@ -13986,7 +14664,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1156",
+     "id": "nw_b1269",
      "characterId": "nw_narrator",
      "text": "Jack at Vera's door. He doesn't knock. He sets Daniel's notebook on the mat, squares it to the door, and goes.",
      "silent": true,
@@ -14008,13 +14686,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1157",
+     "id": "nw_b1270",
      "characterId": "nw_narrator",
      "text": "Vera opens her door. She is still in the dress. She hasn't slept.",
      "silent": true
     },
     {
-     "id": "nw_b1158",
+     "id": "nw_b1271",
      "characterId": "nw_narrator",
      "text": "On the doormat: a plain envelope. No name.",
      "silent": true,
@@ -14036,13 +14714,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1159",
+     "id": "nw_b1272",
      "characterId": "nw_narrator",
      "text": "She picks it up. Opens it. The cloth-covered notebook. And tucked inside its cover, a folded sheet of lined paper.",
      "silent": true
     },
     {
-     "id": "nw_b1160",
+     "id": "nw_b1273",
      "characterId": "nw_narrator",
      "text": "She sees the name inside the cover, and her whole body goes still.",
      "silent": true,
@@ -14064,7 +14742,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1161",
+     "id": "nw_b1274",
      "characterId": "nw_narrator",
      "text": "DANIEL VOSS.",
      "silent": true,
@@ -14095,7 +14773,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1162",
+     "id": "nw_b1275",
      "characterId": "nw_narrator",
      "text": "Vera sits at the low table in the dawn light. Beside her, the two cups from the beginning of the film, both empty now.",
      "silent": true,
@@ -14117,19 +14795,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1163",
+     "id": "nw_b1276",
      "characterId": "nw_narrator",
      "text": "She unfolds the lined paper first.",
      "silent": true
     },
     {
-     "id": "nw_b1164",
+     "id": "nw_b1277",
      "characterId": "nw_narrator",
      "text": "Careful, laborious English handwriting. \"Miss Voss. Your father did not kill himself. I can prove it.\"",
      "silent": true
     },
     {
-     "id": "nw_b1165",
+     "id": "nw_b1278",
      "characterId": "nw_narrator",
      "text": "It is the letter she threw away. Smoothed flat by someone else's hands.",
      "silent": true,
@@ -14151,70 +14829,76 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1166",
+     "id": "nw_b1279",
      "characterId": "nw_narrator",
-     "text": "She understands, all at once, why her sister was in a Kanda backstreet at one in the morning. Mara went to find the truth Vera refused to look at.",
+     "text": "She understands, all at once, why her sister was in a Kanda backstreet at one in the morning.",
      "silent": true
     },
     {
-     "id": "nw_b1167",
+     "id": "nw_b1280",
+     "characterId": "nw_narrator",
+     "text": "Mara went to find the truth Vera refused to look at.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1281",
      "characterId": "nw_narrator",
      "text": "She sets the letter down very carefully, beside the empty cups. Then she opens the notebook and turns the pages.",
      "silent": true
     },
     {
-     "id": "nw_b1168",
+     "id": "nw_b1282",
      "characterId": "nw_narrator",
      "text": "Her father's handwriting. Neat, slanted, careful.",
      "silent": true
     },
     {
-     "id": "nw_b1169",
+     "id": "nw_b1283",
      "characterId": "nw_daniel",
      "text": "Shiohama. Third visit. The residents say men came in the spring with flowers, and then in the summer with iron bars. The fire began in two places at once. Fires don't do that.",
      "audioUrl": "/film/voice/s79/286-daniel-evenly-shiohama-third-visit-the-residents.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1170",
+     "id": "nw_b1284",
      "characterId": "nw_narrator",
      "text": "She turns pages. The handwriting grows faster.",
      "silent": true
     },
     {
-     "id": "nw_b1171",
+     "id": "nw_b1285",
      "characterId": "nw_daniel",
      "text": "The claim will be paid. Everyone wants it paid. The company, the police, the man who owns the land now. Kurose. Always Kurose.",
      "audioUrl": "/film/voice/s79/286-daniel-evenly-the-claim-will-be-paid.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1172",
+     "id": "nw_b1286",
      "characterId": "nw_narrator",
      "text": "Pages.",
      "silent": true
     },
     {
-     "id": "nw_b1173",
+     "id": "nw_b1287",
      "characterId": "nw_daniel",
      "text": "The police have given me a young detective who speaks English. They call him Jack. He's bright. He believes me. We ate noodles at Kaneko's and I told him everything and he wrote it all down.",
      "audioUrl": "/film/voice/s79/286-daniel-quietly-the-police-have-given-me.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1174",
+     "id": "nw_b1288",
      "characterId": "nw_narrator",
      "text": "Vera stops. Reads that line again.",
      "silent": true
     },
     {
-     "id": "nw_b1175",
+     "id": "nw_b1289",
      "characterId": "nw_narrator",
      "text": "Her hand goes to her mouth.",
      "silent": true
     },
     {
-     "id": "nw_b1176",
+     "id": "nw_b1290",
      "characterId": "nw_narrator",
      "text": "She turns the page. The line we didn't see Jack read, underlined twice.",
      "silent": true,
@@ -14236,52 +14920,52 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1177",
+     "id": "nw_b1291",
      "characterId": "nw_daniel",
      "text": "Today Jack signed the report. Accidental fire. I don't blame him. He is twenty-eight years old and they own his whole life. But I thought, of all of them, he would stand with me.",
      "audioUrl": "/film/voice/s79/94-daniel-quietly-today-jack-signed-the-report.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1178",
+     "id": "nw_b1292",
      "characterId": "nw_narrator",
      "text": "Vera stares at the page.",
      "silent": true
     },
     {
-     "id": "nw_b1179",
+     "id": "nw_b1293",
      "characterId": "nw_daniel",
      "text": "I'll go on alone. I've done it before.",
      "audioUrl": "/film/voice/s79/94-daniel-tired-i-ll-go-on-alone.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1180",
+     "id": "nw_b1294",
      "characterId": "nw_narrator",
      "text": "The last pages. The handwriting is almost unrecognisable now.",
      "silent": true
     },
     {
-     "id": "nw_b1181",
+     "id": "nw_b1295",
      "characterId": "nw_daniel",
      "text": "They followed me home again tonight. The girls were asleep. I stood at the door a long time. If something happens to me, it will not be what they say. Tell Vera. When she is old enough. Tell her it will not be what they say.",
      "audioUrl": "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again.mp3",
      "expression": "v.o."
     },
     {
-     "id": "nw_b1182",
+     "id": "nw_b1296",
      "characterId": "nw_narrator",
      "text": "Vera closes the notebook.",
      "silent": true
     },
     {
-     "id": "nw_b1183",
+     "id": "nw_b1297",
      "characterId": "nw_narrator",
      "text": "For twenty years she believed her father chose to leave her.",
      "silent": true
     },
     {
-     "id": "nw_b1184",
+     "id": "nw_b1298",
      "characterId": "nw_narrator",
      "text": "She sits in the grey light, holding the notebook against her chest, the way she held the lighter.",
      "silent": true,
@@ -14303,7 +14987,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1185",
+     "id": "nw_b1299",
      "characterId": "nw_narrator",
      "text": "She has been given back her father and taken Jack away in the same hour. She doesn't know which to feel first.",
      "silent": true,
@@ -14334,21 +15018,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1186",
+     "id": "nw_b1300",
      "characterId": "nw_narrator",
-     "text": "Rows of cluttered desks, most of them empty: the shift change. Two young detectives at the far end, heads down over paperwork, too far away to hear. On the wall, the clock that runs a minute fast.",
+     "text": "Rows of cluttered desks, most of them empty: the shift change.",
      "silent": true
     },
     {
-     "id": "nw_b1187",
+     "id": "nw_b1301",
+     "characterId": "nw_narrator",
+     "text": "Two young detectives at the far end, heads down over paperwork, too far away to hear. On the wall, the clock that runs a minute fast.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1302",
      "characterId": "nw_narrator",
      "text": "Ishida sits at his desk writing a report in careful longhand.",
      "silent": true
     },
     {
-     "id": "nw_b1188",
+     "id": "nw_b1303",
      "characterId": "nw_narrator",
-     "text": "Jack walks the length of the room. The young detectives glance up and then look away. He hasn't shaved. There is still dried blood in the creases of his knuckles.",
+     "text": "Jack walks the length of the room. The young detectives glance up and then look away. He hasn't shaved.",
      "silent": true,
      "background": "/film/img/s80/94-the-long-room.jpg",
      "cinematic": {
@@ -14368,7 +15058,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1189",
+     "id": "nw_b1304",
+     "characterId": "nw_narrator",
+     "text": "There is still dried blood in the creases of his knuckles.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1305",
      "characterId": "nw_narrator",
      "text": "He stops at Ishida's desk. Ishida doesn't look up.",
      "silent": true,
@@ -14390,37 +15086,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1190",
+     "id": "nw_b1306",
      "characterId": "nw_jack",
      "text": "Nine o'clock. A grey car. Your driver.",
      "audioUrl": "/film/voice/s80/97-jack-evenly-nine-o-clock-a-grey.mp3"
     },
     {
-     "id": "nw_b1191",
+     "id": "nw_b1307",
      "characterId": "nw_narrator",
      "text": "Ishida finishes his sentence. Puts down the pen.",
      "silent": true
     },
     {
-     "id": "nw_b1192",
+     "id": "nw_b1308",
      "characterId": "nw_jack",
      "text": "Only you knew.",
      "audioUrl": "/film/voice/s80/97-jack-flatly-only-you-knew.mp3"
     },
     {
-     "id": "nw_b1193",
+     "id": "nw_b1309",
      "characterId": "nw_narrator",
      "text": "A long pause.",
      "silent": true
     },
     {
-     "id": "nw_b1194",
+     "id": "nw_b1310",
      "characterId": "nw_ishida",
      "text": "You told me yourself, Jack. You always tell the wrong person.",
      "audioUrl": "/film/voice/s80/97-ishida-gently-you-told-me-yourself-jack.mp3"
     },
     {
-     "id": "nw_b1195",
+     "id": "nw_b1311",
      "characterId": "nw_narrator",
      "text": "Jack's hands close at his sides. The far end of the room has gone quiet.",
      "silent": true,
@@ -14442,13 +15138,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1196",
+     "id": "nw_b1312",
      "characterId": "nw_jack",
      "text": "Twenty years ago. Daniel. Was that you?",
      "audioUrl": "/film/voice/s80/98-jack-evenly-twenty-years-ago-daniel-was.mp3"
     },
     {
-     "id": "nw_b1197",
+     "id": "nw_b1313",
      "characterId": "nw_ishida",
      "text": "I have never killed anyone in my life. I only ever told people where to find them.",
      "audioUrl": "/film/voice/s80/99-ishida-gently-i-have-never-killed-anyone.mp3",
@@ -14470,25 +15166,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1198",
+     "id": "nw_b1314",
      "characterId": "nw_narrator",
      "text": "Jack looks at him for a long time. Ishida almost seems to want him to.",
      "silent": true
     },
     {
-     "id": "nw_b1199",
+     "id": "nw_b1315",
      "characterId": "nw_narrator",
      "text": "He doesn't.",
      "silent": true
     },
     {
-     "id": "nw_b1200",
+     "id": "nw_b1316",
      "characterId": "nw_ishida",
      "text": "Where is it? Sakai's thing.",
      "audioUrl": "/film/voice/s80/99-ishida-calmly-where-is-it-sakai-s.mp3"
     },
     {
-     "id": "nw_b1201",
+     "id": "nw_b1317",
      "characterId": "nw_narrator",
      "text": "Jack turns and walks away down the long room, past the desks, past the clock.",
      "silent": true,
@@ -14510,7 +15206,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1202",
+     "id": "nw_b1318",
      "characterId": "nw_narrator",
      "text": "Ishida watches him go. For the first time, he looks afraid.",
      "silent": true,
@@ -14557,7 +15253,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1203",
+     "id": "nw_b1319",
      "characterId": "nw_narrator",
      "text": "The bar in daylight. Chairs on the tables. Okada behind the counter.",
      "silent": true,
@@ -14579,7 +15275,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1204",
+     "id": "nw_b1320",
      "characterId": "nw_narrator",
      "text": "He sees Jack's face and his hands, and he doesn't ask. He opens the cash drawer, lifts out the tray, and hands Jack the cassette.",
      "silent": true,
@@ -14601,7 +15297,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1205",
+     "id": "nw_b1321",
      "characterId": "nw_narrator",
      "text": "Jack holds it.",
      "silent": true,
@@ -14623,19 +15319,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1206",
+     "id": "nw_b1322",
      "characterId": "nw_okada",
      "text": "The girl?",
      "audioUrl": "/film/voice/s81/104-okada-puzzled-the-girl.mp3"
     },
     {
-     "id": "nw_b1207",
+     "id": "nw_b1323",
      "characterId": "nw_narrator",
      "text": "Jack can't answer.",
      "silent": true
     },
     {
-     "id": "nw_b1208",
+     "id": "nw_b1324",
      "characterId": "nw_narrator",
      "text": "Okada closes his eyes. Then he pours two small glasses and puts one in front of Jack. They drink together, without a toast.",
      "silent": true,
@@ -14682,9 +15378,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1209",
+     "id": "nw_b1325",
      "characterId": "nw_narrator",
-     "text": "An old newspaper office. Stacks of paper. Desks jammed together. Televisions on the walls showing three different channels. Nobody under fifty looks up from a screen.",
+     "text": "An old newspaper office. Stacks of paper. Desks jammed together. Televisions on the walls showing three different channels.",
      "silent": true,
      "background": "/film/img/s82/104-the-newsroom.jpg",
      "cinematic": {
@@ -14704,13 +15400,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1210",
+     "id": "nw_b1326",
      "characterId": "nw_narrator",
-     "text": "In a glass-walled office at the back: HARADA (50s), the editor, grey-haired, sleeves rolled. On her desk, a framed photo of the JOURNALIST from the bar, laughing at some office party.",
+     "text": "Nobody under fifty looks up from a screen.",
      "silent": true
     },
     {
-     "id": "nw_b1211",
+     "id": "nw_b1327",
+     "characterId": "nw_narrator",
+     "text": "In a glass-walled office at the back: HARADA (50s), the editor, grey-haired, sleeves rolled.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1328",
+     "characterId": "nw_narrator",
+     "text": "On her desk, a framed photo of the JOURNALIST from the bar, laughing at some office party.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1329",
      "characterId": "nw_narrator",
      "text": "On the desk between them: an old cassette player, borrowed from somewhere, and the tape.",
      "silent": true,
@@ -14732,7 +15440,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1212",
+     "id": "nw_b1330",
      "characterId": "nw_narrator",
      "text": "Harada presses PLAY.",
      "silent": true,
@@ -14754,97 +15462,97 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1213",
+     "id": "nw_b1331",
      "characterId": "nw_narrator",
      "text": "Hiss. Then two men's voices, twenty years younger. Sakai's rough. The other one smooth, patient, faintly bored.",
      "silent": true
     },
     {
-     "id": "nw_b1214",
+     "id": "nw_b1332",
      "characterId": "nw_sakai",
      "text": "There are still people in the building. Old people. They won't sign.",
      "audioUrl": "/film/voice/s82/108-sakai-gruffly-there-are-still-people-in.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1215",
+     "id": "nw_b1333",
      "characterId": "nw_kurose",
      "text": "The building must be empty by the end of the month.",
      "audioUrl": "/film/voice/s82/108-kurose-calmly-the-building-must-be-empty.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1216",
+     "id": "nw_b1334",
      "characterId": "nw_sakai",
      "text": "And if it isn't?",
      "audioUrl": "/film/voice/s82/108-sakai-gruffly-and-if-it-isn-t.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1217",
+     "id": "nw_b1335",
      "characterId": "nw_kurose",
      "text": "Then it will be empty in a different way. Don't make me say it more clearly, Sakai. I don't like to repeat myself.",
      "audioUrl": "/film/voice/s82/108-kurose-calmly-then-it-will-be-empty.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1218",
+     "id": "nw_b1336",
      "characterId": "nw_narrator",
      "text": "Harada stops the tape. The newsroom noise outside the glass seems very far away.",
      "silent": true
     },
     {
-     "id": "nw_b1219",
+     "id": "nw_b1337",
      "characterId": "nw_harada",
      "text": "That's Kurose.",
      "audioUrl": "/film/voice/s82/108-harada-gravely-that-s-kurose.mp3"
     },
     {
-     "id": "nw_b1220",
+     "id": "nw_b1338",
      "characterId": "nw_jack",
      "text": "That's Kurose.",
      "audioUrl": "/film/voice/s82/108-jack-flatly-that-s-kurose.mp3"
     },
     {
-     "id": "nw_b1221",
+     "id": "nw_b1339",
      "characterId": "nw_harada",
      "text": "A voice on a twenty-year-old tape. His lawyers will say it's a fake. They'll say Sakai was a gangster with a grudge.",
      "audioUrl": "/film/voice/s82/108-harada-dryly-a-voice-on-a-twenty.mp3"
     },
     {
-     "id": "nw_b1222",
+     "id": "nw_b1340",
      "characterId": "nw_jack",
      "text": "Then you'll need a witness.",
      "audioUrl": "/film/voice/s82/108-jack-evenly-then-you-ll-need-a.mp3"
     },
     {
-     "id": "nw_b1223",
+     "id": "nw_b1341",
      "characterId": "nw_narrator",
      "text": "She looks at him.",
      "silent": true
     },
     {
-     "id": "nw_b1224",
+     "id": "nw_b1342",
      "characterId": "nw_jack",
      "text": "Twenty years ago I was a police detective. An American insurance investigator named Daniel Voss proved the Shiohama fire was arson. I believed him. I was ordered to close the case, and I signed a report saying the fire was an accident. Weeks later he was found dead. I didn't ask any questions.",
      "audioUrl": "/film/voice/s82/108-jack-quietly-twenty-years-ago-i-was.mp3"
     },
     {
-     "id": "nw_b1225",
+     "id": "nw_b1343",
      "characterId": "nw_harada",
      "text": "You understand what you're saying. You'll be named. Your part too.",
      "audioUrl": "/film/voice/s82/108-harada-evenly-you-understand-what-you-re.mp3"
     },
     {
-     "id": "nw_b1226",
+     "id": "nw_b1344",
      "characterId": "nw_jack",
      "text": "Start with my part.",
      "audioUrl": "/film/voice/s82/108-jack-firmly-start-with-my-part.mp3"
     },
     {
-     "id": "nw_b1227",
+     "id": "nw_b1345",
      "characterId": "nw_narrator",
-     "text": "Harada looks at him for a long moment. Then she looks at the photograph of her dead reporter on the desk. She takes a notebook from her drawer and opens it to a clean page.",
+     "text": "Harada looks at him for a long moment. Then she looks at the photograph of her dead reporter on the desk.",
      "silent": true,
      "background": "/film/img/s82/107-her-dead-reporter.jpg",
      "cinematic": {
@@ -14864,15 +15572,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1228",
+     "id": "nw_b1346",
+     "characterId": "nw_narrator",
+     "text": "She takes a notebook from her drawer and opens it to a clean page.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1347",
      "characterId": "nw_harada",
      "text": "From the beginning.",
      "audioUrl": "/film/voice/s82/109-harada-gently-from-the-beginning.mp3"
     },
     {
-     "id": "nw_b1229",
+     "id": "nw_b1348",
      "characterId": "nw_narrator",
-     "text": "Jack begins to talk. We don't hear it. We watch him through the glass wall of her office, among the busy desks and flickering televisions: a man, for the first time in twenty years, not silent.",
+     "text": "Jack begins to talk. We don't hear it.",
      "silent": true,
      "background": "/film/img/s82/108-not-silent.jpg",
      "cinematic": {
@@ -14889,7 +15603,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1349",
+     "characterId": "nw_narrator",
+     "text": "We watch him through the glass wall of her office, among the busy desks and flickering televisions: a man, for the first time in twenty years, not silent.",
+     "silent": true,
      "afterBeatTargetSceneId": "nw_s82a",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
@@ -14917,9 +15637,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1230",
+     "id": "nw_b1350",
      "characterId": "nw_narrator",
-     "text": "Vera stands at the edge of the newsroom with a plain folder under her arm and her father's notebook in both hands. Through the glass wall of the office at the back, Jack, talking. She can't hear him. She has never seen him say anything true in that voice.",
+     "text": "Vera stands at the edge of the newsroom with a plain folder under her arm and her father's notebook in both hands.",
      "silent": true,
      "background": "/film/img/s82a/300-at-the-edge-of-the-newsroom.jpg",
      "cinematic": {
@@ -14939,15 +15659,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1231",
+     "id": "nw_b1351",
+     "characterId": "nw_narrator",
+     "text": "Through the glass wall of the office at the back, Jack, talking. She can't hear him. She has never seen him say anything true in that voice.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1352",
      "characterId": "nw_narrator",
      "text": "She doesn't go in.",
      "silent": true
     },
     {
-     "id": "nw_b1232",
+     "id": "nw_b1353",
      "characterId": "nw_narrator",
-     "text": "A YOUNG COPY CLERK at a photocopier lays the notebook open under the lid and presses the button. A bar of light passes under the page: her father's handwriting, flashing white. Turn. Press. Turn. Press.",
+     "text": "A YOUNG COPY CLERK at a photocopier lays the notebook open under the lid and presses the button.",
      "silent": true,
      "background": "/film/img/s82a/301-the-bar-of-light.jpg",
      "cinematic": {
@@ -14967,73 +15693,79 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1233",
+     "id": "nw_b1354",
+     "characterId": "nw_narrator",
+     "text": "A bar of light passes under the page: her father's handwriting, flashing white. Turn. Press. Turn. Press.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1355",
      "characterId": "nw_narrator",
      "text": "Harada comes out of the office and pulls the door closed behind her.",
      "silent": true
     },
     {
-     "id": "nw_b1234",
+     "id": "nw_b1356",
      "characterId": "nw_harada",
      "text": "Two hours. He hasn't stopped.",
      "audioUrl": "/film/voice/s82a/301-harada-evenly-two-hours-he-hasn-t.mp3"
     },
     {
-     "id": "nw_b1235",
+     "id": "nw_b1357",
      "characterId": "nw_vera",
      "text": "I know. I can see.",
      "audioUrl": "/film/voice/s82a/301-vera-gently-i-know-i-can-see.mp3"
     },
     {
-     "id": "nw_b1236",
+     "id": "nw_b1358",
      "characterId": "nw_narrator",
      "text": "Harada watches the pages come out of the machine.",
      "silent": true
     },
     {
-     "id": "nw_b1237",
+     "id": "nw_b1359",
      "characterId": "nw_harada",
      "text": "Every page. Then the original goes in the safe downstairs, and nobody touches it. Including you.",
      "audioUrl": "/film/voice/s82a/301-harada-evenly-every-page-then-the-original.mp3"
     },
     {
-     "id": "nw_b1238",
+     "id": "nw_b1360",
      "characterId": "nw_vera",
      "text": "It's all I have of him.",
      "audioUrl": "/film/voice/s82a/301-vera-sadly-it-s-all-i-have.mp3"
     },
     {
-     "id": "nw_b1239",
+     "id": "nw_b1361",
      "characterId": "nw_harada",
      "text": "Then I will take care of it. Kondo's files were in his desk. Six months of redevelopment money, and Kurose's name in most of it. And the grey car that left the Hive last night was found burnt out in Adachi at dawn. Registered to a security company. The company belongs to Kurose Development. Tomorrow we put it to them for comment. They will refuse to see a reporter.",
      "audioUrl": "/film/voice/s82a/301-harada-evenly-then-i-will-take-care.mp3"
     },
     {
-     "id": "nw_b1240",
+     "id": "nw_b1362",
      "characterId": "nw_vera",
      "text": "I'll go.",
      "audioUrl": "/film/voice/s82a/301-vera-evenly-i-ll-go.mp3"
     },
     {
-     "id": "nw_b1241",
+     "id": "nw_b1363",
      "characterId": "nw_harada",
      "text": "That is not your job.",
      "audioUrl": "/film/voice/s82a/301-harada-firmly-that-is-not-your-job.mp3"
     },
     {
-     "id": "nw_b1242",
+     "id": "nw_b1364",
      "characterId": "nw_vera",
      "text": "It isn't yours either. He'll see me. He'll want to look at me.",
      "audioUrl": "/film/voice/s82a/301-vera-evenly-it-isn-t-yours-either.mp3"
     },
     {
-     "id": "nw_b1243",
+     "id": "nw_b1365",
      "characterId": "nw_narrator",
      "text": "Harada studies her. Then hands her the folder: a stack of photocopies, warm from the machine.",
      "silent": true
     },
     {
-     "id": "nw_b1244",
+     "id": "nw_b1366",
      "characterId": "nw_harada",
      "text": "The copies. Not the original.",
      "audioUrl": "/film/voice/s82a/302-harada-evenly-the-copies-not-the-original.mp3",
@@ -15080,7 +15812,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1245",
+     "id": "nw_b1367",
      "characterId": "nw_narrator",
      "text": "The fortieth floor. Rain on the glass. Tokyo grey and endless below.",
      "silent": true,
@@ -15102,49 +15834,55 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1246",
+     "id": "nw_b1368",
      "characterId": "nw_narrator",
-     "text": "Vera sits in a leather chair in front of Kurose's desk. She wears a plain dark coat. A plain folder is on her lap, her hands flat on its cover: photocopies of every page of her father's notebook.",
+     "text": "Vera sits in a leather chair in front of Kurose's desk. She wears a plain dark coat.",
      "silent": true
     },
     {
-     "id": "nw_b1247",
+     "id": "nw_b1369",
+     "characterId": "nw_narrator",
+     "text": "A plain folder is on her lap, her hands flat on its cover: photocopies of every page of her father's notebook.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1370",
      "characterId": "nw_narrator",
      "text": "Across from her sits THE CHAIRMAN, KUROSE (70s). Silver hair. A beautiful suit. The stillness of a man who has never had to hurry.",
      "silent": true
     },
     {
-     "id": "nw_b1248",
+     "id": "nw_b1371",
      "characterId": "nw_narrator",
      "text": "Courteous. Curious. He pours her tea himself.",
      "silent": true
     },
     {
-     "id": "nw_b1249",
+     "id": "nw_b1372",
      "characterId": "nw_kurose",
      "text": "When my secretary said the daughter of Daniel Voss wanted to see me, I didn't believe her.",
      "audioUrl": "/film/voice/s83/111-kurose-gently-when-my-secretary-said-the.mp3"
     },
     {
-     "id": "nw_b1250",
+     "id": "nw_b1373",
      "characterId": "nw_narrator",
      "text": "His English is perfect. Old-fashioned.",
      "silent": true
     },
     {
-     "id": "nw_b1251",
+     "id": "nw_b1374",
      "characterId": "nw_kurose",
      "text": "He sat where you're sitting. He looked at me the way you are. As if I'd done something.",
      "audioUrl": "/film/voice/s83/111-kurose-evenly-he-sat-where-you-re.mp3"
     },
     {
-     "id": "nw_b1252",
+     "id": "nw_b1375",
      "characterId": "nw_vera",
      "text": "Did you?",
      "audioUrl": "/film/voice/s83/111-vera-evenly-did-you.mp3"
     },
     {
-     "id": "nw_b1253",
+     "id": "nw_b1376",
      "characterId": "nw_kurose",
      "text": "To him? I don't remember. Your father was a good man, Miss Voss. I mean that sincerely. There are not many. Good men are very expensive.",
      "audioUrl": "/film/voice/s83/112-kurose-calmly-to-him-i-don-t.mp3",
@@ -15166,19 +15904,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1254",
+     "id": "nw_b1377",
      "characterId": "nw_narrator",
      "text": "Vera doesn't touch the tea.",
      "silent": true
     },
     {
-     "id": "nw_b1255",
+     "id": "nw_b1378",
      "characterId": "nw_kurose",
      "text": "What is it you want?",
      "audioUrl": "/film/voice/s83/112-kurose-calmly-what-is-it-you-want.mp3"
     },
     {
-     "id": "nw_b1256",
+     "id": "nw_b1379",
      "characterId": "nw_narrator",
      "text": "He takes a plain envelope, thick with cash, from a drawer and lays it on the glass between them. She doesn't look at it.",
      "silent": true,
@@ -15200,43 +15938,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1257",
+     "id": "nw_b1380",
      "characterId": "nw_vera",
      "text": "The Toto Shimbun will print tomorrow. They asked me to bring you the chance to reply.",
      "audioUrl": "/film/voice/s83/317-vera-evenly-the-toto-shimbun-will-print.mp3"
     },
     {
-     "id": "nw_b1258",
+     "id": "nw_b1381",
      "characterId": "nw_kurose",
      "text": "And they sent you.",
      "audioUrl": "/film/voice/s83/317-kurose-dryly-and-they-sent-you.mp3"
     },
     {
-     "id": "nw_b1259",
+     "id": "nw_b1382",
      "characterId": "nw_vera",
      "text": "I said I'd come.",
      "audioUrl": "/film/voice/s83/317-vera-evenly-i-said-i-d-come.mp3"
     },
     {
-     "id": "nw_b1260",
+     "id": "nw_b1383",
      "characterId": "nw_kurose",
      "text": "Why?",
      "audioUrl": "/film/voice/s83/317-kurose-curious-why.mp3"
     },
     {
-     "id": "nw_b1261",
+     "id": "nw_b1384",
      "characterId": "nw_vera",
      "text": "I wanted to see your face.",
      "audioUrl": "/film/voice/s83/317-vera-evenly-i-wanted-to-see-your.mp3"
     },
     {
-     "id": "nw_b1262",
+     "id": "nw_b1385",
      "characterId": "nw_kurose",
      "text": "And?",
      "audioUrl": "/film/voice/s24/201-kurose-and.mp3"
     },
     {
-     "id": "nw_b1263",
+     "id": "nw_b1386",
      "characterId": "nw_vera",
      "text": "It's just a face.",
      "audioUrl": "/film/voice/s83/113-vera-firmly-it-s-just-a-face.mp3",
@@ -15258,19 +15996,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1264",
+     "id": "nw_b1387",
      "characterId": "nw_narrator",
      "text": "For the first time, something flickers in him. Not fear. Irritation, perhaps, at being looked at like that.",
      "silent": true
     },
     {
-     "id": "nw_b1265",
+     "id": "nw_b1388",
      "characterId": "nw_narrator",
      "text": "Vera stands. She holds up a page of the photocopy. Not threatening. Just showing it to him.",
      "silent": true
     },
     {
-     "id": "nw_b1266",
+     "id": "nw_b1389",
      "characterId": "nw_vera",
      "text": "My father kept notes. He wrote your name on every page. And now I know.",
      "audioUrl": "/film/voice/s83/114-vera-evenly-my-father-kept-notes-he.mp3",
@@ -15292,13 +16030,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1267",
+     "id": "nw_b1390",
      "characterId": "nw_narrator",
-     "text": "She walks to the door. On her way out, she stops at the model. Where the Hive stood, there's only the white plaza. Tiny painted people cross it.",
+     "text": "She walks to the door. On her way out, she stops at the model. Where the Hive stood, there's only the white plaza.",
      "silent": true
     },
     {
-     "id": "nw_b1268",
+     "id": "nw_b1391",
+     "characterId": "nw_narrator",
+     "text": "Tiny painted people cross it.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1392",
      "characterId": "nw_vera",
      "text": "It's very clean.",
      "audioUrl": "/film/voice/s83/115-vera-dryly-it-s-very-clean.mp3",
@@ -15320,19 +16064,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1269",
+     "id": "nw_b1393",
      "characterId": "nw_narrator",
      "text": "She goes.",
      "silent": true
     },
     {
-     "id": "nw_b1270",
+     "id": "nw_b1394",
      "characterId": "nw_narrator",
      "text": "Kurose sits still for a moment. Then he presses a button on his desk phone.",
      "silent": true
     },
     {
-     "id": "nw_b1271",
+     "id": "nw_b1395",
      "characterId": "nw_kurose",
      "text": "Follow her.",
      "audioUrl": "/film/voice/s83/116-kurose-calmly-follow-her.mp3",
@@ -15379,7 +16123,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1272",
+     "id": "nw_b1396",
      "characterId": "nw_narrator",
      "text": "The bulb. The flour sacks. The futon, folded now. On it, a neat stack of drawings, dried flat, their edges rippled from the wet floor.",
      "silent": true,
@@ -15401,61 +16145,73 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1273",
+     "id": "nw_b1397",
      "characterId": "nw_narrator",
      "text": "Jack sits on the floor against the wall. He has been hiding here since the newspaper; he can't go home. His face is grey with exhaustion.",
      "silent": true
     },
     {
-     "id": "nw_b1274",
+     "id": "nw_b1398",
      "characterId": "nw_narrator",
      "text": "The curtain opens. Kaneko.",
      "silent": true
     },
     {
-     "id": "nw_b1275",
+     "id": "nw_b1399",
      "characterId": "nw_kaneko",
      "text": "Someone for you.",
      "audioUrl": "/film/voice/s84/318-kaneko-gruffly-someone-for-you.mp3"
     },
     {
-     "id": "nw_b1276",
+     "id": "nw_b1400",
      "characterId": "nw_narrator",
      "text": "She stands aside.",
      "silent": true
     },
     {
-     "id": "nw_b1277",
+     "id": "nw_b1401",
      "characterId": "nw_narrator",
      "text": "Vera.",
      "silent": true
     },
     {
-     "id": "nw_b1278",
+     "id": "nw_b1402",
      "characterId": "nw_narrator",
      "text": "Jack gets to his feet. Neither of them moves toward the other.",
      "silent": true
     },
     {
-     "id": "nw_b1279",
+     "id": "nw_b1403",
      "characterId": "nw_vera",
      "text": "She asked me to come. Kaneko. She said I should see where Mara was.",
      "audioUrl": "/film/voice/s84/318-vera-evenly-she-asked-me-to-come.mp3"
     },
     {
-     "id": "nw_b1280",
+     "id": "nw_b1404",
      "characterId": "nw_narrator",
      "text": "In her hands, a small cloth bag with one strap frayed. Kaneko put it there at the door.",
      "silent": true
     },
     {
-     "id": "nw_b1281",
+     "id": "nw_b1405",
      "characterId": "nw_narrator",
-     "text": "She looks around the tiny room. The bare bulb. The flour sacks. And on the wall, taped up with rice-paper tape, pages from Mara's sketchbook: drawings of the noodle counter, but from the inside now. From behind the curtain. The back of a head.",
+     "text": "She looks around the tiny room. The bare bulb. The flour sacks.",
      "silent": true
     },
     {
-     "id": "nw_b1282",
+     "id": "nw_b1406",
+     "characterId": "nw_narrator",
+     "text": "And on the wall, taped up with rice-paper tape, pages from Mara's sketchbook: drawings of the noodle counter, but from the inside now.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1407",
+     "characterId": "nw_narrator",
+     "text": "From behind the curtain. The back of a head.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1408",
      "characterId": "nw_narrator",
      "text": "Vera walks to the wall. Looks at the drawing for a long time.",
      "silent": true,
@@ -15477,43 +16233,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1283",
+     "id": "nw_b1409",
      "characterId": "nw_vera",
      "text": "That's me.",
      "audioUrl": "/film/voice/s84/118-vera-gently-that-s-me.mp3"
     },
     {
-     "id": "nw_b1284",
+     "id": "nw_b1410",
      "characterId": "nw_jack",
      "text": "She drew it after you left.",
      "audioUrl": "/film/voice/s84/118-jack-tenderly-she-drew-it-after-you.mp3"
     },
     {
-     "id": "nw_b1285",
+     "id": "nw_b1411",
      "characterId": "nw_vera",
      "text": "She was here. The day I came.",
      "audioUrl": "/film/voice/s84/118-vera-sadly-she-was-here-the-day.mp3"
     },
     {
-     "id": "nw_b1286",
+     "id": "nw_b1412",
      "characterId": "nw_jack",
      "text": "Three feet away.",
      "audioUrl": "/film/voice/s84/118-jack-flatly-three-feet-away.mp3"
     },
     {
-     "id": "nw_b1287",
+     "id": "nw_b1413",
      "characterId": "nw_narrator",
      "text": "Vera touches the paper with one finger.",
      "silent": true
     },
     {
-     "id": "nw_b1288",
+     "id": "nw_b1414",
      "characterId": "nw_vera",
      "text": "And you told her not to come out.",
      "audioUrl": "/film/voice/s84/118-vera-bitterly-and-you-told-her-not.mp3"
     },
     {
-     "id": "nw_b1289",
+     "id": "nw_b1415",
      "characterId": "nw_jack",
      "text": "She told herself. She was protecting you. So was I.",
      "audioUrl": "/film/voice/s84/119-jack-sadly-she-told-herself-pause-she.mp3",
@@ -15535,103 +16291,109 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1290",
+     "id": "nw_b1416",
      "characterId": "nw_vera",
      "text": "Ishida called me before it was on any news. He knew exactly where she was.",
      "audioUrl": "/film/voice/s84/119-vera-evenly-ishida-called-me-before-it.mp3"
     },
     {
-     "id": "nw_b1291",
+     "id": "nw_b1417",
      "characterId": "nw_jack",
      "text": "I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine.",
      "audioUrl": "/film/voice/s84/119-jack-quietly-i-told-him-pause-where.mp3"
     },
     {
-     "id": "nw_b1292",
+     "id": "nw_b1418",
      "characterId": "nw_vera",
      "text": "I told you about the detective. The one who promised a car. You never asked who.",
      "audioUrl": "/film/voice/s84/119-vera-evenly-i-told-you-about-the.mp3"
     },
     {
-     "id": "nw_b1293",
+     "id": "nw_b1419",
      "characterId": "nw_jack",
      "text": "No.",
      "audioUrl": "/film/voice/s84/119-jack-flatly-no.mp3"
     },
     {
-     "id": "nw_b1294",
+     "id": "nw_b1420",
      "characterId": "nw_narrator",
      "text": "Vera says nothing for a while. She does not say it's all right.",
      "silent": true
     },
     {
-     "id": "nw_b1295",
+     "id": "nw_b1421",
      "characterId": "nw_vera",
      "text": "I'm not going to tell you it wasn't yours.",
      "audioUrl": "/film/voice/s84/119-vera-firmly-i-m-not-going-to.mp3"
     },
     {
-     "id": "nw_b1296",
+     "id": "nw_b1422",
      "characterId": "nw_jack",
      "text": "Don't.",
      "audioUrl": "/film/voice/s84/119-jack-pleading-don-t.mp3"
     },
     {
-     "id": "nw_b1297",
+     "id": "nw_b1423",
      "characterId": "nw_narrator",
-     "text": "She opens the bag. Folded pages, soft with handling. She smooths one flat on the flour sack: a counter seen from the floor. Two pairs of shoes. A stool going over. A hand. Beside the shoes, in block capitals: EXCUSE ME.",
+     "text": "She opens the bag. Folded pages, soft with handling. She smooths one flat on the flour sack: a counter seen from the floor.",
      "silent": true
     },
     {
-     "id": "nw_b1298",
+     "id": "nw_b1424",
+     "characterId": "nw_narrator",
+     "text": "Two pairs of shoes. A stool going over. A hand. Beside the shoes, in block capitals: EXCUSE ME.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1425",
      "characterId": "nw_vera",
      "text": "She drew what she saw. All of it.",
      "audioUrl": "/film/voice/s84/119-vera-tenderly-she-drew-what-she-saw.mp3"
     },
     {
-     "id": "nw_b1299",
+     "id": "nw_b1426",
      "characterId": "nw_jack",
      "text": "She never told me she'd kept them.",
      "audioUrl": "/film/voice/s84/119-jack-sadly-she-never-told-me-she.mp3"
     },
     {
-     "id": "nw_b1300",
+     "id": "nw_b1427",
      "characterId": "nw_vera",
      "text": "I'm taking these to Harada. Somebody has to look at them. I read his notebook.",
      "audioUrl": "/film/voice/s84/119-vera-evenly-i-m-taking-these-to.mp3"
     },
     {
-     "id": "nw_b1301",
+     "id": "nw_b1428",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s84/119-jack-evenly-i-know.mp3"
     },
     {
-     "id": "nw_b1302",
+     "id": "nw_b1429",
      "characterId": "nw_vera",
      "text": "He didn't blame you.",
      "audioUrl": "/film/voice/s84/119-vera-gently-he-didn-t-blame-you.mp3"
     },
     {
-     "id": "nw_b1303",
+     "id": "nw_b1430",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s84/119-jack-heavily-i-know.mp3"
     },
     {
-     "id": "nw_b1304",
+     "id": "nw_b1431",
      "characterId": "nw_vera",
      "text": "I don't know if I'm as good as he was.",
      "audioUrl": "/film/voice/s84/119-vera-hesitantly-i-don-t-know-if.mp3"
     },
     {
-     "id": "nw_b1305",
+     "id": "nw_b1432",
      "characterId": "nw_jack",
      "text": "I'm not asking you to be.",
      "audioUrl": "/film/voice/s84/119-jack-gently-i-m-not-asking-you.mp3"
     },
     {
-     "id": "nw_b1306",
+     "id": "nw_b1433",
      "characterId": "nw_narrator",
      "text": "Silence. A train passes overhead. The bulb swings.",
      "silent": true,
@@ -15639,20 +16401,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1307",
+     "id": "nw_b1434",
      "characterId": "nw_narrator",
      "text": "And under the train, so quietly it's almost part of it: in the passage outside, a man's voice, murmuring into his sleeve.",
      "silent": true
     },
     {
-     "id": "nw_b1308",
+     "id": "nw_b1435",
      "characterId": "nw_masked_man",
      "text": "Position.",
      "audioUrl": "/film/voice/s84/119-maskedman-curtly-position.mp3",
      "expression": "o.s."
     },
     {
-     "id": "nw_b1309",
+     "id": "nw_b1436",
      "characterId": "nw_narrator",
      "text": "Jack's head snaps round. Vera sees his face and understands.",
      "silent": true,
@@ -15674,7 +16436,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1310",
+     "id": "nw_b1437",
      "characterId": "nw_narrator",
      "text": "The bulb goes on swinging.",
      "silent": true,
@@ -15705,13 +16467,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1311",
+     "id": "nw_b1438",
      "characterId": "nw_narrator",
-     "text": "Three hard strikes, iron on iron, run up the pipes overhead. Then again, farther off: a spoon on a radiator, a knuckle on a drainpipe, floor above floor. The Hive is passing it on.",
+     "text": "Three hard strikes, iron on iron, run up the pipes overhead.",
      "silent": true
     },
     {
-     "id": "nw_b1312",
+     "id": "nw_b1439",
+     "characterId": "nw_narrator",
+     "text": "Then again, farther off: a spoon on a radiator, a knuckle on a drainpipe, floor above floor. The Hive is passing it on.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1440",
      "characterId": "nw_narrator",
      "text": "Four masked men move through the narrow corridors in single file, weapons up. The passages are too narrow for anything else.",
      "silent": true,
@@ -15733,7 +16501,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1313",
+     "id": "nw_b1441",
      "characterId": "nw_narrator",
      "text": "Doors that stood open close softly, one after another, as they pass. The Hive is watching them.",
      "silent": true,
@@ -15780,13 +16548,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1314",
+     "id": "nw_b1442",
      "characterId": "nw_narrator",
-     "text": "Kaneko lowers the ladle from the old iron water pipe by the stove. Three strikes were all it took: the alarm the Hive has kept for fifty years.",
+     "text": "Kaneko lowers the ladle from the old iron water pipe by the stove.",
      "silent": true
     },
     {
-     "id": "nw_b1315",
+     "id": "nw_b1443",
+     "characterId": "nw_narrator",
+     "text": "Three strikes were all it took: the alarm the Hive has kept for fifty years.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1444",
      "characterId": "nw_narrator",
      "text": "Kaneko pulls the shutter down with a crash. She turns off the fluorescent tube.",
      "silent": true,
@@ -15808,7 +16582,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1316",
+     "id": "nw_b1445",
      "characterId": "nw_kaneko",
      "text": "Up. Through the back. The stairs by the dentist. Then go through the neighbours. Everyone will open a door.",
      "audioUrl": "/film/voice/s86/124-kaneko-urgently-up-through-the-back-the.mp3",
@@ -15830,25 +16604,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1317",
+     "id": "nw_b1446",
      "characterId": "nw_vera",
      "text": "I know them.",
      "audioUrl": "/film/voice/s86/124-vera-evenly-i-know-them.mp3"
     },
     {
-     "id": "nw_b1318",
+     "id": "nw_b1447",
      "characterId": "nw_narrator",
      "text": "Jack looks at her.",
      "silent": true
     },
     {
-     "id": "nw_b1319",
+     "id": "nw_b1448",
      "characterId": "nw_jack",
      "text": "Come with us.",
      "audioUrl": "/film/voice/s86/124-jack-urgently-come-with-us.mp3"
     },
     {
-     "id": "nw_b1320",
+     "id": "nw_b1449",
      "characterId": "nw_kaneko",
      "text": "I have lived here fifty years. They can come and find me.",
      "audioUrl": "/film/voice/s86/125-kaneko-dryly-i-have-lived-here-fifty.mp3",
@@ -15870,13 +16644,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1321",
+     "id": "nw_b1450",
      "characterId": "nw_kaneko",
      "text": "Go now. They will help you.",
      "audioUrl": "/film/voice/s86/125-kaneko-urgently-go-now-they-will-help.mp3"
     },
     {
-     "id": "nw_b1322",
+     "id": "nw_b1451",
      "characterId": "nw_narrator",
      "text": "She pushes them toward the back.",
      "silent": true,
@@ -15907,9 +16681,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1323",
+     "id": "nw_b1452",
      "characterId": "nw_narrator",
-     "text": "The pipes have already told him. The RADIO REPAIRMAN looks up from his bench at the sound of boots in the corridor. He looks at the old fuse box on his wall.",
+     "text": "The pipes have already told him. The RADIO REPAIRMAN looks up from his bench at the sound of boots in the corridor.",
      "silent": true,
      "background": "/film/img/s87/124-the-repairman.jpg",
      "cinematic": {
@@ -15929,7 +16703,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1324",
+     "id": "nw_b1453",
+     "characterId": "nw_narrator",
+     "text": "He looks at the old fuse box on his wall.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1454",
      "characterId": "nw_narrator",
      "text": "He reaches up and pulls the main switch.",
      "silent": true,
@@ -15976,27 +16756,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1325",
+     "id": "nw_b1455",
      "characterId": "nw_narrator",
      "text": "DARK.",
      "silent": true
     },
     {
-     "id": "nw_b1326",
+     "id": "nw_b1456",
      "characterId": "nw_narrator",
      "text": "In the black, Vera's hand finds the wall, low, where a child's hand would reach. She starts to move. Jack follows the sound of her.",
      "silent": true
     },
     {
-     "id": "nw_b1327",
+     "id": "nw_b1457",
      "characterId": "nw_narrator",
      "text": "Every bulb in the building goes out at once.",
      "silent": true
     },
     {
-     "id": "nw_b1328",
+     "id": "nw_b1458",
      "characterId": "nw_narrator",
-     "text": "The masked men stop. Flashlights snap on, tight white beams in the narrow corridors, catching dripping pipes, closed doors, laundry, faces at windows that vanish the moment the light touches them.",
+     "text": "The masked men stop.",
      "silent": true,
      "background": "/film/img/s88/126-dark.jpg",
      "cinematic": {
@@ -16016,7 +16796,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1329",
+     "id": "nw_b1459",
+     "characterId": "nw_narrator",
+     "text": "Flashlights snap on, tight white beams in the narrow corridors, catching dripping pipes, closed doors, laundry, faces at windows that vanish the moment the light touches them.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1460",
      "characterId": "nw_narrator",
      "text": "The Hive knows its own dark. The men don't.",
      "silent": true,
@@ -16063,13 +16849,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1330",
+     "id": "nw_b1461",
      "characterId": "nw_narrator",
      "text": "Pitch black. A narrow concrete stair.",
      "silent": true
     },
     {
-     "id": "nw_b1331",
+     "id": "nw_b1462",
      "characterId": "nw_narrator",
      "text": "Vera climbs by touch, one hand on the wall. Her other hand finds Jack's and pulls him up after her.",
      "silent": true,
@@ -16091,7 +16877,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1332",
+     "id": "nw_b1463",
      "characterId": "nw_narrator",
      "text": "Halfway up, she stops. Takes the lighter out of her pocket. Her thumb on the wheel.",
      "silent": true,
@@ -16113,13 +16899,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1333",
+     "id": "nw_b1464",
      "characterId": "nw_narrator",
      "text": "Below them: boots. A flashlight beam crawls up the wall and falls away.",
      "silent": true
     },
     {
-     "id": "nw_b1334",
+     "id": "nw_b1465",
      "characterId": "nw_narrator",
      "text": "She puts the lighter back unlit, and climbs.",
      "silent": true,
@@ -16150,7 +16936,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1335",
+     "id": "nw_b1466",
      "characterId": "nw_narrator",
      "text": "Vera leads them to a door with a sumo match murmuring behind it. It opens before she can knock: the OLD WOMAN from 55.",
      "silent": true,
@@ -16172,15 +16958,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1336",
+     "id": "nw_b1467",
      "characterId": "nw_narrator",
-     "text": "The old woman's room. A sumo match murmurs on a television nobody is watching. She points across it to the far wall, where a second door stands open.",
+     "text": "The old woman's room. A sumo match murmurs on a television nobody is watching.",
      "silent": true
     },
     {
-     "id": "nw_b1337",
+     "id": "nw_b1468",
      "characterId": "nw_narrator",
-     "text": "Beyond it, another room. A kitchen in the dark, lit by one candle: the FAMILY around the table, the father with the baseball bat across his knees, the children holding the next door wide. Beyond that, the dentist's chair, the dentist with a finger to his lips. A bedroom where the girl with the violin sits up, the instrument held against her chest like a child.",
+     "text": "She points across it to the far wall, where a second door stands open.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1469",
+     "characterId": "nw_narrator",
+     "text": "Beyond it, another room.",
      "silent": true,
      "background": "/film/img/s90/131-she-jumps.jpg",
      "cinematic": {
@@ -16200,15 +16992,33 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1338",
+     "id": "nw_b1470",
+     "characterId": "nw_narrator",
+     "text": "A kitchen in the dark, lit by one candle: the FAMILY around the table, the father with the baseball bat across his knees, the children holding the next door wide.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1471",
+     "characterId": "nw_narrator",
+     "text": "Beyond that, the dentist's chair, the dentist with a finger to his lips.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1472",
+     "characterId": "nw_narrator",
+     "text": "A bedroom where the girl with the violin sits up, the instrument held against her chest like a child.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1473",
      "characterId": "nw_narrator",
      "text": "A passage that is really the inside of someone's wardrobe.",
      "silent": true
     },
     {
-     "id": "nw_b1339",
+     "id": "nw_b1474",
      "characterId": "nw_narrator",
-     "text": "Through the wardrobe, a barber's cramped shop. The BARBER holds the beaded curtain aside with his scissors hand and turns the chair to the wall, so that anyone looking in will see only a man waiting for a haircut.",
+     "text": "Through the wardrobe, a barber's cramped shop.",
      "silent": true,
      "background": "/film/img/s90/378-the-barbers-shop.jpg",
      "cinematic": {
@@ -16228,9 +17038,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1340",
+     "id": "nw_b1475",
      "characterId": "nw_narrator",
-     "text": "Down four steps into a laundry where wet sheets hang in rows. Two WOMEN part the sheets ahead of them and pin them shut again behind, so that the whole room closes like water over the place they went.",
+     "text": "The BARBER holds the beaded curtain aside with his scissors hand and turns the chair to the wall, so that anyone looking in will see only a man waiting for a haircut.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1476",
+     "characterId": "nw_narrator",
+     "text": "Down four steps into a laundry where wet sheets hang in rows.",
      "silent": true,
      "background": "/film/img/s90/379-the-laundry.jpg",
      "cinematic": {
@@ -16250,9 +17066,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1341",
+     "id": "nw_b1477",
      "characterId": "nw_narrator",
-     "text": "A shrine room. A GRANDMOTHER lifts the altar cloth and a low hatch opens behind it. She holds the cloth until they are through, then smooths it flat over the candle and the photograph as if nothing had happened.",
+     "text": "Two WOMEN part the sheets ahead of them and pin them shut again behind, so that the whole room closes like water over the place they went.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1478",
+     "characterId": "nw_narrator",
+     "text": "A shrine room. A GRANDMOTHER lifts the altar cloth and a low hatch opens behind it.",
      "silent": true,
      "background": "/film/img/s90/380-the-shrine-hatch.jpg",
      "cinematic": {
@@ -16272,9 +17094,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1342",
+     "id": "nw_b1479",
      "characterId": "nw_narrator",
-     "text": "A plank laid across the gap between two balconies, a balcony bolted onto a balcony. Two MEN in vests steady it at both ends, and when the last of them is across, haul it in after them, so that the gap is only a gap.",
+     "text": "She holds the cloth until they are through, then smooths it flat over the candle and the photograph as if nothing had happened.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1480",
+     "characterId": "nw_narrator",
+     "text": "A plank laid across the gap between two balconies, a balcony bolted onto a balcony.",
      "silent": true,
      "background": "/film/img/s90/381-the-plank.jpg",
      "cinematic": {
@@ -16294,9 +17122,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1343",
+     "id": "nw_b1481",
      "characterId": "nw_narrator",
-     "text": "A pipe gallery, the pipes ringing softly all around them. A WOMAN raps one pipe once for clear, and the next hand takes it up farther on: the alarm still passing, now telling them which way is safe.",
+     "text": "Two MEN in vests steady it at both ends, and when the last of them is across, haul it in after them, so that the gap is only a gap.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1482",
+     "characterId": "nw_narrator",
+     "text": "A pipe gallery, the pipes ringing softly all around them.",
      "silent": true,
      "background": "/film/img/s90/382-the-pipe-gallery.jpg",
      "cinematic": {
@@ -16316,9 +17150,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1344",
+     "id": "nw_b1483",
      "characterId": "nw_narrator",
-     "text": "At every door, someone. A hand. A nod. A lantern turned low. Nobody speaks. Nobody looks at Vera or at Jack. They pass through other people's lives like water through a wall.",
+     "text": "A WOMAN raps one pipe once for clear, and the next hand takes it up farther on: the alarm still passing, now telling them which way is safe.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1484",
+     "characterId": "nw_narrator",
+     "text": "At every door, someone. A hand. A nod. A lantern turned low. Nobody speaks. Nobody looks at Vera or at Jack.",
      "silent": true,
      "background": "/film/img/s90/132-the-gap.jpg",
      "cinematic": {
@@ -16338,21 +17178,33 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1345",
+     "id": "nw_b1485",
+     "characterId": "nw_narrator",
+     "text": "They pass through other people's lives like water through a wall.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1486",
      "characterId": "nw_narrator",
      "text": "Behind them, each door closes softly. In the passage beyond, a flashlight beam finds each closed door in turn, and stops.",
      "silent": true
     },
     {
-     "id": "nw_b1346",
+     "id": "nw_b1487",
      "characterId": "nw_narrator",
      "text": "The Hive is closing behind them the way it opened for the masked men, only the other way round.",
      "silent": true
     },
     {
-     "id": "nw_b1347",
+     "id": "nw_b1488",
      "characterId": "nw_narrator",
-     "text": "The last room is in the rear wing, and it is empty: a window over the foot of the viaduct, its shutter open. An iron fire ladder bolted to the wall outside, going down into the dark.",
+     "text": "The last room is in the rear wing, and it is empty: a window over the foot of the viaduct, its shutter open.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1489",
+     "characterId": "nw_narrator",
+     "text": "An iron fire ladder bolted to the wall outside, going down into the dark.",
      "silent": true,
      "afterBeatTargetSceneId": "nw_s91",
      "afterBeatMode": "auto",
@@ -16381,13 +17233,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1348",
+     "id": "nw_b1490",
      "characterId": "nw_narrator",
-     "text": "Rain. The rear wall of the low wing, pressed against the concrete viaduct. Vera comes out of the window onto the ladder. Jack after her, pulling the shutter to behind him.",
+     "text": "Rain. The rear wall of the low wing, pressed against the concrete viaduct. Vera comes out of the window onto the ladder.",
      "silent": true
     },
     {
-     "id": "nw_b1349",
+     "id": "nw_b1491",
+     "characterId": "nw_narrator",
+     "text": "Jack after her, pulling the shutter to behind him.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1492",
      "characterId": "nw_narrator",
      "text": "Above, a flashlight beam sweeps the window and finds only a closed shutter.",
      "silent": true,
@@ -16409,19 +17267,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1350",
+     "id": "nw_b1493",
      "characterId": "nw_narrator",
      "text": "Overhead the rails begin to sing. A light grows at the far end of the viaduct.",
      "silent": true
     },
     {
-     "id": "nw_b1351",
+     "id": "nw_b1494",
      "characterId": "nw_narrator",
-     "text": "A train. It arrives, a roaring wall of noise and wind and lit windows, and under it the two of them go down the ladder, rung by rung, and nobody hears a thing. Passengers inside reading, sleeping, looking at their phones. None of them see.",
+     "text": "A train.",
      "silent": true
     },
     {
-     "id": "nw_b1352",
+     "id": "nw_b1495",
+     "characterId": "nw_narrator",
+     "text": "It arrives, a roaring wall of noise and wind and lit windows, and under it the two of them go down the ladder, rung by rung, and nobody hears a thing.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1496",
+     "characterId": "nw_narrator",
+     "text": "Passengers inside reading, sleeping, looking at their phones. None of them see.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1497",
      "characterId": "nw_narrator",
      "text": "Her hand is in his on the rail. At the bottom she doesn't take it back.",
      "silent": true,
@@ -16443,7 +17313,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1353",
+     "id": "nw_b1498",
      "characterId": "nw_narrator",
      "text": "When the last carriage has passed, the ladder is empty.",
      "silent": true,
@@ -16490,7 +17360,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1354",
+     "id": "nw_b1499",
      "characterId": "nw_narrator",
      "text": "Vera and Jack step off the last rung of the fire ladder into an empty street. Soaked. Breathing hard.",
      "silent": true,
@@ -16512,43 +17382,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1355",
+     "id": "nw_b1500",
      "characterId": "nw_narrator",
      "text": "Behind them, the Hive: every window lit again now, every radio playing, every resident awake. In the distance, sirens.",
      "silent": true
     },
     {
-     "id": "nw_b1356",
+     "id": "nw_b1501",
      "characterId": "nw_narrator",
      "text": "Vera steps away from him. Just one step. Enough.",
      "silent": true
     },
     {
-     "id": "nw_b1357",
+     "id": "nw_b1502",
      "characterId": "nw_narrator",
      "text": "They look at each other in the rain. There is too much to say, and none of it can be said tonight.",
      "silent": true
     },
     {
-     "id": "nw_b1358",
+     "id": "nw_b1503",
      "characterId": "nw_vera",
      "text": "Is Kaneko —",
      "audioUrl": "/film/voice/s92/137-vera-urgently-is-kaneko.mp3"
     },
     {
-     "id": "nw_b1359",
+     "id": "nw_b1504",
      "characterId": "nw_jack",
      "text": "The Hive looks after its own.",
      "audioUrl": "/film/voice/s92/137-jack-evenly-the-hive-looks-after-its.mp3"
     },
     {
-     "id": "nw_b1360",
+     "id": "nw_b1505",
      "characterId": "nw_narrator",
      "text": "She nods. She looks up at the building full of light.",
      "silent": true
     },
     {
-     "id": "nw_b1361",
+     "id": "nw_b1506",
      "characterId": "nw_vera",
      "text": "Mara was safe here. Until us.",
      "audioUrl": "/film/voice/s92/138-vera-sadly-mara-was-safe-here-until.mp3",
@@ -16570,7 +17440,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1362",
+     "id": "nw_b1507",
      "characterId": "nw_narrator",
      "text": "He has no answer to that. She doesn't need one.",
      "silent": true,
@@ -16601,13 +17471,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1363",
+     "id": "nw_b1508",
      "characterId": "nw_narrator",
      "text": "Rain. Ishida comes down the front steps without an umbrella.",
      "silent": true
     },
     {
-     "id": "nw_b1364",
+     "id": "nw_b1509",
      "characterId": "nw_narrator",
      "text": "At the kerb, a black sedan. Engine running. Wipers beating slowly.",
      "silent": true,
@@ -16629,13 +17499,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1365",
+     "id": "nw_b1510",
      "characterId": "nw_narrator",
      "text": "He stops. He knows this car.",
      "silent": true
     },
     {
-     "id": "nw_b1366",
+     "id": "nw_b1511",
      "characterId": "nw_narrator",
      "text": "A long moment. Then the rear door opens from inside.",
      "silent": true,
@@ -16682,7 +17552,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1367",
+     "id": "nw_b1512",
      "characterId": "nw_narrator",
      "text": "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going.",
      "silent": true,
@@ -16704,13 +17574,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1368",
+     "id": "nw_b1513",
      "characterId": "nw_narrator",
      "text": "The rear door opens from inside. Warm amber light. Leather.",
      "silent": true
     },
     {
-     "id": "nw_b1369",
+     "id": "nw_b1514",
      "characterId": "nw_narrator",
      "text": "Ishida stops in the rain. He looks back up at the station, at one lit window on the second floor where somebody is still working.",
      "silent": true,
@@ -16732,7 +17602,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1370",
+     "id": "nw_b1515",
      "characterId": "nw_narrator",
      "text": "From inside the car, a man's clean hand holds out a cup of tea. The watch from the model.",
      "silent": true,
@@ -16754,13 +17624,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1371",
+     "id": "nw_b1516",
      "characterId": "nw_kurose",
      "text": "It's only tea.",
      "audioUrl": "/film/voice/s94/143-kurose-gently-it-s-only-tea.mp3"
     },
     {
-     "id": "nw_b1372",
+     "id": "nw_b1517",
      "characterId": "nw_narrator",
      "text": "Ishida gets in. The door closes. The rain is suddenly very far away.",
      "silent": true,
@@ -16807,7 +17677,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1373",
+     "id": "nw_b1518",
      "characterId": "nw_narrator",
      "text": "The black car recedes down a long wet road, its taillights smearing red, exactly like the car in the first scene of the film.",
      "silent": true,
@@ -16831,7 +17701,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5
     },
     {
-     "id": "nw_b1374",
+     "id": "nw_b1519",
      "characterId": "nw_narrator",
      "text": "It turns a corner. Gone.",
      "silent": true,
@@ -16862,7 +17732,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1375",
+     "id": "nw_b1520",
      "characterId": "nw_narrator",
      "text": "Grey daylight. A cardboard box on Ishida's desk. A young detective is clearing it.",
      "silent": true,
@@ -16884,7 +17754,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1376",
+     "id": "nw_b1521",
      "characterId": "nw_narrator",
      "text": "He opens the bottom drawer. Empty.",
      "silent": true,
@@ -16906,13 +17776,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1377",
+     "id": "nw_b1522",
      "characterId": "nw_narrator",
      "text": "The desk phone rings. He picks it up.",
      "silent": true
     },
     {
-     "id": "nw_b1378",
+     "id": "nw_b1523",
      "characterId": "nw_young_detective",
      "text": "Yes. Where? In his own car. Under the expressway. Sitting up, engine off. No marks. He left a statement.",
      "audioUrl": "/film/voice/s96/303-youngdetective-evenly-yes-pause-where-pause-in.mp3",
@@ -16934,13 +17804,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1379",
+     "id": "nw_b1524",
      "characterId": "nw_narrator",
      "text": "He puts the phone down very slowly. He looks at the empty chair. At the empty drawer.",
      "silent": true
     },
     {
-     "id": "nw_b1380",
+     "id": "nw_b1525",
      "characterId": "nw_narrator",
      "text": "On the wall, the clock still runs a minute fast.",
      "silent": true,
@@ -16987,13 +17857,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1381",
+     "id": "nw_b1526",
      "characterId": "nw_narrator",
      "text": "FIVE DAYS LATER",
      "silent": true
     },
     {
-     "id": "nw_b1382",
+     "id": "nw_b1527",
      "characterId": "nw_narrator",
      "text": "Days later. The rain has stopped for the first time in the film. The sky is pale and washed and enormous.",
      "silent": true,
@@ -17015,97 +17885,103 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1383",
+     "id": "nw_b1528",
      "characterId": "nw_narrator",
-     "text": "A small flat roof: laundry poles, a water tank, a single potted plant someone has kept alive. Below, the elevated railway, and the trains going past at eye level.",
+     "text": "A small flat roof: laundry poles, a water tank, a single potted plant someone has kept alive.",
      "silent": true
     },
     {
-     "id": "nw_b1384",
+     "id": "nw_b1529",
+     "characterId": "nw_narrator",
+     "text": "Below, the elevated railway, and the trains going past at eye level.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1530",
      "characterId": "nw_narrator",
      "text": "Jack stands at the railing. He hears the door behind him.",
      "silent": true
     },
     {
-     "id": "nw_b1385",
+     "id": "nw_b1531",
      "characterId": "nw_narrator",
      "text": "Vera. In a plain coat. Her hair dry.",
      "silent": true
     },
     {
-     "id": "nw_b1386",
+     "id": "nw_b1532",
      "characterId": "nw_narrator",
      "text": "She comes to stand beside him at the railing. Not close. Not far.",
      "silent": true
     },
     {
-     "id": "nw_b1387",
+     "id": "nw_b1533",
      "characterId": "nw_vera",
      "text": "Harada says the prosecutors want you to testify.",
      "audioUrl": "/film/voice/s98/155-vera-evenly-harada-says-the-prosecutors-want.mp3"
     },
     {
-     "id": "nw_b1388",
+     "id": "nw_b1534",
      "characterId": "nw_jack",
      "text": "Yes.",
      "audioUrl": "/film/voice/s98/155-jack-evenly-yes.mp3"
     },
     {
-     "id": "nw_b1389",
+     "id": "nw_b1535",
      "characterId": "nw_vera",
      "text": "And your licence?",
      "audioUrl": "/film/voice/s98/155-vera-evenly-and-your-licence.mp3"
     },
     {
-     "id": "nw_b1390",
+     "id": "nw_b1536",
      "characterId": "nw_jack",
      "text": "Gone. It should have gone twenty years ago.",
      "audioUrl": "/film/voice/s98/155-jack-dryly-gone-pause-it-should-have.mp3"
     },
     {
-     "id": "nw_b1391",
+     "id": "nw_b1537",
      "characterId": "nw_vera",
      "text": "Ishida left a statement. He acted alone.",
      "audioUrl": "/film/voice/s98/155-vera-evenly-ishida-left-a-statement-he.mp3"
     },
     {
-     "id": "nw_b1392",
+     "id": "nw_b1538",
      "characterId": "nw_jack",
      "text": "Is that what it says?",
      "audioUrl": "/film/voice/s98/155-jack-dryly-is-that-what-it-says.mp3"
     },
     {
-     "id": "nw_b1393",
+     "id": "nw_b1539",
      "characterId": "nw_vera",
      "text": "That's what the police say it says.",
      "audioUrl": "/film/voice/s98/155-vera-dryly-that-s-what-the-police.mp3"
     },
     {
-     "id": "nw_b1394",
+     "id": "nw_b1540",
      "characterId": "nw_vera",
      "text": "Harada has Mara's drawings. The pages from the floor of the bar. She says they're the only eyewitness there is.",
      "audioUrl": "/film/voice/s98/155-vera-evenly-harada-has-mara-s-drawings.mp3"
     },
     {
-     "id": "nw_b1395",
+     "id": "nw_b1541",
      "characterId": "nw_jack",
      "text": "She'd have liked that. Being asked.",
      "audioUrl": "/film/voice/s98/155-jack-tenderly-she-d-have-liked-that.mp3"
     },
     {
-     "id": "nw_b1396",
+     "id": "nw_b1542",
      "characterId": "nw_vera",
      "text": "Nobody asked her. She drew it anyway.",
      "audioUrl": "/film/voice/s98/155-vera-firmly-nobody-asked-her-she-drew.mp3"
     },
     {
-     "id": "nw_b1397",
+     "id": "nw_b1543",
      "characterId": "nw_narrator",
      "text": "A train passes below. They watch it.",
      "silent": true
     },
     {
-     "id": "nw_b1398",
+     "id": "nw_b1544",
      "characterId": "nw_narrator",
      "text": "Jack takes something from his pocket. Holds it out on his open palm.",
      "silent": true,
@@ -17127,93 +18003,99 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1399",
+     "id": "nw_b1545",
      "characterId": "nw_narrator",
      "text": "The red bird clip.",
      "silent": true
     },
     {
-     "id": "nw_b1400",
+     "id": "nw_b1546",
      "characterId": "nw_jack",
      "text": "This is yours.",
      "audioUrl": "/film/voice/s98/156-jack-gently-this-is-yours.mp3"
     },
     {
-     "id": "nw_b1401",
+     "id": "nw_b1547",
      "characterId": "nw_narrator",
      "text": "Vera looks at it. She takes it.",
      "silent": true
     },
     {
-     "id": "nw_b1402",
+     "id": "nw_b1548",
      "characterId": "nw_jack",
      "text": "She said your father gave it to her. She said you only claim it was yours.",
      "audioUrl": "/film/voice/s98/156-jack-gently-she-said-your-father-gave.mp3"
     },
     {
-     "id": "nw_b1403",
+     "id": "nw_b1549",
      "characterId": "nw_narrator",
      "text": "Vera laughs. It comes out broken.",
      "silent": true
     },
     {
-     "id": "nw_b1404",
+     "id": "nw_b1550",
      "characterId": "nw_vera",
      "text": "Liar. It was mine.",
      "audioUrl": "/film/voice/s98/156-vera-voice-breaking-liar-it-was-mine.mp3"
     },
     {
-     "id": "nw_b1405",
+     "id": "nw_b1551",
      "characterId": "nw_narrator",
      "text": "She closes her hand around it.",
      "silent": true
     },
     {
-     "id": "nw_b1406",
+     "id": "nw_b1552",
      "characterId": "nw_narrator",
      "text": "Jack looks at the trains. It is the hardest thing he will ever say, and he says it simply.",
      "silent": true
     },
     {
-     "id": "nw_b1407",
+     "id": "nw_b1553",
      "characterId": "nw_jack",
      "text": "At the end, she asked me to tell you something.",
      "audioUrl": "/film/voice/s98/156-jack-tell-her-sorry.mp3"
     },
     {
-     "id": "nw_b1408",
+     "id": "nw_b1554",
      "characterId": "nw_narrator",
      "text": "Vera goes very still.",
      "silent": true
     },
     {
-     "id": "nw_b1409",
+     "id": "nw_b1555",
      "characterId": "nw_jack",
      "text": "She said to tell you she was sorry.",
      "audioUrl": "/film/voice/s98/156-jack-tenderly-she-said-to-tell-you.mp3"
     },
     {
-     "id": "nw_b1410",
+     "id": "nw_b1556",
      "characterId": "nw_narrator",
      "text": "Vera stares at him.",
      "silent": true
     },
     {
-     "id": "nw_b1411",
+     "id": "nw_b1557",
      "characterId": "nw_narrator",
-     "text": "And then she understands. Not the words. What they mean. The fight. The last cruel things she said at the door. The flight home. Everything she has carried since the first scene.",
+     "text": "And then she understands. Not the words. What they mean. The fight. The last cruel things she said at the door. The flight home.",
      "silent": true
     },
     {
-     "id": "nw_b1412",
+     "id": "nw_b1558",
+     "characterId": "nw_narrator",
+     "text": "Everything she has carried since the first scene.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1559",
      "characterId": "nw_narrator",
      "text": "Mara wasn't angry. Mara had forgiven her the whole time.",
      "silent": true
     },
     {
-     "id": "nw_b1413",
+     "id": "nw_b1560",
      "characterId": "nw_narrator",
-     "text": "Vera turns away to the railing. Her shoulders shake. Jack doesn't touch her. He stands beside her while she cries, the way he knelt beside her in the rain. Close enough. Not closer.",
+     "text": "Vera turns away to the railing. Her shoulders shake. Jack doesn't touch her.",
      "silent": true,
      "background": "/film/img/s98/155-close-enough.jpg",
      "cinematic": {
@@ -17233,99 +18115,105 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1414",
+     "id": "nw_b1561",
+     "characterId": "nw_narrator",
+     "text": "He stands beside her while she cries, the way he knelt beside her in the rain. Close enough. Not closer.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1562",
      "characterId": "nw_narrator",
      "text": "When she can speak:",
      "silent": true
     },
     {
-     "id": "nw_b1415",
+     "id": "nw_b1563",
      "characterId": "nw_vera",
      "text": "You could have told me that in the rain.",
      "audioUrl": "/film/voice/s98/157-vera-in-the-rain.mp3"
     },
     {
-     "id": "nw_b1416",
+     "id": "nw_b1564",
      "characterId": "nw_jack",
      "text": "I couldn't say anything in the rain.",
      "audioUrl": "/film/voice/s98/157-jack-sadly-i-couldn-t-say-anything.mp3"
     },
     {
-     "id": "nw_b1417",
+     "id": "nw_b1565",
      "characterId": "nw_vera",
      "text": "No. Neither could I.",
      "audioUrl": "/film/voice/s98/157-vera-gently-no-pause-neither-could-i.mp3"
     },
     {
-     "id": "nw_b1418",
+     "id": "nw_b1566",
      "characterId": "nw_narrator",
      "text": "A train. They watch it pass.",
      "silent": true
     },
     {
-     "id": "nw_b1419",
+     "id": "nw_b1567",
      "characterId": "nw_vera",
      "text": "I don't know what we are.",
      "audioUrl": "/film/voice/s98/157-vera-wistfully-i-don-t-know-what.mp3"
     },
     {
-     "id": "nw_b1420",
+     "id": "nw_b1568",
      "characterId": "nw_jack",
      "text": "Neither do I.",
      "audioUrl": "/film/voice/s98/157-jack-earnestly-neither-do-i.mp3"
     },
     {
-     "id": "nw_b1421",
+     "id": "nw_b1569",
      "characterId": "nw_vera",
      "text": "I still have your lighter.",
      "audioUrl": "/film/voice/s98/157-vera-dryly-i-still-have-your-lighter.mp3"
     },
     {
-     "id": "nw_b1422",
+     "id": "nw_b1570",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s98/157-jack-gently-i-know.mp3"
     },
     {
-     "id": "nw_b1423",
+     "id": "nw_b1571",
      "characterId": "nw_narrator",
      "text": "She takes it from her coat pocket. Looks at it. Opens it. Closes it.",
      "silent": true
     },
     {
-     "id": "nw_b1424",
+     "id": "nw_b1572",
      "characterId": "nw_narrator",
      "text": "She doesn't give it back. She puts it away again.",
      "silent": true
     },
     {
-     "id": "nw_b1425",
+     "id": "nw_b1573",
      "characterId": "nw_vera",
      "text": "Kaneko's opening a new place. Near the station, under the arches. She's taking the sign.",
      "audioUrl": "/film/voice/s98/157-vera-warmly-kaneko-s-opening-a-new.mp3"
     },
     {
-     "id": "nw_b1426",
+     "id": "nw_b1574",
      "characterId": "nw_narrator",
      "text": "She walks to the rooftop door. Stops. Doesn't look back.",
      "silent": true
     },
     {
-     "id": "nw_b1427",
+     "id": "nw_b1575",
      "characterId": "nw_vera",
      "text": "She says she opens at six.",
      "audioUrl": "/film/voice/s98/157-vera-warmly-she-says-she-opens-at.mp3"
     },
     {
-     "id": "nw_b1428",
+     "id": "nw_b1576",
      "characterId": "nw_narrator",
      "text": "She goes.",
      "silent": true
     },
     {
-     "id": "nw_b1429",
+     "id": "nw_b1577",
      "characterId": "nw_narrator",
-     "text": "Jack stands alone at the railing. A train passes, its windows full of people. For a moment, in one of the windows, the reflection of his own face.",
+     "text": "Jack stands alone at the railing. A train passes, its windows full of people.",
      "silent": true,
      "background": "/film/img/s98/239-his-own-face.jpg",
      "cinematic": {
@@ -17342,7 +18230,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1578",
+     "characterId": "nw_narrator",
+     "text": "For a moment, in one of the windows, the reflection of his own face.",
+     "silent": true,
      "afterBeatTargetSceneId": "nw_s99a",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
@@ -17370,13 +18264,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1430",
+     "id": "nw_b1579",
      "characterId": "nw_narrator",
      "text": "Weeks later.",
      "silent": true
     },
     {
-     "id": "nw_b1431",
+     "id": "nw_b1580",
      "characterId": "nw_narrator",
      "text": "The Hive is coming down.",
      "silent": true,
@@ -17398,37 +18292,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1432",
+     "id": "nw_b1581",
      "characterId": "nw_narrator",
      "text": "Excavators bite into the walls with long steel jaws. Concrete falls in slow grey curtains. Dust hangs in the air.",
      "silent": true
     },
     {
-     "id": "nw_b1433",
+     "id": "nw_b1582",
      "characterId": "nw_narrator",
-     "text": "The building has been cut open like the illustrated cross-sections in an old book. Rooms stand exposed to the sky, stacked one above another: a wall of flowered wallpaper, a calendar still pinned beside a window, a mirror, a child's height marks pencilled on a doorframe.",
+     "text": "The building has been cut open like the illustrated cross-sections in an old book.",
      "silent": true
     },
     {
-     "id": "nw_b1434",
+     "id": "nw_b1583",
      "characterId": "nw_narrator",
-     "text": "The camera tracks slowly sideways along the ruined face of the building, as it tracked along the lit windows of the living one. Empty room after empty room. We remember who lived in each.",
+     "text": "Rooms stand exposed to the sky, stacked one above another: a wall of flowered wallpaper, a calendar still pinned beside a window, a mirror, a child's height marks pencilled on a doorframe.",
      "silent": true
     },
     {
-     "id": "nw_b1435",
+     "id": "nw_b1584",
+     "characterId": "nw_narrator",
+     "text": "The camera tracks slowly sideways along the ruined face of the building, as it tracked along the lit windows of the living one.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1585",
+     "characterId": "nw_narrator",
+     "text": "Empty room after empty room. We remember who lived in each.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1586",
      "characterId": "nw_narrator",
      "text": "At ground level, Kaneko's counter is still standing. Its six old stools in a row.",
      "silent": true
     },
     {
-     "id": "nw_b1436",
+     "id": "nw_b1587",
      "characterId": "nw_narrator",
      "text": "At the barrier on the street, a small crowd watches. The radio repairman. The family. The girl with the violin case.",
      "silent": true
     },
     {
-     "id": "nw_b1437",
+     "id": "nw_b1588",
      "characterId": "nw_narrator",
      "text": "Kaneko stands among them, holding the old noodle-shop sign against her chest, wrapped in a blanket.",
      "silent": true,
@@ -17450,15 +18356,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1438",
+     "id": "nw_b1589",
      "characterId": "nw_narrator",
      "text": "Months later. Winter light, thin and clear. No rain.",
      "silent": true
     },
     {
-     "id": "nw_b1439",
+     "id": "nw_b1590",
      "characterId": "nw_narrator",
-     "text": "The white plaza from the model, built. Real people cross it now, exactly like the painted ones. A strip of new grass. A bench nobody sits on.",
+     "text": "The white plaza from the model, built. Real people cross it now, exactly like the painted ones. A strip of new grass.",
      "silent": true,
      "background": "/film/img/s99a/306-the-hoarding.jpg",
      "cinematic": {
@@ -17478,7 +18384,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1440",
+     "id": "nw_b1591",
+     "characterId": "nw_narrator",
+     "text": "A bench nobody sits on.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1592",
      "characterId": "nw_narrator",
      "text": "Nothing marks where anything was.",
      "silent": true,
@@ -17525,19 +18437,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1441",
+     "id": "nw_b1593",
      "characterId": "nw_narrator",
      "text": "A tiny place in a brick railway arch near the station. Steam. One warm bulb.",
      "silent": true
     },
     {
-     "id": "nw_b1442",
+     "id": "nw_b1594",
      "characterId": "nw_narrator",
      "text": "Above the counter, the old hand-painted sign. Faded. Unmistakable.",
      "silent": true
     },
     {
-     "id": "nw_b1443",
+     "id": "nw_b1595",
      "characterId": "nw_narrator",
      "text": "A train goes over. The bottles tick against each other and settle.",
      "silent": true,
@@ -17545,9 +18457,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1444",
+     "id": "nw_b1596",
      "characterId": "nw_narrator",
-     "text": "On a shelf above the door, a small old television with the sound down: the evening news. KUROSE walking into a building between lawyers, cameras flashing, his face composed. A photograph of ISHIDA in uniform. Then the weather.",
+     "text": "On a shelf above the door, a small old television with the sound down: the evening news.",
      "silent": true,
      "background": "/film/img/s100/320-the-news-nobody-watches.jpg",
      "cinematic": {
@@ -17567,13 +18479,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1445",
+     "id": "nw_b1597",
+     "characterId": "nw_narrator",
+     "text": "KUROSE walking into a building between lawyers, cameras flashing, his face composed. A photograph of ISHIDA in uniform. Then the weather.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1598",
      "characterId": "nw_narrator",
      "text": "Nobody looks up.",
      "silent": true
     },
     {
-     "id": "nw_b1446",
+     "id": "nw_b1599",
      "characterId": "nw_narrator",
      "text": "Kaneko ladles. JACK sits at the counter, a bowl in front of him, a space beside him.",
      "silent": true,
@@ -17595,13 +18513,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1447",
+     "id": "nw_b1600",
      "characterId": "nw_narrator",
      "text": "The curtain in the doorway moves. VERA. The red bird clip in her hair.",
      "silent": true
     },
     {
-     "id": "nw_b1448",
+     "id": "nw_b1601",
      "characterId": "nw_narrator",
      "text": "She stands a moment. Then she sits down beside him.",
      "silent": true,
@@ -17623,7 +18541,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1449",
+     "id": "nw_b1602",
      "characterId": "nw_narrator",
      "text": "Kaneko sets a bowl in front of her. Vera eats. All of it.",
      "silent": true,
@@ -17645,19 +18563,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1450",
+     "id": "nw_b1603",
      "characterId": "nw_narrator",
      "text": "She puts money on the counter. Too much. Kaneko looks at it, then at her, and leaves it where it is.",
      "silent": true
     },
     {
-     "id": "nw_b1451",
+     "id": "nw_b1604",
      "characterId": "nw_narrator",
      "text": "Past the curtain: a lit window, a radio through a wall, the city going on.",
      "silent": true
     },
     {
-     "id": "nw_b1452",
+     "id": "nw_b1605",
      "characterId": "nw_narrator",
      "text": "HOLD on the three of them in the steam.",
      "silent": true,
