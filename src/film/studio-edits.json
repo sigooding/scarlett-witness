@@ -362,5 +362,15 @@
       "file": "train-inside-1",
       "volume": 0.6
     }
-  ]
+  ],
+  "dialogueBox": {
+    "bodyFont": "elegant",
+    "headingFont": "elegant",
+    "hudTheme": "midnight-teal",
+    "textScale": 1.1,
+    "bordered": true,
+    "backgroundOpacity": 0.85,
+    "backdropBlur": 2,
+    "reserveLines": 3
+  }
 }

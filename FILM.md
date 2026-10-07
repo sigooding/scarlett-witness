@@ -38,3 +38,5 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 **Narration.** Every scene has `autoNarrate: false` (Studio → Audio → "Auto-play prose voice on first scene entry" off), set in the generator, so the browser voice never reads the scene prose; the recorded takes still play.
 
 **Scene 78.** The "midnight in the rain" cue is removed (the scene is music-off, 4 s fade); the opening-scene score `midnight-in-the-rain-v6.mp3` is a different file and stays.
+
+**Text and theme (7 October 2026, later).** Every scene has `noTypewriter: true` (the words appear at once; the recorded voice sets the pace). The reading panel uses the in-game theme options through `dialogueBox` in `studio-edits.json`: Playfair Display (`elegant`) for body and headings, the `midnight-teal` HUD scheme (it sits with the cool slate grade of the pictures), text 10% larger, a bordered panel at 85% opacity. Change those in Studio (In-game theme) or in the file.
