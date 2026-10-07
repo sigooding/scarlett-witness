@@ -5808,7 +5808,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
-   "choices": []
+   "choices": [],
+   "musicMode": "none",
+   "musicFadeSeconds": 4
   },
   {
    "id": "nw_s20",
@@ -9883,7 +9885,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/dark-hills-blues.mp3",
+   "musicLevel": 0.3,
+   "musicFadeSeconds": 3
   },
   {
    "id": "nw_s53",
@@ -10094,7 +10100,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/dark-hills-blues.mp3",
+   "musicLevel": 0.3,
+   "musicFadeSeconds": 3
   },
   {
    "id": "nw_m53",
@@ -10307,7 +10317,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "hotspots": [],
-   "choices": []
+   "choices": [],
+   "musicMode": "none",
+   "musicFadeSeconds": 4
   },
   {
    "id": "nw_s54",

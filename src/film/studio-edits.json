@@ -64,6 +64,26 @@
       "autoAdvanceTargetSceneId": null,
       "autoAdvanceDelaySeconds": null,
       "autoAdvanceHideTimer": null
+    },
+    "nw_s52": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/dark-hills-blues.mp3",
+      "musicLevel": 0.3,
+      "musicFadeSeconds": 3
+    },
+    "nw_s53": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/dark-hills-blues.mp3",
+      "musicLevel": 0.3,
+      "musicFadeSeconds": 3
+    },
+    "nw_s19": {
+      "musicMode": "none",
+      "musicFadeSeconds": 4
+    },
+    "nw_s53a": {
+      "musicMode": "none",
+      "musicFadeSeconds": 4
     }
   },
   "startSceneId": "nw_s1",
