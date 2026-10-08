@@ -1409,9 +1409,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
-   "musicMode": "track",
-   "musicUrl": "/film/audio/midnight-in-the-rain-v6.mp3",
-   "musicLevel": 0.35
+   "musicMode": "none",
+   "musicFadeSeconds": 2
   },
   {
    "id": "nw_s2",
