@@ -551,5 +551,19 @@
     "headingFont": "elegant",
     "hudTheme": "midnight-teal",
     "textScale": 1.1
-  }
+  },
+  "soundtracks": [
+    {
+      "id": "raid",
+      "title": "The raid on the Hive",
+      "musicUrl": "/audio/coins-measure-time.mp3",
+      "seconds": 120.67,
+      "from": "nw_s85",
+      "to": "nw_s92",
+      "musicLevel": 0.9,
+      "fadeIn": 1.5,
+      "fadeOut": 3,
+      "slack": 2
+    }
+  ]
 }
