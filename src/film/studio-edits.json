@@ -182,19 +182,24 @@
       "tv-murmur"
     ],
     "nw_s4": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-window-rain"
     ],
     "nw_s25a": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-breakfast-counter"
     ],
     "nw_s32": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-inn-night"
     ],
     "nw_s39": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-inn-night"
     ],
     "nw_s40": [
-      "tv-murmur"
+      "tv-murmur",
+      "loop-inn-night"
     ],
     "nw_s53a": [
       "tv-murmur",
@@ -208,7 +213,8 @@
       "tv-murmur"
     ],
     "nw_s34": [
-      "rain-tin-roof"
+      "rain-tin-roof",
+      "loop-inn-night"
     ],
     "nw_s43": [
       "rain-tin-roof"
@@ -299,6 +305,105 @@
     ],
     "nw_s94": [
       "loop-car-idle-rain"
+    ],
+    "nw_s63": [
+      "loop-viaduct"
+    ],
+    "nw_s63a": [
+      "loop-viaduct"
+    ],
+    "nw_s67": [
+      "loop-viaduct"
+    ],
+    "nw_s70": [
+      "loop-viaduct"
+    ],
+    "nw_s92": [
+      "loop-viaduct"
+    ],
+    "nw_s51": [
+      "loop-highrise-office"
+    ],
+    "nw_s83": [
+      "loop-highrise-office"
+    ],
+    "nw_s36": [
+      "loop-window-rain"
+    ],
+    "nw_s52": [
+      "loop-window-rain"
+    ],
+    "nw_s65": [
+      "loop-window-rain"
+    ],
+    "nw_s76": [
+      "loop-window-rain"
+    ],
+    "nw_s79": [
+      "loop-window-rain"
+    ],
+    "nw_s10": [
+      "loop-neon-office"
+    ],
+    "nw_s11": [
+      "loop-neon-office"
+    ],
+    "nw_s18": [
+      "loop-neon-office"
+    ],
+    "nw_s21": [
+      "loop-neon-office"
+    ],
+    "nw_s77": [
+      "loop-neon-office"
+    ],
+    "nw_s50": [
+      "loop-pickup-truck"
+    ],
+    "nw_s33": [
+      "loop-inn-night"
+    ],
+    "nw_s35": [
+      "loop-inn-night"
+    ],
+    "nw_s37": [
+      "loop-inn-night"
+    ],
+    "nw_s41": [
+      "loop-inn-night"
+    ],
+    "nw_s42": [
+      "loop-inn-night"
+    ],
+    "nw_s44": [
+      "loop-inn-night"
+    ],
+    "nw_s45": [
+      "loop-inn-night"
+    ],
+    "nw_s46": [
+      "loop-inn-night"
+    ],
+    "nw_s73": [
+      "loop-wet-street"
+    ],
+    "nw_s95": [
+      "loop-wet-street"
+    ],
+    "nw_s85": [
+      "loop-hive-stairwell"
+    ],
+    "nw_s88": [
+      "loop-hive-stairwell"
+    ],
+    "nw_s89": [
+      "loop-hive-stairwell"
+    ],
+    "nw_s27": [
+      "loop-crossing-traffic"
+    ],
+    "nw_s62": [
+      "loop-crossing-traffic"
     ]
   },
   "sfx": [

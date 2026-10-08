@@ -1772,7 +1772,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "4 — Vera's apartment",
    "background": "/film/img/s4/33-the-apartment.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -3580,7 +3580,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "10 — Who calls me that?",
    "background": "/film/img/s10/164-depends-whos-calling.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -4002,7 +4002,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "11 — Two men laughing",
    "background": "/film/img/s11/243-the-box.jpg",
    "prose": "INT. JACK'S OFFICE - LATER",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -5934,7 +5934,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "18 — After the last train",
    "background": "/film/img/s18/283-the-letter.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -6498,7 +6498,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "21 — Footsteps on the stairs",
    "background": "/film/img/s21/193-footsteps-on-the-stairs.jpg",
    "prose": "INT. JACK'S OFFICE - DAY",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -7514,7 +7514,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "25 — Breakfast",
    "background": "/film/img/s25a/287-breakfast.jpg",
    "prose": "INT. TINY BREAKFAST COUNTER, NEAR THE STATION - MORNING",
-   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-breakfast-counter.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -7928,7 +7928,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "27 — The old song",
    "background": "/film/img/s27/202-the-old-song.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - DAY",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -8678,7 +8678,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "32 — Just one night",
    "background": "/film/img/s32/170-just-one-night.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8777,7 +8777,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "33 — The window swollen shut",
    "background": "/film/img/s33/206-the-window-swollen-shut.jpg",
    "prose": "INT. ROADSIDE INN, CORRIDOR AND BATH - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8860,7 +8860,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "34 — Twenty years of Januaries",
    "background": "/film/img/s34/172-twenty-years-of-januaries.jpg",
    "prose": "INT. ROADSIDE INN, JACK'S ROOM - NIGHT",
-   "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3",
+   "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8925,7 +8925,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "35 — The pink payphone",
    "background": "/film/img/s35/207-the-pink-payphone.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -8974,7 +8974,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "36 — Come back safe anyway",
    "background": "/film/img/s36/208-come-back-safe-anyway.jpg",
    "prose": "INT. VERA'S APARTMENT - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9128,7 +9128,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "37 — The keys are always in it",
    "background": "/film/img/s37/209-the-keys-are-always-in-it.jpg",
    "prose": "INT. ROADSIDE INN, KITCHEN DOORWAY - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9282,7 +9282,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "39 — The curtain gap",
    "background": "/film/img/s39/174-he-has-heard-the-gravel.jpg",
    "prose": "INT. ROADSIDE INN, JACK'S ROOM - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9387,7 +9387,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "40 — Plaster rains down",
    "background": "/film/img/s40/176-were-closed.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/tv-murmur.mp3",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9486,7 +9486,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "41 — Boots below",
    "background": "/film/img/s41/177-boots-below.jpg",
    "prose": "INT. ROADSIDE INN, UPSTAIRS CORRIDOR - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9567,7 +9567,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "42 — The third time",
    "background": "/film/img/s42/210-the-third-time.jpg",
    "prose": "INT. ROADSIDE INN, BATHROOM - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9685,7 +9685,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "44 — Stay whatever you hear",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
    "prose": "INT. ROADSIDE INN, KITCHEN - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9768,7 +9768,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "45 — The lobby goes dark",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -9921,7 +9921,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "46 — Clutch each other",
    "background": "/film/img/s46/213-clutch-each-other.jpg",
    "prose": "INT. ROADSIDE INN, KITCHEN - CONTINUOUS",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -10214,7 +10214,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "50 — Hand starts to shake",
    "background": "/film/img/s50/216-hand-starts-to-shake.jpg",
    "prose": "INT. PICKUP TRUCK - MOVING - DAWN",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-pickup-truck.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -10315,7 +10315,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "51 — The model, corrected",
    "background": "/film/img/s51/310-the-model-at-dawn.jpg",
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAWN",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -10408,7 +10408,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "52 — She pulls him in",
    "background": "/film/img/s52/218-she-pulls-him-in.jpg",
    "prose": "INT. VERA'S APARTMENT - DAWN",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -11861,7 +11861,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "62 — Like a date",
    "background": "/film/img/s62/229-like-a-date.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -11986,7 +11986,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "63 — No questions",
    "background": "/film/img/s63/230-no-questions.jpg",
    "prose": "INT. KATO RENTAL LOCKERS, UENO - NIGHT",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/loop-viaduct.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -12133,7 +12133,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "63 — Not another day",
    "background": "/film/img/s63a/293-the-sedan-waits.jpg",
    "prose": "EXT. UENO, UNDER THE RAILWAY ARCHES - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -12403,7 +12403,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "65 — The wine-red dress",
    "background": "/film/img/s65/232-the-wine-red-dress.jpg",
    "prose": "INT. VERA'S APARTMENT - EVENING",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -12685,7 +12685,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "67 — A different clock",
    "background": "/film/img/s67/234-a-different-clock.jpg",
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -13001,7 +13001,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "70 — Position",
    "background": "/film/img/s70/237-position.jpg",
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -13613,7 +13613,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "73 — Vera runs",
    "background": "/film/img/s73/69-vera-runs.jpg",
    "prose": "EXT. TOKYO STREETS - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -14352,7 +14352,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "76 — The lighter",
    "background": "/film/img/s76/82-on-the-floor.jpg",
    "prose": "INT. VERA'S APARTMENT - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -14499,7 +14499,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "77 — The envelope",
    "background": "/film/img/s77/85-the-desk-lamp.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -14760,7 +14760,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "79 — Her father's handwriting",
    "background": "/film/img/s79/91-grey-light.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -15799,7 +15799,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "83 — It's just a face",
    "background": "/film/img/s83/109-the-fortieth-floor.jpg",
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAY",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -16454,7 +16454,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "85 — The Hive is watching",
    "background": "/film/img/s85/119-single-file.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -16743,7 +16743,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "88 — Its own dark",
    "background": "/film/img/s88/126-dark.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -16836,7 +16836,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "89 — The unlit lighter",
    "background": "/film/img/s89/128-by-touch.jpg",
    "prose": "INT. THE HIVE, STAIRWELL - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -17347,7 +17347,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "92 — Until us",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "prose": "EXT. STREET BELOW THE VIADUCT - MOMENTS LATER",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -17664,7 +17664,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "95 — Taillights",
    "background": "/film/img/s95/142-taillights.jpg",
    "prose": "EXT. TOKYO STREET - CONTINUOUS",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
