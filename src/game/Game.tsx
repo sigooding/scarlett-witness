@@ -2487,7 +2487,7 @@ function DeductionBoard({
         title: c.name,
         icon: c.avatarUrl.startsWith("emoji:") ? c.avatarUrl.slice(6) : "🕵️",
         sub: c.role,
-        img: c.avatarUrl.startsWith("emoji:") ? undefined : c.avatarUrl,
+        img: !c.avatarUrl || c.avatarUrl.startsWith("emoji:") ? undefined : c.avatarUrl,
       };
     });
     return [...clues, ...suspects];
@@ -8389,7 +8389,7 @@ function CasePlayer({
                 <div key={c.id} className={`border ${border} bg-noir-900/60 p-2.5 ${met ? "" : "opacity-55"}`}>
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 shrink-0 overflow-hidden border border-gold/40 bg-noir-950">
-                      {c.avatarUrl.startsWith("emoji:") ? (
+                      {!c.avatarUrl || c.avatarUrl.startsWith("emoji:") ? (
                         <div className="flex h-full w-full items-center justify-center text-2xl">{c.avatarUrl.slice(6) || "👤"}</div>
                       ) : (
                         <img src={assetUrl(c.avatarUrl)} alt={c.name} className="h-full w-full object-cover object-top" loading="lazy" decoding="async" />

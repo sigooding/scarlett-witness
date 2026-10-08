@@ -680,8 +680,9 @@ win.history.replaceState(null, "", "/");
   const endCredits = nwFilm.scenes.find((s) => s.id === "nw_credits");
   const rollTitle = creditsRollSeconds(titleScene.prose, titleScene.credits);
   const rollEnd = creditsRollSeconds(endCredits.prose, endCredits.credits);
+  // an authored timer may only stretch a roll (the film's titles run as long as their song), never cut it short
   const noAuthoredTimers =
-    !("autoAdvanceDelaySeconds" in titleScene) &&
+    (!("autoAdvanceDelaySeconds" in titleScene) || titleScene.autoAdvanceDelaySeconds >= rollTitle) &&
     !("autoAdvanceDelaySeconds" in endCredits) &&
     !("choiceDelaySeconds" in endCredits);
   console.log("\\n=== CREDITS — THE ROLL IS THE CLOCK ===");

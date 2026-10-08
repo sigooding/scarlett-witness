@@ -261,7 +261,7 @@ scenes.push({
   prose: "Nobody's Witness\nTokyo as a memory that is still happening.",
   credits: { title: "Nobody's Witness", subtitle: "Tokyo as a memory that is still happening.", lines: creditLines, font: "elegant", style: "cards", cardSeconds: 3.2, cardMotion: "fade", montage, montageSeconds: 7.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#e9e2d0", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
   musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 4, ambientAudio: "", transition: "fade-black", transitionSpeed: 2,
-  dialogueBeats: [], hotspots: [], choices: [], choiceDelaySeconds: 100,
+  dialogueBeats: [], hotspots: [], choices: [],
 });
 scenes.push({
   id: "nw_end", title: "The end", isEnding: true, background: P("/img/s1/377-the-hive-remembered.jpg"), prose: "Tokyo as a memory that is still happening.",
@@ -301,7 +301,10 @@ scenes.forEach((s, i) => {
       // "After this beat — cut to scene": the last beat hands over to the next scene, so the scene's own background never shows between them
       Object.assign(s.dialogueBeats[s.dialogueBeats.length - 1], { afterBeatTargetSceneId: scenes[i + 1].id, afterBeatMode: "auto", afterBeatDelaySeconds: 1 });
     } else {
-      Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, autoAdvanceDelaySeconds: s.id === "nw_credits" ? 108 : s.id === "nw_title" ? 22 : s.credits?.montage ? s.credits.montage.length * s.credits.montageSeconds : 1.5, autoAdvanceHideTimer: true });
+      // the opening titles and the end credits are timed by their own roll (a Studio edit may stretch the titles to their song);
+      // a montage runs its stills once; anything else moves straight on
+      const timed = s.id === "nw_credits" || s.id === "nw_title" ? {} : { autoAdvanceDelaySeconds: s.credits?.montage ? s.credits.montage.length * s.credits.montageSeconds : 1.5 };
+      Object.assign(s, { autoAdvanceTargetSceneId: scenes[i + 1].id, ...timed, autoAdvanceHideTimer: true });
     }
   }
 });
