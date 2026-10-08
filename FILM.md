@@ -6,6 +6,10 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## Every picture gets its own words (9 October 2026)
+
+Several shots often cover one paragraph of the screenplay. The visual novel holds each for 2.2 seconds; this film used to let the last one win, so **16 of the 365 pictures were never shown** (Mara walking in scene 1, the journalist turning in scene 2, the laundry in 3, Mrs. Sakai's empty house in 59, and more). Now the builder cuts the paragraph where the next shot's quoted beat begins (each picture step in `src/film/story.json` carries `quote`, the words PlayFrame's board says the shot covers), shares a spoken line's takes between the pictures whose beat it is, and gives a picture left with no words of its own a short caption: `"pictureCaptions"` in `src/film/studio-edits.json` (picture file name to text), else the shot's title. All 365 pictures play. A closing CUT TO BLACK no longer leaves a "·" beat to click.
+
 ## Notes on the pictures, clips and sound (as of 6 October 2026)
 
 **Canonical pictures come from PlayFrame** (`sigooding/PlayFrame`, `public/images/neonoire/`) by way of the visual novel's importer; this repo normally copies them into `public/film/img/`. The decisions behind them are in PlayFrame's `docs/neonoire/story-bible.md` (Part 9, items 19 and 20) and `docs/neonoire/handoff.md`. The 6 October retakes made in this checkout (shots 10, 12, 13, 361, 158–161, 320, 86, 87, 316, 89, 90) have been **synced back into PlayFrame** (earlier versions archived there) and re-imported, so rerunning `node tools/build-film-story.mjs` reproduces them unchanged. Do not hand-edit images here; make retakes in PlayFrame, or sync any local retake back first.
