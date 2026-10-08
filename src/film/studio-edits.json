@@ -47,9 +47,10 @@
       "autoAdvanceHideTimer": null
     },
     "nw_s1": {
-      "musicMode": "track",
-      "musicUrl": "/film/audio/midnight-in-the-rain-v6.mp3",
-      "musicLevel": 0.35,
+      "musicMode": "none",
+      "musicUrl": null,
+      "musicLevel": null,
+      "musicFadeSeconds": 2,
       "autoAdvanceTargetSceneId": null,
       "autoAdvanceDelaySeconds": null,
       "autoAdvanceHideTimer": null
@@ -136,8 +137,8 @@
   },
   "dropBeats": {
     "nw_s2": [
-      14,
-      15
+      "Over black: RAIN.",
+      "NOBODY'S WITNESS"
     ]
   },
   "montages": [

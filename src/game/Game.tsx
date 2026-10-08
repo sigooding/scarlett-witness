@@ -7380,7 +7380,7 @@ function CasePlayer({
 
       {/* narrative panel — pointer-events-auto so clicks stay contained. */}
       <div
-        className={`absolute inset-x-0 bottom-0 z-[47] flex justify-center p-4 pl-24 ${
+        className={`absolute inset-x-0 bottom-0 z-[47] flex justify-center p-4 pl-4 sm:pl-24 ${
           scene.nodeType === "credits"
             ? // A montage is the point of the shot, so it stays visible: only the
               // plain (image-less) credits node gets the black scrim.
