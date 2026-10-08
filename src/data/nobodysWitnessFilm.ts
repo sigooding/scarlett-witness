@@ -798,6 +798,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicMode": "track",
    "musicUrl": "/film/audio/title-song.mp3",
    "musicFadeSeconds": 0.1,
+   "musicLoop": false,
    "ambientAudio": "",
    "transition": "fade-black",
    "transitionSpeed": 1.5,
@@ -14097,6 +14098,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicMode": "track",
    "musicUrl": "/film/audio/bad-guy.mp3",
    "musicFadeSeconds": 5,
+   "musicLoop": false,
    "dialogueBeats": [
     {
      "id": "nw_b1184",
@@ -15182,6 +15184,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "musicMode": "none",
    "musicFadeSeconds": 4,
+   "musicLoop": false,
    "dialogueBeats": [
     {
      "id": "nw_b1280",
@@ -17062,7 +17065,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicMode": "track",
    "musicUrl": "/film/audio/coins-measure-time.mp3",
    "musicLevel": 0.9,
-   "musicFadeSeconds": 1.5
+   "musicFadeSeconds": 1.5,
+   "musicLoop": false
   },
   {
    "id": "nw_song_raid_02",

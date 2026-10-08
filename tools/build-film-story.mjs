@@ -113,7 +113,7 @@ scenes.push({
   id: "nw_title", title: "Opening titles", nodeType: "credits", background: P(keyStills[0]),
   prose: "Nobody's Witness\nAn interactive visual novel",
   credits: { title: "Nobody's Witness", subtitle: "An interactive visual novel", lines: [{ role: "A film of", name: "Tokyo in the rain" }, { role: "Starring", name: "Jack · Vera · Mara" }], font: "type", style: "cards", cardSeconds: 3.8, cardMotion: "letterspace", montage: keyStills.map(P), montageSeconds: 4.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#eceae4", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
-  musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 2, ambientAudio: "", transition: "fade-black", transitionSpeed: 1.5,
+  musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 2, musicLoop: false, ambientAudio: "", transition: "fade-black", transitionSpeed: 1.5,
   dialogueBeats: [], hotspots: [], choices: [],
 });
 scenes.push({
@@ -195,7 +195,7 @@ film.scenes.forEach((sc, si) => {
     else if (st.t === "sfx") carry = SFX[st.id] ? P(`/sfx/${SFX[st.id]}.mp3`) : carry;
     else if (st.t === "music") {
       // music is per scene node in this engine: a cue part-way through a scene starts a continuation node (the waiting pictures carry over)
-      const cue = st.id === "off" ? { musicMode: "none", musicFadeSeconds: 4 } : { musicMode: "track", musicUrl: P(`/audio/${MUSIC[st.id] ?? "midnight-in-the-rain"}.mp3`), musicFadeSeconds: 5 };
+      const cue = st.id === "off" ? { musicMode: "none", musicFadeSeconds: 4 } : { musicMode: "track", musicUrl: P(`/audio/${MUSIC[st.id] ?? "midnight-in-the-rain"}.mp3`), musicFadeSeconds: 5, musicLoop: false };
       if (beats.length) close();
       music = cue;
     }
@@ -415,7 +415,7 @@ for (const seg of edits.soundtracks ?? []) {
       cue = {};
     });
   }
-  Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.9, musicFadeSeconds: seg.fadeIn ?? 1.5 });
+  Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.9, musicFadeSeconds: seg.fadeIn ?? 1.5, musicLoop: false });
   // what is left of the last scene after the song plays as an ordinary node, and fades the song out
   let after = next;
   if (rest) {
