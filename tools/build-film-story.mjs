@@ -130,9 +130,56 @@ const lookOf = sc => ({
   particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
   hideHud: true, letterbox: true,
 });
+// Pictures waiting for words. Several shots can share one paragraph of the screenplay (the visual novel holds each for 2.2 s); the film
+// gives each its own words instead of letting the last one win: a paragraph is cut where the next shot's quoted beat begins (PlayFrame's
+// boards quote the words each shot covers; the visual novel's importer passes them on), a spoken line's takes are shared out between the
+// pictures whose beat it is, and a picture left with no words of its own gets a short caption (studio-edits "pictureCaptions", else its
+// title). No shot is skipped.
+const pictureCaptions = (() => { try { return JSON.parse(readFileSync(resolve(root, "src/film/studio-edits.json"), "utf8")).pictureCaptions ?? {}; } catch { return {}; } })();
+const normal = text => text.replace(/\s+/g, " ").trim();
+const baseOf = path => path.replace(/^.*\//, "").replace(/\.[a-z0-9]+$/i, "");
+const findQuote = (text, quote) => {
+  if (!quote) return null;
+  for (const q of [normal(quote), normal(quote.replace(/\([^)]*\)/g, " "))]) {
+    const at = q ? text.indexOf(q) : -1;
+    if (at >= 0) return [at, at + q.length];
+  }
+  return null;
+};
+const sentencesOf = text => text.match(/[^.!?…]+[.!?…]+["”’')]*\s*|[^.!?…]+$/g)?.map(x => x.trim()).filter(Boolean) ?? [text];
+/** Share a paragraph between the waiting pictures, in order: [{ pic, text }]; pic null keeps the picture already showing, text "" means a caption. */
+function shareText(text, pics) {
+  const T = normal(text);
+  if (pics.length <= 1) return [{ pic: pics[0] ?? null, text: T }];
+  const spans = pics.map(pic => findQuote(T, pic.quote));
+  // a picture's words begin at its quote, or, when its quote runs on past the end of the one before, where that one ends
+  const starts = spans.map((span, i) => !span ? -1 : i && spans[i - 1] && span[0] < spans[i - 1][1] && span[1] > spans[i - 1][1] ? spans[i - 1][1] : span[0]);
+  const groups = [];
+  let last = -1;
+  pics.forEach((pic, i) => {
+    if (starts[i] > last) {
+      if (!groups.length && starts[i] > 0) groups.push({ start: 0, pics: [] });
+      groups.push({ start: starts[i], pics: [pic] }); last = starts[i];
+    } else if (groups.length) groups.at(-1).pics.push(pic);
+    else { groups.push({ start: 0, pics: [pic] }); last = 0; }
+  });
+  return groups.flatMap((group, g) => {
+    const words = T.slice(group.start, groups[g + 1]?.start ?? T.length).trim();
+    if (!group.pics.length) return words ? [{ pic: null, text: words }] : [];
+    // pictures that share one beat share its sentences, as evenly as they go; any left over get a caption
+    const sentences = sentencesOf(words), n = Math.min(group.pics.length, sentences.length);
+    return group.pics.map((pic, k) => {
+      if (k >= n) return { pic, text: "" };
+      const from = Math.round((k * sentences.length) / n), to = Math.round(((k + 1) * sentences.length) / n);
+      return { pic, text: sentences.slice(from, to).join(" ") };
+    });
+  });
+}
+const captionFor = pic => pictureCaptions[pic.base] ?? pic.title ?? "·";
+const captionBeat = pic => beat(null, { text: captionFor(pic), silent: true, ...bgFields(pic.bg) });
 film.scenes.forEach((sc, si) => {
   let beats = [];
-  let pendingBg = null, caption = null, bg0 = null, lastBg = null, part = 0;
+  let pend = [], caption = null, bg0 = null, lastBg = null, part = 0;
   let music = null;   // scene-level music for the node being built
   const close = () => {
     scenes.push({
@@ -143,41 +190,59 @@ film.scenes.forEach((sc, si) => {
     beats = []; part++; music = null;
   };
   for (const st of sc.steps) {
-    if (st.t === "bg") { pendingBg = P(st.src); bg0 ??= pendingBg; lastBg = pendingBg; }
+    if (st.t === "bg") { const bg = P(st.src); pend.push({ bg, quote: st.quote, title: st.title, base: baseOf(st.src) }); bg0 ??= bg; lastBg = bg; }
     else if (st.t === "insert") caption = st.text;
     else if (st.t === "sfx") carry = SFX[st.id] ? P(`/sfx/${SFX[st.id]}.mp3`) : carry;
     else if (st.t === "music") {
-      // music is per scene node in this engine: a cue part-way through a scene starts a continuation node
+      // music is per scene node in this engine: a cue part-way through a scene starts a continuation node (the waiting pictures carry over)
       const cue = st.id === "off" ? { musicMode: "none", musicFadeSeconds: 4 } : { musicMode: "track", musicUrl: P(`/audio/${MUSIC[st.id] ?? "midnight-in-the-rain"}.mp3`), musicFadeSeconds: 5 };
-      if (beats.length) { const carried = pendingBg; close(); pendingBg = carried; }
+      if (beats.length) close();
       music = cue;
     }
-    else if (st.t === "black") { pendingBg = "gradient:linear-gradient(#000,#000)"; lastBg = pendingBg; }
-    else if (st.t === "card") beats.push(beat(null, { text: st.text.toUpperCase(), silent: true, ...(pendingBg ? bgFields(pendingBg) : {}) })), (pendingBg = null);
+    else if (st.t === "black") { for (const pic of pend.splice(0)) beats.push(captionBeat(pic)); pend.push({ bg: "gradient:linear-gradient(#000,#000)" }); lastBg = pend[0].bg; }
+    else if (st.t === "card") {
+      if (pend.length > 1) pend = pend.filter(pic => !pic.restore);
+      while (pend.length > 1) beats.push(captionBeat(pend.shift()));
+      beats.push(beat(null, { text: st.text.toUpperCase(), silent: true, ...(pend.length ? bgFields(pend.shift().bg) : {}) }));
+    }
     else if (st.t === "text" || st.t === "line") {
       // Silent narration is cut at sentence ends into pieces of at most ~140 characters, so a long action paragraph never fills the screen
       // (a recorded line stays whole: its take is one file).
       // A line spoken in another language shows its English subtitle after the words ("Shitsurei shimasu. (Excuse me.)"); the visual novel
       // keeps it on its own line under the words, a beat has only the one.
-      const pieces = st.t === "line" ? splitLine(st.sub ? `${st.text} (${st.sub})` : st.text, st.voice) : chunkText(st.text).map(text => ({ text }));
-      pieces.forEach((p, pi) => {
+      let parts, extra = [];
+      if (pend.length > 1) pend = pend.filter(pic => !pic.restore);   // a new shot makes putting the still back moot
+      if (st.t === "line") {
+        const pieces = splitLine(st.sub ? `${st.text} (${st.sub})` : st.text, st.voice);
+        const mine = pend.length ? [pend.shift()] : [];
+        while (pend.length && findQuote(normal(st.text), pend[0].quote)) mine.push(pend.shift());
+        parts = pieces.map((piece, i) => ({ ...piece, pic: mine[i] ?? null }));
+        extra = mine.slice(pieces.length);
+      } else {
+        parts = shareText(st.text, pend.splice(0)).flatMap(seg => seg.text
+          ? chunkText(seg.text).map((text, k) => ({ text, pic: k ? null : seg.pic }))
+          : [{ text: "", pic: seg.pic, captionOnly: true }]);
+      }
+      parts.forEach((p, pi) => {
+        if (p.captionOnly) { beats.push(captionBeat(p.pic)); return; }
         const f = { text: p.text };
         if (p.audioUrl) f.audioUrl = p.audioUrl; else if (st.t === "text") f.silent = true;
         if (st.t === "line" && st.note && pi === 0) f.expression = st.note;
         const clip = st.t === "line" && p.audioUrl && CLIPS[p.audioUrl.replace(/^\/film/, "")];
         if (clip) {
           // the video replaces the picture for this line; the next beat puts the still back
-          const still = pendingBg ?? lastBg;
-          Object.assign(f, { background: `video:${P(clip)}`, cinematic: camera(still ?? clip), backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.6 });
-          pendingBg = still;
-        } else if (pi === 0 && pendingBg) { Object.assign(f, bgFields(pendingBg)); pendingBg = null; }
+          const still = p.pic ?? { bg: lastBg };
+          Object.assign(f, { background: `video:${P(clip)}`, cinematic: camera(still.bg ?? clip), backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.6 });
+          if (still.bg) pend.unshift({ ...still, restore: true });
+        } else if (p.pic) Object.assign(f, bgFields(p.pic.bg));
         if (pi === 0 && caption && st.t === "text") { f.text = `${caption}\n\n${f.text}`; caption = null; }
         beats.push(beat(st.t === "line" ? st.who : null, f));
       });
+      for (const pic of extra) beats.push(captionBeat(pic));
     }
   }
-  // a shot with no words still gets its moment
-  if (pendingBg) beats.push(beat(null, { text: "·", silent: true, ...bgFields(pendingBg) }));
+  // a shot with no words still gets its moment (a closing CUT TO BLACK needs none: the next scene fades in through black)
+  for (const pic of pend.splice(0)) if (!pic.restore && !pic.bg.startsWith("gradient:")) beats.push(captionBeat(pic));
   close();
 });
 // link everything in a line, finishing on the credits ending
