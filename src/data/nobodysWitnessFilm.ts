@@ -1185,7 +1185,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b31",
      "characterId": "nw_narrator",
      "text": "The old man folds onto the street.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/body-fall-street.mp3"
     },
     {
      "id": "nw_b32",
@@ -1537,7 +1538,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b53",
      "characterId": "nw_masked_man",
-     "text": "Shitsurei shimasu.",
+     "text": "Shitsurei shimasu. (Excuse me.)",
      "audioUrl": "/film/voice/s2/25-maskedman-shitsurei-shimasu.mp3",
      "expression": "in japanese"
     },
@@ -1590,7 +1591,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/shot2.mp3"
+     "sfxUrl": "/film/sfx/shot2-fall.mp3"
     },
     {
      "id": "nw_b57",
@@ -4655,13 +4656,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b336",
      "characterId": "nw_vera",
-     "text": "All the way back here, chasing a ghost, and I won't even look at it. I told her to go, then.",
+     "text": "All the way back here, chasing a ghost, and I won't even look at it.",
      "audioUrl": "/film/voice/s14/270-vera-bitterly-she-said-i-was-the.mp3"
     },
     {
      "id": "nw_b337",
      "characterId": "nw_vera",
-     "text": "Go home. Those were the last things I said to her.",
+     "text": "I told her to go, then. Go home. Those were the last things I said to her.",
      "audioUrl": "/film/voice/s14/270-vera-quietly-i-told-her-to-go.mp3"
     },
     {
@@ -13039,7 +13040,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1111",
      "characterId": "nw_driver",
-     "text": "Shitsurei shimasu.",
+     "text": "Shitsurei shimasu. (Excuse me.)",
      "audioUrl": "/film/voice/s70/239-driver-excuse-me.mp3",
      "expression": "in japanese"
     },
@@ -13154,7 +13155,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1127",
      "characterId": "nw_narrator",
      "text": "She stumbles. Keeps going. Falls through the doorway.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/body-fall-doorway.mp3"
     },
     {
      "id": "nw_b1128",
