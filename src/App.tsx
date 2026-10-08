@@ -1007,6 +1007,8 @@ export default function App() {
                           ? "⭐ New — Neon Noir Break-In"
                           : s.id === "pier-four"
                           ? "⭐ New — Under Pier Four"
+                          : s.id === "hangar-cold-open-reel" || s.id === "let-the-raptures-commence-reel"
+                          ? "🚧 Reel — work in progress"
                           : s.id === "static-marlowe"
                           ? "🎞 Showcase — All Nodes"
                           : s.id === "glass-hour"
