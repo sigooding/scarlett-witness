@@ -4655,13 +4655,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b336",
      "characterId": "nw_vera",
-     "text": "All the way back here, chasing a ghost, and I won't even look at it. I told her to go, then.",
+     "text": "All the way back here, chasing a ghost, and I won't even look at it.",
      "audioUrl": "/film/voice/s14/270-vera-bitterly-she-said-i-was-the.mp3"
     },
     {
      "id": "nw_b337",
      "characterId": "nw_vera",
-     "text": "Go home. Those were the last things I said to her.",
+     "text": "I told her to go, then. Go home. Those were the last things I said to her.",
      "audioUrl": "/film/voice/s14/270-vera-quietly-i-told-her-to-go.mp3"
     },
     {
