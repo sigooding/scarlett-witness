@@ -39,7 +39,7 @@ const CONFIG = {
     tagline: "A pilot's radio in 1944, a crate marked INERT, a truck, a near-miss. Work in progress: American voices and sound effects laid on the painted boards; nobody has heard it yet.",
     width: 1280, quality: 5, format: "hangar",
     objective: "Read and watch the cold open of an animated 1975 feature, a work in progress.",
-    manifests: ["docs/hangar/voice/manifest.json"], lookup: [], pages: {}, skip: [],
+    manifests: ["docs/hangar/voice/manifest.json"], lookup: [], pages: {}, skip: [], screenplay: "docs/hangar/cold-open.fountain",
   },
   rapture: {
     name: "rapture", project: "public/projects/let-the-raptures-commence.json", id: "let-the-raptures-commence-reel", prefix: "lr", export: "LET_THE_RAPTURES_COMMENCE_REEL", file: "src/data/letTheRapturesCommenceReel.ts",
@@ -233,12 +233,64 @@ function readRapture(f) {
   return out;
 }
 
-/** The cold open's frames: the `Script:` quote (else the description) and the `NAME: (delivery) words` lines of the notes. */
+/**
+ * The cold open's action, from the screenplay itself (docs/hangar/cold-open.fountain): each frame's `Script:` quote names where in the scene the shot
+ * begins, and the frame takes every sentence of the scene's action from there to the next shot's quote, so nothing the screenplay says is lost.
+ */
+const similar = (a, b) => { const x = norm(a), y = norm(b); return x === y || x.includes(y) || y.includes(x) || x.slice(0, 18) === y.slice(0, 18); };
+const hangarText = new Map(), hangarIntro = [];
+if (C.screenplay) {
+  const paras = readFileSync(resolve(src, C.screenplay), "utf8").split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+  const seqOf = new Map();   // scene number → the screenplay in order: { a: a sentence of action } and { d: [speaker, words] }
+  let scene = 0;
+  for (let i = 0; i < paras.length; i++) {
+    const p = paras[i], h = /^(?:INT|EXT)[^\n]*#(\d+)#\s*$/.exec(p);
+    if (h) { scene = Number(h[1]); seqOf.set(scene, []); continue; }
+    if (/^>THE (LOOK|SOUND)<$/.test(p)) { hangarIntro.push(`${p.slice(1, -1)}\n\n${(paras[++i] ?? "").replace(/\s+/g, " ")}`); continue; }
+    if (!scene) continue;
+    const lines = p.split("\n").map(l => l.trim());
+    if (lines.length >= 2 && /^[A-Z][A-Z0-9 .'’\/-]*(\s*\([^)]*\))?$/.test(lines[0])) {
+      seqOf.get(scene).push({ d: [lines[0].replace(/\s*\(.*$/, ""), lines.slice(/^\(.*\)$/.test(lines[1]) ? 2 : 1).join(" ")] });
+      continue;
+    }
+    for (const a of p.replace(/\s+/g, " ").split(/(?<=[.!?…]["”')]?)\s+(?=[A-Z"“(])/)) seqOf.get(scene).push({ a });
+  }
+  for (const [n, seq] of seqOf) {
+    const frames = project.frames.filter(f => f.sceneId === `hangar-s${n}`);
+    const quoteOf = f => (/^Script:\s*"(.*)"\s*$/m.exec(f.notes || "")?.[1] ?? f.description ?? "").trim();
+    let prev = -1;
+    // a frame begins where its Script quote does; a frame whose quote is a spoken line begins at the action that sets that line up
+    const anchors = frames.map(f => {
+      const first = norm(quoteOf(f).split(/(?<=[.!?…])\s+/)[0] ?? "");
+      let at = first ? seq.findIndex((x, k) => k > prev && x.a && norm(x.a).includes(first)) : -1;
+      if (at < 0) {
+        const m = /^([A-Z][A-Z ]*):\s+(?:\([^)]*\)\s+)?(\S.*)$/m.exec(f.notes || "");
+        const d = m ? seq.findIndex((x, k) => k > prev && x.d && up(x.d[0]) === up(m[1]) && similar(x.d[1], m[2])) : -1;
+        if (d >= 0) { at = d; while (at - 1 > prev && seq[at - 1].a) at--; }
+      }
+      if (at >= 0) prev = at;
+      return at;
+    });
+    const parts = frames.map((f, k) => {
+      const start = k === 0 ? 0 : anchors[k];
+      const next = anchors.slice(k + 1).find(a => a >= 0) ?? seq.length;
+      return (k === 0 || anchors[k] >= 0) && next > start ? seq.slice(start, next).filter(x => x.a).map(x => x.a) : [];
+    });
+    // a shot the screenplay has no sentence for (a paraphrased quote, no spoken line) takes the later sentences of the shot before it
+    frames.forEach((f, k) => {
+      if (k === 0 || anchors[k] >= 0 || /^[A-Z][A-Z ]*:\s/m.test(f.notes || "") || parts[k - 1].length < 2) return;
+      const keep = Math.max(1, Math.floor(parts[k - 1].length / 2));
+      parts[k] = parts[k - 1].slice(keep); parts[k - 1] = parts[k - 1].slice(0, keep);
+    });
+    frames.forEach((f, k) => hangarText.set(f.id, parts[k].join(" ")));
+  }
+}
+
+/** The cold open's frames: the screenplay's action for the shot and the `NAME: (delivery) words` lines of the notes. */
 function readHangar(f) {
   const n = f.notes || "";
-  const q = /^Script:\s*"(.*)"\s*$/m.exec(n);
   const out = { slug: null, items: [] };
-  const action = (q ? q[1] : f.description || "").trim();
+  const action = (hangarText.has(f.id) ? hangarText.get(f.id) : /^Script:\s*"(.*)"\s*$/m.exec(n)?.[1] ?? f.description ?? "").trim();
   if (action) out.items.push({ kind: "text", text: action });
   for (const raw of n.split("\n")) {
     const m = /^([A-Z][A-Z ]*):\s+(?:\(([^)]*)\)\s+)?(\S.*)$/.exec(raw.trim());
@@ -249,7 +301,6 @@ function readHangar(f) {
 const readFrame = f => (C.format === "hangar" ? readHangar(f) : readRapture(f));
 
 // ---- a frame becomes beats ----
-const similar = (a, b) => { const x = norm(a), y = norm(b); return x === y || x.includes(y) || y.includes(x) || x.slice(0, 18) === y.slice(0, 18); };
 let beatNo = 0;
 const mkBeat = (who, fields) => ({ id: `${C.prefix}_b${++beatNo}`, characterId: charOf(who), ...fields });
 const locationOf = s => s.replace(/\s+—\s+(CONTINUOUS|LATER|MOMENTS LATER|SAME TIME)$/i, "");
@@ -258,7 +309,7 @@ function frameBeats(f, text, state) {
   const beats = [];
   const speech = (f.audio || []).filter(c => c.character !== "SFX").sort((a, b) => a.offset - b.offset);
   let k = 0, t = 0;
-  const push = (who, fields, at) => { if (at !== undefined) t = at; beats.push({ beat: mkBeat(who, fields), t }); };
+  const push = (who, fields, at, dur) => { if (at !== undefined) t = at; beats.push({ beat: mkBeat(who, fields), t, end: at !== undefined ? at + (dur ?? 0) : undefined }); };
   if (text?.slug) {
     const loc = locationOf(text.slug);
     if (!state.skipSlug && up(loc) !== up(state.lastSlug)) push(null, { text: text.slug.toUpperCase(), silent: true });
@@ -267,12 +318,24 @@ function frameBeats(f, text, state) {
   for (const item of text?.items ?? []) {
     if (item.kind === "text") { for (const piece of chunkText(item.text)) push(null, { text: piece, silent: true }); continue; }
     const e = speech[k], note = item.note ? { expression: item.note } : {};
-    if (e && up(e.character) === up(item.who) && similar(e.text, item.text)) { k++; push(item.who, { text: e.text, ...note, audioUrl: takeUrl(e.src) }, e.offset); }
+    if (e && up(e.character) === up(item.who) && similar(e.text, item.text)) { k++; push(item.who, { text: e.text, ...note, audioUrl: takeUrl(e.src) }, e.offset, e.duration); }
     else push(item.who, { text: item.text, ...note, silent: true });
   }
   for (; k < speech.length; k++) {
     warn(`${f.id}: the take "${speech[k].text.slice(0, 40)}" (${speech[k].character}) matches no line of the frame's script; kept as a beat at its offset`);
-    push(speech[k].character, { text: speech[k].text, audioUrl: takeUrl(speech[k].src) }, speech[k].offset);
+    push(speech[k].character, { text: speech[k].text, audioUrl: takeUrl(speech[k].src) }, speech[k].offset, speech[k].duration);
+  }
+  // the unvoiced beats between two voiced ones (or the frame's start and end) are spread over that stretch in proportion to their length, so an effect
+  // that belongs to the middle of a long description lands on the beat that says it
+  for (let i = 0; i < beats.length;) {
+    if (beats[i].beat.audioUrl) { i++; continue; }
+    let j = i;
+    while (j < beats.length && !beats[j].beat.audioUrl) j++;
+    const t0 = i > 0 ? (beats[i - 1].end ?? beats[i - 1].t) : 0, t1 = j < beats.length ? beats[j].t : f.duration;
+    const total = beats.slice(i, j).reduce((n, b) => n + (b.beat.text || "").length, 0) || 1;
+    let seen = 0;
+    for (let q = i; q < j; q++) { beats[q].t = round2(t0 + Math.max(0, t1 - t0) * seen / total); seen += (beats[q].beat.text || "").length; }
+    i = j;
   }
   return beats;
 }
@@ -355,7 +418,8 @@ const startId = `${C.prefix}_wip`;
 nodes.push({
   id: startId, title: "Work in progress", background: imageUrl(project.coverImage) ?? BLACK, hideHud: true, letterbox: true, transition: "fade-black", transitionSpeed: 1,
   prose: "", ambientAudio: "", dialogueBeats: [mkBeat(null, { silent: true,
-    text: `${C.title.replace(/ \(work in progress\)$/, "").toUpperCase()}\n\nWORK IN PROGRESS. The screenplay as it exists, with the voices and sound effects recorded so far. ▸ continue (click or Space) to go on. A shot with no picture yet keeps the picture before it, and black at the start of a scene.` })],
+    text: `${C.title.replace(/ \(work in progress\)$/, "").toUpperCase()}\n\nWORK IN PROGRESS. The screenplay as it exists, with the voices and sound effects recorded so far. ▸ continue (click or Space) to go on. A shot with no picture yet keeps the picture before it, and black at the start of a scene.` }),
+    ...hangarIntro.map(t => mkBeat(null, { silent: true, text: t }))],
 });
 
 const state = { lastSlug: "", skipSlug: true };
@@ -383,7 +447,7 @@ for (const scene of scenes) {
     closeNode();
   } else {
     // pictures and no story text (the legacy reference boards): a montage per run, after a card that says what the scene is
-    const isLegacy = f => !!f.image && !(f.notes || "").includes("NUMBERED SCRIPT") && !(f.audio || []).length;
+    const isLegacy = f => C.format === "rapture" && !(f.notes || "").includes("NUMBERED SCRIPT") && !(f.audio || []).length;   // a card holding the slot of a missing legacy file belongs to the run, with no picture
     const segments = [];
     for (const f of frames) {
       const last = segments[segments.length - 1], legacy = isLegacy(f);
@@ -392,11 +456,11 @@ for (const scene of scenes) {
     let first = true;
     for (const seg of segments) {
       if (seg.legacy) {
-        const urls = seg.frames.map(f => imageUrl(f.image));
+        const urls = seg.frames.filter(f => f.image).map(f => imageUrl(f.image));
         const seconds = Math.max(2, Math.round(seg.frames.reduce((n, f) => n + f.duration, 0) / seg.frames.length));
         const node = openNode(scene, { bg: urls[0] });
-        const description = scene.description.replace(/^OUTLINE ONLY — /i, "OUTLINE ONLY. ");
-        chunkText(`${sceneName(scene).toUpperCase()}. ${description}`, 240).forEach((piece, i) => node.dialogueBeats.push(mkBeat(null, { text: piece, silent: true, ...(i ? {} : bgFields(urls[0])) })));
+        const description = scene.description.replace(/^OUTLINE ONLY — ordered legacy reference board \([^)]*\), not approved coverage\.\s*/i, "").replace(/^OUTLINE ONLY — /i, "");
+        chunkText(`${sceneName(scene).toUpperCase()} (OUTLINE, with the legacy reference pictures that follow). ${description}`, 240).forEach((piece, i) => node.dialogueBeats.push(mkBeat(null, { text: piece, silent: true, ...(i ? {} : bgFields(urls[0])) })));
         node.__montage = { urls, seconds, title: sceneName(scene) };
         lastBg = urls[urls.length - 1]; first = false; closeNode();
         continue;
