@@ -43,7 +43,7 @@
       "musicFadeSeconds": 0.1,
       "musicLevel": 1.05,
       "letterbox": true,
-      "autoAdvanceDelaySeconds": 300,
+      "autoAdvanceDelaySeconds": 232,
       "autoAdvanceHideTimer": null
     },
     "nw_s1": {

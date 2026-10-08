@@ -807,9 +807,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "noTypewriter": true,
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_prologue",
-   "autoAdvanceDelaySeconds": 300,
    "musicLevel": 1.05,
-   "letterbox": true
+   "letterbox": true,
+   "autoAdvanceDelaySeconds": 232
   },
   {
    "id": "nw_prologue",
@@ -19722,11 +19722,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "dialogueBeats": [],
    "hotspots": [],
    "choices": [],
-   "choiceDelaySeconds": 100,
    "noTypewriter": true,
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_end",
-   "autoAdvanceDelaySeconds": 108,
    "autoAdvanceHideTimer": true,
    "musicLevel": 1
   },

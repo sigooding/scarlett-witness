@@ -1488,7 +1488,8 @@ function CharacterEditor({
         <div key={c.id} className="flex gap-2 border border-noir-600 p-1.5">
           <div className="flex w-16 shrink-0 flex-col items-center gap-1">
             <div className="h-14 w-14 overflow-hidden border border-gold/40 bg-noir-950">
-              {c.avatarUrl.startsWith("emoji:") ? (
+              {/* no portrait (""), like the film's cast, shows the placeholder: an <img src=""> refetches the page */}
+              {!c.avatarUrl || c.avatarUrl.startsWith("emoji:") ? (
                 <div className="flex h-full w-full items-center justify-center text-2xl">{c.avatarUrl.slice(6) || "👤"}</div>
               ) : (
                 <img src={assetUrl(media(c.avatarUrl) ?? c.avatarUrl)} alt={c.name} className="h-full w-full object-cover" />
