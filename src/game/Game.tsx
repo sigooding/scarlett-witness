@@ -3629,7 +3629,8 @@ function CasePlayer({
       const reuse = primedMusic && primedMusic.url === url ? primedMusic.el : null;
       if (primedMusic && !reuse && !primedMusic.el.paused) primedMusic.el.pause();
       const a = reuse ?? new Audio(assetUrl(url));
-      if (!reuse) a.loop = true;
+      // a song (musicLoop: false) plays once; a bed loops until changed or silenced
+      a.loop = scene.musicLoop !== false;
       a.muted = !soundOnRef.current;
       // The voice-duck envelope multiplies in here too, so a track that
       // starts mid-dialogue comes in already ducked. A per-scene music level
@@ -4235,7 +4236,8 @@ function CasePlayer({
 
   const retryMusic = useCallback(() => {
     const a = sceneAudioRef.current;
-    if (a && soundOnRef.current && a.paused) {
+    // a song that has played to its end (musicLoop: false) stays finished
+    if (a && soundOnRef.current && a.paused && !a.ended) {
       a.play().then(() => setSoundBlocked(false)).catch(() => setSoundBlocked(true));
     }
     // Video cutscenes are blocked by autoplay policy more often than audio —
@@ -4252,7 +4254,7 @@ function CasePlayer({
     setSoundBlocked(false);
     audio.unlock();
     const a = sceneAudioRef.current;
-    if (a) {
+    if (a && !a.ended) {
       a.muted = false;
       // Turning sound on mid-scene fades the track up instead of slamming it
       // in at full level.
@@ -4280,7 +4282,7 @@ function CasePlayer({
     const a = sceneAudioRef.current;
     if (a) {
       a.muted = !soundOn;
-      if (soundOn) {
+      if (soundOn && !a.ended) {
         a.play()
           .then(() => setMusicPlaying(true))
           .catch(() => setMusicPlaying(false));

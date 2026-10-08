@@ -1814,6 +1814,9 @@ export interface SceneNode {
    * - track: play musicUrl (switches tracks; same track keeps looping)
    * - none: stop the soundtrack entirely */
   musicMode?: "inherit" | "track" | "none";
+  /** false: the track this scene starts plays once and then leaves the scenes silent until another cue (a song, not a bed).
+   *  Default true: a track loops until changed or silenced. Only read when this scene starts a track. */
+  musicLoop?: boolean;
   /** Seconds to cross-fade the soundtrack when this scene changes it.
    *  Applies to both the outgoing track and the incoming one, so a switch is
    *  a true crossfade. Defaults to 1.4s. 0 = hard cut (the old behaviour). */
