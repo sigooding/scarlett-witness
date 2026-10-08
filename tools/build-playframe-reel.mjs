@@ -183,7 +183,7 @@ const charOf = who => {
 // ---- reading a frame's text ----
 const SLUG = /^(INT\.\/EXT\.|EXT\.\/INT\.|INT\/EXT|EXT\/INT|I\/E\.?|INT\.?|EXT\.?)\s+/i;
 const TIME = /^(MORNING|DAY|NIGHT|EVENING|AFTERNOON|DAWN|DUSK|NOON|CONTINUOUS|LATER|MOMENTS LATER|SAME TIME|MONTHS LATER|THE NEXT MORNING)\b/i;
-const CAMERA = /(\b\d{2,3}\s?mm\b|^(STATIC|HANDHELD|CU|ECU|INSERT|FLASH|WIDE|MEDIUM|CLOSE|TWO-SHOT|2-SHOT|OTS|POV|LOCKED OFF|PUSH|DOLLY|PAN|TILT|TRACKING|AERIAL|OVERHEAD|LOW ANGLE|HIGH ANGLE|MASTER|SINGLE|CRANE|ZOOM|SLOW|REVERSE|MOVING)\b)/;
+const CAMERA = /(\b\d{2,3}\s?mm\b|^(STATIC|HANDHELD|CU|ECU|INSERT|FLASH|WIDE|MEDIUM|CLOSE|TWO-SHOT|2-SHOT|OTS|POV|LOCKED OFF|PUSH|DOLLY|PAN|TILT|TRACKING|AERIAL|OVERHEAD|LOW ANGLE|HIGH ANGLE|MASTER|SINGLE|CRANE|ZOOM|SLOW|REVERSE|MOVING|FIXED CAM|CCTV)\b)/;
 const DLG = /^\s*([A-Z][A-Z0-9 .'’#&\/-]{0,28}?)\s*(?:\(([^)]*)\))?\s*:\s*(.*)$/;
 const leadingNote = rest => { const m = /^\(([^)]*)\)\s*(.*)$/.exec(rest); return m ? { note: `(${m[1]})`, text: m[2] } : { note: null, text: rest }; };
 
@@ -199,9 +199,13 @@ function readHeader(header) {
     if (location && !time && TIME.test(seg)) { const [t, ...rest] = seg.split(/\.\s+/); time = t.replace(/\.$/, ""); if (rest.length) action.push(rest.join(". ")); continue; }
     const sentences = /[.!?]\s+[A-Z]/.test(seg) || seg.length > 90;
     if (!sentences && CAMERA.test(seg)) continue;
+    // a lowercase segment is a note after the lens ("first handheld for the cops", "high corner, timecode 11:04:22") unless it is sentences of action
+    // ("the tap. The water comes out brown.", "a green cursor, blinking.")
+    if (/^[a-z]/.test(seg) && !(/[.!?]\s+[A-Z]/.test(seg) || (/\.$/.test(seg) && seg.length >= 25 && !/timecode|grammar|framing|corner|angle|fixed|held|same |as \d/i.test(seg)))) continue;
     action.push(seg);
   }
-  return { slug: location ? [location, time].filter(Boolean).join(" — ") : null, action: action.join(" — ") };
+  const text = action.join(" — ");
+  return { slug: location ? [location, time].filter(Boolean).join(" — ") : null, action: text.replace(/^[a-z]/, c => c.toUpperCase()) };
 }
 
 /** The Rapture's frames: the NUMBERED SCRIPT block of the notes (null for a legacy board, which has none). */
