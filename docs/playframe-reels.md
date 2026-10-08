@@ -30,7 +30,7 @@ This writes `src/data/hangarColdOpenReel.ts` and `src/data/letTheRapturesCommenc
 
 ## What the reels carry of the screenplay
 
-* **Episode one: all of it.** All 169 spoken lines of the draft (checked against `docs/rapture/ep1-screenplay.md`) and 468 of its 522 action sentences and sluglines; the rest are sluglines the boards word differently ("INT. HALL — CONTINUOUS" for "ST JUDE'S HOUSE - HALL - CONTINUOUS") and a few fragments the boards fold into a shot's camera note.
+* **Episode one: all of it.** All 169 spoken lines of the draft (checked against `docs/rapture/ep1-screenplay.md`) and 467 of its 522 action sentences and sluglines; the rest are sluglines the boards word differently ("INT. HALL — CONTINUOUS" for "ST JUDE'S HOUSE - HALL - CONTINUOUS") and a few fragments the boards fold into a shot's camera note.
 * **Episodes two to five:** the twelve boarded scenes (502 voiced lines) with their action; the legacy boards and outlines of the rest.
 * **Episodes six to eight, and the unboarded parts of two to five:** outlines only, as cards. PlayFrame holds no screenplay for them.
 * The first version of this reel (8 October) was timed to the storyboard and showed only the voiced lines and the shot titles, which is why most of it looked dialogue-free. An earlier hand-made episode-one reel (`src/data/letTheRaptures.ts`, left out of the catalogue on 5 October) carried the same screenplay as captions and is still in the repository.
