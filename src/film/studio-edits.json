@@ -560,10 +560,50 @@
       "seconds": 120.67,
       "from": "nw_s85",
       "to": "nw_s92",
+      "stopBefore": "She nods.",
       "musicLevel": 0.9,
       "fadeIn": 1.5,
       "fadeOut": 3,
-      "slack": 2
+      "slack": 2,
+      "endHold": 2.5,
+      "captions": {
+      "119-single-file": "Four masked men enter the Hive, single file.",
+      "120-the-hive-is-watching": "Doors close softly as they pass. The Hive is watching.",
+      "121-the-shutter": "Kaneko sounds the alarm and pulls the shutter down.",
+      "124-the-repairman": "The radio repairman hears boots in the corridor.",
+      "125-the-main-switch": "He pulls the main switch.",
+      "126-dark": "Every bulb in the Hive goes out.",
+      "127-faces-vanish": "Faces at the windows vanish from the beams.",
+      "128-by-touch": "Vera climbs the black stairwell by touch.",
+      "129-she-lets-him": "She finds Jack's hand and pulls him up after her.",
+      "319-the-unlit-lighter": "Her thumb on the lighter's wheel. She doesn't light it.",
+      "130-the-roof": "A door opens before Vera can knock.",
+      "131-she-jumps": "Room after room, the Hive opens a way through.",
+      "378-the-barbers-shop": "The barber turns his chair to the wall.",
+      "379-the-laundry": "Wet sheets part and close behind them.",
+      "380-the-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
+      "381-the-plank": "A plank across the gap, hauled in after them.",
+      "382-the-pipe-gallery": "The pipes ring softly: one rap means clear.",
+      "132-the-gap": "Nobody speaks. Every door closes behind them.",
+      "132-the-rails-sing": "Overhead the rails begin to sing.",
+      "133-inches-apart": "A train roars over them. Her hand is in his on the rail.",
+      "134-the-walkway-is-empty": "When the train has passed, the ladder is empty.",
+      "135-below-the-viaduct": "They step off the last rung into an empty street. Sirens."
+      },
+      "cues": {
+      "119-single-file": [{"file": "pipe-alarm", "volume": 0.9}],
+      "120-the-hive-is-watching": [{"file": "doors-close-softly", "volume": 0.6}],
+      "121-the-shutter": [{"file": "shutter-crash", "volume": 0.9}],
+      "124-the-repairman": [{"file": "boots-single-file", "volume": 0.4}],
+      "125-the-main-switch": [{"file": "main-switch-blackout", "volume": 0.9}],
+      "126-dark": [{"file": "flashlights-snap-on", "volume": 0.8}],
+      "319-the-unlit-lighter": [{"file": "boots-single-file", "volume": 0.3}],
+      "382-the-pipe-gallery": [{"file": "pipe-alarm", "volume": 0.4}],
+      "132-the-gap": [{"file": "doors-close-softly", "volume": 0.5}],
+      "132-the-rails-sing": [{"file": "train", "volume": 0.8}],
+      "133-inches-apart": [{"file": "fire-ladder-rungs", "volume": 0.6}],
+      "135-below-the-viaduct": [{"file": "sirens-distant", "volume": 0.7}]
+      }
     }
   ]
 }

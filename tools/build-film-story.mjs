@@ -283,82 +283,90 @@ if (existsSync(editsFile)) {
   if (file.dialogueBox) dialogueBox = file.dialogueBox;
 }
 
-// Soundtrack segments (src/film/studio-edits.json "soundtracks"): a run of scenes that plays hands-off for the length of a song. The song starts on the
-// run's first node (it keeps playing across the nodes after it) and the node after the run fades it out. The run's pictures become montages and its
-// voiced lines stay, each timed so that the whole run is the song's length less its fade-out; the narration under the pictures is left out, because it
-// cannot be read at the song's pace. Timing is the engine's, measured in headless Chromium: a voiced beat routes `afterBeatDelaySeconds` after its voice
-// has ended (about 0.4 s after the take's own length) and a montage node routes after its pictures have each had `montageSeconds`.
+// Soundtrack segments (src/film/studio-edits.json "soundtracks"): a run of scenes that plays hands-off for the length of a song, as a cutscene (the
+// letterbox bars are on). The song starts on the run's first node and keeps playing across the nodes after it; the node after the run fades it out. Every
+// shot of the run is a node of its own that moves on by itself: a silent shot shows a short caption saying what it shows (`captions`, by picture) and
+// carries its sound cues (`cues`, by picture), a spoken line is a node with the take and its subtitle. The narration under the pictures is left out
+// (it cannot be read at the song's pace). `stopBefore` ends the run before the beat that starts with that text: the rest of the last scene plays
+// as an ordinary click-through node after the song. Timing is the engine's, measured in headless Chromium: a voiced beat routes `afterBeatDelaySeconds`
+// after its voice has ended (about 0.4 s after the take's own length); a silent beat routes after its node's entry transition and that delay.
 for (const seg of edits.soundtracks ?? []) {
   const a = scenes.findIndex(s => s.id === seg.from);
   const b = scenes.reduce((last, s, i) => (s.id === seg.to || s.id.startsWith(`${seg.to}_`) ? i : last), -1);
   if (a < 0 || b < a || b + 1 >= scenes.length) { console.warn(`soundtrack ${seg.id}: scenes ${seg.from} to ${seg.to} not found`); continue; }
-  const block = scenes.slice(a, b + 1), after = scenes[b + 1];
+  const block = scenes.slice(a, b + 1), next = scenes[b + 1];
   const LOOK = ["ambientAudio", "particles", "particleConfig"];
   const looks = n => Object.fromEntries(LOOK.filter(k => n[k] !== undefined).map(k => [k, n[k]]));
   const round = x => Math.round(x * 100) / 100;
-  // the shots in order, with the voiced lines that fall on each
+  const base = bg => bg.replace(/^.*\//, "").replace(/\.[a-z]+$/i, "");
+  // the shots in order, with the voiced lines that fall on each; the run stops before `stopBefore`
   const shots = [];
-  let cur = null;
+  let cur = null, rest = null;
   const open = (bg, node) => { cur = bg; shots.push({ bg, look: looks(node), lines: [] }); };
-  for (const node of block) {
+  scan: for (const node of block) {
     if (node.background !== cur) open(node.background, node);
-    for (const beat of node.dialogueBeats ?? []) {
+    const beats = node.dialogueBeats ?? [];
+    for (let i = 0; i < beats.length; i++) {
+      const beat = beats[i];
+      if (seg.stopBefore && beat.text?.startsWith(seg.stopBefore)) { rest = { node, from: i, bg: cur }; break scan; }
       if (beat.background && !beat.background.startsWith("video:") && beat.background !== cur) open(beat.background, node);
       if (beat.audioUrl) shots.at(-1).lines.push(beat);
     }
   }
-  const GAP = 0.65;   // after each line: the engine's own 0.4 s and a breath
+  if (seg.stopBefore && !rest) console.warn(`soundtrack ${seg.id}: no beat starts with "${seg.stopBefore}"`);
+  // LAG: measured in headless Chromium, every node takes about this much longer than its delay says (render, fade-in)
+  const GAP = 0.65, CAPTION = seg.captionSeconds ?? 2.6, TRAN = 0.3, END = seg.endHold ?? 2.5, LAG = seg.lag ?? 0.18;
   const lenOf = beat => voiceDur.get(beat.audioUrl) ?? (console.warn(`soundtrack ${seg.id}: no length for ${beat.audioUrl}`), 3);
-  const talk = shots.reduce((n, s) => n + s.lines.reduce((m, l) => m + lenOf(l) + GAP, 0), 0);
+  const caption = s => seg.captions?.[base(s.bg)];
+  for (const s of shots) if (!s.lines.length && !caption(s)) console.warn(`soundtrack ${seg.id}: no caption for ${base(s.bg)}`);
+  // the time the voiced shots take (their lines, the caption before them, a short hold after); the silent shots share the rest of the song
+  const voiced = shots.filter(s => s.lines.length);
+  const voicedTime = voiced.reduce((n, s) => n + (caption(s) ? CAPTION : 0) + s.lines.reduce((m, l) => m + lenOf(l) + GAP, 0), 0) + END + (voiced.length - 1) * 0.8;
+  const silent = shots.filter(s => !s.lines.length);
   const total = seg.seconds - (seg.fadeOut ?? 3) - (seg.slack ?? 0.5);
-  const each = (total - talk) / shots.length;   // every shot's own time, on top of the lines it carries
-  if (each < 2) console.warn(`soundtrack ${seg.id}: only ${each.toFixed(1)} s a shot`);
+  const each = (total - voicedTime) / silent.length;
+  if (each < 2.5) console.warn(`soundtrack ${seg.id}: only ${each.toFixed(1)} s a silent shot`);
   const chain = [];
   const nodeId = () => `nw_song_${seg.id}_${String(chain.length + 1).padStart(2, "0")}`;
-  for (let i = 0; i < shots.length;) {
-    const s = shots[i], key = JSON.stringify(s.look);
-    if (!s.lines.length) {
-      // a run of silent shots with the same look is one montage node
-      let j = i;
-      while (j < shots.length && !shots[j].lines.length && JSON.stringify(shots[j].look) === key) j++;
-      const run = shots.slice(i, j);
-      // (a montage of one picture shows nothing: a lone shot is a plain node that moves on by itself)
-      if (run.length === 1) chain.push({ id: nodeId(), title: `${seg.title ?? seg.id}: 1 shot`, background: s.bg, cinematic: camera(s.bg), prose: "", ...s.look, hideHud: true, letterbox: true, transition: "cut", transitionSpeed: 0.05, dialogueBeats: [], hotspots: [], choices: [], __seconds: each });
-      else chain.push({
-        id: nodeId(), title: `${seg.title ?? seg.id}: ${run.length} shot${run.length > 1 ? "s" : ""}`, nodeType: "credits", background: run[0].bg, prose: "", ...s.look, hideHud: true, letterbox: true,
-        credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: run.map(r => r.bg), montageSeconds: round(each), montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
-        transition: "cut", transitionSpeed: 0.05, dialogueBeats: [], hotspots: [], choices: [], __seconds: run.length * each,
-      });
-      i = j;
-      continue;
-    }
+  let beatNo2 = 0;
+  const cueOf = s => { const c = seg.cues?.[base(s.bg)] ?? []; return c.length ? { sfxUrl: P(`/sfx/${c[0].file}.mp3`), sfxVolume: c[0].volume ?? 0.8 } : {}; };
+  const node = (s, beat, ...more) => ({
+    id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, background: s.bg, cinematic: camera(s.bg), prose: "", ...s.look, hideHud: true, letterbox: true,
+    transition: "fade", transitionSpeed: TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat], ...Object.assign({}, ...more),
+  });
+  const captionBeat = (s, seconds, cue) => ({ id: `nw_song_b${++beatNo2}`, characterId: charOf(null), text: caption(s) ?? "·", silent: true, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - TRAN - 0.1 - LAG)) });
+  for (const s of shots) {
+    let cue = cueOf(s);
+    if (!s.lines.length) { chain.push(node(s, captionBeat(s, each, cue))); continue; }
+    if (caption(s)) { chain.push(node(s, captionBeat(s, CAPTION, cue))); cue = {}; }
     s.lines.forEach((line, k) => {
-      const last = k === s.lines.length - 1, dur = lenOf(line);
+      const last = k === s.lines.length - 1, isEnd = s === voiced.at(-1);
       const { background: _bg, backgroundTransition: _bt, backgroundTransitionSpeed: _bs, cinematic: _c, ...beat } = line;
-      chain.push({
-        id: nodeId(), title: `${seg.title ?? seg.id}: ${line.text.slice(0, 40)}`, background: s.bg, cinematic: camera(s.bg), prose: "", ...s.look, hideHud: true, letterbox: true,
-        transition: "cut", transitionSpeed: 0.05, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [],
-        dialogueBeats: [{ ...beat, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, GAP - 0.4 + (last ? each : 0))), __stretch: dur + GAP + (last ? each : 0) }],
-      });
+      const hold = last ? (isEnd ? END : 0.8) : 0;
+      chain.push(node(s, { ...beat, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, GAP - 0.4 + hold - LAG)) }));
+      cue = {};
     });
-    i++;
   }
   Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.9, musicFadeSeconds: seg.fadeIn ?? 1.5 });
+  // what is left of the last scene after the song plays as an ordinary node, and fades the song out
+  let after = next;
+  if (rest) {
+    const { id: _i, title: _t, dialogueBeats: _b, prose: _p, background: _g, transition: _tr, transitionSpeed: _ts, cinematic: _ci, ...look } = rest.node;
+    after = { ...look, id: `${rest.node.id}_after`, title: `${rest.node.title} (after the song)`, background: rest.bg, prose: "", transition: "cut", transitionSpeed: 0.2, dialogueBeats: rest.node.dialogueBeats.slice(rest.from) };
+  }
   chain.forEach((nd, k) => {
-    const next = k + 1 < chain.length ? chain[k + 1].id : after.id;
-    nd.noTypewriter = true; nd.autoNarrate = false;
-    if (nd.nodeType === "credits" || !nd.dialogueBeats.length) { Object.assign(nd, { autoAdvanceTargetSceneId: next, autoAdvanceDelaySeconds: round(nd.__seconds), autoAdvanceHideTimer: true }); delete nd.__seconds; }
-    else { Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: next }); delete nd.dialogueBeats[0].__stretch; }
+    const nextId = k + 1 < chain.length ? chain[k + 1].id : after.id;
+    Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: nextId });
   });
   if (after.musicMode === undefined) Object.assign(after, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
   const removed = new Set(block.map(s => s.id));
-  scenes.splice(a, b - a + 1, ...chain);
+  scenes.splice(a, b - a + 1, ...chain, ...(rest ? [after] : []));
   for (const s of scenes) {
     if (chain.includes(s)) continue;
     for (const bt of s.dialogueBeats ?? []) if (removed.has(bt.afterBeatTargetSceneId)) bt.afterBeatTargetSceneId = chain[0].id;
     if (removed.has(s.autoAdvanceTargetSceneId)) s.autoAdvanceTargetSceneId = chain[0].id;
   }
-  console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots, ${shots.reduce((n, s) => n + s.lines.length, 0)} voiced lines (${talk.toFixed(1)} s), ${each.toFixed(2)} s a shot, ${(total).toFixed(1)} s of the song's ${seg.seconds} s; the next scene (${after.id}) fades it out`);
+  console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${after.id} fades it out`);
 }
 
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));

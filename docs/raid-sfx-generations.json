@@ -1,0 +1,94 @@
+{
+  "note": "ElevenLabs text-to-sound (eleven_text_to_sound_v2) effects made for the raid sequence, 9 October 2026. Flow db8u0INspvCzepx99gUP. Raw takes are in public/film/sfx/alternates/ (leveled picks are public/film/sfx/<id>.mp3). Second takes of boots, switch, doors, sirens and ladder never finished generating.",
+  "flow": "db8u0INspvCzepx99gUP",
+  "effects": {
+    "pipe-alarm": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "MqdKThlLXkWK7sON7thT",
+          "session": "DQyS1dt4yw0BJMAIO25U"
+        },
+        {
+          "v": 2,
+          "generation": "7Rbdnu9Q4cL3yqzxsRT8",
+          "session": "ur9Y0w2kpgl1uPdTFvgk"
+        }
+      ]
+    },
+    "shutter-crash": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "XV3a8O3x8tEmdhqf8Ojm",
+          "session": "oxAfLbpd3u8cIA3iv66U"
+        },
+        {
+          "v": 2,
+          "generation": "3tE8ZZnANc4nnNNs9OB7",
+          "session": "ybrfogAuRKKgVWk9gtn1"
+        }
+      ]
+    },
+    "boots-single-file": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "lWrHrq30P3NzyZCpZ2mC",
+          "session": "eTBlAHl3AGrdbmKSTaKZ"
+        }
+      ]
+    },
+    "main-switch-blackout": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "OjMa7a8pEbFQpTvmP55V",
+          "session": "NMsXn8gjCPAgeg7oQFhx"
+        }
+      ]
+    },
+    "flashlights-snap-on": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "ds8fmBtEp1aN4INeblFi",
+          "session": "MrSEvskmIKoCGE44zAUc"
+        },
+        {
+          "v": 2,
+          "generation": "75f9X5iq3AKWvc3c7yTx",
+          "session": "W3HRgE4kSjMPC7aHhAlt",
+          "note": "not used"
+        }
+      ]
+    },
+    "doors-close-softly": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "zmFnqwPkK5Yn9MsXRrwc",
+          "session": "9IsH5VBZLWEqNNPSHPd0"
+        }
+      ]
+    },
+    "sirens-distant": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "eWrCMqP4AokhMCLS9F1j",
+          "session": "2FIC2Te2PtRyisDzOLYK"
+        }
+      ]
+    },
+    "fire-ladder-rungs": {
+      "takes": [
+        {
+          "v": 1,
+          "generation": "Coy1A4ufeOyxQxxFADUL",
+          "session": "t1zJJiYsTOKQZZRmJXSI"
+        }
+      ]
+    }
+  }
+}

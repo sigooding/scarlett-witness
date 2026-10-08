@@ -438,41 +438,105 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 3840,
    "y": 2120
   },
-  "nw_s93": {
+  "nw_song_raid_15": {
    "x": 4220,
    "y": 2120
   },
-  "nw_s94": {
+  "nw_song_raid_16": {
    "x": 40,
    "y": 2380
   },
-  "nw_s95": {
+  "nw_song_raid_17": {
    "x": 420,
    "y": 2380
   },
-  "nw_s96": {
+  "nw_song_raid_18": {
    "x": 800,
    "y": 2380
   },
-  "nw_s98": {
+  "nw_song_raid_19": {
    "x": 1180,
    "y": 2380
   },
-  "nw_s99a": {
+  "nw_song_raid_20": {
    "x": 1560,
    "y": 2380
   },
-  "nw_s100": {
+  "nw_song_raid_21": {
    "x": 1940,
    "y": 2380
   },
-  "nw_credits": {
+  "nw_song_raid_22": {
    "x": 2320,
    "y": 2380
   },
-  "nw_end": {
+  "nw_song_raid_23": {
    "x": 2700,
    "y": 2380
+  },
+  "nw_song_raid_24": {
+   "x": 3080,
+   "y": 2380
+  },
+  "nw_song_raid_25": {
+   "x": 3460,
+   "y": 2380
+  },
+  "nw_song_raid_26": {
+   "x": 3840,
+   "y": 2380
+  },
+  "nw_song_raid_27": {
+   "x": 4220,
+   "y": 2380
+  },
+  "nw_song_raid_28": {
+   "x": 40,
+   "y": 2640
+  },
+  "nw_song_raid_29": {
+   "x": 420,
+   "y": 2640
+  },
+  "nw_s92_after": {
+   "x": 800,
+   "y": 2640
+  },
+  "nw_s93": {
+   "x": 1180,
+   "y": 2640
+  },
+  "nw_s94": {
+   "x": 1560,
+   "y": 2640
+  },
+  "nw_s95": {
+   "x": 1940,
+   "y": 2640
+  },
+  "nw_s96": {
+   "x": 2320,
+   "y": 2640
+  },
+  "nw_s98": {
+   "x": 2700,
+   "y": 2640
+  },
+  "nw_s99a": {
+   "x": 3080,
+   "y": 2640
+  },
+  "nw_s100": {
+   "x": 3460,
+   "y": 2640
+  },
+  "nw_credits": {
+   "x": 3840,
+   "y": 2640
+  },
+  "nw_end": {
+   "x": 4220,
+   "y": 2640
   }
  },
  "dialogueBox": {
@@ -16477,9 +16541,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_raid_01",
-   "title": "The raid on the Hive: 2 shots",
-   "nodeType": "credits",
+   "title": "The raid on the Hive: Four masked men enter the Hive, single f",
    "background": "/film/img/s85/119-single-file.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
@@ -16489,39 +16565,79 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "credits": {
-    "title": "",
-    "subtitle": "",
-    "lines": [],
-    "style": "cards",
-    "cardSeconds": 1,
-    "montage": [
-     "/film/img/s85/119-single-file.jpg",
-     "/film/img/s85/120-the-hive-is-watching.jpg"
-    ],
-    "montageSeconds": 3.53,
-    "montageTransition": "dissolve",
-    "montageLoop": false,
-    "gateWeave": "subtle"
-   },
-   "transition": "cut",
-   "transitionSpeed": 0.05,
-   "dialogueBeats": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
    "hotspots": [],
    "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b1",
+     "characterId": "nw_narrator",
+     "text": "Four masked men enter the Hive, single file.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/pipe-alarm.mp3",
+     "sfxVolume": 0.9,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_02"
+    }
+   ],
    "musicMode": "track",
    "musicUrl": "/film/audio/coins-measure-time.mp3",
    "musicLevel": 0.9,
-   "musicFadeSeconds": 1.5,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "autoAdvanceTargetSceneId": "nw_song_raid_02",
-   "autoAdvanceDelaySeconds": 7.06,
-   "autoAdvanceHideTimer": true
+   "musicFadeSeconds": 1.5
   },
   {
    "id": "nw_song_raid_02",
-   "title": "The raid on the Hive: 1 shot",
+   "title": "The raid on the Hive: Doors close softly as they pass. The Hiv",
+   "background": "/film/img/s85/120-the-hive-is-watching.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b2",
+     "characterId": "nw_narrator",
+     "text": "Doors close softly as they pass. The Hive is watching.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/doors-close-softly.mp3",
+     "sfxVolume": 0.6,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_03"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_03",
+   "title": "The raid on the Hive: Kaneko sounds the alarm and pulls the sh",
    "background": "/film/img/s86/121-the-shutter.jpg",
    "cinematic": {
     "mode": "pan",
@@ -16545,19 +16661,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
-   "dialogueBeats": [],
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "autoAdvanceTargetSceneId": "nw_song_raid_03",
-   "autoAdvanceDelaySeconds": 3.53,
-   "autoAdvanceHideTimer": true
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b3",
+     "characterId": "nw_narrator",
+     "text": "Kaneko sounds the alarm and pulls the shutter down.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/shutter-crash.mp3",
+     "sfxVolume": 0.9,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_04"
+    }
+   ]
   },
   {
-   "id": "nw_song_raid_03",
+   "id": "nw_song_raid_04",
    "title": "The raid on the Hive: Up. Through the back. The stairs by the ",
    "background": "/film/img/s86/122-through-the-back.jpg",
    "cinematic": {
@@ -16582,8 +16707,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -16595,14 +16720,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Up. Through the back. The stairs by the dentist. Then go through the neighbours. Everyone will open a door.",
      "audioUrl": "/film/voice/s86/124-kaneko-urgently-up-through-the-back-the.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.25,
-     "afterBeatTargetSceneId": "nw_song_raid_04"
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_raid_05"
     }
    ]
   },
   {
-   "id": "nw_song_raid_04",
-   "title": "The raid on the Hive: I know them.",
+   "id": "nw_song_raid_05",
+   "title": "The raid on the Hive: They don't know me.",
    "background": "/film/img/s86/122-through-the-back.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -16626,8 +16751,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -16636,16 +16761,16 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1446",
      "characterId": "nw_vera",
-     "text": "I know them.",
+     "text": "They don't know me.",
      "audioUrl": "/film/voice/s86/124-vera-evenly-i-know-them.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.25,
-     "afterBeatTargetSceneId": "nw_song_raid_05"
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_raid_06"
     }
    ]
   },
   {
-   "id": "nw_song_raid_05",
+   "id": "nw_song_raid_06",
    "title": "The raid on the Hive: Come with us.",
    "background": "/film/img/s86/122-through-the-back.jpg",
    "cinematic": {
@@ -16670,8 +16795,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -16683,13 +16808,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Come with us.",
      "audioUrl": "/film/voice/s86/124-jack-urgently-come-with-us.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.78,
-     "afterBeatTargetSceneId": "nw_song_raid_06"
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_raid_07"
     }
    ]
   },
   {
-   "id": "nw_song_raid_06",
+   "id": "nw_song_raid_07",
    "title": "The raid on the Hive: I have lived here fifty years. They can ",
    "background": "/film/img/s86/123-fifty-years.jpg",
    "cinematic": {
@@ -16714,8 +16839,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -16727,13 +16852,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "I have lived here fifty years. They can come and find me.",
      "audioUrl": "/film/voice/s86/125-kaneko-dryly-i-have-lived-here-fifty.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.25,
-     "afterBeatTargetSceneId": "nw_song_raid_07"
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_raid_08"
     }
    ]
   },
   {
-   "id": "nw_song_raid_07",
+   "id": "nw_song_raid_08",
    "title": "The raid on the Hive: Go now. They will help you.",
    "background": "/film/img/s86/123-fifty-years.jpg",
    "cinematic": {
@@ -16758,8 +16883,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -16771,16 +16896,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Go now. They will help you.",
      "audioUrl": "/film/voice/s86/125-kaneko-urgently-go-now-they-will-help.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.78,
-     "afterBeatTargetSceneId": "nw_song_raid_08"
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_raid_09"
     }
    ]
   },
   {
-   "id": "nw_song_raid_08",
-   "title": "The raid on the Hive: 2 shots",
-   "nodeType": "credits",
+   "id": "nw_song_raid_09",
+   "title": "The raid on the Hive: The radio repairman hears boots in the c",
    "background": "/film/img/s87/124-the-repairman.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
@@ -16790,37 +16927,89 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "credits": {
-    "title": "",
-    "subtitle": "",
-    "lines": [],
-    "style": "cards",
-    "cardSeconds": 1,
-    "montage": [
-     "/film/img/s87/124-the-repairman.jpg",
-     "/film/img/s87/125-the-main-switch.jpg"
-    ],
-    "montageSeconds": 3.53,
-    "montageTransition": "dissolve",
-    "montageLoop": false,
-    "gateWeave": "subtle"
-   },
-   "transition": "cut",
-   "transitionSpeed": 0.05,
-   "dialogueBeats": [],
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "autoAdvanceTargetSceneId": "nw_song_raid_09",
-   "autoAdvanceDelaySeconds": 7.06,
-   "autoAdvanceHideTimer": true
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b4",
+     "characterId": "nw_narrator",
+     "text": "The radio repairman hears boots in the corridor.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/boots-single-file.mp3",
+     "sfxVolume": 0.4,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_10"
+    }
+   ]
   },
   {
-   "id": "nw_song_raid_09",
-   "title": "The raid on the Hive: 5 shots",
-   "nodeType": "credits",
+   "id": "nw_song_raid_10",
+   "title": "The raid on the Hive: He pulls the main switch.",
+   "background": "/film/img/s87/125-the-main-switch.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b5",
+     "characterId": "nw_narrator",
+     "text": "He pulls the main switch.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/main-switch-blackout.mp3",
+     "sfxVolume": 0.9,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_11"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_11",
+   "title": "The raid on the Hive: Every bulb in the Hive goes out.",
    "background": "/film/img/s88/126-dark.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
@@ -16830,40 +17019,221 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "credits": {
-    "title": "",
-    "subtitle": "",
-    "lines": [],
-    "style": "cards",
-    "cardSeconds": 1,
-    "montage": [
-     "/film/img/s88/126-dark.jpg",
-     "/film/img/s88/127-faces-vanish.jpg",
-     "/film/img/s89/128-by-touch.jpg",
-     "/film/img/s89/129-she-lets-him.jpg",
-     "/film/img/s89/319-the-unlit-lighter.jpg"
-    ],
-    "montageSeconds": 3.53,
-    "montageTransition": "dissolve",
-    "montageLoop": false,
-    "gateWeave": "subtle"
-   },
-   "transition": "cut",
-   "transitionSpeed": 0.05,
-   "dialogueBeats": [],
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "autoAdvanceTargetSceneId": "nw_song_raid_10",
-   "autoAdvanceDelaySeconds": 17.64,
-   "autoAdvanceHideTimer": true
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b6",
+     "characterId": "nw_narrator",
+     "text": "Every bulb in the Hive goes out.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/flashlights-snap-on.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_12"
+    }
+   ]
   },
   {
-   "id": "nw_song_raid_10",
-   "title": "The raid on the Hive: 8 shots",
-   "nodeType": "credits",
+   "id": "nw_song_raid_12",
+   "title": "The raid on the Hive: Faces at the windows vanish from the bea",
+   "background": "/film/img/s88/127-faces-vanish.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b7",
+     "characterId": "nw_narrator",
+     "text": "Faces at the windows vanish from the beams.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_13"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_13",
+   "title": "The raid on the Hive: Vera climbs the black stairwell by touch",
+   "background": "/film/img/s89/128-by-touch.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b8",
+     "characterId": "nw_narrator",
+     "text": "Vera climbs the black stairwell by touch.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_14"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_14",
+   "title": "The raid on the Hive: She finds Jack's hand and pulls him up a",
+   "background": "/film/img/s89/129-she-lets-him.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b9",
+     "characterId": "nw_narrator",
+     "text": "She finds Jack's hand and pulls him up after her.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_15"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_15",
+   "title": "The raid on the Hive: Her thumb on the lighter's wheel. She do",
+   "background": "/film/img/s89/319-the-unlit-lighter.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b10",
+     "characterId": "nw_narrator",
+     "text": "Her thumb on the lighter's wheel. She doesn't light it.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/boots-single-file.mp3",
+     "sfxVolume": 0.3,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_16"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_16",
+   "title": "The raid on the Hive: A door opens before Vera can knock.",
    "background": "/film/img/s90/130-the-roof.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
@@ -16873,43 +17243,353 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "credits": {
-    "title": "",
-    "subtitle": "",
-    "lines": [],
-    "style": "cards",
-    "cardSeconds": 1,
-    "montage": [
-     "/film/img/s90/130-the-roof.jpg",
-     "/film/img/s90/131-she-jumps.jpg",
-     "/film/img/s90/378-the-barbers-shop.jpg",
-     "/film/img/s90/379-the-laundry.jpg",
-     "/film/img/s90/380-the-shrine-hatch.jpg",
-     "/film/img/s90/381-the-plank.jpg",
-     "/film/img/s90/382-the-pipe-gallery.jpg",
-     "/film/img/s90/132-the-gap.jpg"
-    ],
-    "montageSeconds": 3.53,
-    "montageTransition": "dissolve",
-    "montageLoop": false,
-    "gateWeave": "subtle"
-   },
-   "transition": "cut",
-   "transitionSpeed": 0.05,
-   "dialogueBeats": [],
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "autoAdvanceTargetSceneId": "nw_song_raid_11",
-   "autoAdvanceDelaySeconds": 28.23,
-   "autoAdvanceHideTimer": true
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b11",
+     "characterId": "nw_narrator",
+     "text": "A door opens before Vera can knock.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_17"
+    }
+   ]
   },
   {
-   "id": "nw_song_raid_11",
-   "title": "The raid on the Hive: 3 shots",
-   "nodeType": "credits",
+   "id": "nw_song_raid_17",
+   "title": "The raid on the Hive: Room after room, the Hive opens a way th",
+   "background": "/film/img/s90/131-she-jumps.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 19,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b12",
+     "characterId": "nw_narrator",
+     "text": "Room after room, the Hive opens a way through.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_18"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_18",
+   "title": "The raid on the Hive: The barber turns his chair to the wall.",
+   "background": "/film/img/s90/378-the-barbers-shop.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b13",
+     "characterId": "nw_narrator",
+     "text": "The barber turns his chair to the wall.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_19"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_19",
+   "title": "The raid on the Hive: Wet sheets part and close behind them.",
+   "background": "/film/img/s90/379-the-laundry.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 21,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b14",
+     "characterId": "nw_narrator",
+     "text": "Wet sheets part and close behind them.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_20"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_20",
+   "title": "The raid on the Hive: A grandmother lifts the altar cloth: a l",
+   "background": "/film/img/s90/380-the-shrine-hatch.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b15",
+     "characterId": "nw_narrator",
+     "text": "A grandmother lifts the altar cloth: a low hatch.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_21"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_21",
+   "title": "The raid on the Hive: A plank across the gap, hauled in after ",
+   "background": "/film/img/s90/381-the-plank.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 19,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b16",
+     "characterId": "nw_narrator",
+     "text": "A plank across the gap, hauled in after them.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_22"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_22",
+   "title": "The raid on the Hive: The pipes ring softly: one rap means cle",
+   "background": "/film/img/s90/382-the-pipe-gallery.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b17",
+     "characterId": "nw_narrator",
+     "text": "The pipes ring softly: one rap means clear.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/pipe-alarm.mp3",
+     "sfxVolume": 0.4,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_23"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_23",
+   "title": "The raid on the Hive: Nobody speaks. Every door closes behind ",
+   "background": "/film/img/s90/132-the-gap.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b18",
+     "characterId": "nw_narrator",
+     "text": "Nobody speaks. Every door closes behind them.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/doors-close-softly.mp3",
+     "sfxVolume": 0.5,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_24"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_24",
+   "title": "The raid on the Hive: Overhead the rails begin to sing.",
    "background": "/film/img/s91/132-the-rails-sing.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 15,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
@@ -16919,35 +17599,164 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "credits": {
-    "title": "",
-    "subtitle": "",
-    "lines": [],
-    "style": "cards",
-    "cardSeconds": 1,
-    "montage": [
-     "/film/img/s91/132-the-rails-sing.jpg",
-     "/film/img/s91/133-inches-apart.jpg",
-     "/film/img/s91/134-the-walkway-is-empty.jpg"
-    ],
-    "montageSeconds": 3.53,
-    "montageTransition": "dissolve",
-    "montageLoop": false,
-    "gateWeave": "subtle"
-   },
-   "transition": "cut",
-   "transitionSpeed": 0.05,
-   "dialogueBeats": [],
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "autoAdvanceTargetSceneId": "nw_song_raid_12",
-   "autoAdvanceDelaySeconds": 10.59,
-   "autoAdvanceHideTimer": true
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b19",
+     "characterId": "nw_narrator",
+     "text": "Overhead the rails begin to sing.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_25"
+    }
+   ]
   },
   {
-   "id": "nw_song_raid_12",
+   "id": "nw_song_raid_25",
+   "title": "The raid on the Hive: A train roars over them. Her hand is in ",
+   "background": "/film/img/s91/133-inches-apart.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b20",
+     "characterId": "nw_narrator",
+     "text": "A train roars over them. Her hand is in his on the rail.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/fire-ladder-rungs.mp3",
+     "sfxVolume": 0.6,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_26"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_26",
+   "title": "The raid on the Hive: When the train has passed, the ladder is",
+   "background": "/film/img/s91/134-the-walkway-is-empty.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b21",
+     "characterId": "nw_narrator",
+     "text": "When the train has passed, the ladder is empty.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 3.48,
+     "afterBeatTargetSceneId": "nw_song_raid_27"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_27",
+   "title": "The raid on the Hive: They step off the last rung into an empt",
+   "background": "/film/img/s92/135-below-the-viaduct.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b22",
+     "characterId": "nw_narrator",
+     "text": "They step off the last rung into an empty street. Sirens.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/sirens-distant.mp3",
+     "sfxVolume": 0.7,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.02,
+     "afterBeatTargetSceneId": "nw_song_raid_28"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_raid_28",
    "title": "The raid on the Hive: Is Kaneko —",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
@@ -16972,8 +17781,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -16985,13 +17794,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Is Kaneko —",
      "audioUrl": "/film/voice/s92/137-vera-urgently-is-kaneko.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.25,
-     "afterBeatTargetSceneId": "nw_song_raid_13"
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_raid_29"
     }
    ]
   },
   {
-   "id": "nw_song_raid_13",
+   "id": "nw_song_raid_29",
    "title": "The raid on the Hive: The Hive looks after its own.",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
@@ -17016,8 +17825,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -17029,29 +17838,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The Hive looks after its own.",
      "audioUrl": "/film/voice/s92/137-jack-evenly-the-hive-looks-after-its.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.78,
-     "afterBeatTargetSceneId": "nw_song_raid_14"
+     "afterBeatDelaySeconds": 2.57,
+     "afterBeatTargetSceneId": "nw_s92_after"
     }
    ]
   },
   {
-   "id": "nw_song_raid_14",
-   "title": "The raid on the Hive: Mara was safe here. Until us.",
-   "background": "/film/img/s92/136-until-us.jpg",
-   "cinematic": {
-    "mode": "dolly",
-    "focalPoint": "50% 60%",
-    "zoomDuration": 20,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
-   },
-   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "particleConfig": {
@@ -17060,23 +17852,57 @@ export const NOBODYS_WITNESS_FILM: Story = {
    },
    "hideHud": true,
    "letterbox": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "hotspots": [],
    "choices": [],
+   "id": "nw_s92_after",
+   "title": "92 — Until us (after the song)",
+   "background": "/film/img/s92/135-below-the-viaduct.jpg",
+   "prose": "",
+   "transition": "cut",
+   "transitionSpeed": 0.2,
    "dialogueBeats": [
+    {
+     "id": "nw_b1505",
+     "characterId": "nw_narrator",
+     "text": "She nods. She looks up at the building full of light.",
+     "silent": true
+    },
     {
      "id": "nw_b1506",
      "characterId": "nw_vera",
      "text": "Mara was safe here. Until us.",
      "audioUrl": "/film/voice/s92/138-vera-sadly-mara-was-safe-here-until.mp3",
+     "background": "/film/img/s92/136-until-us.jpg",
+     "cinematic": {
+      "mode": "dolly",
+      "focalPoint": "50% 60%",
+      "zoomDuration": 20,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1507",
+     "characterId": "nw_narrator",
+     "text": "He has no answer to that. She doesn't need one.",
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s93",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.78,
-     "afterBeatTargetSceneId": "nw_s93"
+     "afterBeatDelaySeconds": 1
     }
-   ]
+   ],
+   "musicMode": "none",
+   "musicFadeSeconds": 3
   },
   {
    "id": "nw_s93",
@@ -17157,9 +17983,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "musicMode": "none",
-   "musicFadeSeconds": 3
+   "choices": []
   },
   {
    "id": "nw_s94",
