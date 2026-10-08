@@ -37,7 +37,9 @@ function splitLine(text, voice) {
   return out.filter(o => o.text).map(({ text, audioUrl }) => ({ text, audioUrl }));
 }
 
-const SFX = { shot: "suppressed-shot", shot2: "shot2", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", car: "car-pass" };
+// Body falls (8 October 2026, generated in ElevenLabs): "shot2" is the two shots with the journalist coming off his stool a second later
+// (shot2.mp3 + the bar fall, mixed once with ffmpeg), "fall-street" the old man in scene 1, "fall-door" Mara through the Hive door in scene 70.
+const SFX = { shot: "suppressed-shot", shot2: "shot2-fall", "fall-street": "body-fall-street", "fall-door": "body-fall-doorway", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", car: "car-pass" };
 // Recorded atmosphere: copy the loops from the visual novel and pick one per scene from its slugline (same rule as the VN's beds.ts).
 mkdirSync(resolve(root, "public/film/sfx"), { recursive: true });
 for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "amb-vending", "amb-office", "car-pass"]) {
@@ -153,7 +155,9 @@ film.scenes.forEach((sc, si) => {
     else if (st.t === "text" || st.t === "line") {
       // Silent narration is cut at sentence ends into pieces of at most ~140 characters, so a long action paragraph never fills the screen
       // (a recorded line stays whole: its take is one file).
-      const pieces = st.t === "line" ? splitLine(st.text, st.voice) : chunkText(st.text).map(text => ({ text }));
+      // A line spoken in another language shows its English subtitle after the words ("Shitsurei shimasu. (Excuse me.)"); the visual novel
+      // keeps it on its own line under the words, a beat has only the one.
+      const pieces = st.t === "line" ? splitLine(st.sub ? `${st.text} (${st.sub})` : st.text, st.voice) : chunkText(st.text).map(text => ({ text }));
       pieces.forEach((p, pi) => {
         const f = { text: p.text };
         if (p.audioUrl) f.audioUrl = p.audioUrl; else if (st.t === "text") f.silent = true;
