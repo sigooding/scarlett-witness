@@ -74,3 +74,98 @@ The engine loops a scene's music until another cue changes or silences it; that 
 * **Vera's line** in the kitchen scene (86) is "They don't know me." (was "I know them."), a new take; the change is in PlayFrame's screenplay and `docs/neonoire/voice/manifest.json` first.
 
 Fields: `from`, `to` (node ids, parts included), `stopBefore` (the text of the first beat that is left to the ordinary scene), `musicUrl`, `seconds`, `fadeIn`, `fadeOut`, `slack`, `endHold`, `captionSeconds`, `lag`, `captions`, `cues`. `node tools/build-film-story.mjs` applies it after the Studio edits; the original scenes stay in `src/film/story.json`. Deep link: `?story=nobodys-witness-film&scene=nw_song_raid_01`.
+
+## Scene effects, TV and radio voices, picture effects (9 October 2026)
+
+Asked: *"add special effects where needed in the game ... make sure they are appropriate for the scene ... add the remaining sound effects and voices missing using elevenlabs ... make sure everything created is also replicable in the game engine."* Every effect sits on the screenplay line that calls for it, and everything is in `src/film/studio-edits.json`, so the Studio and a rebuild (`node tools/build-film-story.mjs`) both carry it. **Nobody has listened to any of it.**
+
+* **71 new effects and 4 TV/radio voices**, generated in one ElevenLabs flow (`fAjXLLwYkar3WzG6dFlj`): `eleven_text_to_sound_v2`, one take each, two for the effects that recur or carry a moment (the lighter, the rotary dial, the ringtone, the inn's gunfire, the door in 71). Six first takes came back near-silent (the TV laugh, the paper cup, the tea, the clock, the cassette stop key, the sumo broadcast) and were re-prompted louder and closer, two takes each. Every take, prompt and generation id is in `docs/film-sfx-generations-2026-10-09.json`, and the raw takes are in `public/film/sfx/alternates/` and `public/film/voice/tv-radio/raw/` (ElevenLabs does not keep them). About 1,250 credits in all.
+* **`tools/level-film-sfx.mjs`** (`FFMPEG=... node tools/level-film-sfx.mjs`) picks each effect's take by measurement (the most energy among takes that are not mostly silence), levels it (a hit to a -3 dBFS peak with a 40 ms fade, a loop to an average of -24 dB, never more than +14 dB) and writes `public/film/sfx/<id>.mp3`; it writes the pick and the levels back into the generations file. `tea-pour` is still quiet after +14 dB (a pour is a small sound).
+* **The voices** are diegetic only, never a character's line, in two stock character voices (the director's rule for stock voices): the baseball on the radio under the arch (22) and on the inn's CRT (32) in "World Wrestling Announcer", the morning cooking show (25A, two clips, the second on "a chef lifts a lid") in "Sugar Lin". They are heard through a television or a radio (the chains PlayFrame uses for the screenplay's phone/TV/tape lines), brought back to their clean level.
+* **Five effects come from PlayFrame's shared library** (`public/audio/sfx/` there): `footsteps-wet`, `car-doors-open`, `door-lock-handle`, `landline-dead`, `gravel-tyres`. **Two are mixes**, because a beat carries one effect: `vending-coin-can` (the coin, then the can dropping, scene 12, replacing `coin-insert` there) and `lounge-clock-glass` (the clock, then a glass set down, scene 72).
+* **Placed:** 110 new one-shots (`"sfx"`: scene, the words of the beat, file, volume) and four room loops (`"ambientAdd"`): the police radio in the detectives' room (7), the radio repairman's dozen stations in the Hive corridors (16, 55), the salarymen at the yakitori stall (23). The crossing melody now plays where 27, 62, 73 and 75 call for it, and the train where 3, 74 and 98 do.
+* **Picture effects** (new `"pictureLook"`, keyed by the picture's file name, merged into that picture's camera wherever it shows; the Studio sees it as the beat's camera): a handheld shake on the gunfire and the crash pictures (1's shot, 2's two shots, the inn raid 40–49, the shooting in 70), a lighter running shake on Mara's and Vera's runs (1, 73), a zoom punch on the cut to each shooting (1, 2), headlight lens flares on the sedan in the lane (332, 333), and the lobby gone dark and blue when Jack kills the light (45). **Rain on the lens** (scene `cinematic.rainOnLens`) in the truck cab (48, 50) and in Ishida's parked car (61); the engine already draws it in every rain scene.
+* **Not done:** the visual novel does not have these effects (its importer reads PlayFrame; the effects live here). The scene 4 neighbour's radio ballad and the scene 72 pianist are music, not effects (see the music note in PlayFrame's CLAUDE.md).
+
+| Effect | Scenes |
+|---|---|
+| `vending-coin-can` | 12 |
+| `phone-vibrate` | 1 |
+| `footsteps-wet` | 1 |
+| `car-stop-wet` | 1 |
+| `car-doors-open` | 1 |
+| `bag-spill` | 1 |
+| `crates-clatter` | 2 |
+| `door-burst-bell` | 2 |
+| `door-open-rain` | 2 |
+| `earpiece-word` | 2 |
+| `tv-laugh` | 2 |
+| `train` | 3, 74, 98 |
+| `voicemail-beep` | 4 |
+| `dj-through-wall` | 4 |
+| `keyboard-typing` | 5 |
+| `desk-phone-pickup` | 5 |
+| `phone-hang-up` | 5, 11 |
+| `paper-cup-crumple` | 6 |
+| `drawer-open` | 7, 77, 96 |
+| `drawer-close` | 7 |
+| `mop-floor` | 8 |
+| `lighter-flick` | 10, 11, 14A, 26, 72, 76 |
+| `knock-glass-door` | 10 |
+| `tv-static` | 11, 18, 75, 77 |
+| `rotary-dial` | 11 |
+| `landline-dead` | 11, 18 |
+| `shutter-rattle-up` | 12 |
+| `shutter-pull-down` | 12 |
+| `knock-car-window` | 14A |
+| `car-window-down` | 14A |
+| `umbrella-shake` | 14A |
+| `door-lock-handle` | 14A |
+| `paper-bag-rustle` | 14A |
+| `sumo-tv` | 16, 55 |
+| `bowl-set-down` | 17, 56 |
+| `radio-baseball` | 22 |
+| `tv-cooking-show` | 25A |
+| `tv-cooking-lid` | 25A |
+| `cash-register` | 25A |
+| `crossing` | 27, 62, 73, 75 |
+| `tea-pour` | 29, 83 |
+| `gravel-tyres` | 31, 38 |
+| `tv-baseball-inn` | 32 |
+| `key-wooden-tag` | 32 |
+| `mobile-ring` | 36, 72 |
+| `payphone-cutoff` | 36 |
+| `tv-crowd-cheer` | 39 |
+| `smg-burst-suppressed` | 40, 41, 45, 47 |
+| `glass-case-shatter` | 40 |
+| `window-forced` | 42 |
+| `tin-roof-slide` | 43 |
+| `main-switch-blackout` | 45 |
+| `vending-machine-buzz` | 45 |
+| `bullets-car` | 47 |
+| `engine-cough-die` | 48 |
+| `windscreen-crack` | 48 |
+| `gate-smash` | 49 |
+| `door-knock-wood` | 52 |
+| `cloth-wring` | 53 |
+| `ringback-tone` | 59 |
+| `locker-open` | 63 |
+| `pachinko-parlour` | 63A |
+| `fire-door-bang` | 63A |
+| `sleeve-murmur` | 63A, 70, 84 |
+| `cash-drawer` | 64, 81 |
+| `pour-drink` | 64, 81 |
+| `violin-practice` | 69 |
+| `ricochets` | 70 |
+| `door-pounding-shots` | 71 |
+| `windows-neighbours` | 71 |
+| `sirens-distant` | 71 |
+| `lounge-clock-glass` | 72 |
+| `heels-running-wet` | 73 |
+| `shoe-splash` | 73 |
+| `envelope-mat` | 77, 78 |
+| `cassette-play` | 82 |
+| `cassette-stop` | 82 |
+| `photocopier` | 82A |
+| `car-door-heavy` | 94 |
+| `demolition-site` | 99A |
