@@ -1,5 +1,5 @@
 import { applyConsequences, bypassedSceneId, effectiveChoiceGating, meetsGating, recordMemory, recordPresentation, resolveHotspot } from "../logic";
-import type { Choice, Consequences, DialogueBeat, GlobalState, HotspotAction, SceneNode, StageScriptStep, Story } from "../types";
+import type { Choice, CinematicSettings, Consequences, DialogueBeat, GlobalState, HotspotAction, SceneNode, StageScriptStep, Story } from "../types";
 import { PRELOAD_LIMITS } from "../mediaPreload";
 import { choiceRepeats, visibleBeatQueue } from "./decisions";
 import type { SpriteSheet } from "./spriteSheet";
@@ -49,7 +49,12 @@ export function nextSceneMediaPlan({
     if (url) image(url);
   };
   const voice = (value?: string) => { if (value && clips.size < PRELOAD_LIMITS.audio) clips.add(value); };
-  const beat = (line?: DialogueBeat) => { image(line?.background); image(line?.cinematic?.depthMap); voice(line?.audioUrl); };
+  const depthLayers = (c?: CinematicSettings) => {
+    image(c?.depthMap);
+    image(c?.depthPlate);
+    for (const k of c?.depthCutouts ?? []) image(k.image);
+  };
+  const beat = (line?: DialogueBeat) => { image(line?.background); depthLayers(line?.cinematic); voice(line?.audioUrl); };
 
   // Character talking assets — frames, rest pose, sheet variants
   const charById = new Map(story.characters.map(c => [c.id, c] as const));
@@ -91,7 +96,7 @@ export function nextSceneMediaPlan({
     const cin = node.cinematic;
     if (!cin) return;
     image(cin.foregroundImage);
-    image(cin.depthMap);
+    depthLayers(cin);
     for (const ex of cin.foregroundExtras ?? []) {
       image(ex.image);
       image(ex.maskImage);
