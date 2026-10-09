@@ -2736,8 +2736,6 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
     if (sc.nodeType !== "stage") {
       if (sc.stage)
         issues.push({ severity: "warning", sceneId: sc.id, message: `Scene "${sc.title}" carries Stage settings but is not a Stage node — set Node Layout Type to "🚶 Walkable Stage" or the settings do nothing.` });
-      if (sc.hideHud)
-        issues.push({ severity: "warning", sceneId: sc.id, message: `Scene "${sc.title}" has NO-HUD switched on but is not a Stage node — only "🚶 Walkable Stage — NO HUD" layout scenes can hide the chrome, so this scene still shows its HUD.` });
       continue;
     }
     const label = `Stage "${sc.title}"`;
