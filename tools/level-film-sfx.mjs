@@ -18,6 +18,9 @@ const ffmpeg = process.env.FFMPEG || "ffmpeg";
 const listFile = resolve(root, "docs/film-sfx-generations-2026-10-09.json");
 const list = JSON.parse(readFileSync(listFile, "utf8"));
 const WEAK_PEAK = -25, MAX_BOOST = 14, LOOP_MEAN = -24, HIT_PEAK = -3;
+// Room beds laid under a whole scene (studio-edits "ambientAdd") play at full ambient level, so they are leveled down to sit with the
+// film's older beds (about -30 dB) rather than at LOOP_MEAN: the director heard the TV/radio layer as too loud (9 October 2026).
+const BED_MEAN = { "police-radio-low": -34, "radios-repairman": -34, "walla-izakaya": -33 };
 // a television on a shelf, a radio behind a counter (thinner, a little compressed)
 const FX = {
   tv: "highpass=f=300,lowpass=f=5000,aecho=0.8:0.6:35:0.25,volume=1.2",
@@ -37,7 +40,7 @@ for (const [id, e] of Object.entries(list.effects)) {
   const takes = e.takes.map(t => ({ ...t, ...measure(resolve(root, t.file)) }));
   const usable = takes.filter(t => t.peak !== null && t.peak > WEAK_PEAK);
   const best = (usable.length ? usable : takes).reduce((a, b) => (b.mean > a.mean ? b : a));
-  const byPeak = HIT_PEAK - best.peak, byMean = LOOP_MEAN - best.mean;
+  const byPeak = HIT_PEAK - best.peak, byMean = (BED_MEAN[id] ?? LOOP_MEAN) - best.mean;
   const gain = Math.min(MAX_BOOST, e.loop ? Math.min(byPeak, byMean) : byPeak);
   const fade = e.loop ? "" : `,afade=t=out:st=${Math.max(0, best.duration - 0.04)}:d=0.04`;
   const out = resolve(root, `public/film/sfx/${id}.mp3`);

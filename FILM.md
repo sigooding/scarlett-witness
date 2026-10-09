@@ -169,3 +169,5 @@ Asked: *"add special effects where needed in the game ... make sure they are app
 | `photocopier` | 82A |
 | `car-door-heavy` | 94 |
 | `demolition-site` | 99A |
+
+**Levels, later on 9 October 2026 (director: "things like the tv effects are too loud").** Only the sounds heard through a TV, a radio or a wall were turned down, by measurement: each one's placement volume now plays it at -34 to -44 dB average, well under the dialogue (about -19 dB) and the room beds (about -30 dB). That covers the static (was about -24 dB, now -40), the laugh track and the crowd cheer, the DJ through the wall, the baseball and cooking-show voices, the sumo, the ringback tone, the sleeve murmurs, the violin, the neighbours and the phone's buzz. The three new scene beds (police radio, radio repairman, yakitori crowd) are leveled to -33/-34 dB in `tools/level-film-sfx.mjs` (`BED_MEAN`), down from -24. Gunfire, doors, glass and the other hits are unchanged.
