@@ -2675,11 +2675,22 @@
           }
         ],
         "mode": "static",
-        "depthMap": "/film/depth/s74/74-twenty-metres-apart.png",
-        "depthAmount": 0.75,
-        "depthFocus": 0.53,
-        "depthMotion": "orbit",
-        "depthSeconds": 14
+        "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
+        "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
+            "depth": 0.703
+          },
+          {
+            "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
+            "depth": 0.727
+          }
+        ],
+        "depthMotion": "truck",
+        "depthAmount": 0.4,
+        "depthSeconds": 16,
+        "depthDirection": "right"
       }
     },
     "73-two-small-figures": {
@@ -2705,11 +2716,18 @@
           }
         ],
         "mode": "static",
-        "depthMap": "/film/depth/s74/73-two-small-figures.png",
-        "depthAmount": 0.8,
-        "depthFocus": 0.05,
+        "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
+        "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s74/73-two-small-figures/cutout-1.png",
+            "depth": 0.102
+          }
+        ],
         "depthMotion": "push",
-        "depthSeconds": 18
+        "depthAmount": 0.45,
+        "depthSeconds": 18,
+        "focalPoint": "70% 45%"
       }
     },
     "79-the-hive-shut": {
@@ -3315,21 +3333,18 @@
     "75-one-desperate-blow": {
       "cinematic": {
         "mode": "static",
-        "depthMap": "/film/depth/s74/75-one-desperate-blow.png",
-        "depthAmount": 0.6,
-        "depthFocus": 0.58,
-        "depthMotion": "sway",
-        "depthSeconds": 10
-      }
-    },
-    "76-the-reflection": {
-      "cinematic": {
-        "mode": "static",
-        "depthMap": "/film/depth/s74/76-the-reflection.png",
-        "depthAmount": 0.55,
-        "depthFocus": 0.4,
-        "depthMotion": "sway",
-        "depthSeconds": 16
+        "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
+        "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s74/75-one-desperate-blow/cutout-1.png",
+            "depth": 0.792
+          }
+        ],
+        "depthMotion": "push",
+        "depthAmount": 0.4,
+        "depthSeconds": 14,
+        "focalPoint": "62% 42%"
       }
     }
   }

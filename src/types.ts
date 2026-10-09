@@ -1007,6 +1007,14 @@ export interface ForegroundExtra {
   scroll?: import("./game/animation").LayerScroll;
 }
 
+/** One layer cut out of a picture for the depth-map camera (see CinematicSettings.depthCutouts). */
+export interface DepthCutout {
+  /** a transparent PNG the size of the picture, the person (or object) in place */
+  image: string;
+  /** its depth, 0 far – 1 near: the ground's depth at its feet */
+  depth: number;
+}
+
 /** A mid-ground parallax depth plane (see CinematicSettings.parallaxLayers). */
 export interface ParallaxLayer {
   /** image url / `gradient:` / `asset:` reference — transparent cutouts work best */
@@ -1156,26 +1164,37 @@ export interface CinematicSettings {
    * (near) drives its shift. Great for window frames, crowds, fog banks. */
   parallaxLayers?: ParallaxLayer[];
 
-  /** DEPTH-MAP camera (2.5D): a grayscale image the same shape as the plate —
-   * white = near the camera, black = far — that a WebGL shader uses to move the
-   * still picture as if the camera were drifting through the scene. Near things
-   * slide one way, far things the other, the plane at `depthFocus` holds still.
-   * Off for players who ask for reduced motion (the still picture shows). */
+  /** DEPTH-MAP camera (2.5D): a slow camera move with depth on a still
+   * picture. `depthMap` is a grayscale image of the picture's shape — white =
+   * near the camera, black = far. For clean edges also give `depthPlate` (the
+   * picture with its people painted out) and `depthCutouts` (each person as a
+   * transparent PNG): the plate moves through the depth map, each cut-out as one
+   * solid layer, so nobody stretches. tools/make-depth-layers.py makes all three.
+   * Off for players who ask for reduced motion (the still picture shows), and
+   * not used with the dolly camera mode. */
   depthMap?: string;
-  /** How far the depth camera moves, 0–1 (default 0.4; 1 parts the nearest
-   * and farthest pixels by about 4.5% of the frame width). */
+  /** The picture with the cut-out people painted out (what shows behind them as
+   * they move). Without it the depth map moves the picture itself. */
+  depthPlate?: string;
+  /** Up to four people or objects cut out of the picture, each a transparent
+   * PNG the size of the picture, moved as one layer at its `depth` (0 far – 1
+   * near; the ground's depth at its feet keeps it standing on the ground). */
+  depthCutouts?: DepthCutout[];
+  /** How far the camera moves, 0–1 (default 0.4). Push: the far plane ends
+   * about 5% larger and the nearest about 14% at 0.4. Truck/drift: a plane one
+   * unit of depth from the still plane slides 3% of the frame width at 0.4. */
   depthAmount?: number;
-  /** Which depth stays still, 0 (far) – 1 (near). Default 0.5. Set it to the
-   * subject's grey in the map to orbit the camera around them. */
+  /** The move: "push" (dolly in toward `focalPoint`, then hold; default),
+   * "truck" (slide sideways around the still plane, then hold), "drift" (a slow
+   * loop from side to side). */
+  depthMotion?: "push" | "truck" | "drift";
+  /** Truck/drift: which way the camera moves first (default "right"). */
+  depthDirection?: "left" | "right";
+  /** Truck/drift: the depth that holds still, 0 far – 1 near (default: the
+   * cut-outs' depth, so the people hold and the world moves past; else 0.5). */
   depthFocus?: number;
-  /** The move: "orbit" (slow figure-eight, default), "sway" (side to side),
-   * "push" (a dolly in and back: near things grow faster than far ones). */
-  depthMotion?: "orbit" | "sway" | "push";
-  /** Seconds for one full cycle of the move (default 12). */
+  /** Seconds the push or truck takes before it holds; one drift loop. Default 14. */
   depthSeconds?: number;
-  /** Lean the camera a little toward the mouse (default on; touch screens
-   * keep the drift only). */
-  depthPointer?: boolean;
 
   /* ---- new dynamic visuals (5 effects) — Studio toggles ---- */
   /** Volumetric light shafts through dust/fog — drift with parallax, flicker on tension */

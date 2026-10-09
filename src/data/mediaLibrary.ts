@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { assetUrl } from "../assetPath";
 import { visitStoryMediaFields, type StoryMediaField } from "./storyMedia";
-import type { AssetType, CinematicSettings, MediaAsset, Story } from "../types";
+import type { AssetType, CinematicSettings, DepthCutout, MediaAsset, Story } from "../types";
 
 /**
  * Media assets are stored in IndexedDB instead of localStorage.
@@ -674,6 +674,26 @@ export async function compactStoryMedia(story: Story): Promise<Story> {
     return value;
   };
 
+  // The depth camera's layers. One that could not be stored is dropped, never swapped for the placeholder picture: a
+  // placeholder depth map or cut-out would wreck the shot, the still picture does not.
+  const compactDepth = async (c: CinematicSettings, title: string) => {
+    const keep = async (v: string | undefined, what: string) => {
+      if (!v) return v;
+      const out = await compact(v, "image", `${title} ${what}`);
+      return out && out !== IMAGE_FALLBACK ? out : undefined;
+    };
+    if (c.depthMap) c.depthMap = await keep(c.depthMap, "depth map");
+    if (c.depthPlate) c.depthPlate = await keep(c.depthPlate, "depth plate");
+    if (c.depthCutouts?.length) {
+      const cuts: DepthCutout[] = [];
+      for (const k of c.depthCutouts) {
+        const image = await keep(k.image, "depth cut-out");
+        if (image) cuts.push({ ...k, image });
+      }
+      c.depthCutouts = cuts.length ? cuts : undefined;
+    }
+  };
+
   // Compact a contradiction sub-beat (the caught / bluff-called line), which
   // is a full DialogueBeat nested inside a beat's `lie`.
   const compactLieBeat = async (
@@ -767,11 +787,7 @@ export async function compactStoryMedia(story: Story): Promise<Story> {
         if (e.sheet?.image) e.sheet.image = (await compact(e.sheet.image, "image", `${sc.title} extra sheet`)) ?? e.sheet.image;
       }
     }
-    if (sc.cinematic?.depthMap) {
-      const depth = await compact(sc.cinematic.depthMap, "image", `${sc.title} depth map`);
-      // A depth map that could not be stored is dropped, never swapped for the placeholder picture.
-      sc.cinematic.depthMap = depth && depth !== IMAGE_FALLBACK ? depth : undefined;
-    }
+    if (sc.cinematic) await compactDepth(sc.cinematic, sc.title);
     if (sc.cinematic?.parallaxLayers?.length) {
       for (const l of sc.cinematic.parallaxLayers) {
         if (l.image.startsWith("asset:") || l.image.startsWith("data:")) {
@@ -798,11 +814,7 @@ export async function compactStoryMedia(story: Story): Promise<Story> {
           if (e.sheet?.image) e.sheet.image = (await compact(e.sheet.image, "image", `${sc.title} extra sheet`)) ?? e.sheet.image;
         }
       }
-      if (b.cinematic?.depthMap) {
-        const depth = await compact(b.cinematic.depthMap, "image", `${sc.title} depth map`);
-        // A depth map that could not be stored is dropped, never swapped for the placeholder picture.
-        b.cinematic.depthMap = depth && depth !== IMAGE_FALLBACK ? depth : undefined;
-      }
+      if (b.cinematic) await compactDepth(b.cinematic, sc.title);
       if (b.cinematic?.parallaxLayers?.length) {
         for (const l of b.cinematic.parallaxLayers) {
           if (l.image.startsWith("asset:") || l.image.startsWith("data:")) {

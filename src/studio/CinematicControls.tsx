@@ -119,7 +119,16 @@ function CinematicPreview({
       <div className={`absolute inset-0 ${pOn ? "parallax-plate" : ""}`} style={pOn ? parallaxStyle(cinematic) : undefined}>
         <div className={`absolute inset-0 ${className}`} style={style}>
           <DepthParallaxLayer
-            cinematic={cinematic?.depthMap ? { ...cinematic, depthMap: media(cinematic.depthMap) } : cinematic}
+            cinematic={
+              cinematic?.depthMap
+                ? {
+                    ...cinematic,
+                    depthMap: media(cinematic.depthMap),
+                    depthPlate: media(cinematic.depthPlate),
+                    depthCutouts: cinematic.depthCutouts?.map((k) => ({ ...k, image: media(k.image) ?? "" })),
+                  }
+                : cinematic
+            }
             picture={url}
             reducedMotion={reducedMotion}
           />
@@ -844,10 +853,11 @@ export function CinematicControls({
 
       <CollapsibleSection id="cin-depth" title="🧊 Depth-map camera (2.5D)" hint={c.depthMap ? "on" : "off"} titleClass="text-cyan-neon">
         <p className="font-type text-[9px] leading-snug text-paper/45">
-          Pair the picture with a grayscale <b>depth map</b> of the same shape — white = near the camera, black = far —
-          and the still frame moves like a camera drifting through the scene: near things slide one way, far things the
-          other, the still plane holds. Works with every camera mode except 🛤 dolly. Players who ask for reduced motion
-          see the still picture.
+          A slow camera move with depth on a still picture. Give it a grayscale <b>depth map</b> of the same shape (white =
+          near, black = far). For clean edges also give a <b>clean plate</b> (the picture with its people painted out) and
+          each person as a <b>cut-out</b> (a transparent PNG the size of the picture): the plate moves through the depth
+          map, each cut-out as one solid layer, so nobody stretches. <code>tools/make-depth-layers.py</code> makes all three.
+          Not used with the 🛤 dolly mode; players who ask for reduced motion see the still picture.
         </p>
         <Field label="Depth map (grayscale, white = near)">
           <ImagePicker
@@ -859,6 +869,76 @@ export function CinematicControls({
         </Field>
         {c.depthMap && (
           <>
+            <Field label="Clean plate (the picture with the cut-outs painted out)">
+              <ImagePicker
+                value={c.depthPlate}
+                includeGradients={false}
+                placeholder="Optional: the picture without its people…"
+                onChange={(v) => set({ depthPlate: v || undefined })}
+              />
+            </Field>
+            <Field label={`Cut-outs (${(c.depthCutouts ?? []).length} of 4) — each moves as one layer at its depth`}>
+              {(c.depthCutouts ?? []).map((k, i) => (
+                <div key={i} className="mb-2 space-y-1 border border-cyan-neon/20 bg-cyan-neon/5 p-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <ImagePicker
+                      value={k.image}
+                      includeGradients={false}
+                      placeholder="A transparent PNG the size of the picture…"
+                      onChange={(v) => {
+                        const cuts = [...(c.depthCutouts ?? [])];
+                        cuts[i] = { ...k, image: v ?? "" };
+                        set({ depthCutouts: cuts });
+                      }}
+                    />
+                    <button
+                      className="shrink-0 border border-crimson/50 px-2 py-1 font-pulp text-[9px] uppercase text-crimson hover:bg-crimson/10"
+                      onClick={() => {
+                        const cuts = (c.depthCutouts ?? []).filter((_, j) => j !== i);
+                        set({ depthCutouts: cuts.length ? cuts : undefined });
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <label className="flex items-center gap-2 font-type text-[10px] text-paper/70">
+                    Depth {Math.round(k.depth * 100)}%
+                    <input
+                      type="range"
+                      min={0}
+                      max={1}
+                      step={0.01}
+                      value={k.depth}
+                      className="flex-1 accent-cyan-400"
+                      onChange={(e) => {
+                        const cuts = [...(c.depthCutouts ?? [])];
+                        cuts[i] = { ...k, depth: Number(e.target.value) };
+                        set({ depthCutouts: cuts });
+                      }}
+                    />
+                  </label>
+                </div>
+              ))}
+              {(c.depthCutouts ?? []).length < 4 && (
+                <button
+                  className="border border-cyan-neon/40 px-2 py-1 font-pulp text-[9px] uppercase tracking-widest text-cyan-neon hover:bg-cyan-neon/10"
+                  onClick={() => set({ depthCutouts: [...(c.depthCutouts ?? []), { image: "", depth: 0.6 }] })}
+                >
+                  ＋ Cut-out
+                </button>
+              )}
+            </Field>
+            <Field label="Move">
+              <select
+                className={inputCls}
+                value={c.depthMotion ?? "push"}
+                onChange={(e) => set({ depthMotion: e.target.value as CinematicSettings["depthMotion"] })}
+              >
+                <option value="push">⇥ Push — a slow dolly in toward the focal point, then hold</option>
+                <option value="truck">↔ Truck — slide sideways around the still plane, then hold</option>
+                <option value="drift">∿ Drift — a slow loop from side to side</option>
+              </select>
+            </Field>
             <Field label={`Amount ${Math.round((c.depthAmount ?? 0.4) * 100)}%`}>
               <input
                 type="range"
@@ -870,43 +950,45 @@ export function CinematicControls({
                 onChange={(e) => set({ depthAmount: Number(e.target.value) })}
               />
             </Field>
-            <Field label={`Still plane ${Math.round((c.depthFocus ?? 0.5) * 100)}% (0 = far, 100 = near)`}>
-              <input
-                type="range"
-                min={0}
-                max={1}
-                step={0.05}
-                value={c.depthFocus ?? 0.5}
-                className="w-full accent-cyan-400"
-                onChange={(e) => set({ depthFocus: Number(e.target.value) })}
-              />
-            </Field>
-            <Field label="Move">
-              <select
-                className={inputCls}
-                value={c.depthMotion ?? "orbit"}
-                onChange={(e) => set({ depthMotion: e.target.value as CinematicSettings["depthMotion"] })}
-              >
-                <option value="orbit">∞ Orbit — a slow figure-eight around the still plane</option>
-                <option value="sway">↔ Sway — side to side</option>
-                <option value="push">⇥ Push — a dolly in and back, near things grow faster</option>
-              </select>
-            </Field>
-            <Field label={`Cycle ${c.depthSeconds ?? 12}s`}>
+            <Field label={`${(c.depthMotion ?? "push") === "drift" ? "One loop" : "Move length"} ${c.depthSeconds ?? 14}s`}>
               <input
                 type="range"
                 min={4}
                 max={40}
                 step={1}
-                value={c.depthSeconds ?? 12}
+                value={c.depthSeconds ?? 14}
                 className="w-full accent-cyan-400"
                 onChange={(e) => set({ depthSeconds: Number(e.target.value) })}
               />
             </Field>
-            <label className="flex items-center gap-2 font-type text-[10px] text-paper/70">
-              <input type="checkbox" checked={c.depthPointer !== false} onChange={(e) => set({ depthPointer: e.target.checked ? undefined : false })} />
-              Lean the camera toward the mouse
-            </label>
+            {(c.depthMotion ?? "push") !== "push" && (
+              <>
+                <Field label="Direction">
+                  <select
+                    className={inputCls}
+                    value={c.depthDirection ?? "right"}
+                    onChange={(e) => set({ depthDirection: e.target.value as CinematicSettings["depthDirection"] })}
+                  >
+                    <option value="right">→ Right first</option>
+                    <option value="left">← Left first</option>
+                  </select>
+                </Field>
+                <Field label={`Still plane ${c.depthFocus === undefined ? "(the cut-outs' depth)" : `${Math.round(c.depthFocus * 100)}%`}`}>
+                  <input
+                    type="range"
+                    min={0}
+                    max={1}
+                    step={0.05}
+                    value={c.depthFocus ?? 0.5}
+                    className="w-full accent-cyan-400"
+                    onChange={(e) => set({ depthFocus: Number(e.target.value) })}
+                  />
+                </Field>
+              </>
+            )}
+            {(c.depthMotion ?? "push") === "push" && (
+              <p className="font-type text-[9px] leading-snug text-paper/45">The push closes in on the focal point (📷 Camera).</p>
+            )}
           </>
         )}
       </CollapsibleSection>

@@ -1,51 +1,83 @@
 import { useEffect, useRef, useState } from "react";
-import type { CinematicSettings } from "../types";
+import type { CinematicSettings, DepthCutout } from "../types";
 import { assetBackground, assetUrl } from "../assetPath";
 
 /* ------------------------------------------------------------------ */
-/*  depth-map parallax (2.5D camera on a still picture)                */
+/*  depth-map camera (2.5D camera move on a still picture)             */
 /* ------------------------------------------------------------------ */
 
-/** How strongly a depth map can move the picture: at `depthAmount` 1 the
- * nearest and farthest pixels part by this fraction of the frame width. */
-const MAX_SHIFT = 0.045;
+/* How far each move goes at `depthAmount` 1. Push: the farthest plane ends
+ * this much larger (PUSH_FAR) and the nearest this much (PUSH_NEAR); the
+ * default amount 0.4 ends at about 1.05x far and 1.14x near, a slow dolly in.
+ * Truck/drift: a plane one unit of depth from the still plane slides this
+ * fraction of the frame width. */
+const PUSH_FAR = 0.12;
+const PUSH_NEAR = 0.36;
+const TRUCK = 0.08;
+const MAX_CUTOUTS = 4;
 
 const VERTEX = `
 attribute vec2 aPos;
 varying vec2 vUv;
 void main() { vUv = aPos * 0.5 + 0.5; gl_Position = vec4(aPos, 0.0, 1.0); }`;
 
-/* The picture is drawn through its depth map: a pixel of depth d moves by
- * (d - focus) times the camera offset, so the plane at `focus` holds still
- * while nearer things slide one way and farther things the other. The loop
- * inverts that mapping (for each screen pixel, find the picture pixel that
- * lands on it), which keeps near objects in front of the background they
- * pass over instead of smearing it. `uPush` is a dolly: near pixels grow
- * away from the centre faster than far ones. */
+/* A point of the picture at depth d (0 far, 1 near) lands at
+ *   centre + (p - centre) * zoom(d) + shift * (d - focus)
+ * so near things grow and slide more than far ones. The background plate
+ * (the picture with its cut-outs painted out) is drawn through its smoothed
+ * depth map, the loop inverting that mapping per pixel; each cut-out is one
+ * solid layer at a single depth, so a person never stretches, and the plate
+ * shows behind them as they move. Cut-outs are premultiplied and sorted far
+ * to near on the CPU. Plate and cut-outs are pre-scaled to the canvas, so the
+ * picture is only ever enlarged, never shrunk without filtering. */
 const FRAGMENT = `
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
 precision mediump float;
-uniform sampler2D uImg;
+#endif
+uniform sampler2D uPlate;
 uniform sampler2D uDepth;
+uniform sampler2D uCut0;
+uniform sampler2D uCut1;
+uniform sampler2D uCut2;
+uniform sampler2D uCut3;
+uniform vec4 uCutDepth;
+uniform int uCuts;
+uniform vec2 uCenter;
+uniform vec2 uZoom;
 uniform vec2 uShift;
-uniform float uPush;
 uniform float uFocus;
-uniform vec2 uScale;
-uniform float uOverscan;
+uniform vec2 uDepthScale;
 varying vec2 vUv;
-vec2 moved(vec2 s, float d) { float k = d - uFocus; return uShift * k + (s - 0.5) * uPush * k; }
+vec2 source(vec2 uv, float d) { return uCenter + (uv - uShift * (d - uFocus) - uCenter) / mix(uZoom.x, uZoom.y, d); }
+float depthAt(vec2 p) { return texture2D(uDepth, clamp((p - 0.5) * uDepthScale + 0.5, 0.0, 1.0)).r; }
+vec4 cutout(sampler2D tex, float d, vec2 uv) {
+  vec2 p = source(uv, d);
+  vec2 inside = step(vec2(0.0), p) * step(p, vec2(1.0));
+  return texture2D(tex, clamp(p, 0.0, 1.0)) * inside.x * inside.y;
+}
 void main() {
-  vec2 uv = (vUv - 0.5) * uScale / uOverscan + 0.5;
-  vec2 s = uv;
-  for (int i = 0; i < 6; i++) { s = uv - moved(s, texture2D(uDepth, clamp(s, 0.0, 1.0)).r); }
-  gl_FragColor = texture2D(uImg, clamp(s, 0.0, 1.0));
+  vec2 p = vUv;
+  for (int i = 0; i < 5; i++) { p = source(vUv, depthAt(p)); }
+  vec4 col = texture2D(uPlate, clamp(p, 0.0, 1.0));
+  vec4 c;
+  if (uCuts > 0) { c = cutout(uCut0, uCutDepth.x, vUv); col = c + col * (1.0 - c.a); }
+  if (uCuts > 1) { c = cutout(uCut1, uCutDepth.y, vUv); col = c + col * (1.0 - c.a); }
+  if (uCuts > 2) { c = cutout(uCut2, uCutDepth.z, vUv); col = c + col * (1.0 - c.a); }
+  if (uCuts > 3) { c = cutout(uCut3, uCutDepth.w, vUv); col = c + col * (1.0 - c.a); }
+  gl_FragColor = vec4(col.rgb, 1.0);
 }`;
+
+const unresolved = (v?: string) => !!v && v.startsWith("asset:");
 
 /** True when this cinematic asks for a depth-map camera on a still picture. */
 export function hasDepthParallax(c: CinematicSettings | undefined, picture: string | undefined): boolean {
   if (!c?.depthMap || !picture) return false;
   // The dolly mode oversizes the plate's picture to travel across it; the redraw would not line up with it.
   if (c.mode === "dolly") return false;
-  return !/^(gradient:|video:|asset:)/.test(picture) && !c.depthMap.startsWith("asset:");
+  if (/^(gradient:|video:|asset:)/.test(picture)) return false;
+  return !unresolved(c.depthMap) && !unresolved(c.depthPlate) && !(c.depthCutouts ?? []).some((k) => unresolved(k.image));
 }
 
 function loadImage(src: string): Promise<HTMLImageElement> {
@@ -67,28 +99,51 @@ function compile(gl: WebGLRenderingContext, type: number, source: string): WebGL
   return gl.getShaderParameter(sh, gl.COMPILE_STATUS) ? sh : null;
 }
 
-function texture(gl: WebGLRenderingContext, unit: number, img: HTMLImageElement) {
-  const t = gl.createTexture();
+/** Uploads `src` to texture unit `unit`, clamped and linearly filtered. */
+function upload(gl: WebGLRenderingContext, unit: number, src: TexImageSource, premultiply: boolean) {
   gl.activeTexture(gl.TEXTURE0 + unit);
-  gl.bindTexture(gl.TEXTURE_2D, t);
+  gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
-  // Pictures are rarely powers of two: no mipmaps, clamped edges.
+  gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, premultiply);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, src);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  return t;
 }
 
-/** A WebGL canvas that redraws `picture` through `cinematic.depthMap` (a
- * grayscale image the same shape as the picture: white = near the camera,
- * black = far) with a slow camera move, so a still frame reads as a shot with
- * depth. It sits INSIDE the plate's cinematic layer, so the camera mode, the
- * grade filter, dimming, glows and flares all still apply on top of it. The
- * plate's own CSS background stays underneath: until both images have loaded,
- * or if WebGL is unavailable, or for players who ask for reduced motion, the
- * still picture is what shows. */
+/** The picture cropped to the canvas (object-fit: cover, centred, like the plate's CSS background) and scaled to its pixel
+ * size by the browser's own high-quality resampling. Sampling a texture larger than the canvas without mipmaps shimmers on
+ * fine detail (roller shutters), and WebGL 1 cannot mipmap pictures that are not a power of two. */
+function fitted(img: HTMLImageElement, w: number, h: number): HTMLCanvasElement {
+  const c = document.createElement("canvas");
+  c.width = w;
+  c.height = h;
+  const ctx = c.getContext("2d");
+  if (!ctx) return c;
+  const scale = Math.max(w / img.naturalWidth, h / img.naturalHeight);
+  const sw = w / scale, sh = h / scale;
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(img, (img.naturalWidth - sw) / 2, (img.naturalHeight - sh) / 2, sw, sh, 0, 0, w, h);
+  return c;
+}
+
+const easeInOut = (x: number) => 0.5 - 0.5 * Math.cos(Math.PI * Math.max(0, Math.min(1, x)));
+
+/** "x% y%" (the cinematic's focal point) as canvas uv, y up. */
+function centre(focalPoint?: string): [number, number] {
+  const [x, y] = (focalPoint ?? "50% 50%").split(/\s+/).map((v) => parseFloat(v));
+  const clamp = (v: number) => (Number.isFinite(v) ? Math.max(0, Math.min(100, v)) / 100 : 0.5);
+  return [clamp(x), 1 - clamp(y)];
+}
+
+/** A WebGL canvas that turns a still picture into a slow camera move with depth. The picture is paired with a grayscale
+ * `depthMap` (white = near, black = far); for clean edges, also a `depthPlate` (the picture with its people painted out) and
+ * `depthCutouts` (each person as a transparent PNG with the depth of the ground at their feet), made by
+ * tools/make-depth-layers.py. It sits INSIDE the plate's cinematic layer, so the grade, film stock, dimming, glows and flares
+ * stay on top. The plate's own CSS picture stays underneath: until every image has loaded, without WebGL, and for players who
+ * ask for reduced motion, the still picture is what shows. */
 export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
   cinematic?: CinematicSettings;
   picture: string;
@@ -98,11 +153,16 @@ export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
   const [ready, setReady] = useState(false);
   const on = hasDepthParallax(cinematic, picture) && !reducedMotion;
   const depthMap = cinematic?.depthMap;
+  const plate = cinematic?.depthPlate;
+  const cutouts: DepthCutout[] = (cinematic?.depthCutouts ?? []).filter((k) => k.image).slice(0, MAX_CUTOUTS);
+  const cutKey = cutouts.map((k) => `${k.image}@${k.depth}`).join(",");
   const amount = Math.max(0, Math.min(1, cinematic?.depthAmount ?? 0.4));
-  const focus = Math.max(0, Math.min(1, cinematic?.depthFocus ?? 0.5));
-  const motion = cinematic?.depthMotion ?? "orbit";
-  const seconds = Math.max(2, cinematic?.depthSeconds ?? 12);
-  const follow = cinematic?.depthPointer !== false;
+  const motion = cinematic?.depthMotion ?? "push";
+  const seconds = Math.max(2, cinematic?.depthSeconds ?? 14);
+  const direction = cinematic?.depthDirection === "left" ? -1 : 1;
+  // Truck and drift turn around the still plane: by default the cut-outs' depth, so the people hold and the world moves past.
+  const focus = Math.max(0, Math.min(1, cinematic?.depthFocus ?? (cutouts.length ? cutouts.reduce((s, k) => s + k.depth, 0) / cutouts.length : 0.5)));
+  const focal = cinematic?.focalPoint;
 
   useEffect(() => {
     setReady(false);
@@ -122,86 +182,97 @@ export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
     gl.linkProgram(prog);
     if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
     gl.useProgram(prog);
-    const buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const aPos = gl.getAttribLocation(prog, "aPos");
     gl.enableVertexAttribArray(aPos);
     gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
     const u = (name: string) => gl.getUniformLocation(prog, name);
-    const uShift = u("uShift"), uPush = u("uPush"), uFocus = u("uFocus"), uScale = u("uScale"), uOverscan = u("uOverscan");
-    gl.uniform1i(u("uImg"), 0);
+    const uZoom = u("uZoom"), uShift = u("uShift"), uDepthScale = u("uDepthScale");
+    gl.uniform1i(u("uPlate"), 0);
     gl.uniform1i(u("uDepth"), 1);
-    gl.uniform1f(uFocus, focus);
+    ["uCut0", "uCut1", "uCut2", "uCut3"].forEach((name, i) => gl.uniform1i(u(name), 2 + i));
+    gl.uniform1f(u("uFocus"), focus);
+    // A push closes in on the focal point; truck and drift turn about the middle, which their edge zoom is worked out for.
+    gl.uniform2f(u("uCenter"), ...(motion === "push" ? centre(focal) : ([0.5, 0.5] as [number, number])));
+    const layers = [...cutouts].sort((a, b) => a.depth - b.depth);
+    gl.uniform1i(u("uCuts"), layers.length);
+    const depths = [0, 1, 2, 3].map((i) => Math.max(0, Math.min(1, layers[i]?.depth ?? 0)));
+    gl.uniform4f(u("uCutDepth"), depths[0], depths[1], depths[2], depths[3]);
 
-    const shift = amount * MAX_SHIFT;
+    // The largest slide any plane makes, and the zoom that keeps the frame's edges out of view for it.
     const reach = Math.max(focus, 1 - focus);
-    // Zoom in just enough that the farthest move never pulls an edge into
-    // frame: the largest offset is 1.5 x shift (drift plus pointer lean) or,
-    // for the dolly, 1.1 x shift at the frame's edge, times the depth reach.
-    const farthest = reach * shift * (motion === "push" ? 1.1 : 1.5);
-    const overscan = 1 / Math.max(0.5, 1 - 2 * farthest);
+    const overscanFor = (slide: number) => 1 / Math.max(0.5, 1 - 2 * reach * Math.abs(slide));
 
-    let imgAspect = 16 / 9;
-    const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    let images: { plate: HTMLImageElement; depth: HTMLImageElement; cuts: HTMLImageElement[] } | null = null;
+    let size = "";
+    const prepare = () => {
+      if (!images) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const w = Math.max(1, Math.round(canvas.clientWidth * dpr));
       const h = Math.max(1, Math.round(canvas.clientHeight * dpr));
-      if (canvas.width !== w || canvas.height !== h) {
-        canvas.width = w;
-        canvas.height = h;
-      }
+      if (`${w}x${h}` === size) return;
+      size = `${w}x${h}`;
+      canvas.width = w;
+      canvas.height = h;
       gl.viewport(0, 0, w, h);
-      // object-fit: cover, centred — the same crop as the plate's background.
-      const ca = w / h;
-      gl.uniform2f(uScale, ca > imgAspect ? 1 : ca / imgAspect, ca > imgAspect ? imgAspect / ca : 1);
+      upload(gl, 0, fitted(images.plate, w, h), false);
+      upload(gl, 1, images.depth, false);
+      images.cuts.forEach((img, i) => upload(gl, 2 + i, fitted(img, w, h), true));
+      // The depth map is the whole picture; the canvas shows its cover crop.
+      const ca = w / h, ia = images.plate.naturalWidth / Math.max(1, images.plate.naturalHeight);
+      gl.uniform2f(uDepthScale, ca > ia ? 1 : ca / ia, ca > ia ? ia / ca : 1);
     };
-    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(resize) : null;
+
+    // The move starts on the first frame drawn, not when loading began: a picture that loads slowly must not open mid-move.
+    let start = -1;
+    let done = false;
+    const frame = (now: number) => {
+      if (start < 0) start = now;
+      const t = (now - start) / 1000;
+      let zoomFar = 1, zoomNear = 1, slide = 0;
+      if (motion === "push") {
+        const p = easeInOut(t / seconds);
+        zoomFar = 1 + amount * PUSH_FAR * p;
+        zoomNear = 1 + amount * PUSH_NEAR * p;
+        done = t >= seconds;
+      } else if (motion === "truck") {
+        slide = amount * TRUCK * easeInOut(t / seconds) * direction;
+        zoomFar = zoomNear = overscanFor(slide);
+        done = t >= seconds;
+      } else {
+        // drift: a slow loop side to side, its size and the zoom that hides the edges easing in over the first two seconds
+        const grow = easeInOut(t / 2);
+        slide = amount * TRUCK * 0.5 * grow * Math.sin((2 * Math.PI * t) / seconds) * direction;
+        zoomFar = zoomNear = overscanFor(amount * TRUCK * 0.5 * grow);
+      }
+      gl.uniform2f(uZoom, zoomFar, zoomNear);
+      gl.uniform2f(uShift, slide, 0);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    };
+    // A push or truck ends and holds: the loop stops there and only a resize draws again.
+    const loop = (now: number) => {
+      if (!alive) return;
+      frame(now);
+      if (!done) raf = requestAnimationFrame(loop);
+    };
+    const ro = typeof ResizeObserver !== "undefined"
+      ? new ResizeObserver(() => { prepare(); if (done && alive) frame(performance.now()); })
+      : null;
     ro?.observe(canvas);
-
-    // The pointer leans the camera a little; touch screens keep the drift only.
-    const pointer = { x: 0, y: 0, sx: 0, sy: 0 };
-    const finePointer = follow && !!window.matchMedia?.("(pointer: fine)").matches;
-    const onMove = (e: PointerEvent) => {
-      const r = canvas.getBoundingClientRect();
-      if (!r.width || !r.height) return;
-      pointer.x = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width) * 2 - 1));
-      pointer.y = Math.max(-1, Math.min(1, ((e.clientY - r.top) / r.height) * 2 - 1));
-    };
-    if (finePointer) window.addEventListener("pointermove", onMove, { passive: true });
-
     const onLost = (e: Event) => { e.preventDefault(); alive = false; cancelAnimationFrame(raf); setReady(false); };
     canvas.addEventListener("webglcontextlost", onLost);
 
-    const start = performance.now();
-    const draw = (now: number) => {
-      if (!alive) return;
-      const t = ((now - start) / 1000) * ((2 * Math.PI) / seconds);
-      pointer.sx += (pointer.x - pointer.sx) * 0.05;
-      pointer.sy += (pointer.y - pointer.sy) * 0.05;
-      // Ease in over the first two seconds so the move starts from the still frame.
-      const ease = Math.min(1, (now - start) / 2000);
-      const e = ease * ease * (3 - 2 * ease);
-      let x = 0, y = 0, push = 0;
-      if (motion === "sway") x = Math.sin(t);
-      else if (motion === "push") push = (1 - Math.cos(t)) * 0.5;
-      else { x = Math.sin(t); y = 0.4 * Math.sin(2 * t); }
-      gl.uniform2f(uShift, shift * e * (x + 0.5 * pointer.sx), shift * e * (y - 0.35 * pointer.sy));
-      gl.uniform1f(uPush, shift * 2.2 * e * push);
-      // The edge zoom ramps in with the move, so the first frame matches the still plate underneath exactly.
-      gl.uniform1f(uOverscan, 1 + (overscan - 1) * e);
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      raf = requestAnimationFrame(draw);
-    };
-
-    Promise.all([loadImage(assetBackground(picture)), loadImage(assetUrl(depthMap))])
-      .then(([img, depth]) => {
+    Promise.all([
+      loadImage(assetBackground(plate || picture)),
+      loadImage(assetUrl(depthMap)),
+      ...layers.map((k) => loadImage(assetUrl(k.image))),
+    ])
+      .then(([plateImg, depthImg, ...cutImgs]) => {
         if (!alive) return;
-        imgAspect = img.naturalWidth / Math.max(1, img.naturalHeight);
-        texture(gl, 0, img);
-        texture(gl, 1, depth);
-        resize();
-        raf = requestAnimationFrame((now) => { draw(now); setReady(true); });
+        images = { plate: plateImg, depth: depthImg, cuts: cutImgs };
+        prepare();
+        raf = requestAnimationFrame((now) => { loop(now); setReady(true); });
       })
       .catch(() => { /* the still picture underneath stays */ });
 
@@ -209,7 +280,6 @@ export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
       alive = false;
       cancelAnimationFrame(raf);
       ro?.disconnect();
-      if (finePointer) window.removeEventListener("pointermove", onMove);
       canvas.removeEventListener("webglcontextlost", onLost);
       // Free the context once the canvas has left the page: a long film crossfades through many pictures. Not
       // while it is still mounted (React's development double-run of effects): a freed context cannot be reused.
@@ -217,16 +287,19 @@ export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
         if (!canvas.isConnected) gl.getExtension("WEBGL_lose_context")?.loseContext();
       }, 0);
     };
-  }, [on, picture, depthMap, amount, focus, motion, seconds, follow]);
+    // cutKey stands for the cut-out list (a new array on every render).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [on, picture, depthMap, plate, cutKey, amount, focus, motion, seconds, direction, focal]);
 
   if (!on) return null;
   return (
     <canvas
       // A fresh canvas per setting: the old one is removed from the page and its context freed.
-      key={`${picture}|${depthMap}|${amount}|${focus}|${motion}|${seconds}|${follow}`}
+      key={`${picture}|${depthMap}|${plate}|${cutKey}|${amount}|${focus}|${motion}|${seconds}|${direction}|${focal}`}
       ref={canvasRef}
       className="depth-parallax"
       data-depth-ready={ready ? "1" : "0"}
+      data-depth-for={picture.replace(/^.*\//, "")}
       aria-hidden
       style={{ opacity: ready ? 1 : 0 }}
     />

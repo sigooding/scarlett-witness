@@ -1,0 +1,50 @@
+{
+ "about": "Pictures that play with the depth-map camera, and the boxes around the people cut out of them. tools/make-depth-layers.py reads the boxes, writes the layers to public/film/depth/<scene folder>/<picture>/ and writes each cut-out's depth back here; src/film/studio-edits.json (pictureLook) points the film at them.",
+ "pictures": {
+  "74-twenty-metres-apart": {
+   "picture": "public/film/img/s74/74-twenty-metres-apart.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [370, 290, 190, 650],
+     "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
+     "depth": 0.703
+    },
+    {
+     "name": "jack",
+     "box": [1510, 270, 250, 690],
+     "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
+     "depth": 0.727
+    }
+   ],
+   "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
+   "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg"
+  },
+  "75-one-desperate-blow": {
+   "picture": "public/film/img/s74/75-one-desperate-blow.jpg",
+   "cutouts": [
+    {
+     "name": "vera and jack",
+     "box": [950, 220, 540, 790],
+     "image": "/film/depth/s74/75-one-desperate-blow/cutout-1.png",
+     "depth": 0.792
+    }
+   ],
+   "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
+   "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg"
+  },
+  "73-two-small-figures": {
+   "picture": "public/film/img/s74/73-two-small-figures.jpg",
+   "cutouts": [
+    {
+     "name": "vera and jack",
+     "box": [1500, 330, 280, 150],
+     "image": "/film/depth/s74/73-two-small-figures/cutout-1.png",
+     "depth": 0.102
+    }
+   ],
+   "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
+   "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg"
+  }
+ }
+}
