@@ -1075,9 +1075,9 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
     const mismatch: any = { ...stageBase, nodeType: undefined };
     const mismatchIssues = craftIssues([mismatch]);
     check("stage: stage settings on a non-stage node warn", has(mismatchIssues, /carries Stage settings but is not a Stage node/));
-    // Same for the NO-HUD flag — a classic scene can't hide its chrome.
-    const hudMismatch = craftIssues([{ ...stageBase, nodeType: undefined, hideHud: true } as any]);
-    check("stage: NO-HUD on a non-stage node warns", has(hudMismatch, /NO-HUD switched on but is not a Stage node/));
+    // NO-HUD is not a Stage-only flag: any scene with hideHud hides the chrome (Game.tsx hudHidden), so it must not warn.
+    const hudOnClassic = craftIssues([{ ...stageBase, nodeType: undefined, stage: undefined, hideHud: true } as any]);
+    check("NO-HUD on a standard scene does not warn", !has(hudOnClassic, /NO-HUD/));
 
     /* ---- ambient NPC hygiene ------------------------------------------- */
     {

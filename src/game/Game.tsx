@@ -3224,7 +3224,7 @@ function CasePlayer({
    *  `autoAdvanceDelaySeconds` may stretch (a longer music cue) but never cut
    *  short. One number drives the timer, the progress rule and the skip. */
   const creditsWait = isCredits && scene ? Math.max(scene.autoAdvanceDelaySeconds ?? 0, creditsRoll) : 0;
-  /** NO-HUD layout (credits, cutscene, or a 🚶 stage with hideHud set):
+  /** NO-HUD layout (credits, cutscene, or any scene with hideHud set):
    *  zero in-game chrome — no menu, meters, leads panel, chips, dock or
    *  sound/help corner. Subtitles, stage markers and the verb coin stay;
    *  Esc still opens the quit dialog so the player is never trapped. */

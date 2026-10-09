@@ -600,6 +600,7 @@ const SceneFlowNode = memo(function SceneFlowNode({ data }: NodeProps) {
             {scene.nodeType === "credits" && "🎬 CREDITS · "}
             {scene.nodeType === "cutscene" && "🎥 CUTSCENE · "}
             {scene.nodeType === "stage" && (scene.hideHud ? "🚶 STAGE · NO HUD · " : "🚶 STAGE · ")}
+            {!scene.nodeType && scene.hideHud && "NO HUD · "}
             {isStart && "★ START · "}
             {isEnd && !isStart && !scene.nodeType && "🏁 END · "}
             {scene.title}
@@ -7368,10 +7369,11 @@ function StudioInner({
                 <Field label="Node Layout Type">
                   <select
                     className={inputCls}
-                    value={scene.nodeType === "stage" && scene.hideHud ? "stageNoHud" : scene.nodeType ?? "standard"}
+                    value={scene.nodeType === "stage" && scene.hideHud ? "stageNoHud" : !scene.nodeType && scene.hideHud ? "standardNoHud" : scene.nodeType ?? "standard"}
                     onChange={(e) => {
                       const v = e.target.value;
                       if (v === "standard") updateScene(scene.id, { nodeType: undefined, hideHud: undefined });
+                      else if (v === "standardNoHud") updateScene(scene.id, { nodeType: undefined, hideHud: true });
                       else if (v === "stageNoHud")
                         updateScene(scene.id, {
                           nodeType: "stage",
@@ -7396,6 +7398,7 @@ function StudioInner({
                     }}
                   >
                     <option value="standard">📁 Standard Game Scene (with HUD)</option>
+                    <option value="standardNoHud">📁 Standard Game Scene (NO HUD)</option>
                     <option value="credits">🎬 Opening Credits (Centered text, NO HUD)</option>
                     <option value="cutscene">🎥 Cinematic Cutscene (Widescreen, NO HUD)</option>
                   </select>
