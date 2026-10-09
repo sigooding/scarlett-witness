@@ -1156,6 +1156,27 @@ export interface CinematicSettings {
    * (near) drives its shift. Great for window frames, crowds, fog banks. */
   parallaxLayers?: ParallaxLayer[];
 
+  /** DEPTH-MAP camera (2.5D): a grayscale image the same shape as the plate —
+   * white = near the camera, black = far — that a WebGL shader uses to move the
+   * still picture as if the camera were drifting through the scene. Near things
+   * slide one way, far things the other, the plane at `depthFocus` holds still.
+   * Off for players who ask for reduced motion (the still picture shows). */
+  depthMap?: string;
+  /** How far the depth camera moves, 0–1 (default 0.4; 1 parts the nearest
+   * and farthest pixels by about 4.5% of the frame width). */
+  depthAmount?: number;
+  /** Which depth stays still, 0 (far) – 1 (near). Default 0.5. Set it to the
+   * subject's grey in the map to orbit the camera around them. */
+  depthFocus?: number;
+  /** The move: "orbit" (slow figure-eight, default), "sway" (side to side),
+   * "push" (a dolly in and back: near things grow faster than far ones). */
+  depthMotion?: "orbit" | "sway" | "push";
+  /** Seconds for one full cycle of the move (default 12). */
+  depthSeconds?: number;
+  /** Lean the camera a little toward the mouse (default on; touch screens
+   * keep the drift only). */
+  depthPointer?: boolean;
+
   /* ---- new dynamic visuals (5 effects) — Studio toggles ---- */
   /** Volumetric light shafts through dust/fog — drift with parallax, flicker on tension */
   volumetricShafts?: boolean;

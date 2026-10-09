@@ -125,6 +125,7 @@ import {
   scrollKeyframes,
 } from "./animation";
 import { prefersReducedMotion as prefersReducedMotionPure, usePrefersReducedMotion, reducedMotionCinematicMode, reducedMotionTransition } from "./useReducedMotion";
+import { DepthParallaxLayer } from "./DepthParallax";
 import { CREDITS_TYPE_SPEED, creditsRollSeconds, creditsTiming, resolveCredits } from "../credits";
 import type {
   Choice,
@@ -2154,6 +2155,7 @@ function BeatBackground({
             ) : (
             <div className={`absolute inset-0 ${pOn ? "parallax-plate" : ""}`} style={pOn ? parallaxStyle(l.cinematic) : undefined}>
               <div className={`absolute inset-0 ${cinClass}`} style={cinStyle}>
+                <DepthParallaxLayer cinematic={l.cinematic} picture={l.background} reducedMotion={prefersReducedMotionPure()} />
                 <LightGlow cinematic={l.cinematic} />
                 <LensFlareLayer cinematic={l.cinematic} />
                 <CinematicOverlays cinematic={l.cinematic} />
@@ -6426,6 +6428,7 @@ function CasePlayer({
               className={`absolute inset-0 ${cinClass}`}
               style={cinStyle}
             >
+              <DepthParallaxLayer cinematic={bgCinematic} picture={scene.background} reducedMotion={prefersReducedMotion} />
               <LightGlow cinematic={bgCinematic} />
               <LensFlareLayer cinematic={bgCinematic} />
               <CinematicOverlays cinematic={bgCinematic} />

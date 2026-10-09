@@ -32,6 +32,7 @@ export function visitStoryMediaFields(story: Story, visit: (field: StoryMediaFie
       field(e.sheet, "image", `${label} foreground extra #${i + 1} sheet`);
     });
     c.parallaxLayers?.forEach((e, i) => field(e, "image", `${label} parallax layer #${i + 1}`));
+    field(c, "depthMap", `${label} depth map`);
   };
   const beat = (b: DialogueBeat | undefined, label: string) => {
     if (!b) return;

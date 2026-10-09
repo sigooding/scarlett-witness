@@ -2673,7 +2673,13 @@
             "pulseSeconds": 2.2,
             "pulseAmount": 0.12
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s74/74-twenty-metres-apart.png",
+        "depthAmount": 0.75,
+        "depthFocus": 0.53,
+        "depthMotion": "orbit",
+        "depthSeconds": 14
       }
     },
     "73-two-small-figures": {
@@ -2697,7 +2703,13 @@
             "pulseSeconds": 2.2,
             "pulseAmount": 0.12
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s74/73-two-small-figures.png",
+        "depthAmount": 0.8,
+        "depthFocus": 0.05,
+        "depthMotion": "push",
+        "depthSeconds": 18
       }
     },
     "79-the-hive-shut": {
@@ -3298,6 +3310,26 @@
     "307-the-gardener": {
       "cinematic": {
         "colorGrade": "nolan-imax"
+      }
+    },
+    "75-one-desperate-blow": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s74/75-one-desperate-blow.png",
+        "depthAmount": 0.6,
+        "depthFocus": 0.58,
+        "depthMotion": "sway",
+        "depthSeconds": 10
+      }
+    },
+    "76-the-reflection": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s74/76-the-reflection.png",
+        "depthAmount": 0.55,
+        "depthFocus": 0.4,
+        "depthMotion": "sway",
+        "depthSeconds": 16
       }
     }
   }

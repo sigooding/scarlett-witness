@@ -15519,7 +15519,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s74/74-twenty-metres-apart.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "42% 38%",
       "zoomDuration": 21,
       "panDirection": "right",
@@ -15549,7 +15549,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 2.2,
         "pulseAmount": 0.12
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s74/74-twenty-metres-apart.png",
+      "depthAmount": 0.75,
+      "depthFocus": 0.53,
+      "depthMotion": "orbit",
+      "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15627,7 +15632,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s74/75-one-desperate-blow.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 18,
       "panDirection": "left",
@@ -15637,7 +15642,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s74/75-one-desperate-blow.png",
+      "depthAmount": 0.6,
+      "depthFocus": 0.58,
+      "depthMotion": "sway",
+      "depthSeconds": 10
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15775,7 +15785,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s74/73-two-small-figures.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "42% 38%",
       "zoomDuration": 15,
       "panDirection": "right",
@@ -15805,7 +15815,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 2.2,
         "pulseAmount": 0.12
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s74/73-two-small-figures.png",
+      "depthAmount": 0.8,
+      "depthFocus": 0.05,
+      "depthMotion": "push",
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15823,7 +15838,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s74/76-the-reflection.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 20,
       "panDirection": "right",
@@ -15833,7 +15848,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s74/76-the-reflection.png",
+      "depthAmount": 0.55,
+      "depthFocus": 0.4,
+      "depthMotion": "sway",
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9

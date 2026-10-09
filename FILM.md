@@ -182,3 +182,23 @@ Asked: *"use some more Scarlet engine effects, add some light glows maybe and sh
 * **Dolly push (vertigo):** Jack seeing Daniel's photograph (165), Vera on the phone when she already knows (72, `70-the-call`), Vera understanding the smoothed-flat letter (79, `286-smoothed-flat`).
 * **A glitch cut** into the static in the shop window (75). **Smoke** instead of rain particles at the yakitori stall (23, "Smoke. Red paper lanterns."). **Stronger light shafts** in the Hive's corridors (16, 55, 69: "daylight ... in thin cold shafts").
 * Checked in headless Chromium (scenes 2, 10, 23, 30, 72, 74, 84 and the raid): the glows sit on their lights and move with the camera, no page errors. Nobody has watched it through yet.
+
+## Depth-map camera, scene 74 (9 October 2026)
+
+**Scene 74 (the empty street beside the elevated railway) plays its four pictures with a depth-map camera:** each still frame is redrawn by a WebGL shader through a grayscale depth map, so the camera seems to drift through the street. Near things slide one way, far things the other, and the plane the camera turns around holds still. It starts on "Vera slows. Stops. Twenty metres apart." (the scene's first six lines play over the plain plate, as before).
+
+| Picture | Move | Amount | Still plane |
+|---|---|---|---|
+| `74-twenty-metres-apart` | orbit, 14 s | 0.75 | 0.53 (Vera and Jack): the vending machines and shutters slide behind them, the wet ground in front |
+| `75-one-desperate-blow` | sway, 10 s | 0.6 | 0.58 (the two of them) |
+| `73-two-small-figures` | push, 18 s | 0.8 | 0.05: a slow dolly in, the shining street swelling toward the camera |
+| `76-the-reflection` | sway, 16 s | 0.55 | 0.4 |
+
+* **The engine** (`src/game/DepthParallax.tsx`): `CinematicSettings.depthMap` (the map), `depthAmount` (0–1, default 0.4; 1 parts the nearest and farthest pixels by about 4.5% of the frame width), `depthFocus` (which grey stays still, 0 far to 1 near), `depthMotion` (`orbit`, `sway`, `push`), `depthSeconds`, `depthPointer` (lean toward the mouse, default on). The canvas sits inside the plate's own layer, so the grade, the film stock, dimming, glows and flares stay on top of it; the still picture stays underneath and shows until both images load, if WebGL is missing, and for players who ask for reduced motion. Not used with the 🛤 dolly camera mode. Works on scene plates and beat pictures; saved, exported and preloaded like every other picture.
+* **In the Studio:** Camera → **🧊 Depth-map camera (2.5D)**: pick the map, then amount, still plane, move and cycle, with the live preview.
+* **For the film:** `pictureLook` in `src/film/studio-edits.json` carries the four entries (with `mode: "static"`, so the depth move is the camera), and a rebuild keeps them.
+* **The maps** are in `public/film/depth/s74/`, 960×540 grayscale PNGs, made by `tools/make-depth-maps.mjs` with Depth Anything V2 Small (Apache-2.0, run locally; the header has the model link and the command). Near edges are widened by a few pixels and the map softened, so a figure's outline does not drag the wall behind it. At the widest point of the move the background still stretches a little right beside a figure; that is the nature of the effect and grows with the amount.
+
+**Adding your own depth map.** Any grayscale image works: painted, or from Google's image tools or any depth app. Make it the same shape as the picture (16:9 here; 960×540 is plenty), **white = near the camera, black = far**, soft rather than hard-edged, and with near objects a few pixels fatter than in the picture. In the Studio, upload it in the 🧊 panel. For the film, put it in `public/film/depth/<scene folder>/<picture name>.png` (a new name, or in place of one of these four) and give the picture a `pictureLook` entry with `"depthMap": "/film/depth/…"`, then run `node tools/build-film-story.mjs`. To make one with the same model: the command in `tools/make-depth-maps.mjs`.
+
+Checked in headless Chromium (SwiftShader WebGL): the canvas loads on all four pictures; eight frames of 74 show the machines sliding behind a still Vera; 75 sways, 73 pushes in; with reduced motion there is no canvas. Nobody has watched it at full speed on a real screen yet.

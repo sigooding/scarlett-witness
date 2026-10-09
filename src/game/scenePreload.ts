@@ -49,7 +49,7 @@ export function nextSceneMediaPlan({
     if (url) image(url);
   };
   const voice = (value?: string) => { if (value && clips.size < PRELOAD_LIMITS.audio) clips.add(value); };
-  const beat = (line?: DialogueBeat) => { image(line?.background); voice(line?.audioUrl); };
+  const beat = (line?: DialogueBeat) => { image(line?.background); image(line?.cinematic?.depthMap); voice(line?.audioUrl); };
 
   // Character talking assets — frames, rest pose, sheet variants
   const charById = new Map(story.characters.map(c => [c.id, c] as const));
@@ -91,6 +91,7 @@ export function nextSceneMediaPlan({
     const cin = node.cinematic;
     if (!cin) return;
     image(cin.foregroundImage);
+    image(cin.depthMap);
     for (const ex of cin.foregroundExtras ?? []) {
       image(ex.image);
       image(ex.maskImage);
