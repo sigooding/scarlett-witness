@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Blade Runner and portable-media regression runner.
+ * Sprite-atlas and portable-media regression runner.
  *
  * Bundles the TypeScript test body (./sprite-atlas-tests.entry.ts — it imports the
  * real engine from src/) with esbuild, which ships with Vite, and runs it
@@ -33,7 +33,7 @@ try {
   process.env.SCARLET_TEST_ROOT = path.join(here, "..");
   await import(pathToFileURL(outfile).href);
 } catch (err) {
-  console.error("Blade Runner tests failed to run:");
+  console.error("Sprite-atlas tests failed to run:");
   console.error(err);
   process.exitCode = process.exitCode ?? 1;
 } finally {

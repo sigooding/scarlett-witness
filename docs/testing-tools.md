@@ -335,20 +335,11 @@ See [First-person Studio & Hollywood opening](first-person.md) for the schema,
 authoring route, software-WebGL setup and explicitly unfinished fidelity work.
 
 
-## Blade Runner HD / interaction regressions
+## Export checks
 
-- `npm run test:blade-runner`: canonical opening; all four earned dodge/timeout ×
-  spare/retire routes; completion prerequisites; repeated apartment/mainframe
-  returns; negative missing/blocked exits and blocked evidence approach; gated
-  actors; actual PNG geometry; portable real-byte media round-trip and bounded
-  export/library reads. The imported library must not use giant `getAll` calls.
-- `npm run test:browser -- scripts/browser/blade-runner.spec.ts`: real Stage
-  keyboard/pointer crossings, target ownership, overlapping arrivals, cancelled
-  aims, enlarged feet anchors, cockpit masked motion vs fixed dashboard pixels,
-  resizing/reduced motion, all 54 frames' alpha/grounding, real newsstand-to-ending
-  progress, missed dodge/retirement/save/load, and Studio import/edit/audit/export /
-  reimport/publish. Portable playback blocks original artwork paths. Deep links
-  in targeted tests are explicitly NOT an earned playthrough.
+The Blade Runner story and its regression suites (`test:blade-runner`, `scripts/browser/blade-runner.spec.ts`) were deleted on
+9 October 2026 with the story.
+
 - `scripts/browser/export-driver.ts` inspects actual downloaded JSON, not the
   truncated export preview. Keep screenshots/traces/large reels in ignored
   `test-results/` or `.cache/`; never commit the generated export.
@@ -362,18 +353,6 @@ facing service URLs. Normal Playwright installations use their usual executable.
 
 `npm run test:sprite-atlas` covers atlas bounds, common canvas scale, clip offset /
 timing preservation, duplicate names, disconnected silhouettes versus touching
-figures, flat-key dark-prop retention and directional fallbacks. Real Studio
-controls are also driven in `scripts/browser/sprite-atlas-regression.html`:
-auto-build the six rear poses, then assemble a multi-row library atlas without
-overwriting existing clips. The fixture only observes `onChange`; it does not
-replace the production keyer/assembler or manufacture game progress.
-
-The Blade Runner suite additionally probes every new-room marker from every
-authored entry spawn across pre-chase / ambush / spare / retire states. This
-caught a real no-furniture concave-routing defect, now fixed in `stageRoutePoly`.
-The earned browser run performs the dodge, climbs the stairs, tries the locked
-door, makes the Zuben decision, interviews Gaff and returns for the plate. The
-timeout/retire run uses an explicitly labelled seeded start, then saves and
-loads its earned outcome. Do not equate simulation reachability with animation
-or browser control verification; the simulator does not perform Stage scripts
-or conversation-topic timing.
+figures, flat-key dark-prop retention and directional fallbacks. (The browser
+fixture that drove the real Studio controls used the Blade Runner sheets and went
+with that story.)

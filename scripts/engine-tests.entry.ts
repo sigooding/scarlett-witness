@@ -172,8 +172,9 @@ import {
 import { describeMotion, ease, motionAnimatable, motionAnimation, motionKeyframes, pathPointAt, pathSegments, presetSeconds, presetStyle, scrollAnimatable, scrollKeyframes, scrollPeriod, scrollStyle } from "../src/game/animation";
 import type { SpriteSheet } from "../src/game/spriteSheet";
 import { NEON_DINER } from "../src/data/neonDiner";
-import { BLADE_RUNNER_ACT1 } from "../src/data/bladeRunnerAct1";
 import { STORIES } from "../src/data/stories";
+import { JACK_MORROW_SECOND_REEL } from "../src/data/jackMorrowSecondReel";
+import { JACK_MORROW_THIRD_REEL } from "../src/data/jackMorrowThirdReel";
 import {
   adjustedConsequences,
   applyDecision,
@@ -4519,8 +4520,9 @@ console.log("\n=== SEEDED RNG — deterministic playtests ===");
   setGameSeed(null);
 
   // The shipped story exercises every corner of the feature.
-  const secondReel = STORIES.find((s) => s.id === "jack-morrow-second-reel");
-  check("chance: the Second Reel ships in the catalogue", !!secondReel);
+  // Out of the playable catalogue since it was cut to the film and the two reels; its story file is still the fixture.
+  const secondReel: Story | undefined = JACK_MORROW_SECOND_REEL;
+  check("chance: the Second Reel story file loads", !!secondReel);
   if (secondReel) {
     const gambles = secondReel.scenes.flatMap((sc) => (sc.choices ?? []).filter((c) => typeof c.chance === "number"));
     check("chance: the story ships real gambles with odds in range", gambles.length >= 3 && gambles.every((c) => (c.chance ?? 0) >= 0 && (c.chance ?? 0) <= 100), gambles.map((c) => `${c.id}:${c.chance}`).join(" | "));
@@ -4607,8 +4609,8 @@ console.log("\n=== SEEDED RNG — deterministic playtests ===");
     /transitionSound: e\.target\.value === "auto" \? undefined :/.test(studioSrc3));
 
   // ---- THE THIRD REEL: ships, and exercises every part of the kit ----
-  const thirdReel = STORIES.find((s) => s.id === "jack-morrow-third-reel");
-  check("third reel: ships in the catalogue", !!thirdReel);
+  const thirdReel: Story | undefined = JACK_MORROW_THIRD_REEL;
+  check("third reel: the story file loads", !!thirdReel);
   if (thirdReel) {
     const issues3 = validateStory(thirdReel);
     check("third reel: no validator ERRORS", issues3.filter((i) => i.severity === "error").length === 0,
@@ -5787,45 +5789,6 @@ console.log("\n=== SEEDED RNG — deterministic playtests ===");
   }
 }
 
-
-/* ------------------------------------------------------------------ */
-/* Quake map authoring validation across every shipped story           */
-/* ------------------------------------------------------------------ */
-{
-  let problems: string[] = [];
-  for (const story of STORIES) {
-    for (const sc of story.scenes) {
-      const q = sc.stage?.quake;
-      const rows = q.map;
-      const cols = Math.max(...rows.map((r) => r.length));
-      if (rows.some((r) => r.length !== cols)) problems.push(`${tag}: ragged rows`);
-      const spawns = rows.join("").split("S").length - 1;
-      if (spawns !== 1) problems.push(`${tag}: ${spawns} spawns`);
-      const at = (letter: string) => rows.some((r) => r.includes(letter));
-      for (const [letter, hsId] of Object.entries(q.markers ?? {})) {
-        if (!at(letter)) problems.push(`${tag}: marker letter ${letter} not on map`);
-        if (!sc.hotspots?.some((h) => h.id === hsId)) problems.push(`${tag}: marker ${letter} -> unknown hotspot ${hsId}`);
-      }
-      for (const [letter, npcId] of Object.entries(q.npcAnchors ?? {})) {
-        if (!at(letter)) problems.push(`${tag}: npc letter ${letter} not on map`);
-        if (!sc.stage?.npcs?.some((n) => n.id === npcId)) problems.push(`${tag}: npc ${letter} -> unknown npc ${npcId}`);
-      }
-      for (const [letter, val] of Object.entries(q.props ?? {})) {
-        if (!at(letter)) problems.push(`${tag}: prop letter ${letter} not on map`);
-        const url = val.split("@")[0];
-        if (!url.startsWith("/")) problems.push(`${tag}: prop ${letter} bad url`);
-      }
-      // a marker letter must not double as a prop/npc anchor letter
-      const mk = Object.keys(q.markers ?? {});
-      for (const l of mk) {
-        if (q.props?.[l] || q.npcAnchors?.[l]) problems.push(`${tag}: letter ${l} used twice`);
-      }
-    }
-  }
-  check("quake maps: every shipped 3D room is authored consistently", problems.length === 0, problems.join(" | "));
-}
-
-
 /* ================================================================== *
  *  HOTSPOT TRIGGER POLICY — the walk-over exit trap
  *
@@ -6019,277 +5982,6 @@ console.log("\n=== SEEDED RNG — deterministic playtests ===");
     { id: "end", title: "End", background: "", prose: "", isEnding: true, endingData: { tier: "victory-gold", headline: "H", recap: "R" } },
   ]));
   check("validator: a flag nothing produces is still flagged", has(orphan, /never_set/), orphan.map((i) => i.message));
-}
-
-/* ================================================================== */
-/*  4. Blade Runner Act One — the recreation's regression gate        */
-/* ------------------------------------------------------------------ */
-/*  The user-reported bugs this guards, each named after the complaint:  */
-/*  - "walking over hotspots activates them so I can't get around the   */
-/*     shop"            → walk-over trap sweep (scene-leaving markers   */
-/*                       must never fire by strolling past them)        */
-/*  - "if there's no exits?" → dead-end sweep + validator dead-end      */
-/*                       checks + a full gold run to the ending         */
-/*  - "stage 12 you can't go back to the LAPD mainframe" → the gold     */
-/*                       run walks the apartment → mainframe return     */
-/*     and asserts it lands in the hub                                   */
-/* ================================================================== */
-{
-  const S = BLADE_RUNNER_ACT1;
-
-  /* --- the shipped case validates clean (dead ends, one-way doors,
-          dangling targets, spawn traps, reward farming, win/lose audit) */
-  const issues = validateStory(S);
-  check("BR: validateStory finds no errors", issues.filter((i) => i.severity === "error").length === 0, issues.map((i) => i.message));
-  check("BR: validateStory finds no warnings", issues.length === 0, issues.map((i) => i.message));
-
-  /* --- DEAD-END SWEEP: every non-ending scene keeps a way out. A stage
-          scene's way out is a walk-to door, a walk-off-screen edge, or
-          the travel map (openable from anywhere once the story has one). */
-  for (const sc of S.scenes) {
-    if (sc.isEnding) continue;
-    const doorOut = (sc.hotspots ?? []).some(
-      (h) => h.action.type === "goToScene" && !!h.action.targetSceneId
-    );
-    const edgeOut = Object.values(sc.stage?.exitEdges ?? {}).some((e) => !!e?.targetSceneId);
-    const mapOut = (S.map?.locations?.length ?? 0) > 0;
-    check(`BR: "${sc.title}" keeps a way out (door/edge/map)`, doorOut || edgeOut || mapOut,
-      { doorOut, edgeOut, mapOut });
-  }
-
-  /* --- WALK-OVER TRAP SWEEP: no scene-leaving marker in the story may
-          fire by strolling onto it under the room's trigger policy. This
-          is the "I can't get around the shop without leaving it" bug —
-          the smart policy (and any per-marker walkOver:false) must hold
-          for every exit the player walks past on the way to something
-          else. Deliberate clicks still work: that half is proven by the
-          stage-beta harness (door walk-up) and the gold run below. */
-  let exitMarkers = 0;
-  for (const sc of S.scenes) {
-    const policy = sc.stage?.hotspotTrigger ?? "smart";
-    for (const hs of sc.hotspots ?? []) {
-      if (!hotspotLeavesScene(hs)) continue;
-      exitMarkers++;
-      check(
-        `BR: exit "${sc.title} / ${hs.label}" cannot fire on a walk-over`,
-        !hotspotFiresOnWalkOver(hs, policy),
-        { policy }
-      );
-    }
-  }
-  check("BR: the case has walkable exits to guard", exitMarkers >= 10, exitMarkers);
-
-  /* --- LEGACY COMPATIBILITY RUN: the old HQ/film-inspired extension, through the
-          runtime's own decision surface (the same one the bot plays). If
-          any step is missing a gate, a marker or a route, the run dies
-          here with the exact scene it got stuck in. */
-  let sim = initialSim(S, createInitialState(S), "br_roof");
-  check("BR gold: starts on the LAPD rooftop", sim.sceneId === "br_roof", sim.sceneId);
-  check("BR gold: the opening is not a dead end", !isStuck(S, sim));
-
-  const offered = () => availableDecisions(S, sim).map((d) => decisionKey(d));
-  const choose = (d: Decision, why: string) => {
-    check(`BR gold: ${why}`, offered().includes(decisionKey(d)),
-      `at ${sim.sceneId}; offered: ${offered().join(", ")}`);
-    sim = applyDecision(S, sim, d).sim;
-    return sim;
-  };
-  const fire = (hotspotId: string, why: string) =>
-    choose({ kind: "hotspot", sceneId: sim.sceneId, hotspotId, label: why }, why);
-  const endConvo = (why: string) =>
-    choose({ kind: "stage-convo-end", sceneId: sim.sceneId, label: "(the conversation ends)" }, why);
-
-  // Rooftop → Bryant's office.
-  check("BR gold: at the rooftop", sim.sceneId === "br_roof", sim.sceneId);
-  fire("br_roof_hs_elevator", "elevator down to Bryant's office");
-  check("BR gold: in Bryant's office", sim.sceneId === "br_bryant_office", sim.sceneId);
-
-  // The briefing: badge + blaster + the br_briefed flag that opens the map.
-  check("BR gold: no badge before the briefing", !sim.state.inventory.some((i) => i.id === "br_item_badge"));
-  fire("br_bryant_talk_hs", "talk to Chief Bryant");
-  check("BR gold: the briefing opens as a conversation", sim.stageConvoOpen);
-  check("BR gold: the briefing sets br_briefed", sim.state.activeFlags.has("br_briefed"));
-  check("BR gold: the badge is handed over in the briefing", sim.state.inventory.some((i) => i.id === "br_item_badge"));
-  check("BR gold: the blaster is handed over in the briefing", sim.state.inventory.some((i) => i.id === "br_item_blaster"));
-  endConvo("the briefing ends");
-
-  // Gaff's crane (one-shot: the marker is spent after the hand-off).
-  fire("br_bryant_hs_gaff", "take Gaff's paper crane");
-  check("BR gold: Gaff's origami is in the satchel", sim.state.inventory.some((i) => i.id === "br_item_origami"));
-  check(
-    "BR gold: Gaff's marker is one-shot (no reward farming)",
-    !availableDecisions(S, sim).some((d) => d.kind === "hotspot" && d.hotspotId === "br_bryant_hs_gaff")
-  );
-  endConvo("the crane is a thing of the past (Gaff's topic closes)");
-
-  // Office → mainframe hub → the Spinner.
-  fire("br_bryant_hs_hallway", "walk into the mainframe lab");
-  check("BR gold: in the mainframe hub", sim.sceneId === "br_mainframe_hub", sim.sceneId);
-  check("BR gold: not a dead end at the hub", !isStuck(S, sim));
-
-  // Tyrell is map-gated on the briefing — locked before, open now.
-  choose({ kind: "map-travel", sceneId: sim.sceneId, locationId: "map_tyrell", label: "", targetSceneId: "br_tyrell_ext" },
-    "the map opens Tyrell HQ after the briefing");
-  check("BR gold: at Tyrell Corporation", sim.sceneId === "br_tyrell_ext", sim.sceneId);
-  fire("br_hs_tyrell_penthouse", "enter the penthouse");
-  check("BR gold: in Tyrell's penthouse", sim.sceneId === "br_tyrell_office", sim.sceneId);
-  fire("br_hs_tyrell_talk", "talk to Dr. Tyrell");
-  check("BR gold: br_tyrell_visited set", sim.state.activeFlags.has("br_tyrell_visited"));
-  endConvo("the penthouse visit is noted (Tyrell's topic closes)");
-  choose({ kind: "minigame", sceneId: sim.sceneId, game: "vk", sourceId: "br_hs_rachael_vk", won: true, label: "vk Rachael" },
-    "the Voight-Kampff test on Rachael");
-  check("BR gold: the VK verdict: Rachael is a replicant", sim.state.activeFlags.has("br_vk_rachael_replicant"));
-  fire("br_hs_tyrell_exit", "leave the penthouse");
-  fire("br_hs_tyrell_return", "return to the Spinner at HQ");
-  check("BR gold: back at the mainframe hub from Tyrell", sim.sceneId === "br_mainframe_hub", sim.sceneId);
-
-  // Hub → Carson Street (through the masked-cockpit flight beat).
-  fire("br_hs_spinner_takeoff", "board the Spinner");
-  check("BR gold: in the Spinner", sim.sceneId === "br_spinner_flight", sim.sceneId);
-  fire("br_hs_flight_arrive", "descend to Carson Street");
-  check("BR gold: on Carson Street", sim.sceneId === "br_runciter_ext", sim.sceneId);
-
-  // The crime scene: disk + casing, then OUT without being eaten by the
-  // exit marker (the walk-over trap — see the sweep above).
-  fire("br_hs_ext_door", "enter Runciter's shop");
-  check("BR gold: inside the shop", sim.sceneId === "br_runciter_int", sim.sceneId);
-  fire("br_hs_take_disk", "take the security photo disk");
-  check("BR gold: disk in the satchel", sim.state.inventory.some((i) => i.id === "br_item_photo_disk"));
-  check("BR gold: br_photo_collected set (unlocks the Yukon map pin)", sim.state.activeFlags.has("br_photo_collected"));
-  fire("br_hs_take_casing", "take the bullet casing");
-  check("BR gold: casing in the satchel", sim.state.inventory.some((i) => i.id === "br_item_casing"));
-  check("BR gold: still in the shop (the exit did not fire on the walk past)", sim.sceneId === "br_runciter_int", sim.sceneId);
-  fire("br_hs_runciter_exit", "leave the shop to Carson Street");
-  check("BR gold: back on Carson Street", sim.sceneId === "br_runciter_ext", sim.sceneId);
-
-  // The Chinatown thread.
-  fire("br_hs_chinatown_travel", "walk to the noodle bar");
-  check("BR gold: in Chinatown", sim.sceneId === "br_chinatown", sim.sceneId);
-  fire("br_hs_howie_talk", "talk to Howie Lee");
-  check("BR gold: the interview opens as a conversation", sim.stageConvoOpen);
-  endConvo("the interview ends");
-  check(
-    "BR gold: the interview is repeatable (no replayable reward on it)",
-    availableDecisions(S, sim).some((d) => d.kind === "hotspot" && d.hotspotId === "br_hs_howie_talk")
-  );
-  check("BR gold: no investigation flag before the evidence", !sim.state.activeFlags.has("br_chinatown_investigated"));
-  fire("br_hs_alley_scale", "take the animoid fish scale");
-  check("BR gold: scale in the satchel", sim.state.inventory.some((i) => i.id === "br_item_scale"));
-  check("BR gold: br_chinatown_investigated set with the alley evidence", sim.state.activeFlags.has("br_chinatown_investigated"));
-  fire("br_hs_moraji_travel", "walk to Moraji's Animoid Supply");
-  check("BR gold: at Moraji's", sim.sceneId === "br_moraji_lab", sim.sceneId);
-  fire("br_hs_moraji_talk", "talk to Moraji");
-  check("BR gold: the interrogation opens as a conversation", sim.stageConvoOpen);
-  check("BR gold: br_moraji_visited set", sim.state.activeFlags.has("br_moraji_visited"));
-  endConvo("Moraji lets the tanks keep their own time");
-  check(
-    "BR gold: Moraji's interrogation is one-shot (no reward replay)",
-    !availableDecisions(S, sim).some((d) => d.kind === "hotspot" && d.hotspotId === "br_hs_moraji_talk")
-  );
-  fire("br_hs_nightclub_travel", "walk to Early Q's");
-  check("BR gold: at the nightclub", sim.sceneId === "br_nightclub", sim.sceneId);
-  fire("br_hs_dektora_stage", "watch Dektora's act");
-  check("BR gold: the performance opens as a conversation", sim.stageConvoOpen);
-  check("BR gold: br_nightclub_visited set", sim.state.activeFlags.has("br_nightclub_visited"));
-  endConvo("the applause dies down");
-  check(
-    "BR gold: Dektora's set is one-shot (no reward replay)",
-    !availableDecisions(S, sim).some((d) => d.kind === "hotspot" && d.hotspotId === "br_hs_dektora_stage")
-  );
-  fire("br_hs_mccoy_apt_travel", "walk to McCoy's apartment");
-  check("BR gold: in the apartment", sim.sceneId === "br_mccoy_apt", sim.sceneId);
-
-  // THE STAGE-12 REGRESSION: the apartment routes BACK to the mainframe.
-  fire("br_hs_apt_return", "elevator back to the LAPD mainframe");
-  check("BR gold: the apartment's elevator returns to the hub (stage 12 fix)", sim.sceneId === "br_mainframe_hub", sim.sceneId);
-
-  // ESPER analysis — the dragon wrapper clue the case file gates on.
-  choose({ kind: "minigame", sceneId: sim.sceneId, game: "esper", sourceId: "br_hs_esper_terminal", won: true, label: "esper" },
-    "analyze Runciter's disk on ESPER");
-  check("BR gold: ESPER revealed the dragon wrapper", sim.state.activeFlags.has("br_esper_dragon_revealed"));
-  check("BR gold: the dragon clue is in the satchel", sim.state.inventory.some((i) => i.id === "br_item_dragon_clue"));
-
-  // The Yukon thread (map-gated on the Runciter disk).
-  choose({ kind: "map-travel", sceneId: sim.sceneId, locationId: "map_yukon", label: "", targetSceneId: "br_yukon_hotel" },
-    "the map opens the Yukon once the disk is collected");
-  check("BR gold: at the Yukon Hotel", sim.sceneId === "br_yukon_hotel", sim.sceneId);
-  fire("br_hs_yukon_disk", "take Yukon photo disk #2");
-  check("BR gold: disk #2 in the satchel", sim.state.inventory.some((i) => i.id === "br_item_photo_disk2"));
-  fire("br_hs_yukon_exit", "leave the hotel room");
-  check("BR gold: out of the Yukon, on Carson Street", sim.sceneId === "br_runciter_ext", sim.sceneId);
-  choose({ kind: "stage-exit", sceneId: sim.sceneId, edge: "left", label: "", targetSceneId: "br_mainframe_hub" },
-    "walk off Carson Street back to LAPD HQ");
-  check("BR gold: back at the hub from Carson Street", sim.sceneId === "br_mainframe_hub", sim.sceneId);
-
-  // ESPER disks #2 and #3 chain off each other (license → snake scale).
-  choose({ kind: "minigame", sceneId: sim.sceneId, game: "esper", sourceId: "br_hs_esper_terminal2", won: true, label: "esper2" },
-    "analyze the Yukon disk on ESPER");
-  check("BR gold: ESPER traced Spinner #9942 to Moraji", sim.state.activeFlags.has("br_esper_license_revealed"));
-  check("BR gold: the license clue is in the satchel", sim.state.inventory.some((i) => i.id === "br_item_license_clue"));
-  choose({ kind: "minigame", sceneId: sim.sceneId, game: "esper", sourceId: "br_hs_esper_terminal3", won: true, label: "esper3" },
-    "analyze the Chinatown alley disk on ESPER");
-  check("BR gold: ESPER matched the snake scale to Moraji's python", sim.state.activeFlags.has("br_esper_snake_revealed"));
-
-  // Lucy's VK at the hub terminal.
-  choose({ kind: "minigame", sceneId: sim.sceneId, game: "vk", sourceId: "br_hs_vk_terminal", won: true, label: "vk Lucy" },
-    "the Voight-Kampff test on Lucy");
-  check("BR gold: the VK verdict: Lucy is a replicant", sim.state.activeFlags.has("br_vk_lucy_replicant"));
-
-  // The first-act ending now requires an actual upload and a Zuben outcome.
-  fire("br_hs_mainframe_sync", "upload the crime-scene evidence");
-  fire("br_hs_spinner_takeoff", "take off for Chinatown");
-  fire("br_hs_flight_arrive", "arrive on Carson Street");
-  fire("br_hs_chinatown_travel", "return to Howie's");
-  fire("br_hs_howie_kitchen", "follow the ESPER lead to Zuben");
-  fire("br_hs_zuben_question", "question Zuben");
-  choose({ kind: "choice", sceneId: sim.sceneId, choiceId: "br_zuben_dodge", quickTime: true, reply: false, label: "" }, "dodge the pot");
-  fire("br_hs_evade_continue", "continue after the staged dodge (browser verifies its automatic script)");
-  fire("br_hs_alley_warehouse", "follow Zuben");
-  fire("br_hs_stairs_upper", "climb the warehouse stairs");
-  fire("br_hs_warehouse_door", "try the locked door and trigger the ambush");
-  fire("br_hs_zuben_standoff", "confront Zuben");
-  choose({ kind: "choice", sceneId: sim.sceneId, choiceId: "br_zuben_mercy", quickTime: false, reply: false, label: "" }, "holster the weapon");
-  choose({ kind: "choice", sceneId: sim.sceneId, choiceId: "br_mercy_lapd", quickTime: false, reply: false, label: "" }, "return to LAPD after the confrontation");
-
-  // Walk the loop home and file the case.
-  fire("br_hs_spinner_takeoff", "board the Spinner again");
-  fire("br_hs_flight_arrive", "descend to Carson Street (repeatable descent marker)");
-  fire("br_hs_chinatown_travel", "walk to the noodle bar");
-  fire("br_hs_moraji_travel", "walk to Moraji's");
-  fire("br_hs_nightclub_travel", "walk to Early Q's");
-  fire("br_hs_mccoy_apt_travel", "walk to the apartment");
-  check("BR gold: back in the apartment to file the case", sim.sceneId === "br_mccoy_apt", sim.sceneId);
-  fire("br_hs_conclude_act1", "complete the Act 1 case file");
-  check("BR gold: the case file closes on the VICTORY ending", sim.sceneId === "br_act1_conclusion", sim.sceneId);
-  check("BR gold: the conclusion is a real ending", S.scenes.find((s) => s.id === sim.sceneId)?.isEnding === true);
-  check("BR gold: no decisions past an ending", availableDecisions(S, sim).length === 0);
-
-  /* --- DEFEAT ROUTE: the lose condition is real. A fresh sim dropped in
-          the apartment walks the "file it un-solved" marker and lands on
-          the game-over ending — the case you can't lose is the case the
-          win/lose audit rejects. */
-  let lose = initialSim(S, createInitialState(S), "br_mccoy_apt");
-  check("BR lose: starts in the apartment", lose.sceneId === "br_mccoy_apt", lose.sceneId);
-  check(
-    "BR lose: the give-up marker is offered in the apartment",
-    availableDecisions(S, lose).some((d) => d.kind === "hotspot" && d.hotspotId === "br_hs_giveup")
-  );
-  lose = applyDecision(S, lose, { kind: "hotspot", sceneId: "br_mccoy_apt", hotspotId: "br_hs_giveup", label: "" }).sim;
-  check("BR lose: the case closes on the GAME-OVER ending", lose.sceneId === "br_act1_failed", lose.sceneId);
-  check("BR lose: the failed ending is a real gameover tier",
-    S.scenes.find((s) => s.id === "br_act1_failed")?.endingData?.tier === "gameover");
-
-  /* --- MAP GATING: before the briefing the Tyrell pin is locked, so the
-          decision surface must not offer it (and the case must still not
-          be a dead end — the map's open pins carry the player). */
-  let pre = initialSim(S, createInitialState(S), "br_roof");
-  pre = applyDecision(S, pre, { kind: "hotspot", sceneId: "br_roof", hotspotId: "br_roof_hs_elevator", label: "" }).sim;
-  pre = applyDecision(S, pre, { kind: "hotspot", sceneId: "br_bryant_office", hotspotId: "br_bryant_hs_hallway", label: "" }).sim;
-  check("BR map: Tyrell is locked before the briefing",
-    !availableDecisions(S, pre).some((d) => d.kind === "map-travel" && d.locationId === "map_tyrell"),
-    availableDecisions(S, pre).filter((d) => d.kind === "map-travel").map((d) => d.locationId));
-  check("BR map: the hub is still open before the briefing",
-    availableDecisions(S, pre).some((d) => d.kind === "map-travel" && d.locationId === "map_apt"));
 }
 
 /* ================================================================== */

@@ -67,15 +67,18 @@ export function VkGame({ config, onComplete, onCancel, resolve = v => v }: VkGam
           <div className="flex flex-col gap-3">
             {/* Eye / Iris Viewport */}
             <div className="relative aspect-video bg-black border-2 border-amber-800/90 rounded overflow-hidden flex items-center justify-center">
-              <img
-                src={assetUrl(resolve(config.eyeImage || "/assets/blade-runner/vk-eye.jpg"))}
-                alt="Subject Iris"
-                className="w-full h-full object-cover filter contrast-125"
-                style={{
-                  transform: `scale(${1 + currentTension / 200})`,
-                  transition: "transform 0.8s ease-out",
-                }}
-              />
+              {/* No built-in iris picture (the Blade Runner one went with that story): without one the monitor stays black under the reticle. */}
+              {config.eyeImage && (
+                <img
+                  src={assetUrl(resolve(config.eyeImage))}
+                  alt="Subject Iris"
+                  className="w-full h-full object-cover filter contrast-125"
+                  style={{
+                    transform: `scale(${1 + currentTension / 200})`,
+                    transition: "transform 0.8s ease-out",
+                  }}
+                />
+              )}
 
               {/* Optical Reticle overlay */}
               <div className="absolute inset-0 pointer-events-none border-2 border-amber-500/30 rounded-full scale-75 animate-spin" style={{ animationDuration: "20s" }} />

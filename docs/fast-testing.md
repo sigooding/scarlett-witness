@@ -10,7 +10,6 @@ Commands below run from the repository root in a POSIX shell. No new test depend
 | What changed? | First check |
 | --- | --- |
 | First-person physics, combat, maps or saves | `npm run test:fps` (includes a physical Hollywood tour) |
-| Blade Runner act-one content, return routes, HD assets or portable masks | `npm run test:blade-runner` |
 | Black-Mass Bride story, gates, items, endings or portable export | `npm run test:black-mass-bride` |
 | Shared decision/validation logic | `npm run test:engine` plus the affected story's focused tests |
 | Studio autosave, graph routes or media preloading | `npm run test:studio-ship` |
@@ -114,12 +113,7 @@ input/save/mobile work, `--grep 'newsstand rooftop'` for the complete route, or
 `--grep 'Studio type'` for editing/export/publishing. See [the first-person guide](first-person.md).
 The ordinary story bot does **not** simulate first-person combat.
 
-### HD pose banks and pursuit regression
+### HD pose banks
 
-Run `npm run test:sprite-atlas` and `npm run test:blade-runner` first, then
-`npm run test:browser -- scripts/browser/blade-runner.spec.ts`. The focused
-browser set includes the real Studio forge/assembler, eight-way player
-selection/rest, pot/dodge, both Zuben outcomes, Gaff, saved revisits and portable
-ESPER/cockpit/VK media. Test all authored entry spawns, not just a room's default.
-A* must turn concave floor corners even without rectangular furniture.
-Avoid simultaneous heavy browser/Stage-beta runs when diagnosing timeouts.
+The Blade Runner story, its HD pose banks and its browser suite were deleted (9 October 2026).
+`npm run test:sprite-atlas` still covers the atlas logic (bounds, scale, clip timing, keying).
