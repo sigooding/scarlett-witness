@@ -986,7 +986,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/phone-vibrate.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b11",
@@ -1121,7 +1123,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b19",
      "characterId": "nw_narrator",
      "text": "Footsteps. Hurried. Uneven.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/footsteps-wet.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b20",
@@ -1240,10 +1244,22 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lensFlare": {
+       "preset": "anamorphic-blue",
+       "x": 61,
+       "y": 52,
+       "intensity": 0.5,
+       "streakIntensity": 0.7,
+       "starburstIntensity": 0.25,
+       "ghostIntensity": 0.4,
+       "pulseAmount": 0.15
+      }
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/car-stop-wet.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b27",
@@ -1255,7 +1271,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b28",
      "characterId": "nw_narrator",
      "text": "Two MEN get out and walk in, black silhouettes against the glare. Black clothes. Masks. They don't run.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-doors-open.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b29",
@@ -1274,7 +1292,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lensFlare": {
+       "preset": "anamorphic-blue",
+       "x": 63,
+       "y": 51,
+       "intensity": 0.4,
+       "streakIntensity": 0.6,
+       "starburstIntensity": 0.2,
+       "ghostIntensity": 0.3,
+       "pulseAmount": 0.15
+      }
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1298,7 +1326,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/10-the-shot.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "panDirection": "left",
@@ -1308,10 +1336,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransition": "zoom",
+     "backgroundTransitionSpeed": 0.3,
      "sfxUrl": "/film/sfx/suppressed-shot.mp3"
     },
     {
@@ -1399,7 +1429,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/bag-spill.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b39",
@@ -1498,7 +1530,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/17-she-runs.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "60% 42%",
       "zoomDuration": 19,
       "panDirection": "left",
@@ -1508,7 +1540,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.2,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1616,7 +1650,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b51",
      "characterId": "nw_narrator",
      "text": "Crates clatter somewhere in the back.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/crates-clatter.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b52",
@@ -1638,7 +1674,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/door-burst-bell.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b53",
@@ -1688,7 +1726,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/door-open-rain.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b56",
@@ -1748,7 +1788,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2/26-the-variety-show.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 21,
       "panDirection": "left",
@@ -1758,10 +1798,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransition": "zoom",
+     "backgroundTransitionSpeed": 0.3,
      "sfxUrl": "/film/sfx/shot2-fall.mp3"
     },
     {
@@ -1818,7 +1860,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/earpiece-word.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b64",
@@ -1840,7 +1884,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/tv-laugh.mp3",
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b67",
@@ -1943,7 +1989,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b72",
@@ -2188,7 +2236,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b86",
      "characterId": "nw_narrator",
      "text": "BEEP.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/voicemail-beep.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b87",
@@ -2361,7 +2411,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s5",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/dj-through-wall.mp3",
+     "sfxVolume": 0.45
     }
    ],
    "hotspots": [],
@@ -2507,7 +2559,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/keyboard-typing.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b109",
@@ -2535,7 +2589,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/desk-phone-pickup.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b111",
@@ -2563,7 +2619,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b112",
      "characterId": "nw_narrator",
      "text": "He hangs up. His manner has changed. Politer.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/phone-hang-up.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b113",
@@ -3172,7 +3230,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/paper-cup-crumple.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b165",
@@ -3366,7 +3426,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "7 — The detectives' room",
    "background": "/film/img/s7/63-the-detectives-room.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
+   "ambientAudio": "file:/film/sfx/loop-police-station.mp3+file:/film/sfx/police-radio-low.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -3419,7 +3479,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/drawer-open.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b186",
@@ -3485,7 +3547,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/drawer-close.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b189",
@@ -3566,7 +3630,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b192",
      "characterId": "nw_narrator",
      "text": "OKADA (60s), the bar's owner, mops around it without looking at it. He has the stillness of a man who hasn't slept.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/mop-floor.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b193",
@@ -3908,7 +3974,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b227",
      "characterId": "nw_narrator",
      "text": "Handsome once, in a way he stopped maintaining. A good coat, badly kept. He flicks an old steel lighter open and shut, open and shut.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b228",
@@ -3936,7 +4004,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/knock-glass-door.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b230",
@@ -4293,7 +4363,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b276",
      "characterId": "nw_narrator",
      "text": "Past midnight. Only the desk lamp and the grey flicker of the television, now showing static.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-static.mp3",
+     "sfxVolume": 0.12
     },
     {
      "id": "nw_b277",
@@ -4401,7 +4473,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b286",
      "characterId": "nw_narrator",
      "text": "Then he dials the rotary phone. It takes a long time to dial.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/rotary-dial.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b287",
@@ -4494,7 +4568,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/landline-dead.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b299",
@@ -4516,7 +4592,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/phone-hang-up.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b300",
@@ -4538,7 +4616,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b301",
@@ -4590,7 +4670,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The vending machine at the corner. He feeds it a coin. A can of hot coffee drops.",
      "silent": true,
-     "sfxUrl": "/film/sfx/coin-insert.mp3",
+     "sfxUrl": "/film/sfx/vending-coin-can.mp3",
      "sfxVolume": 0.8
     },
     {
@@ -4672,7 +4752,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/shutter-rattle-up.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b313",
@@ -4732,7 +4814,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b322",
      "characterId": "nw_narrator",
      "text": "The barber shrugs and pulls the shutter down.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/shutter-pull-down.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b323",
@@ -5215,13 +5299,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b370",
      "characterId": "nw_narrator",
      "text": "A small, boxy, maroon hatchback, its glass steamed. He raps on the driver's window with a knuckle.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/knock-car-window.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b371",
      "characterId": "nw_narrator",
      "text": "It winds down. Vera, both hands on the wheel.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-window-down.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b372",
@@ -5261,7 +5349,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b375",
      "characterId": "nw_narrator",
      "text": "He snaps it shut.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b376",
@@ -5361,7 +5451,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b389",
      "characterId": "nw_narrator",
      "text": "Vera shakes the blue umbrella out onto his floor. From a paper bag, two convenience-store rice balls. She holds one out.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/umbrella-shake.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b390",
@@ -5560,7 +5652,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/door-lock-handle.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b415",
@@ -5636,7 +5730,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b421",
      "characterId": "nw_narrator",
      "text": "Jack finds a pencil stub, smooths the paper bag flat on his knee, and writes the plate number on it.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/paper-bag-rustle.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b422",
@@ -5873,7 +5969,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "16 — Everybody sees him",
    "background": "/film/img/s16/249-the-chair.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -5922,7 +6018,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b449",
      "characterId": "nw_narrator",
      "text": "A FAMILY eating dinner at four in the afternoon, the TV loud. An OLD WOMAN asleep in front of a sumo match.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/sumo-tv.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b450",
@@ -6148,7 +6246,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/bowl-set-down.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b470",
@@ -6247,7 +6347,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b476",
      "characterId": "nw_narrator",
      "text": "Rain. The old television plays static. Jack sits in the dark, the sketchbook open on the desk.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-static.mp3",
+     "sfxVolume": 0.12
     },
     {
      "id": "nw_b477",
@@ -6350,7 +6452,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_m18",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/landline-dead.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -7052,7 +7156,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b542",
      "characterId": "nw_narrator",
      "text": "Yellowed menus on the wall. A radio behind the counter plays baseball, low.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/radio-baseball.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b543",
@@ -7322,7 +7428,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "23 — You never call",
    "background": "/film/img/s23/197-you-never-call.jpg",
    "prose": "EXT. YAKITORI STALL, UNDER THE TRACKS - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3+file:/film/sfx/walla-izakaya.mp3",
    "particles": "rain",
    "particleConfig": {
     "density": 0.9,
@@ -7903,7 +8009,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b630",
      "characterId": "nw_narrator",
      "text": "A CRT on the shelf shows a morning cooking show, sound low. The window is fogged from the inside.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-cooking-show.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b631",
@@ -8037,7 +8145,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b647",
      "characterId": "nw_narrator",
      "text": "She eats the egg. She eats the cabbage. On the television a chef lifts a lid and steam fills the frame.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-cooking-lid.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b648",
@@ -8098,7 +8208,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s26",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/cash-register.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -8174,7 +8286,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b663",
      "characterId": "nw_narrator",
      "text": "She takes it. Opens it. Closes it. Opens it.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b664",
@@ -8339,7 +8453,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b681",
      "characterId": "nw_narrator",
      "text": "The crossing signal turns green and the old melody begins to CHIME.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/crossing.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b682",
@@ -8752,7 +8868,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b716",
      "characterId": "nw_narrator",
      "text": "MRS. SAKAI (70s), small and hard, pours Jack tea she doesn't want to pour.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tea-pour.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b717",
@@ -9065,7 +9183,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s32",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/gravel-tyres.mp3",
+     "sfxVolume": 0.7
     }
    ],
    "hotspots": [],
@@ -9099,7 +9219,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b740",
      "characterId": "nw_narrator",
      "text": "A CRT television on a shelf showing a night baseball game, the crowd murmuring.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-baseball-inn.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b741",
@@ -9139,7 +9261,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/key-wooden-tag.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b745",
@@ -9405,7 +9529,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b758",
      "characterId": "nw_narrator",
      "text": "Vera on the floor with her back against the bed, the apartment dark around her. Her phone rings. Unknown number. She answers fast.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/mobile-ring.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b759",
@@ -9522,7 +9648,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/payphone-cutoff.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b773",
@@ -9685,7 +9813,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s39",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/gravel-tyres.mp3",
+     "sfxVolume": 0.7
     }
    ],
    "hotspots": [],
@@ -9790,7 +9920,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s40",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/tv-crowd-cheer.mp3",
+     "sfxVolume": 0.4
     }
    ],
    "hotspots": [],
@@ -9867,7 +9999,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s40/177-behind-the-counter.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "50% 60%",
       "zoomDuration": 20,
       "panDirection": "left",
@@ -9877,10 +10009,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.45,
+      "shakeDuration": 0.25
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
+     "sfxVolume": 0.9
     },
     {
      "id": "nw_b800",
@@ -9889,7 +10025,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s40/178-staff-side.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "panDirection": "left",
@@ -9899,13 +10035,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.25
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s41",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/glass-case-shatter.mp3",
+     "sfxVolume": 0.8
     }
    ],
    "hotspots": [],
@@ -9958,7 +10098,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s41/178-the-screens.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "50% 60%",
       "zoomDuration": 17,
       "panDirection": "left",
@@ -9968,10 +10108,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.45,
+      "shakeDuration": 0.25
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b803",
@@ -10051,7 +10195,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s42/210-the-third-time.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "60% 42%",
       "zoomDuration": 16,
       "panDirection": "left",
@@ -10061,10 +10205,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/window-forced.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b809",
@@ -10104,7 +10252,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s43/211-wet-tin.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "shake",
       "focalPoint": "42% 38%",
       "zoomDuration": 15,
       "panDirection": "right",
@@ -10114,13 +10262,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s44",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/tin-roof-slide.mp3",
+     "sfxVolume": 0.8
     }
    ],
    "hotspots": [],
@@ -10260,12 +10412,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "midnight-teal",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "dimAmount": 0.35
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/main-switch-blackout.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b822",
@@ -10277,7 +10432,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b823",
      "characterId": "nw_narrator",
      "text": "The masked man spins and fires toward the corridor. The shots stitch across the wall above Jack's head.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b824",
@@ -10289,7 +10446,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b825",
      "characterId": "nw_narrator",
      "text": "It lights up and CHIMES:",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/vending-machine-buzz.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b826",
@@ -10461,13 +10620,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b837",
      "characterId": "nw_narrator",
      "text": "Jack runs. Gunfire kicks up mud behind him. He dives behind the truck.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b838",
      "characterId": "nw_narrator",
      "text": "Bullets punch through the bodywork above his head, through the tailgate, through a wheel.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/bullets-car.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b839",
@@ -10476,7 +10639,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s47/222-mud-and-impacts.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "shake",
       "focalPoint": "65% 50%",
       "zoomDuration": 22,
       "panDirection": "right",
@@ -10486,7 +10649,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.45,
+      "shakeDuration": 0.25
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10523,7 +10688,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s48/214-come-on-come-on.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "panDirection": "left",
@@ -10533,7 +10698,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10542,13 +10709,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b841",
      "characterId": "nw_narrator",
      "text": "He turns them. The engine coughs. Dies.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/engine-cough-die.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b842",
      "characterId": "nw_narrator",
      "text": "The windscreen cracks as a round goes through it.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/windscreen-crack.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b843",
@@ -10571,7 +10742,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "cinematic": {
+    "rainOnLens": true,
+    "rainLensIntensity": 1
+   }
   },
   {
    "id": "nw_s49",
@@ -10593,7 +10768,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b845",
      "characterId": "nw_narrator",
      "text": "The truck lurches forward and smashes through the farm gate. Two masked men throw themselves aside.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/gate-smash.mp3",
+     "sfxVolume": 0.9
     },
     {
      "id": "nw_b846",
@@ -10614,7 +10791,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s49/215-no-need-to-chase.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "60% 42%",
       "zoomDuration": 16,
       "panDirection": "left",
@@ -10624,7 +10801,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10686,7 +10865,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s50/216-hand-starts-to-shake.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 18,
       "panDirection": "left",
@@ -10696,7 +10875,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.12,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10756,7 +10937,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "cinematic": {
+    "rainOnLens": true,
+    "rainLensIntensity": 0.8
+   }
   },
   {
    "id": "nw_s51",
@@ -10871,7 +11056,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b868",
      "characterId": "nw_narrator",
      "text": "A knock at the door. Vera opens it in a sweater, barely awake.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/door-knock-wood.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b869",
@@ -10998,7 +11185,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/cloth-wring.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b880",
@@ -11480,7 +11669,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "55 — They match",
    "background": "/film/img/s55/221-they-match.jpg",
    "prose": "INT. THE HIVE, PASSAGES - DAY",
-   "ambientAudio": "file:/film/sfx/amb-hive.mp3",
+   "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -11519,7 +11708,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b932",
      "characterId": "nw_narrator",
      "text": "Through a half-open door, an OLD WOMAN watches sumo on a television the size of a bread box.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/sumo-tv.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b933",
@@ -11693,7 +11884,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s57",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/bowl-set-down.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -11909,7 +12102,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b964",
      "characterId": "nw_narrator",
      "text": "It's ringing.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/ringback-tone.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b965",
@@ -12368,7 +12563,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "cinematic": {
+    "rainOnLens": true,
+    "rainLensIntensity": 0.6
+   }
   },
   {
    "id": "nw_s62",
@@ -12478,7 +12677,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/crossing.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1026",
@@ -12549,7 +12750,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/locker-open.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b1031",
@@ -12724,13 +12927,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/pachinko-parlour.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1045",
      "characterId": "nw_narrator",
      "text": "He walks straight through, between the rows, out through the fire door at the back and into an alley of dripping air conditioners.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/fire-door-bang.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b1046",
@@ -12764,7 +12971,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1048",
      "characterId": "nw_narrator",
      "text": "Behind them, in the street, the sedan crawls along the kerb and stops. Someone inside is speaking into a sleeve. We can't hear it.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/sleeve-murmur.mp3",
+     "sfxVolume": 0.25
     },
     {
      "id": "nw_b1049",
@@ -12887,7 +13096,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/cash-drawer.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1057",
@@ -12905,7 +13116,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1059",
      "characterId": "nw_narrator",
      "text": "He pours Jack a drink. Jack doesn't drink it.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/pour-drink.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1060",
@@ -13403,7 +13616,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1105",
      "characterId": "nw_narrator",
      "text": "Doors open onto other lives. A family watching television. A man asleep. A girl practising the violin, badly.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/violin-practice.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b1106",
@@ -13614,7 +13829,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1130",
      "characterId": "nw_narrator",
      "text": "The driver lifts his wrist to his mouth and murmurs into his sleeve, very quietly:",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/sleeve-murmur.mp3",
+     "sfxVolume": 0.3
     },
     {
      "id": "nw_b1131",
@@ -13629,7 +13846,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s70/237-position.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 21,
       "panDirection": "left",
@@ -13639,7 +13856,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13667,7 +13886,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1136",
      "characterId": "nw_narrator",
      "text": "Jack draws Mara down behind a dumpster. Rounds clang off the steel. The driver pulls a weapon from his coat.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/ricochets.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b1137",
@@ -13723,7 +13944,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1141",
      "characterId": "nw_narrator",
      "text": "Jack drags the door shut behind him and throws the bolt. Pounding on the door. Shots through it, splintering the wood.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/door-pounding-shots.mp3",
+     "sfxVolume": 0.85
     },
     {
      "id": "nw_b1142",
@@ -13747,7 +13970,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1145",
      "characterId": "nw_narrator",
      "text": "Above them, a window opens. Then another.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/windows-neighbours.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1146",
@@ -13767,7 +13992,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1148",
      "characterId": "nw_narrator",
      "text": "And far away, finally, sirens.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/sirens-distant.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1149",
@@ -13986,7 +14213,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1172",
      "characterId": "nw_narrator",
      "text": "She takes out the lighter and turns it over in her fingers. Open. Shut.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1173",
@@ -14010,7 +14239,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1176",
      "characterId": "nw_narrator",
      "text": "Her phone RINGS.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/mobile-ring.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b1177",
@@ -14118,7 +14349,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1186",
      "characterId": "nw_narrator",
      "text": "The pianist plays. The clock ticks. Somewhere a glass is set down.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/lounge-clock-glass.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1187",
@@ -14164,7 +14397,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s73/69-vera-runs.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "shake",
       "focalPoint": "50% 60%",
       "zoomDuration": 17,
       "panDirection": "left",
@@ -14174,7 +14407,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.2,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14186,7 +14421,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s73/387-the-street-too-long.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "50% 45%",
       "zoomDuration": 17,
       "panDirection": "right",
@@ -14196,7 +14431,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.15,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14220,7 +14457,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s73/70-not-elegantly-badly.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "65% 50%",
       "zoomDuration": 16,
       "panDirection": "right",
@@ -14230,10 +14467,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.25,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/heels-running-wet.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b1194",
@@ -14273,7 +14514,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s73/388-through-the-crossing.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "shake",
       "focalPoint": "50% 45%",
       "zoomDuration": 17,
       "panDirection": "right",
@@ -14283,10 +14524,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.2,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/crossing.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1200",
@@ -14295,7 +14540,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s73/72-the-lost-heel.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "35% 50%",
       "zoomDuration": 18,
       "panDirection": "left",
@@ -14305,13 +14550,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.3,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s74",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/shoe-splash.mp3",
+     "sfxVolume": 0.8
     }
    ],
    "hotspots": [],
@@ -14679,7 +14928,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1247",
      "characterId": "nw_narrator",
      "text": "Above them, an elevated train passes, a long ribbon of lit windows. Inside, strangers sleep, read, stare at their phones. Nobody looks down.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1248",
@@ -14832,7 +15083,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/tv-static.mp3",
+     "sfxVolume": 0.12
     },
     {
      "id": "nw_b1256",
@@ -14863,7 +15116,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s76",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/crossing.mp3",
+     "sfxVolume": 0.5
     }
    ],
    "hotspots": [],
@@ -14989,7 +15244,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1267",
@@ -15070,7 +15327,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/tv-static.mp3",
+     "sfxVolume": 0.1
     },
     {
      "id": "nw_b1271",
@@ -15111,7 +15370,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/drawer-open.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1275",
@@ -15123,7 +15384,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1276",
      "characterId": "nw_narrator",
      "text": "Puts the notebook in the envelope.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/envelope-mat.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1277",
@@ -15223,7 +15486,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/envelope-mat.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1281",
@@ -15834,7 +16099,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/cash-drawer.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1332",
@@ -15893,7 +16160,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s82",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/pour-drink.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -16005,7 +16274,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1342",
      "characterId": "nw_narrator",
      "text": "Hiss. Then two men's voices, twenty years younger. Sakai's rough. The other one smooth, patient, faintly bored.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/cassette-play.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1343",
@@ -16039,7 +16310,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1347",
      "characterId": "nw_narrator",
      "text": "Harada stops the tape. The newsroom noise outside the glass seems very far away.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/cassette-stop.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b1348",
@@ -16230,7 +16503,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/photocopier.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1365",
@@ -16395,7 +16670,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1382",
      "characterId": "nw_narrator",
      "text": "Courteous. Curious. He pours her tea himself.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/tea-pour.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b1383",
@@ -16966,7 +17243,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1446",
      "characterId": "nw_narrator",
      "text": "And under the train, so quietly it's almost part of it: in the passage outside, a man's voice, murmuring into his sleeve.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/sleeve-murmur.mp3",
+     "sfxVolume": 0.35
     },
     {
      "id": "nw_b1447",
@@ -18576,7 +18855,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s95",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/car-door-heavy.mp3",
+     "sfxVolume": 0.8
     }
    ],
    "hotspots": [],
@@ -18697,7 +18978,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/drawer-open.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1535",
@@ -18902,7 +19185,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1556",
      "characterId": "nw_narrator",
      "text": "A train passes below. They watch it.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b1557",
@@ -19154,7 +19439,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b1591",
@@ -19219,7 +19506,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1594",
      "characterId": "nw_narrator",
      "text": "Excavators bite into the walls with long steel jaws. Concrete falls in slow grey curtains. Dust hangs in the air.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/demolition-site.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1595",

@@ -80,9 +80,17 @@ const camera = (src, held) => {
   const mode = held ? "zoom-hold" : ["zoom-hold", "zoom-hold", "pan", "dolly"][h % 4];
   return { mode, focalPoint: FOCI[h % FOCI.length], zoomDuration: 14 + (h % 9), panDirection: h % 2 ? "left" : "right", panDistance: 2, dollyDirection: h % 2 ? "left" : "right", dollyDistance: 3, dollyDuration: 24, colorGrade: "neon-noir", filmGrade: true, filmGradeStrength: 0.3 };
 };
-const bgFields = (bg, extra = {}) => bg.startsWith("gradient:")
-  ? { background: bg, backgroundTransition: "fade-black", backgroundTransitionSpeed: 0.8, ...extra }
-  : { background: bg, cinematic: camera(bg), backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.9, ...extra };
+// Per-picture looks (src/film/studio-edits.json "pictureLook", keyed by the picture's file name without extension): camera and lens
+// effects that belong to one shot (a handheld shake on a gunshot, rain on the lens in a parked car, a flare off headlights) and,
+// optionally, the cut into it ("backgroundTransition": "zoom" punches in, "burn" flashes, "glitch" jolts). Merged over the slow
+// default camera wherever that picture is shown, so the Studio sees and can change them like any other beat's camera.
+const pictureLook = (() => { try { return JSON.parse(readFileSync(resolve(root, "src/film/studio-edits.json"), "utf8")).pictureLook ?? {}; } catch { return {}; } })();
+const lookFor = bg => pictureLook[bg.replace(/^.*\//, "").replace(/\.[a-z0-9]+$/i, "")];
+const bgFields = (bg, extra = {}) => {
+  if (bg.startsWith("gradient:")) return { background: bg, backgroundTransition: "fade-black", backgroundTransitionSpeed: 0.8, ...extra };
+  const { cinematic, ...cut } = lookFor(bg) ?? {};
+  return { background: bg, cinematic: { ...camera(bg), ...(cinematic ?? {}) }, backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.9, ...cut, ...extra };
+};
 let carry = null;
 /** Sentence-aware chunks of at most `max` characters (a single longer sentence stays whole). */
 const chunkText = (text, max = 140) => {

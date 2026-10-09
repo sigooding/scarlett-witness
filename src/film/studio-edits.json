@@ -101,13 +101,31 @@
     "nw_credits": {
       "musicMode": "track",
       "musicUrl": "/film/audio/the-show.mp3",
-      "musicLevel": 1.0,
+      "musicLevel": 1,
       "musicFadeSeconds": 12
     },
     "nw_s78": {
       "musicMode": "none",
       "musicUrl": null,
       "musicFadeSeconds": 4
+    },
+    "nw_s48": {
+      "cinematic": {
+        "rainOnLens": true,
+        "rainLensIntensity": 1
+      }
+    },
+    "nw_s50": {
+      "cinematic": {
+        "rainOnLens": true,
+        "rainLensIntensity": 0.8
+      }
+    },
+    "nw_s61": {
+      "cinematic": {
+        "rainOnLens": true,
+        "rainLensIntensity": 0.6
+      }
     }
   },
   "startSceneId": "nw_s1",
@@ -241,7 +259,8 @@
       "loop-police-station"
     ],
     "nw_s7": [
-      "loop-police-station"
+      "loop-police-station",
+      "police-radio-low"
     ],
     "nw_s80": [
       "loop-police-station"
@@ -301,7 +320,8 @@
       "loop-rooftop-wind"
     ],
     "nw_s23": [
-      "loop-yakitori-grill"
+      "loop-yakitori-grill",
+      "walla-izakaya"
     ],
     "nw_s94": [
       "loop-car-idle-rain"
@@ -404,13 +424,19 @@
     ],
     "nw_s62": [
       "loop-crossing-traffic"
+    ],
+    "nw_s16": [
+      "radios-repairman"
+    ],
+    "nw_s55": [
+      "radios-repairman"
     ]
   },
   "sfx": [
     {
       "scene": "nw_s12",
       "find": "He feeds it a coin",
-      "file": "coin-insert",
+      "file": "vending-coin-can",
       "volume": 0.8
     },
     {
@@ -544,6 +570,666 @@
       "find": "A train goes over",
       "file": "train-inside-1",
       "volume": 0.6
+    },
+    {
+      "scene": "nw_s1",
+      "find": "Her phone lights up: VERA",
+      "file": "phone-vibrate",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s1",
+      "find": "Footsteps. Hurried. Uneven.",
+      "file": "footsteps-wet",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s1",
+      "find": "A black sedan pulls across the opening",
+      "file": "car-stop-wet",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s1",
+      "find": "Two MEN get out and walk in",
+      "file": "car-doors-open",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s1",
+      "find": "Her bag slides off her shoulder",
+      "file": "bag-spill",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s2",
+      "find": "Crates clatter somewhere in the back.",
+      "file": "crates-clatter",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s2",
+      "find": "Mara bursts in, the key in her fist.",
+      "file": "door-burst-bell",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s2",
+      "find": "the door opens behind her. Rain noise.",
+      "file": "door-open-rain",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s2",
+      "find": "A voice in his earpiece: one word.",
+      "file": "earpiece-word",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s2",
+      "find": "The television laughs again.",
+      "file": "tv-laugh",
+      "volume": 0.4
+    },
+    {
+      "scene": "nw_s3",
+      "find": "A train slides past on the elevated line",
+      "file": "train",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s4",
+      "find": "BEEP.",
+      "file": "voicemail-beep",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s4",
+      "find": "the song on the neighbour's radio ends. A DJ murmurs something.",
+      "file": "dj-through-wall",
+      "volume": 0.45
+    },
+    {
+      "scene": "nw_s5",
+      "find": "He types the name.",
+      "file": "keyboard-typing",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s5",
+      "find": "he picks up the desk phone and turns away",
+      "file": "desk-phone-pickup",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s5",
+      "find": "He hangs up. His manner has changed.",
+      "file": "phone-hang-up",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s6",
+      "find": "The cup crumples in her fist.",
+      "file": "paper-cup-crumple",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s7",
+      "find": "opens the bottom drawer. The two drawers above it stay closed.",
+      "file": "drawer-open",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s7",
+      "find": "Closes the drawer.",
+      "file": "drawer-close",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s8",
+      "find": "mops around it without looking at it",
+      "file": "mop-floor",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s10",
+      "find": "He flicks an old steel lighter open and shut",
+      "file": "lighter-flick",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s10",
+      "find": "A knock on the frosted glass.",
+      "file": "knock-glass-door",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s11",
+      "find": "now showing static",
+      "file": "tv-static",
+      "volume": 0.12
+    },
+    {
+      "scene": "nw_s11",
+      "find": "Then he dials the rotary phone.",
+      "file": "rotary-dial",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s11",
+      "find": "The line goes dead.",
+      "file": "landline-dead",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s11",
+      "find": "He sets it down.",
+      "file": "phone-hang-up",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s11",
+      "find": "Flicks the lighter open. Shut.",
+      "file": "lighter-flick",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s12",
+      "find": "A shutter RATTLES up above him.",
+      "file": "shutter-rattle-up",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s12",
+      "find": "The barber shrugs and pulls the shutter down.",
+      "file": "shutter-pull-down",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "He raps on the driver's window with a knuckle.",
+      "file": "knock-car-window",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "It winds down.",
+      "file": "car-window-down",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "He snaps it shut.",
+      "file": "lighter-flick",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "Vera shakes the blue umbrella out",
+      "file": "umbrella-shake",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "Tries the handle.",
+      "file": "door-lock-handle",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "smooths the paper bag flat on his knee",
+      "file": "paper-bag-rustle",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s16",
+      "find": "An OLD WOMAN asleep in front of a sumo match.",
+      "file": "sumo-tv",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s17",
+      "find": "Kaneko sets a bowl of noodles in front of Jack.",
+      "file": "bowl-set-down",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s18",
+      "find": "The old television plays static.",
+      "file": "tv-static",
+      "volume": 0.12
+    },
+    {
+      "scene": "nw_s18",
+      "find": "The line clicks dead.",
+      "file": "landline-dead",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s22",
+      "find": "A radio behind the counter plays baseball, low.",
+      "file": "radio-baseball",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s25a",
+      "find": "A CRT on the shelf shows a morning cooking show",
+      "file": "tv-cooking-show",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s25a",
+      "find": "On the television a chef lifts a lid",
+      "file": "tv-cooking-lid",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s25a",
+      "find": "He is already at the till, paying.",
+      "file": "cash-register",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s26",
+      "find": "She takes it. Opens it. Closes it. Opens it.",
+      "file": "lighter-flick",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s27",
+      "find": "The crossing signal turns green and the old melody begins to CHIME.",
+      "file": "crossing",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s29",
+      "find": "pours Jack tea she doesn't want to pour",
+      "file": "tea-pour",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s31",
+      "find": "Jack pulls into the lot. The only car.",
+      "file": "gravel-tyres",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s32",
+      "find": "A CRT television on a shelf showing a night baseball game",
+      "file": "tv-baseball-inn",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s32",
+      "find": "She hands him a heavy old key on a wooden tag.",
+      "file": "key-wooden-tag",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s36",
+      "find": "Her phone rings. Unknown number.",
+      "file": "mobile-ring",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s36",
+      "find": "The coins run out. The line goes dead.",
+      "file": "payphone-cutoff",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s38",
+      "find": "gravel crunching",
+      "file": "gravel-tyres",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s39",
+      "find": "the baseball crowd CHEERS on the TV",
+      "file": "tv-crowd-cheer",
+      "volume": 0.4
+    },
+    {
+      "scene": "nw_s40",
+      "find": "A burst of suppressed fire into the ceiling.",
+      "file": "smg-burst-suppressed",
+      "volume": 0.9
+    },
+    {
+      "scene": "nw_s40",
+      "find": "The souvenir case shatters.",
+      "file": "glass-case-shatter",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s41",
+      "find": "fires down the corridor",
+      "file": "smg-burst-suppressed",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s42",
+      "find": "The frame cracks open. Rain pours in.",
+      "file": "window-forced",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s43",
+      "find": "Jack drops onto it, slides",
+      "file": "tin-roof-slide",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s45",
+      "find": "flips the lobby light switch. DARK.",
+      "file": "main-switch-blackout",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s45",
+      "find": "The shots stitch across the wall",
+      "file": "smg-burst-suppressed",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s45",
+      "find": "It lights up and CHIMES:",
+      "file": "vending-machine-buzz",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s47",
+      "find": "Gunfire kicks up mud behind him.",
+      "file": "smg-burst-suppressed",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s47",
+      "find": "Bullets punch through the bodywork",
+      "file": "bullets-car",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s48",
+      "find": "The engine coughs. Dies.",
+      "file": "engine-cough-die",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s48",
+      "find": "The windscreen cracks as a round goes through it.",
+      "file": "windscreen-crack",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s49",
+      "find": "smashes through the farm gate",
+      "file": "gate-smash",
+      "volume": 0.9
+    },
+    {
+      "scene": "nw_s52",
+      "find": "A knock at the door.",
+      "file": "door-knock-wood",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s53",
+      "find": "She wrings out the cloth.",
+      "file": "cloth-wring",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s55",
+      "find": "an OLD WOMAN watches sumo on a television",
+      "file": "sumo-tv",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s56",
+      "find": "She sets a bowl of noodles in front of Vera.",
+      "file": "bowl-set-down",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s59",
+      "find": "It's ringing.",
+      "file": "ringback-tone",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s62",
+      "find": "The old melody begins to CHIME.",
+      "file": "crossing",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s63",
+      "find": "Jack opens a locker with Mara's key.",
+      "file": "locker-open",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s63a",
+      "find": "a PACHINKO PARLOUR",
+      "file": "pachinko-parlour",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s63a",
+      "find": "out through the fire door at the back",
+      "file": "fire-door-bang",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s63a",
+      "find": "Someone inside is speaking into a sleeve.",
+      "file": "sleeve-murmur",
+      "volume": 0.25
+    },
+    {
+      "scene": "nw_s64",
+      "find": "lifts the lid of the old cash drawer",
+      "file": "cash-drawer",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s64",
+      "find": "He pours Jack a drink.",
+      "file": "pour-drink",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s69",
+      "find": "A girl practising the violin, badly.",
+      "file": "violin-practice",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s70",
+      "find": "murmurs into his sleeve, very quietly",
+      "file": "sleeve-murmur",
+      "volume": 0.3
+    },
+    {
+      "scene": "nw_s70",
+      "find": "Rounds clang off the steel.",
+      "file": "ricochets",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s71",
+      "find": "throws the bolt. Pounding on the door.",
+      "file": "door-pounding-shots",
+      "volume": 0.85
+    },
+    {
+      "scene": "nw_s71",
+      "find": "Above them, a window opens. Then another.",
+      "file": "windows-neighbours",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s71",
+      "find": "And far away, finally, sirens.",
+      "file": "sirens-distant",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s72",
+      "find": "turns it over in her fingers. Open. Shut.",
+      "file": "lighter-flick",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s72",
+      "find": "Her phone RINGS.",
+      "file": "mobile-ring",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s72",
+      "find": "The clock ticks. Somewhere a glass is set down.",
+      "file": "lounge-clock-glass",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s73",
+      "find": "Not elegantly. Badly. In heels",
+      "file": "heels-running-wet",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s73",
+      "find": "the old melody chimes for her",
+      "file": "crossing",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s73",
+      "find": "The shoe comes off and stays behind in a puddle.",
+      "file": "shoe-splash",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s74",
+      "find": "Above them, an elevated train passes",
+      "file": "train",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s75",
+      "find": "A small television in a shop window, showing only static.",
+      "file": "tv-static",
+      "volume": 0.12
+    },
+    {
+      "scene": "nw_s75",
+      "find": "the old melody CHIMES across the wet street",
+      "file": "crossing",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s76",
+      "find": "In her hand, the old steel lighter.",
+      "file": "lighter-flick",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s77",
+      "find": "Static on the TV.",
+      "file": "tv-static",
+      "volume": 0.1
+    },
+    {
+      "scene": "nw_s77",
+      "find": "He opens the drawer. Takes out a clean envelope.",
+      "file": "drawer-open",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s77",
+      "find": "Puts the notebook in the envelope.",
+      "file": "envelope-mat",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s78",
+      "find": "He sets the envelope on the mat",
+      "file": "envelope-mat",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s81",
+      "find": "He opens the cash drawer",
+      "file": "cash-drawer",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s81",
+      "find": "he pours two small glasses",
+      "file": "pour-drink",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s82",
+      "find": "Hiss. Then two men's voices",
+      "file": "cassette-play",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s82",
+      "find": "Harada stops the tape.",
+      "file": "cassette-stop",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s82a",
+      "find": "A YOUNG COPY CLERK at a photocopier",
+      "file": "photocopier",
+      "volume": 0.5
+    },
+    {
+      "scene": "nw_s83",
+      "find": "He pours her tea himself.",
+      "file": "tea-pour",
+      "volume": 0.7
+    },
+    {
+      "scene": "nw_s84",
+      "find": "a man's voice, murmuring into his sleeve",
+      "file": "sleeve-murmur",
+      "volume": 0.35
+    },
+    {
+      "scene": "nw_s94",
+      "find": "Ishida gets in. The door closes.",
+      "file": "car-door-heavy",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s96",
+      "find": "He opens the bottom drawer. Empty.",
+      "file": "drawer-open",
+      "volume": 0.6
+    },
+    {
+      "scene": "nw_s98",
+      "find": "A train passes below. They watch it.",
+      "file": "train",
+      "volume": 0.4
+    },
+    {
+      "scene": "nw_s98",
+      "find": "A train passes, its windows full of people.",
+      "file": "train",
+      "volume": 0.4
+    },
+    {
+      "scene": "nw_s99a",
+      "find": "Excavators bite into the walls",
+      "file": "demolition-site",
+      "volume": 0.6
     }
   ],
   "dialogueBox": {
@@ -567,47 +1253,273 @@
       "slack": 2,
       "endHold": 2.5,
       "captions": {
-      "119-single-file": "Four masked men enter the Hive, single file.",
-      "120-the-hive-is-watching": "Doors close softly as they pass. The Hive is watching.",
-      "121-the-shutter": "Kaneko sounds the alarm and pulls the shutter down.",
-      "124-the-repairman": "The radio repairman hears boots in the corridor.",
-      "125-the-main-switch": "He pulls the main switch.",
-      "126-dark": "Every bulb in the Hive goes out.",
-      "127-faces-vanish": "Faces at the windows vanish from the beams.",
-      "128-by-touch": "Vera climbs the black stairwell by touch.",
-      "129-she-lets-him": "She finds Jack's hand and pulls him up after her.",
-      "319-the-unlit-lighter": "Her thumb on the lighter's wheel. She doesn't light it.",
-      "130-the-roof": "A door opens before Vera can knock.",
-      "131-she-jumps": "Room after room, the Hive opens a way through.",
-      "378-the-barbers-shop": "The barber turns his chair to the wall.",
-      "379-the-laundry": "Wet sheets part and close behind them.",
-      "380-the-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
-      "381-the-plank": "A plank across the gap, hauled in after them.",
-      "382-the-pipe-gallery": "The pipes ring softly: one rap means clear.",
-      "132-the-gap": "Nobody speaks. Every door closes behind them.",
-      "132-the-rails-sing": "Overhead the rails begin to sing.",
-      "133-inches-apart": "A train roars over them. Her hand is in his on the rail.",
-      "134-the-walkway-is-empty": "When the train has passed, the ladder is empty.",
-      "135-below-the-viaduct": "They step off the last rung into an empty street. Sirens."
+        "119-single-file": "Four masked men enter the Hive, single file.",
+        "120-the-hive-is-watching": "Doors close softly as they pass. The Hive is watching.",
+        "121-the-shutter": "Kaneko sounds the alarm and pulls the shutter down.",
+        "124-the-repairman": "The radio repairman hears boots in the corridor.",
+        "125-the-main-switch": "He pulls the main switch.",
+        "126-dark": "Every bulb in the Hive goes out.",
+        "127-faces-vanish": "Faces at the windows vanish from the beams.",
+        "128-by-touch": "Vera climbs the black stairwell by touch.",
+        "129-she-lets-him": "She finds Jack's hand and pulls him up after her.",
+        "319-the-unlit-lighter": "Her thumb on the lighter's wheel. She doesn't light it.",
+        "130-the-roof": "A door opens before Vera can knock.",
+        "131-she-jumps": "Room after room, the Hive opens a way through.",
+        "378-the-barbers-shop": "The barber turns his chair to the wall.",
+        "379-the-laundry": "Wet sheets part and close behind them.",
+        "380-the-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
+        "381-the-plank": "A plank across the gap, hauled in after them.",
+        "382-the-pipe-gallery": "The pipes ring softly: one rap means clear.",
+        "132-the-gap": "Nobody speaks. Every door closes behind them.",
+        "132-the-rails-sing": "Overhead the rails begin to sing.",
+        "133-inches-apart": "A train roars over them. Her hand is in his on the rail.",
+        "134-the-walkway-is-empty": "When the train has passed, the ladder is empty.",
+        "135-below-the-viaduct": "They step off the last rung into an empty street. Sirens."
       },
       "cues": {
-      "119-single-file": [{"file": "pipe-alarm", "volume": 0.9}],
-      "120-the-hive-is-watching": [{"file": "doors-close-softly", "volume": 0.6}],
-      "121-the-shutter": [{"file": "shutter-crash", "volume": 0.9}],
-      "124-the-repairman": [{"file": "boots-single-file", "volume": 0.4}],
-      "125-the-main-switch": [{"file": "main-switch-blackout", "volume": 0.9}],
-      "126-dark": [{"file": "flashlights-snap-on", "volume": 0.8}],
-      "319-the-unlit-lighter": [{"file": "boots-single-file", "volume": 0.3}],
-      "382-the-pipe-gallery": [{"file": "pipe-alarm", "volume": 0.4}],
-      "132-the-gap": [{"file": "doors-close-softly", "volume": 0.5}],
-      "132-the-rails-sing": [{"file": "train", "volume": 0.8}],
-      "133-inches-apart": [{"file": "fire-ladder-rungs", "volume": 0.6}],
-      "135-below-the-viaduct": [{"file": "sirens-distant", "volume": 0.7}]
+        "119-single-file": [
+          {
+            "file": "pipe-alarm",
+            "volume": 0.9
+          }
+        ],
+        "120-the-hive-is-watching": [
+          {
+            "file": "doors-close-softly",
+            "volume": 0.6
+          }
+        ],
+        "121-the-shutter": [
+          {
+            "file": "shutter-crash",
+            "volume": 0.9
+          }
+        ],
+        "124-the-repairman": [
+          {
+            "file": "boots-single-file",
+            "volume": 0.4
+          }
+        ],
+        "125-the-main-switch": [
+          {
+            "file": "main-switch-blackout",
+            "volume": 0.9
+          }
+        ],
+        "126-dark": [
+          {
+            "file": "flashlights-snap-on",
+            "volume": 0.8
+          }
+        ],
+        "319-the-unlit-lighter": [
+          {
+            "file": "boots-single-file",
+            "volume": 0.3
+          }
+        ],
+        "382-the-pipe-gallery": [
+          {
+            "file": "pipe-alarm",
+            "volume": 0.4
+          }
+        ],
+        "132-the-gap": [
+          {
+            "file": "doors-close-softly",
+            "volume": 0.5
+          }
+        ],
+        "132-the-rails-sing": [
+          {
+            "file": "train",
+            "volume": 0.8
+          }
+        ],
+        "133-inches-apart": [
+          {
+            "file": "fire-ladder-rungs",
+            "volume": 0.6
+          }
+        ],
+        "135-below-the-viaduct": [
+          {
+            "file": "sirens-distant",
+            "volume": 0.7
+          }
+        ]
       }
     }
   ],
   "pictureCaptions": {
     "372-the-clip-on-the-book": "The red bird clip lies alone on the closed cover.",
     "371-the-coward-line": "A small, bitter laugh. She hides her mouth in her sleeve."
+  },
+  "pictureLook": {
+    "10-the-shot": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      },
+      "backgroundTransition": "zoom",
+      "backgroundTransitionSpeed": 0.3
+    },
+    "17-she-runs": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
+    },
+    "26-the-variety-show": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      },
+      "backgroundTransition": "zoom",
+      "backgroundTransitionSpeed": 0.3
+    },
+    "332-the-sedan-blocks-the-lane": {
+      "cinematic": {
+        "lensFlare": {
+          "preset": "anamorphic-blue",
+          "x": 61,
+          "y": 52,
+          "intensity": 0.5,
+          "streakIntensity": 0.7,
+          "starburstIntensity": 0.25,
+          "ghostIntensity": 0.4,
+          "pulseAmount": 0.15
+        }
+      }
+    },
+    "333-the-white-light": {
+      "cinematic": {
+        "lensFlare": {
+          "preset": "anamorphic-blue",
+          "x": 63,
+          "y": 51,
+          "intensity": 0.4,
+          "streakIntensity": 0.6,
+          "starburstIntensity": 0.2,
+          "ghostIntensity": 0.3,
+          "pulseAmount": 0.15
+        }
+      }
+    },
+    "177-behind-the-counter": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.45,
+        "shakeDuration": 0.25
+      }
+    },
+    "178-staff-side": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.25
+      }
+    },
+    "178-the-screens": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.45,
+        "shakeDuration": 0.25
+      }
+    },
+    "210-the-third-time": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      }
+    },
+    "211-wet-tin": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      }
+    },
+    "178-thank-you-very-much": {
+      "cinematic": {
+        "dimAmount": 0.35,
+        "colorGrade": "midnight-teal"
+      }
+    },
+    "222-mud-and-impacts": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.45,
+        "shakeDuration": 0.25
+      }
+    },
+    "214-come-on-come-on": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      }
+    },
+    "215-no-need-to-chase": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      }
+    },
+    "216-hand-starts-to-shake": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.12,
+        "shakeDuration": 0.7
+      }
+    },
+    "237-position": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.3
+      }
+    },
+    "69-vera-runs": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
+    },
+    "387-the-street-too-long": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.15,
+        "shakeDuration": 0.7
+      }
+    },
+    "70-not-elegantly-badly": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.25,
+        "shakeDuration": 0.7
+      }
+    },
+    "388-through-the-crossing": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
+    },
+    "72-the-lost-heel": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.3,
+        "shakeDuration": 0.7
+      }
+    }
   }
 }

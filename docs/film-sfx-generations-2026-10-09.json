@@ -1,0 +1,1999 @@
+{
+ "note": "ElevenLabs generations for the film's scene effects and TV/radio voices, 9 October 2026 (director: \"add special effects where needed in the game ... make sure they are appropriate for the scene ... add the remaining sound effects and voices missing using elevenlabs\"). One flow, fAjXLLwYkar3WzG6dFlj. Effects: eleven_text_to_sound_v2, prompt influence 0.5, one take each (two for the lighter, the rotary dial, the ringtone, the inn's gunfire and the door in scene 71). Voices: eleven_v4 in two stock character voices (the director's rule: stock voices must be character type), diegetic only, never a character's line. ElevenLabs does not keep generations: every take is in public/film/sfx/alternates/ (effects) and public/film/voice/tv-radio/raw/ (voices); the leveled files the film plays are built from them by tools/level-film-sfx.mjs.",
+ "flow": "fAjXLLwYkar3WzG6dFlj",
+ "effects": {
+  "phone-vibrate": {
+   "prompt": "A smartphone vibrating in a coat pocket, two short buzzes, muffled, light rain around, no ringtone, no music, no voices",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "gXySvqD7Wjvf49SfGjAS",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "q7Ehoh5gMWirA6mR4PD8",
+     "session": "o0FG63WsomLherBc2fWo",
+     "file": "public/film/sfx/alternates/phone-vibrate--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 1.3,
+    "sourcePeakDb": -4.3,
+    "sourceMeanDb": -12.2,
+    "peakDb": -2.8,
+    "meanDb": -10.9,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/phone-vibrate.mp3"
+  },
+  "car-stop-wet": {
+   "prompt": "A heavy black sedan swinging across a narrow wet street and braking to a stop, tyres hissing on wet asphalt, engine idling low, rain, no music, no voices",
+   "seconds": 4,
+   "loop": false,
+   "node": "i5dX6v1pGdUS1mwlqWOc",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "xGUaxYVvdacjkzyoSmAc",
+     "session": "lAx4A6Hf7UdkEoV6ng4r",
+     "file": "public/film/sfx/alternates/car-stop-wet--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -17.5,
+    "peakDb": -2.6,
+    "meanDb": -20.5,
+    "duration": 4,
+    "weak": false
+   },
+   "file": "public/film/sfx/car-stop-wet.mp3"
+  },
+  "bag-spill": {
+   "prompt": "A woman's handbag dropping onto a wet street and spilling: keys, coins and a lipstick clattering and rolling on wet asphalt, rain, no voices",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "oHVuc9TE5YUQx97hv9EE",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "R2A89cS2P35AWUpibKPI",
+     "session": "UzveTznYcaeOjauSuDgv",
+     "file": "public/film/sfx/alternates/bag-spill--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -24.9,
+    "peakDb": -3,
+    "meanDb": -28,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/bag-spill.mp3"
+  },
+  "crates-clatter": {
+   "prompt": "Empty plastic beer crates knocked over and clattering in a back storeroom behind a wall, muffled, no voices, no music",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "hOofAEsdFFwjkXhTqQ1a",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "zqGQzVA4pPSAOcnzt6RS",
+     "session": "sE57ixMznpcMSLKdhfzC",
+     "file": "public/film/sfx/alternates/crates-clatter--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 2.3,
+    "sourcePeakDb": -5.3,
+    "sourceMeanDb": -30.7,
+    "peakDb": -2.9,
+    "meanDb": -28.4,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/crates-clatter.mp3"
+  },
+  "door-burst-bell": {
+   "prompt": "A small bar's wooden door flung open hard, a little brass bell above it jangling, heavy rain rushing in, no voices, no music",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "QV3pYYbW3DksvBRiCYsH",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "jPUhEDOuFovpGhbI8HAn",
+     "session": "O9shlMtaG6WpcDj1rJzi",
+     "file": "public/film/sfx/alternates/door-burst-bell--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -26.4,
+    "peakDb": -2.6,
+    "meanDb": -30,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/door-burst-bell.mp3"
+  },
+  "door-open-rain": {
+   "prompt": "A wooden door opening slowly from outside, the sound of heavy rain swelling in through the gap, no voices, no music",
+   "seconds": 3,
+   "loop": false,
+   "node": "L1hXwEsm4B47g89xtawe",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "snBA89xDpIj2aHQPxYqK",
+     "session": "Y0k9Cx7EJGrs9gVfEWXi",
+     "file": "public/film/sfx/alternates/door-open-rain--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -25.4,
+    "peakDb": -3,
+    "meanDb": -28.4,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/door-open-rain.mp3"
+  },
+  "earpiece-word": {
+   "prompt": "A tiny radio earpiece crackling with one short unintelligible word, very small and tinny, close, then a click",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "15n2dqzXcJqVuWDdEIqv",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "FOjlWiq8sDm9tieRzDJn",
+     "session": "tHilKoIftIB81PI1sySb",
+     "file": "public/film/sfx/alternates/earpiece-word--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -0.6,
+    "sourcePeakDb": -2.4,
+    "sourceMeanDb": -33.2,
+    "peakDb": -3,
+    "meanDb": -33.8,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/earpiece-word.mp3"
+  },
+  "tv-laugh": {
+   "prompt": "A small old CRT television on a high shelf, a late-night variety show studio audience laughing, tinny and distant, no music",
+   "seconds": 3,
+   "loop": false,
+   "node": "lEn7C2vz1UQ2T2nqiMnj",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "vlCKDI2o9rJHZX3WGs6U",
+     "session": "GvU6st4YYiTYAqRgtYQU",
+     "file": "public/film/sfx/alternates/tv-laugh--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "P4gce1ANRZ1vnQcYz6PS",
+     "session": "DD8hoYBTXRAfPU1j7wr8",
+     "file": "public/film/sfx/alternates/tv-laugh--v2.mp3",
+     "prompt": "Close and clearly audible: a studio audience bursting into loud laughter on an old television variety show, tinny small TV speaker"
+    },
+    {
+     "v": 3,
+     "generation": "bJt1lOYxf7EqcOSiZfO7",
+     "session": "BJisvIXDnUj7c4bnsogh",
+     "file": "public/film/sfx/alternates/tv-laugh--v3.mp3",
+     "prompt": "Close and clearly audible: a studio audience bursting into loud laughter on an old television variety show, tinny small TV speaker"
+    }
+   ],
+   "pick": "v3",
+   "level": {
+    "gainDb": -2.9,
+    "sourcePeakDb": -0.1,
+    "sourceMeanDb": -14.6,
+    "peakDb": -2.8,
+    "meanDb": -17.5,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/tv-laugh.mp3",
+   "retake": {
+    "why": "the first take came back near-silent (loudest moment under -25 dB); re-prompted louder and closer, two takes, prompt influence 0.6",
+    "node": "kX5jzp8MZYt9kZGZQZXi",
+    "prompt": "Close and clearly audible: a studio audience bursting into loud laughter on an old television variety show, tinny small TV speaker"
+   }
+  },
+  "voicemail-beep": {
+   "prompt": "A single short voicemail recording beep from a mobile phone speaker",
+   "seconds": 1,
+   "loop": false,
+   "node": "PrM0UdyfOujOTYjGrwHT",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "2SQqCJlhJ8CIC7T9SoSN",
+     "session": "KmmSg4U87bzFDMj0Cp3x",
+     "file": "public/film/sfx/alternates/voicemail-beep--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.9,
+    "sourcePeakDb": -0.1,
+    "sourceMeanDb": -15.5,
+    "peakDb": -3,
+    "meanDb": -18.4,
+    "duration": 1,
+    "weak": false
+   },
+   "file": "public/film/sfx/voicemail-beep.mp3"
+  },
+  "dj-through-wall": {
+   "prompt": "Through a thin apartment wall, an old radio: a slow saxophone ballad ending, then a late-night male radio DJ murmuring softly, muffled and unintelligible",
+   "seconds": 6,
+   "loop": false,
+   "node": "a4VcaqTTGIZWoY3tibPM",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "RiNfTLBRrYNtxmz0unNZ",
+     "session": "yUXB5fPkLBJRkkZZ370C",
+     "file": "public/film/sfx/alternates/dj-through-wall--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -14.4,
+    "peakDb": -2.7,
+    "meanDb": -17.3,
+    "duration": 6,
+    "weak": false
+   },
+   "file": "public/film/sfx/dj-through-wall.mp3"
+  },
+  "keyboard-typing": {
+   "prompt": "A few quick keystrokes on an office computer keyboard, a name typed, then stop, no voices",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "CuaYXDIj47FkmuW44y5L",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "IWFeHflANHQQF6bnH4JV",
+     "session": "DoTL8eWbvzeVCW43HTS4",
+     "file": "public/film/sfx/alternates/keyboard-typing--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 10.9,
+    "sourcePeakDb": -13.9,
+    "sourceMeanDb": -41.7,
+    "peakDb": -3,
+    "meanDb": -30.8,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/keyboard-typing.mp3"
+  },
+  "desk-phone-pickup": {
+   "prompt": "An office desk telephone handset lifted from its cradle with a click, three buttons pressed, no voices",
+   "seconds": 2,
+   "loop": false,
+   "node": "aAGRNpQ2hCvC9vqsHoge",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "IZWwpWQG4paQBYO94ioJ",
+     "session": "9VwxwKpWYTVr1iWCa5QD",
+     "file": "public/film/sfx/alternates/desk-phone-pickup--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 7.5,
+    "sourcePeakDb": -10.5,
+    "sourceMeanDb": -42.9,
+    "peakDb": -3,
+    "meanDb": -35.4,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/desk-phone-pickup.mp3"
+  },
+  "phone-hang-up": {
+   "prompt": "A desk telephone handset put back down on its cradle with a plastic clack",
+   "seconds": 1,
+   "loop": false,
+   "node": "gxGulJevkLg9RE5tmNzx",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "zuwSQi1dDYWf5UyYYrYc",
+     "session": "uWInMIMMHYSFdpzppl3i",
+     "file": "public/film/sfx/alternates/phone-hang-up--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -1.2,
+    "sourcePeakDb": -1.8,
+    "sourceMeanDb": -28.8,
+    "peakDb": -2.8,
+    "meanDb": -30,
+    "duration": 1,
+    "weak": false
+   },
+   "file": "public/film/sfx/phone-hang-up.mp3"
+  },
+  "paper-cup-crumple": {
+   "prompt": "A paper cup of hot tea crushed in a fist, paper crumpling and tea splashing onto a table",
+   "seconds": 2,
+   "loop": false,
+   "node": "7ZV92ZBKTid1Z9k9yiuB",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "eR3aYnqwfDgQrMz5BHFx",
+     "session": "aes1WduXmzDltBn6NaEe",
+     "file": "public/film/sfx/alternates/paper-cup-crumple--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "VzTUtM03mp9hMt36Kf1v",
+     "session": "5oH93BmkOufo66xv7Nip",
+     "file": "public/film/sfx/alternates/paper-cup-crumple--v2.mp3",
+     "prompt": "Close-mic, loud: a paper cup crushed hard in a fist, sharp paper crunch and liquid splashing onto a table"
+    },
+    {
+     "v": 3,
+     "generation": "69be242PT5l3LYJXqjZh",
+     "session": "bdOmDi7fjdIKU7fNoSDo",
+     "file": "public/film/sfx/alternates/paper-cup-crumple--v3.mp3",
+     "prompt": "Close-mic, loud: a paper cup crushed hard in a fist, sharp paper crunch and liquid splashing onto a table"
+    }
+   ],
+   "pick": "v2",
+   "level": {
+    "gainDb": 0.5,
+    "sourcePeakDb": -3.5,
+    "sourceMeanDb": -26.8,
+    "peakDb": -3.3,
+    "meanDb": -26.3,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/paper-cup-crumple.mp3",
+   "retake": {
+    "why": "the first take came back near-silent (loudest moment under -25 dB); re-prompted louder and closer, two takes, prompt influence 0.6",
+    "node": "Ii7jUZSwO3adMXtNjizb",
+    "prompt": "Close-mic, loud: a paper cup crushed hard in a fist, sharp paper crunch and liquid splashing onto a table"
+   }
+  },
+  "drawer-open": {
+   "prompt": "A metal office desk drawer slid open, a light rattle of its contents",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "i0My18OPTgZllqhgMo2W",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "EKb5nydToFXwEXIEQqwt",
+     "session": "heslTnpKoQZZkTDUPEQC",
+     "file": "public/film/sfx/alternates/drawer-open--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 1.1,
+    "sourcePeakDb": -4.1,
+    "sourceMeanDb": -27.4,
+    "peakDb": -2.9,
+    "meanDb": -26.3,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/drawer-open.mp3"
+  },
+  "drawer-close": {
+   "prompt": "A metal office desk drawer pushed shut with a soft bang",
+   "seconds": 1.2,
+   "loop": false,
+   "node": "F0FbEk0HQ54vUUdBeJUX",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "OUXWehLnWs36ja6AOVm2",
+     "session": "Ker652RRtXXzvE3bkPW4",
+     "file": "public/film/sfx/alternates/drawer-close--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 5.5,
+    "sourcePeakDb": -8.5,
+    "sourceMeanDb": -32.4,
+    "peakDb": -3,
+    "meanDb": -27,
+    "duration": 1.2,
+    "weak": false
+   },
+   "file": "public/film/sfx/drawer-close.mp3"
+  },
+  "mop-floor": {
+   "prompt": "A wet mop swishing across a rubber floor mat in an empty bar, a bucket wringer squeaking, no voices, no music",
+   "seconds": 3,
+   "loop": false,
+   "node": "maaHwo5ruXXWGIsYzoFG",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "asB6NikeMJ1cy39Y6vNJ",
+     "session": "1NroirzOG21V2AJ7od1a",
+     "file": "public/film/sfx/alternates/mop-floor--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 8.9,
+    "sourcePeakDb": -11.9,
+    "sourceMeanDb": -35.4,
+    "peakDb": -3.2,
+    "meanDb": -26.5,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/mop-floor.mp3"
+  },
+  "lighter-flick": {
+   "prompt": "An old steel petrol lighter's lid flicked open with a metallic clink and snapped shut again, not lit, no flame, no spark wheel, close",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "U3ACHS1LmPpeCZ3UBazs",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "syiEni6gqO4eCgmpI8AJ",
+     "session": "h1EZi9h1NzVuh93YZlfS",
+     "file": "public/film/sfx/alternates/lighter-flick--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "b5rgOyjdOD64gjEbfZco",
+     "session": "fQgUgb257xvau8vtMgEq",
+     "file": "public/film/sfx/alternates/lighter-flick--v2.mp3"
+    }
+   ],
+   "pick": "v2",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -28.6,
+    "peakDb": -3.2,
+    "meanDb": -32.1,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/lighter-flick.mp3"
+  },
+  "knock-glass-door": {
+   "prompt": "Three knocks on a frosted glass office door in a wooden frame, the glass rattling slightly",
+   "seconds": 2,
+   "loop": false,
+   "node": "WOL4pig1QONFt82zekSF",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "pPDzwDqVKykZpo5zJKs8",
+     "session": "yndwE6wfcS3d1R60U7kU",
+     "file": "public/film/sfx/alternates/knock-glass-door--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -1.3,
+    "sourcePeakDb": -1.7,
+    "sourceMeanDb": -27.8,
+    "peakDb": -3,
+    "meanDb": -29.1,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/knock-glass-door.mp3"
+  },
+  "rotary-dial": {
+   "prompt": "An old black rotary telephone being dialled: a finger turning the dial and the dial whirring back, five digits, no voices",
+   "seconds": 5,
+   "loop": false,
+   "node": "KWoCLQleLdVgCUGwCPXW",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Gn10JutcFYDK29hVWv9I",
+     "session": "1S3t8k0dyGgv2G51pU0Z",
+     "file": "public/film/sfx/alternates/rotary-dial--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "UYAqsp9isXhRknFoqNcs",
+     "session": "SiLLOhFJM3ZDSNktv7OH",
+     "file": "public/film/sfx/alternates/rotary-dial--v2.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.2,
+    "sourcePeakDb": -0.8,
+    "sourceMeanDb": -30.4,
+    "peakDb": -3.2,
+    "meanDb": -32.6,
+    "duration": 5,
+    "weak": false
+   },
+   "file": "public/film/sfx/rotary-dial.mp3"
+  },
+  "vending-can-drop": {
+   "prompt": "A street vending machine dropping a hot can of coffee into the tray with a hollow metallic clunk",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "K2mYH23VNLBpKgrWjGmZ",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "dEnuxyTTJZG941ZZ3dIZ",
+     "session": "PxORtisC420qW73DVP4I",
+     "file": "public/film/sfx/alternates/vending-can-drop--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 6.5,
+    "sourcePeakDb": -9.5,
+    "sourceMeanDb": -31.4,
+    "peakDb": -2.7,
+    "meanDb": -24.9,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/vending-can-drop.mp3"
+  },
+  "shutter-rattle-up": {
+   "prompt": "A corrugated metal shop shutter rattling and rolling up at night, metal clattering, no voices",
+   "seconds": 3,
+   "loop": false,
+   "node": "LQh3ky8mQ8dKm7KyNh6i",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "5StOQzbmkKFh7E8WuE7W",
+     "session": "k5SS1PIJf2xATDMxbVks",
+     "file": "public/film/sfx/alternates/shutter-rattle-up--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 7.8,
+    "sourcePeakDb": -10.8,
+    "sourceMeanDb": -32.1,
+    "peakDb": -3.2,
+    "meanDb": -24.3,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/shutter-rattle-up.mp3"
+  },
+  "shutter-pull-down": {
+   "prompt": "A corrugated metal shop shutter pulled down and clanking shut, no voices",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "fWGqZku4YjYY65ZvZYrW",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "cvAo7zNPmwHdjbDjKkQG",
+     "session": "K0RSVlJ8iUKbGkbCx9U7",
+     "file": "public/film/sfx/alternates/shutter-pull-down--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 4.2,
+    "sourcePeakDb": -7.2,
+    "sourceMeanDb": -34.5,
+    "peakDb": -3.6,
+    "meanDb": -30.3,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/shutter-pull-down.mp3"
+  },
+  "knock-car-window": {
+   "prompt": "A knuckle rapping twice on a car's side window glass, rain on the car roof",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "bApX571VYBfEguL3lLj1",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "JKs6o4CrH00S5BWnUjqW",
+     "session": "BJFIe3cghn5W8eaJFQmy",
+     "file": "public/film/sfx/alternates/knock-car-window--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.2,
+    "sourcePeakDb": -0.8,
+    "sourceMeanDb": -30.6,
+    "peakDb": -3,
+    "meanDb": -32.8,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/knock-car-window.mp3"
+  },
+  "car-window-down": {
+   "prompt": "An old car's electric window winding down, the sound of rain growing louder through the opening",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "Y31G4Y0HUNnCksjdJFnn",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "9Q7wJaMXS3CKSWfUUlxq",
+     "session": "jvjbRcbcPh4wbywAI29v",
+     "file": "public/film/sfx/alternates/car-window-down--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.8,
+    "sourcePeakDb": -0.2,
+    "sourceMeanDb": -20.6,
+    "peakDb": -2.9,
+    "meanDb": -23.4,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/car-window-down.mp3"
+  },
+  "umbrella-shake": {
+   "prompt": "A wet umbrella shaken out and folded, water spattering, nylon rustling",
+   "seconds": 2,
+   "loop": false,
+   "node": "dnCaSh4SObrtRC15ECc2",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "19oQ1LQQssKTOzstP0He",
+     "session": "CQ05dJA7K8XODSVcw7X9",
+     "file": "public/film/sfx/alternates/umbrella-shake--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -21.8,
+    "peakDb": -3,
+    "meanDb": -24.8,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/umbrella-shake.mp3"
+  },
+  "paper-bag-rustle": {
+   "prompt": "A paper convenience-store bag opened and rustled, a plastic-wrapped rice ball unwrapped, inside a quiet car",
+   "seconds": 3,
+   "loop": false,
+   "node": "oNrivnULhTubFOVvhGux",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "JYptUABuRnJDN1qdTG8N",
+     "session": "rrvpGU9yiYeKaUkTL5OR",
+     "file": "public/film/sfx/alternates/paper-bag-rustle--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 12.3,
+    "sourcePeakDb": -15.3,
+    "sourceMeanDb": -41,
+    "peakDb": -3.1,
+    "meanDb": -28.6,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/paper-bag-rustle.mp3"
+  },
+  "bowl-set-down": {
+   "prompt": "A heavy ceramic noodle bowl set down on a wooden counter, chopsticks rattling against it",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "Kc9UExsfcFZwxAWnOmWE",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "lAng7U9LBWt7W85MlsTz",
+     "session": "cZL5tRFwoli9lqCGsUPb",
+     "file": "public/film/sfx/alternates/bowl-set-down--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -21,
+    "peakDb": -3,
+    "meanDb": -24,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/bowl-set-down.mp3"
+  },
+  "cash-register": {
+   "prompt": "An old cash register: keys pressed, the drawer ringing open with a bell, coins",
+   "seconds": 2,
+   "loop": false,
+   "node": "Rxpp2caobdXWc3ZjD6CQ",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "PiJeBioARu3Rq4JBZGSO",
+     "session": "aWd6jffZ4kCTjlKHftig",
+     "file": "public/film/sfx/alternates/cash-register--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -22.1,
+    "peakDb": -2.4,
+    "meanDb": -25.2,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/cash-register.mp3"
+  },
+  "tea-pour": {
+   "prompt": "Hot tea poured from a ceramic teapot into a small cup, gentle, quiet room",
+   "seconds": 3,
+   "loop": false,
+   "node": "Xu0lJIuY5Xv7HLTtRxkK",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "9QcSFu8P6xkVh5HIoc4d",
+     "session": "b02noYiual7EZcPCUm2Y",
+     "file": "public/film/sfx/alternates/tea-pour--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "FlVnuyrTuKYrWG8tMMoO",
+     "session": "ufslbN68kvBq6bCaqwkQ",
+     "file": "public/film/sfx/alternates/tea-pour--v2.mp3",
+     "prompt": "Close-mic, clearly audible: tea poured from a teapot into a ceramic cup, liquid splashing and filling the cup"
+    },
+    {
+     "v": 3,
+     "generation": "hCsDRyD4CKkOxmg1T0M1",
+     "session": "nhMFTSYbOqdFNxDEOe7m",
+     "file": "public/film/sfx/alternates/tea-pour--v3.mp3",
+     "prompt": "Close-mic, clearly audible: tea poured from a teapot into a ceramic cup, liquid splashing and filling the cup"
+    }
+   ],
+   "pick": "v3",
+   "level": {
+    "gainDb": 14,
+    "sourcePeakDb": -20.4,
+    "sourceMeanDb": -45.9,
+    "peakDb": -6.5,
+    "meanDb": -31.9,
+    "duration": 3,
+    "weak": true
+   },
+   "file": "public/film/sfx/tea-pour.mp3",
+   "retake": {
+    "why": "the first take came back near-silent (loudest moment under -25 dB); re-prompted louder and closer, two takes, prompt influence 0.6",
+    "node": "V5w3tgM7aa4vuQhZ8zMa",
+    "prompt": "Close-mic, clearly audible: tea poured from a teapot into a ceramic cup, liquid splashing and filling the cup"
+   }
+  },
+  "key-wooden-tag": {
+   "prompt": "A heavy old room key on a wooden tag set down on a wooden reception counter",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "5pRhSMzuxUnS3sUnJpZI",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "BYW7HpbO1bD9ViN0uPga",
+     "session": "SE1uziyKdbasDz3FhX2h",
+     "file": "public/film/sfx/alternates/key-wooden-tag--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 6.9,
+    "sourcePeakDb": -9.9,
+    "sourceMeanDb": -32.6,
+    "peakDb": -3,
+    "meanDb": -25.7,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/key-wooden-tag.mp3"
+  },
+  "mobile-ring": {
+   "prompt": "A smartphone ringing with a plain default ringtone, two rings, in a quiet room",
+   "seconds": 4,
+   "loop": false,
+   "node": "vv9fJltPltGIlmjE0V6y",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "NJ2fjnfYdJlOU5LocvOn",
+     "session": "k3No8EQddJnjVt0pGIpK",
+     "file": "public/film/sfx/alternates/mobile-ring--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "lUes8Lt4otgHSP8uMiCA",
+     "session": "LUpuyAyyxX3T7Ua6y8w8",
+     "file": "public/film/sfx/alternates/mobile-ring--v2.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -13.1,
+    "peakDb": -2.7,
+    "meanDb": -16.1,
+    "duration": 4,
+    "weak": false
+   },
+   "file": "public/film/sfx/mobile-ring.mp3"
+  },
+  "payphone-cutoff": {
+   "prompt": "A payphone call cut off as the coins run out: a warning beep, a click, then a dial tone",
+   "seconds": 3,
+   "loop": false,
+   "node": "Xo9SalIpc2x0y9bbwuOX",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "1OpNWgSyrBPQunxUatJd",
+     "session": "az5Ls0YDiIaQRGtX2Zlp",
+     "file": "public/film/sfx/alternates/payphone-cutoff--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 0.1,
+    "sourcePeakDb": -3.1,
+    "sourceMeanDb": -19.1,
+    "peakDb": -3,
+    "meanDb": -19.2,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/payphone-cutoff.mp3"
+  },
+  "tv-crowd-cheer": {
+   "prompt": "A baseball crowd cheering on a small old television in the next room, tinny and muffled",
+   "seconds": 3,
+   "loop": false,
+   "node": "A19ZbYtFuJVR9oylpudK",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "2m33tF6QM171Dxx6YTO5",
+     "session": "A2sF1bh6hkdyIwPm7cUn",
+     "file": "public/film/sfx/alternates/tv-crowd-cheer--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.2,
+    "sourcePeakDb": -0.8,
+    "sourceMeanDb": -16.4,
+    "peakDb": -3,
+    "meanDb": -18.6,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/tv-crowd-cheer.mp3"
+  },
+  "smg-burst-suppressed": {
+   "prompt": "A short burst of suppressed submachine gun fire into a ceiling indoors, plaster and debris raining down",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "wEr3jAGFfzhj47uEjdLn",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "2PPP3EYZ3k1AHADutmwW",
+     "session": "Hzbk4LgTyUF8wR8LDqrg",
+     "file": "public/film/sfx/alternates/smg-burst-suppressed--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "pvs7M6HZVmKeNsEy01Dr",
+     "session": "mO0UHVtT2onGJhjMUFD3",
+     "file": "public/film/sfx/alternates/smg-burst-suppressed--v2.mp3"
+    }
+   ],
+   "pick": "v2",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -10.7,
+    "peakDb": -2.4,
+    "meanDb": -14.6,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/smg-burst-suppressed.mp3"
+  },
+  "glass-case-shatter": {
+   "prompt": "A glass display case shattering, glass crashing onto a wooden floor",
+   "seconds": 2,
+   "loop": false,
+   "node": "Lh4i7REwhXjciGZX3wog",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "92Fxs5mIPMYKwbjpZXx6",
+     "session": "WHxtBkJ4VmEx9IEXROwT",
+     "file": "public/film/sfx/alternates/glass-case-shatter--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -13.4,
+    "peakDb": -2.2,
+    "meanDb": -17,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/glass-case-shatter.mp3"
+  },
+  "window-forced": {
+   "prompt": "Three hard thumps against a swollen wooden window frame, then it cracks open and heavy rain pours in",
+   "seconds": 4,
+   "loop": false,
+   "node": "zNkSc6lAOWjXG8O0fLPe",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "VcK6bQD9EmsdOfgjeKVw",
+     "session": "dVISq5jZQoUcdgJduBVJ",
+     "file": "public/film/sfx/alternates/window-forced--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.7,
+    "sourcePeakDb": -0.3,
+    "sourceMeanDb": -24.4,
+    "peakDb": -3,
+    "meanDb": -27.1,
+    "duration": 4,
+    "weak": false
+   },
+   "file": "public/film/sfx/window-forced.mp3"
+  },
+  "tin-roof-slide": {
+   "prompt": "A person sliding down a wet corrugated tin roof, metal creaking and buckling, rain",
+   "seconds": 3,
+   "loop": false,
+   "node": "CFwdQeWAwDHVCYMDfnjk",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Us5HXjxbfzAXoMJ6YgiK",
+     "session": "gRDJqOgntBWccCxmNosj",
+     "file": "public/film/sfx/alternates/tin-roof-slide--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.8,
+    "sourcePeakDb": -0.2,
+    "sourceMeanDb": -30.9,
+    "peakDb": -3,
+    "meanDb": -33.6,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/tin-roof-slide.mp3"
+  },
+  "bullets-car": {
+   "prompt": "Bullets punching through a car's metal bodywork and splashing into mud, heavy rain",
+   "seconds": 3,
+   "loop": false,
+   "node": "mNSVBeQR22XnGrSkXQbe",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "KLeRakbly6uCkREcDkNp",
+     "session": "gCV04XiPHt1wOYty1Me3",
+     "file": "public/film/sfx/alternates/bullets-car--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -14.9,
+    "peakDb": -2.4,
+    "meanDb": -18.1,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/bullets-car.mp3"
+  },
+  "engine-cough-die": {
+   "prompt": "An old pickup truck engine coughing and dying, the starter cranking, rain",
+   "seconds": 3,
+   "loop": false,
+   "node": "AgWfdjwOZobMwCw4xuPY",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "6nC4XLkvuxtF10mjmDJZ",
+     "session": "AjtIL5y3NvHXpVNkhMmq",
+     "file": "public/film/sfx/alternates/engine-cough-die--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -17.6,
+    "peakDb": -3,
+    "meanDb": -20.6,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/engine-cough-die.mp3"
+  },
+  "windscreen-crack": {
+   "prompt": "A bullet cracking through a car windscreen, glass splintering",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "lRe0HrxXL5qmG6svtBDp",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "1ipleTzGnQ18GRl2qxVc",
+     "session": "ajMUilMHWeBeLlfNZy01",
+     "file": "public/film/sfx/alternates/windscreen-crack--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 6.3,
+    "sourcePeakDb": -9.3,
+    "sourceMeanDb": -37,
+    "peakDb": -3.1,
+    "meanDb": -30.7,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/windscreen-crack.mp3"
+  },
+  "gate-smash": {
+   "prompt": "A pickup truck smashing through a wooden farm gate, wood splintering, mud splashing",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "dd6GrmeMbzaqo7Rv1WjN",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "vxyLP9zSbxj4DUyWl2Pw",
+     "session": "lYz4fhn3CZTblQ9di6p7",
+     "file": "public/film/sfx/alternates/gate-smash--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -18.6,
+    "peakDb": -2.3,
+    "meanDb": -22.6,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/gate-smash.mp3"
+  },
+  "cloth-wring": {
+   "prompt": "A wet cloth wrung out over a bowl of water, water dripping into the bowl",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "LHp6p0NisehIZw4xvVC2",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "BGxCBydkvwqUtMEedd0G",
+     "session": "BcTO9iHNOdIjmyDWqnH8",
+     "file": "public/film/sfx/alternates/cloth-wring--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -0.1,
+    "sourcePeakDb": -2.9,
+    "sourceMeanDb": -28.9,
+    "peakDb": -2.9,
+    "meanDb": -29,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/cloth-wring.mp3"
+  },
+  "door-knock-wood": {
+   "prompt": "Two soft knocks on a wooden door",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "PXpixzY8C7ylxFPaXe9r",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "hhLdOgHPVgtgOrPr5vcx",
+     "session": "eWP7FzfRLgwF8zPrj4hp",
+     "file": "public/film/sfx/alternates/door-knock-wood--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.8,
+    "sourcePeakDb": -0.2,
+    "sourceMeanDb": -19.8,
+    "peakDb": -3,
+    "meanDb": -22.6,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/door-knock-wood.mp3"
+  },
+  "ringback-tone": {
+   "prompt": "A Japanese telephone ringback tone heard through a phone receiver, ringing four times, nobody answering",
+   "seconds": 6,
+   "loop": false,
+   "node": "Dx5Knfw0pGR840DaOTfc",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "PtD8ZEAXiSdlMA8CNnnv",
+     "session": "7QNk9yQ09LJEXOGiicNt",
+     "file": "public/film/sfx/alternates/ringback-tone--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -8.7,
+    "peakDb": -2.8,
+    "meanDb": -11.7,
+    "duration": 6,
+    "weak": false
+   },
+   "file": "public/film/sfx/ringback-tone.mp3"
+  },
+  "locker-open": {
+   "prompt": "A coin-locker key turned in its lock and the small metal locker door swung open",
+   "seconds": 2,
+   "loop": false,
+   "node": "g3EbeDrYPAM1vJ6MIHGr",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Z4zftCm67qtxcWgLU40k",
+     "session": "ybNU3tj50bE3Oyju2wY7",
+     "file": "public/film/sfx/alternates/locker-open--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -22.9,
+    "peakDb": -2.9,
+    "meanDb": -26.3,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/locker-open.mp3"
+  },
+  "fire-door-bang": {
+   "prompt": "A heavy metal fire door pushed open with a push bar and banging shut",
+   "seconds": 2,
+   "loop": false,
+   "node": "hSqpOPUMXZOti42nUzIQ",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Xyl2ACHtxD7B8hSSn4pO",
+     "session": "DLbY8LHn7XdGCkfigaGf",
+     "file": "public/film/sfx/alternates/fire-door-bang--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -22.5,
+    "peakDb": -3.2,
+    "meanDb": -26.4,
+    "duration": 2,
+    "weak": false
+   },
+   "file": "public/film/sfx/fire-door-bang.mp3"
+  },
+  "cash-drawer": {
+   "prompt": "An old wooden cash drawer slid open, coins rattling inside",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "BfyVPX23DXs9aM9vO1UP",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "nsLxvLLxex0UrpcbbKbm",
+     "session": "QHvRL5u5S5ziBU4ta2Fr",
+     "file": "public/film/sfx/alternates/cash-drawer--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.7,
+    "sourcePeakDb": -0.3,
+    "sourceMeanDb": -25.9,
+    "peakDb": -3,
+    "meanDb": -28.6,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/cash-drawer.mp3"
+  },
+  "pour-drink": {
+   "prompt": "Whisky poured from a bottle into a small glass, the bottle set down",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "3NbW46ucWnTkTPMwv3Ht",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "bGRmLbLusyIcBqGYVaDh",
+     "session": "E9TOJaAsMV3LrNDtL81Q",
+     "file": "public/film/sfx/alternates/pour-drink--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 1.1,
+    "sourcePeakDb": -4.1,
+    "sourceMeanDb": -29.7,
+    "peakDb": -2.9,
+    "meanDb": -28.7,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/pour-drink.mp3"
+  },
+  "ricochets": {
+   "prompt": "Bullets ricocheting off steel pillars under a railway viaduct, sharp metallic pings, rain",
+   "seconds": 2.5,
+   "loop": false,
+   "node": "r2f4nwjGdpuvOs53VM6e",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "9lsmijch6pBKhZQMwZKO",
+     "session": "WRAaZmYeqPMk6Yh7VDQE",
+     "file": "public/film/sfx/alternates/ricochets--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -19.3,
+    "peakDb": -1.7,
+    "meanDb": -23,
+    "duration": 2.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/ricochets.mp3"
+  },
+  "door-bolt": {
+   "prompt": "A heavy iron bolt thrown on an old wooden door",
+   "seconds": 1,
+   "loop": false,
+   "node": "TZ8ax4zp1ubPo6aJihBQ",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "iCy3hbo6rJTXdswHQvXO",
+     "session": "TyQLth5cVWaU7kwe7dcf",
+     "file": "public/film/sfx/alternates/door-bolt--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -19.5,
+    "peakDb": -2.4,
+    "meanDb": -23.2,
+    "duration": 1,
+    "weak": false
+   },
+   "file": "public/film/sfx/door-bolt.mp3"
+  },
+  "door-pounding-shots": {
+   "prompt": "Fists pounding on a wooden apartment door, then suppressed shots splintering through the wood",
+   "seconds": 4,
+   "loop": false,
+   "node": "w3N5vnV5rioLqQDCAKOs",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "kx0Emxk0cen3yBccIMMx",
+     "session": "tAwNd3jVeE96geOG8xts",
+     "file": "public/film/sfx/alternates/door-pounding-shots--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "FSX9OkDfERLJ4qUF6Kws",
+     "session": "LdN1INVoTANUJq6yfBhO",
+     "file": "public/film/sfx/alternates/door-pounding-shots--v2.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -15.7,
+    "peakDb": -2.1,
+    "meanDb": -18.9,
+    "duration": 4,
+    "weak": false
+   },
+   "file": "public/film/sfx/door-pounding-shots.mp3"
+  },
+  "windows-neighbours": {
+   "prompt": "At night, apartment windows sliding open one after another, neighbours' worried voices murmuring, unintelligible",
+   "seconds": 5,
+   "loop": false,
+   "node": "CGtih3lbW82CoKnlRRJO",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "AUpM0f172j8EkrWQtdkk",
+     "session": "GDXNS2U9DJqzHDSrBUxK",
+     "file": "public/film/sfx/alternates/windows-neighbours--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 4,
+    "sourcePeakDb": -7,
+    "sourceMeanDb": -31.1,
+    "peakDb": -3.1,
+    "meanDb": -27.1,
+    "duration": 5,
+    "weak": false
+   },
+   "file": "public/film/sfx/windows-neighbours.mp3"
+  },
+  "clock-tick": {
+   "prompt": "An old wall clock ticking in a quiet hotel lounge",
+   "seconds": 4,
+   "loop": false,
+   "node": "lgWYDhS4RsRV5sEA4oQb",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Yp2iI0J9DotOY4px04n3",
+     "session": "tF0bDGa0qF8VCg53AfDk",
+     "file": "public/film/sfx/alternates/clock-tick--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "PqmRwr5pUYcsar6v98BW",
+     "session": "1LB7WyoJ1ykbSaUenUhl",
+     "file": "public/film/sfx/alternates/clock-tick--v2.mp3",
+     "prompt": "Close-mic, clearly audible: a loud mechanical wall clock ticking steadily, tick tock"
+    },
+    {
+     "v": 3,
+     "generation": "BRGfCi9sxyTv3Q1IHNXU",
+     "session": "xXpFnxQQea7vOLCfefVf",
+     "file": "public/film/sfx/alternates/clock-tick--v3.mp3",
+     "prompt": "Close-mic, clearly audible: a loud mechanical wall clock ticking steadily, tick tock"
+    }
+   ],
+   "pick": "v3",
+   "level": {
+    "gainDb": -2.4,
+    "sourcePeakDb": -0.6,
+    "sourceMeanDb": -26.2,
+    "peakDb": -3.1,
+    "meanDb": -28.6,
+    "duration": 4,
+    "weak": false
+   },
+   "file": "public/film/sfx/clock-tick.mp3",
+   "retake": {
+    "why": "the first take came back near-silent (loudest moment under -25 dB); re-prompted louder and closer, two takes, prompt influence 0.6",
+    "node": "ReIgbeBUWKkz8lJB4NHW",
+    "prompt": "Close-mic, clearly audible: a loud mechanical wall clock ticking steadily, tick tock"
+   }
+  },
+  "glass-set-down": {
+   "prompt": "A glass set down on a bar counter, ice clinking",
+   "seconds": 1,
+   "loop": false,
+   "node": "FQ13w0gUcVgxpK7ZdjOi",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "04TsNSeyTBA51xfgRbk5",
+     "session": "GBvcCyzqx1potpgJNxxT",
+     "file": "public/film/sfx/alternates/glass-set-down--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.5,
+    "sourcePeakDb": -0.5,
+    "sourceMeanDb": -25.2,
+    "peakDb": -3,
+    "meanDb": -27.7,
+    "duration": 1,
+    "weak": false
+   },
+   "file": "public/film/sfx/glass-set-down.mp3"
+  },
+  "heels-running-wet": {
+   "prompt": "A woman running in high heels on wet pavement at night, splashing, rain",
+   "seconds": 4,
+   "loop": false,
+   "node": "biSiN3jjtsBf9VRZqQYw",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "rSOG4USFFglnnAM9EX2c",
+     "session": "fmAKXcU8S0JHxE9ywtVn",
+     "file": "public/film/sfx/alternates/heels-running-wet--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -1.3,
+    "sourcePeakDb": -1.7,
+    "sourceMeanDb": -31.9,
+    "peakDb": -3,
+    "meanDb": -33.2,
+    "duration": 4,
+    "weak": false
+   },
+   "file": "public/film/sfx/heels-running-wet.mp3"
+  },
+  "shoe-splash": {
+   "prompt": "A high-heeled shoe coming off and splashing into a puddle",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "fovMmHzLpaOHViP918x9",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "J97cbySSQCaWiThaSeqm",
+     "session": "3We4hMNlKPWjAZ9rZsdc",
+     "file": "public/film/sfx/alternates/shoe-splash--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 10.6,
+    "sourcePeakDb": -13.6,
+    "sourceMeanDb": -37.1,
+    "peakDb": -3.3,
+    "meanDb": -26.5,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/shoe-splash.mp3"
+  },
+  "tv-static": {
+   "prompt": "Old CRT television static hiss, steady",
+   "seconds": 5,
+   "loop": false,
+   "node": "KBQd38ZvBPARMs9MHCTD",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "cSMEHFJl32j33mwSA3YA",
+     "session": "h36IoBHCjQjQlwBwGmUb",
+     "file": "public/film/sfx/alternates/tv-static--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -2.7,
+    "peakDb": -3,
+    "meanDb": -5.7,
+    "duration": 5,
+    "weak": false
+   },
+   "file": "public/film/sfx/tv-static.mp3"
+  },
+  "envelope-mat": {
+   "prompt": "A paper envelope with a notebook inside set down on a doormat, a light rustle",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "lLVN7ubQtST15ob8w5dU",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "jJDPjKanrnBd6LV5MeO6",
+     "session": "dhIh6E3PMVaaBwkV13CD",
+     "file": "public/film/sfx/alternates/envelope-mat--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 8.3,
+    "sourcePeakDb": -11.3,
+    "sourceMeanDb": -39.1,
+    "peakDb": -3.1,
+    "meanDb": -30.9,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/envelope-mat.mp3"
+  },
+  "cassette-play": {
+   "prompt": "A cassette player's play button pressed with a mechanical clunk, then tape hiss",
+   "seconds": 3,
+   "loop": false,
+   "node": "oGCFubmoDmhPF7UYkCbV",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "8yEtMfRcnfHGtMCFBo2T",
+     "session": "LQkawKOTONyxttEESvza",
+     "file": "public/film/sfx/alternates/cassette-play--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -0.8,
+    "sourcePeakDb": -2.2,
+    "sourceMeanDb": -31.2,
+    "peakDb": -3,
+    "meanDb": -32,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/cassette-play.mp3"
+  },
+  "cassette-stop": {
+   "prompt": "A cassette player's stop button pressed with a mechanical clunk",
+   "seconds": 1,
+   "loop": false,
+   "node": "i5V0OejXDos2OCRznthn",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Wgf8WzjP7JljvfSkEjgk",
+     "session": "2jH1CHUxGsFugxyyGVuE",
+     "file": "public/film/sfx/alternates/cassette-stop--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "TyZXjWlo11cr5aJvkX93",
+     "session": "tm4ZJSQFL5tRyTTYoO3Y",
+     "file": "public/film/sfx/alternates/cassette-stop--v2.mp3",
+     "prompt": "Close-mic, loud: the stop key of an old cassette player pressed down with a hard plastic clunk, the tape stopping"
+    },
+    {
+     "v": 3,
+     "generation": "t0W2KzMzfS2fig4jlcfP",
+     "session": "DXKrmCc41O10iyplh7Wl",
+     "file": "public/film/sfx/alternates/cassette-stop--v3.mp3",
+     "prompt": "Close-mic, loud: the stop key of an old cassette player pressed down with a hard plastic clunk, the tape stopping"
+    }
+   ],
+   "pick": "v2",
+   "level": {
+    "gainDb": -3,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -24.2,
+    "peakDb": -2.7,
+    "meanDb": -28.6,
+    "duration": 1,
+    "weak": false
+   },
+   "file": "public/film/sfx/cassette-stop.mp3",
+   "retake": {
+    "why": "the first take came back near-silent (loudest moment under -25 dB); re-prompted louder and closer, two takes, prompt influence 0.6",
+    "node": "nhZUxu7nmxUvkDdwFB2D",
+    "prompt": "Close-mic, loud: the stop key of an old cassette player pressed down with a hard plastic clunk, the tape stopping"
+   }
+  },
+  "photocopier": {
+   "prompt": "An old office photocopier copying pages, the light bar sweeping, paper feeding out",
+   "seconds": 5,
+   "loop": false,
+   "node": "nogQnK5GXZTo3SLbHfFW",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "Ux8cUdAAwEW2rIicFHa7",
+     "session": "oUYgsJZ52tQWP2STSASM",
+     "file": "public/film/sfx/alternates/photocopier--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 0.5,
+    "sourcePeakDb": -3.5,
+    "sourceMeanDb": -30.6,
+    "peakDb": -3.1,
+    "meanDb": -30.1,
+    "duration": 5,
+    "weak": false
+   },
+   "file": "public/film/sfx/photocopier.mp3"
+  },
+  "sleeve-murmur": {
+   "prompt": "A man murmuring very quietly into a sleeve microphone in a narrow corridor, unintelligible, a train rumbling overhead",
+   "seconds": 3,
+   "loop": false,
+   "node": "eNTHDWfP46JJuS9912Rm",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "njMFi2YaIVaglU9a5PUH",
+     "session": "avLzFX1gEfQ8lP0z60yA",
+     "file": "public/film/sfx/alternates/sleeve-murmur--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 13.7,
+    "sourcePeakDb": -16.7,
+    "sourceMeanDb": -28.5,
+    "peakDb": -3,
+    "meanDb": -14.8,
+    "duration": 3,
+    "weak": false
+   },
+   "file": "public/film/sfx/sleeve-murmur.mp3"
+  },
+  "car-door-heavy": {
+   "prompt": "A heavy luxury car's rear door closing with a solid thud, the rain outside suddenly muffled",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "bcfFSwwlCxAcSYFfcCru",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "yp8ILckctdaRswpgbcBK",
+     "session": "4NqPfmVaFRhtlGQ7CWbn",
+     "file": "public/film/sfx/alternates/car-door-heavy--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -1.7,
+    "sourcePeakDb": -1.3,
+    "sourceMeanDb": -20.3,
+    "peakDb": -2.9,
+    "meanDb": -22,
+    "duration": 1.48,
+    "weak": false
+   },
+   "file": "public/film/sfx/car-door-heavy.mp3"
+  },
+  "police-radio-low": {
+   "prompt": "A police radio playing low across an empty office at night: short bursts of dispatcher chatter, unintelligible, squelch, long gaps of silence",
+   "seconds": 20,
+   "loop": true,
+   "node": "2m89ROb7mbO49BQOU59o",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "2d2zF0uI8sobQ2xXmpre",
+     "session": "iJw7VjDeg41cnF4YSWdh",
+     "file": "public/film/sfx/alternates/police-radio-low--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 3.3,
+    "sourcePeakDb": -7.5,
+    "sourceMeanDb": -27.3,
+    "peakDb": -4.2,
+    "meanDb": -24,
+    "duration": 20,
+    "weak": false
+   },
+   "file": "public/film/sfx/police-radio-low.mp3"
+  },
+  "radios-repairman": {
+   "prompt": "A radio repairman's bench in a crowded old building: a dozen old radios murmuring different stations at once, music and talk mixed, unintelligible, water dripping",
+   "seconds": 20,
+   "loop": true,
+   "node": "KfDxfINQdbGv73XjU0K9",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "gd1o2f9OZHaAPeTQxAck",
+     "session": "fbfLoHensQkXQb3cOqjF",
+     "file": "public/film/sfx/alternates/radios-repairman--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -4,
+    "sourcePeakDb": -1.5,
+    "sourceMeanDb": -20,
+    "peakDb": -5.5,
+    "meanDb": -24,
+    "duration": 20,
+    "weak": false
+   },
+   "file": "public/film/sfx/radios-repairman.mp3"
+  },
+  "walla-izakaya": {
+   "prompt": "A small yakitori stall under a railway at night, salarymen talking and laughing too loud, glasses clinking, unintelligible chatter, a grill sizzling",
+   "seconds": 20,
+   "loop": true,
+   "node": "MvpKQ8RHmsvgiz3edhI2",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "eZwGCYYXGwVS3xVn0DaH",
+     "session": "Ow0ss5rcmTZTQYZFartZ",
+     "file": "public/film/sfx/alternates/walla-izakaya--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 1.5,
+    "sourcePeakDb": -4.5,
+    "sourceMeanDb": -28.2,
+    "peakDb": -3,
+    "meanDb": -26.6,
+    "duration": 20,
+    "weak": false
+   },
+   "file": "public/film/sfx/walla-izakaya.mp3"
+  },
+  "pachinko-parlour": {
+   "prompt": "A pachinko parlour heard through a fire door: thousands of steel balls cascading, electronic jingles, muffled",
+   "seconds": 20,
+   "loop": true,
+   "node": "Bm0PfgiJ5DZpYmer6xQM",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "jwnwnlOAD6WVsuNAmOh0",
+     "session": "AaMh0I2UddcDnKyeTT8i",
+     "file": "public/film/sfx/alternates/pachinko-parlour--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -2.1,
+    "sourcePeakDb": -0.9,
+    "sourceMeanDb": -25.5,
+    "peakDb": -3,
+    "meanDb": -27.6,
+    "duration": 20,
+    "weak": false
+   },
+   "file": "public/film/sfx/pachinko-parlour.mp3"
+  },
+  "violin-practice": {
+   "prompt": "Through an apartment wall, a child practising the violin badly, scratchy slow scales, muffled",
+   "seconds": 20,
+   "loop": true,
+   "node": "NhhP0OT4TfyPz8xpy7ES",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "3FlKk097eFTNAiuqGAa6",
+     "session": "5lh2eJrY4nE5lOq1485C",
+     "file": "public/film/sfx/alternates/violin-practice--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": 12.7,
+    "sourcePeakDb": -21.2,
+    "sourceMeanDb": -36.7,
+    "peakDb": -8.5,
+    "meanDb": -24,
+    "duration": 20,
+    "weak": false
+   },
+   "file": "public/film/sfx/violin-practice.mp3"
+  },
+  "demolition-site": {
+   "prompt": "A demolition site at a distance: an excavator's hydraulic crunch, concrete falling, rubble, a diesel engine idling",
+   "seconds": 20,
+   "loop": true,
+   "node": "Ptt8HP17Y9sML8eFVTiH",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "XQhuKJLy4Hp65DMuw6Qm",
+     "session": "nREfxSOuXlvMw5GQ6Pa7",
+     "file": "public/film/sfx/alternates/demolition-site--v1.mp3"
+    }
+   ],
+   "pick": "v1",
+   "level": {
+    "gainDb": -5.1,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -18.9,
+    "peakDb": -4.8,
+    "meanDb": -24,
+    "duration": 20,
+    "weak": false
+   },
+   "file": "public/film/sfx/demolition-site.mp3"
+  },
+  "sumo-tv": {
+   "prompt": "A sumo match on a small old television behind a door: the crowd murmuring, a commentator's voice, muffled and unintelligible",
+   "seconds": 15,
+   "loop": true,
+   "node": "uzBY9vw9g9mEUEDk0knv",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "HBpabiOox7l2xgh0uEfP",
+     "session": "49tA4c9sO2N5EjMJ1dZD",
+     "file": "public/film/sfx/alternates/sumo-tv--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "Qg5mJwU5Y7D3KjMclr3M",
+     "session": "Dbkzan0dJOxP9i1t6QWL",
+     "file": "public/film/sfx/alternates/sumo-tv--v2.mp3",
+     "prompt": "Clearly audible: a sumo wrestling broadcast on a small old television, an arena crowd murmuring and cheering, a commentator talking, tinny speaker"
+    },
+    {
+     "v": 3,
+     "generation": "b3zVbBxLw8hdynwsAc7w",
+     "session": "RJ7CwUEpSwSBen2PVfZW",
+     "file": "public/film/sfx/alternates/sumo-tv--v3.mp3",
+     "prompt": "Clearly audible: a sumo wrestling broadcast on a small old television, an arena crowd murmuring and cheering, a commentator talking, tinny speaker"
+    }
+   ],
+   "pick": "v2",
+   "level": {
+    "gainDb": -8.1,
+    "sourcePeakDb": 0,
+    "sourceMeanDb": -15.9,
+    "peakDb": -7.5,
+    "meanDb": -24,
+    "duration": 15,
+    "weak": false
+   },
+   "file": "public/film/sfx/sumo-tv.mp3",
+   "retake": {
+    "why": "the first take came back near-silent (loudest moment under -25 dB); re-prompted louder and closer, two takes, prompt influence 0.6",
+    "node": "EIqg7FihRAX8932NaBqs",
+    "prompt": "Clearly audible: a sumo wrestling broadcast on a small old television, an arena crowd murmuring and cheering, a commentator talking, tinny speaker"
+   }
+  }
+ },
+ "voices": {
+  "radio-baseball": {
+   "voice": "LG95yZDEHg6fCZdQjLqj",
+   "voiceName": "World Wrestling Announcer (stock library voice, characters_animation)",
+   "model": "eleven_v4",
+   "prompt": "[Calm, low-key radio play-by-play late in a quiet game] Two balls, one strike. Here's the pitch... fouled back, out of play. Two and two now. The runner takes a short lead off first. Here's the windup, and the pitch... swung on and missed. Strike three. That'll do it for the inning.",
+   "scene": "22 (a radio behind the counter plays baseball, low)",
+   "raw": "public/film/voice/tv-radio/raw/radio-baseball.mp3",
+   "session": "zcn7CKq0nkofAN2YuVPy",
+   "generation": "2nrdUaiPGwgpti6voYOT",
+   "fx": "radio",
+   "file": "public/film/sfx/radio-baseball.mp3",
+   "level": {
+    "gainDb": 5.7,
+    "peakDb": -1.4,
+    "meanDb": -24.5,
+    "duration": 15.2
+   }
+  },
+  "tv-baseball-inn": {
+   "voice": "LG95yZDEHg6fCZdQjLqj",
+   "voiceName": "World Wrestling Announcer (stock library voice, characters_animation)",
+   "model": "eleven_v4",
+   "prompt": "[Relaxed television play-by-play on a long, rainy evening game] Bottom of the seventh, and still nothing between them. He looks in, gets his sign... fastball, called strike one. The rain's coming in off the coast tonight, the stands are only half full. Here's the next one... a little roller to third, and they'll take the sure out at first.",
+   "scene": "32 (a CRT at the inn shows a night baseball game)",
+   "raw": "public/film/voice/tv-radio/raw/tv-baseball-inn.mp3",
+   "session": "OwXGahgeZTdWTMhV5Hlg",
+   "generation": "AghBBLzsLRrXVHOOi9au",
+   "fx": "tv",
+   "file": "public/film/sfx/tv-baseball-inn.mp3",
+   "level": {
+    "gainDb": 5.1,
+    "peakDb": -1.4,
+    "meanDb": -24.4,
+    "duration": 16.59
+   }
+  },
+  "tv-cooking-show": {
+   "voice": "aqLKRpwa1nsQ5MqiAh53",
+   "voiceName": "Sugar Lin, Warm-Playful English (stock library voice, characters_animation)",
+   "model": "eleven_v4",
+   "prompt": "[Bright, chatty morning television host] Good morning! Today we're making a simple miso soup, just like your grandmother used to. A little dashi, one spoonful of miso, and the tofu goes in last, very gently.",
+   "scene": "25A (a CRT shows a morning cooking show, sound low)",
+   "raw": "public/film/voice/tv-radio/raw/tv-cooking-show.mp3",
+   "session": "wTfEYcAYVYaCmKroqc6b",
+   "generation": "fSpRLXywnWNe3TConRgn",
+   "fx": "tv",
+   "file": "public/film/sfx/tv-cooking-show.mp3",
+   "level": {
+    "gainDb": 5.5,
+    "peakDb": -3.4,
+    "meanDb": -24,
+    "duration": 12.27
+   }
+  },
+  "tv-cooking-lid": {
+   "voice": "aqLKRpwa1nsQ5MqiAh53",
+   "voiceName": "Sugar Lin, Warm-Playful English (stock library voice, characters_animation)",
+   "model": "eleven_v4",
+   "prompt": "[Delighted morning television host] Now, let's lift the lid... oh, look at that steam! That's how you know it's ready.",
+   "scene": "25A (on the television a chef lifts a lid and steam fills the frame)",
+   "raw": "public/film/voice/tv-radio/raw/tv-cooking-lid.mp3",
+   "session": "0aOFp5FIN9PczXtpOxdU",
+   "generation": "l2MeKhqvI0GqFCW7awiB",
+   "fx": "tv",
+   "file": "public/film/sfx/tv-cooking-lid.mp3",
+   "level": {
+    "gainDb": 5.3,
+    "peakDb": -2.6,
+    "meanDb": -22.2,
+    "duration": 6.67
+   }
+  }
+ }
+}
