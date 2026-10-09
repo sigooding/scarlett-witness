@@ -407,7 +407,7 @@ for (const seg of edits.soundtracks ?? []) {
   let beatNo2 = 0;
   const cueOf = s => { const c = seg.cues?.[base(s.bg)] ?? []; return c.length ? { sfxUrl: P(`/sfx/${c[0].file}.mp3`), sfxVolume: c[0].volume ?? 0.8 } : {}; };
   const node = (s, beat, ...more) => ({
-    id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, background: s.bg, cinematic: camera(s.bg), prose: "", ...s.look, hideHud: true, letterbox: true,
+    id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, background: s.bg, cinematic: { ...camera(s.bg), ...(lookFor(s.bg)?.cinematic ?? {}) }, prose: "", ...s.look, hideHud: true, letterbox: true,
     transition: "fade", transitionSpeed: TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat], ...Object.assign({}, ...more),
   });
   const captionBeat = (s, seconds, cue) => ({ id: `nw_song_b${++beatNo2}`, characterId: charOf(null), text: caption(s) ?? "·", silent: true, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - TRAN - 0.1 - LAG)) });

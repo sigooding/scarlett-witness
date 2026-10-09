@@ -939,7 +939,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 31,
+        "y": 30,
+        "color": "#e3f1ff",
+        "size": 22,
+        "intensity": 0.35,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 96,
+        "y": 19,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1057,7 +1077,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 63,
+        "y": 42,
+        "color": "#ffb347",
+        "size": 10,
+        "intensity": 0.45,
+        "pulseSeconds": 3.5,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 59,
+        "y": 24,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1113,7 +1153,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 80,
+        "y": 47,
+        "color": "#e3f1ff",
+        "size": 14,
+        "intensity": 0.35,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 55,
+        "y": 27,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1542,7 +1602,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "shakeAmount": 0.2,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "lights": [
+       {
+        "x": 55,
+        "y": 19,
+        "color": "#ffb347",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 3.5,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 93,
+        "y": 22,
+        "color": "#e3f1ff",
+        "size": 12,
+        "intensity": 0.3,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1613,7 +1693,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 51,
+        "y": 12.5,
+        "color": "#a9c8ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 22,
+        "y": 36,
+        "color": "#ffb347",
+        "size": 22,
+        "intensity": 0.25,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1661,7 +1761,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2/21-mara-bursts-in.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "shake",
       "focalPoint": "50% 60%",
       "zoomDuration": 17,
       "panDirection": "left",
@@ -1671,7 +1771,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "shakeAmount": 0.2,
+      "shakeDuration": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1800,7 +1902,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "shakeAmount": 0.3,
-      "shakeDuration": 0.3
+      "shakeDuration": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 11,
+        "color": "#a9c8ff",
+        "size": 10,
+        "intensity": 0.45,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       }
+      ]
      },
      "backgroundTransition": "zoom",
      "backgroundTransitionSpeed": 0.3,
@@ -1881,7 +1994,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 59,
+        "y": 10,
+        "color": "#a9c8ff",
+        "size": 12,
+        "intensity": 0.45,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 16,
+        "y": 47,
+        "color": "#ffb347",
+        "size": 20,
+        "intensity": 0.22,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2010,7 +2143,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 47,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.45,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2106,7 +2250,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "spielberg-golden",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -2349,7 +2493,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 61,
+        "y": 56,
+        "color": "#a9c8ff",
+        "size": 22,
+        "intensity": 0.3,
+        "pulseSeconds": 0.9,
+        "pulseAmount": 0.4
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2454,7 +2609,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 23,
+        "y": 6,
+        "color": "#eef6ff",
+        "size": 14,
+        "intensity": 0.4,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 1
+       },
+       {
+        "x": 72,
+        "y": 6,
+        "color": "#eef6ff",
+        "size": 14,
+        "intensity": 0.25,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4001,7 +4176,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 42,
+        "y": 52,
+        "color": "#ffd27a",
+        "size": 16,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 78,
+        "y": 24,
+        "color": "#a9c8ff",
+        "size": 10,
+        "intensity": 0.3,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -4125,7 +4320,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s10/165-face-up.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "dolly-zoom",
       "focalPoint": "50% 60%",
       "zoomDuration": 17,
       "panDirection": "left",
@@ -4133,9 +4328,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "spielberg-golden",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "dollyZoomAmount": 1.15,
+      "dollyZoomDuration": 7,
+      "dollyZoomDirection": "push"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4197,7 +4395,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "spielberg-golden",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -4384,7 +4582,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 32,
+        "y": 44,
+        "color": "#ffd27a",
+        "size": 16,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 80,
+        "y": 24,
+        "color": "#e6ecf5",
+        "size": 10,
+        "intensity": 0.3,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4416,7 +4634,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "spielberg-golden",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -4444,7 +4662,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "spielberg-golden",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -4865,7 +5083,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 76,
+        "y": 12.5,
+        "color": "#e3f1ff",
+        "size": 14,
+        "intensity": 0.35,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 54,
+        "y": 8,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -5232,7 +5470,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 44,
+        "color": "#eef4ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       }
+      ],
+      "lensFlare": {
+       "preset": "anamorphic-blue",
+       "x": 50,
+       "y": 44,
+       "intensity": 0.3,
+       "streakIntensity": 0.55,
+       "starburstIntensity": 0.2,
+       "ghostIntensity": 0.3,
+       "pulseAmount": 0.15
+      }
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5436,7 +5695,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 77,
+        "y": 4,
+        "color": "#ffb347",
+        "size": 7,
+        "intensity": 0.4,
+        "pulseSeconds": 3.5,
+        "pulseAmount": 0.3
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5649,7 +5919,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 64,
+        "y": 36,
+        "color": "#ffb347",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 3.5,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 84,
+        "y": 44,
+        "color": "#e3f1ff",
+        "size": 12,
+        "intensity": 0.3,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 53,
+        "y": 22,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6009,7 +6308,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 83,
+        "y": 8,
+        "color": "#dfe9ff",
+        "size": 22,
+        "intensity": 0.25,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6045,7 +6355,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 51,
+        "y": 5,
+        "color": "#dfe9ff",
+        "size": 24,
+        "intensity": 0.25,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.1
+       },
+       {
+        "x": 87,
+        "y": 58,
+        "color": "#a9c8ff",
+        "size": 8,
+        "intensity": 0.3,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 86,
+        "y": 33,
+        "color": "#ffc56b",
+        "size": 8,
+        "intensity": 0.35,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6098,7 +6437,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "cinematic": {
+    "volumetricShafts": true,
+    "shaftsIntensity": 1.5
+   }
   },
   {
    "id": "nw_s17",
@@ -6145,7 +6488,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50.5,
+        "y": 17,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.5,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       },
+       {
+        "x": 66,
+        "y": 36,
+        "color": "#dfeeff",
+        "size": 16,
+        "intensity": 0.2,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6398,7 +6761,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 27,
+        "y": 25,
+        "color": "#ffd27a",
+        "size": 20,
+        "intensity": 0.4,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6547,7 +6921,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 19,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.5,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6621,7 +7006,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 72,
+        "color": "#c8dcff",
+        "size": 28,
+        "intensity": 0.25,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.2
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6923,7 +7319,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 28,
+        "color": "#ffc56b",
+        "size": 14,
+        "intensity": 0.5,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7429,10 +7836,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/s23/197-you-never-call.jpg",
    "prose": "EXT. YAKITORI STALL, UNDER THE TRACKS - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3+file:/film/sfx/walla-izakaya.mp3",
-   "particles": "rain",
+   "particles": "smoke",
    "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
+    "density": 0.7,
+    "opacity": 0.45
    },
    "hideHud": true,
    "letterbox": true,
@@ -7468,7 +7875,54 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 14,
+        "y": 17,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 23,
+        "y": 24,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 28,
+        "y": 28,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 32,
+        "y": 30,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 86,
+        "y": 9,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7634,7 +8088,45 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 14,
+        "y": 17,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 1.8,
+        "pulseAmount": 0.5
+       },
+       {
+        "x": 23,
+        "y": 24,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 2.1,
+        "pulseAmount": 0.5
+       },
+       {
+        "x": 28,
+        "y": 28,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 1.9,
+        "pulseAmount": 0.5
+       },
+       {
+        "x": 32,
+        "y": 31,
+        "color": "#ff4a2a",
+        "size": 9,
+        "intensity": 0.45,
+        "pulseSeconds": 2.3,
+        "pulseAmount": 0.5
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -7711,7 +8203,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 57.5,
+        "y": 29,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.5,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7885,7 +8388,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 55,
+        "y": 0,
+        "color": "#ffcf80",
+        "size": 40,
+        "intensity": 0.25,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8036,7 +8550,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 84,
+        "y": 14,
+        "color": "#a9c8ff",
+        "size": 10,
+        "intensity": 0.35,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 81,
+        "y": 64,
+        "color": "#ffb24a",
+        "size": 6,
+        "intensity": 0.45,
+        "pulseSeconds": 0.6,
+        "pulseAmount": 0.6
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8474,7 +9008,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 34,
+        "y": 24,
+        "color": "#3dff9a",
+        "size": 8,
+        "intensity": 0.5,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8919,7 +9464,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 47,
+        "y": 46,
+        "color": "#cfe0ff",
+        "size": 14,
+        "intensity": 0.22,
+        "pulseSeconds": 1,
+        "pulseAmount": 0.35
+       },
+       {
+        "x": 83,
+        "y": 58,
+        "color": "#ffb54d",
+        "size": 12,
+        "intensity": 0.3,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.5
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9112,7 +9677,46 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 64,
+        "y": 28,
+        "color": "#ffd27a",
+        "size": 8,
+        "intensity": 0.45,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 0.8
+       },
+       {
+        "x": 52,
+        "y": 58,
+        "color": "#eef4ff",
+        "size": 6,
+        "intensity": 0.5,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 58,
+        "y": 58,
+        "color": "#eef4ff",
+        "size": 6,
+        "intensity": 0.25,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       }
+      ],
+      "lensFlare": {
+       "preset": "anamorphic-blue",
+       "x": 52,
+       "y": 58,
+       "intensity": 0.3,
+       "streakIntensity": 0.55,
+       "starburstIntensity": 0.2,
+       "ghostIntensity": 0.3,
+       "pulseAmount": 0.15
+      }
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -9177,7 +9781,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 29,
+        "y": 53,
+        "color": "#cfe8ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 42,
+        "y": 51,
+        "color": "#ffc56b",
+        "size": 16,
+        "intensity": 0.3,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -9258,7 +9882,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 80,
+        "y": 15,
+        "color": "#a9c8ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 41,
+        "y": 26,
+        "color": "#a9c8ff",
+        "size": 6,
+        "intensity": 0.3,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -9418,7 +10062,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 38,
+        "y": 44,
+        "color": "#ffd27a",
+        "size": 22,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9884,7 +10539,55 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 28,
+        "y": 69,
+        "color": "#eef4ff",
+        "size": 8,
+        "intensity": 0.45,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 41,
+        "y": 54,
+        "color": "#eef4ff",
+        "size": 7,
+        "intensity": 0.4,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 61,
+        "y": 53,
+        "color": "#eef4ff",
+        "size": 7,
+        "intensity": 0.4,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 76,
+        "y": 69,
+        "color": "#eef4ff",
+        "size": 8,
+        "intensity": 0.45,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       }
+      ],
+      "lensFlare": {
+       "preset": "anamorphic-blue",
+       "x": 28,
+       "y": 69,
+       "intensity": 0.3,
+       "streakIntensity": 0.55,
+       "starburstIntensity": 0.2,
+       "ghostIntensity": 0.3,
+       "pulseAmount": 0.15
+      }
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10415,7 +11118,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
-      "dimAmount": 0.35
+      "dimAmount": 0.35,
+      "lights": [
+       {
+        "x": 80,
+        "y": 15,
+        "color": "#7fa8ff",
+        "size": 30,
+        "intensity": 0.45,
+        "pulseSeconds": 0.6,
+        "pulseAmount": 0.8
+       },
+       {
+        "x": 37,
+        "y": 56,
+        "color": "#e3f1ff",
+        "size": 10,
+        "intensity": 0.3,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11767,7 +12490,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "cinematic": {
+    "volumetricShafts": true,
+    "shaftsIntensity": 1.5
+   }
   },
   {
    "id": "nw_s56",
@@ -12449,7 +13176,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 36,
+        "y": 64,
+        "color": "#7fe0c8",
+        "size": 10,
+        "intensity": 0.35,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 49,
+        "y": 78,
+        "color": "#7fe0c8",
+        "size": 8,
+        "intensity": 0.3,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 50,
+        "y": 37,
+        "color": "#ffa94d",
+        "size": 8,
+        "intensity": 0.3,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -12674,7 +13430,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 35,
+        "y": 24,
+        "color": "#3dff9a",
+        "size": 8,
+        "intensity": 0.5,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 33,
+        "y": 90,
+        "color": "#3dff9a",
+        "size": 18,
+        "intensity": 0.22,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 64,
+        "y": 36,
+        "color": "#ffb347",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 3.5,
+        "pulseAmount": 0.3
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -12747,7 +13532,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 14,
+        "color": "#eef6ff",
+        "size": 12,
+        "intensity": 0.45,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -12924,7 +13720,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 15,
+        "y": 40,
+        "color": "#ffcc66",
+        "size": 26,
+        "intensity": 0.3,
+        "pulseSeconds": 0.7,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 90,
+        "y": 38,
+        "color": "#ff9ad0",
+        "size": 22,
+        "intensity": 0.28,
+        "pulseSeconds": 0.9,
+        "pulseAmount": 0.6
+       },
+       {
+        "x": 51,
+        "y": 8,
+        "color": "#eef6ff",
+        "size": 8,
+        "intensity": 0.35,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -13369,7 +14194,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 6,
+        "y": 53,
+        "color": "#ffc370",
+        "size": 20,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 84,
+        "y": 19,
+        "color": "#ffb347",
+        "size": 18,
+        "intensity": 0.25,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13468,7 +14313,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 59,
+        "y": 11,
+        "color": "#ffa94d",
+        "size": 14,
+        "intensity": 0.5,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       },
+       {
+        "x": 50,
+        "y": 41,
+        "color": "#ff4d3a",
+        "size": 6,
+        "intensity": 0.4,
+        "pulseSeconds": 1,
+        "pulseAmount": 0.3
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -13739,7 +14604,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "cinematic": {
+    "volumetricShafts": true,
+    "shaftsIntensity": 1.5
+   }
   },
   {
    "id": "nw_s70",
@@ -14192,7 +15061,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 6.5,
+        "y": 53,
+        "color": "#ffc370",
+        "size": 20,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 84,
+        "y": 20,
+        "color": "#ffb347",
+        "size": 18,
+        "intensity": 0.25,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14275,7 +15164,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s72/70-the-call.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "dolly-zoom",
       "focalPoint": "35% 50%",
       "zoomDuration": 18,
       "panDirection": "left",
@@ -14285,7 +15174,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "dollyZoomAmount": 1.18,
+      "dollyZoomDuration": 6,
+      "dollyZoomDirection": "push"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14637,7 +15529,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 7,
+        "y": 39,
+        "color": "#e3f1ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 16,
+        "y": 39,
+        "color": "#e3f1ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14873,7 +15785,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 10,
+        "y": 31,
+        "color": "#e3f1ff",
+        "size": 8,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 16,
+        "y": 31,
+        "color": "#e3f1ff",
+        "size": 8,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15036,7 +15968,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 48,
+        "color": "#ffb25a",
+        "size": 16,
+        "intensity": 0.4,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.3
+       },
+       {
+        "x": 49,
+        "y": 10,
+        "color": "#ffc56b",
+        "size": 8,
+        "intensity": 0.3,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.15
+       },
+       {
+        "x": 84,
+        "y": 27,
+        "color": "#dfe9ff",
+        "size": 8,
+        "intensity": 0.3,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15058,7 +16019,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 35,
+        "y": 39,
+        "color": "#e3f1ff",
+        "size": 18,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 78,
+        "y": 26,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15080,10 +16061,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 57,
+        "color": "#e6ecf5",
+        "size": 14,
+        "intensity": 0.4,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 1
+       }
+      ]
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
+     "backgroundTransition": "glitch",
+     "backgroundTransitionSpeed": 0.5,
      "sfxUrl": "/film/sfx/tv-static.mp3",
      "sfxVolume": 0.02
     },
@@ -15104,7 +16096,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 22,
+        "y": 25,
+        "color": "#3dff9a",
+        "size": 8,
+        "intensity": 0.5,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15187,7 +16190,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 45,
+        "color": "#c8dcff",
+        "size": 32,
+        "intensity": 0.25,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.2
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15324,7 +16338,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 31,
+        "y": 44,
+        "color": "#ffd27a",
+        "size": 16,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 79,
+        "y": 24,
+        "color": "#e6ecf5",
+        "size": 10,
+        "intensity": 0.3,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15618,7 +16652,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s79/286-smoothed-flat.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "dolly-zoom",
       "focalPoint": "42% 38%",
       "zoomDuration": 18,
       "panDirection": "right",
@@ -15628,7 +16662,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "dollyZoomAmount": 1.12,
+      "dollyZoomDuration": 7,
+      "dollyZoomDirection": "push"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16500,7 +17537,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 40,
+        "y": 58,
+        "color": "#f4f8ff",
+        "size": 30,
+        "intensity": 0.45,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -16956,7 +18004,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 57.5,
+        "y": 30,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.5,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17271,7 +18330,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 71,
+        "y": 31,
+        "color": "#ffc56b",
+        "size": 14,
+        "intensity": 0.55,
+        "pulseSeconds": 1.4,
+        "pulseAmount": 0.9
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17306,7 +18376,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 57.5,
+      "y": 36,
+      "color": "#ff3b5c",
+      "size": 6,
+      "intensity": 0.45,
+      "pulseSeconds": 0.8,
+      "pulseAmount": 0.4
+     },
+     {
+      "x": 48,
+      "y": 21,
+      "color": "#4dffb0",
+      "size": 6,
+      "intensity": 0.4,
+      "pulseSeconds": 2,
+      "pulseAmount": 0.2
+     },
+     {
+      "x": 37,
+      "y": 36,
+      "color": "#ffc56b",
+      "size": 6,
+      "intensity": 0.35,
+      "pulseSeconds": 5,
+      "pulseAmount": 0.1
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -17403,7 +18502,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 32.5,
+      "y": 30,
+      "color": "#ffc56b",
+      "size": 10,
+      "intensity": 0.45,
+      "pulseSeconds": 4,
+      "pulseAmount": 0.25
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -17669,7 +18779,45 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 63,
+      "y": 46,
+      "color": "#ffd27a",
+      "size": 10,
+      "intensity": 0.4,
+      "pulseSeconds": 5,
+      "pulseAmount": 0.2
+     },
+     {
+      "x": 72,
+      "y": 49,
+      "color": "#ffd27a",
+      "size": 8,
+      "intensity": 0.35,
+      "pulseSeconds": 5,
+      "pulseAmount": 0.2
+     },
+     {
+      "x": 80,
+      "y": 49,
+      "color": "#ffd27a",
+      "size": 8,
+      "intensity": 0.35,
+      "pulseSeconds": 5,
+      "pulseAmount": 0.2
+     },
+     {
+      "x": 44,
+      "y": 38,
+      "color": "#ffb347",
+      "size": 8,
+      "intensity": 0.3,
+      "pulseSeconds": 3,
+      "pulseAmount": 0.2
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -17715,7 +18863,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 12.5,
+      "y": 47,
+      "color": "#ffd27a",
+      "size": 14,
+      "intensity": 0.4,
+      "pulseSeconds": 0.5,
+      "pulseAmount": 1
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -17807,7 +18966,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 40,
+      "y": 52,
+      "color": "#f2f6ff",
+      "size": 12,
+      "intensity": 0.5,
+      "pulseSeconds": 1.6,
+      "pulseAmount": 0.3
+     }
+    ],
+    "lensFlare": {
+     "preset": "anamorphic-blue",
+     "x": 40,
+     "y": 52,
+     "intensity": 0.35,
+     "streakIntensity": 0.55,
+     "starburstIntensity": 0.2,
+     "ghostIntensity": 0.3,
+     "pulseAmount": 0.15
+    }
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -17841,7 +19021,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Vera climbs the black stairwell by touch",
    "background": "/film/img/s89/128-by-touch.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "panDirection": "right",
@@ -17851,7 +19031,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.1,
+    "shakeDuration": 0.7
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -17985,7 +19167,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 83,
+      "y": 63,
+      "color": "#a9c8ff",
+      "size": 8,
+      "intensity": 0.35,
+      "pulseSeconds": 0.7,
+      "pulseAmount": 0.6
+     },
+     {
+      "x": 50,
+      "y": 17.5,
+      "color": "#ffc56b",
+      "size": 6,
+      "intensity": 0.35,
+      "pulseSeconds": 4,
+      "pulseAmount": 0.25
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -18019,7 +19221,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Room after room, the Hive opens a way th",
    "background": "/film/img/s90/131-she-jumps.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "60% 42%",
     "zoomDuration": 19,
     "panDirection": "left",
@@ -18029,7 +19231,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.12,
+    "shakeDuration": 0.7,
+    "lights": [
+     {
+      "x": 50,
+      "y": 70,
+      "color": "#ffb54d",
+      "size": 14,
+      "intensity": 0.5,
+      "pulseSeconds": 0.7,
+      "pulseAmount": 0.5
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -18063,7 +19278,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: The barber turns his chair to the wall.",
    "background": "/film/img/s90/378-the-barbers-shop.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "panDirection": "right",
@@ -18073,7 +19288,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.12,
+    "shakeDuration": 0.7,
+    "lights": [
+     {
+      "x": 23,
+      "y": 29,
+      "color": "#eef6ff",
+      "size": 10,
+      "intensity": 0.3,
+      "pulseSeconds": 3,
+      "pulseAmount": 0.1
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -18107,7 +19335,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Wet sheets part and close behind them.",
    "background": "/film/img/s90/379-the-laundry.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "42% 38%",
     "zoomDuration": 21,
     "panDirection": "right",
@@ -18117,7 +19345,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.15,
+    "shakeDuration": 0.7,
+    "lights": [
+     {
+      "x": 30,
+      "y": 12.5,
+      "color": "#ffc56b",
+      "size": 8,
+      "intensity": 0.4,
+      "pulseSeconds": 4,
+      "pulseAmount": 0.25
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -18161,7 +19402,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 67,
+      "y": 15,
+      "color": "#ffb54d",
+      "size": 10,
+      "intensity": 0.4,
+      "pulseSeconds": 0.8,
+      "pulseAmount": 0.5
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -18377,7 +19629,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: A train roars over them. Her hand is in ",
    "background": "/film/img/s91/133-inches-apart.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "60% 42%",
     "zoomDuration": 16,
     "panDirection": "left",
@@ -18387,7 +19639,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.35,
+    "shakeDuration": 0.2,
+    "lights": [
+     {
+      "x": 50,
+      "y": 30,
+      "color": "#ffe2a8",
+      "size": 60,
+      "intensity": 0.28,
+      "pulseSeconds": 0.5,
+      "pulseAmount": 0.7
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
@@ -18477,7 +19742,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 31,
+      "y": 33,
+      "color": "#ffc56b",
+      "size": 35,
+      "intensity": 0.22,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.1
+     },
+     {
+      "x": 61,
+      "y": 68,
+      "color": "#ff2a2a",
+      "size": 6,
+      "intensity": 0.5,
+      "pulseSeconds": 0.6,
+      "pulseAmount": 1
+     },
+     {
+      "x": 63,
+      "y": 68,
+      "color": "#3b6bff",
+      "size": 6,
+      "intensity": 0.5,
+      "pulseSeconds": 0.75,
+      "pulseAmount": 1
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -18523,7 +19817,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 31,
+      "y": 33,
+      "color": "#ffc56b",
+      "size": 35,
+      "intensity": 0.22,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.1
+     },
+     {
+      "x": 61,
+      "y": 68,
+      "color": "#ff2a2a",
+      "size": 6,
+      "intensity": 0.5,
+      "pulseSeconds": 0.6,
+      "pulseAmount": 1
+     },
+     {
+      "x": 63,
+      "y": 68,
+      "color": "#3b6bff",
+      "size": 6,
+      "intensity": 0.5,
+      "pulseSeconds": 0.75,
+      "pulseAmount": 1
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -18567,7 +19890,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 31,
+      "y": 33,
+      "color": "#ffc56b",
+      "size": 35,
+      "intensity": 0.22,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.1
+     },
+     {
+      "x": 61,
+      "y": 68,
+      "color": "#ff2a2a",
+      "size": 6,
+      "intensity": 0.5,
+      "pulseSeconds": 0.6,
+      "pulseAmount": 1
+     },
+     {
+      "x": 63,
+      "y": 68,
+      "color": "#3b6bff",
+      "size": 6,
+      "intensity": 0.5,
+      "pulseSeconds": 0.75,
+      "pulseAmount": 1
+     }
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -18771,7 +20123,45 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 50,
+        "y": 8,
+        "color": "#ffc56b",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.15
+       },
+       {
+        "x": 29,
+        "y": 28,
+        "color": "#ff3b3b",
+        "size": 6,
+        "intensity": 0.45,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 71,
+        "y": 64,
+        "color": "#ffb35c",
+        "size": 14,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       },
+       {
+        "x": 38,
+        "y": 68,
+        "color": "#eef4ff",
+        "size": 6,
+        "intensity": 0.4,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18799,7 +20189,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 55,
+        "y": 8,
+        "color": "#ffc56b",
+        "size": 10,
+        "intensity": 0.45,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.15
+       },
+       {
+        "x": 30,
+        "y": 29,
+        "color": "#ff3b3b",
+        "size": 6,
+        "intensity": 0.4,
+        "pulseSeconds": 3,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 92,
+        "y": 78,
+        "color": "#ffb35c",
+        "size": 14,
+        "intensity": 0.3,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18898,7 +20317,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 53,
+        "y": 57,
+        "color": "#ff3030",
+        "size": 12,
+        "intensity": 0.4,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.05
+       },
+       {
+        "x": 21,
+        "y": 44,
+        "color": "#e3f1ff",
+        "size": 10,
+        "intensity": 0.3,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19084,7 +20523,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19204,7 +20643,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19316,7 +20755,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19434,7 +20873,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19495,7 +20934,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19561,7 +21000,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19589,7 +21028,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19611,7 +21050,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19633,7 +21072,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
-      "colorGrade": "neon-noir",
+      "colorGrade": "nolan-imax",
       "filmGrade": true,
       "filmGradeStrength": 0.3
      },
@@ -19702,7 +21141,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "lights": [
+       {
+        "x": 32,
+        "y": 46,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.5,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       },
+       {
+        "x": 67,
+        "y": 43,
+        "color": "#f2f6ff",
+        "size": 22,
+        "intensity": 0.35,
+        "pulseSeconds": 0.5,
+        "pulseAmount": 1
+       }
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
