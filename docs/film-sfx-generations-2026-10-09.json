@@ -1742,11 +1742,11 @@
    ],
    "pick": "v1",
    "level": {
-    "gainDb": 3.3,
+    "gainDb": -6.7,
     "sourcePeakDb": -7.5,
     "sourceMeanDb": -27.3,
-    "peakDb": -4.2,
-    "meanDb": -24,
+    "peakDb": -14.2,
+    "meanDb": -34,
     "duration": 20,
     "weak": false
    },
@@ -1767,11 +1767,11 @@
    ],
    "pick": "v1",
    "level": {
-    "gainDb": -4,
+    "gainDb": -14,
     "sourcePeakDb": -1.5,
     "sourceMeanDb": -20,
-    "peakDb": -5.5,
-    "meanDb": -24,
+    "peakDb": -15.5,
+    "meanDb": -34,
     "duration": 20,
     "weak": false
    },
@@ -1792,11 +1792,11 @@
    ],
    "pick": "v1",
    "level": {
-    "gainDb": 1.5,
+    "gainDb": -4.8,
     "sourcePeakDb": -4.5,
     "sourceMeanDb": -28.2,
-    "peakDb": -3,
-    "meanDb": -26.6,
+    "peakDb": -9.1,
+    "meanDb": -32.9,
     "duration": 20,
     "weak": false
    },

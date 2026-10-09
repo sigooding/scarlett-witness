@@ -575,7 +575,7 @@
       "scene": "nw_s1",
       "find": "Her phone lights up: VERA",
       "file": "phone-vibrate",
-      "volume": 0.6
+      "volume": 0.09
     },
     {
       "scene": "nw_s1",
@@ -629,7 +629,7 @@
       "scene": "nw_s2",
       "find": "The television laughs again.",
       "file": "tv-laugh",
-      "volume": 0.4
+      "volume": 0.09
     },
     {
       "scene": "nw_s3",
@@ -647,7 +647,7 @@
       "scene": "nw_s4",
       "find": "the song on the neighbour's radio ends. A DJ murmurs something.",
       "file": "dj-through-wall",
-      "volume": 0.45
+      "volume": 0.09
     },
     {
       "scene": "nw_s5",
@@ -707,7 +707,7 @@
       "scene": "nw_s11",
       "find": "now showing static",
       "file": "tv-static",
-      "volume": 0.12
+      "volume": 0.02
     },
     {
       "scene": "nw_s11",
@@ -785,7 +785,7 @@
       "scene": "nw_s16",
       "find": "An OLD WOMAN asleep in front of a sumo match.",
       "file": "sumo-tv",
-      "volume": 0.35
+      "volume": 0.16
     },
     {
       "scene": "nw_s17",
@@ -797,7 +797,7 @@
       "scene": "nw_s18",
       "find": "The old television plays static.",
       "file": "tv-static",
-      "volume": 0.12
+      "volume": 0.02
     },
     {
       "scene": "nw_s18",
@@ -809,19 +809,19 @@
       "scene": "nw_s22",
       "find": "A radio behind the counter plays baseball, low.",
       "file": "radio-baseball",
-      "volume": 0.35
+      "volume": 0.24
     },
     {
       "scene": "nw_s25a",
       "find": "A CRT on the shelf shows a morning cooking show",
       "file": "tv-cooking-show",
-      "volume": 0.35
+      "volume": 0.22
     },
     {
       "scene": "nw_s25a",
       "find": "On the television a chef lifts a lid",
       "file": "tv-cooking-lid",
-      "volume": 0.35
+      "volume": 0.18
     },
     {
       "scene": "nw_s25a",
@@ -857,7 +857,7 @@
       "scene": "nw_s32",
       "find": "A CRT television on a shelf showing a night baseball game",
       "file": "tv-baseball-inn",
-      "volume": 0.35
+      "volume": 0.23
     },
     {
       "scene": "nw_s32",
@@ -887,7 +887,7 @@
       "scene": "nw_s39",
       "find": "the baseball crowd CHEERS on the TV",
       "file": "tv-crowd-cheer",
-      "volume": 0.4
+      "volume": 0.12
     },
     {
       "scene": "nw_s40",
@@ -983,7 +983,7 @@
       "scene": "nw_s55",
       "find": "an OLD WOMAN watches sumo on a television",
       "file": "sumo-tv",
-      "volume": 0.35
+      "volume": 0.16
     },
     {
       "scene": "nw_s56",
@@ -995,7 +995,7 @@
       "scene": "nw_s59",
       "find": "It's ringing.",
       "file": "ringback-tone",
-      "volume": 0.5
+      "volume": 0.08
     },
     {
       "scene": "nw_s62",
@@ -1013,7 +1013,7 @@
       "scene": "nw_s63a",
       "find": "a PACHINKO PARLOUR",
       "file": "pachinko-parlour",
-      "volume": 0.5
+      "volume": 0.48
     },
     {
       "scene": "nw_s63a",
@@ -1025,7 +1025,7 @@
       "scene": "nw_s63a",
       "find": "Someone inside is speaking into a sleeve.",
       "file": "sleeve-murmur",
-      "volume": 0.25
+      "volume": 0.07
     },
     {
       "scene": "nw_s64",
@@ -1043,13 +1043,13 @@
       "scene": "nw_s69",
       "find": "A girl practising the violin, badly.",
       "file": "violin-practice",
-      "volume": 0.35
+      "volume": 0.2
     },
     {
       "scene": "nw_s70",
       "find": "murmurs into his sleeve, very quietly",
       "file": "sleeve-murmur",
-      "volume": 0.3
+      "volume": 0.07
     },
     {
       "scene": "nw_s70",
@@ -1067,7 +1067,7 @@
       "scene": "nw_s71",
       "find": "Above them, a window opens. Then another.",
       "file": "windows-neighbours",
-      "volume": 0.5
+      "volume": 0.4
     },
     {
       "scene": "nw_s71",
@@ -1121,7 +1121,7 @@
       "scene": "nw_s75",
       "find": "A small television in a shop window, showing only static.",
       "file": "tv-static",
-      "volume": 0.12
+      "volume": 0.02
     },
     {
       "scene": "nw_s75",
@@ -1139,7 +1139,7 @@
       "scene": "nw_s77",
       "find": "Static on the TV.",
       "file": "tv-static",
-      "volume": 0.1
+      "volume": 0.02
     },
     {
       "scene": "nw_s77",
@@ -1199,7 +1199,7 @@
       "scene": "nw_s84",
       "find": "a man's voice, murmuring into his sleeve",
       "file": "sleeve-murmur",
-      "volume": 0.35
+      "volume": 0.07
     },
     {
       "scene": "nw_s94",

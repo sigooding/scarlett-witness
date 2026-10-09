@@ -988,7 +988,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/phone-vibrate.mp3",
-     "sfxVolume": 0.6
+     "sfxVolume": 0.09
     },
     {
      "id": "nw_b11",
@@ -1886,7 +1886,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/tv-laugh.mp3",
-     "sfxVolume": 0.4
+     "sfxVolume": 0.09
     },
     {
      "id": "nw_b67",
@@ -2413,7 +2413,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1,
      "sfxUrl": "/film/sfx/dj-through-wall.mp3",
-     "sfxVolume": 0.45
+     "sfxVolume": 0.09
     }
    ],
    "hotspots": [],
@@ -4365,7 +4365,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Past midnight. Only the desk lamp and the grey flicker of the television, now showing static.",
      "silent": true,
      "sfxUrl": "/film/sfx/tv-static.mp3",
-     "sfxVolume": 0.12
+     "sfxVolume": 0.02
     },
     {
      "id": "nw_b277",
@@ -6020,7 +6020,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "A FAMILY eating dinner at four in the afternoon, the TV loud. An OLD WOMAN asleep in front of a sumo match.",
      "silent": true,
      "sfxUrl": "/film/sfx/sumo-tv.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.16
     },
     {
      "id": "nw_b450",
@@ -6349,7 +6349,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Rain. The old television plays static. Jack sits in the dark, the sketchbook open on the desk.",
      "silent": true,
      "sfxUrl": "/film/sfx/tv-static.mp3",
-     "sfxVolume": 0.12
+     "sfxVolume": 0.02
     },
     {
      "id": "nw_b477",
@@ -7158,7 +7158,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Yellowed menus on the wall. A radio behind the counter plays baseball, low.",
      "silent": true,
      "sfxUrl": "/film/sfx/radio-baseball.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.24
     },
     {
      "id": "nw_b543",
@@ -8011,7 +8011,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "A CRT on the shelf shows a morning cooking show, sound low. The window is fogged from the inside.",
      "silent": true,
      "sfxUrl": "/film/sfx/tv-cooking-show.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.22
     },
     {
      "id": "nw_b631",
@@ -8147,7 +8147,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "She eats the egg. She eats the cabbage. On the television a chef lifts a lid and steam fills the frame.",
      "silent": true,
      "sfxUrl": "/film/sfx/tv-cooking-lid.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.18
     },
     {
      "id": "nw_b648",
@@ -9221,7 +9221,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "A CRT television on a shelf showing a night baseball game, the crowd murmuring.",
      "silent": true,
      "sfxUrl": "/film/sfx/tv-baseball-inn.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.23
     },
     {
      "id": "nw_b741",
@@ -9922,7 +9922,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1,
      "sfxUrl": "/film/sfx/tv-crowd-cheer.mp3",
-     "sfxVolume": 0.4
+     "sfxVolume": 0.12
     }
    ],
    "hotspots": [],
@@ -11710,7 +11710,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Through a half-open door, an OLD WOMAN watches sumo on a television the size of a bread box.",
      "silent": true,
      "sfxUrl": "/film/sfx/sumo-tv.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.16
     },
     {
      "id": "nw_b933",
@@ -12104,7 +12104,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "It's ringing.",
      "silent": true,
      "sfxUrl": "/film/sfx/ringback-tone.mp3",
-     "sfxVolume": 0.5
+     "sfxVolume": 0.08
     },
     {
      "id": "nw_b965",
@@ -12929,7 +12929,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/pachinko-parlour.mp3",
-     "sfxVolume": 0.5
+     "sfxVolume": 0.48
     },
     {
      "id": "nw_b1045",
@@ -12973,7 +12973,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Behind them, in the street, the sedan crawls along the kerb and stops. Someone inside is speaking into a sleeve. We can't hear it.",
      "silent": true,
      "sfxUrl": "/film/sfx/sleeve-murmur.mp3",
-     "sfxVolume": 0.25
+     "sfxVolume": 0.07
     },
     {
      "id": "nw_b1049",
@@ -13618,7 +13618,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Doors open onto other lives. A family watching television. A man asleep. A girl practising the violin, badly.",
      "silent": true,
      "sfxUrl": "/film/sfx/violin-practice.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.2
     },
     {
      "id": "nw_b1106",
@@ -13831,7 +13831,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The driver lifts his wrist to his mouth and murmurs into his sleeve, very quietly:",
      "silent": true,
      "sfxUrl": "/film/sfx/sleeve-murmur.mp3",
-     "sfxVolume": 0.3
+     "sfxVolume": 0.07
     },
     {
      "id": "nw_b1131",
@@ -13972,7 +13972,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Above them, a window opens. Then another.",
      "silent": true,
      "sfxUrl": "/film/sfx/windows-neighbours.mp3",
-     "sfxVolume": 0.5
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b1146",
@@ -15085,7 +15085,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/tv-static.mp3",
-     "sfxVolume": 0.12
+     "sfxVolume": 0.02
     },
     {
      "id": "nw_b1256",
@@ -15329,7 +15329,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/tv-static.mp3",
-     "sfxVolume": 0.1
+     "sfxVolume": 0.02
     },
     {
      "id": "nw_b1271",
@@ -17245,7 +17245,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "And under the train, so quietly it's almost part of it: in the passage outside, a man's voice, murmuring into his sleeve.",
      "silent": true,
      "sfxUrl": "/film/sfx/sleeve-murmur.mp3",
-     "sfxVolume": 0.35
+     "sfxVolume": 0.07
     },
     {
      "id": "nw_b1447",
