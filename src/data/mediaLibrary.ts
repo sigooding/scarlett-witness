@@ -767,6 +767,11 @@ export async function compactStoryMedia(story: Story): Promise<Story> {
         if (e.sheet?.image) e.sheet.image = (await compact(e.sheet.image, "image", `${sc.title} extra sheet`)) ?? e.sheet.image;
       }
     }
+    if (sc.cinematic?.depthMap) {
+      const depth = await compact(sc.cinematic.depthMap, "image", `${sc.title} depth map`);
+      // A depth map that could not be stored is dropped, never swapped for the placeholder picture.
+      sc.cinematic.depthMap = depth && depth !== IMAGE_FALLBACK ? depth : undefined;
+    }
     if (sc.cinematic?.parallaxLayers?.length) {
       for (const l of sc.cinematic.parallaxLayers) {
         if (l.image.startsWith("asset:") || l.image.startsWith("data:")) {
@@ -792,6 +797,11 @@ export async function compactStoryMedia(story: Story): Promise<Story> {
           e.image = out ?? e.image;
           if (e.sheet?.image) e.sheet.image = (await compact(e.sheet.image, "image", `${sc.title} extra sheet`)) ?? e.sheet.image;
         }
+      }
+      if (b.cinematic?.depthMap) {
+        const depth = await compact(b.cinematic.depthMap, "image", `${sc.title} depth map`);
+        // A depth map that could not be stored is dropped, never swapped for the placeholder picture.
+        b.cinematic.depthMap = depth && depth !== IMAGE_FALLBACK ? depth : undefined;
       }
       if (b.cinematic?.parallaxLayers?.length) {
         for (const l of b.cinematic.parallaxLayers) {
