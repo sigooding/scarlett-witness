@@ -46,12 +46,14 @@
       "autoAdvanceDelaySeconds": 232,
       "autoAdvanceHideTimer": null,
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/montage/m4-railway-rain/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.22,
         "depthSeconds": 32,
-        "focalPoint": "58% 54%"
+        "focalPoint": "58% 54%",
+        "panDistance": 2,
+        "zoomDuration": 32
       }
     },
     "nw_s1": {
@@ -1506,7 +1508,11 @@
       "cinematic": {
         "mode": "shake",
         "shakeAmount": 0.3,
-        "shakeDuration": 0.3
+        "shakeDuration": 0.3,
+        "depthMap": "/film/depth/s43/211-wet-tin/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16
       }
     },
     "178-thank-you-very-much": {
@@ -1632,12 +1638,14 @@
             "pulseAmount": 0.1
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s1/02-vending/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 16,
-        "focalPoint": "30% 50%"
+        "focalPoint": "30% 50%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "329-the-lane-the-watch": {
@@ -1686,12 +1694,14 @@
             "pulseAmount": 0.1
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.22,
         "depthSeconds": 18,
-        "focalPoint": "50% 52%"
+        "focalPoint": "50% 52%",
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "19-the-bar": {
@@ -1806,12 +1816,14 @@
             "pulseAmount": 0.1
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s5/43-the-front-counter/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.14,
         "depthSeconds": 20,
-        "focalPoint": "50% 48%"
+        "focalPoint": "50% 48%",
+        "panDistance": 2,
+        "zoomDuration": 20
       }
     },
     "164-depends-whos-calling": {
@@ -1976,7 +1988,7 @@
     },
     "337-engine-off": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
@@ -1992,7 +2004,9 @@
             "pulseSeconds": 3.5,
             "pulseAmount": 0.3
           }
-        ]
+        ],
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "340-the-shuttered-door": {
@@ -2320,13 +2334,15 @@
             "pulseAmount": 0.5
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.14,
         "depthSeconds": 24,
         "depthDirection": "left",
-        "depthFocus": 0.48
+        "depthFocus": 0.48,
+        "panDistance": 2,
+        "zoomDuration": 24
       }
     },
     "287-breakfast": {
@@ -2418,12 +2434,14 @@
           "ghostIntensity": 0.3,
           "pulseAmount": 0.15
         },
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 18,
-        "focalPoint": "55% 55%"
+        "focalPoint": "55% 55%",
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "169-the-only-car": {
@@ -2543,7 +2561,7 @@
     },
     "228-nine-oclock": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s61/228-nine-oclock/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.32,
@@ -2577,7 +2595,9 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "230-no-questions": {
@@ -2706,12 +2726,14 @@
             "pulseAmount": 0.3
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 16,
-        "focalPoint": "50% 60%"
+        "focalPoint": "50% 60%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "74-twenty-metres-apart": {
@@ -2736,7 +2758,7 @@
             "pulseAmount": 0.12
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
         "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg",
         "depthCutouts": [
@@ -2752,7 +2774,9 @@
         "depthMotion": "truck",
         "depthAmount": 0.4,
         "depthSeconds": 16,
-        "depthDirection": "right"
+        "depthDirection": "right",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "73-two-small-figures": {
@@ -2777,7 +2801,7 @@
             "pulseAmount": 0.12
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
         "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg",
         "depthCutouts": [
@@ -2789,7 +2813,9 @@
         "depthMotion": "push",
         "depthAmount": 0.45,
         "depthSeconds": 18,
-        "focalPoint": "70% 45%"
+        "focalPoint": "70% 45%",
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "79-the-hive-shut": {
@@ -2823,12 +2849,14 @@
             "pulseAmount": 0.1
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
         "depthMotion": "drift",
         "depthAmount": 0.14,
         "depthSeconds": 28,
-        "depthDirection": "left"
+        "depthDirection": "left",
+        "panDistance": 2,
+        "zoomDuration": 28
       }
     },
     "80-the-machine-waits": {
@@ -2853,12 +2881,14 @@
             "pulseAmount": 0.1
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.2,
         "depthSeconds": 16,
-        "focalPoint": "34% 52%"
+        "focalPoint": "34% 52%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "81-static-in-a-window": {
@@ -2876,12 +2906,14 @@
             "pulseAmount": 1
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.16,
         "depthSeconds": 14,
-        "focalPoint": "52% 48%"
+        "focalPoint": "52% 48%",
+        "panDistance": 2,
+        "zoomDuration": 14
       }
     },
     "314-the-empty-crossing": {
@@ -2897,12 +2929,14 @@
             "pulseAmount": 0.3
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.28,
         "depthSeconds": 18,
-        "focalPoint": "50% 54%"
+        "focalPoint": "50% 54%",
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "202-the-old-song": {
@@ -2922,7 +2956,7 @@
     },
     "229-like-a-date": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s62/229-like-a-date/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
@@ -2956,7 +2990,9 @@
             "pulseSeconds": 3.5,
             "pulseAmount": 0.3
           }
-        ]
+        ],
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "315-the-number-pressed": {
@@ -3094,12 +3130,14 @@
             "pulseAmount": 0.12
           }
         ],
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s95/142-taillights/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 16,
-        "focalPoint": "50% 62%"
+        "focalPoint": "50% 62%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "119-single-file": {
@@ -3260,7 +3298,14 @@
             "pulseSeconds": 4,
             "pulseAmount": 0.25
           }
-        ]
+        ],
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s90/130-the-roof/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 16
       }
     },
     "131-she-jumps": {
@@ -3329,7 +3374,15 @@
             "pulseSeconds": 0.75,
             "pulseAmount": 1
           }
-        ]
+        ],
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 55%"
       }
     },
     "378-the-barbers-shop": {
@@ -3389,13 +3442,15 @@
     },
     "153-the-rain-has-stopped": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.28,
         "depthSeconds": 18,
         "focalPoint": "50% 60%",
-        "colorGrade": "nolan-imax"
+        "colorGrade": "nolan-imax",
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "154-this-is-yours": {
@@ -3436,17 +3491,19 @@
     "307-the-gardener": {
       "cinematic": {
         "colorGrade": "nolan-imax",
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s99a/307-the-gardener/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.22,
         "depthSeconds": 24,
-        "focalPoint": "52% 50%"
+        "focalPoint": "52% 50%",
+        "panDistance": 2,
+        "zoomDuration": 24
       }
     },
     "75-one-desperate-blow": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
         "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg",
         "depthCutouts": [
@@ -3458,197 +3515,301 @@
         "depthMotion": "push",
         "depthAmount": 0.4,
         "depthSeconds": 14,
-        "focalPoint": "62% 42%"
+        "focalPoint": "62% 42%",
+        "panDistance": 2,
+        "zoomDuration": 14
       }
     },
     "01-backstreet": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s1/01-backstreet/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.24,
         "depthSeconds": 16,
-        "focalPoint": "50% 52%"
+        "focalPoint": "50% 52%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "32-laundry-in-the-rain": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s3/32-laundry-in-the-rain/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.18,
         "depthSeconds": 14,
-        "focalPoint": "49% 48%"
+        "focalPoint": "49% 48%",
+        "panDistance": 2,
+        "zoomDuration": 14
       }
     },
     "29-apartment-block": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s3/29-apartment-block/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.18,
         "depthSeconds": 24,
         "depthDirection": "left",
-        "depthFocus": 0.48
+        "depthFocus": 0.48,
+        "panDistance": 2,
+        "zoomDuration": 24
       }
     },
     "104-the-newsroom": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.14,
         "depthSeconds": 20,
-        "focalPoint": "50% 50%"
+        "focalPoint": "50% 50%",
+        "panDistance": 2,
+        "zoomDuration": 20
       }
     },
     "173-four-black-sedans": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.35,
         "depthSeconds": 18,
         "depthDirection": "right",
-        "depthFocus": 0.7
+        "depthFocus": 0.7,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "134-the-walkway-is-empty": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.35,
         "depthSeconds": 18,
         "depthDirection": "left",
-        "depthFocus": 0.55
+        "depthFocus": 0.55,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "30-the-elevated-line": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.35,
         "depthSeconds": 18,
         "depthDirection": "left",
-        "depthFocus": 0.5
+        "depthFocus": 0.5,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "78-the-empty-lounge": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 18,
         "depthDirection": "right",
-        "depthFocus": 0.5
+        "depthFocus": 0.5,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "364-the-kotatsu": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 16,
-        "focalPoint": "50% 58%"
+        "focalPoint": "50% 58%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "68-the-clock": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s7/68-the-clock/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.25,
         "depthSeconds": 14,
-        "focalPoint": "62% 45%"
+        "focalPoint": "62% 45%",
+        "panDistance": 2,
+        "zoomDuration": 14
       }
     },
     "278-the-clock-reads-ten": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s66/278-the-clock-reads-ten/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.2,
         "depthSeconds": 14,
-        "focalPoint": "50% 45%"
+        "focalPoint": "50% 45%",
+        "panDistance": 2,
+        "zoomDuration": 14
       }
     },
     "313-drawings-in-the-water": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s71/313-drawings-in-the-water/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.35,
         "depthSeconds": 18,
         "depthDirection": "left",
-        "depthFocus": 0.6
+        "depthFocus": 0.6,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "179-same-wood": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s41/179-same-wood/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 16,
-        "focalPoint": "50% 55%"
+        "focalPoint": "50% 55%",
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "144-empty": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s96/144-empty/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 16,
         "depthDirection": "right",
-        "depthFocus": 0.6
+        "depthFocus": 0.6,
+        "panDistance": 2,
+        "zoomDuration": 16
       }
     },
     "297-the-glass-office": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s53a/297-the-glass-office/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.35,
         "depthSeconds": 20,
         "depthDirection": "right",
-        "depthFocus": 0.25
+        "depthFocus": 0.25,
+        "panDistance": 2,
+        "zoomDuration": 20
       }
     },
     "109-the-fortieth-floor": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s83/109-the-fortieth-floor/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 18,
         "depthDirection": "left",
-        "depthFocus": 0.9
+        "depthFocus": 0.9,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "160-were-closed": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s8/160-were-closed/depth.png",
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 18,
         "depthDirection": "right",
-        "depthFocus": 0.55
+        "depthFocus": 0.55,
+        "panDistance": 2,
+        "zoomDuration": 18
       }
     },
     "184-a-gap-in-someones-teeth": {
       "cinematic": {
-        "mode": "static",
+        "mode": "pan",
         "depthMap": "/film/depth/s15/184-a-gap-in-someones-teeth/depth.png",
         "depthMotion": "push",
         "depthAmount": 0.26,
         "depthSeconds": 20,
-        "focalPoint": "46% 48%"
+        "focalPoint": "46% 48%",
+        "panDistance": 2,
+        "zoomDuration": 20
+      }
+    },
+    "203-the-sea-wall-steps": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s28/203-the-sea-wall-steps/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18
+      }
+    },
+    "88-the-walkway": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s78/88-the-walkway/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18
+      }
+    },
+    "290-daylight-again": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s27a/290-daylight-again/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 16
+      }
+    },
+    "91-grey-light": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s79/91-grey-light/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18
+      }
+    },
+    "206-the-window-swollen-shut": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 14,
+        "depthMap": "/film/depth/s33/206-the-window-swollen-shut/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 14
+      }
+    },
+    "207-the-pink-payphone": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 14,
+        "depthMap": "/film/depth/s35/207-the-pink-payphone/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 14
       }
     }
   }
