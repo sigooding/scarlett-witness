@@ -88,6 +88,33 @@ MAPS = {
     # the block itself is one flat far surface.
     "184-a-gap-in-someones-teeth": dict(horizon=0.52, ground=1.0, detail=0.45, contrast=0.3, smooth=6.0,
                                         anchors=[[0.00, 0.86, 1.00, 1.00, 0.95], [0.00, 0.00, 1.00, 0.20, 0.05]]),
+    # Harbour steps in the rain: the wall and the boats are near, the sea and the car on the far quay are away.
+    "203-the-sea-wall-steps": dict(horizon=0.22, ground=1.0, detail=0.45, contrast=0.3, smooth=5.0,
+                                   anchors=[[0.00, 0.86, 1.00, 1.00, 0.95], [0.00, 0.00, 1.00, 0.12, 0.04]]),
+    # Scene street under the viaduct: the wet road runs away to the blocks; the pillar and the two figures are near.
+    "135-below-the-viaduct": dict(horizon=0.50, ground=1.0, detail=0.4, contrast=0.35, smooth=5.0,
+                                  anchors=[[0.00, 0.88, 1.00, 1.00, 0.95], [0.00, 0.00, 1.00, 0.20, 0.06]]),
+    # The walkway of a block in the rain: the railing and the floor are near, the rail lines and the far flats recede.
+    "88-the-walkway": dict(horizon=0.48, ground=1.0, detail=0.4, contrast=0.3, smooth=5.0,
+                           anchors=[[0.00, 0.90, 1.00, 1.00, 0.90]]),
+    # Rain on tin roofs, a lit window: the roof in the foreground is near, the far street is washed flat.
+    "211-wet-tin": dict(horizon=0.45, ground=0.8, detail=0.5, contrast=0.35, smooth=5.0,
+                        anchors=[[0.00, 0.85, 1.00, 1.00, 0.95]]),
+    # The daylight bar: the counter and the bottles along the near wall are close; the window and the street beyond are far.
+    "290-daylight-again": dict(horizon=0.50, ground=0.6, detail=0.4, contrast=0.3, smooth=5.0,
+                               anchors=[[0.00, 0.90, 1.00, 1.00, 1.00], [0.70, 0.00, 1.00, 0.45, 0.10]]),
+    # A grey-light room: the desk and the floor are near, the window wall is one flat far plane.
+    "91-grey-light": dict(horizon=0.55, ground=0.7, detail=0.4, contrast=0.3, smooth=5.0,
+                          anchors=[[0.00, 0.85, 1.00, 1.00, 1.00], [0.10, 0.00, 0.90, 0.50, 0.12]]),
+    # The tiled bathroom and the door: the tub and the floor are near, the back wall and the window are far.
+    "206-the-window-swollen-shut": dict(horizon=0.50, ground=0.7, detail=0.45, contrast=0.3, smooth=5.0,
+                                        anchors=[[0.00, 0.88, 1.00, 1.00, 0.95], [0.20, 0.00, 0.70, 0.35, 0.10]]),
+    # The payphone corner: the phone and the floor are near, the stairwell and the television wall are far.
+    "207-the-pink-payphone": dict(horizon=0.50, ground=0.7, detail=0.4, contrast=0.3, smooth=5.0,
+                                  anchors=[[0.00, 0.88, 1.00, 1.00, 0.95], [0.40, 0.00, 0.85, 0.30, 0.10]]),
+    # The roof-hall door: the two figures in the near foreground, the lit hall and the far wall away.
+    "130-the-roof": dict(horizon=0.50, ground=0.7, detail=0.45, contrast=0.3, smooth=5.0,
+                         anchors=[[0.00, 0.88, 1.00, 1.00, 1.00], [0.00, 0.00, 1.00, 0.18, 0.05]]),
 }
 
 
