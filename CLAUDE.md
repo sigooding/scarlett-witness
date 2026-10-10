@@ -11,3 +11,11 @@ Read `docs/depth-camera.md` before adding or changing any depth map, plate or cu
 3. **Never hand-edit `src/data/nobodysWitnessFilm.ts`.** Change `src/film/studio-edits.json` (`pictureLook` for a picture's camera and depth) and run `node tools/build-film-story.mjs`.
 
 Check maps with `tools/review-depth-maps.py` and watch the move with `tools/depth-frames.mjs` before calling a shot done.
+
+## Animatic export
+
+`docs/animatic-export.md`: `npm run export:animatic -- --from nw_s65 --to nw_s65`, or 🎞 Export animatic on the home screen under `npm run dev`. Do not edit `src/` while an export runs from a dev server (Vite reloads the page and the capture breaks).
+
+## No saxophones
+
+The director wants no saxophone anywhere in Nobody's Witness: not in the screenplay, the effects or the music cues. Do not generate or place one.

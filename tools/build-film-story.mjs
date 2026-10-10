@@ -13,7 +13,7 @@ const P = p => `/film${p}`;
 for (const dir of ["img", "voice"]) mkdirSync(resolve(root, "public/film", dir), { recursive: true });
 for (const dir of ["img", "voice"]) cpSync(resolve(src, "public", dir), resolve(root, "public/film", dir), { recursive: true });
 mkdirSync(resolve(root, "public/film/audio"), { recursive: true });
-for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
+for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "soundtrack_nobodys_witness.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
 
 const nice = s => s.toLowerCase().replace(/(^|[\s.-])([a-z])/g, (_, a, b) => a + b.toUpperCase());
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
@@ -120,7 +120,7 @@ const keyStills = ["/img/s1/377-the-hive-remembered.jpg", "/img/s14a/337-engine-
 scenes.push({
   id: "nw_title", title: "Opening titles", nodeType: "credits", background: P(keyStills[0]),
   prose: "Nobody's Witness\nAn interactive visual novel",
-  credits: { title: "Nobody's Witness", subtitle: "An interactive visual novel", lines: [{ role: "A film of", name: "Tokyo in the rain" }, { role: "Starring", name: "Jack · Vera · Mara" }], font: "type", style: "cards", cardSeconds: 3.8, cardMotion: "letterspace", montage: keyStills.map(P), montageSeconds: 4.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#eceae4", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
+  credits: { title: "Nobody's Witness", subtitle: "An interactive visual novel", lines: [{ role: "A film of", name: "Tokyo in the rain" }, { role: "Written by", name: "Scott Gooding" }, { role: "Starring", name: "Jack · Vera · Mara" }, { role: "Music", name: "Scott Gooding · enhanced with suno.ai" }], font: "type", style: "cards", cardSeconds: 3.8, cardMotion: "letterspace", montage: keyStills.map(P), montageSeconds: 4.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#eceae4", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
   musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 2, musicLoop: false, ambientAudio: "", transition: "fade-black", transitionSpeed: 1.5,
   dialogueBeats: [], hotspots: [], choices: [],
 });
@@ -133,7 +133,9 @@ scenes.push({
   dialogueBeats: PRO.map(([text, k]) => beat("KANEKO", { text, audioUrl: P(`/voice/prologue/${k}.mp3`) })),
 });
 
-const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain" };
+const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "soundtrack_nobodys_witness" };
+// The neighbour's radio through Vera's wall (65) plays the director's song: in quickly, as a radio starts, and under the score's level.
+const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.6 } };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
   particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
@@ -204,7 +206,7 @@ film.scenes.forEach((sc, si) => {
     else if (st.t === "sfx") carry = SFX[st.id] ? P(`/sfx/${SFX[st.id]}.mp3`) : carry;
     else if (st.t === "music") {
       // music is per scene node in this engine: a cue part-way through a scene starts a continuation node (the waiting pictures carry over)
-      const cue = st.id === "off" ? { musicMode: "none", musicFadeSeconds: 4 } : { musicMode: "track", musicUrl: P(`/audio/${MUSIC[st.id] ?? "midnight-in-the-rain"}.mp3`), musicFadeSeconds: 5, musicLoop: false };
+      const cue = st.id === "off" ? { musicMode: "none", musicFadeSeconds: 4 } : { musicMode: "track", musicUrl: P(`/audio/${MUSIC[st.id] ?? "midnight-in-the-rain"}.mp3`), musicFadeSeconds: 5, musicLoop: false, ...CUE_FIELDS[st.id] };
       if (beats.length) close();
       music = cue;
     }
@@ -259,10 +261,11 @@ const cast = [...characters.values()].filter(c => c.id !== "nw_narrator").map(c 
 const stills = film.scenes.flatMap(sc => sc.steps.filter(st => st.t === "bg").map(st => st.src));
 const montage = Array.from({ length: 14 }, (_, i) => P(stills[Math.floor((i / 14) * stills.length)]));
 const creditLines = [
+  { role: "Written by", name: "Scott Gooding" },
   ...cast.map((name, i) => ({ role: "Cast", name })),
   { role: "Voices", name: "Synthesised with ElevenLabs" },
   { role: "Pictures", name: "Storyboarded in PlayFrame · generated with AI image tools" },
-  { role: "Music", name: "“Nobody’s Witness” — Phoney Refuge mashup, echoingbongos756" },
+  { role: "Music", name: "All music written by Scott Gooding · enhanced with suno.ai" },
   { role: "Engine", name: "Scarlet Reel" },
 ];
 scenes.push({

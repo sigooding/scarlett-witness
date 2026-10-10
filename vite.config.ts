@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
+import { animaticExportPlugin } from "./tools/vite-animatic-export.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -162,7 +163,8 @@ export default defineConfig({
   // directory — including a GitHub Pages project site at /<repo>/. Story media
   // (plain strings in the data files, which the bundler never sees) is
   // rewritten against that base at runtime by src/assetPath.ts.
-  plugins: [react(), tailwindcss(), viteSingleFile(), builtinImagesPlugin(), builtinAudioPlugin()],
+  // animaticExportPlugin: the dev server's side of 🎞 Export animatic (docs/animatic-export.md); `vite dev` only
+  plugins: [react(), tailwindcss(), viteSingleFile(), builtinImagesPlugin(), builtinAudioPlugin(), animaticExportPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
@@ -196,6 +198,8 @@ export default defineConfig({
         // Huge exported .reel.json drafts at the repo root (tens of MB) — never
         // relevant to a page reload, but they churn the watcher if rewritten.
         "**/*.reel.json",
+        // rendered animatics (tools/export-animatic.mjs) and their frames
+        "**/exports/**",
       ],
     },
   },

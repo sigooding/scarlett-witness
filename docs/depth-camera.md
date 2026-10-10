@@ -53,8 +53,8 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
 | Field | What it does |
 |---|---|
 | `depthMap` | the map (required) |
-| `depthMotion` | `push` (a slow dolly in toward `focalPoint` that eases out and holds; the default), `truck` (a sideways slide around the still plane, then holds) or `drift` (a slow side-to-side loop) |
-| `depthAmount` | 0–1, default 0.4. Push: the far plane ends about 5% larger and the nearest about 14% at 0.4. Truck: a plane one unit of depth from the still plane slides about 3% of the frame width at 0.4. The film uses 0.14 to 0.45 |
+| `depthMotion` | `push` (a dolly in toward `focalPoint`, then holds; the default), `truck` (a sideways slide around the still plane, then holds) or `drift` (a slow side-to-side loop). Push and truck ease out: they move most in their first seconds and settle into the hold, after a 0.6 s lead-in so the first frames do not lurch, so a shot that is on screen only a few seconds still shows its move |
+| `depthAmount` | 0–1, default 0.4. Push: the far plane ends about 5% larger and the nearest about 14% at 0.4. Truck: a plane one unit of depth from the still plane slides about 3% of the frame width at 0.4. The film uses 0.16 to 0.8: on 10 October the director found the moves too subtle and every amount was raised, cut-out shots about 1.8 times (up to 0.8), map-only shots about 1.6 times (up to 0.6) |
 | `depthSeconds` | how long the push or truck takes before it holds, or one drift loop (default 14) |
 | `depthDirection`, `depthFocus` | truck and drift: which way first, and which depth holds still (default: the cut-outs' depth, else 0.5) |
 | `focalPoint` | push: where the camera closes in ("x% y%") |
@@ -106,7 +106,8 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
    desk (her own box), Vera under the shelf in `374` (a wider box, the bottles excluded), the hand in `144` (the drawer's
    corner excluded), and the laundry's woman on the right in `379`, half behind a sheet, whom BiRefNet would not take
    without the sheets round her. She stays in the plate (the picture's `note` says why): on that shot's drift (amount
-   0.09) her depth moves her about a pixel against the sheets, so nothing stretches. Leaving someone in the plate is fine
+   0.16 since the moves were made stronger; 0.09 before) her depth moves her a pixel or two against the sheets, so
+   nothing stretches. Leaving someone in the plate is fine
    only on a move that small; check it with the recorded frames (section 5).
 5. **Wire it**: give the picture a `pictureLook` entry with its move (step 3) if it has none, then
 

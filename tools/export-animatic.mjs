@@ -1,0 +1,533 @@
+// Renders Nobody's Witness (the film on this engine) to an MP4 animatic: the pictures with every effect and the depth
+// camera as the game draws them, the sound as the game plays it, the spoken lines burned in as subtitles and the
+// narration and scene headings as descriptions; plus an .srt of the same captions and a chapter per scene.
+// See docs/animatic-export.md.
+//
+//   npm run export:animatic -- --from nw_s65 --to nw_s66
+//   options: --out <dir> (default exports/animatics/<from>-<to>)  --size 1280x720 | 1920x1080  --fps 24
+//            --no-subs  --no-desc  --pace 1 (0.8 brisker, 1.25 slower)  --url <a running dev server>
+//            --gpu (use the graphics card instead of software rendering)  --progress-json (one JSON line per update)
+//            --debug (also writes debug.json: every caption, scene change, sound and ambience event the page logged)
+//   needs ffmpeg (on the PATH, or FFMPEG=<path>) and Playwright's Chromium (or PLAYWRIGHT_CHROMIUM_PATH)
+//
+// How: the real game runs in headless Chromium on a test clock, in animatic mode (?animatic=1: hands-off, captions drawn
+// by the game). For every frame the clock moves on 1/fps of a second, CSS animations and videos are set to that moment,
+// and a screenshot goes to ffmpeg, so the picture is exact however slow the machine is. Sound cannot be recorded that
+// way, so the page's <audio> elements play on the same clock (each ends after its file's length) and every play, pause,
+// seek and volume change is logged, with each change of the ambience and each synthesised sound the engine makes; the
+// mix is rebuilt from that log afterwards (tools/animatic-mix.mjs) and muxed in.
+import { spawn, spawnSync } from "node:child_process";
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { createServer } from "node:net";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
+import { ambientLayers, makeDecoder, mediaSegments, synthEvents, writeMix } from "./animatic-mix.mjs";
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const FILM_ID = "nobodys-witness-film";
+
+/* ------------------------------ options ------------------------------ */
+const argv = process.argv.slice(2);
+const opt = (name, fallback) => {
+  const i = argv.indexOf(`--${name}`);
+  return i >= 0 && i + 1 < argv.length && !argv[i + 1].startsWith("--") ? argv[i + 1] : fallback;
+};
+const has = (name) => argv.includes(`--${name}`);
+const film = loadFilm();
+const order = filmOrder(film);
+const from = opt("from", order[0]);
+const to = opt("to", null);
+const [W, H] = (opt("size", "1280x720").match(/^(\d+)x(\d+)$/) ?? [0, 1280, 720]).slice(1).map(Number);
+const fps = Math.max(1, Math.min(60, Number(opt("fps", "24")) || 24));
+const pace = Number(opt("pace", "1")) || 1;
+const subs = !has("no-subs"), desc = !has("no-desc");
+const outDir = resolve(opt("out", join(ROOT, "exports/animatics", `${from}-${to ?? "end"}`)));
+const json = has("progress-json");
+const FFMPEG = process.env.FFMPEG || "ffmpeg";
+const maxSeconds = Number(opt("max-seconds", String(6 * 3600)));
+
+const say = (msg) => (json ? console.log(JSON.stringify({ type: "log", message: msg })) : console.log(msg));
+const fail = (msg) => {
+  if (json) console.log(JSON.stringify({ type: "error", message: msg }));
+  else console.error(`export-animatic: ${msg}`);
+  process.exit(1);
+};
+
+if (!order.includes(from)) fail(`no scene "${from}" in the film`);
+if (to && !order.includes(to)) fail(`no scene "${to}" in the film`);
+if (to && order.indexOf(to) < order.indexOf(from)) fail(`"${to}" comes before "${from}" in the film`);
+if (spawnSync(FFMPEG, ["-version"]).status !== 0) fail("ffmpeg not found: install it or set FFMPEG=<path to ffmpeg>");
+mkdirSync(outDir, { recursive: true });
+
+/* ------------------------------ the film ------------------------------ */
+function loadFilm() {
+  const t = readFileSync(join(ROOT, "src/data/nobodysWitnessFilm.ts"), "utf8");
+  return JSON.parse(t.slice(t.indexOf("= {") + 2).replace(/\}\s*as unknown as Story[\s\S]*$/, "}"));
+}
+/** Scene ids in play order, following each scene's exit from the start. */
+function filmOrder(story) {
+  const by = new Map(story.scenes.map((s) => [s.id, s]));
+  const next = (s) => {
+    const b = s.dialogueBeats ?? [];
+    return b[b.length - 1]?.afterBeatTargetSceneId || s.autoAdvanceTargetSceneId || s.choices?.[0]?.targetSceneId;
+  };
+  const out = [];
+  for (let id = story.startSceneId; id && by.has(id) && !out.includes(id); id = next(by.get(id))) out.push(id);
+  return out;
+}
+
+/* ------------------------------ audio file lengths ------------------------------ */
+function audioFiles(dir, base = "") {
+  const out = [];
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.name.startsWith(".")) continue;
+    const rel = `${base}/${e.name}`;
+    if (e.isDirectory()) out.push(...audioFiles(join(dir, e.name), rel));
+    else if (/\.(mp3|wav|ogg|m4a|aac|flac)$/i.test(e.name)) out.push(rel);
+  }
+  return out;
+}
+async function audioDurations() {
+  const cacheFile = join(ROOT, "exports/animatics/.durations.json");
+  let cache = {};
+  try { cache = JSON.parse(readFileSync(cacheFile, "utf8")); } catch { /* first run */ }
+  const files = audioFiles(join(ROOT, "public"));
+  const out = {}, todo = [];
+  for (const rel of files) {
+    const st = statSync(join(ROOT, "public", rel));
+    const key = `${st.size}:${Math.round(st.mtimeMs)}`;
+    if (cache[rel]?.key === key) out[rel] = cache[rel].seconds;
+    else todo.push({ rel, key });
+  }
+  const probe = ({ rel }) => new Promise((done) => {
+    const p = spawn(FFMPEG, ["-nostdin", "-hide_banner", "-i", join(ROOT, "public", rel)]);
+    let err = "";
+    p.stderr.on("data", (d) => (err += d));
+    p.on("close", () => {
+      const m = err.match(/Duration:\s*(\d+):(\d+):([\d.]+)/);
+      done(m ? Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3]) : null);
+    });
+  });
+  for (let i = 0; i < todo.length; i += 8) {
+    const batch = todo.slice(i, i + 8);
+    const secs = await Promise.all(batch.map(probe));
+    batch.forEach((f, k) => {
+      if (secs[k] != null) {
+        out[f.rel] = secs[k];
+        cache[f.rel] = { key: f.key, seconds: secs[k] };
+      }
+    });
+  }
+  mkdirSync(dirname(cacheFile), { recursive: true });
+  writeFileSync(cacheFile, JSON.stringify(cache));
+  return out;
+}
+
+/* ------------------------------ a dev server ------------------------------ */
+const freePort = () => new Promise((done) => {
+  const s = createServer();
+  s.listen(0, () => {
+    const { port } = s.address();
+    s.close(() => done(port));
+  });
+});
+async function startServer() {
+  const port = await freePort();
+  const proc = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["vite", "--port", String(port), "--strictPort"], { cwd: ROOT, stdio: "ignore" });
+  const url = `http://localhost:${port}`;
+  for (let i = 0; i < 120; i++) {
+    try {
+      const r = await fetch(url);
+      if (r.ok) return { url, stop: () => proc.kill() };
+    } catch { /* not up yet */ }
+    await new Promise((r) => setTimeout(r, 500));
+  }
+  proc.kill();
+  fail("the dev server did not start");
+}
+
+/* ------------------------------ in the page ------------------------------ */
+// Installed before the app: <audio> on the page clock with a log; the sound engine's ambience and synthesised sounds
+// logged; CSS animations and videos set to the page clock before each frame.
+function pageSetup(durations) {
+  window.__animaticAutostart = true;
+  const DUR = durations;
+  const now = () => performance.now();
+  const path = (src) => {
+    try { return decodeURIComponent(new URL(src, location.href).pathname); } catch { return String(src); }
+  };
+  const media = (window.__animaticMedia = []);
+  const ids = new WeakMap();
+  let nextId = 1;
+  const idOf = (el) => {
+    let i = ids.get(el);
+    if (!i) ids.set(el, (i = nextId++));
+    return i;
+  };
+  const P = HTMLMediaElement.prototype;
+  const d = (n) => Object.getOwnPropertyDescriptor(P, n);
+  const nPlay = P.play, nPause = P.pause, nLoad = P.load;
+  const dCur = d("currentTime"), dVol = d("volume"), dLoop = d("loop"), dPaused = d("paused"), dEnded = d("ended"), dDur = d("duration"), dSrc = d("src"), dMuted = d("muted");
+  const isAudio = (el) => el instanceof HTMLAudioElement;
+  const V = new WeakMap();
+  const st = (el) => {
+    let s = V.get(el);
+    if (!s) V.set(el, (s = { playing: false, t0: 0, pos0: 0, pos: 0, ended: false, timer: 0 }));
+    return s;
+  };
+  const srcOf = (el) => path(dSrc.get.call(el) || el.currentSrc || "");
+  const lengthOf = (el) => {
+    const known = DUR[srcOf(el)];
+    if (typeof known === "number") return known;
+    const n = dDur.get.call(el);
+    return Number.isFinite(n) ? n : NaN;
+  };
+  const pos = (el, s) => {
+    if (!s.playing) return s.pos;
+    let p = s.pos0 + (now() - s.t0) / 1000;
+    const len = lengthOf(el);
+    if (Number.isFinite(len) && len > 0) p = dLoop.get.call(el) ? p % len : Math.min(p, len);
+    return p;
+  };
+  const fire = (el, ...names) => queueMicrotask(() => names.forEach((n) => el.dispatchEvent(new Event(n))));
+  const arm = (el, s) => {
+    clearTimeout(s.timer);
+    if (!s.playing || dLoop.get.call(el)) return;
+    const len = lengthOf(el);
+    if (!Number.isFinite(len)) return;
+    s.timer = setTimeout(() => {
+      if (!s.playing) return;
+      s.pos = len;
+      s.playing = false;
+      s.ended = true;
+      media.push({ t: now(), id: idOf(el), ev: "ended" });
+      fire(el, "pause", "ended");
+    }, Math.max(0, len - pos(el, s)) * 1000);
+  };
+  const stop = (el, s) => {
+    if (!s.playing) return;
+    s.pos = pos(el, s);
+    s.playing = false;
+    clearTimeout(s.timer);
+    media.push({ t: now(), id: idOf(el), ev: "pause" });
+  };
+  P.play = function () {
+    if (!isAudio(this)) return nPlay.call(this);
+    const s = st(this);
+    if (s.playing) return Promise.resolve();
+    if (s.ended) { s.pos = 0; s.ended = false; }
+    s.playing = true;
+    s.t0 = now();
+    s.pos0 = s.pos;
+    media.push({ t: s.t0, id: idOf(this), ev: "play", src: srcOf(this), pos: s.pos, vol: dVol.get.call(this), loop: dLoop.get.call(this), muted: dMuted.get.call(this) });
+    arm(this, s);
+    fire(this, "play", "playing");
+    return Promise.resolve();
+  };
+  P.pause = function () {
+    if (!isAudio(this)) return nPause.call(this);
+    const s = st(this);
+    if (!s.playing) return;
+    stop(this, s);
+    fire(this, "pause");
+  };
+  P.load = function () {
+    if (isAudio(this)) {
+      const s = st(this);
+      stop(this, s);
+      s.pos = 0;
+      s.ended = false;
+    }
+    return nLoad.call(this);
+  };
+  const def = (name, get, set) => Object.defineProperty(P, name, { configurable: true, get, set });
+  def("paused", function () { return isAudio(this) ? !st(this).playing : dPaused.get.call(this); });
+  def("ended", function () { return isAudio(this) ? st(this).ended : dEnded.get.call(this); });
+  def("duration", function () { return isAudio(this) ? lengthOf(this) : dDur.get.call(this); });
+  def("currentTime", function () { return isAudio(this) ? pos(this, st(this)) : dCur.get.call(this); }, function (v) {
+    if (!isAudio(this)) return dCur.set.call(this, v);
+    const s = st(this), p = Math.max(0, Number(v) || 0);
+    if (s.playing) { s.t0 = now(); s.pos0 = p; } else s.pos = p;
+    s.ended = false;
+    media.push({ t: now(), id: idOf(this), ev: "seek", pos: p });
+    arm(this, s);
+  });
+  def("volume", function () { return dVol.get.call(this); }, function (v) {
+    const before = dVol.get.call(this);
+    dVol.set.call(this, v);
+    const after = dVol.get.call(this);
+    if (isAudio(this) && after !== before) media.push({ t: now(), id: idOf(this), ev: "vol", vol: after });
+  });
+  def("loop", function () { return dLoop.get.call(this); }, function (v) {
+    dLoop.set.call(this, v);
+    if (isAudio(this)) { media.push({ t: now(), id: idOf(this), ev: "loop", loop: !!v }); arm(this, st(this)); }
+  });
+  def("muted", function () { return dMuted.get.call(this); }, function (v) {
+    dMuted.set.call(this, v);
+    if (isAudio(this)) media.push({ t: now(), id: idOf(this), ev: "muted", muted: !!v });
+  });
+  def("src", function () { return dSrc.get.call(this); }, function (v) {
+    if (isAudio(this)) {
+      const s = st(this);
+      stop(this, s);
+      s.pos = 0;
+      s.ended = false;
+    }
+    dSrc.set.call(this, v);
+  });
+
+  // The sound engine announces itself on window.__sw_audio (src/game/animatic.tsx); log its ambience and synthesised
+  // one-shots, and keep the originals for rendering them offline afterwards.
+  const engine = (window.__animaticEngine = []);
+  const originals = (window.__animaticOriginals = {});
+  let sw;
+  Object.defineProperty(window, "__sw_audio", {
+    configurable: true,
+    get: () => sw,
+    set(a) {
+      sw = a;
+      const wrap = (name, kind) => {
+        if (typeof a[name] !== "function") return;
+        const orig = (originals[name] = a[name].bind(a));
+        a[name] = (...args) => {
+          engine.push({ t: now(), kind, name, args: JSON.parse(JSON.stringify(args ?? [])), vol: { ...a.volumes } });
+          return orig(...args);
+        };
+      };
+      wrap("setAmbient", "ambient");
+      // (not the UI's click: it answers a reader's press, which an animatic has none of)
+      for (const n of ["transitionSfx", "stinger", "success", "fail", "heartbeat", "thunder", "pickup", "combine", "press", "steady", "unlockClunk"]) wrap(n, "synth");
+      try { a.unlock(); } catch { /* no audio device: the log is all we need */ }
+    },
+  });
+
+  // Before each frame: every CSS animation and transition, and every video, set to the page clock.
+  const animStart = new WeakMap();
+  const videoStart = new WeakMap();
+  window.__animaticSync = () => {
+    const t = now();
+    for (const a of document.getAnimations()) {
+      if (!animStart.has(a)) animStart.set(a, t);
+      try {
+        a.pause();
+        a.currentTime = t - animStart.get(a);
+      } catch { /* finished or detached */ }
+    }
+    const seeks = [];
+    for (const v of document.querySelectorAll("video")) {
+      if (!videoStart.has(v)) {
+        if (dPaused.get.call(v) && !v.autoplay) continue;
+        videoStart.set(v, t);
+      }
+      nPause.call(v);
+      const len = dDur.get.call(v);
+      const want = Math.min((t - videoStart.get(v)) / 1000, Number.isFinite(len) ? Math.max(0, len - 0.05) : Infinity);
+      if (Math.abs(dCur.get.call(v) - want) > 0.02) {
+        seeks.push(new Promise((done) => v.addEventListener("seeked", () => done(), { once: true })));
+        dCur.set.call(v, want);
+      }
+    }
+    return Promise.all(seeks).then(() => seeks.length);
+  };
+}
+
+/* ------------------------------ run ------------------------------ */
+const durations = await audioDurations();
+say(`${Object.keys(durations).length} audio files measured`);
+const server = opt("url", null) ? { url: opt("url"), stop: () => {} } : await startServer();
+const gpu = has("gpu");
+const browser = await chromium.launch({
+  executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH || undefined,
+  args: [
+    "--autoplay-policy=no-user-gesture-required",
+    ...(gpu ? ["--ignore-gpu-blocklist", "--enable-gpu-rasterization"] : ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"]),
+  ],
+});
+const cleanup = async () => {
+  await browser.close().catch(() => {});
+  server.stop();
+};
+const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
+const pageErrors = [];
+page.on("pageerror", (e) => pageErrors.push(String(e).slice(0, 300)));
+// in-flight requests the frame may still be waiting for (a picture, a depth map, a recorded loop), not streaming media
+let pending = 0;
+const watched = (r) => !["media", "websocket", "eventsource"].includes(r.resourceType()) && !r.url().includes("/@vite/") && !r.url().includes("hot-update");
+page.on("request", (r) => { if (watched(r)) pending++; });
+const settle = (r) => { if (watched(r)) pending = Math.max(0, pending - 1); };
+page.on("requestfinished", settle);
+page.on("requestfailed", settle);
+await page.addInitScript(pageSetup, durations);
+await page.clock.install();
+const q = new URLSearchParams({ story: FILM_ID, scene: from, animatic: "1", subs: subs ? "1" : "0", desc: desc ? "1" : "0", pace: String(pace) });
+if (to) q.set("to", to);
+await page.goto(`${server.url}/?${q}`, { waitUntil: "load" });
+await page.evaluate(() => document.fonts.ready);
+// An installed clock still follows the wall clock; paused, the page's time moves only when the exporter moves it, one
+// frame at a time, so a slow screenshot cannot let the film run on unseen.
+await page.clock.pauseAt(await page.evaluate(() => Date.now() + 50));
+
+const realSleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Up to 15 s for a frame's pictures to arrive; after a frame that never settled, 2 s, until one does again.
+let patience = 15000;
+async function settled() {
+  const until = Date.now() + patience;
+  await page.evaluate(() => document.body.getBoundingClientRect());
+  while (Date.now() < until) {
+    const ready = await page.evaluate(() => [...document.querySelectorAll("canvas.depth-parallax")].every((c) => c.dataset.depthReady === "1"));
+    if (pending === 0 && ready) {
+      patience = 15000;
+      return true;
+    }
+    await realSleep(40);
+  }
+  patience = 2000;
+  return false;
+}
+// the game is up: its first scene is on window.__animatic
+for (let i = 0; i < 400; i++) {
+  if (await page.evaluate(() => !!window.__animatic?.sceneId)) break;
+  await page.clock.runFor(50);
+  await realSleep(25);
+}
+
+const outVideo = join(outDir, "picture.mp4");
+const enc = spawn(FFMPEG, ["-nostdin", "-y", "-v", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", String(fps), "-i", "-",
+  "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-r", String(fps), outVideo], { stdio: ["pipe", "ignore", "pipe"] });
+let encErr = "";
+enc.stderr.on("data", (d) => (encErr += d));
+const write = (buf) => new Promise((done) => (enc.stdin.write(buf) ? done() : enc.stdin.once("drain", done)));
+
+const t0 = await page.evaluate(() => performance.now());
+const chapters = [];
+let frame = 0, lastScene = null, slowFrames = 0;
+const maxFrames = Math.round(maxSeconds * fps);
+const started = Date.now();
+while (frame < maxFrames) {
+  // the film ends on the frame the scene after `to` begins (the screen is black between scenes), which is not drawn
+  const st = await page.evaluate(() => ({ done: window.__animatic?.done, id: window.__animatic?.sceneId, title: window.__animatic?.sceneTitle }));
+  if (st.done && frame > 0) break;
+  if (!(await settled())) slowFrames++;
+  await Promise.race([page.evaluate(() => window.__animaticSync()), realSleep(8000)]);
+  await write(await page.screenshot({ type: "jpeg", quality: 92, timeout: 180000 }));
+  // one chapter a scene: its continuation parts (nw_s65_b) stay in the scene's chapter
+  const sceneOf = (id) => id.replace(/_[a-h]$/, "");
+  if (st.id && sceneOf(st.id) !== lastScene) {
+    lastScene = sceneOf(st.id);
+    chapters.push({ t: frame / fps, id: st.id, title: String(st.title ?? st.id).replace(/ \(cont\.\)$/, "") });
+  }
+  frame++;
+  if (frame % 12 === 0) {
+    const msg = { type: "progress", frame, seconds: frame / fps, scene: st.id, title: st.title, elapsed: (Date.now() - started) / 1000 };
+    if (json) console.log(JSON.stringify(msg));
+    else process.stdout.write(`\r${(frame / fps).toFixed(1)} s of film, ${st.title ?? ""}`.padEnd(90));
+  }
+  await page.clock.runFor(Math.round((frame * 1000) / fps) - Math.round(((frame - 1) * 1000) / fps));
+}
+enc.stdin.end();
+await new Promise((done) => enc.on("close", done));
+if (!json) process.stdout.write("\n");
+if (!existsSync(outVideo)) {
+  await cleanup();
+  fail(`the picture could not be encoded: ${encErr.slice(0, 400)}`);
+}
+const seconds = frame / fps;
+const tEnd = t0 + seconds * 1000;
+// the page's own time must have moved exactly with the frames
+const drift = (await page.evaluate(() => performance.now())) - t0 - seconds * 1000;
+
+/* ------------------------------ the sound ------------------------------ */
+const logs = await page.evaluate(() => ({ media: window.__animaticMedia, engine: window.__animaticEngine, cues: window.__animatic?.cues ?? [], scenes: window.__animatic?.scenes ?? [] }));
+if (has("debug")) writeFileSync(join(outDir, "debug.json"), JSON.stringify({ t0, ...logs }, null, 1));
+const segments = mediaSegments(logs.media, tEnd);
+const layers = ambientLayers(logs.engine);
+const synths = synthEvents(logs.engine);
+// The engine renders its own synthesised sounds (in the page, offline): the ambience presets and each one-shot.
+const renders = new Map();
+const fromB64 = (b64) => {
+  const buf = Buffer.from(b64, "base64");
+  return new Float32Array(buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength));
+};
+const pageRender = (kind, name, args, secs) => page.evaluate(async ([kind, name, args, secs]) => {
+  const a = window.__sw_audio;
+  const o = window.__animaticOriginals;
+  const buf = kind === "ambient"
+    ? await a.renderAmbient(name, secs)
+    : await a.renderOffline(secs, () => o[name](...args));
+  const l = buf.getChannelData(0), r = buf.numberOfChannels > 1 ? buf.getChannelData(1) : l;
+  const out = new Float32Array(l.length * 2);
+  for (let i = 0; i < l.length; i++) { out[i * 2] = l[i]; out[i * 2 + 1] = r[i]; }
+  const bytes = new Uint8Array(out.buffer);
+  let s = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(s);
+}, [kind, name, args, secs]);
+for (const preset of new Set(layers.filter((l) => l.preset).map((l) => l.preset))) {
+  try { renders.set(`ambient:${preset}`, fromB64(await pageRender("ambient", preset, [], 30))); }
+  catch (e) { say(`could not render the "${preset}" ambience: ${String(e).slice(0, 120)}`); }
+}
+for (const e of synths) {
+  if (renders.has(e.key)) continue;
+  const secs = e.name === "transitionSfx" ? Math.min(2.4, Math.max(0.18, Number(e.args[1]) || 0.5)) + 1.2 : 3;
+  try { renders.set(e.key, fromB64(await pageRender("synth", e.name, e.args, secs))); }
+  catch (err) { say(`could not render ${e.name}: ${String(err).slice(0, 120)}`); }
+}
+const cues = logs.cues;
+const scenesSeen = await page.evaluate(() => window.__animatic?.sceneId);
+await cleanup();
+
+const pathOf = (url) => {
+  const p = join(ROOT, "public", decodeURIComponent(url.split(/[?#]/)[0]).replace(/^\/+/, ""));
+  return p.startsWith(join(ROOT, "public")) && existsSync(p) ? p : null;
+};
+const decode = makeDecoder(FFMPEG, pathOf);
+const wav = join(outDir, "sound.wav");
+const warnings = [];
+if (Math.abs(drift) > 1000 / fps + 1) warnings.push(`the page's clock and the film differ by ${(drift / 1000).toFixed(2)} s`);
+const mixed = writeMix({
+  wavPath: wav, t0, seconds, segments, layers, synths, decode,
+  // a part of the film ends with the sound faded out over a second, not cut off
+  fadeOutSeconds: to ? 1 : 0,
+  synth: (key) => renders.get(key) ?? null,
+  ambient: (preset) => renders.get(`ambient:${preset}`) ?? null,
+  onWarn: (w) => warnings.push(w),
+});
+
+/* ------------------------------ captions, chapters, the file ------------------------------ */
+const stamp = (s) => {
+  const ms = Math.max(0, Math.round(s * 1000));
+  const p = (n, w = 2) => String(n).padStart(w, "0");
+  return `${p(Math.floor(ms / 3600000))}:${p(Math.floor(ms / 60000) % 60)}:${p(Math.floor(ms / 1000) % 60)},${p(ms % 1000, 3)}`;
+};
+const srt = [];
+cues.forEach((c, i) => {
+  if (!c.text) return;
+  const a = (c.t - t0) / 1000, b = ((cues[i + 1]?.t ?? tEnd) - t0) / 1000;
+  // under a tenth of a second is not a caption: the game drawing the scene before it has moved to the scene's first line
+  if (b <= 0 || a >= seconds || b - a < 0.1) return;
+  const text = c.kind === "subtitle" ? `${c.speaker ? `${c.speaker.toUpperCase()}: ` : ""}${c.text}` : c.kind === "heading" ? `[${c.text}]` : `<i>${c.text}</i>`;
+  srt.push(`${srt.length + 1}\n${stamp(Math.max(0, a))} --> ${stamp(Math.min(seconds, b))}\n${text}\n`);
+});
+writeFileSync(join(outDir, "captions.srt"), srt.join("\n"));
+const meta = [";FFMETADATA1", `title=Nobody's Witness — animatic (${from}${to ? ` to ${to}` : " to the end"})`];
+chapters.forEach((c, i) => {
+  const end = chapters[i + 1]?.t ?? seconds;
+  meta.push("[CHAPTER]", "TIMEBASE=1/1000", `START=${Math.round(c.t * 1000)}`, `END=${Math.round(end * 1000)}`, `title=${String(c.title).replace(/[=;#\\\n]/g, " ")}`);
+});
+writeFileSync(join(outDir, "chapters.txt"), `${meta.join("\n")}\n`);
+const mp4 = join(outDir, "animatic.mp4");
+const mux = spawnSync(FFMPEG, ["-nostdin", "-y", "-v", "error", "-i", outVideo, "-i", wav, "-f", "ffmetadata", "-i", join(outDir, "chapters.txt"),
+  "-map", "0:v", "-map", "1:a", "-map_metadata", "2", "-map_chapters", "2", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", mp4]);
+if (mux.status !== 0) fail(`the sound could not be muxed: ${String(mux.stderr).slice(0, 400)}`);
+
+const report = {
+  from, to, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, pace,
+  frames: frame, seconds, lastScene: scenesSeen, chapters, captions: srt.length,
+  sound: { recorded: segments.length, ambience: layers.length, synthesised: synths.length, peak: Number(mixed.peak.toFixed(3)), missing: mixed.missing },
+  renderMinutes: Number(((Date.now() - started) / 60000).toFixed(1)), slowFrames, pageErrors, warnings,
+  files: ["animatic.mp4", "captions.srt"],
+};
+writeFileSync(join(outDir, "report.json"), JSON.stringify(report, null, 2));
+if (json) console.log(JSON.stringify({ type: "done", ...report }));
+else console.log(`${seconds.toFixed(1)} s, ${frame} frames, ${srt.length} captions, ${chapters.length} scenes → ${mp4}${warnings.length ? `\nwarnings: ${warnings.join("; ")}` : ""}`);

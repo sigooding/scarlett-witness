@@ -49,8 +49,47 @@ class AudioEngine {
         this.buses[ch] = g;
       });
     }
-    if (this.ctx.state === "suspended") void this.ctx.resume();
+    if (this.ctx.state === "suspended" && !this.rendering) void this.ctx.resume();
     return this.ctx;
+  }
+
+  /* ------------------------- offline rendering ------------------------- *
+   * The animatic exporter (tools/export-animatic.mjs) rebuilds the film's mix
+   * outside the browser. The recorded sounds are files it can read itself;
+   * the synthesised ones (the rain bed, the transition thumps) are made here,
+   * by this engine's own code pointed at an OfflineAudioContext, so the export
+   * sounds exactly like the game. */
+  private rendering = false;
+
+  /** Runs `play` with the engine drawing into a fresh OfflineAudioContext (every bus is its output, at gain 1) and
+   *  returns what it made. `play` may also build nodes itself on the context and output it is given. */
+  async renderOffline(seconds: number, play: (ctx: BaseAudioContext, out: AudioNode) => void, sampleRate = 48000): Promise<AudioBuffer> {
+    const off = new OfflineAudioContext(2, Math.max(1, Math.ceil(seconds * sampleRate)), sampleRate);
+    const out = off.createGain();
+    out.connect(off.destination);
+    const saved = { ctx: this.ctx, buses: this.buses, unlocked: this.unlocked, noise: this.noiseBuffer };
+    this.ctx = off as unknown as AudioContext;
+    this.buses = { master: out, music: out, ambient: out, voice: out, sfx: out };
+    this.unlocked = true;
+    this.noiseBuffer = null;
+    this.rendering = true;
+    try {
+      play(off, out);
+    } finally {
+      this.ctx = saved.ctx;
+      this.buses = saved.buses;
+      this.unlocked = saved.unlocked;
+      this.noiseBuffer = saved.noise;
+      this.rendering = false;
+    }
+    return off.startRendering();
+  }
+
+  /** A built-in ambient preset ("rain"…) rendered for `seconds`, before the ambient bus's gain. */
+  renderAmbient(id: string, seconds: number): Promise<AudioBuffer> {
+    return this.renderOffline(seconds, (ctx, out) => {
+      this.buildAmbient(ctx as AudioContext, id, out);
+    });
   }
 
   unlock() {

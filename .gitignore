@@ -34,3 +34,6 @@ zone-maps/
 
 # Local QA logs, browser binaries, generated intermediates (not shipping art)
 .cache/
+
+# animatic exports (tools/export-animatic.mjs): rendered videos stay out of git
+exports/

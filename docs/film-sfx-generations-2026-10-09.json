@@ -269,7 +269,8 @@
     "duration": 6,
     "weak": false
    },
-   "file": "public/film/sfx/dj-through-wall.mp3"
+   "file": "public/film/sfx/dj-through-wall.mp3",
+   "removed": "10 October 2026: the director asked for no saxophones anywhere; this take had a saxophone ballad in it, so it and its file were removed."
   },
   "keyboard-typing": {
    "prompt": "A few quick keystrokes on an office computer keyboard, a name typed, then stop, no voices",

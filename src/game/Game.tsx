@@ -159,6 +159,7 @@ import { adjustedConsequences, choiceRepeats, gambleFlag, getPerks, rollGamble, 
 import { canRewindDecision, emptyRewind, popRewind, pushRewind, rewindLabel, sealRewind, type RewindStack } from "./rewind";
 import { simFromRuntime, strandedNow, STRANDED_GRACE_MS } from "./stranded";
 import { deepLinkFromUrl, describeDeepLink, resolveDeepLink } from "./deepLink";
+import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
 
 /* SEEDED RUNS — ?seed=1234 on the URL pins every gameplay draw (minigame
  * shuffles, ride spawns) to one deterministic stream, applied once at
@@ -2939,15 +2940,18 @@ function CasePlayer({
    * panel. Scene-authored auto-read (autoAdvanceTargetSceneId) always plays
    * itself, whether or not this is on. */
   const prefersReducedMotion = usePrefersReducedMotion();
-  const [autoAdvance, setAutoAdvance] = useState(false);
+  // Animatic mode (src/game/animatic.tsx) plays itself: the film's lines move on with no player.
+  const [autoAdvance, setAutoAdvance] = useState(() => !!ANIMATIC);
   /* Auto-continue — scenes that carry an authored route (the film) used to play
    * themselves with no way to stop them. The same ⏩ button now switches that
    * authored reading on and off; the choice is remembered. Off, each line waits
    * for a click and the scene ends on a "▸ Next scene" button. */
   const [autoContinue, setAutoContinue] = useState(() => {
+    if (ANIMATIC) return true;
     try { return localStorage.getItem("scarlet-reel-auto-continue") !== "off"; } catch { return true; }
   });
   useEffect(() => {
+    if (ANIMATIC) return; // an animatic plays itself; it must not change the player's own setting
     try { localStorage.setItem("scarlet-reel-auto-continue", autoContinue ? "on" : "off"); } catch { /* storage unavailable */ }
   }, [autoContinue]);
 
@@ -3430,7 +3434,7 @@ function CasePlayer({
   const goToScene = useCallback(
     (id: string) => {
       if (sceneTransition.current !== null) return; // double-click / held key
-      audio.click();
+      if (!ANIMATIC) audio.click(); // the press's feedback; an animatic has no presses
       // Notes are author placeholders: resolve them to the scene their single
       // outgoing route points at, so the player passes straight through.
       const targetId = bypassedSceneId(story, id);
@@ -4456,6 +4460,17 @@ function CasePlayer({
   const currentBeatText = currentBeat
     ? resolveBeatText(currentBeat, state.memories, state.activeFlags, story.flagNotes)
     : "";
+  // Animatic mode draws its own captions (the reading panel is hidden) and reports them, with each scene change, to the
+  // exporter on window.__animatic.
+  const animaticCaption = ANIMATIC
+    ? captionFor(ANIMATIC, scene, !proseAcknowledged, currentBeat, currentBeatText, currentBeat ? story.characters.find((c) => c.id === currentBeat.characterId)?.name : undefined)
+    : null;
+  useEffect(() => {
+    if (ANIMATIC) noteCaption(animaticCaption, scene?.id, currentBeat?.id);
+  });
+  useEffect(() => {
+    if (ANIMATIC && scene) noteScene(scene);
+  }, [scene]);
 
   // Press-the-lie state for the beat on screen: the lie exists, it isn't
   // already broken, and the player still has wrong-guess chances left.
@@ -4764,7 +4779,7 @@ function CasePlayer({
         // change stops it properly.
         audio.stopSpeechIfIdle();
         setProseAcknowledged(true);
-      }, 900);
+      }, ANIMATIC ? ((scene.prose ?? "").trim() ? Math.round(headingSeconds(scene.prose ?? "", ANIMATIC.pace) * 1000) : 0) : 900);
       return () => window.clearTimeout(t);
     }
     if (inBeats) {
@@ -4778,10 +4793,18 @@ function CasePlayer({
       // after the text lands, then wait for the voice to actually finish
       // before the next line starts (capped so a stuck clip can't stall us).
       const startedAt = Date.now();
+      // An animatic holds a silent line for its reading time and a spoken one until a moment after its voice ends.
+      const spoken = !!currentBeat?.audioUrl;
+      const hold = ANIMATIC ? (spoken ? 0 : readingSeconds(currentBeatText, ANIMATIC.pace) * 1000) : 1150;
+      let quietSince = 0;
       const iv = window.setInterval(() => {
-        const elapsed = Date.now() - startedAt;
+        const now = Date.now();
+        const elapsed = now - startedAt;
         const voiceDone = !audio.speechActive();
-        if ((voiceDone && elapsed >= 1150) || elapsed > 45000) {
+        if (!voiceDone) quietSince = 0;
+        else if (!quietSince) quietSince = now;
+        const settled = voiceDone && (!ANIMATIC || !spoken || now - quietSince >= AFTER_VOICE_SECONDS * 1000);
+        if ((settled && elapsed >= hold) || elapsed > 45000) {
           window.clearInterval(iv);
           setBeatDone(false);
           setBeatIdx((i) => i + 1);
@@ -4803,7 +4826,7 @@ function CasePlayer({
     proseAcknowledged,
     proseDone,
     inBeats,
-    beatDone, currentBeat, routingBeat, beatRouteValid,
+    beatDone, currentBeat, currentBeatText, routingBeat, beatRouteValid,
   ]);
 
   const speakLine = useCallback(
@@ -5170,7 +5193,10 @@ function CasePlayer({
     // timer so an idle player is carried into the next scene instead of being
     // left parked on the insert with a lone button — the button only ever
     // skips the wait, never gates the exit.
-    const delay = beatRouteMode === "auto" ? Math.max(0, beatRouteDelay) : 6;
+    // An animatic gives the default one-second scene-end cut a silent last line's reading time; any other authored
+    // hold (the raid's song-timed cuts) is kept exactly.
+    const readHold = ANIMATIC && routingBeat && !routingBeat.audioUrl ? readingSeconds(routingBeat.text ?? "", ANIMATIC.pace) : 0;
+    const delay = beatRouteMode === "auto" ? Math.max(0, beatRouteDelay === 1 ? Math.max(1, readHold) : beatRouteDelay) : Math.max(6, readHold);
     const go = () => {
       setBeatRouteRemaining(0);
       audio.stopSpeech();
@@ -5197,7 +5223,7 @@ function CasePlayer({
       window.clearInterval(tick);
       window.clearTimeout(t);
     };
-  }, [beatRouteReady, beatRouteMode, beatRouteTarget, beatRouteDelay, overlay, menuOpen, holdActive, leaveFor, scene?.partBreak]);
+  }, [beatRouteReady, beatRouteMode, beatRouteTarget, beatRouteDelay, routingBeat, overlay, menuOpen, holdActive, leaveFor, scene?.partBreak]);
 
   /** Append a decision to the ordered journey log. Captures the siblings
    *  that existed at this moment — including ones gated shut — because the
@@ -6500,6 +6526,7 @@ function CasePlayer({
       data-story-id={story.id}
       data-scene-id={sceneId}
       data-scene-kind={scene.nodeType ?? "standard"}
+      data-animatic={ANIMATIC ? "1" : undefined}
       className={`fx-grain fx-vignette relative h-full w-full overflow-hidden bg-noir-950 select-none ${dialogueTheme?.minimalHud ? "ingame-minimal-hud" : ""}`}
       style={{
         ...parallaxStyle(parallaxOn ? parallaxCinematic : undefined),
@@ -6633,6 +6660,8 @@ function CasePlayer({
           <div className="letterbox-bar letterbox-bottom" style={{ "--letterbox-h": "9%" } as React.CSSProperties} />
         </div>
       )}
+      {/* Animatic mode: the captions sit where a film's subtitles go, over the bottom bar */}
+      {ANIMATIC && <AnimaticCaptions caption={animaticCaption} />}
 
       {/* Pulsing heat/risk vignette — danger reads on screen before the trapdoor fires */}
       {!scene.isEnding && state.meters.Suspicion >= (story.briefing?.heatLimit ? story.briefing.heatLimit - 2 : 6) && (
@@ -6900,7 +6929,7 @@ function CasePlayer({
         </aside>
       )}
       {checkpointFlash && (
-        <div className="pointer-events-none absolute left-1/2 top-3 z-40 -translate-x-1/2">
+        <div className="pointer-events-none absolute left-1/2 top-3 z-40 -translate-x-1/2" data-animatic-hide>
           <span className="hud-chip pop-in px-3 py-1" data-kind="good">✓ Checkpoint</span>
         </div>
       )}
@@ -7186,7 +7215,7 @@ function CasePlayer({
       )}
 
       {/* toasts */}
-      <div className="pointer-events-none absolute right-3 top-[88px] z-[55] flex w-80 flex-col gap-1.5">
+      <div className="pointer-events-none absolute right-3 top-[88px] z-[55] flex w-80 flex-col gap-1.5" data-animatic-hide>
         {toasts.map((t) => (
           <div key={t.id} data-kind={t.kind} className="hud-toast slide-up">
             {t.text}
@@ -7294,7 +7323,7 @@ function CasePlayer({
 
       {/* Bottom scrim so subtitles read over the art (TWAU-style) */}
       {scene.nodeType !== "credits" && scene.nodeType !== "cutscene" && !overlay && (
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[45] h-48 bg-gradient-to-t from-black/90 via-black/45 to-transparent" aria-hidden />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[45] h-48 bg-gradient-to-t from-black/90 via-black/45 to-transparent" aria-hidden data-animatic-hide />
       )}
 
       {/* STRANDED — the room has nothing left to give. The verdict comes from
@@ -7383,8 +7412,10 @@ function CasePlayer({
         </div>
       )}
 
-      {/* narrative panel — pointer-events-auto so clicks stay contained. */}
+      {/* narrative panel — pointer-events-auto so clicks stay contained. An animatic hides it on ordinary scenes and draws
+          its own captions; the title and the credits keep it, their text IS the shot. */}
       <div
+        data-animatic-hide={scene.nodeType === "credits" ? undefined : ""}
         className={`absolute inset-x-0 bottom-0 z-[47] flex justify-center p-4 pl-4 sm:pl-24 ${
           scene.nodeType === "credits"
             ? // A montage is the point of the shot, so it stays visible: only the
@@ -8266,6 +8297,7 @@ function CasePlayer({
           way out of a two-minute roll was to sit through it. */}
       {isCredits && !proseAcknowledged && !overlay && (
         <button
+          data-animatic-hide
           className="absolute bottom-5 right-5 z-[60] rounded border border-paper/30 bg-noir-950/85 px-4 py-2 font-type text-xs text-paper/80 hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
           onClick={() => {
             audio.click();
