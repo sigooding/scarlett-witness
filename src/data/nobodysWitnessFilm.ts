@@ -9703,8 +9703,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s30/205-a-light-ahead.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
+      "mode": "static",
+      "focalPoint": "55% 55%",
       "zoomDuration": 17,
       "panDirection": "left",
       "panDistance": 2,
@@ -9752,7 +9752,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "starburstIntensity": 0.2,
        "ghostIntensity": 0.3,
        "pulseAmount": 0.15
-      }
+      },
+      "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10488,7 +10492,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s38/173-four-black-sedans.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "42% 38%",
       "zoomDuration": 15,
       "panDirection": "right",
@@ -10498,7 +10502,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.35,
+      "depthSeconds": 18,
+      "depthDirection": "right",
+      "depthFocus": 0.7
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -14339,8 +14349,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s67/234-a-different-clock.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "50% 60%",
       "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
@@ -14369,7 +14379,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 1,
         "pulseAmount": 0.3
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19787,7 +19801,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: When the train has passed, the ladder is",
    "background": "/film/img/s91/134-the-walkway-is-empty.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "static",
     "focalPoint": "50% 45%",
     "zoomDuration": 17,
     "panDirection": "right",
@@ -19797,7 +19811,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.35,
+    "depthSeconds": 18,
+    "depthDirection": "left",
+    "depthFocus": 0.55
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
@@ -20406,8 +20426,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s95/142-taillights.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
+      "mode": "static",
+      "focalPoint": "50% 62%",
       "zoomDuration": 22,
       "panDirection": "left",
       "panDistance": 2,
@@ -20436,7 +20456,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 2.2,
         "pulseAmount": 0.12
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s95/142-taillights/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,

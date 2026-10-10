@@ -2400,7 +2400,13 @@
           "starburstIntensity": 0.2,
           "ghostIntensity": 0.3,
           "pulseAmount": 0.15
-        }
+        },
+        "mode": "static",
+        "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "focalPoint": "55% 55%"
       }
     },
     "169-the-only-car": {
@@ -2676,7 +2682,13 @@
             "pulseSeconds": 1,
             "pulseAmount": 0.3
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 60%"
       }
     },
     "74-twenty-metres-apart": {
@@ -3052,7 +3064,13 @@
             "pulseSeconds": 2.2,
             "pulseAmount": 0.12
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s95/142-taillights/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 62%"
       }
     },
     "119-single-file": {
@@ -3447,6 +3465,28 @@
         "depthAmount": 0.14,
         "depthSeconds": 20,
         "focalPoint": "50% 50%"
+      }
+    },
+    "173-four-black-sedans": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18,
+        "depthDirection": "right",
+        "depthFocus": 0.7
+      }
+    },
+    "134-the-walkway-is-empty": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18,
+        "depthDirection": "left",
+        "depthFocus": 0.55
       }
     }
   }
