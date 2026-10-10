@@ -298,245 +298,249 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 4220,
    "y": 1340
   },
-  "nw_s66": {
+  "nw_s65_b": {
    "x": 40,
+   "y": 1600
+  },
+  "nw_s66": {
+   "x": 420,
    "y": 1600
   },
   "nw_s67": {
-   "x": 420,
+   "x": 800,
    "y": 1600
   },
   "nw_s68": {
-   "x": 800,
+   "x": 1180,
    "y": 1600
   },
   "nw_s69": {
-   "x": 1180,
+   "x": 1560,
    "y": 1600
   },
   "nw_s70": {
-   "x": 1560,
+   "x": 1940,
    "y": 1600
   },
   "nw_s71": {
-   "x": 1940,
+   "x": 2320,
    "y": 1600
   },
   "nw_s72": {
-   "x": 2320,
+   "x": 2700,
    "y": 1600
   },
   "nw_s72_b": {
-   "x": 2700,
+   "x": 3080,
    "y": 1600
   },
   "nw_s73": {
-   "x": 3080,
+   "x": 3460,
    "y": 1600
   },
   "nw_s74": {
-   "x": 3460,
+   "x": 3840,
    "y": 1600
   },
   "nw_s75": {
-   "x": 3840,
+   "x": 4220,
    "y": 1600
   },
   "nw_s76": {
-   "x": 4220,
-   "y": 1600
+   "x": 40,
+   "y": 1860
   },
   "nw_s77": {
-   "x": 40,
+   "x": 420,
    "y": 1860
   },
   "nw_s78": {
-   "x": 420,
+   "x": 800,
    "y": 1860
   },
   "nw_s79": {
-   "x": 800,
+   "x": 1180,
    "y": 1860
   },
   "nw_s80": {
-   "x": 1180,
+   "x": 1560,
    "y": 1860
   },
   "nw_s81": {
-   "x": 1560,
+   "x": 1940,
    "y": 1860
   },
   "nw_s82": {
-   "x": 1940,
+   "x": 2320,
    "y": 1860
   },
   "nw_s82a": {
-   "x": 2320,
+   "x": 2700,
    "y": 1860
   },
   "nw_s83": {
-   "x": 2700,
+   "x": 3080,
    "y": 1860
   },
   "nw_s84": {
-   "x": 3080,
+   "x": 3460,
    "y": 1860
   },
   "nw_song_raid_01": {
-   "x": 3460,
+   "x": 3840,
    "y": 1860
   },
   "nw_song_raid_02": {
-   "x": 3840,
+   "x": 4220,
    "y": 1860
   },
   "nw_song_raid_03": {
-   "x": 4220,
-   "y": 1860
+   "x": 40,
+   "y": 2120
   },
   "nw_song_raid_04": {
-   "x": 40,
+   "x": 420,
    "y": 2120
   },
   "nw_song_raid_05": {
-   "x": 420,
+   "x": 800,
    "y": 2120
   },
   "nw_song_raid_06": {
-   "x": 800,
+   "x": 1180,
    "y": 2120
   },
   "nw_song_raid_07": {
-   "x": 1180,
+   "x": 1560,
    "y": 2120
   },
   "nw_song_raid_08": {
-   "x": 1560,
+   "x": 1940,
    "y": 2120
   },
   "nw_song_raid_09": {
-   "x": 1940,
+   "x": 2320,
    "y": 2120
   },
   "nw_song_raid_10": {
-   "x": 2320,
+   "x": 2700,
    "y": 2120
   },
   "nw_song_raid_11": {
-   "x": 2700,
+   "x": 3080,
    "y": 2120
   },
   "nw_song_raid_12": {
-   "x": 3080,
+   "x": 3460,
    "y": 2120
   },
   "nw_song_raid_13": {
-   "x": 3460,
+   "x": 3840,
    "y": 2120
   },
   "nw_song_raid_14": {
-   "x": 3840,
+   "x": 4220,
    "y": 2120
   },
   "nw_song_raid_15": {
-   "x": 4220,
-   "y": 2120
+   "x": 40,
+   "y": 2380
   },
   "nw_song_raid_16": {
-   "x": 40,
+   "x": 420,
    "y": 2380
   },
   "nw_song_raid_17": {
-   "x": 420,
+   "x": 800,
    "y": 2380
   },
   "nw_song_raid_18": {
-   "x": 800,
+   "x": 1180,
    "y": 2380
   },
   "nw_song_raid_19": {
-   "x": 1180,
+   "x": 1560,
    "y": 2380
   },
   "nw_song_raid_20": {
-   "x": 1560,
+   "x": 1940,
    "y": 2380
   },
   "nw_song_raid_21": {
-   "x": 1940,
+   "x": 2320,
    "y": 2380
   },
   "nw_song_raid_22": {
-   "x": 2320,
+   "x": 2700,
    "y": 2380
   },
   "nw_song_raid_23": {
-   "x": 2700,
+   "x": 3080,
    "y": 2380
   },
   "nw_song_raid_24": {
-   "x": 3080,
+   "x": 3460,
    "y": 2380
   },
   "nw_song_raid_25": {
-   "x": 3460,
+   "x": 3840,
    "y": 2380
   },
   "nw_song_raid_26": {
-   "x": 3840,
+   "x": 4220,
    "y": 2380
   },
   "nw_song_raid_27": {
-   "x": 4220,
-   "y": 2380
-  },
-  "nw_song_raid_28": {
    "x": 40,
    "y": 2640
   },
-  "nw_song_raid_29": {
+  "nw_song_raid_28": {
    "x": 420,
    "y": 2640
   },
-  "nw_s92_after": {
+  "nw_song_raid_29": {
    "x": 800,
    "y": 2640
   },
-  "nw_s93": {
+  "nw_s92_after": {
    "x": 1180,
    "y": 2640
   },
-  "nw_s94": {
+  "nw_s93": {
    "x": 1560,
    "y": 2640
   },
-  "nw_s95": {
+  "nw_s94": {
    "x": 1940,
    "y": 2640
   },
-  "nw_s96": {
+  "nw_s95": {
    "x": 2320,
    "y": 2640
   },
-  "nw_s98": {
+  "nw_s96": {
    "x": 2700,
    "y": 2640
   },
-  "nw_s99a": {
+  "nw_s98": {
    "x": 3080,
    "y": 2640
   },
-  "nw_s100": {
+  "nw_s99a": {
    "x": 3460,
    "y": 2640
   },
-  "nw_credits": {
+  "nw_s100": {
    "x": 3840,
    "y": 2640
   },
-  "nw_end": {
+  "nw_credits": {
    "x": 4220,
    "y": 2640
+  },
+  "nw_end": {
+   "x": 40,
+   "y": 2900
   }
  },
  "dialogueBox": {
@@ -768,8 +772,16 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "name": "Tokyo in the rain"
      },
      {
+      "role": "Written by",
+      "name": "Scott Gooding"
+     },
+     {
       "role": "Starring",
       "name": "Jack · Vera · Mara"
+     },
+     {
+      "role": "Music",
+      "name": "Scott Gooding · enhanced with suno.ai"
      }
     ],
     "font": "elegant",
@@ -815,7 +827,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "mode": "pan",
     "depthMap": "/film/depth/montage/m4-railway-rain/depth.png",
     "depthMotion": "push",
-    "depthAmount": 0.22,
+    "depthAmount": 0.35,
     "depthSeconds": 32,
     "focalPoint": "58% 54%",
     "panDistance": 2,
@@ -844,7 +856,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "filmGradeStrength": 0.3,
     "depthMap": "/film/depth/s1/377-the-hive-remembered/depth.png",
     "depthMotion": "push",
-    "depthAmount": 0.3,
+    "depthAmount": 0.48,
     "depthSeconds": 20
    },
    "prose": "Night. Rain. An eleven-storey block of balconies and wires wedged between glass towers.",
@@ -934,7 +946,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s1/01-backstreet/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.24,
+      "depthAmount": 0.38,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -980,7 +992,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s1/02-vending/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -1198,7 +1210,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.22,
+      "depthAmount": 0.35,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -1529,7 +1541,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b40",
      "characterId": "nw_mara",
      "text": "It's okay — I'll get someone — Ambulance. I'll call. Ambulance.",
-     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3"
+     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3",
+     "background": "video:/film/video/14-lipsync.mp4",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.6
     },
     {
      "id": "nw_b41",
@@ -1706,7 +1734,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s2/19-the-bar/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 16,
       "lights": [
        {
@@ -2092,7 +2120,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/29-apartment-block/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.18,
+      "depthAmount": 0.29,
       "depthSeconds": 24,
       "depthDirection": "left",
       "depthFocus": 0.48
@@ -2120,7 +2148,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/32-laundry-in-the-rain/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.18,
+      "depthAmount": 0.29,
       "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
@@ -2146,7 +2174,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.35,
+      "depthAmount": 0.56,
       "depthSeconds": 18,
       "depthDirection": "left",
       "depthFocus": 0.5
@@ -2176,7 +2204,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.35,
+      "depthAmount": 0.56,
       "depthSeconds": 16,
       "depthDirection": "left",
       "lights": [
@@ -2373,7 +2401,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b82",
      "characterId": "nw_narrator",
-     "text": "Through the thin wall, a neighbour's radio plays an old ballad, muffled: a woman's voice, a slow saxophone, a song from another decade.",
+     "text": "Through the thin wall, a neighbour's radio plays an old ballad, muffled: a woman's voice, a song from another decade.",
      "silent": true
     },
     {
@@ -2601,9 +2629,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s5",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/dj-through-wall.mp3",
-     "sfxVolume": 0.09
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
@@ -2667,7 +2693,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s5/43-the-front-counter/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.14,
+      "depthAmount": 0.22,
       "depthSeconds": 20
      },
      "backgroundTransition": "crossfade",
@@ -2926,7 +2952,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 14,
       "depthDirection": "right"
      },
@@ -3676,7 +3702,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s7/63-the-detectives-room/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -3794,7 +3820,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s7/68-the-clock/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.25,
+      "depthAmount": 0.4,
       "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
@@ -3936,7 +3962,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "truck",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 16,
       "depthDirection": "left"
      },
@@ -5604,7 +5630,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s14a/335-the-lane-mouth/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.28,
+      "depthAmount": 0.45,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -5997,7 +6023,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.26,
+      "depthAmount": 0.47,
       "depthSeconds": 16,
       "lights": [
        {
@@ -6397,7 +6423,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "truck",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 16,
       "depthDirection": "right",
       "lights": [
@@ -7424,7 +7450,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "drift",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 16,
       "lights": [
        {
@@ -7678,7 +7704,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "truck",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 16,
       "depthDirection": "left"
      },
@@ -8266,7 +8292,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "truck",
-      "depthAmount": 0.14,
+      "depthAmount": 0.25,
       "depthSeconds": 24,
       "depthDirection": "left",
       "depthFocus": 0.48
@@ -8360,7 +8386,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.25,
+      "depthAmount": 0.45,
       "depthSeconds": 14,
       "lights": [
        {
@@ -9452,7 +9478,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.25,
+      "depthAmount": 0.45,
       "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
@@ -9643,7 +9669,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "drift",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 18,
       "lights": [
        {
@@ -9899,7 +9925,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       },
       "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -10649,7 +10675,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.35,
+      "depthAmount": 0.56,
       "depthSeconds": 18,
       "depthDirection": "right",
       "depthFocus": 0.7
@@ -11043,7 +11069,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -13052,7 +13078,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -14241,12 +14267,42 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "backgroundTransitionSpeed": 0.9,
+     "afterBeatTargetSceneId": "nw_s65_b",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1
+    }
+   ],
+   "hotspots": [],
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "choices": []
+  },
+  {
+   "id": "nw_s65_b",
+   "title": "65 — The wine-red dress (cont.)",
+   "background": "/film/img/s65/277-borrowing-it.jpg",
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "letterbox": true,
+   "transition": "cut",
+   "transitionSpeed": 0.2,
+   "musicMode": "track",
+   "musicUrl": "/film/audio/soundtrack_nobodys_witness.mp3",
+   "musicFadeSeconds": 2,
+   "musicLoop": false,
+   "musicLevel": 0.6,
+   "dialogueBeats": [
     {
      "id": "nw_b1069",
      "characterId": "nw_narrator",
-     "text": "Through the thin wall, the neighbour's radio begins to play the same old ballad from before: the woman's voice, the slow saxophone.",
+     "text": "Through the thin wall, the neighbour's radio begins to play the same old ballad from before: the woman's voice.",
      "silent": true
     },
     {
@@ -14343,6 +14399,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
+   "musicMode": "none",
+   "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
      "id": "nw_b1079",
@@ -14460,7 +14518,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s66/278-the-clock-reads-ten/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.2,
+      "depthAmount": 0.32,
       "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
@@ -14543,7 +14601,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -15162,7 +15220,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s71/313-drawings-in-the-water/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.35,
+      "depthAmount": 0.56,
       "depthSeconds": 18,
       "depthDirection": "left",
       "depthFocus": 0.6
@@ -15552,7 +15610,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -15789,7 +15847,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "truck",
-      "depthAmount": 0.4,
+      "depthAmount": 0.72,
       "depthSeconds": 16,
       "depthDirection": "right"
      },
@@ -15889,7 +15947,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.4,
+      "depthAmount": 0.72,
       "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
@@ -16068,7 +16126,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.45,
+      "depthAmount": 0.8,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -16213,7 +16271,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
       "depthMotion": "truck",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 18,
       "depthDirection": "right",
       "depthFocus": 0.5
@@ -16270,7 +16328,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
       "depthMotion": "drift",
-      "depthAmount": 0.14,
+      "depthAmount": 0.22,
       "depthSeconds": 28,
       "depthDirection": "left"
      },
@@ -16317,7 +16375,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.2,
+      "depthAmount": 0.32,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -16354,7 +16412,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.16,
+      "depthAmount": 0.26,
       "depthSeconds": 14
      },
      "backgroundTransition": "glitch",
@@ -16393,7 +16451,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.28,
+      "depthAmount": 0.45,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -17549,7 +17607,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "push",
-      "depthAmount": 0.14,
+      "depthAmount": 0.25,
       "depthSeconds": 20
      },
      "backgroundTransition": "crossfade",
@@ -19682,7 +19740,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      }
     ],
     "depthMotion": "drift",
-    "depthAmount": 0.09,
+    "depthAmount": 0.16,
     "depthSeconds": 26
    },
    "prose": "",
@@ -20026,7 +20084,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "filmGradeStrength": 0.3,
     "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
     "depthMotion": "truck",
-    "depthAmount": 0.35,
+    "depthAmount": 0.56,
     "depthSeconds": 18,
     "depthDirection": "left",
     "depthFocus": 0.55
@@ -20671,7 +20729,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMap": "/film/depth/s95/142-taillights/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.3,
+      "depthAmount": 0.48,
       "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
@@ -20759,7 +20817,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMotion": "truck",
-      "depthAmount": 0.3,
+      "depthAmount": 0.54,
       "depthSeconds": 16,
       "depthDirection": "right",
       "depthFocus": 0.6
@@ -21381,7 +21439,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s99a/305-the-plaza/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.2,
+      "depthAmount": 0.32,
       "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
@@ -21429,7 +21487,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s99a/307-the-gardener/depth.png",
       "depthMotion": "push",
-      "depthAmount": 0.22,
+      "depthAmount": 0.35,
       "depthSeconds": 24
      },
      "backgroundTransition": "crossfade",
@@ -21664,6 +21722,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "subtitle": "Tokyo as a memory that is still happening.",
     "lines": [
      {
+      "role": "Written by",
+      "name": "Scott Gooding"
+     },
+     {
       "role": "Cast",
       "name": "Kaneko"
      },
@@ -21781,7 +21843,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      {
       "role": "Music",
-      "name": "“Nobody’s Witness” — Phoney Refuge mashup, echoingbongos756"
+      "name": "All music written by Scott Gooding · enhanced with suno.ai"
      },
      {
       "role": "Engine",

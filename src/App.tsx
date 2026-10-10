@@ -4,6 +4,8 @@ import { STORIES } from "./data/stories";
 import { GamePlayer, LensFlareLayer } from "./game/Game";
 import { clearSession, readSession, writeSession } from "./game/session";
 import { deepLinkFromUrl } from "./game/deepLink";
+import { ANIMATIC, AnimaticStart, animaticStory } from "./game/animatic";
+import { AnimaticExportDialog } from "./AnimaticExport";
 import { decodeStory, isEpisodic, latestSave, loadEndings, removeStoryEndings, seasonEpisodes, storySeasonProgress } from "./logic";
 import { assetUrl } from "./assetPath";
 import { Studio } from "./studio/Studio";
@@ -29,6 +31,8 @@ type Mode =
       primedNarration?: PrimedAudio | null;
     }
   | { kind: "studio"; openStoryId?: string; openSceneId?: string }
+  /** ?animatic=1 in a browser: one click to start, so the film's sound may play (src/game/animatic.tsx) */
+  | { kind: "animatic-start"; story: Story }
   | { kind: "manual" }
   | { kind: "gallery" };
 
@@ -196,6 +200,7 @@ export default function App() {
   const [resolvedTitleTheme, setResolvedTitleTheme] = useState<TitleTheme>(loadGlobalTitleTheme);
   const [imported, setImported] = useState<Story | null>(null);
   const [mixerOpen, setMixerOpen] = useState(false);
+  const [animaticExportOpen, setAnimaticExportOpen] = useState(false);
   const [infoStory, setInfoStory] = useState<Story | null>(null);
   const [verticalRack, setVerticalRack] = useState(false);
   const [fullscreenOn, setFullscreenOn] = useState(false);
@@ -311,6 +316,12 @@ export default function App() {
       }
       if (target) {
         void resolveStoryMedia(target).then((resolved) => {
+          // An animatic (?animatic=1) plays the film hands-off; in a browser it first waits for one click.
+          if (ANIMATIC) {
+            const film = animaticStory(resolved);
+            setMode(window.__animaticAutostart ? { kind: "play", story: film, primedMusic: null } : { kind: "animatic-start", story: film });
+            return;
+          }
           setMode({ kind: "play", story: resolved, primedMusic: null });
         });
       }
@@ -341,6 +352,8 @@ export default function App() {
   }, [mode.kind, resolvedTitleTheme.musicUrl, startMenuMusic]);
 
   const allStories = useMemo(() => (imported ? [...catalog, imported] : catalog), [catalog, imported]);
+  /** The film, for 🎞 Export animatic (src/AnimaticExport.tsx) */
+  const filmStory = useMemo(() => allStories.find((s) => s.id === "nobodys-witness-film") ?? null, [allStories]);
   /** ★ FEATURED — the big banner cards at the top of the newsstand, in the
    *  order the author listed them. Unresolvable ids are skipped so a hidden
    *  or deleted case can't leave a hole on the front page. */
@@ -655,6 +668,15 @@ export default function App() {
           {notice}
         </div>
       )}
+      {mode.kind === "animatic-start" && (
+        <AnimaticStart
+          title={mode.story.title}
+          onStart={() => {
+            audio.unlock();
+            setMode({ kind: "play", story: mode.story, primedMusic: null });
+          }}
+        />
+      )}
       {mode.kind === "play" && (
         <GamePlayer
           story={mode.story}
@@ -865,7 +887,17 @@ export default function App() {
                 >
                   📓 Creator Manual
                 </button>
+                {filmStory && (
+                  <button
+                    onClick={() => setAnimaticExportOpen(true)}
+                    className="border border-paper/40 bg-paper/5 px-5 py-2.5 font-pulp text-xs uppercase tracking-[0.2em] text-paper/85 hover:border-gold hover:text-gold transition-all hover:scale-105"
+                    title="Render the film, or some of its scenes, to a video with its effects, depth camera, sound, subtitles and descriptions"
+                  >
+                    🎞 Export animatic
+                  </button>
+                )}
               </div>
+              {animaticExportOpen && filmStory && <AnimaticExportDialog story={filmStory} onClose={() => setAnimaticExportOpen(false)} />}
             </header>
 
             <div className="mt-4 flex justify-end gap-2">

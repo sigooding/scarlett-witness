@@ -130,6 +130,13 @@ function fitted(img: HTMLImageElement, w: number, h: number): HTMLCanvasElement 
 }
 
 const easeInOut = (x: number) => 0.5 - 0.5 * Math.cos(Math.PI * Math.max(0, Math.min(1, x)));
+/** A push or truck is already moving at the cut and settles into its hold (ease-out), so the move reads in the first
+ *  seconds of a shot instead of creeping in for half its length; a 0.6 s lead-in keeps the first frames from lurching. */
+const settle = (t: number, seconds: number) => {
+  const x = Math.max(0, Math.min(1, t / seconds));
+  const lead = Math.min(1, t / 0.6);
+  return (1 - (1 - x) ** 3) * lead * lead * (3 - 2 * lead);
+};
 
 /** "x% y%" (the cinematic's focal point) as canvas uv, y up. */
 function centre(focalPoint?: string): [number, number] {
@@ -232,12 +239,12 @@ export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
       const t = (now - start) / 1000;
       let zoomFar = 1, zoomNear = 1, slide = 0;
       if (motion === "push") {
-        const p = easeInOut(t / seconds);
+        const p = settle(t, seconds);
         zoomFar = 1 + amount * PUSH_FAR * p;
         zoomNear = 1 + amount * PUSH_NEAR * p;
         done = t >= seconds;
       } else if (motion === "truck") {
-        slide = amount * TRUCK * easeInOut(t / seconds) * direction;
+        slide = amount * TRUCK * settle(t, seconds) * direction;
         zoomFar = zoomNear = overscanFor(slide);
         done = t >= seconds;
       } else {
