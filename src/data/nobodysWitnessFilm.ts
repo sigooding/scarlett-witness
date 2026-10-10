@@ -3824,7 +3824,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s8/160-were-closed.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
       "panDirection": "right",
@@ -3834,7 +3834,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s8/160-were-closed/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 18,
+      "depthDirection": "right",
+      "depthFocus": 0.55
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5729,8 +5735,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s14a/337-engine-off.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
+      "mode": "static",
+      "focalPoint": "50% 55%",
       "zoomDuration": 17,
       "panDirection": "right",
       "panDistance": 2,
@@ -5740,6 +5746,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
       "lights": [
        {
         "x": 77,
@@ -6219,8 +6229,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s15/184-a-gap-in-someones-teeth.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "46% 48%",
       "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
@@ -6229,7 +6239,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s15/184-a-gap-in-someones-teeth/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.26,
+      "depthSeconds": 20
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -12190,7 +12204,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s53a/297-the-glass-office.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 60%",
       "zoomDuration": 14,
       "panDirection": "left",
@@ -12200,7 +12214,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s53a/297-the-glass-office/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.35,
+      "depthSeconds": 20,
+      "depthDirection": "right",
+      "depthFocus": 0.25
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13234,8 +13254,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s61/228-nine-oclock.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "42% 38%",
+      "mode": "static",
+      "focalPoint": "50% 55%",
       "zoomDuration": 21,
       "panDirection": "right",
       "panDistance": 2,
@@ -13245,6 +13265,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s61/228-nine-oclock/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.32,
+      "depthSeconds": 18,
       "lights": [
        {
         "x": 36,
@@ -13488,8 +13512,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s62/229-like-a-date.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
+      "mode": "static",
+      "focalPoint": "50% 60%",
       "zoomDuration": 14,
       "panDirection": "right",
       "panDistance": 2,
@@ -13499,6 +13523,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s62/229-like-a-date/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
       "lights": [
        {
         "x": 35,
@@ -17832,7 +17860,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s83/109-the-fortieth-floor.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
       "panDirection": "right",
@@ -17842,7 +17870,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s83/109-the-fortieth-floor/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 18,
+      "depthDirection": "left",
+      "depthFocus": 0.9
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20686,8 +20720,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s98/153-the-rain-has-stopped.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
+      "mode": "static",
+      "focalPoint": "50% 60%",
       "zoomDuration": 20,
       "panDirection": "right",
       "panDistance": 2,
@@ -20696,7 +20730,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.28,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
