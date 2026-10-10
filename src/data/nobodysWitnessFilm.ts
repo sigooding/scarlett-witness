@@ -941,8 +941,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/02-vending.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "60% 42%",
+      "mode": "static",
+      "focalPoint": "30% 50%",
       "zoomDuration": 16,
       "panDirection": "left",
       "panDistance": 2,
@@ -971,7 +971,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s1/02-vending/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2135,7 +2139,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s3/30-the-elevated-line.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
       "panDirection": "right",
@@ -2145,7 +2149,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.35,
+      "depthSeconds": 18,
+      "depthDirection": "left",
+      "depthFocus": 0.5
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -3763,8 +3773,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s7/68-the-clock.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
+      "mode": "static",
+      "focalPoint": "62% 45%",
       "zoomDuration": 14,
       "panDirection": "right",
       "panDistance": 2,
@@ -3773,7 +3783,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s7/68-the-clock/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.25,
+      "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10879,8 +10893,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s41/179-same-wood.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "50% 55%",
       "zoomDuration": 21,
       "panDirection": "left",
       "panDistance": 2,
@@ -10889,7 +10903,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -12886,8 +12904,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s59/364-the-kotatsu.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "50% 58%",
       "zoomDuration": 21,
       "panDirection": "left",
       "panDistance": 2,
@@ -12896,7 +12914,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14290,8 +14312,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s66/278-the-clock-reads-ten.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "42% 38%",
+      "mode": "static",
+      "focalPoint": "50% 45%",
       "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
@@ -14300,7 +14322,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s66/278-the-clock-reads-ten/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.2,
+      "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -14988,7 +15014,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s71/313-drawings-in-the-water.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "60% 42%",
       "zoomDuration": 16,
       "panDirection": "left",
@@ -14998,7 +15024,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s71/313-drawings-in-the-water/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.35,
+      "depthSeconds": 18,
+      "depthDirection": "left",
+      "depthFocus": 0.6
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15364,7 +15396,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s73/387-the-street-too-long.jpg",
      "cinematic": {
       "mode": "shake",
-      "focalPoint": "50% 45%",
+      "focalPoint": "50% 55%",
       "zoomDuration": 17,
       "panDirection": "right",
       "panDistance": 2,
@@ -15375,7 +15407,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "shakeAmount": 0.15,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16024,7 +16060,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s75/78-the-empty-lounge.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
       "panDirection": "right",
@@ -16034,7 +16070,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 18,
+      "depthDirection": "right",
+      "depthFocus": 0.5
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20527,7 +20569,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s96/144-empty.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "42% 38%",
       "zoomDuration": 15,
       "panDirection": "right",
@@ -20537,7 +20579,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s96/144-empty/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
+      "depthDirection": "right",
+      "depthFocus": 0.6
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
