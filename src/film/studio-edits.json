@@ -1566,7 +1566,15 @@
           "starburstIntensity": 0.25,
           "ghostIntensity": 0.4,
           "pulseAmount": 0.15
-        }
+        },
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 18,
+        "focalPoint": "50% 60%"
       }
     },
     "333-the-white-light": {
@@ -1646,9 +1654,14 @@
     },
     "222-mud-and-impacts": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.45,
-        "shakeDuration": 0.25
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s47/222-mud-and-impacts/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.22,
+        "depthSeconds": 16,
+        "focalPoint": "50% 55%"
       }
     },
     "214-come-on-come-on": {
@@ -1714,9 +1727,14 @@
     },
     "388-through-the-crossing": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.2,
-        "shakeDuration": 0.7
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s73/388-through-the-crossing/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.24,
+        "depthSeconds": 18,
+        "focalPoint": "50% 58%"
       }
     },
     "72-the-lost-heel": {
@@ -1779,7 +1797,15 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 18,
+        "focalPoint": "50% 58%"
       }
     },
     "383-the-empty-lane": {
@@ -3373,7 +3399,15 @@
             "pulseSeconds": 4,
             "pulseAmount": 0.25
           }
-        ]
+        ],
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s86/121-the-shutter/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.22,
+        "depthSeconds": 16,
+        "focalPoint": "50% 50%"
       }
     },
     "124-the-repairman": {
@@ -3656,7 +3690,15 @@
     },
     "305-the-plaza": {
       "cinematic": {
-        "colorGrade": "nolan-imax"
+        "colorGrade": "nolan-imax",
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s99a/305-the-plaza/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.2,
+        "depthSeconds": 18,
+        "focalPoint": "50% 55%"
       }
     },
     "306-the-hoarding": {
