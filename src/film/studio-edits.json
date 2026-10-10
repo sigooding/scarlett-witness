@@ -1508,7 +1508,11 @@
       "cinematic": {
         "mode": "shake",
         "shakeAmount": 0.3,
-        "shakeDuration": 0.3
+        "shakeDuration": 0.3,
+        "depthMap": "/film/depth/s43/211-wet-tin/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16
       }
     },
     "178-thank-you-very-much": {
@@ -3294,7 +3298,14 @@
             "pulseSeconds": 4,
             "pulseAmount": 0.25
           }
-        ]
+        ],
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s90/130-the-roof/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 16
       }
     },
     "131-she-jumps": {
@@ -3363,7 +3374,15 @@
             "pulseSeconds": 0.75,
             "pulseAmount": 1
           }
-        ]
+        ],
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 55%"
       }
     },
     "378-the-barbers-shop": {
@@ -3725,6 +3744,72 @@
         "focalPoint": "46% 48%",
         "panDistance": 2,
         "zoomDuration": 20
+      }
+    },
+    "203-the-sea-wall-steps": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s28/203-the-sea-wall-steps/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18
+      }
+    },
+    "88-the-walkway": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s78/88-the-walkway/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18
+      }
+    },
+    "290-daylight-again": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 16,
+        "depthMap": "/film/depth/s27a/290-daylight-again/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 16
+      }
+    },
+    "91-grey-light": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 18,
+        "depthMap": "/film/depth/s79/91-grey-light/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18
+      }
+    },
+    "206-the-window-swollen-shut": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 14,
+        "depthMap": "/film/depth/s33/206-the-window-swollen-shut/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 14
+      }
+    },
+    "207-the-pink-payphone": {
+      "cinematic": {
+        "mode": "pan",
+        "panDistance": 2,
+        "zoomDuration": 14,
+        "depthMap": "/film/depth/s35/207-the-pink-payphone/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 14
       }
     }
   }
