@@ -53,23 +53,47 @@ export function animaticFromUrl(search?: string): AnimaticOptions | null {
 /** Read once: the URL does not change while the film plays. Null in ordinary play (and outside a browser). */
 export const ANIMATIC: AnimaticOptions | null = animaticFromUrl();
 
-/** Every ordinary scene shows its words at once; the title and the credits keep their own design and timing. */
-export function animaticStory<T extends { scenes: SceneNode[] }>(story: T): T {
-  return { ...story, scenes: story.scenes.map((sc) => (sc.nodeType === "credits" ? sc : { ...sc, noTypewriter: true })) };
+/** Longest description an animatic makes by joining short action lines (about two lines on screen). */
+export const JOIN_CHARS = 200;
+const PLAIN_BEAT_KEYS = new Set(["id", "characterId", "text", "silent"]);
+const silentLine = (b: DialogueBeat) => !b.audioUrl && !!b.silent && !!b.text && b.text !== "·";
+
+/** Short action lines that follow each other on the same picture are shown as one description (up to JOIN_CHARS):
+ *  a line joins the one before it only when it carries nothing of its own (no picture, voice, effect or condition). */
+export function joinActionLines(beats: DialogueBeat[]): DialogueBeat[] {
+  const out: DialogueBeat[] = [];
+  for (const b of beats) {
+    const prev = out[out.length - 1];
+    const plain = Object.keys(b).every((k) => PLAIN_BEAT_KEYS.has(k));
+    if (prev && silentLine(prev) && silentLine(b) && plain && prev.characterId === b.characterId && `${prev.text} ${b.text}`.length <= JOIN_CHARS) {
+      out[out.length - 1] = { ...prev, text: `${prev.text} ${b.text}` };
+    } else out.push(b);
+  }
+  return out;
 }
 
-/** How long a silent line stays up: a moment to land plus a comfortable subtitle reading speed (14 characters a
- *  second), between 2.2 and 10 seconds, times the pace. */
+/** Every ordinary scene shows its words at once, with its short action lines joined; the title and the credits keep
+ *  their own design and timing. */
+export function animaticStory<T extends { scenes: SceneNode[] }>(story: T): T {
+  return {
+    ...story,
+    scenes: story.scenes.map((sc) =>
+      sc.nodeType === "credits" ? sc : { ...sc, noTypewriter: true, dialogueBeats: sc.dialogueBeats ? joinActionLines(sc.dialogueBeats) : sc.dialogueBeats }),
+  };
+}
+
+/** How long a silent line stays up: half a second to land plus an ordinary subtitle reading speed (18 characters a
+ *  second), between 1.8 and 9 seconds, times the pace. (14 a second until 10 October: the film ran 2 h 36 min.) */
 export function readingSeconds(text: string, pace = 1): number {
   const chars = text.replace(/\s+/g, " ").trim().length;
-  return Math.min(10, Math.max(2.2, 0.8 + chars / 14)) * pace;
+  return Math.min(9, Math.max(1.8, 0.5 + chars / 18)) * pace;
 }
 
 /** The pause after a recorded line before the next line comes up. */
-export const AFTER_VOICE_SECONDS = 0.7;
+export const AFTER_VOICE_SECONDS = 0.45;
 /** How long a scene heading (or a scene's opening description) stays up before the scene's first line. */
 export function headingSeconds(prose: string, pace = 1): number {
-  return SLUGLINE.test(prose.trim()) ? 2.4 * pace : readingSeconds(prose, pace);
+  return SLUGLINE.test(prose.trim()) ? 1.6 * pace : readingSeconds(prose, pace);
 }
 
 export type CaptionKind = "subtitle" | "description" | "heading";

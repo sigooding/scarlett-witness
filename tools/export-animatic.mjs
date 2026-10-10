@@ -92,7 +92,16 @@ function filmOrder(story) {
 function estimateSeconds(durations) {
   const by = new Map(film.scenes.map((s) => [s.id, s]));
   const lengthOf = (url) => durations[decodeURIComponent(String(url).split(/[?#]/)[0])];
-  const read = (t) => Math.min(10, Math.max(2.2, 0.8 + String(t ?? "").replace(/\s+/g, " ").trim().length / 14)) * pace;
+  // the same timings and joined action lines as src/game/animatic.tsx (readingSeconds, AFTER_VOICE_SECONDS, joinActionLines)
+  const read = (t) => Math.min(9, Math.max(1.8, 0.5 + String(t ?? "").replace(/\s+/g, " ").trim().length / 18)) * pace;
+  const lone = (b) => !b.audioUrl && b.silent && b.text && b.text !== "·";
+  const join = (beats) => beats.reduce((out, b) => {
+    const prev = out[out.length - 1];
+    const plain = Object.keys(b).every((k) => ["id", "characterId", "text", "silent"].includes(k));
+    if (prev && lone(prev) && lone(b) && plain && prev.characterId === b.characterId && `${prev.text} ${b.text}`.length <= 200) out[out.length - 1] = { ...prev, text: `${prev.text} ${b.text}` };
+    else out.push(b);
+    return out;
+  }, []);
   const inTo = (id) => !!to && (id === to || id.startsWith(`${to}_`));
   let total = 0, reached = false;
   for (const id of order.slice(order.indexOf(from))) {
@@ -106,12 +115,12 @@ function estimateSeconds(durations) {
       continue;
     }
     const prose = (s.prose ?? "").trim();
-    if (prose) total += /^(INT|EXT|I\/E)[./\s]/i.test(prose) ? 2.4 * pace : read(prose);
-    const beats = s.dialogueBeats ?? [];
+    if (prose) total += /^(INT|EXT|I\/E)[./\s]/i.test(prose) ? 1.6 * pace : read(prose);
+    const beats = join(s.dialogueBeats ?? []);
     beats.forEach((b, i) => {
       const last = i === beats.length - 1, delay = b.afterBeatDelaySeconds;
-      if (b.audioUrl) total += (lengthOf(b.audioUrl) ?? 3) + (last ? delay ?? 1 : 0.7) + 0.25;
-      else total += last ? (delay === 1 || delay == null ? Math.max(1, read(b.text)) : delay) : read(b.text) + 0.125;
+      if (b.audioUrl) total += (lengthOf(b.audioUrl) ?? 3) + (last ? delay ?? 1 : 0.45) + 0.1;
+      else total += last ? (delay === 1 || delay == null ? Math.max(1, read(b.text)) : delay) : read(b.text) + 0.05;
     });
     total += Math.min(2.4, Number(s.transitionSpeed) || 1.1);
   }

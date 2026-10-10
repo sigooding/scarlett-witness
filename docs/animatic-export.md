@@ -44,9 +44,13 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
 
 ## What the animatic shows
 
-* **Pace.** The game moves on by itself: a silent line stays up for its reading time (0.8 s plus 14 characters a
-  second, between 2.2 and 10 s, times the pace), a spoken line until 0.7 s after its voice ends, a scene heading for
-  2.4 s; a scene's last line gets its reading time before the cut. Cuts timed to a song (the raid, the opening titles)
+* **Pace.** The game moves on by itself: a silent line stays up for its reading time (0.5 s plus 18 characters a
+  second, an ordinary subtitle speed, between 1.8 and 9 s, times the pace), a spoken line until 0.45 s after its voice
+  ends, a scene heading for 1.6 s; a scene's last line gets its reading time before the cut. Short action lines that
+  follow each other on the same picture are shown together as one description (up to 200 characters). The whole film
+  runs about **2 h 03 min** at Normal, **1 h 48 min** at Brisk (`--pace 0.8`) and 2 h 21 min at Slow; until 10 October
+  (14 characters a second, nothing joined) it ran 2 h 36 min. Only the animatic is paced this way: in the game the
+  reader still sets the pace, and the screenplay is unchanged. Cuts timed to a song (the raid, the opening titles)
   keep their own timing.
 * **Captions** are drawn by the game over the picture (`src/game/animatic.tsx`, styles at the end of `src/index.css`):
   subtitles with the speaker's name above the line, descriptions in italics in a dark box, the scene heading at the
@@ -78,7 +82,7 @@ the film again from its first scene.
 ## Limits
 
 * **It is slow**: it renders frame by frame. Measured here without a graphics card at 1280×720 and 24 fps:
-  scene 65 (1 min 42 s of film) rendered at 8 fps in 2.2 minutes, about 6 frames a second, so at 24 fps a render takes about four times as long as the film runs. The whole film is about 2 h 36 min (the exporter estimates it at the start and the dialog shows the time left), so at 24 fps without a graphics card it takes about 10 hours; 12 fps halves that. The opening titles, a montage and the end credits were each rendered on their own on 10 October to check they start and stop where they should. Use `--gpu` on a machine with one, a lower `--fps` for a quick look, or render the film in parts.
+  scene 65 (1 min 42 s of film) rendered at 8 fps in 2.2 minutes, about 6 frames a second, so at 24 fps a render takes about four times as long as the film runs. The whole film is about 2 h 03 min at Normal (the exporter estimates it at the start and the dialog shows the time left), so at 24 fps without a graphics card it takes about 8 hours; 12 fps halves that. The opening titles, a montage and the end credits were each rendered on their own on 10 October to check they start and stop where they should. Use `--gpu` on a machine with one, a lower `--fps` for a quick look, or render the film in parts.
 * The sound is rebuilt, not recorded: anything a page plays outside `<audio>` elements and the sound engine (speech
   synthesis; the film uses none) is not in it. The film's only video, the shot-14 lip-sync clip, has no sound of its
   own.

@@ -256,8 +256,8 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
           </div>
         )}
         <p className="mt-3 font-type text-[11px] text-paper/40">
-          It renders the real game frame by frame, so it takes longer than the film runs: the whole film (about two and a half
-          hours) takes several hours, most of a day on a computer without a graphics card. Leave <code>npm run dev</code> running
+          It renders the real game frame by frame, so it takes longer than the film runs: the whole film (about two hours at Normal
+          pace, an hour and three quarters at Brisk) takes several hours, most of a day on a computer without a graphics card. Leave <code>npm run dev</code> running
           until it finishes; you can close this dialog and come back to it.
         </p>
       </div>

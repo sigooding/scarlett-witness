@@ -4809,7 +4809,7 @@ function CasePlayer({
           setBeatDone(false);
           setBeatIdx((i) => i + 1);
         }
-      }, 250);
+      }, ANIMATIC ? 100 : 250); // an animatic checks more often, so its lines do not wait on the poll
       return () => window.clearInterval(iv);
     }
     // Choices are up — hands off until the player picks.
