@@ -34,6 +34,8 @@ export function animaticExportPlugin() {
         const url = new URL(req.url ?? "/", "http://x");
         const parts = url.pathname.split("/").filter(Boolean);
         if (req.method === "GET" && parts[0] === "ping") return send(res, 200, { ok: true });
+        // every export since the server started, newest first (the dialog shows the latest when it opens)
+        if (req.method === "GET" && parts[0] === "jobs" && parts.length === 1) return send(res, 200, [...jobs.values()].reverse().map(view));
         if (req.method === "POST" && parts[0] === "jobs" && parts.length === 1) {
           const b = await readBody(req);
           if (!b || !ID.test(b.from ?? "") || (b.to && !ID.test(b.to))) return send(res, 422, { error: "Choose the scenes to export." });
@@ -46,7 +48,7 @@ export function animaticExportPlugin() {
           const args = ["tools/export-animatic.mjs", "--from", b.from, ...(b.to ? ["--to", b.to] : []), "--size", size, "--fps", String(fps), "--pace", String(pace),
             "--out", out, "--url", `http://${req.headers.host}`, "--progress-json", ...(b.subtitles === false ? ["--no-subs"] : []), ...(b.descriptions === false ? ["--no-desc"] : [])];
           const child = spawn(process.execPath, args, { cwd: root, env: process.env });
-          const job = { id, child, out, status: "running", options: { from: b.from, to: b.to ?? null, size, fps, pace, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
+          const job = { id, child, out, status: "running", options: { from: b.from, to: b.to ?? null, whole: !!b.whole && !b.to, size, fps, pace, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
           jobs.set(id, job);
           let buf = "";
           child.stdout.on("data", (d) => {
@@ -92,7 +94,8 @@ export function animaticExportPlugin() {
           res.statusCode = 200;
           res.setHeader("Content-Type", FILES[file]);
           res.setHeader("Content-Length", String(statSync(path).size));
-          const name = `nobodys-witness-animatic-${job.options.from}${job.options.to ? `-${job.options.to}` : ""}${file.slice(file.indexOf("."))}`;
+          const what = job.options.whole ? "whole-film" : `${job.options.from}${job.options.to ? `-${job.options.to}` : "-to-the-end"}`;
+          const name = `nobodys-witness-animatic-${what}${file.slice(file.indexOf("."))}`;
           res.setHeader("Content-Disposition", `attachment; filename="${name}"`);
           return createReadStream(path).pipe(res);
         }

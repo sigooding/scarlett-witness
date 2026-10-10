@@ -3,11 +3,13 @@
 // narration and scene headings as descriptions; plus an .srt of the same captions and a chapter per scene.
 // See docs/animatic-export.md.
 //
-//   npm run export:animatic -- --from nw_s65 --to nw_s66
-//   options: --out <dir> (default exports/animatics/<from>-<to>)  --size 1280x720 | 1920x1080  --fps 24
+//   npm run export:animatic                                  # the whole film, titles to credits
+//   npm run export:animatic -- --from nw_s65 --to nw_s66     # some scenes
+//   options: --out <dir> (default exports/animatics/whole-film, or <from>-<to>)  --size 1280x720 | 1920x1080  --fps 24
 //            --no-subs  --no-desc  --pace 1 (0.8 brisker, 1.25 slower)  --url <a running dev server>
 //            --gpu (use the graphics card instead of software rendering)  --progress-json (one JSON line per update)
 //            --debug (also writes debug.json: every caption, scene change, sound and ambience event the page logged)
+//            --keep-parts (keep picture.mp4 and sound.wav, which are otherwise deleted once animatic.mp4 is made)
 //   needs ffmpeg (on the PATH, or FFMPEG=<path>) and Playwright's Chromium (or PLAYWRIGHT_CHROMIUM_PATH)
 //
 // How: the real game runs in headless Chromium on a test clock, in animatic mode (?animatic=1: hands-off, captions drawn
@@ -17,7 +19,7 @@
 // seek and volume change is logged, with each change of the ambience and each synthesised sound the engine makes; the
 // mix is rebuilt from that log afterwards (tools/animatic-mix.mjs) and muxed in.
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { createServer } from "node:net";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -42,17 +44,23 @@ const [W, H] = (opt("size", "1280x720").match(/^(\d+)x(\d+)$/) ?? [0, 1280, 720]
 const fps = Math.max(1, Math.min(60, Number(opt("fps", "24")) || 24));
 const pace = Number(opt("pace", "1")) || 1;
 const subs = !has("no-subs"), desc = !has("no-desc");
-const outDir = resolve(opt("out", join(ROOT, "exports/animatics", `${from}-${to ?? "end"}`)));
+const whole = from === order[0] && !to;
+const outDir = resolve(opt("out", join(ROOT, "exports/animatics", whole ? "whole-film" : `${from}-${to ?? "end"}`)));
 const json = has("progress-json");
 const FFMPEG = process.env.FFMPEG || "ffmpeg";
 const maxSeconds = Number(opt("max-seconds", String(6 * 3600)));
 
 const say = (msg) => (json ? console.log(JSON.stringify({ type: "log", message: msg })) : console.log(msg));
+let stopServer = () => {};
 const fail = (msg) => {
   if (json) console.log(JSON.stringify({ type: "error", message: msg }));
   else console.error(`export-animatic: ${msg}`);
+  try { stopServer(); } catch { /* already gone */ }
   process.exit(1);
 };
+// a render runs for hours: anything that goes wrong on the way ends it with a message, not a stack trace
+process.on("unhandledRejection", (e) => fail(`stopped: ${String(e?.message ?? e).split("\n")[0]}`));
+process.on("uncaughtException", (e) => fail(`stopped: ${String(e?.message ?? e).split("\n")[0]}`));
 
 if (!order.includes(from)) fail(`no scene "${from}" in the film`);
 if (to && !order.includes(to)) fail(`no scene "${to}" in the film`);
@@ -75,6 +83,39 @@ function filmOrder(story) {
   const out = [];
   for (let id = story.startSceneId; id && by.has(id) && !out.includes(id); id = next(by.get(id))) out.push(id);
   return out;
+}
+
+/** About how long the film runs from `from` to the end of `to` in animatic mode, with the same holds as
+ *  src/game/animatic.tsx (a scene heading 2.4 s, a silent line its reading time, a recorded line its length and 0.7 s,
+ *  a scene's last line before its cut), the titles and montages for their set time and the end credits for their song.
+ *  Sent with the progress, so the dialog can say how long the render has left. */
+function estimateSeconds(durations) {
+  const by = new Map(film.scenes.map((s) => [s.id, s]));
+  const lengthOf = (url) => durations[decodeURIComponent(String(url).split(/[?#]/)[0])];
+  const read = (t) => Math.min(10, Math.max(2.2, 0.8 + String(t ?? "").replace(/\s+/g, " ").trim().length / 14)) * pace;
+  const inTo = (id) => !!to && (id === to || id.startsWith(`${to}_`));
+  let total = 0, reached = false;
+  for (const id of order.slice(order.indexOf(from))) {
+    if (inTo(id)) reached = true;
+    else if (reached) break;
+    const s = by.get(id);
+    if (!s || s.isEnding) break;
+    if (s.nodeType === "credits") {
+      // the titles and montages run for their set time; the end credits for their cards (measured: 32 cards of 3.2 s, 110 s)
+      total += s.autoAdvanceDelaySeconds ?? (s.credits?.lines?.length ?? 10) * (s.credits?.cardSeconds ?? 3) + 7;
+      continue;
+    }
+    const prose = (s.prose ?? "").trim();
+    if (prose) total += /^(INT|EXT|I\/E)[./\s]/i.test(prose) ? 2.4 * pace : read(prose);
+    const beats = s.dialogueBeats ?? [];
+    beats.forEach((b, i) => {
+      const last = i === beats.length - 1, delay = b.afterBeatDelaySeconds;
+      if (b.audioUrl) total += (lengthOf(b.audioUrl) ?? 3) + (last ? delay ?? 1 : 0.7) + 0.25;
+      else total += last ? (delay === 1 || delay == null ? Math.max(1, read(b.text)) : delay) : read(b.text) + 0.125;
+    });
+    total += Math.min(2.4, Number(s.transitionSpeed) || 1.1);
+  }
+  return Math.round(total);
 }
 
 /* ------------------------------ audio file lengths ------------------------------ */
@@ -139,7 +180,10 @@ async function startServer() {
   for (let i = 0; i < 120; i++) {
     try {
       const r = await fetch(url);
-      if (r.ok) return { url, stop: () => proc.kill() };
+      if (r.ok) {
+        stopServer = () => proc.kill();
+        return { url, stop: () => proc.kill() };
+      }
     } catch { /* not up yet */ }
     await new Promise((r) => setTimeout(r, 500));
   }
@@ -152,6 +196,26 @@ async function startServer() {
 // logged; CSS animations and videos set to the page clock before each frame.
 function pageSetup(durations) {
   window.__animaticAutostart = true;
+  // A render can take hours: the dev server's live reload must not restart the film when a file is edited meanwhile.
+  // The page keeps its connection to Vite but never hears an update, a reload or a lost connection.
+  const NativeSocket = window.WebSocket;
+  window.WebSocket = class extends NativeSocket {
+    constructor(url, protocols) {
+      super(url, protocols);
+      if (![].concat(protocols ?? []).includes("vite-hmr")) return;
+      const add = this.addEventListener.bind(this);
+      this.addEventListener = (type, fn, opts) => {
+        if (type === "close") return undefined;
+        if (type !== "message") return add(type, fn, opts);
+        return add(type, (e) => {
+          try {
+            if (["update", "full-reload", "prune"].includes(JSON.parse(e.data).type)) return;
+          } catch { /* not JSON: pass it on */ }
+          fn(e);
+        }, opts);
+      };
+    }
+  };
   const DUR = durations;
   const now = () => performance.now();
   const path = (src) => {
@@ -335,6 +399,8 @@ function pageSetup(durations) {
 /* ------------------------------ run ------------------------------ */
 const durations = await audioDurations();
 say(`${Object.keys(durations).length} audio files measured`);
+const estimate = estimateSeconds(durations);
+say(`${whole ? "the whole film" : `${from} to ${to ?? "the end"}`}: about ${Math.round(estimate / 60)} min of film`);
 const server = opt("url", null) ? { url: opt("url"), stop: () => {} } : await startServer();
 const gpu = has("gpu");
 const browser = await chromium.launch({
@@ -364,6 +430,9 @@ const q = new URLSearchParams({ story: FILM_ID, scene: from, animatic: "1", subs
 if (to) q.set("to", to);
 await page.goto(`${server.url}/?${q}`, { waitUntil: "load" });
 await page.evaluate(() => document.fonts.ready);
+// the film must play through once: a reload would start it again from the first scene
+let reloads = 0;
+page.on("load", () => reloads++);
 // An installed clock still follows the wall clock; paused, the page's time moves only when the exporter moves it, one
 // frame at a time, so a slow screenshot cannot let the film run on unseen.
 await page.clock.pauseAt(await page.evaluate(() => Date.now() + 50));
@@ -407,6 +476,7 @@ const started = Date.now();
 while (frame < maxFrames) {
   // the film ends on the frame the scene after `to` begins (the screen is black between scenes), which is not drawn
   const st = await page.evaluate(() => ({ done: window.__animatic?.done, id: window.__animatic?.sceneId, title: window.__animatic?.sceneTitle }));
+  if (reloads) fail(`the page reloaded ${(frame / fps).toFixed(0)} s into the film, so the film started again; nothing was saved. Run the export again`);
   if (st.done && frame > 0) break;
   if (!(await settled())) slowFrames++;
   await Promise.race([page.evaluate(() => window.__animaticSync()), realSleep(8000)]);
@@ -419,7 +489,7 @@ while (frame < maxFrames) {
   }
   frame++;
   if (frame % 12 === 0) {
-    const msg = { type: "progress", frame, seconds: frame / fps, scene: st.id, title: st.title, elapsed: (Date.now() - started) / 1000 };
+    const msg = { type: "progress", frame, seconds: frame / fps, estimate, scene: st.id, title: st.title, elapsed: (Date.now() - started) / 1000 };
     if (json) console.log(JSON.stringify(msg));
     else process.stdout.write(`\r${(frame / fps).toFixed(1)} s of film, ${st.title ?? ""}`.padEnd(90));
   }
@@ -438,7 +508,7 @@ const tEnd = t0 + seconds * 1000;
 const drift = (await page.evaluate(() => performance.now())) - t0 - seconds * 1000;
 
 /* ------------------------------ the sound ------------------------------ */
-const logs = await page.evaluate(() => ({ media: window.__animaticMedia, engine: window.__animaticEngine, cues: window.__animatic?.cues ?? [], scenes: window.__animatic?.scenes ?? [] }));
+const logs = await page.evaluate(() => ({ media: window.__animaticMedia, engine: window.__animaticEngine, cues: window.__animatic?.cues ?? [], scenes: window.__animatic?.scenes ?? [], doneAt: window.__animatic?.doneAt ?? null }));
 if (has("debug")) writeFileSync(join(outDir, "debug.json"), JSON.stringify({ t0, ...logs }, null, 1));
 const segments = mediaSegments(logs.media, tEnd);
 const layers = ambientLayers(logs.engine);
@@ -488,7 +558,7 @@ if (Math.abs(drift) > 1000 / fps + 1) warnings.push(`the page's clock and the fi
 const mixed = writeMix({
   wavPath: wav, t0, seconds, segments, layers, synths, decode,
   // a part of the film ends with the sound faded out over a second, not cut off
-  fadeOutSeconds: to ? 1 : 0,
+  fadeOutSeconds: to || frame >= maxFrames ? 1 : 0,
   synth: (key) => renders.get(key) ?? null,
   ambient: (preset) => renders.get(`ambient:${preset}`) ?? null,
   onWarn: (w) => warnings.push(w),
@@ -501,9 +571,11 @@ const stamp = (s) => {
   return `${p(Math.floor(ms / 3600000))}:${p(Math.floor(ms / 60000) % 60)}:${p(Math.floor(ms / 1000) % 60)},${p(ms % 1000, 3)}`;
 };
 const srt = [];
+// the film stops where it left the chosen scenes: the next scene's first line, drawn as it began, is not part of it
+const stopAt = Math.min(tEnd, logs.doneAt ?? Infinity);
 cues.forEach((c, i) => {
-  if (!c.text) return;
-  const a = (c.t - t0) / 1000, b = ((cues[i + 1]?.t ?? tEnd) - t0) / 1000;
+  if (!c.text || c.t >= stopAt) return;
+  const a = (c.t - t0) / 1000, b = (Math.min(cues[i + 1]?.t ?? stopAt, stopAt) - t0) / 1000;
   // under a tenth of a second is not a caption: the game drawing the scene before it has moved to the scene's first line
   if (b <= 0 || a >= seconds || b - a < 0.1) return;
   const text = c.kind === "subtitle" ? `${c.speaker ? `${c.speaker.toUpperCase()}: ` : ""}${c.text}` : c.kind === "heading" ? `[${c.text}]` : `<i>${c.text}</i>`;
@@ -520,10 +592,12 @@ const mp4 = join(outDir, "animatic.mp4");
 const mux = spawnSync(FFMPEG, ["-nostdin", "-y", "-v", "error", "-i", outVideo, "-i", wav, "-f", "ffmetadata", "-i", join(outDir, "chapters.txt"),
   "-map", "0:v", "-map", "1:a", "-map_metadata", "2", "-map_chapters", "2", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", mp4]);
 if (mux.status !== 0) fail(`the sound could not be muxed: ${String(mux.stderr).slice(0, 400)}`);
+// the picture and the sound on their own are as large as the film again (the whole film: gigabytes)
+if (!has("keep-parts") && !has("debug")) for (const f of [outVideo, wav, join(outDir, "chapters.txt")]) rmSync(f, { force: true });
 
 const report = {
-  from, to, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, pace,
-  frames: frame, seconds, lastScene: scenesSeen, chapters, captions: srt.length,
+  from, to, whole, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, pace,
+  frames: frame, seconds, estimate, lastScene: scenesSeen, chapters, captions: srt.length,
   sound: { recorded: segments.length, ambience: layers.length, synthesised: synths.length, peak: Number(mixed.peak.toFixed(3)), missing: mixed.missing },
   renderMinutes: Number(((Date.now() - started) / 60000).toFixed(1)), slowFrames, pageErrors, warnings,
   files: ["animatic.mp4", "captions.srt"],

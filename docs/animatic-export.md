@@ -1,33 +1,37 @@
 # Exporting an animatic of Nobody's Witness
 
 Asked on 10 October 2026: *"add export option for nobodys witness animatics with the effects, depth styles … and
-subtitles and descriptions"*. The film, or any run of its scenes, renders to an MP4 that looks and sounds as the game
-plays it: every picture effect (grades, glows, shakes, rain on the lens, the letterbox bars), the depth camera, the
+subtitles and descriptions"*, then *"can you make the export the whole film"*. The whole film (the default), or any run
+of its scenes, renders to an MP4 that looks and sounds as the game plays it: every picture effect (grades, glows, shakes, rain on the lens, the letterbox bars), the depth camera, the
 voices, effects, room loops and songs, with the spoken lines burned in as **subtitles** and the screenplay's action and
 scene headings as **descriptions**. Beside the MP4: the same captions as an `.srt` and a chapter per scene.
 
 ## Three ways to make one
 
-1. **Home screen → 🎞 Export animatic** (the app running on your own computer with `npm run dev`). Pick the first and
-   last scene, tick subtitles and descriptions, choose the size, frame rate and reading pace, press **⏺ Render MP4**,
-   and download the MP4 and the `.srt` when it is done. The dev server runs the exporter below as a job
-   (`tools/vite-animatic-export.mjs`); on the deployed site there is no server, so the dialog shows the command instead.
+1. **Home screen → 🎞 Export animatic** (the app running on your own computer with `npm run dev`). **The whole film** is
+   chosen; pick **Some scenes** for a first and last scene instead. Tick subtitles and descriptions, choose the size,
+   frame rate and reading pace, press **⏺ Render MP4**, and download the MP4 and the `.srt` when it is done. The dev
+   server runs the exporter below as a job (`tools/vite-animatic-export.mjs`), so the dialog can be closed: open it again
+   to see how much of the film is done and about how long is left. Leave `npm run dev` running until it finishes. On the
+   deployed site there is no server, so the dialog shows the command instead.
 2. **The command line**:
 
-       npm run export:animatic -- --from nw_s65 --to nw_s66
+       npm run export:animatic                                 # the whole film
+       npm run export:animatic -- --from nw_s65 --to nw_s66    # some scenes
 
    | Option | |
    |---|---|
-   | `--from <scene id>` | first scene (default: the start of the film) |
-   | `--to <scene id>` | last scene, its continuation parts (`nw_s65_b`) included; leave it out to play to the credits |
+   | `--from <scene id>` | first scene (default: the film's first, scene 1: the film opens on scenes 1 and 2, then the titles, set in the Studio) |
+   | `--to <scene id>` | last scene, its continuation parts (`nw_s65_b`) included; leave it out to play to the end of the credits. The raid is one run of nodes: `--to nw_s92_after` ends after it |
    | `--size 1280x720` or `1920x1080` | picture size |
    | `--fps 24` | frame rate |
    | `--no-subs`, `--no-desc` | leave out the subtitles or the descriptions |
    | `--pace 1` | reading holds: 0.8 brisker, 1.25 slower |
-   | `--out <folder>` | default `exports/animatics/<from>-<to>/` (git ignores `exports/`) |
+   | `--out <folder>` | default `exports/animatics/whole-film/`, or `exports/animatics/<from>-<to>/` (git ignores `exports/`) |
    | `--url <server>` | use a dev server that is already running instead of starting one |
    | `--gpu` | draw with the graphics card instead of software rendering (much faster where there is one) |
-   | `--debug` | also write `debug.json`: every caption, scene change and sound event the page logged |
+   | `--debug` | also write `debug.json`: every caption, scene change and sound event the page logged (and keep the parts) |
+   | `--keep-parts` | keep `picture.mp4` and `sound.wav`, which are otherwise deleted once `animatic.mp4` is made |
 
    Needs ffmpeg (on the PATH, or `FFMPEG=<path>`) and Playwright's Chromium (`npx playwright install chromium`, or
    `PLAYWRIGHT_CHROMIUM_PATH=<path>`).
@@ -48,9 +52,9 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
   subtitles with the speaker's name above the line, descriptions in italics in a dark box, the scene heading at the
   top left. The reading panel, the HUD, the toasts and the checkpoint flash are hidden. The credits play as they do in
   the game.
-* **Files** in the output folder: `animatic.mp4` (H.264, CRF 18, AAC 192 kb/s, chapters), `captions.srt`,
-  `report.json` (length, captions, chapters, sound counts and any warnings), and the intermediates `picture.mp4` and
-  `sound.wav`, which can be deleted.
+* **Files** in the output folder: `animatic.mp4` (H.264, CRF 18, AAC 192 kb/s, a chapter per scene), `captions.srt` and
+  `report.json` (length, captions, chapters, sound counts and any warnings). The picture and the sound are made
+  separately first and deleted once they are put together (`--keep-parts` keeps them).
 
 ## How it works
 
@@ -65,13 +69,16 @@ changes and synthesised sounds (the transition thumps) are logged and rendered b
 `OfflineAudioContext` (`audio.renderOffline`, `renderAmbient` in `src/audio.ts`), then mixed sample by sample at the
 game's own levels. A part of the film fades its sound out over its last second.
 
-**Do not edit files under `src/` while an export runs from a dev server**: Vite reloads the page and the capture
-breaks. Edits under `tools/` and `docs/` are safe.
+**Working on the app while a render runs is safe.** The page being filmed ignores the dev server's live reload (it
+keeps its connection to Vite but drops update and reload messages), so it carries on with the code it started with;
+tested on 10 October by editing `src/index.css` and `src/AnimaticExport.tsx` in the middle of two renders. If the page
+reloads anyway, or the browser or the exporter fails, the export stops with a message saying so rather than filming
+the film again from its first scene.
 
 ## Limits
 
 * **It is slow**: it renders frame by frame. Measured here without a graphics card at 1280×720 and 24 fps:
-  scene 65 (1 min 42 s of film) rendered at 8 fps in 2.2 minutes, about 6 frames a second, so at 24 fps a render takes about four times as long as the film runs (the whole film: most of a working day). Use `--gpu` on a machine with one, a lower `--fps` for a quick look, or render the film in parts.
+  scene 65 (1 min 42 s of film) rendered at 8 fps in 2.2 minutes, about 6 frames a second, so at 24 fps a render takes about four times as long as the film runs. The whole film is about 2 h 36 min (the exporter estimates it at the start and the dialog shows the time left), so at 24 fps without a graphics card it takes about 10 hours; 12 fps halves that. The opening titles, a montage and the end credits were each rendered on their own on 10 October to check they start and stop where they should. Use `--gpu` on a machine with one, a lower `--fps` for a quick look, or render the film in parts.
 * The sound is rebuilt, not recorded: anything a page plays outside `<audio>` elements and the sound engine (speech
   synthesis; the film uses none) is not in it. The film's only video, the shot-14 lip-sync clip, has no sound of its
   own.

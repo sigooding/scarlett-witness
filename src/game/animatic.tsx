@@ -125,6 +125,8 @@ export interface AnimaticState {
   scenes: { t: number; id: string }[];
   reachedTo: boolean;
   done: boolean;
+  /** page-clock milliseconds when the film left the chosen scenes (or reached its ending); nothing after it is filmed */
+  doneAt?: number;
 }
 
 declare global {
@@ -172,6 +174,7 @@ export function noteScene(scene: SceneNode) {
   if (inTo) st.reachedTo = true;
   else if (to && st.reachedTo) st.done = true;
   if (scene.isEnding) st.done = true;
+  if (st.done) st.doneAt = performance.now();
 }
 
 /** The captions, drawn over the picture (and the letterbox bars) where a film's subtitles go. */
