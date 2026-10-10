@@ -1090,8 +1090,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/329-the-lane-the-watch.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 21,
+      "focalPoint": "50% 58%",
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -1119,7 +1119,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.25,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1320,9 +1324,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/332-the-sedan-blocks-the-lane.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 19,
+      "mode": "pan",
+      "focalPoint": "50% 60%",
+      "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -1340,7 +1344,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "starburstIntensity": 0.25,
        "ghostIntensity": 0.4,
        "pulseAmount": 0.15
-      }
+      },
+      "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.25,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1529,23 +1537,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b40",
      "characterId": "nw_mara",
      "text": "It's okay — I'll get someone — Ambulance. I'll call. Ambulance.",
-     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3",
-     "background": "video:/film/video/14-lipsync.mp4",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.6
+     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3"
     },
     {
      "id": "nw_b41",
@@ -11579,9 +11571,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s47/222-mud-and-impacts.jpg",
      "cinematic": {
-      "mode": "shake",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 22,
+      "mode": "pan",
+      "focalPoint": "50% 55%",
+      "zoomDuration": 16,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -11590,8 +11582,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
-      "shakeAmount": 0.45,
-      "shakeDuration": 0.25
+      "depthMap": "/film/depth/s47/222-mud-and-impacts/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.22,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15652,9 +15646,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s73/388-through-the-crossing.jpg",
      "cinematic": {
-      "mode": "shake",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
+      "mode": "pan",
+      "focalPoint": "50% 58%",
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -15663,8 +15657,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
-      "shakeAmount": 0.2,
-      "shakeDuration": 0.7
+      "depthMap": "/film/depth/s73/388-through-the-crossing/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.24,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -18823,8 +18819,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/s86/121-the-shutter.jpg",
    "cinematic": {
     "mode": "pan",
-    "focalPoint": "42% 38%",
-    "zoomDuration": 15,
+    "focalPoint": "50% 50%",
+    "zoomDuration": 16,
     "panDirection": "right",
     "panDistance": 2,
     "dollyDirection": "right",
@@ -18843,7 +18839,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 4,
       "pulseAmount": 0.25
      }
-    ]
+    ],
+    "depthMap": "/film/depth/s86/121-the-shutter/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.22,
+    "depthSeconds": 16
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21388,9 +21388,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s99a/305-the-plaza.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
+      "mode": "pan",
+      "focalPoint": "50% 55%",
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -21398,7 +21398,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s99a/305-the-plaza/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.2,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9

@@ -138,6 +138,62 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
    `nw_song_raid_N` nodes. The recorder stops when the film moves on and says after how long: a beat that ends its
    scene with an automatic cut, or a shot in a timed sequence, shows only the start of a long move (FILM.md lists them).
 
+## 6. Six depth-only shots added in this session
+
+Six empty-location shots were given the depth-map camera in one pass. They are all **depth-only** — no `depthPlate`,
+no `depthCutouts`, `mode: pan`, `depthMotion: push` — chosen because they are streets, a crossing, a plaza and a
+storefront: locations where a depth map alone reads well and, per `peopleInShot`, there are no people in them to
+stretch. They follow the wiring pattern of the existing empty-lane / empty-crossing shots (`01-backstreet`,
+`383-the-empty-lane`, `314-the-empty-crossing`, …).
+
+| Picture | Scene | Move | Amount | Seconds | Focal | `depth.png` |
+|---|---|---|---|---|---|---|
+| `332-the-sedan-blocks-the-lane` | s1  | push | 0.25 | 18 | 50% 60% | `public/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png` |
+| `329-the-lane-the-watch`         | s1  | push | 0.25 | 18 | 50% 58% | `public/film/depth/s1/329-the-lane-the-watch/depth.png` |
+| `222-mud-and-impacts`            | s47 | push | 0.22 | 16 | 50% 55% | `public/film/depth/s47/222-mud-and-impacts/depth.png` |
+| `388-through-the-crossing`       | s73 | push | 0.24 | 18 | 50% 58% | `public/film/depth/s73/388-through-the-crossing/depth.png` |
+| `305-the-plaza`                  | s99a| push | 0.20 | 18 | 50% 55% | `public/film/depth/s99a/305-the-plaza/depth.png` |
+| `121-the-shutter`                | s86 | push | 0.22 | 16 | 50% 50% | `public/film/depth/s86/121-the-shutter/depth.png` |
+
+Each was wired in `src/film/studio-edits.json` (`pictureLook`), keeping its existing `lights` / `lensFlare` /
+`colorGrade`, and `node tools/build-film-story.mjs` regenerated `src/data/nobodysWitnessFilm.ts`. `npm run
+test:film-depth` passes for all six (map exists, exact 1920×1080, aspect matches, not the dolly camera, the engine
+would draw the depth layer).
+
+### How the maps were made (read this before shipping)
+
+These six maps were **made by the director with image tools** — the method the rule permits alongside Depth Anything
+("a depth app, or painted"), **not** by Depth Anything itself. Reason: in the environment this was done in, the Depth
+Anything weights (and BiRefNet, LaMa and U2‑Net) all redirect to `objects.githubusercontent.com`, which was
+network-blocked there, so `tools/make-depth-layers.py` and `tools/review-depth-maps.py` could not run. Each map was
+generated from the actual picture as a grayscale depth field (white = near, black = far), then resized to the
+picture's exact 1920×1080 and lightly Gaussian-blurred so surfaces stay grain-free, per §2.
+
+They are therefore **stopgap maps** and should be re-validated before they ship:
+
+* Run `tools/review-depth-maps.py` on a machine that *can* fetch the models — it scores each map against Depth
+  Anything's own estimate of the picture (`agree`: near 1 follows the scene; below about 0.75 look hard at it) and
+  measures the hardest step (`edge`: above about 1 a map alone tears there). A negative `agree` means the map is
+  upside down.
+* Watch the frames (`tools/depth-frames.mjs`, §5.3) and check the straight lines (shutters, door frames) and the
+  floor. Check once with reduced motion on.
+* If a map does not follow its picture, replace it with a real Depth Anything map (below) rather than shipping it.
+
+### Replacing them with real Depth Anything maps (upgrade path)
+
+Because they are depth-only, the upgrade is a one-command regeneration once the model is reachable — no cut-outs or
+plates are involved:
+
+1. Add each picture to `docs/film-depth-layers.json` under `"pictures"` (just its `"picture"` path; no `cutouts`, no
+   `depthSource`):
+   `"332-the-sedan-blocks-the-lane": { "picture": "public/film/img/s1/332-the-sedan-blocks-the-lane.jpg" }, …`
+2. `python3 tools/make-depth-layers.py --depth-model <depth_anything_v2_vits.onnx> --wire 332-the-sedan-blocks-the-lane 329-the-lane-the-watch 222-mud-and-impacts 388-through-the-crossing 305-the-plaza 121-the-shutter`
+   This overwrites each `depth.png` with the Depth Anything estimate (smoothed) and re-wires `pictureLook`, keeping the
+   move. Then `npm run test:film-depth` and watch the frames again.
+
+This keeps the rule intact: no guessed maps ship, and the director-made stopgaps are trivially replaced by
+model-derived ones.
+
 ## Setting up the tools
 
     python3 -m venv /tmp/depth-venv && /tmp/depth-venv/bin/pip install numpy opencv-python-headless onnxruntime
