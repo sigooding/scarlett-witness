@@ -837,15 +837,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 2.2,
    "cinematic": {
     "mode": "zoom-hold",
-    "focalPoint": "50% 52%",
+    "focalPoint": "50% 55%",
     "zoomDuration": 60,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
     "depthMap": "/film/depth/s1/377-the-hive-remembered/depth.png",
     "depthMotion": "push",
     "depthAmount": 0.3,
-    "depthSeconds": 20,
-    "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "depthSeconds": 20
    },
    "prose": "Night. Rain. An eleven-storey block of balconies and wires wedged between glass towers.",
    "ambientAudio": "rain",
@@ -1710,12 +1710,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2/19-the-bar.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "65% 50%",
+      "focalPoint": "50% 50%",
       "zoomDuration": 22,
-      "depthMap": "/film/depth/s2/19-the-bar/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -1724,6 +1720,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s2/19-the-bar/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
       "lights": [
        {
         "x": 51,
@@ -2182,11 +2182,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "mode": "zoom-hold",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
-      "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.35,
-      "depthSeconds": 16,
-      "depthDirection": "left",
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -2195,6 +2190,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.35,
+      "depthSeconds": 16,
+      "depthDirection": "left",
       "lights": [
        {
         "x": 50,
@@ -2932,11 +2932,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "mode": "pan",
       "focalPoint": "50% 45%",
       "zoomDuration": 20,
-      "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 14,
-      "depthDirection": "right",
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -2944,7 +2939,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 14,
+      "depthDirection": "right"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3679,16 +3679,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s7/63-the-detectives-room.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s7/63-the-detectives-room/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.3,
-      "depthSeconds": 18,
+      "mode": "pan",
       "focalPoint": "50% 50%",
-            "mode": "pan",
-      "panDistance": 2,
       "zoomDuration": 18,
-      "focalPoint": "60% 42%",
-      "zoomDuration": 19,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -3696,7 +3689,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s7/63-the-detectives-room/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3853,7 +3850,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "cinematic": {
       "mode": "pan",
       "focalPoint": "50% 45%",
-      "zoomDuration": 18,
+      "zoomDuration": 14,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -3861,13 +3858,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s8/160-were-closed/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 18,
-      "depthDirection": "right",
-      "depthFocus": 0.55
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3941,14 +3932,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s8/240-the-far-end.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s8/240-the-far-end/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
-      "depthDirection": "left",
       "mode": "pan",
       "focalPoint": "42% 38%",
-      "zoomDuration": 15,
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -3956,7 +3942,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s8/240-the-far-end/depth.png",
+      "depthPlate": "/film/depth/s8/240-the-far-end/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s8/240-the-far-end/cutout-1.png",
+        "depth": 0.49
+       }
+      ],
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
+      "depthDirection": "left"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5609,14 +5607,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s14a/335-the-lane-mouth.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s14a/335-the-lane-mouth/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.28,
-      "depthSeconds": 18,
-      "focalPoint": "50% 60%",
       "mode": "pan",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
+      "focalPoint": "50% 60%",
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -5624,7 +5617,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s14a/335-the-lane-mouth/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.28,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5773,8 +5770,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s14a/337-engine-off.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "50% 55%",
-      "zoomDuration": 16,
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -5783,10 +5780,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
       "lights": [
        {
         "x": 77,
@@ -6000,16 +5993,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s14a/340-the-shuttered-door.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.26,
-      "depthSeconds": 16,
+      "mode": "pan",
       "focalPoint": "50% 55%",
-            "mode": "pan",
-      "panDistance": 2,
       "zoomDuration": 18,
-      "focalPoint": "50% 60%",
-      "zoomDuration": 14,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -6018,6 +6004,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
+      "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s14a/340-the-shuttered-door/cutout-1.png",
+        "depth": 0.412
+       }
+      ],
+      "depthMotion": "push",
+      "depthAmount": 0.26,
+      "depthSeconds": 16,
       "lights": [
        {
         "x": 64,
@@ -6273,9 +6270,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s15/184-a-gap-in-someones-teeth.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "46% 48%",
-      "zoomDuration": 20,
+      "mode": "dolly",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -6283,11 +6280,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s15/184-a-gap-in-someones-teeth/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.26,
-      "depthSeconds": 20
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6400,14 +6393,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s16/249-the-chair.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s16/249-the-chair/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
-      "depthDirection": "right",
-      "mode": "zoom-hold",
+      "mode": "pan",
       "focalPoint": "50% 45%",
-      "zoomDuration": 17,
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -6416,6 +6404,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s16/249-the-chair/depth.png",
+      "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s16/249-the-chair/cutout-1.png",
+        "depth": 0.514
+       }
+      ],
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
+      "depthDirection": "right",
       "lights": [
        {
         "x": 83,
@@ -7416,15 +7416,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s20/346-the-bulb-hums.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
-      "depthMotion": "drift",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
-            "mode": "pan",
-      "panDistance": 2,
-      "zoomDuration": 18,
+      "mode": "pan",
       "focalPoint": "60% 42%",
-      "zoomDuration": 16,
+      "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -7433,6 +7427,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
+      "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s20/346-the-bulb-hums/cutout-1.png",
+        "depth": 0.784
+       },
+       {
+        "image": "/film/depth/s20/346-the-bulb-hums/cutout-2.png",
+        "depth": 0.51
+       }
+      ],
+      "depthMotion": "drift",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
       "lights": [
        {
         "x": 50,
@@ -7657,14 +7666,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s22/195-somewhere-like-this.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s22/195-somewhere-like-this/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
-      "depthDirection": "left",
       "mode": "pan",
       "focalPoint": "50% 45%",
-      "zoomDuration": 14,
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -7672,7 +7676,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s22/195-somewhere-like-this/depth.png",
+      "depthPlate": "/film/depth/s22/195-somewhere-like-this/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s22/195-somewhere-like-this/cutout-1.png",
+        "depth": 0.98
+       },
+       {
+        "image": "/film/depth/s22/195-somewhere-like-this/cutout-2.png",
+        "depth": 0.353
+       },
+       {
+        "image": "/film/depth/s22/195-somewhere-like-this/cutout-3.png",
+        "depth": 0.871
+       }
+      ],
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 16,
+      "depthDirection": "left"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8246,6 +8270,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
+      "depthPlate": "/film/depth/s23/198-the-lanterns-sway/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s23/198-the-lanterns-sway/cutout-1.png",
+        "depth": 0.788
+       },
+       {
+        "image": "/film/depth/s23/198-the-lanterns-sway/cutout-2.png",
+        "depth": 0.745
+       }
+      ],
       "depthMotion": "truck",
       "depthAmount": 0.14,
       "depthSeconds": 24,
@@ -8317,14 +8352,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s25/200-the-number-114.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 14,
-      "focalPoint": "50% 55%",
       "mode": "pan",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 22,
+      "focalPoint": "50% 55%",
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -8333,6 +8363,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
+      "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s25/200-the-number-114/cutout-1.png",
+        "depth": 0.922
+       },
+       {
+        "image": "/film/depth/s25/200-the-number-114/cutout-2.png",
+        "depth": 0.565
+       }
+      ],
+      "depthMotion": "push",
+      "depthAmount": 0.25,
+      "depthSeconds": 14,
       "lights": [
        {
         "x": 57.5,
@@ -9213,9 +9258,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s27a/290-daylight-again.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "zoom-hold",
       "focalPoint": "60% 42%",
-      "zoomDuration": 16,
+      "zoomDuration": 22,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -9223,11 +9268,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s27a/290-daylight-again/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 16
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9407,14 +9448,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s27a/374-the-dead-television.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 14,
-      "focalPoint": "60% 45%",
       "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
+      "focalPoint": "60% 45%",
+      "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -9422,7 +9458,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
+      "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
+        "depth": 0.42
+       }
+      ],
+      "depthMotion": "push",
+      "depthAmount": 0.25,
+      "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9458,16 +9505,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 16,
-    "depthMap": "/film/depth/s27a/290-daylight-again/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.25,
-    "depthSeconds": 16
-   }
+   "choices": []
   },
   {
    "id": "nw_s28",
@@ -9506,7 +9544,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "cinematic": {
       "mode": "pan",
       "focalPoint": "50% 45%",
-      "zoomDuration": 18,
+      "zoomDuration": 14,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -9514,11 +9552,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s28/203-the-sea-wall-steps/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.35,
-      "depthSeconds": 18
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -9530,16 +9564,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 18,
-    "depthMap": "/film/depth/s28/203-the-sea-wall-steps/depth.png",
-    "depthMotion": "truck",
-    "depthAmount": 0.35,
-    "depthSeconds": 18
-   }
+   "choices": []
   },
   {
    "id": "nw_s29",
@@ -9614,13 +9639,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s29/354-the-altar-photograph.jpg",
      "cinematic": {
-      "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
-      "depthMotion": "drift",
-      "depthAmount": 0.3,
-      "depthSeconds": 18,
-      "mode": "zoom-hold",
+      "mode": "pan",
       "focalPoint": "60% 42%",
-      "zoomDuration": 22,
+      "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -9629,6 +9650,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
+      "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
+        "depth": 0.718
+       }
+      ],
+      "depthMotion": "drift",
+      "depthAmount": 0.3,
+      "depthSeconds": 18,
       "lights": [
        {
         "x": 47,
@@ -10161,9 +10193,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s33/208-mrsnoda-if-it-s-too-steamy-the.mp3",
      "background": "/film/img/s33/206-the-window-swollen-shut.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "zoom-hold",
       "focalPoint": "35% 50%",
-      "zoomDuration": 14,
+      "zoomDuration": 15,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -10171,11 +10203,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s33/206-the-window-swollen-shut/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 14
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10193,16 +10221,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 14,
-    "depthMap": "/film/depth/s33/206-the-window-swollen-shut/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.25,
-    "depthSeconds": 14
-   }
+   "choices": []
   },
   {
    "id": "nw_s34",
@@ -10319,9 +10338,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s35/207-the-pink-payphone.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "zoom-hold",
       "focalPoint": "50% 60%",
-      "zoomDuration": 14,
+      "zoomDuration": 20,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -10329,11 +10348,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s35/207-the-pink-payphone/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 14
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10347,16 +10362,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 14,
-    "depthMap": "/film/depth/s35/207-the-pink-payphone/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.25,
-    "depthSeconds": 14
-   }
+   "choices": []
   },
   {
    "id": "nw_s36",
@@ -11045,6 +11051,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+      "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+        "depth": 0.365
+       }
+      ],
       "depthMotion": "push",
       "depthAmount": 0.3,
       "depthSeconds": 16
@@ -11161,7 +11174,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "cinematic": {
       "mode": "shake",
       "focalPoint": "42% 38%",
+      "zoomDuration": 15,
       "panDirection": "right",
+      "panDistance": 2,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
@@ -11169,11 +11184,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "shakeAmount": 0.3,
-      "shakeDuration": 0.3,
-      "depthMap": "/film/depth/s43/211-wet-tin/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.3,
-      "depthSeconds": 16
+      "shakeDuration": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11187,14 +11198,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "shake",
-    "depthMap": "/film/depth/s43/211-wet-tin/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.3,
-    "depthSeconds": 16
-   }
+   "choices": []
   },
   {
    "id": "nw_s44",
@@ -12339,9 +12343,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s53a/297-the-glass-office.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "zoom-hold",
       "focalPoint": "50% 60%",
-      "zoomDuration": 20,
+      "zoomDuration": 14,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -12349,13 +12353,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s53a/297-the-glass-office/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.35,
-      "depthSeconds": 20,
-      "depthDirection": "right",
-      "depthFocus": 0.25
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13389,9 +13387,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s61/228-nine-oclock.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 55%",
-      "zoomDuration": 18,
+      "mode": "zoom-hold",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 21,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -13400,10 +13398,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s61/228-nine-oclock/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.32,
-      "depthSeconds": 18,
       "lights": [
        {
         "x": 36,
@@ -13647,9 +13641,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s62/229-like-a-date.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 16,
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 14,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -13658,10 +13652,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "neon-noir",
       "filmGrade": true,
       "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s62/229-like-a-date/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.3,
-      "depthSeconds": 16,
       "lights": [
        {
         "x": 35,
@@ -15572,6 +15562,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "shakeAmount": 0.15,
       "shakeDuration": 0.7,
       "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+      "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
+        "depth": 0.541
+       }
+      ],
       "depthMotion": "push",
       "depthAmount": 0.3,
       "depthSeconds": 18
@@ -16797,7 +16794,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "cinematic": {
       "mode": "pan",
       "focalPoint": "42% 38%",
-      "zoomDuration": 18,
+      "zoomDuration": 15,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -16805,11 +16802,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s78/88-the-walkway/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.35,
-      "depthSeconds": 18
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16907,16 +16900,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 18,
-    "depthMap": "/film/depth/s78/88-the-walkway/depth.png",
-    "depthMotion": "truck",
-    "depthAmount": 0.35,
-    "depthSeconds": 18
-   }
+   "choices": []
   },
   {
    "id": "nw_s79",
@@ -16941,9 +16925,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s79/91-grey-light.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "dolly",
       "focalPoint": "50% 60%",
-      "zoomDuration": 18,
+      "zoomDuration": 20,
       "panDirection": "left",
       "panDistance": 2,
       "dollyDirection": "left",
@@ -16951,11 +16935,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s79/91-grey-light/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 18
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17168,16 +17148,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 18,
-    "depthMap": "/film/depth/s79/91-grey-light/depth.png",
-    "depthMotion": "truck",
-    "depthAmount": 0.3,
-    "depthSeconds": 18
-   }
+   "choices": []
   },
   {
    "id": "nw_s80",
@@ -17578,6 +17549,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
+      "depthPlate": "/film/depth/s82/104-the-newsroom/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s82/104-the-newsroom/cutout-1.png",
+        "depth": 0.6
+       },
+       {
+        "image": "/film/depth/s82/104-the-newsroom/cutout-2.png",
+        "depth": 0.42
+       },
+       {
+        "image": "/film/depth/s82/104-the-newsroom/cutout-3.png",
+        "depth": 0.278
+       },
+       {
+        "image": "/film/depth/s82/104-the-newsroom/cutout-4.png",
+        "depth": 0.631
+       }
+      ],
       "depthMotion": "push",
       "depthAmount": 0.14,
       "depthSeconds": 20
@@ -18021,9 +18011,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s83/109-the-fortieth-floor.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "zoom-hold",
       "focalPoint": "50% 45%",
-      "zoomDuration": 18,
+      "zoomDuration": 14,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -18031,13 +18021,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s83/109-the-fortieth-floor/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.3,
-      "depthSeconds": 18,
-      "depthDirection": "left",
-      "depthFocus": 0.9
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19533,11 +19517,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 4,
       "pulseAmount": 0.25
      }
-    ],
-    "depthMap": "/film/depth/s90/130-the-roof/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.25,
-    "depthSeconds": 16
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -19710,6 +19690,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      }
     ],
     "depthMap": "/film/depth/s90/379-the-laundry/depth.png",
+    "depthPlate": "/film/depth/s90/379-the-laundry/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s90/379-the-laundry/cutout-1.png",
+      "depth": 0.702
+     },
+     {
+      "image": "/film/depth/s90/379-the-laundry/cutout-2.png",
+      "depth": 0.729
+     }
+    ],
     "depthMotion": "drift",
     "depthAmount": 0.09,
     "depthSeconds": 26
@@ -20092,9 +20083,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: They step off the last rung into an empt",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "dolly",
     "focalPoint": "60% 42%",
-    "zoomDuration": 16,
+    "zoomDuration": 22,
     "panDirection": "left",
     "panDistance": 2,
     "dollyDirection": "left",
@@ -20131,11 +20122,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.75,
       "pulseAmount": 1
      }
-    ],
-    "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.3,
-    "depthSeconds": 16
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -20171,9 +20158,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Is Kaneko —",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "dolly",
     "focalPoint": "60% 42%",
-    "zoomDuration": 16,
+    "zoomDuration": 22,
     "panDirection": "left",
     "panDistance": 2,
     "dollyDirection": "left",
@@ -20210,11 +20197,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.75,
       "pulseAmount": 1
      }
-    ],
-    "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.3,
-    "depthSeconds": 16
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -20248,9 +20231,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: The Hive looks after its own.",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "dolly",
     "focalPoint": "60% 42%",
-    "zoomDuration": 16,
+    "zoomDuration": 22,
     "panDirection": "left",
     "panDistance": 2,
     "dollyDirection": "left",
@@ -20287,11 +20270,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.75,
       "pulseAmount": 1
      }
-    ],
-    "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.3,
-    "depthSeconds": 16
+    ]
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -20379,17 +20358,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     }
    ],
    "musicMode": "none",
-   "musicFadeSeconds": 3,
-   "cinematic": {
-    "mode": "pan",
-    "panDistance": 2,
-    "zoomDuration": 16,
-    "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.3,
-    "depthSeconds": 16,
-    "focalPoint": "50% 55%"
-   }
+   "musicFadeSeconds": 3
   },
   {
    "id": "nw_s93",
@@ -20802,6 +20771,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": true,
       "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s96/144-empty/depth.png",
+      "depthPlate": "/film/depth/s96/144-empty/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s96/144-empty/cutout-1.png",
+        "depth": 0.435
+       }
+      ],
       "depthMotion": "truck",
       "depthAmount": 0.3,
       "depthSeconds": 16,
@@ -20908,8 +20884,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s98/153-the-rain-has-stopped.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 18,
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
       "panDirection": "right",
       "panDistance": 2,
       "dollyDirection": "right",
@@ -20917,11 +20893,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.28,
-      "depthSeconds": 18
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9

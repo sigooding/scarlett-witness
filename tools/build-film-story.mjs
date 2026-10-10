@@ -127,7 +127,8 @@ scenes.push({
 scenes.push({
   id: "nw_prologue", title: "Prologue — The Hive, remembered", background: P("/img/s1/377-the-hive-remembered.jpg"),
   particles: "rain", particleConfig: { density: 0.8, opacity: 0.5 }, hideHud: true, letterbox: true, transition: "fade-black", transitionSpeed: 2.2,
-  cinematic: { mode: "zoom-hold", focalPoint: "50% 52%", zoomDuration: 60, colorGrade: "neon-noir", filmGrade: true, filmGradeStrength: 0.3 },
+  // Its backdrop takes the picture's look (studio-edits "pictureLook") like any beat's picture, its depth move with it.
+  cinematic: { mode: "zoom-hold", focalPoint: "50% 52%", zoomDuration: 60, colorGrade: "neon-noir", filmGrade: true, filmGradeStrength: 0.3, ...(lookFor("/img/s1/377-the-hive-remembered.jpg")?.cinematic ?? {}) },
   prose: "Night. Rain. An eleven-storey block of balconies and wires wedged between glass towers.", ambientAudio: "rain", musicMode: "none", musicFadeSeconds: 3,
   dialogueBeats: PRO.map(([text, k]) => beat("KANEKO", { text, audioUrl: P(`/voice/prologue/${k}.mp3`) })),
 });

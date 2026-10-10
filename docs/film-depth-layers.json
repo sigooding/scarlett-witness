@@ -1,5 +1,42 @@
 {
  "about": "Pictures that play with the depth-map camera, and the boxes around the people cut out of them. tools/make-depth-layers.py reads the boxes, writes the layers to public/film/depth/<scene folder>/<picture>/ and writes each cut-out's depth back here; src/film/studio-edits.json (pictureLook) points the film at them.",
+ "peopleInShot": {
+  "73-two-small-figures": "Vera and Jack, small",
+  "74-twenty-metres-apart": "Vera and Jack",
+  "75-one-desperate-blow": "Vera and Jack",
+  "88-the-walkway": "Vera",
+  "91-grey-light": "Vera",
+  "104-the-newsroom": "the newsroom staff",
+  "109-the-fortieth-floor": "two at the desk",
+  "130-the-roof": "Jack, Vera and the old woman",
+  "135-below-the-viaduct": "two figures",
+  "144-empty": "a hand at the drawer",
+  "153-the-rain-has-stopped": "Jack and Vera",
+  "160-were-closed": "the barman and a customer",
+  "179-same-wood": "a man down the corridor",
+  "184-a-gap-in-someones-teeth": "one small figure",
+  "195-somewhere-like-this": "Vera, Jack and the cook",
+  "198-the-lanterns-sway": "the diners",
+  "200-the-number-114": "Jack and Vera",
+  "203-the-sea-wall-steps": "a man on the steps",
+  "206-the-window-swollen-shut": "the old woman and a man",
+  "207-the-pink-payphone": "Jack and the man in the chair",
+  "211-wet-tin": "a man in the rain",
+  "228-nine-oclock": "two men in the car",
+  "229-like-a-date": "Jack and Vera",
+  "240-the-far-end": "the barman",
+  "249-the-chair": "Jack",
+  "290-daylight-again": "two men in the bar",
+  "297-the-glass-office": "the office staff",
+  "337-engine-off": "Jack and Vera in the car",
+  "340-the-shuttered-door": "a figure with an umbrella",
+  "346-the-bulb-hums": "Vera and Jack",
+  "354-the-altar-photograph": "Mrs. Sakai",
+  "374-the-dead-television": "Vera",
+  "379-the-laundry": "Jack, Vera and two women",
+  "387-the-street-too-long": "Vera, far off"
+ },
+ "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
   "74-twenty-metres-apart": {
    "picture": "public/film/img/s74/74-twenty-metres-apart.jpg",
@@ -45,6 +82,264 @@
    ],
    "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
    "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg"
+  },
+  "104-the-newsroom": {
+   "picture": "public/film/img/s82/104-the-newsroom.jpg",
+   "depthSource": "public/film/depth/s82/104-the-newsroom/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the man on the left",
+     "box": [513, 523, 168, 233],
+     "image": "/film/depth/s82/104-the-newsroom/cutout-1.png",
+     "depth": 0.6
+    },
+    {
+     "name": "the man at the middle desk",
+     "box": [925, 484, 260, 363],
+     "image": "/film/depth/s82/104-the-newsroom/cutout-2.png",
+     "depth": 0.42
+    },
+    {
+     "name": "the woman behind the middle desk",
+     "box": [912, 486, 130, 146],
+     "image": "/film/depth/s82/104-the-newsroom/cutout-3.png",
+     "depth": 0.278
+    },
+    {
+     "name": "the man on the right",
+     "box": [1363, 527, 159, 233],
+     "image": "/film/depth/s82/104-the-newsroom/cutout-4.png",
+     "depth": 0.631
+    }
+   ],
+   "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
+   "depthPlate": "/film/depth/s82/104-the-newsroom/plate.jpg"
+  },
+  "144-empty": {
+   "picture": "public/film/img/s96/144-empty.jpg",
+   "depthSource": "public/film/depth/s96/144-empty/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the hand at the drawer",
+     "box": [1260, 360, 660, 450],
+     "exclude": [
+      [1270, 455, 330, 140]
+     ],
+     "image": "/film/depth/s96/144-empty/cutout-1.png",
+     "depth": 0.435
+    }
+   ],
+   "depthMap": "/film/depth/s96/144-empty/depth.png",
+   "depthPlate": "/film/depth/s96/144-empty/plate.jpg"
+  },
+  "179-same-wood": {
+   "picture": "public/film/img/s41/179-same-wood.jpg",
+   "depthSource": "public/film/depth/s41/179-same-wood/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the man down the corridor",
+     "box": [885, 410, 165, 477],
+     "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+     "depth": 0.365
+    }
+   ],
+   "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+   "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg"
+  },
+  "195-somewhere-like-this": {
+   "picture": "public/film/img/s22/195-somewhere-like-this.jpg",
+   "depthSource": "public/film/depth/s22/195-somewhere-like-this/source-depth.png",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [459, 460, 460, 620],
+     "image": "/film/depth/s22/195-somewhere-like-this/cutout-1.png",
+     "depth": 0.98
+    },
+    {
+     "name": "the cook",
+     "box": [1017, 500, 221, 269],
+     "image": "/film/depth/s22/195-somewhere-like-this/cutout-2.png",
+     "depth": 0.353
+    },
+    {
+     "name": "jack",
+     "box": [1124, 428, 483, 652],
+     "image": "/film/depth/s22/195-somewhere-like-this/cutout-3.png",
+     "depth": 0.871
+    }
+   ],
+   "depthMap": "/film/depth/s22/195-somewhere-like-this/depth.png",
+   "depthPlate": "/film/depth/s22/195-somewhere-like-this/plate.jpg"
+  },
+  "198-the-lanterns-sway": {
+   "picture": "public/film/img/s23/198-the-lanterns-sway.jpg",
+   "depthSource": "public/film/depth/s23/198-the-lanterns-sway/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the man on the left",
+     "box": [396, 425, 555, 655],
+     "image": "/film/depth/s23/198-the-lanterns-sway/cutout-1.png",
+     "depth": 0.788
+    },
+    {
+     "name": "jack",
+     "box": [1081, 397, 533, 683],
+     "image": "/film/depth/s23/198-the-lanterns-sway/cutout-2.png",
+     "depth": 0.745
+    }
+   ],
+   "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
+   "depthPlate": "/film/depth/s23/198-the-lanterns-sway/plate.jpg"
+  },
+  "200-the-number-114": {
+   "picture": "public/film/img/s25/200-the-number-114.jpg",
+   "depthSource": "public/film/depth/s25/200-the-number-114/source-depth.png",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [234, 395, 484, 658],
+     "image": "/film/depth/s25/200-the-number-114/cutout-1.png",
+     "depth": 0.922
+    },
+    {
+     "name": "vera",
+     "box": [793, 496, 367, 385],
+     "image": "/film/depth/s25/200-the-number-114/cutout-2.png",
+     "depth": 0.565
+    }
+   ],
+   "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
+   "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg"
+  },
+  "240-the-far-end": {
+   "picture": "public/film/img/s8/240-the-far-end.jpg",
+   "depthSource": "public/film/depth/s8/240-the-far-end/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the barman",
+     "box": [1054, 219, 261, 541],
+     "image": "/film/depth/s8/240-the-far-end/cutout-1.png",
+     "depth": 0.49
+    }
+   ],
+   "depthMap": "/film/depth/s8/240-the-far-end/depth.png",
+   "depthPlate": "/film/depth/s8/240-the-far-end/plate.jpg"
+  },
+  "249-the-chair": {
+   "picture": "public/film/img/s16/249-the-chair.jpg",
+   "depthSource": "public/film/depth/s16/249-the-chair/source-depth.png",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [1251, 152, 314, 928],
+     "image": "/film/depth/s16/249-the-chair/cutout-1.png",
+     "depth": 0.514
+    }
+   ],
+   "depthMap": "/film/depth/s16/249-the-chair/depth.png",
+   "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg"
+  },
+  "340-the-shuttered-door": {
+   "picture": "public/film/img/s14a/340-the-shuttered-door.jpg",
+   "depthSource": "public/film/depth/s14a/340-the-shuttered-door/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the figure with the umbrella",
+     "box": [1090, 440, 190, 330],
+     "image": "/film/depth/s14a/340-the-shuttered-door/cutout-1.png",
+     "depth": 0.412
+    }
+   ],
+   "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
+   "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg"
+  },
+  "346-the-bulb-hums": {
+   "picture": "public/film/img/s20/346-the-bulb-hums.jpg",
+   "depthSource": "public/film/depth/s20/346-the-bulb-hums/source-depth.png",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [226, 577, 423, 411],
+     "image": "/film/depth/s20/346-the-bulb-hums/cutout-1.png",
+     "depth": 0.784
+    },
+    {
+     "name": "jack",
+     "box": [1303, 474, 438, 599],
+     "image": "/film/depth/s20/346-the-bulb-hums/cutout-2.png",
+     "depth": 0.51
+    }
+   ],
+   "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
+   "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg"
+  },
+  "354-the-altar-photograph": {
+   "picture": "public/film/img/s29/354-the-altar-photograph.jpg",
+   "depthSource": "public/film/depth/s29/354-the-altar-photograph/source-depth.png",
+   "cutouts": [
+    {
+     "name": "mrs sakai",
+     "box": [304, 215, 382, 813],
+     "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
+     "depth": 0.718
+    }
+   ],
+   "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
+   "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg"
+  },
+  "374-the-dead-television": {
+   "picture": "public/film/img/s27a/374-the-dead-television.jpg",
+   "depthSource": "public/film/depth/s27a/374-the-dead-television/source-depth.png",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [560, 400, 420, 680],
+     "exclude": [
+      [440, 770, 315, 310],
+      [440, 885, 395, 195]
+     ],
+     "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
+     "depth": 0.42
+    }
+   ],
+   "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
+   "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg"
+  },
+  "379-the-laundry": {
+   "picture": "public/film/img/s90/379-the-laundry.jpg",
+   "depthSource": "public/film/depth/s90/379-the-laundry/source-depth.png",
+   "cutouts": [
+    {
+     "name": "the woman on the left",
+     "box": [0, 220, 490, 860],
+     "image": "/film/depth/s90/379-the-laundry/cutout-1.png",
+     "depth": 0.702
+    },
+    {
+     "name": "jack and vera",
+     "box": [470, 20, 1110, 1060],
+     "image": "/film/depth/s90/379-the-laundry/cutout-2.png",
+     "depth": 0.729
+    }
+   ],
+   "note": "The woman on the right, half behind a sheet, stays in the plate: BiRefNet would not take her without the sheets round her, and on this drift (amount 0.09) her depth moves her about a pixel against them.",
+   "depthMap": "/film/depth/s90/379-the-laundry/depth.png",
+   "depthPlate": "/film/depth/s90/379-the-laundry/plate.jpg"
+  },
+  "387-the-street-too-long": {
+   "picture": "public/film/img/s73/387-the-street-too-long.jpg",
+   "depthSource": "public/film/depth/s73/387-the-street-too-long/source-depth.png",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [851, 583, 88, 209],
+     "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
+     "depth": 0.541
+    }
+   ],
+   "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+   "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg"
   }
  }
 }

@@ -1422,6 +1422,13 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s8/240-the-far-end/depth.png",
+        "depthPlate": "/film/depth/s8/240-the-far-end/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s8/240-the-far-end/cutout-1.png",
+            "depth": 0.49
+          }
+        ],
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 16,
@@ -1434,6 +1441,13 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
+        "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
+            "depth": 0.42
+          }
+        ],
         "depthMotion": "push",
         "depthAmount": 0.25,
         "depthSeconds": 14,
@@ -1446,6 +1460,21 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s22/195-somewhere-like-this/depth.png",
+        "depthPlate": "/film/depth/s22/195-somewhere-like-this/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s22/195-somewhere-like-this/cutout-1.png",
+            "depth": 0.98
+          },
+          {
+            "image": "/film/depth/s22/195-somewhere-like-this/cutout-2.png",
+            "depth": 0.353
+          },
+          {
+            "image": "/film/depth/s22/195-somewhere-like-this/cutout-3.png",
+            "depth": 0.871
+          }
+        ],
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 16,
@@ -1586,11 +1615,7 @@
       "cinematic": {
         "mode": "shake",
         "shakeAmount": 0.3,
-        "shakeDuration": 0.3,
-        "depthMap": "/film/depth/s43/211-wet-tin/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.3,
-        "depthSeconds": 16
+        "shakeDuration": 0.3
       }
     },
     "178-thank-you-very-much": {
@@ -1667,6 +1692,13 @@
         "shakeAmount": 0.15,
         "shakeDuration": 0.7,
         "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+        "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
+            "depth": 0.541
+          }
+        ],
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 18,
@@ -2076,12 +2108,6 @@
     },
     "337-engine-off": {
       "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.3,
-        "depthSeconds": 16,
-        "focalPoint": "50% 55%",
         "lights": [
           {
             "x": 77,
@@ -2092,9 +2118,7 @@
             "pulseSeconds": 3.5,
             "pulseAmount": 0.3
           }
-        ],
-        "panDistance": 2,
-        "zoomDuration": 16
+        ]
       }
     },
     "340-the-shuttered-door": {
@@ -2103,6 +2127,13 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
+        "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s14a/340-the-shuttered-door/cutout-1.png",
+            "depth": 0.412
+          }
+        ],
         "depthMotion": "push",
         "depthAmount": 0.26,
         "depthSeconds": 16,
@@ -2144,6 +2175,13 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s16/249-the-chair/depth.png",
+        "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s16/249-the-chair/cutout-1.png",
+            "depth": 0.514
+          }
+        ],
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 16,
@@ -2239,6 +2277,17 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
+        "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s20/346-the-bulb-hums/cutout-1.png",
+            "depth": 0.784
+          },
+          {
+            "image": "/film/depth/s20/346-the-bulb-hums/cutout-2.png",
+            "depth": 0.51
+          }
+        ],
         "depthMotion": "drift",
         "depthAmount": 0.3,
         "depthSeconds": 16,
@@ -2276,6 +2325,17 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
+        "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s25/200-the-number-114/cutout-1.png",
+            "depth": 0.922
+          },
+          {
+            "image": "/film/depth/s25/200-the-number-114/cutout-2.png",
+            "depth": 0.565
+          }
+        ],
         "depthMotion": "push",
         "depthAmount": 0.25,
         "depthSeconds": 14,
@@ -2455,6 +2515,17 @@
         ],
         "mode": "pan",
         "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
+        "depthPlate": "/film/depth/s23/198-the-lanterns-sway/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s23/198-the-lanterns-sway/cutout-1.png",
+            "depth": 0.788
+          },
+          {
+            "image": "/film/depth/s23/198-the-lanterns-sway/cutout-2.png",
+            "depth": 0.745
+          }
+        ],
         "depthMotion": "truck",
         "depthAmount": 0.14,
         "depthSeconds": 24,
@@ -2494,6 +2565,13 @@
         "panDistance": 2,
         "zoomDuration": 18,
         "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
+        "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
+            "depth": 0.718
+          }
+        ],
         "depthMotion": "drift",
         "depthAmount": 0.3,
         "depthSeconds": 18,
@@ -2687,12 +2765,6 @@
     },
     "228-nine-oclock": {
       "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s61/228-nine-oclock/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.32,
-        "depthSeconds": 18,
-        "focalPoint": "50% 55%",
         "lights": [
           {
             "x": 36,
@@ -2721,9 +2793,7 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ],
-        "panDistance": 2,
-        "zoomDuration": 18
+        ]
       }
     },
     "230-no-questions": {
@@ -3082,12 +3152,6 @@
     },
     "229-like-a-date": {
       "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s62/229-like-a-date/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.3,
-        "depthSeconds": 16,
-        "focalPoint": "50% 60%",
         "lights": [
           {
             "x": 35,
@@ -3116,9 +3180,7 @@
             "pulseSeconds": 3.5,
             "pulseAmount": 0.3
           }
-        ],
-        "panDistance": 2,
-        "zoomDuration": 16
+        ]
       }
     },
     "315-the-number-pressed": {
@@ -3424,14 +3486,7 @@
             "pulseSeconds": 4,
             "pulseAmount": 0.25
           }
-        ],
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 16,
-        "depthMap": "/film/depth/s90/130-the-roof/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.25,
-        "depthSeconds": 16
+        ]
       }
     },
     "131-she-jumps": {
@@ -3500,15 +3555,7 @@
             "pulseSeconds": 0.75,
             "pulseAmount": 1
           }
-        ],
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 16,
-        "depthMap": "/film/depth/s92/135-below-the-viaduct/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.3,
-        "depthSeconds": 16,
-        "focalPoint": "50% 55%"
+        ]
       }
     },
     "378-the-barbers-shop": {
@@ -3546,6 +3593,17 @@
           }
         ],
         "depthMap": "/film/depth/s90/379-the-laundry/depth.png",
+        "depthPlate": "/film/depth/s90/379-the-laundry/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s90/379-the-laundry/cutout-1.png",
+            "depth": 0.702
+          },
+          {
+            "image": "/film/depth/s90/379-the-laundry/cutout-2.png",
+            "depth": 0.729
+          }
+        ],
         "depthMotion": "drift",
         "depthAmount": 0.09,
         "depthSeconds": 26
@@ -3568,15 +3626,7 @@
     },
     "153-the-rain-has-stopped": {
       "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.28,
-        "depthSeconds": 18,
-        "focalPoint": "50% 60%",
-        "colorGrade": "nolan-imax",
-        "panDistance": 2,
-        "zoomDuration": 18
+        "colorGrade": "nolan-imax"
       }
     },
     "154-this-is-yours": {
@@ -3687,6 +3737,25 @@
       "cinematic": {
         "mode": "pan",
         "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
+        "depthPlate": "/film/depth/s82/104-the-newsroom/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s82/104-the-newsroom/cutout-1.png",
+            "depth": 0.6
+          },
+          {
+            "image": "/film/depth/s82/104-the-newsroom/cutout-2.png",
+            "depth": 0.42
+          },
+          {
+            "image": "/film/depth/s82/104-the-newsroom/cutout-3.png",
+            "depth": 0.278
+          },
+          {
+            "image": "/film/depth/s82/104-the-newsroom/cutout-4.png",
+            "depth": 0.631
+          }
+        ],
         "depthMotion": "push",
         "depthAmount": 0.14,
         "depthSeconds": 20,
@@ -3800,6 +3869,13 @@
       "cinematic": {
         "mode": "pan",
         "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+        "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+            "depth": 0.365
+          }
+        ],
         "depthMotion": "push",
         "depthAmount": 0.3,
         "depthSeconds": 16,
@@ -3812,6 +3888,13 @@
       "cinematic": {
         "mode": "pan",
         "depthMap": "/film/depth/s96/144-empty/depth.png",
+        "depthPlate": "/film/depth/s96/144-empty/plate.jpg",
+        "depthCutouts": [
+          {
+            "image": "/film/depth/s96/144-empty/cutout-1.png",
+            "depth": 0.435
+          }
+        ],
         "depthMotion": "truck",
         "depthAmount": 0.3,
         "depthSeconds": 16,
@@ -3819,123 +3902,6 @@
         "depthFocus": 0.6,
         "panDistance": 2,
         "zoomDuration": 16
-      }
-    },
-    "297-the-glass-office": {
-      "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s53a/297-the-glass-office/depth.png",
-        "depthMotion": "truck",
-        "depthAmount": 0.35,
-        "depthSeconds": 20,
-        "depthDirection": "right",
-        "depthFocus": 0.25,
-        "panDistance": 2,
-        "zoomDuration": 20
-      }
-    },
-    "109-the-fortieth-floor": {
-      "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s83/109-the-fortieth-floor/depth.png",
-        "depthMotion": "truck",
-        "depthAmount": 0.3,
-        "depthSeconds": 18,
-        "depthDirection": "left",
-        "depthFocus": 0.9,
-        "panDistance": 2,
-        "zoomDuration": 18
-      }
-    },
-    "160-were-closed": {
-      "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s8/160-were-closed/depth.png",
-        "depthMotion": "truck",
-        "depthAmount": 0.3,
-        "depthSeconds": 18,
-        "depthDirection": "right",
-        "depthFocus": 0.55,
-        "panDistance": 2,
-        "zoomDuration": 18
-      }
-    },
-    "184-a-gap-in-someones-teeth": {
-      "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s15/184-a-gap-in-someones-teeth/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.26,
-        "depthSeconds": 20,
-        "focalPoint": "46% 48%",
-        "panDistance": 2,
-        "zoomDuration": 20
-      }
-    },
-    "203-the-sea-wall-steps": {
-      "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s28/203-the-sea-wall-steps/depth.png",
-        "depthMotion": "truck",
-        "depthAmount": 0.35,
-        "depthSeconds": 18
-      }
-    },
-    "88-the-walkway": {
-      "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s78/88-the-walkway/depth.png",
-        "depthMotion": "truck",
-        "depthAmount": 0.35,
-        "depthSeconds": 18
-      }
-    },
-    "290-daylight-again": {
-      "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 16,
-        "depthMap": "/film/depth/s27a/290-daylight-again/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.25,
-        "depthSeconds": 16
-      }
-    },
-    "91-grey-light": {
-      "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s79/91-grey-light/depth.png",
-        "depthMotion": "truck",
-        "depthAmount": 0.3,
-        "depthSeconds": 18
-      }
-    },
-    "206-the-window-swollen-shut": {
-      "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 14,
-        "depthMap": "/film/depth/s33/206-the-window-swollen-shut/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.25,
-        "depthSeconds": 14
-      }
-    },
-    "207-the-pink-payphone": {
-      "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 14,
-        "depthMap": "/film/depth/s35/207-the-pink-payphone/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.25,
-        "depthSeconds": 14
       }
     }
   }
