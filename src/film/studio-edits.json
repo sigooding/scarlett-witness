@@ -44,7 +44,15 @@
       "musicLevel": 1.05,
       "letterbox": true,
       "autoAdvanceDelaySeconds": 232,
-      "autoAdvanceHideTimer": null
+      "autoAdvanceHideTimer": null,
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/montage/m4-railway-rain/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.22,
+        "depthSeconds": 32,
+        "focalPoint": "58% 54%"
+      }
     },
     "nw_s1": {
       "musicMode": "none",
@@ -1666,7 +1674,13 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.22,
+        "depthSeconds": 18,
+        "focalPoint": "50% 52%"
       }
     },
     "19-the-bar": {
@@ -1780,7 +1794,13 @@
             "pulseSeconds": 3,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s5/43-the-front-counter/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.14,
+        "depthSeconds": 20,
+        "focalPoint": "50% 48%"
       }
     },
     "164-depends-whos-calling": {
@@ -2282,7 +2302,14 @@
             "pulseSeconds": 2.3,
             "pulseAmount": 0.5
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.14,
+        "depthSeconds": 24,
+        "depthDirection": "left",
+        "depthFocus": 0.48
       }
     },
     "287-breakfast": {
@@ -2760,7 +2787,13 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
+        "depthMotion": "drift",
+        "depthAmount": 0.14,
+        "depthSeconds": 28,
+        "depthDirection": "left"
       }
     },
     "80-the-machine-waits": {
@@ -2784,7 +2817,13 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.2,
+        "depthSeconds": 16,
+        "focalPoint": "34% 52%"
       }
     },
     "81-static-in-a-window": {
@@ -2801,7 +2840,13 @@
             "pulseSeconds": 0.5,
             "pulseAmount": 1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.16,
+        "depthSeconds": 14,
+        "focalPoint": "52% 48%"
       }
     },
     "314-the-empty-crossing": {
@@ -2816,7 +2861,13 @@
             "pulseSeconds": 1.2,
             "pulseAmount": 0.3
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.28,
+        "depthSeconds": 18,
+        "focalPoint": "50% 54%"
       }
     },
     "202-the-old-song": {
@@ -3267,7 +3318,11 @@
             "pulseSeconds": 4,
             "pulseAmount": 0.25
           }
-        ]
+        ],
+        "depthMap": "/film/depth/s90/379-the-laundry/depth.png",
+        "depthMotion": "drift",
+        "depthAmount": 0.09,
+        "depthSeconds": 26
       }
     },
     "380-the-shrine-hatch": {
@@ -3327,7 +3382,13 @@
     },
     "307-the-gardener": {
       "cinematic": {
-        "colorGrade": "nolan-imax"
+        "colorGrade": "nolan-imax",
+        "mode": "static",
+        "depthMap": "/film/depth/s99a/307-the-gardener/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.22,
+        "depthSeconds": 24,
+        "focalPoint": "52% 50%"
       }
     },
     "75-one-desperate-blow": {
@@ -3345,6 +3406,47 @@
         "depthAmount": 0.4,
         "depthSeconds": 14,
         "focalPoint": "62% 42%"
+      }
+    },
+    "01-backstreet": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.24,
+        "depthSeconds": 16,
+        "focalPoint": "50% 52%"
+      }
+    },
+    "32-laundry-in-the-rain": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s3/32-laundry-in-the-rain/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.18,
+        "depthSeconds": 14,
+        "focalPoint": "49% 48%"
+      }
+    },
+    "29-apartment-block": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s3/29-apartment-block/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.18,
+        "depthSeconds": 24,
+        "depthDirection": "left",
+        "depthFocus": 0.48
+      }
+    },
+    "104-the-newsroom": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.14,
+        "depthSeconds": 20,
+        "focalPoint": "50% 50%"
       }
     }
   }
