@@ -1392,6 +1392,24 @@
     "371-the-coward-line": "A small, bitter laugh. She hides her mouth in her sleeve."
   },
   "pictureLook": {
+    "377-the-hive-remembered": {
+      "cinematic": {
+        "depthMap": "/film/depth/s1/377-the-hive-remembered/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 20,
+        "focalPoint": "50% 55%"
+      }
+    },
+    "51-the-interview-room": {
+      "cinematic": {
+        "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 14,
+        "depthDirection": "right"
+      }
+    },
     "10-the-shot": {
       "cinematic": {
         "mode": "shake",
@@ -1706,6 +1724,11 @@
     },
     "19-the-bar": {
       "cinematic": {
+        "depthMap": "/film/depth/s2/19-the-bar/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 50%",
         "lights": [
           {
             "x": 51,
@@ -1761,6 +1784,11 @@
     },
     "31-the-lit-window": {
       "cinematic": {
+        "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 16,
+        "depthDirection": "left",
         "lights": [
           {
             "x": 50,
