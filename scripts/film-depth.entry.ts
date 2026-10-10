@@ -48,10 +48,15 @@ const pictureFor = (name: string): string | null => {
 
 const depthEntries = Object.entries(look).filter(([, v]) => v.cinematic?.depthMap);
 console.log(`film depth: ${depthEntries.length} pictureLook entries name a depthMap`);
-// The shots this pass added: if any of these loses its depth entry the camera quietly falls back to a still.
-for (const name of ["228-nine-oclock", "297-the-glass-office", "153-the-rain-has-stopped", "337-engine-off",
-  "109-the-fortieth-floor", "160-were-closed", "229-like-a-date", "184-a-gap-in-someones-teeth"])
-  check(`${name} is wired for depth`, depthEntries.some(([k]) => k === name));
+// Pictures with people in them (docs/film-depth-layers.json "peopleInShot"): a depth map alone stretches a person as the camera
+// moves, so on these a depth entry must cut the people out (depthCutouts) and paint the gap behind them in (depthPlate).
+const layers = JSON.parse(readFileSync(join(ROOT, "docs/film-depth-layers.json"), "utf8"));
+const people: Record<string, string> = layers.peopleInShot ?? {};
+check("the list of pictures with people is there", Object.keys(people).length > 0);
+for (const [name, entry] of depthEntries)
+  if (people[name])
+    check(`${name} (${people[name]}): people cut out and the gap painted in`,
+      !!entry.cinematic!.depthPlate && (entry.cinematic!.depthCutouts ?? []).length > 0);
 
 for (const [name, entry] of depthEntries) {
   const c = entry.cinematic!;
@@ -60,6 +65,8 @@ for (const [name, entry] of depthEntries) {
   const rel = pic.slice(pic.indexOf("public/") + "public".length); // "/film/img/<scene>/<name>.jpg"
   const mapPath = join(ROOT, "public", c.depthMap!.replace(/^\//, ""));
   check(`${name}: depth map file exists`, existsSync(mapPath), c.depthMap);
+  // source-depth.png is the map as it was made, people still in it; the camera takes the depth.png made from it.
+  check(`${name}: depth map is not a source map with the people still in it`, !c.depthMap!.endsWith("/source-depth.png"), c.depthMap);
   const ps = imageSize(pic), ms = imageSize(mapPath);
   // The engine samples the map across the whole picture, so its aspect must equal the picture's, or the warp
   // slides against the picture as the camera moves. Depth-only maps are additionally kept at the picture's exact
@@ -71,6 +78,13 @@ for (const [name, entry] of depthEntries) {
   if (depthOnly)
     check(`${name}: depth-only map is the picture's exact size`, !!ps && !!ms && ps[0] === ms[0] && ps[1] === ms[1],
       `picture ${ps} map ${ms}`);
+  // The plate and the cut-outs are drawn over the picture, so each must exist and have the picture's aspect.
+  for (const [what, file] of [["plate", c.depthPlate], ...(c.depthCutouts ?? []).map((k, i) => [`cut-out ${i + 1}`, k.image])] as [string, string | undefined][]) {
+    if (!file) continue;
+    const path = join(ROOT, "public", file.replace(/^\//, ""));
+    const fs = existsSync(path) ? imageSize(path) : null;
+    check(`${name}: ${what} exists with the picture's aspect`, !!ps && !!fs && Math.abs(ps[0] / ps[1] - fs[0] / fs[1]) < 1e-3, `${file} ${fs}`);
+  }
   check(`${name}: not the dolly camera`, c.mode !== "dolly", c.mode);
   check(`${name}: engine would use the depth layer`, hasDepthParallax(c, rel), JSON.stringify({ mode: c.mode }));
 }
