@@ -810,7 +810,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoAdvanceTargetSceneId": "nw_prologue",
    "musicLevel": 1.05,
    "letterbox": true,
-   "autoAdvanceDelaySeconds": 232
+   "autoAdvanceDelaySeconds": 232,
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/montage/m4-railway-rain/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.22,
+    "depthSeconds": 32,
+    "focalPoint": "58% 54%"
+   }
   },
   {
    "id": "nw_prologue",
@@ -907,8 +915,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/01-backstreet.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "50% 52%",
       "zoomDuration": 21,
       "panDirection": "left",
       "panDistance": 2,
@@ -917,7 +925,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.24,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1143,8 +1155,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/383-the-empty-lane.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
+      "mode": "static",
+      "focalPoint": "50% 52%",
       "zoomDuration": 20,
       "panDirection": "right",
       "panDistance": 2,
@@ -1173,7 +1185,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.22,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2065,7 +2081,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s3/29-apartment-block.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "60% 42%",
       "zoomDuration": 22,
       "panDirection": "left",
@@ -2075,7 +2091,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s3/29-apartment-block/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.18,
+      "depthSeconds": 24,
+      "depthDirection": "left",
+      "depthFocus": 0.48
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2087,8 +2109,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s3/32-laundry-in-the-rain.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
+      "mode": "static",
+      "focalPoint": "49% 48%",
       "zoomDuration": 22,
       "panDirection": "left",
       "panDistance": 2,
@@ -2097,7 +2119,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s3/32-laundry-in-the-rain/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.18,
+      "depthSeconds": 14
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2599,8 +2625,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s5/43-the-front-counter.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
+      "mode": "static",
+      "focalPoint": "50% 48%",
       "zoomDuration": 16,
       "panDirection": "left",
       "panDistance": 2,
@@ -2629,7 +2655,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 3,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s5/43-the-front-counter/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.14,
+      "depthSeconds": 20
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8078,7 +8108,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s23/198-the-lanterns-sway.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "65% 50%",
       "zoomDuration": 16,
       "panDirection": "right",
@@ -8126,7 +8156,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 2.3,
         "pulseAmount": 0.5
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.14,
+      "depthSeconds": 24,
+      "depthDirection": "left",
+      "depthFocus": 0.48
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15996,7 +16032,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s75/79-the-hive-shut.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 17,
       "panDirection": "right",
@@ -16035,7 +16071,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
+      "depthMotion": "drift",
+      "depthAmount": 0.14,
+      "depthSeconds": 28,
+      "depthDirection": "left"
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16047,8 +16088,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s75/80-the-machine-waits.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "60% 42%",
+      "mode": "static",
+      "focalPoint": "34% 52%",
       "zoomDuration": 16,
       "panDirection": "left",
       "panDistance": 2,
@@ -16077,7 +16118,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.2,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16089,8 +16134,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s75/81-static-in-a-window.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
+      "mode": "static",
+      "focalPoint": "52% 48%",
       "zoomDuration": 19,
       "panDirection": "left",
       "panDistance": 2,
@@ -16110,7 +16155,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.5,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.16,
+      "depthSeconds": 14
      },
      "backgroundTransition": "glitch",
      "backgroundTransitionSpeed": 0.5,
@@ -16124,8 +16173,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s75/314-the-empty-crossing.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
+      "mode": "static",
+      "focalPoint": "50% 54%",
       "zoomDuration": 20,
       "panDirection": "left",
       "panDistance": 2,
@@ -16145,7 +16194,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 1.2,
         "pulseAmount": 0.3
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.28,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17268,8 +17321,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s82/104-the-newsroom.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "42% 38%",
+      "mode": "static",
+      "focalPoint": "50% 50%",
       "zoomDuration": 21,
       "panDirection": "right",
       "panDistance": 2,
@@ -17278,7 +17331,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.14,
+      "depthSeconds": 20
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19396,7 +19453,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 4,
       "pulseAmount": 0.25
      }
-    ]
+    ],
+    "depthMap": "/film/depth/s90/379-the-laundry/depth.png",
+    "depthMotion": "drift",
+    "depthAmount": 0.09,
+    "depthSeconds": 26
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -21102,8 +21163,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s99a/307-the-gardener.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "65% 50%",
+      "mode": "static",
+      "focalPoint": "52% 50%",
       "zoomDuration": 19,
       "panDirection": "right",
       "panDistance": 2,
@@ -21112,7 +21173,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s99a/307-the-gardener/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.22,
+      "depthSeconds": 24
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
