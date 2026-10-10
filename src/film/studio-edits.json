@@ -1569,12 +1569,7 @@
         },
         "mode": "pan",
         "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.25,
-        "depthSeconds": 18,
-        "focalPoint": "50% 60%"
+        "zoomDuration": 18
       }
     },
     "333-the-white-light": {
@@ -1656,12 +1651,7 @@
       "cinematic": {
         "mode": "pan",
         "panDistance": 2,
-        "zoomDuration": 16,
-        "depthMap": "/film/depth/s47/222-mud-and-impacts/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.22,
-        "depthSeconds": 16,
-        "focalPoint": "50% 55%"
+        "zoomDuration": 16
       }
     },
     "214-come-on-come-on": {
@@ -1729,12 +1719,7 @@
       "cinematic": {
         "mode": "pan",
         "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s73/388-through-the-crossing/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.24,
-        "depthSeconds": 18,
-        "focalPoint": "50% 58%"
+        "zoomDuration": 18
       }
     },
     "72-the-lost-heel": {
@@ -1800,12 +1785,7 @@
         ],
         "mode": "pan",
         "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.25,
-        "depthSeconds": 18,
-        "focalPoint": "50% 58%"
+        "zoomDuration": 18
       }
     },
     "383-the-empty-lane": {
@@ -3402,12 +3382,7 @@
         ],
         "mode": "pan",
         "panDistance": 2,
-        "zoomDuration": 16,
-        "depthMap": "/film/depth/s86/121-the-shutter/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.22,
-        "depthSeconds": 16,
-        "focalPoint": "50% 50%"
+        "zoomDuration": 16
       }
     },
     "124-the-repairman": {

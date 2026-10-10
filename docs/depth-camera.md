@@ -140,6 +140,41 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
 
 ## 6. Six depth-only shots added in this session
 
+**Correction (10 October, later):** the six were chosen as empty locations, but checking each map against its picture
+showed people in five of them. Those five had the depth move removed (see "Review" below). Only `305-the-plaza` keeps
+its depth move, and it has only small figures far off. The text below is the original write-up, kept for the record.
+
+### Review (10 October, later): people in five of the six
+
+A contact sheet of each picture beside its map showed:
+
+| Picture | What is in frame | Depth move |
+|---|---|---|
+| `121-the-shutter` | a woman with a raised arm and two men at a stall | removed |
+| `222-mud-and-impacts` | a man in a balaclava and a crouching man by a truck | removed |
+| `329-the-lane-the-watch` | a woman's back and arm in the foreground | removed |
+| `332-the-sedan-blocks-the-lane` | a man in a long coat in the street | removed |
+| `388-through-the-crossing` | a figure in the crosswalk | removed |
+| `305-the-plaza` | small figures far off | kept (`push`, 0.20) |
+
+The removal deletes only `depthMap`, `depthMotion`, `depthAmount`, `depthSeconds` and `focalPoint` from each entry in
+`src/film/studio-edits.json` (`pictureLook`). Their `mode: pan` / `panDistance` / `zoomDuration`, `lights`, `lensFlare` and
+`colorGrade` stay. The build regenerated `src/data/nobodysWitnessFilm.ts`; `focalPoint` for those five fell back to the
+build's default. It only drives the push move, so it no longer does anything there. The five maps stay in
+`public/film/depth/` but are not wired. They can go back in once each has cut-outs and a plate (§4), or a real
+Depth Anything map.
+
+`npm run test:film-depth` did not catch this: it checks only pictures listed in `peopleInShot`, and these five were not
+listed. Check people by eye on the contact sheet before wiring any depth-only shot.
+
+The regeneration needs the sibling `nobodys-witness` checkout (`FILM_SRC`, see `tools/build-film-story.mjs`). It was run
+with `FILM_SRC` pointing at a copy of `public/film/img`, `public/film/voice` and the three music files already in the repo.
+
+Depth Anything could not be run on 10 October (its weights come from `release-assets.githubusercontent.com`, which the
+sandbox could not reach), so no model-derived maps were made.
+
+### Original write-up (six depth-only shots)
+
 Six empty-location shots were given the depth-map camera in one pass. They are all **depth-only** — no `depthPlate`,
 no `depthCutouts`, `mode: pan`, `depthMotion: push` — chosen because they are streets, a crossing, a plaza and a
 storefront: locations where a depth map alone reads well and, per `peopleInShot`, there are no people in them to
