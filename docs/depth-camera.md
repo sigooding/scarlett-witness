@@ -134,6 +134,9 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
 
    writes frames at exact times; put the first and the last side by side and look at the edges of people and objects, the
    straight lines (shutters, door frames) and the floor. Check once with reduced motion on (the still picture shows).
+   The scene id is the one the picture plays in: `nw_` and the scene folder for most, but the raid's backdrops play in
+   `nw_song_raid_N` nodes. The recorder stops when the film moves on and says after how long: a beat that ends its
+   scene with an automatic cut, or a shot in a timed sequence, shows only the start of a long move (FILM.md lists them).
 
 ## Setting up the tools
 
