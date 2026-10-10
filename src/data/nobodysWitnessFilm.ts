@@ -1090,7 +1090,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/329-the-lane-the-watch.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "50% 58%",
+      "focalPoint": "42% 38%",
       "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
@@ -1119,11 +1119,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ],
-      "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 18
+      ]
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1325,7 +1321,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/332-the-sedan-blocks-the-lane.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "50% 60%",
+      "focalPoint": "60% 42%",
       "zoomDuration": 18,
       "panDirection": "left",
       "panDistance": 2,
@@ -1344,11 +1340,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "starburstIntensity": 0.25,
        "ghostIntensity": 0.4,
        "pulseAmount": 0.15
-      },
-      "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.25,
-      "depthSeconds": 18
+      }
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11572,7 +11564,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s47/222-mud-and-impacts.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "50% 55%",
+      "focalPoint": "65% 50%",
       "zoomDuration": 16,
       "panDirection": "right",
       "panDistance": 2,
@@ -11581,11 +11573,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s47/222-mud-and-impacts/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.22,
-      "depthSeconds": 16
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15647,7 +15635,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s73/388-through-the-crossing.jpg",
      "cinematic": {
       "mode": "pan",
-      "focalPoint": "50% 58%",
+      "focalPoint": "50% 45%",
       "zoomDuration": 18,
       "panDirection": "right",
       "panDistance": 2,
@@ -15656,11 +15644,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s73/388-through-the-crossing/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.24,
-      "depthSeconds": 18
+      "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -18819,7 +18803,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/s86/121-the-shutter.jpg",
    "cinematic": {
     "mode": "pan",
-    "focalPoint": "50% 50%",
+    "focalPoint": "42% 38%",
     "zoomDuration": 16,
     "panDirection": "right",
     "panDistance": 2,
@@ -18839,11 +18823,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 4,
       "pulseAmount": 0.25
      }
-    ],
-    "depthMap": "/film/depth/s86/121-the-shutter/depth.png",
-    "depthMotion": "push",
-    "depthAmount": 0.22,
-    "depthSeconds": 16
+    ]
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
