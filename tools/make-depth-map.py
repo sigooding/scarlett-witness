@@ -88,6 +88,22 @@ MAPS = {
     # the block itself is one flat far surface.
     "184-a-gap-in-someones-teeth": dict(horizon=0.52, ground=1.0, detail=0.45, contrast=0.3, smooth=6.0,
                                         anchors=[[0.00, 0.86, 1.00, 1.00, 0.95], [0.00, 0.00, 1.00, 0.20, 0.05]]),
+    # Scene 4: the apartment, empty of people. The table and the lamp in front are the nearest things; the window
+    # wall and the room behind it are far.
+    "33-the-apartment": dict(horizon=0.60, ground=0.9, detail=0.5, contrast=0.3, smooth=5.0,
+                             anchors=[[0.00, 0.86, 1.00, 1.00, 0.95]]),
+    # Scene 2: the bar, empty. The long corridor of bottles and stools runs away to the lit TV at the far end; the
+    # stools and the floor at the bottom of the frame are close.
+    "19-the-bar": dict(horizon=0.46, ground=1.0, detail=0.45, contrast=0.3, smooth=5.0,
+                       anchors=[[0.00, 0.88, 1.00, 1.00, 0.95], [0.40, 0.30, 0.60, 0.52, 0.10]]),
+    # Scene 31: the only car outside the building at night. The wet gravel and the car are near; the building
+    # front and the dark sky are far.
+    "169-the-only-car": dict(horizon=0.52, ground=1.0, detail=0.4, contrast=0.35, smooth=5.0,
+                             anchors=[[0.00, 0.00, 1.00, 0.18, 0.02], [0.00, 0.88, 1.00, 1.00, 0.95]]),
+    # Scene 100: the back-street bar with the news on the set. The counter and stools are near, the back wall
+    # and the shutter are far.
+    "320-the-news-nobody-watches": dict(horizon=0.48, ground=0.9, detail=0.45, contrast=0.3, smooth=5.0,
+                                        anchors=[[0.00, 0.00, 1.00, 0.14, 0.05], [0.00, 0.90, 1.00, 1.00, 0.95]]),
 }
 
 

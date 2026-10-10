@@ -1703,7 +1703,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2/19-the-bar.jpg",
      "cinematic": {
-      "mode": "pan",
+      "mode": "static",
       "focalPoint": "65% 50%",
       "zoomDuration": 22,
       "panDirection": "right",
@@ -1733,7 +1733,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s2/19-the-bar/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 18,
+      "depthDirection": "right",
+      "depthFocus": 0.6
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2228,8 +2234,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s4/33-the-apartment.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "50% 55%",
       "zoomDuration": 21,
       "panDirection": "left",
       "panDistance": 2,
@@ -2238,7 +2244,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
       "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGradeStrength": 0.3,
+      "depthMap": "/film/depth/s4/33-the-apartment/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.3,
+      "depthSeconds": 18
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9839,7 +9849,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s31/169-the-only-car.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "42% 38%",
       "zoomDuration": 15,
       "panDirection": "right",
@@ -9869,7 +9879,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s31/169-the-only-car/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.3,
+      "depthSeconds": 18,
+      "depthDirection": "left",
+      "depthFocus": 0.5
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -21344,8 +21360,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s100/320-the-news-nobody-watches.jpg",
      "cinematic": {
-      "mode": "pan",
-      "focalPoint": "65% 50%",
+      "mode": "static",
+      "focalPoint": "62% 45%",
       "zoomDuration": 16,
       "panDirection": "right",
       "panDistance": 2,
@@ -21374,7 +21390,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.5,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "depthMap": "/film/depth/s100/320-the-news-nobody-watches/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.25,
+      "depthSeconds": 16
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9

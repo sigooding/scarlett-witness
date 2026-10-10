@@ -1715,7 +1715,14 @@
             "pulseSeconds": 5,
             "pulseAmount": 0.15
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s2/19-the-bar/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "depthDirection": "right",
+        "depthFocus": 0.6
       }
     },
     "21-mara-bursts-in": {
@@ -2226,7 +2233,13 @@
             "pulseSeconds": 0.5,
             "pulseAmount": 1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s100/320-the-news-nobody-watches/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 16,
+        "focalPoint": "62% 45%"
       }
     },
     "197-you-never-call": {
@@ -2447,7 +2460,14 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s31/169-the-only-car/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "depthDirection": "left",
+        "depthFocus": 0.5
       }
     },
     "170-just-one-night": {
@@ -3649,6 +3669,16 @@
         "depthAmount": 0.26,
         "depthSeconds": 20,
         "focalPoint": "46% 48%"
+      }
+    },
+    "33-the-apartment": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s4/33-the-apartment/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "focalPoint": "50% 55%"
       }
     }
   }
