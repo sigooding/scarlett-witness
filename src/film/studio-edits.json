@@ -1976,6 +1976,12 @@
     },
     "337-engine-off": {
       "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 55%",
         "lights": [
           {
             "x": 77,
@@ -2537,6 +2543,12 @@
     },
     "228-nine-oclock": {
       "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s61/228-nine-oclock/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.32,
+        "depthSeconds": 18,
+        "focalPoint": "50% 55%",
         "lights": [
           {
             "x": 36,
@@ -2910,6 +2922,12 @@
     },
     "229-like-a-date": {
       "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s62/229-like-a-date/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 60%",
         "lights": [
           {
             "x": 35,
@@ -3371,6 +3389,12 @@
     },
     "153-the-rain-has-stopped": {
       "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.28,
+        "depthSeconds": 18,
+        "focalPoint": "50% 60%",
         "colorGrade": "nolan-imax"
       }
     },
@@ -3582,6 +3606,49 @@
         "depthSeconds": 16,
         "depthDirection": "right",
         "depthFocus": 0.6
+      }
+    },
+    "297-the-glass-office": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s53a/297-the-glass-office/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 20,
+        "depthDirection": "right",
+        "depthFocus": 0.25
+      }
+    },
+    "109-the-fortieth-floor": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s83/109-the-fortieth-floor/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "depthDirection": "left",
+        "depthFocus": 0.9
+      }
+    },
+    "160-were-closed": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s8/160-were-closed/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "depthDirection": "right",
+        "depthFocus": 0.55
+      }
+    },
+    "184-a-gap-in-someones-teeth": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s15/184-a-gap-in-someones-teeth/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.26,
+        "depthSeconds": 20,
+        "focalPoint": "46% 48%"
       }
     }
   }
