@@ -1581,7 +1581,12 @@
       "cinematic": {
         "mode": "shake",
         "shakeAmount": 0.15,
-        "shakeDuration": 0.7
+        "shakeDuration": 0.7,
+        "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "focalPoint": "50% 55%"
       }
     },
     "70-not-elegantly-badly": {
@@ -1626,7 +1631,13 @@
             "pulseSeconds": 6,
             "pulseAmount": 0.1
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s1/02-vending/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "30% 50%"
       }
     },
     "329-the-lane-the-watch": {
@@ -2400,7 +2411,13 @@
           "starburstIntensity": 0.2,
           "ghostIntensity": 0.3,
           "pulseAmount": 0.15
-        }
+        },
+        "mode": "static",
+        "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "focalPoint": "55% 55%"
       }
     },
     "169-the-only-car": {
@@ -2676,7 +2693,13 @@
             "pulseSeconds": 1,
             "pulseAmount": 0.3
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 60%"
       }
     },
     "74-twenty-metres-apart": {
@@ -3052,7 +3075,13 @@
             "pulseSeconds": 2.2,
             "pulseAmount": 0.12
           }
-        ]
+        ],
+        "mode": "static",
+        "depthMap": "/film/depth/s95/142-taillights/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 62%"
       }
     },
     "119-single-file": {
@@ -3447,6 +3476,112 @@
         "depthAmount": 0.14,
         "depthSeconds": 20,
         "focalPoint": "50% 50%"
+      }
+    },
+    "173-four-black-sedans": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18,
+        "depthDirection": "right",
+        "depthFocus": 0.7
+      }
+    },
+    "134-the-walkway-is-empty": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18,
+        "depthDirection": "left",
+        "depthFocus": 0.55
+      }
+    },
+    "30-the-elevated-line": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18,
+        "depthDirection": "left",
+        "depthFocus": 0.5
+      }
+    },
+    "78-the-empty-lounge": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 18,
+        "depthDirection": "right",
+        "depthFocus": 0.5
+      }
+    },
+    "364-the-kotatsu": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 58%"
+      }
+    },
+    "68-the-clock": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s7/68-the-clock/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.25,
+        "depthSeconds": 14,
+        "focalPoint": "62% 45%"
+      }
+    },
+    "278-the-clock-reads-ten": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s66/278-the-clock-reads-ten/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.2,
+        "depthSeconds": 14,
+        "focalPoint": "50% 45%"
+      }
+    },
+    "313-drawings-in-the-water": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s71/313-drawings-in-the-water/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.35,
+        "depthSeconds": 18,
+        "depthDirection": "left",
+        "depthFocus": 0.6
+      }
+    },
+    "179-same-wood": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+        "depthMotion": "push",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "focalPoint": "50% 55%"
+      }
+    },
+    "144-empty": {
+      "cinematic": {
+        "mode": "static",
+        "depthMap": "/film/depth/s96/144-empty/depth.png",
+        "depthMotion": "truck",
+        "depthAmount": 0.3,
+        "depthSeconds": 16,
+        "depthDirection": "right",
+        "depthFocus": 0.6
       }
     }
   }
