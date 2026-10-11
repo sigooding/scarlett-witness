@@ -1858,8 +1858,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
-   "musicMode": "none",
-   "musicFadeSeconds": 2
+   "musicMode": "track",
+   "musicUrl": "/film/audio/glimmering-haze.mp3",
+   "musicLevel": 0.3,
+   "musicFadeSeconds": 2,
+   "musicLoop": true
   },
   {
    "id": "nw_s2",
@@ -2238,7 +2241,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/glimmering-haze.mp3",
+   "musicLevel": 0.3,
+   "musicLoop": true,
+   "musicFadeSeconds": 2
   },
   {
    "id": "nw_s3",
@@ -12267,7 +12275,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the inn: Boots on the stairs. Jack goes the other",
    "background": "/film/img/s41/177-boots-below.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "shake",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "panDirection": "right",
@@ -12277,7 +12285,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.5
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12321,8 +12331,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "neon-noir",
     "filmGrade": true,
     "filmGradeStrength": 0.3,
-    "shakeAmount": 0.45,
-    "shakeDuration": 0.25
+    "shakeAmount": 0.4,
+    "shakeDuration": 0.3
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12357,9 +12367,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the inn: Through the bathroom door.",
    "background": "/film/img/s41/179-same-wood.jpg",
    "cinematic": {
-    "mode": "pan",
-    "focalPoint": "50% 55%",
-    "zoomDuration": 16,
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 21,
     "panDirection": "left",
     "panDistance": 2,
     "dollyDirection": "left",
@@ -12368,17 +12378,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "neon-noir",
     "filmGrade": true,
     "filmGradeStrength": 0.3,
-    "depthMap": "/film/depth/s41/179-same-wood/depth.png",
-    "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
-    "depthCutouts": [
-     {
-      "image": "/film/depth/s41/179-same-wood/cutout-1.png",
-      "depth": 0.365
-     }
-    ],
-    "depthMotion": "push",
-    "depthAmount": 0.54,
-    "depthSeconds": 16
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.5
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",

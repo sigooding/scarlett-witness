@@ -65,19 +65,25 @@
       }
     },
     "nw_s1": {
-      "musicMode": "none",
-      "musicUrl": null,
-      "musicLevel": null,
+      "musicMode": "track",
+      "musicUrl": "/film/audio/glimmering-haze.mp3",
+      "musicLevel": 0.3,
       "musicFadeSeconds": 2,
       "autoAdvanceTargetSceneId": null,
       "autoAdvanceDelaySeconds": null,
-      "autoAdvanceHideTimer": null
+      "autoAdvanceHideTimer": null,
+      "musicLoop": true
     },
     "nw_s3": {
       "musicMode": "none"
     },
     "nw_s2": {
-      "autoAdvanceTargetSceneId": null
+      "autoAdvanceTargetSceneId": null,
+      "musicMode": "track",
+      "musicUrl": "/film/audio/glimmering-haze.mp3",
+      "musicLevel": 0.3,
+      "musicLoop": true,
+      "musicFadeSeconds": 2
     },
     "nw_prologue": {
       "autoAdvanceTargetSceneId": null,
@@ -3896,21 +3902,9 @@
     },
     "179-same-wood": {
       "cinematic": {
-        "mode": "pan",
-        "depthMap": "/film/depth/s41/179-same-wood/depth.png",
-        "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
-        "depthCutouts": [
-          {
-            "image": "/film/depth/s41/179-same-wood/cutout-1.png",
-            "depth": 0.365
-          }
-        ],
-        "depthMotion": "push",
-        "depthAmount": 0.54,
-        "depthSeconds": 16,
-        "focalPoint": "50% 55%",
-        "panDistance": 2,
-        "zoomDuration": 16
+        "mode": "shake",
+        "shakeAmount": 0.25,
+        "shakeDuration": 0.5
       }
     },
     "144-empty": {
@@ -3952,6 +3946,13 @@
         "mode": "shake",
         "shakeAmount": 0.25,
         "shakeDuration": 0.3
+      }
+    },
+    "177-boots-below": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.25,
+        "shakeDuration": 0.5
       }
     }
   },

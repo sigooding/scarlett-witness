@@ -6,6 +6,23 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## Scenes 1 and 2 to *Glimmering Haze*; the inn raid to *Hounds*, with Jack running (11 October 2026, late)
+
+* **Scenes 1 and 2:** the director's *Glimmering Haze* loops under the backstreet and the bar.
+  * The upload is `public/film/audio/Glimmering%20Haze (1).mp3` (61 s), left as uploaded.
+  * `glimmering-haze.mp3` is the same song with its 0.45 s of leading silence cut off, so each loop comes back without a gap.
+  * Both `nw_s1` and `nw_s2` set it in `src/film/studio-edits.json` (`musicLoop: true`, level 0.3, 2 s fade). Scene 2 keeps the track running instead of restarting it, and a reader who opens the film at scene 2 still hears it.
+  * The title song still cuts in on the opening titles.
+* **The inn raid** (the `inn-raid` cutscene, 39–49) plays to the director's *Hounds* (`public/film/audio/hounds.mp3`).
+  * The builder stretches the caption shots so the raid ends with the song.
+  * Scene 50 fades it out.
+* **Jack runs instead of walking while he is shot at.** PlayFrame reshot the three upstairs frames:
+  * `177-boots-below`: he runs from the stair-top as the masked man charges up.
+  * `178-the-screens`: he sprints at camera as the screens burst.
+  * `179-same-wood`: he runs through the bathroom door.
+  * 177 and 179 get a running shake; 178 keeps its gunfire shake.
+  * 179 was one of the fourteen depth shots on the director's own maps (below). Its map, plate and cut-out were made from the old picture, with Jack walking, so they no longer fit. The shot now plays the running shake instead. The files stay in `public/film/depth/s41/179-same-wood/` unused; a new map would have to be made from the new picture.
+
 ## The lounge piano; no gunshot in Mara's memory (11 October 2026)
 
 * **Scene 66** (Vera waiting in the lounge, the pianist playing) starts the director's piano version of "Bad Guy"
