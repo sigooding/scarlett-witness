@@ -71,6 +71,9 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
   const [size, setSize] = useState("1280x720");
   const [fps, setFps] = useState(24);
   const [pace, setPace] = useState(1);
+  // a graphics card draws the frames and encodes the video much faster; parts render stretches of the film at once
+  const [gpu, setGpu] = useState(true);
+  const [parts, setParts] = useState(3);
   const [server, setServer] = useState<"checking" | "yes" | "no">("checking");
   const [job, setJob] = useState<Job | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -114,7 +117,7 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
   const search = new URLSearchParams({ story: story.id, scene: start0, animatic: "1", subs: subtitles ? "1" : "0", desc: descriptions ? "1" : "0", pace: String(pace) });
   if (toLast) search.set("to", toLast);
   const previewUrl = `${window.location.pathname}?${search}`;
-  const flags = `${size !== "1280x720" ? ` --size ${size}` : ""}${fps !== 24 ? ` --fps ${fps}` : ""}${pace !== 1 ? ` --pace ${pace}` : ""}${subtitles ? "" : " --no-subs"}${descriptions ? "" : " --no-desc"}`;
+  const flags = `${gpu ? " --gpu" : ""}${parts > 1 ? ` --parts ${parts}` : ""}${size !== "1280x720" ? ` --size ${size}` : ""}${fps !== 24 ? ` --fps ${fps}` : ""}${pace !== 1 ? ` --pace ${pace}` : ""}${subtitles ? "" : " --no-subs"}${descriptions ? "" : " --no-desc"}`;
   const command = `npm run export:animatic${whole ? (flags ? ` --${flags}` : "") : ` -- --from ${from} --to ${toLast}${flags}`}`;
 
   const start = () => {
@@ -122,7 +125,7 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
     fetch("/__animatic/jobs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ from: start0, to: toLast, whole, size, fps, pace, subtitles, descriptions }),
+      body: JSON.stringify({ from: start0, to: toLast, whole, size, fps, pace, subtitles, descriptions, gpu, parts }),
     })
       .then(async (r) => {
         const j = await r.json();
@@ -201,6 +204,15 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
                 {[24, 25, 30, 12].map((f) => <option key={f} value={f}>{f} fps</option>)}
               </select>
             </div>
+          </label>
+          <label className="flex items-center gap-2 font-type text-sm text-paper/80">
+            <input type="checkbox" checked={gpu} disabled={busy} onChange={(e) => setGpu(e.target.checked)} /> Use the graphics card
+          </label>
+          <label className="block">
+            <span className={label}>Render at once</span>
+            <select className={select} value={parts} disabled={busy} onChange={(e) => setParts(Number(e.target.value))}>
+              {[1, 2, 3, 4, 6].map((n) => <option key={n} value={n}>{n === 1 ? "1 part (one browser)" : `${n} parts (${n} browsers)`}</option>)}
+            </select>
           </label>
           <label className="block">
             <span className={label}>Reading pace</span>

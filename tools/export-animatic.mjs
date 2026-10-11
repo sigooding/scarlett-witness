@@ -10,6 +10,7 @@
 //            --gpu (use the graphics card instead of software rendering)  --progress-json (one JSON line per update)
 //            --debug (also writes debug.json: every caption, scene change, sound and ambience event the page logged)
 //            --keep-parts (keep picture.mp4 and sound.wav, which are otherwise deleted once animatic.mp4 is made)
+//            --parts N (render N stretches of the film at once, each in its own browser, and join them: tools/animatic-parts.mjs)
 //   needs ffmpeg (on the PATH, or FFMPEG=<path>) and Playwright's Chromium (or PLAYWRIGHT_CHROMIUM_PATH)
 //
 // How: the real game runs in headless Chromium on a test clock, in animatic mode (?animatic=1: hands-off, captions drawn
@@ -25,6 +26,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 import { ambientLayers, makeDecoder, mediaSegments, synthEvents, writeMix } from "./animatic-mix.mjs";
+import { nvencWorks, planParts, runParts, safeStarts, srtText } from "./animatic-parts.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const FILM_ID = "nobodys-witness-film";
@@ -49,6 +51,12 @@ const outDir = resolve(opt("out", join(ROOT, "exports/animatics", whole ? "whole
 const json = has("progress-json");
 const FFMPEG = process.env.FFMPEG || "ffmpeg";
 const maxSeconds = Number(opt("max-seconds", String(6 * 3600)));
+const gpu = has("gpu");
+const parts = Math.max(1, Math.min(8, Math.round(Number(opt("parts", "1")) || 1)));
+// a part of a --parts render: no sound fade at its end, no final file of its own, and it stops if its parent goes
+const child = has("child");
+const parentPid = Number(opt("parent", "0"));
+if (child && parentPid) setInterval(() => { try { process.kill(parentPid, 0); } catch { process.exit(1); } }, 3000).unref();
 
 const say = (msg) => (json ? console.log(JSON.stringify({ type: "log", message: msg })) : console.log(msg));
 let stopServer = () => {};
@@ -89,7 +97,7 @@ function filmOrder(story) {
  *  src/game/animatic.tsx (a scene heading 2.4 s, a silent line its reading time, a recorded line its length and 0.7 s,
  *  a scene's last line before its cut), the titles and montages for their set time and the end credits for their song.
  *  Sent with the progress, so the dialog can say how long the render has left. */
-function estimateSeconds(durations) {
+function estimator(durations) {
   const by = new Map(film.scenes.map((s) => [s.id, s]));
   const lengthOf = (url) => durations[decodeURIComponent(String(url).split(/[?#]/)[0])];
   // the same timings and joined action lines as src/game/animatic.tsx (readingSeconds, AFTER_VOICE_SECONDS, joinActionLines)
@@ -103,16 +111,20 @@ function estimateSeconds(durations) {
     return out;
   }, []);
   const inTo = (id) => !!to && (id === to || id.startsWith(`${to}_`));
-  let total = 0, reached = false;
+  const ids = [];
+  let reached = false;
   for (const id of order.slice(order.indexOf(from))) {
     if (inTo(id)) reached = true;
     else if (reached) break;
+    if (!by.get(id) || by.get(id).isEnding) break;
+    ids.push(id);
+  }
+  const secondsOf = (id) => {
     const s = by.get(id);
-    if (!s || s.isEnding) break;
+    let total = 0;
     if (s.nodeType === "credits") {
       // the titles and montages run for their set time; the end credits for their cards (measured: 32 cards of 3.2 s, 110 s)
-      total += s.autoAdvanceDelaySeconds ?? (s.credits?.lines?.length ?? 10) * (s.credits?.cardSeconds ?? 3) + 7;
-      continue;
+      return s.autoAdvanceDelaySeconds ?? (s.credits?.lines?.length ?? 10) * (s.credits?.cardSeconds ?? 3) + 7;
     }
     const prose = (s.prose ?? "").trim();
     if (prose) total += /^(INT|EXT|I\/E)[./\s]/i.test(prose) ? 1.6 * pace : read(prose);
@@ -122,9 +134,9 @@ function estimateSeconds(durations) {
       if (b.audioUrl) total += (lengthOf(b.audioUrl) ?? 3) + (last ? delay ?? 1 : 0.45) + 0.1;
       else total += last ? (delay === 1 || delay == null ? Math.max(1, read(b.text)) : delay) : read(b.text) + 0.05;
     });
-    total += Math.min(2.4, Number(s.transitionSpeed) || 1.1);
-  }
-  return Math.round(total);
+    return total + Math.min(2.4, Number(s.transitionSpeed) || 1.1);
+  };
+  return { ids, secondsOf, total: Math.round(ids.reduce((t, id) => t + secondsOf(id), 0)) };
 }
 
 /* ------------------------------ audio file lengths ------------------------------ */
@@ -169,8 +181,11 @@ async function audioDurations() {
       }
     });
   }
-  mkdirSync(dirname(cacheFile), { recursive: true });
-  writeFileSync(cacheFile, JSON.stringify(cache));
+  // only when something was measured (the parts of a --parts render all start at once and find everything measured)
+  if (todo.length) {
+    mkdirSync(dirname(cacheFile), { recursive: true });
+    writeFileSync(cacheFile, JSON.stringify(cache));
+  }
   return out;
 }
 
@@ -409,15 +424,45 @@ function pageSetup(durations) {
 /* ------------------------------ run ------------------------------ */
 const durations = await audioDurations();
 say(`${Object.keys(durations).length} audio files measured`);
-const estimate = estimateSeconds(durations);
+const est = estimator(durations);
+const estimate = est.total;
 say(`${whole ? "the whole film" : `${from} to ${to ?? "the end"}`}: about ${Math.round(estimate / 60)} min of film`);
 const server = opt("url", null) ? { url: opt("url"), stop: () => {} } : await startServer();
-const gpu = has("gpu");
+// H.264 on the graphics card when it can (NVIDIA's NVENC), else on the processor; every part of a --parts render
+// uses the same, so they join without re-encoding
+const encoder = opt("encoder", null) ?? (gpu && nvencWorks(FFMPEG) ? "nvenc" : "x264");
+if (!child) say(`encoding with ${encoder === "nvenc" ? "the graphics card (NVENC)" : "the processor (x264)"}`);
+
+if (parts > 1 && !child) {
+  const plan = planParts(est.ids, est.secondsOf, safeStarts(film, order), parts, to);
+  say(`in ${plan.length} parts at once: ${plan.map((p) => `${p.from} to ${p.to ?? "the end"} (about ${Math.round(p.seconds / 60)} min)`).join(", ")}`);
+  const forward = ["--size", `${W}x${H}`, "--fps", String(fps), "--pace", String(pace), "--url", server.url, "--encoder", encoder,
+    ...(subs ? [] : ["--no-subs"]), ...(desc ? [] : ["--no-desc"]), ...(gpu ? ["--gpu"] : [])];
+  let joined;
+  try {
+    joined = await runParts({
+      plan, script: fileURLToPath(import.meta.url), forward, outDir, ffmpeg: FFMPEG, estimate, keep: has("keep-parts"), say,
+      onProgress: (m) => (json ? console.log(JSON.stringify({ type: "progress", ...m })) : process.stdout.write(`\r${(m.seconds / 60).toFixed(1)} of about ${Math.round(estimate / 60)} min of film`.padEnd(60))),
+    });
+  } catch (e) {
+    fail(String(e?.message ?? e));
+  }
+  if (!json) process.stdout.write("\n");
+  const report = finish({ seconds: joined.seconds, chapters: joined.chapters, captions: joined.captions, picture: joined.picture, sound: joined.sound, fadeOut: !!to,
+    extra: { frames: joined.frames, sound: joined.sound, renderer: joined.renderer, encoder, parts: joined.parts, renderMinutes: joined.renderMinutes, pageErrors: joined.pageErrors, warnings: joined.warnings } });
+  server.stop();
+  if (json) console.log(JSON.stringify({ type: "done", ...report }));
+  else console.log(`${report.seconds.toFixed(1)} s in ${joined.parts.length} parts, ${report.captions} captions → ${join(outDir, "animatic.mp4")}`);
+  process.exit(0);
+}
+
+// --gpu: the full Chromium (its new headless mode draws with the graphics card; the slim headless shell does not)
 const browser = await chromium.launch({
   executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH || undefined,
+  ...(gpu && !process.env.PLAYWRIGHT_CHROMIUM_PATH ? { channel: "chromium" } : {}),
   args: [
     "--autoplay-policy=no-user-gesture-required",
-    ...(gpu ? ["--ignore-gpu-blocklist", "--enable-gpu-rasterization"] : ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"]),
+    ...(gpu ? ["--ignore-gpu-blocklist", "--enable-gpu", "--enable-gpu-rasterization", "--enable-zero-copy"] : ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"]),
   ],
 });
 const cleanup = async () => {
@@ -440,6 +485,12 @@ const q = new URLSearchParams({ story: FILM_ID, scene: from, animatic: "1", subs
 if (to) q.set("to", to);
 await page.goto(`${server.url}/?${q}`, { waitUntil: "load" });
 await page.evaluate(() => document.fonts.ready);
+const renderer = await page.evaluate(() => {
+  const gl = document.createElement("canvas").getContext("webgl");
+  const info = gl?.getExtension("WEBGL_debug_renderer_info");
+  return gl ? String(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)) : "no WebGL";
+});
+say(`drawing with ${renderer}`);
 // the film must play through once: a reload would start it again from the first scene
 let reloads = 0;
 page.on("load", () => reloads++);
@@ -473,7 +524,8 @@ for (let i = 0; i < 400; i++) {
 
 const outVideo = join(outDir, "picture.mp4");
 const enc = spawn(FFMPEG, ["-nostdin", "-y", "-v", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", String(fps), "-i", "-",
-  "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-r", String(fps), outVideo], { stdio: ["pipe", "ignore", "pipe"] });
+  ...(encoder === "nvenc" ? ["-c:v", "h264_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", "19", "-b:v", "0"] : ["-c:v", "libx264", "-preset", "medium", "-crf", "18"]),
+  "-pix_fmt", "yuv420p", "-r", String(fps), outVideo], { stdio: ["pipe", "ignore", "pipe"] });
 let encErr = "";
 enc.stderr.on("data", (d) => (encErr += d));
 const write = (buf) => new Promise((done) => (enc.stdin.write(buf) ? done() : enc.stdin.once("drain", done)));
@@ -568,50 +620,62 @@ if (Math.abs(drift) > 1000 / fps + 1) warnings.push(`the page's clock and the fi
 const mixed = writeMix({
   wavPath: wav, t0, seconds, segments, layers, synths, decode,
   // a part of the film ends with the sound faded out over a second, not cut off
-  fadeOutSeconds: to || frame >= maxFrames ? 1 : 0,
+  fadeOutSeconds: !child && (to || frame >= maxFrames) ? 1 : 0,
   synth: (key) => renders.get(key) ?? null,
   ambient: (preset) => renders.get(`ambient:${preset}`) ?? null,
   onWarn: (w) => warnings.push(w),
 });
 
 /* ------------------------------ captions, chapters, the file ------------------------------ */
-const stamp = (s) => {
-  const ms = Math.max(0, Math.round(s * 1000));
-  const p = (n, w = 2) => String(n).padStart(w, "0");
-  return `${p(Math.floor(ms / 3600000))}:${p(Math.floor(ms / 60000) % 60)}:${p(Math.floor(ms / 1000) % 60)},${p(ms % 1000, 3)}`;
-};
-const srt = [];
 // the film stops where it left the chosen scenes: the next scene's first line, drawn as it began, is not part of it
 const stopAt = Math.min(tEnd, logs.doneAt ?? Infinity);
+const captions = [];
 cues.forEach((c, i) => {
   if (!c.text || c.t >= stopAt) return;
   const a = (c.t - t0) / 1000, b = (Math.min(cues[i + 1]?.t ?? stopAt, stopAt) - t0) / 1000;
   // under a tenth of a second is not a caption: the game drawing the scene before it has moved to the scene's first line
   if (b <= 0 || a >= seconds || b - a < 0.1) return;
   const text = c.kind === "subtitle" ? `${c.speaker ? `${c.speaker.toUpperCase()}: ` : ""}${c.text}` : c.kind === "heading" ? `[${c.text}]` : `<i>${c.text}</i>`;
-  srt.push(`${srt.length + 1}\n${stamp(Math.max(0, a))} --> ${stamp(Math.min(seconds, b))}\n${text}\n`);
+  captions.push({ a: Math.max(0, a), b: Math.min(seconds, b), text });
 });
-writeFileSync(join(outDir, "captions.srt"), srt.join("\n"));
-const meta = [";FFMETADATA1", `title=Nobody's Witness — animatic (${from}${to ? ` to ${to}` : " to the end"})`];
-chapters.forEach((c, i) => {
-  const end = chapters[i + 1]?.t ?? seconds;
-  meta.push("[CHAPTER]", "TIMEBASE=1/1000", `START=${Math.round(c.t * 1000)}`, `END=${Math.round(end * 1000)}`, `title=${String(c.title).replace(/[=;#\\\n]/g, " ")}`);
-});
-writeFileSync(join(outDir, "chapters.txt"), `${meta.join("\n")}\n`);
-const mp4 = join(outDir, "animatic.mp4");
-const mux = spawnSync(FFMPEG, ["-nostdin", "-y", "-v", "error", "-i", outVideo, "-i", wav, "-f", "ffmetadata", "-i", join(outDir, "chapters.txt"),
-  "-map", "0:v", "-map", "1:a", "-map_metadata", "2", "-map_chapters", "2", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", mp4]);
-if (mux.status !== 0) fail(`the sound could not be muxed: ${String(mux.stderr).slice(0, 400)}`);
-// the picture and the sound on their own are as large as the film again (the whole film: gigabytes)
-if (!has("keep-parts") && !has("debug")) for (const f of [outVideo, wav, join(outDir, "chapters.txt")]) rmSync(f, { force: true });
-
-const report = {
-  from, to, whole, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, pace,
-  frames: frame, seconds, estimate, lastScene: scenesSeen, chapters, captions: srt.length,
-  sound: { recorded: segments.length, ambience: layers.length, synthesised: synths.length, peak: Number(mixed.peak.toFixed(3)), missing: mixed.missing },
-  renderMinutes: Number(((Date.now() - started) / 60000).toFixed(1)), slowFrames, pageErrors, warnings,
-  files: ["animatic.mp4", "captions.srt"],
-};
-writeFileSync(join(outDir, "report.json"), JSON.stringify(report, null, 2));
+const sound = { recorded: segments.length, ambience: layers.length, synthesised: synths.length, peak: Number(mixed.peak.toFixed(3)), missing: mixed.missing };
+const renderMinutes = Number(((Date.now() - started) / 60000).toFixed(1));
+if (child) {
+  // a part: its parent joins the pictures and the sound and writes the file
+  writeFileSync(join(outDir, "captions.json"), JSON.stringify(captions));
+  const report = { from, to, fps, frames: frame, seconds, chapters, captions: captions.length, sound, renderer, encoder, renderMinutes, slowFrames, pageErrors, warnings };
+  writeFileSync(join(outDir, "report.json"), JSON.stringify(report, null, 2));
+  console.log(JSON.stringify({ type: "done", ...report }));
+  process.exit(0);
+}
+const report = finish({ seconds, chapters, captions, picture: outVideo, sound: wav, fadeOut: false,
+  extra: { frames: frame, lastScene: scenesSeen, sound, renderer, encoder, renderMinutes, slowFrames, pageErrors, warnings } });
 if (json) console.log(JSON.stringify({ type: "done", ...report }));
-else console.log(`${seconds.toFixed(1)} s, ${frame} frames, ${srt.length} captions, ${chapters.length} scenes → ${mp4}${warnings.length ? `\nwarnings: ${warnings.join("; ")}` : ""}`);
+else console.log(`${seconds.toFixed(1)} s, ${frame} frames, ${captions.length} captions, ${chapters.length} scenes → ${join(outDir, "animatic.mp4")}${warnings.length ? `\nwarnings: ${warnings.join("; ")}` : ""}`);
+
+/** Writes the captions, the chapters and animatic.mp4 (the picture and the sound put together; `fadeOut` fades the
+ *  sound over the last second), removes the parts unless asked to keep them, and writes report.json. */
+function finish({ seconds, chapters, captions, picture, sound, fadeOut, extra }) {
+  writeFileSync(join(outDir, "captions.srt"), srtText(captions));
+  const meta = [";FFMETADATA1", `title=Nobody's Witness — animatic (${whole ? "the whole film" : `${from}${to ? ` to ${to}` : " to the end"}`})`];
+  chapters.forEach((c, i) => {
+    const end = chapters[i + 1]?.t ?? seconds;
+    meta.push("[CHAPTER]", "TIMEBASE=1/1000", `START=${Math.round(c.t * 1000)}`, `END=${Math.round(end * 1000)}`, `title=${String(c.title).replace(/[=;#\\\n]/g, " ")}`);
+  });
+  const chaptersFile = join(outDir, "chapters.txt");
+  writeFileSync(chaptersFile, `${meta.join("\n")}\n`);
+  const mp4 = join(outDir, "animatic.mp4");
+  const mux = spawnSync(FFMPEG, ["-nostdin", "-y", "-v", "error", "-i", picture, "-i", sound, "-f", "ffmetadata", "-i", chaptersFile,
+    "-map", "0:v", "-map", "1:a", "-map_metadata", "2", "-map_chapters", "2", "-c:v", "copy",
+    ...(fadeOut ? ["-af", `afade=t=out:st=${Math.max(0, seconds - 1).toFixed(3)}:d=1`] : []),
+    "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", mp4]);
+  if (mux.status !== 0) fail(`the sound could not be muxed: ${String(mux.stderr).slice(0, 400)}`);
+  // the picture and the sound on their own are as large as the film again (the whole film: gigabytes)
+  if (!has("keep-parts") && !has("debug")) for (const f of [picture, sound, chaptersFile]) rmSync(f, { force: true });
+  const report = {
+    from, to, whole, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, pace,
+    seconds, estimate, chapters, captions: captions.length, ...extra, files: ["animatic.mp4", "captions.srt"],
+  };
+  writeFileSync(join(outDir, "report.json"), JSON.stringify(report, null, 2));
+  return report;
+}

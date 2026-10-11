@@ -42,13 +42,15 @@ export function animaticExportPlugin() {
           const size = ["1280x720", "1920x1080"].includes(b.size) ? b.size : "1280x720";
           const fps = [12, 24, 25, 30].includes(Number(b.fps)) ? Number(b.fps) : 24;
           const pace = Math.min(2, Math.max(0.5, Number(b.pace) || 1));
+          const parts = Math.min(8, Math.max(1, Math.round(Number(b.parts) || 1)));
           const id = randomUUID();
           const out = join(root, "exports/animatics", id);
           mkdirSync(out, { recursive: true });
           const args = ["tools/export-animatic.mjs", "--from", b.from, ...(b.to ? ["--to", b.to] : []), "--size", size, "--fps", String(fps), "--pace", String(pace),
-            "--out", out, "--url", `http://${req.headers.host}`, "--progress-json", ...(b.subtitles === false ? ["--no-subs"] : []), ...(b.descriptions === false ? ["--no-desc"] : [])];
+            "--out", out, "--url", `http://${req.headers.host}`, "--progress-json", ...(b.subtitles === false ? ["--no-subs"] : []), ...(b.descriptions === false ? ["--no-desc"] : []),
+            ...(b.gpu ? ["--gpu"] : []), ...(parts > 1 ? ["--parts", String(parts)] : [])];
           const child = spawn(process.execPath, args, { cwd: root, env: process.env });
-          const job = { id, child, out, status: "running", options: { from: b.from, to: b.to ?? null, whole: !!b.whole && !b.to, size, fps, pace, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
+          const job = { id, child, out, status: "running", options: { from: b.from, to: b.to ?? null, whole: !!b.whole && !b.to, size, fps, pace, gpu: !!b.gpu, parts, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
           jobs.set(id, job);
           let buf = "";
           child.stdout.on("data", (d) => {
