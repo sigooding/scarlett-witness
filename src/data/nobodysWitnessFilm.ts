@@ -805,7 +805,77 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "gateWeave": "subtle",
     "stagger": 0.2,
     "duration": 1.2,
-    "scrollDuration": 24
+    "scrollDuration": 24,
+    "montageLooks": {
+     "/film/img/s1/377-the-hive-remembered.jpg": {
+      "depthMap": "/film/depth/s1/377-the-hive-remembered/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.48,
+      "depthSeconds": 20,
+      "focalPoint": "50% 55%"
+     },
+     "/film/img/montage/m4-railway-rain.jpg": {
+      "mode": "pan",
+      "depthMap": "/film/depth/montage/m4-railway-rain/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.35,
+      "depthSeconds": 32,
+      "focalPoint": "58% 54%",
+      "panDistance": 2,
+      "zoomDuration": 32
+     },
+     "/film/img/s75/80-the-machine-waits.jpg": {
+      "lights": [
+       {
+        "x": 35,
+        "y": 39,
+        "color": "#e3f1ff",
+        "size": 18,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 78,
+        "y": 26,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ],
+      "mode": "pan",
+      "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.32,
+      "depthSeconds": 16,
+      "focalPoint": "34% 52%",
+      "panDistance": 2,
+      "zoomDuration": 16
+     },
+     "/film/img/s75/314-the-empty-crossing.jpg": {
+      "lights": [
+       {
+        "x": 22,
+        "y": 25,
+        "color": "#3dff9a",
+        "size": 8,
+        "intensity": 0.5,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
+       }
+      ],
+      "mode": "pan",
+      "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.45,
+      "depthSeconds": 18,
+      "focalPoint": "50% 54%",
+      "panDistance": 2,
+      "zoomDuration": 18
+     }
+    }
    },
    "musicMode": "track",
    "musicUrl": "/film/audio/title-song.mp3",
@@ -21876,7 +21946,102 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "titleColor": "#e9e2d0",
     "accentColor": "#e8a24a",
     "titleEntrance": "fade-up",
-    "gateWeave": "subtle"
+    "gateWeave": "subtle",
+    "montageLooks": {
+     "/film/img/s1/01-backstreet.jpg": {
+      "mode": "pan",
+      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.38,
+      "depthSeconds": 16,
+      "focalPoint": "50% 52%",
+      "panDistance": 2,
+      "zoomDuration": 16
+     },
+     "/film/img/s7/63-the-detectives-room.jpg": {
+      "mode": "pan",
+      "panDistance": 2,
+      "zoomDuration": 18,
+      "depthMap": "/film/depth/s7/63-the-detectives-room/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.48,
+      "depthSeconds": 18,
+      "focalPoint": "50% 50%"
+     },
+     "/film/img/s25/200-the-number-114.jpg": {
+      "mode": "pan",
+      "panDistance": 2,
+      "zoomDuration": 18,
+      "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
+      "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s25/200-the-number-114/cutout-1.png",
+        "depth": 0.922
+       },
+       {
+        "image": "/film/depth/s25/200-the-number-114/cutout-2.png",
+        "depth": 0.565
+       }
+      ],
+      "depthMotion": "push",
+      "depthAmount": 0.45,
+      "depthSeconds": 14,
+      "focalPoint": "50% 55%",
+      "lights": [
+       {
+        "x": 57.5,
+        "y": 29,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.5,
+        "pulseSeconds": 4,
+        "pulseAmount": 0.25
+       }
+      ]
+     },
+     "/film/img/s74/74-twenty-metres-apart.jpg": {
+      "lights": [
+       {
+        "x": 7,
+        "y": 39,
+        "color": "#e3f1ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 16,
+        "y": 39,
+        "color": "#e3f1ff",
+        "size": 10,
+        "intensity": 0.4,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       }
+      ],
+      "mode": "pan",
+      "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
+      "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
+        "depth": 0.703
+       },
+       {
+        "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
+        "depth": 0.727
+       }
+      ],
+      "depthMotion": "truck",
+      "depthAmount": 0.72,
+      "depthSeconds": 16,
+      "depthDirection": "right",
+      "panDistance": 2,
+      "zoomDuration": 16
+     }
+    }
    },
    "musicMode": "track",
    "musicUrl": "/film/audio/the-show.mp3",

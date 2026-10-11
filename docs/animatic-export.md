@@ -41,7 +41,13 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
 
        /?story=nobodys-witness-film&scene=nw_s65&animatic=1&to=nw_s66&subs=1&desc=1&pace=1
 
-   It waits for one click (so the browser lets the sound start), then plays with no controls and stops after `to`.
+   It waits for one click (so the browser lets the sound start), then plays with no controls and stops after `to` (or
+   at the end of the film) on a black "The end" card, with the sound stopped. The start card says whether this browser
+   will run the depth camera and what it draws with: "off" means the computer asks for reduced motion (Windows:
+   Settings → Accessibility → Visual effects → Animation effects) or the browser has no WebGL (turn its hardware
+   acceleration on); a renderer named SwiftShader or "software" means hardware acceleration is off. Like the exporter, the
+   tab ignores the dev server's live reload, so a `git pull` or a Studio save while it plays does not start the film
+   again from scene 1 (it did before 11 October).
 
 ## What the animatic shows
 

@@ -253,3 +253,13 @@ Models (all run locally, nothing is uploaded):
   shots with people now have cut-outs and plates (made from those maps, kept as `source-depth.png`).
 * `pictureLook` reaches every place a picture is shown, including the prologue's backdrop; a scene's own `cinematic` set
   in the generated file by hand is lost on the next build.
+
+## Montages (11 October 2026)
+
+A montage (the opening titles, the end credits, 18, 53) shows its own stills in place of the scene's picture, so until
+11 October **no depth move ever showed in one**: the titles' `depthMap` on the railway still was drawn under the
+montage and never seen. Now `tools/build-film-story.mjs` gives each montage still that has a depth map (its
+`pictureLook`, or the scene's own camera for the scene's own picture) to `credits.montageLooks`, and `CreditsMontage`
+draws the depth camera on the still on screen and the one dissolving out (the same layer through the dissolve, so the
+move never restarts), its move fitted to the hold (`depthSeconds` at most the hold plus 2 s); stills without a map keep
+the slow zoom. The titles have 4 such stills (377, the railway, 80, 314) and the end credits 4 (01, 63, 200, 74).

@@ -159,7 +159,7 @@ import { adjustedConsequences, choiceRepeats, gambleFlag, getPerks, rollGamble, 
 import { canRewindDecision, emptyRewind, popRewind, pushRewind, rewindLabel, sealRewind, type RewindStack } from "./rewind";
 import { simFromRuntime, strandedNow, STRANDED_GRACE_MS } from "./stranded";
 import { deepLinkFromUrl, describeDeepLink, resolveDeepLink } from "./deepLink";
-import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
+import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
 
 /* SEEDED RUNS — ?seed=1234 on the URL pins every gameplay draw (minigame
  * shuffles, ride spawns) to one deterministic stream, applied once at
@@ -1758,6 +1758,8 @@ export function CreditsMontage({
   seconds = 5,
   loop = true,
   transition = "dissolve",
+  looks,
+  reducedMotion,
 }: {
   images: string[];
   seconds?: number;
@@ -1765,16 +1767,27 @@ export function CreditsMontage({
   /** dissolve = long cross-fade; cut = hard cut, still to still (the
    * Tarantino title-sequence bang). */
   transition?: "dissolve" | "cut";
+  /** a still's camera by its url: one with a depth map moves with the depth camera instead of the slow zoom */
+  looks?: Record<string, CinematicSettings>;
+  reducedMotion?: boolean;
 }) {
   const [idx, setIdx] = useState(0);
+  // the still before the one on screen (it is still dissolving out), and how many times each still has come up, so its
+  // depth move starts again each time round
+  const [prev, setPrev] = useState(-1);
+  const [round, setRound] = useState(0);
   const hold = Math.max(1.5, seconds) * 1000;
 
   useEffect(() => {
     if (images.length <= 1) return;
     const t = window.setInterval(() => {
       setIdx((i) => {
-        if (i + 1 < images.length) return i + 1;
-        return loop ? 0 : i; // hold on the last frame when not looping
+        const next = i + 1 < images.length ? i + 1 : loop ? 0 : i; // hold on the last frame when not looping
+        if (next !== i) {
+          setPrev(i);
+          setRound((r) => r + 1);
+        }
+        return next;
       });
     }, hold);
     return () => window.clearInterval(t);
@@ -1784,22 +1797,36 @@ export function CreditsMontage({
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-black" aria-hidden>
-      {images.map((img, i) => (
-        <div
-          key={`${img}-${i}`}
-          className={`absolute inset-0 ${i % 2 === 0 ? "kenburns-a" : "kenburns-b"}`}
-          style={{
-            ...plateStyle(img),
-            opacity: i === idx ? 1 : 0,
-            // Long dissolve — half the hold, capped so it always completes.
-            // A hard cut swaps instantly: no dissolve, the plate just bangs in.
-            transition:
-              transition === "cut"
-                ? "none"
-                : `opacity ${Math.min(2.2, Math.max(1.5, seconds) / 2)}s ease-in-out`,
-          }}
-        />
-      ))}
+      {images.map((img, i) => {
+        const look = looks?.[img];
+        const depth = !!look?.depthMap && !reducedMotion;
+        return (
+          <div
+            key={`${img}-${i}`}
+            className={`absolute inset-0 ${depth ? "" : i % 2 === 0 ? "kenburns-a" : "kenburns-b"}`}
+            style={{
+              ...plateStyle(img),
+              opacity: i === idx ? 1 : 0,
+              // Long dissolve — half the hold, capped so it always completes.
+              // A hard cut swaps instantly: no dissolve, the plate just bangs in.
+              transition:
+                transition === "cut"
+                  ? "none"
+                  : `opacity ${Math.min(2.2, Math.max(1.5, seconds) / 2)}s ease-in-out`,
+            }}
+          >
+            {/* the depth camera on the still on screen (and the one dissolving out), its move fitted to the hold */}
+            {depth && (i === idx || i === prev) && (
+              <DepthParallaxLayer
+                // the same layer while the still is on and while it dissolves out, so its move never restarts mid-fade
+                key={`d-${i === idx ? round : round - 1}`}
+                cinematic={{ ...look, depthSeconds: Math.min(look.depthSeconds ?? 14, hold / 1000 + 2) }}
+                picture={img}
+              />
+            )}
+          </div>
+        );
+      })}
       {/* Keeps white credit type legible over a bright neon still. */}
       <div className="absolute inset-0 bg-black/45" />
     </div>
@@ -4468,8 +4495,18 @@ function CasePlayer({
   useEffect(() => {
     if (ANIMATIC) noteCaption(animaticCaption, scene?.id, currentBeat?.id);
   });
+  // In a browser the animatic ends on a black card once it leaves the chosen scenes (or reaches the ending), with the
+  // sound stopped; the exporter stops filming before that frame.
+  const [animaticOver, setAnimaticOver] = useState(false);
   useEffect(() => {
-    if (ANIMATIC && scene) noteScene(scene);
+    if (!ANIMATIC || !scene) return;
+    noteScene(scene);
+    if (!window.__animatic?.done || window.__animaticAutostart) return;
+    setAnimaticOver(true);
+    audio.stopSpeech();
+    audio.stopSfx();
+    audio.setAmbient(null);
+    try { sceneAudioRef.current?.pause(); } catch { /* none playing */ }
   }, [scene]);
 
   // Press-the-lie state for the beat on screen: the lie exists, it isn't
@@ -6544,6 +6581,8 @@ function CasePlayer({
       {creditsMontage.length > 0 ? (
         <CreditsMontage
           images={creditsMontage}
+          looks={scene.credits?.montageLooks}
+          reducedMotion={prefersReducedMotion}
           seconds={scene.credits?.montageSeconds}
           loop={scene.credits?.montageLoop ?? true}
           transition={scene.credits?.montageTransition ?? "dissolve"}
@@ -6661,7 +6700,8 @@ function CasePlayer({
         </div>
       )}
       {/* Animatic mode: the captions sit where a film's subtitles go, over the bottom bar */}
-      {ANIMATIC && <AnimaticCaptions caption={animaticCaption} />}
+      {ANIMATIC && !animaticOver && <AnimaticCaptions caption={animaticCaption} />}
+      {animaticOver && <AnimaticEnd />}
 
       {/* Pulsing heat/risk vignette — danger reads on screen before the trapdoor fires */}
       {!scene.isEnding && state.meters.Suspicion >= (story.briefing?.heatLimit ? story.briefing.heatLimit - 2 : 6) && (
