@@ -1204,7 +1204,7 @@ export interface CinematicSettings {
   volumetricShafts?: boolean;
   /** Shafts intensity 0-2 (default 1) */
   shaftsIntensity?: number;
-  /** Depth fog — thicker at back, lerp 0.1-0.6 by y */
+  /** Depth fog — thicker at back, lerp 0.1-0.6 by y; off unless true (with fog particles) */
   depthFog?: boolean;
   /** Depth fog strength 0-1 (default 0.6) */
   fogStrength?: number;
