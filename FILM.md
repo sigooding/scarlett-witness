@@ -23,6 +23,16 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
   * 177 and 179 get a running shake; 178 keeps its gunfire shake.
   * 179 was one of the fourteen depth shots on the director's own maps (below). Its map, plate and cut-out were made from the old picture, with Jack walking, so they no longer fit. The shot now plays the running shake instead. The files stay in `public/film/depth/s41/179-same-wood/` unused; a new map would have to be made from the new picture.
 
+## Breaths, breathless lines and the Hive escape's shake (11 October 2026, later)
+
+* **Breathless lines** (PlayFrame's re-recordings, through the visual novel): the inn raid's "Stay. Whatever you hear.", "My husband —", "I'll get him.", "I'm sorry.", "Come on. Come on." and scene 92's three lines.
+* **Breaths and sighs** in `public/film/sfx/` (from PlayFrame `public/audio/neonoire/breaths/`):
+  * On the screenplay beats that write them (`sfx` in `studio-edits.json`): Jack's sigh (14A), Ishida's sigh (23), Vera's gasp at the clip (9), Jack's shaky breath (50), Vera's breath catching (56) and Vera's breath as she runs in heels (73).
+  * Running breaths on the inn raid's 177 and 179, and a grunt on 180.
+  * In the Hive escape, cues on 128, 378, 379 and 381.
+* **Shake cam in the Hive escape:** a running shake (0.2) on 129, 381, 382 and `132-the-gap`. 378 keeps its existing shake, and 379 and 380 keep their own looks.
+* Nobody has listened.
+
 ## The lounge piano; no gunshot in Mara's memory (11 October 2026)
 
 * **Scene 66** (Vera waiting in the lounge, the pianist playing) starts the director's piano version of "Bad Guy"

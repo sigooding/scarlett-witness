@@ -4301,7 +4301,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b209",
      "characterId": "nw_narrator",
      "text": "Vera stops breathing.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/vera-gasp.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b210",
@@ -6264,7 +6266,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b385",
      "characterId": "nw_narrator",
      "text": "He sighs the sigh of a man who has lost an argument he was never allowed to make.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/jack-sigh.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b386",
@@ -8839,7 +8843,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/ishida-sigh.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b576",
@@ -12309,6 +12315,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Boots on the stairs. Jack goes the other way.",
      "silent": true,
+     "sfxUrl": "/film/sfx/jack-running.mp3",
+     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.53,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_10"
@@ -12331,8 +12339,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "neon-noir",
     "filmGrade": true,
     "filmGradeStrength": 0.3,
-    "shakeAmount": 0.4,
-    "shakeDuration": 0.3
+    "shakeAmount": 0.45,
+    "shakeDuration": 0.25
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12401,6 +12409,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Through the bathroom door.",
      "silent": true,
+     "sfxUrl": "/film/sfx/jack-running.mp3",
+     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.5,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
@@ -12954,6 +12964,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "In that half-second, Jack has him.",
      "silent": true,
+     "sfxUrl": "/film/sfx/jack-grunt.mp3",
+     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.02,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
@@ -13632,7 +13644,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b857",
      "characterId": "nw_narrator",
      "text": "He breathes. Only now does his hand start to shake.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/jack-shaky-breath.mp3",
+     "sfxVolume": 0.9
     },
     {
      "id": "nw_b858",
@@ -14747,7 +14761,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b947",
      "characterId": "nw_narrator",
      "text": "Vera's breath catches.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/vera-breath-catches.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b948",
@@ -18307,7 +18323,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The song comes up under the rain, and she cannot hear it over her own breath. Her heels on wet pavement. Her breath.",
      "silent": true,
-     "sfxUrl": "/film/sfx/car-pass.mp3"
+     "sfxUrl": "/film/sfx/vera-running-heels.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b1199",
@@ -22403,6 +22420,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Vera climbs the black stairwell by touch.",
      "silent": true,
+     "sfxUrl": "/film/sfx/vera-running.mp3",
+     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 3.48,
      "afterBeatTargetSceneId": "nw_song_raid_14"
@@ -22414,7 +22433,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: She finds Jack's hand and pulls him up a",
    "background": "/film/img/s89/129-she-lets-him.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "shake",
     "focalPoint": "50% 45%",
     "zoomDuration": 17,
     "panDirection": "right",
@@ -22424,7 +22443,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -22666,6 +22687,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The barber turns his chair to the wall.",
      "silent": true,
+     "sfxUrl": "/film/sfx/jack-running.mp3",
+     "sfxVolume": 0.85,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 3.48,
      "afterBeatTargetSceneId": "nw_song_raid_19"
@@ -22737,6 +22760,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Wet sheets part and close behind them.",
      "silent": true,
+     "sfxUrl": "/film/sfx/vera-running.mp3",
+     "sfxVolume": 0.85,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 3.48,
      "afterBeatTargetSceneId": "nw_song_raid_20"
@@ -22802,7 +22827,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: A plank across the gap, hauled in after ",
    "background": "/film/img/s90/381-the-plank.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "65% 50%",
     "zoomDuration": 19,
     "panDirection": "right",
@@ -22812,7 +22837,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22834,6 +22861,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "A plank across the gap, hauled in after them.",
      "silent": true,
+     "sfxUrl": "/film/sfx/jack-running.mp3",
+     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 3.48,
      "afterBeatTargetSceneId": "nw_song_raid_22"
@@ -22845,7 +22874,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: The pipes ring softly: one rap means cle",
    "background": "/film/img/s90/382-the-pipe-gallery.jpg",
    "cinematic": {
-    "mode": "pan",
+    "mode": "shake",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "panDirection": "right",
@@ -22855,7 +22884,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22890,7 +22921,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Nobody speaks. Every door closes behind ",
    "background": "/film/img/s90/132-the-gap.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "shake",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "panDirection": "right",
@@ -22900,7 +22931,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
     "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
