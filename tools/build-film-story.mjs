@@ -13,7 +13,7 @@ const P = p => `/film${p}`;
 for (const dir of ["img", "voice"]) mkdirSync(resolve(root, "public/film", dir), { recursive: true });
 for (const dir of ["img", "voice"]) cpSync(resolve(src, "public", dir), resolve(root, "public/film", dir), { recursive: true });
 mkdirSync(resolve(root, "public/film/audio"), { recursive: true });
-for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "soundtrack_nobodys_witness.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
+for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "soundtrack_nobodys_witness.mp3", "it-aint-easy-radio.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
 
 const nice = s => s.toLowerCase().replace(/(^|[\s.-])([a-z])/g, (_, a, b) => a + b.toUpperCase());
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
@@ -133,9 +133,11 @@ scenes.push({
   dialogueBeats: PRO.map(([text, k]) => beat("KANEKO", { text, audioUrl: P(`/voice/prologue/${k}.mp3`) })),
 });
 
-const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "soundtrack_nobodys_witness" };
+const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-aint-easy-radio" };
 // The neighbour's radio through Vera's wall (65) plays the director's song: in quickly, as a radio starts, and under the score's level.
-const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.6 } };
+// Since 11 October 2026 it is "It ain't easy" (public/film/audio/It ain't easy.mp3, the director's upload) baked as an AM radio in
+// it-aint-easy-radio.mp3 (mono, 280-3200 Hz, light compression, faint hiss, loudness-matched to the old radio song), a little quieter.
+const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.48 } };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
   particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
