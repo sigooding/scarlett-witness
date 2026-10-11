@@ -333,6 +333,19 @@ if (existsSync(editsFile)) {
     if (!sc) { console.warn(`studio-edits: no scene ${id}`); continue; }
     set(sc, fields);
   }
+  // A montage (the opening titles, 18, 53) shows its own stills instead of the scene's picture: each still with a depth map
+  // (its "pictureLook", or the scene's own camera for the scene's own picture) gets the depth camera there too.
+  for (const sc of scenes) {
+    const stills = sc.credits?.montage;
+    if (!stills?.length) continue;
+    const looks = {};
+    for (const url of stills) {
+      const cin = (url === sc.background && sc.cinematic?.depthMap ? sc.cinematic : null) ?? lookFor(url)?.cinematic;
+      if (cin?.depthMap) looks[url] = cin;
+    }
+    if (Object.keys(looks).length) sc.credits.montageLooks = looks;
+    else delete sc.credits.montageLooks;
+  }
   // dropBeats: { sceneId: [1-based beat numbers] } — beats taken out in the Studio (unwanted title cards)
   for (const [id, nums] of Object.entries(file.dropBeats ?? {})) {
     const sc = scenes.find(x => x.id === id);

@@ -49,7 +49,7 @@ export const CREDITS_PRESET_GROUPS: { id: CreditsPresetGroup; label: string; blu
 /** The style knobs a preset writes. The authored text (title / subtitle /
  * lines) and the montage stills are deliberately excluded — a look never
  * overwrites content. */
-export type CreditsLook = Omit<CreditsSettings, "title" | "subtitle" | "lines" | "montage">;
+export type CreditsLook = Omit<CreditsSettings, "title" | "subtitle" | "lines" | "montage" | "montageLooks">;
 
 export interface CreditsPreset {
   id: CreditsPresetId;

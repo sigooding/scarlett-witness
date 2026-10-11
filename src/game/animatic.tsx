@@ -225,10 +225,38 @@ export function AnimaticCaptions({ caption }: { caption: Caption | null }) {
   );
 }
 
+/** Whether this browser will run the depth camera, and what it draws with (the graphics chip, or a software renderer
+ *  when hardware acceleration is off), for the start card. */
+function depthCheck(): { on: boolean; why: string; renderer: string } {
+  let renderer = "no WebGL";
+  try {
+    const gl = document.createElement("canvas").getContext("webgl");
+    if (gl) {
+      const info = gl.getExtension("WEBGL_debug_renderer_info");
+      renderer = String(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER));
+    }
+  } catch { /* no WebGL */ }
+  const reduced = typeof window.matchMedia === "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const software = /swiftshader|llvmpipe|basic render|software/i.test(renderer);
+  if (renderer === "no WebGL") return { on: false, why: "this browser has no WebGL: turn on its hardware acceleration (Chrome: Settings → System → Use graphics acceleration when available)", renderer };
+  if (reduced) return { on: false, why: "your computer asks apps for reduced motion (Windows: Settings → Accessibility → Visual effects → Animation effects on)", renderer };
+  return { on: true, why: software ? "on, but drawn in software: turn on the browser's hardware acceleration for smooth moves" : "on", renderer };
+}
+
+/** The film is over (or past the chosen scenes): a black card instead of the game's ending screen and controls. */
+export function AnimaticEnd() {
+  return (
+    <div className="animatic-end" data-animatic-end>
+      <div>The end</div>
+    </div>
+  );
+}
+
 /** In a browser an animatic waits for one click, so its sound is allowed to start, then plays itself with no controls:
  *  watch it, or record it with any screen recorder. */
 export function AnimaticStart({ title, onStart }: { title: string; onStart: () => void }) {
   const o = ANIMATIC;
+  const depth = depthCheck();
   const parts = [
     o?.to ? `to ${o.to.replace(/^nw_s?/, "scene ")}` : "to the end",
     o?.subtitles ? "subtitles" : "no subtitles",
@@ -241,6 +269,9 @@ export function AnimaticStart({ title, onStart }: { title: string; onStart: () =
       <p className="max-w-lg font-type text-sm text-paper/70">
         Plays by itself with no controls: {parts.join(" · ")}. Record it with a screen recorder, or use
         🎞 Export animatic on the home screen for an MP4 and a subtitle file.
+      </p>
+      <p className="max-w-lg font-type text-xs text-paper/55" data-depth-check={depth.on ? "on" : "off"}>
+        Depth camera: {depth.why}. Drawing with: {depth.renderer}.
       </p>
       <button
         autoFocus

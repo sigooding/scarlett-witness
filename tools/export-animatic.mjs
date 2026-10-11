@@ -496,7 +496,15 @@ let reloads = 0;
 page.on("load", () => reloads++);
 // An installed clock still follows the wall clock; paused, the page's time moves only when the exporter moves it, one
 // frame at a time, so a slow screenshot cannot let the film run on unseen.
-await page.clock.pauseAt(await page.evaluate(() => Date.now() + 50));
+// (the margin is generous and retried: on a busy machine the clock can pass a closer mark before the pause arrives)
+for (let margin = 1000; ; margin *= 2) {
+  try {
+    await page.clock.pauseAt(await page.evaluate((m) => Date.now() + m, margin));
+    break;
+  } catch (e) {
+    if (margin >= 16000 || !/past/i.test(String(e))) throw e;
+  }
+}
 
 const realSleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Up to 15 s for a frame's pictures to arrive; after a frame that never settled, 2 s, until one does again.

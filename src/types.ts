@@ -891,6 +891,9 @@ export interface CreditsSettings {
   /** loop the montage back to the first still (default true). When false it
    * holds on the last image. */
   montageLoop?: boolean;
+  /** a montage still's camera, by its url: a still with a depth map moves with the depth camera instead of the
+   * montage's slow zoom (the film builder fills it from the pictures' looks) */
+  montageLooks?: Record<string, CinematicSettings>;
   /** seconds between successive line entrances (default 0.4) */
   stagger?: number;
   /** seconds each line takes to fade/slide in (default 0.85) */

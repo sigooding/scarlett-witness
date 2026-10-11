@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Nobody’s Witness — an interactive visual novel." />
     <title>Nobody’s Witness</title>
+    <script>
+      // An animatic (?animatic=1) plays for hours, hands-off: the dev server's live reload must not start the film again
+      // from its first scene when a file changes (a git pull, a Studio save) or the server restarts. The page keeps its
+      // connection to Vite but never hears an update, a reload or a lost connection. Runs before Vite's own client.
+      (function () {
+        if (!/[?&]animatic=(?!0|false)/.test(location.search) || !window.WebSocket) return;
+        var Native = window.WebSocket;
+        function Socket(url, protocols) {
+          var ws = protocols === undefined ? new Native(url) : new Native(url, protocols);
+          if ([].concat(protocols || []).indexOf("vite-hmr") < 0) return ws;
+          var add = ws.addEventListener.bind(ws);
+          ws.addEventListener = function (type, fn, opts) {
+            if (type === "close") return;
+            if (type !== "message") return add(type, fn, opts);
+            return add(type, function (e) {
+              try { if (/^(update|full-reload|prune)$/.test(JSON.parse(e.data).type)) return; } catch (err) {}
+              fn(e);
+            }, opts);
+          };
+          return ws;
+        }
+        Socket.prototype = Native.prototype;
+        ["CONNECTING", "OPEN", "CLOSING", "CLOSED"].forEach(function (k) { Socket[k] = Native[k]; });
+        window.WebSocket = Socket;
+      })();
+    </script>
   </head>
   <body>
     <!-- Boot placeholder. If the app mounts, React replaces this immediately.
