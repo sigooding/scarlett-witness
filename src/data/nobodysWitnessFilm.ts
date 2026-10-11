@@ -14395,8 +14395,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
-   "musicMode": "none",
-   "musicFadeSeconds": 4,
+   "musicMode": "track",
+   "musicFadeSeconds": 3,
    "dialogueBeats": [
     {
      "id": "nw_b1079",
@@ -14527,7 +14527,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicUrl": "/film/audio/bad-guy-piano.mp3",
+   "musicLevel": 0.8,
+   "musicLoop": true
   },
   {
    "id": "nw_s67",
@@ -14934,8 +14937,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1126",
      "characterId": "nw_narrator",
      "text": "She has heard those words before. From the floor of a bar, before two shots.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/shot2-fall.mp3"
+     "silent": true
     },
     {
      "id": "nw_b1127",
