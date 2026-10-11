@@ -31,6 +31,7 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
    | `--url <server>` | use a dev server that is already running instead of starting one |
    | `--gpu` | draw with the graphics card instead of software rendering (much faster where there is one) |
    | `--debug` | also write `debug.json`: every caption, scene change and sound event the page logged (and keep the parts) |
+   | `--gpu` and `--parts N` | faster renders: see "Faster renders" below |
    | `--keep-parts` | keep `picture.mp4` and `sound.wav`, which are otherwise deleted once `animatic.mp4` is made |
 
    Needs ffmpeg (on the PATH, or `FFMPEG=<path>`) and Playwright's Chromium (`npx playwright install chromium`, or
@@ -78,6 +79,28 @@ keeps its connection to Vite but drops update and reload messages), so it carrie
 tested on 10 October by editing `src/index.css` and `src/AnimaticExport.tsx` in the middle of two renders. If the page
 reloads anyway, or the browser or the exporter fails, the export stops with a message saying so rather than filming
 the film again from its first scene.
+
+## Faster renders
+
+Two things make a render several times faster; both are in the dialog (**Use the graphics card**, ticked, and
+**Render at once**, 3 parts) and on the command line:
+
+    npm run export:animatic -- --gpu --parts 3 --size 1920x1080
+
+* **`--gpu`** draws the frames with the graphics card: it uses Playwright's full Chromium (installed by
+  `npx playwright install chromium`), whose headless mode can use the card, instead of the slim headless shell that
+  draws in software. The exporter prints what it is drawing with: on an NVIDIA card it should name the card (for example
+  `ANGLE (NVIDIA, NVIDIA GeForce RTX 3070 …)`); if it says SwiftShader, the card was not used. With `--gpu`, the video
+  is also encoded on the card (NVIDIA's NVENC) when ffmpeg has it (the usual Windows builds do), else on the processor.
+* **`--parts N`** renders N stretches of the film at once, each in its own browser, then joins the pictures, the sound,
+  the subtitles and the chapters into one MP4 (`tools/animatic-parts.mjs`). The film is only cut at a scene that sets its
+  own music (or comes when none is playing) and its own room sound, so no song that carries across scenes is lost; at a
+  join the room sound fades in over a second as it does on any scene change. Tested on 11 October: scenes 19–23 in two
+  parts, 532 s of film in 3.8 minutes against about 6.7 in one, the chapters and subtitles continuous across the join.
+  Each part is a browser with the game in it: 3 or 4 parts suit an 8-core processor with 16 GB of memory.
+
+On an RTX 3070 with an 8-core processor, `--gpu --parts 3` should take the whole film to about the length of the film
+itself or less (not measured: the sandbox this was built in has no graphics card).
 
 ## Limits
 
