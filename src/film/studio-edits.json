@@ -1283,6 +1283,42 @@
       "find": "Excavators bite into the walls",
       "file": "demolition-site",
       "volume": 0.6
+    },
+    {
+      "scene": "nw_s14a",
+      "find": "He sighs the sigh",
+      "file": "jack-sigh",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s23",
+      "find": "Ishida sighs.",
+      "file": "ishida-sigh",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s50",
+      "find": "He breathes.",
+      "file": "jack-shaky-breath",
+      "volume": 0.9
+    },
+    {
+      "scene": "nw_s56",
+      "find": "breath catches",
+      "file": "vera-breath-catches",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s9",
+      "find": "Vera stops breathing.",
+      "file": "vera-gasp",
+      "volume": 0.8
+    },
+    {
+      "scene": "nw_s73",
+      "find": "over her own breath",
+      "file": "vera-running-heels",
+      "volume": 0.8
     }
   ],
   "dialogueBox": {
@@ -1400,6 +1436,30 @@
           {
             "file": "sirens-distant",
             "volume": 0.7
+          }
+        ],
+        "128-by-touch": [
+          {
+            "file": "vera-running",
+            "volume": 0.8
+          }
+        ],
+        "378-the-barbers-shop": [
+          {
+            "file": "jack-running",
+            "volume": 0.85
+          }
+        ],
+        "379-the-laundry": [
+          {
+            "file": "vera-running",
+            "volume": 0.85
+          }
+        ],
+        "381-the-plank": [
+          {
+            "file": "jack-running",
+            "volume": 0.8
           }
         ]
       }
@@ -3954,6 +4014,34 @@
         "shakeAmount": 0.25,
         "shakeDuration": 0.5
       }
+    },
+    "381-the-plank": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
+    },
+    "382-the-pipe-gallery": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
+    },
+    "132-the-gap": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
+    },
+    "129-she-lets-him": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.2,
+        "shakeDuration": 0.7
+      }
     }
   },
   "cutscenes": [
@@ -4012,7 +4100,8 @@
         {
           "pic": "177-boots-below",
           "text": "Boots on the stairs. Jack goes the other way.",
-          "seconds": 2.4
+          "seconds": 2.4,
+          "sfx": "jack-running"
         },
         {
           "pic": "178-the-screens",
@@ -4023,7 +4112,8 @@
         {
           "pic": "179-same-wood",
           "text": "Through the bathroom door.",
-          "seconds": 1.6
+          "seconds": 1.6,
+          "sfx": "jack-running"
         },
         {
           "pic": "210-the-third-time",
@@ -4079,7 +4169,8 @@
         {
           "pic": "180-the-shoulder",
           "text": "In that half-second, Jack has him.",
-          "seconds": 2
+          "seconds": 2,
+          "sfx": "jack-grunt"
         },
         {
           "pic": "179-it-rings",
