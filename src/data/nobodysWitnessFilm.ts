@@ -16448,10 +16448,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transition": "cut",
    "transitionSpeed": 0.2,
    "musicMode": "track",
-   "musicUrl": "/film/audio/soundtrack_nobodys_witness.mp3",
+   "musicUrl": "/film/audio/it-aint-easy-radio.mp3",
    "musicFadeSeconds": 2,
    "musicLoop": false,
-   "musicLevel": 0.6,
+   "musicLevel": 0.48,
    "dialogueBeats": [
     {
      "id": "nw_b1071",
