@@ -169,6 +169,13 @@
         "volumetricShafts": true,
         "shaftsIntensity": 1.5
       }
+    },
+    "nw_s66": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/bad-guy-piano.mp3",
+      "musicFadeSeconds": 3,
+      "musicLevel": 0.8,
+      "musicLoop": true
     }
   },
   "startSceneId": "nw_s1",

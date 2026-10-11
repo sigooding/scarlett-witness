@@ -6,6 +6,15 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## The lounge piano; no gunshot in Mara's memory (11 October 2026)
+
+* **Scene 66** (Vera waiting in the lounge, the pianist playing) starts the director's piano version of "Bad Guy"
+  (`public/film/audio/bad-guy-piano.mp3`, uploaded as `bad guy best (Section).mp3`, 4:32), looping at 0.8, and it plays
+  on through 67–72 until "Bad Guy" itself comes in at 72 ("The piano plays on"). A Studio edit on `nw_s66`.
+* **Scene 70**: the two shots and the fall played on Mara's memory, "From the floor of a bar, before two shots", as
+  Jack and Mara came out of the Hive. The visual novel's importer matched "two shots" anywhere; it now matches only
+  scene 2's own "Two shots." (`tools/import-playframe.mjs` there, with a test).
+
 ## No black bars; shot changes without a ghost (11 October 2026)
 
 * **No letterbox bars.** They were drawn over the picture and hid its top and bottom (131 of 133 nodes had them). The
