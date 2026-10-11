@@ -82,13 +82,14 @@ export function animaticStory<T extends { scenes: SceneNode[] }>(story: T): T {
   };
 }
 
-/** How long a silent line stays up: half a second to land plus an ordinary subtitle reading speed (18 characters a
- *  second), between 1.8 and 9 seconds, times the pace. (14 a second until 10 October: the film ran 2 h 36 min.) */
+/** How long a silent line stays up, times the pace. (14 characters a second until 10 October 2026, when the film ran
+ *  2 h 36 min; 18 a second, 1.8 to 9 s, until 11 October.) */
 export function readingSeconds(text: string, pace = 1, scenePace = 1): number {
   const chars = text.replace(/\s+/g, " ").trim().length;
-  // A scene's faster read (studio-edits "readPace") and the 9 s cap never take a description below a readable
-  // ~17 characters a second (the usual subtitle limit) (0.4 s to find it, then the words); the viewer's own pace still scales both.
-  return Math.max(Math.min(9, Math.max(1.8, 0.5 + chars / 18)) * scenePace, 0.4 + chars / 17) * pace;
+  // About 20 characters a second, 1.5 s at least and 7 s at most (11 October 2026: the director wanted the film at about
+  // 1 h 45 min, and the descriptions took the most time); a scene's faster read (studio-edits "readPace") and the
+  // viewer's pace scale it.
+  return Math.min(7, Math.max(1.5, 0.3 + chars / 20)) * scenePace * pace;
 }
 
 /** The pause after a recorded line before the next line comes up. */
