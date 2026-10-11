@@ -184,7 +184,8 @@ const freePort = () => new Promise((done) => {
 });
 async function startServer() {
   const port = await freePort();
-  const proc = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["vite", "--port", String(port), "--strictPort"], { cwd: ROOT, stdio: "ignore" });
+  // vite's own script run by this Node (Windows refuses to spawn npx.cmd directly: "spawn EINVAL")
+  const proc = spawn(process.execPath, [join(ROOT, "node_modules/vite/bin/vite.js"), "--port", String(port), "--strictPort"], { cwd: ROOT, stdio: "ignore" });
   const url = `http://localhost:${port}`;
   for (let i = 0; i < 120; i++) {
     try {
