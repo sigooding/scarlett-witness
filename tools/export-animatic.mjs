@@ -101,7 +101,7 @@ function estimator(durations) {
   const by = new Map(film.scenes.map((s) => [s.id, s]));
   const lengthOf = (url) => durations[decodeURIComponent(String(url).split(/[?#]/)[0])];
   // the same timings and joined action lines as src/game/animatic.tsx (readingSeconds, AFTER_VOICE_SECONDS, joinActionLines)
-  const read = (t, k = 1) => Math.min(9, Math.max(1.8, 0.5 + String(t ?? "").replace(/\s+/g, " ").trim().length / 18)) * pace * k;
+  const read = (t, k = 1) => { const c = String(t ?? "").replace(/\s+/g, " ").trim().length; return Math.max(Math.min(9, Math.max(1.8, 0.5 + c / 18)) * k, 0.4 + c / 17) * pace; };
   const lone = (b) => !b.audioUrl && b.silent && b.text && b.text !== "·";
   const join = (beats) => beats.reduce((out, b) => {
     const prev = out[out.length - 1];

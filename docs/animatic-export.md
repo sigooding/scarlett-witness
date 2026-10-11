@@ -121,3 +121,6 @@ itself or less (not measured: the sandbox this was built in has no graphics card
   own.
 * Recording a tab from inside the page (`getDisplayMedia`) could not be started in the sandbox this was built in, so
   the browser route plays only; record it with a screen recorder.
+
+
+**Readable descriptions (11 October 2026).** A description card is never on screen for less than 0.4 s plus one second per 17 characters (the usual subtitle limit). Before, the 9 s cap and the faster `readPace` scenes showed 283 of the film's 788 cards faster than that, some at 28 to 36 characters a second; the floor lengthens the film by about 10 minutes, mostly in scenes 10 to 15, 14A, 25A and 74. The viewer's own pace setting still scales it (`readingSeconds` in `src/game/animatic.tsx`, mirrored in the export's estimate).

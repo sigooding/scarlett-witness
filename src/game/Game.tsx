@@ -4838,7 +4838,7 @@ function CasePlayer({
       const startedAt = Date.now();
       // An animatic holds a silent line for its reading time and a spoken one until a moment after its voice ends.
       const spoken = !!currentBeat?.audioUrl;
-      const hold = ANIMATIC ? (spoken ? 0 : readingSeconds(currentBeatText, ANIMATIC.pace * (scene?.animaticReadPace ?? 1)) * 1000) : 1150;
+      const hold = ANIMATIC ? (spoken ? 0 : readingSeconds(currentBeatText, ANIMATIC.pace, scene?.animaticReadPace ?? 1) * 1000) : 1150;
       let quietSince = 0;
       const iv = window.setInterval(() => {
         const now = Date.now();
@@ -5238,7 +5238,7 @@ function CasePlayer({
     // skips the wait, never gates the exit.
     // An animatic gives the default one-second scene-end cut a silent last line's reading time; any other authored
     // hold (the raid's song-timed cuts) is kept exactly.
-    const readHold = ANIMATIC && routingBeat && !routingBeat.audioUrl ? readingSeconds(routingBeat.text ?? "", ANIMATIC.pace * (scene?.animaticReadPace ?? 1)) : 0;
+    const readHold = ANIMATIC && routingBeat && !routingBeat.audioUrl ? readingSeconds(routingBeat.text ?? "", ANIMATIC.pace, scene?.animaticReadPace ?? 1) : 0;
     const delay = beatRouteMode === "auto" ? Math.max(0, beatRouteDelay === 1 ? Math.max(1, readHold) : beatRouteDelay) : Math.max(6, readHold);
     const go = () => {
       setBeatRouteRemaining(0);
