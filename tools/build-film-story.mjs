@@ -469,7 +469,9 @@ for (const seg of edits.soundtracks ?? []) {
 // name without extension) with either a short caption (`text`, held `seconds`, default `shotSeconds`) or a recorded line of the run (`line`,
 // the start of its words; the take plays and the shot moves on just after it), and an optional sound (`sfx`, a file in public/film/sfx).
 // Several shots on one picture cut straight to each other, so one picture can carry several sounds. The captions are the narration; the
-// run's own beats are left out. The scene after the run follows as usual.
+// run's own beats are left out. The scene after the run follows as usual. With a song (`musicUrl` under public/film, `seconds` its length;
+// the inn raid plays to "Hounds" since 11 October 2026) the song starts on the first shot, every caption shot is stretched or shortened by
+// the same factor so the run ends `fadeOut` + `slack` seconds before the song does, and the scene after the run fades the song out.
 for (const seg of edits.cutscenes ?? []) {
   const a = scenes.findIndex(s => s.id === seg.from);
   const b = scenes.reduce((last, s, i) => (s.id === seg.to || s.id.startsWith(`${seg.to}_`) ? i : last), -1);
@@ -492,6 +494,18 @@ for (const seg of edits.cutscenes ?? []) {
   const TRAN = 0.3, LAG = seg.lag ?? 0.18, GAP = 0.65;
   const chain = [], used = new Set();
   let prev = null, total = 0;
+  // fit to the song: the recorded lines keep their length, the caption shots share the rest
+  let fit = 1;
+  if (seg.musicUrl && seg.seconds) {
+    const taken = new Set();
+    let voiced = 0, silent = 0;
+    for (const sh of seg.shots) {
+      if (!sh.line) { silent += sh.seconds ?? seg.shotSeconds ?? 2.4; continue; }
+      const line = lines.find(l => !taken.has(l) && norm(l.text).startsWith(norm(sh.line)));
+      if (line) { taken.add(line); voiced += (voiceDur.get(line.audioUrl) ?? 2.5) + GAP + (sh.hold ?? 0.5); }
+    }
+    fit = Math.max(0.6, (seg.seconds - (seg.fadeOut ?? 3) - (seg.slack ?? 1) - voiced) / silent);
+  }
   for (const sh of seg.shots) {
     const pic = pics.get(sh.pic);
     if (!pic) { console.warn(`cutscene ${seg.id}: no picture ${sh.pic} in ${seg.from}–${seg.to}`); continue; }
@@ -508,7 +522,7 @@ for (const seg of edits.cutscenes ?? []) {
       beat = { ...rest, ...sound, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, GAP - 0.4 + hold - LAG)) };
       total += (voiceDur.get(line.audioUrl) ?? 2.5) + GAP + hold;
     } else {
-      const seconds = sh.seconds ?? seg.shotSeconds ?? 2.4;
+      const seconds = (sh.seconds ?? seg.shotSeconds ?? 2.4) * fit;
       beat = { id: `nw_cut_${seg.id}_b${chain.length + 1}`, characterId: charOf(null), text: sh.text, silent: true, ...sound, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - (same ? 0 : TRAN) - 0.1 - LAG)) };
       total += seconds;
     }
@@ -522,6 +536,10 @@ for (const seg of edits.cutscenes ?? []) {
   const missed = lines.filter(l => !used.has(l));
   if (missed.length) console.warn(`cutscene ${seg.id}: ${missed.length} recorded line(s) of the run not used: ${missed.map(l => `"${l.text}"`).join(", ")}`);
   chain.forEach((nd, k) => Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: k + 1 < chain.length ? chain[k + 1].id : next.id }));
+  if (seg.musicUrl) {
+    Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.85, musicFadeSeconds: seg.fadeIn ?? 1, musicLoop: false });
+    if (next.musicMode === undefined) Object.assign(next, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
+  }
   const removed = new Set(block.map(s => s.id));
   scenes.splice(a, b - a + 1, ...chain);
   for (const s of scenes) {
@@ -529,7 +547,7 @@ for (const seg of edits.cutscenes ?? []) {
     for (const bt of s.dialogueBeats ?? []) if (removed.has(bt.afterBeatTargetSceneId)) bt.afterBeatTargetSceneId = chain[0].id;
     if (removed.has(s.autoAdvanceTargetSceneId)) s.autoAdvanceTargetSceneId = chain[0].id;
   }
-  console.log(`cutscene ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed shots, about ${Math.round(total)} s`);
+  console.log(`cutscene ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed shots, about ${Math.round(total)} s${seg.musicUrl ? ` to ${seg.musicUrl} (${seg.seconds} s; caption shots × ${fit.toFixed(2)})` : ""}`);
 }
 
 // Animatic reading pace per scene (studio-edits "readPace", scene id → multiplier): a scene whose narration would hold one picture for
