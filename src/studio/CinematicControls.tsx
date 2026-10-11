@@ -864,7 +864,24 @@ export function CinematicControls({
             value={c.depthMap}
             includeGradients={false}
             placeholder="Pick this picture's depth map…"
-            onChange={(v) => set({ depthMap: v || undefined })}
+            onChange={(v) =>
+              set(
+                v && !c.depthMap
+                  ? {
+                      // A newly added map starts on the suggested move (docs/depth-camera.md, "Choose the move"): a push in
+                      // over a slight pan of the same length. Anything already set is kept; dolly cannot carry a depth layer.
+                      depthMap: v,
+                      depthMotion: c.depthMotion ?? "push",
+                      depthAmount: c.depthAmount ?? 0.4,
+                      depthSeconds: c.depthSeconds ?? 14,
+                      focalPoint: c.focalPoint ?? "50% 55%",
+                      ...(c.mode === undefined || c.mode === "dolly"
+                        ? { mode: "pan" as const, panDistance: c.panDistance ?? 2, zoomDuration: c.depthSeconds ?? 14 }
+                        : {}),
+                    }
+                  : { depthMap: v || undefined },
+              )
+            }
           />
         </Field>
         {c.depthMap && (

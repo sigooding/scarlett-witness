@@ -48,6 +48,8 @@ your eye confirms them.
 
 ## 3. Choose the move
 
+**In the Studio, adding a depth map to a picture fills in the suggested move** wherever nothing is set yet: `push`, amount 0.4, 14 s, focal point 50% 55%, over `pan` (distance 2, the same 14 s). A `dolly` camera is switched to `pan`, since dolly cannot carry a depth layer. Change any of it afterwards; nothing already set is overwritten.
+
 In `pictureLook` (or the Studio's 🧊 panel), for the picture:
 
 | Field | What it does |
