@@ -59,6 +59,10 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
   (14 characters a second, nothing joined) it ran 2 h 36 min. Only the animatic is paced this way: in the game the
   reader still sets the pace, and the screenplay is unchanged. Cuts timed to a song (the raid, the opening titles)
   keep their own timing.
+* **Fast scenes and long holds (11 October).** The inn raid (scenes 39–49) is a hands-off cutscene of 35 quick shots,
+  about 84 s, each with a short caption or a recorded line and its own sound (`src/film/studio-edits.json`, `cutscenes`:
+  edit the list there to retime or recaption it). Nineteen scenes whose narration held one picture for half a minute
+  read their silent lines a quarter faster in the animatic (`readPace`, scene id → multiplier); the game is unchanged.
 * **Captions** are drawn by the game over the picture (`src/game/animatic.tsx`, styles at the end of `src/index.css`):
   subtitles with the speaker's name above the line, descriptions in italics in a dark box, the scene heading at the
   top left. The reading panel, the HUD, the toasts and the checkpoint flash are hidden. The credits play as they do in
