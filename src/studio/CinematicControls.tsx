@@ -1017,15 +1017,15 @@ export function CinematicControls({
         )}
 
         <label className="flex items-start gap-2 border border-gold/25 bg-gold/5 px-2 py-1.5 text-[10px] uppercase tracking-wider text-paper/70">
-          <input type="checkbox" className="mt-0.5" checked={c.depthFog !== false} onChange={(e) => set({ depthFog: e.target.checked ? true : false })} />
+          <input type="checkbox" className="mt-0.5" checked={c.depthFog === true} onChange={(e) => set({ depthFog: e.target.checked ? true : undefined })} />
           <span>
             🌫️ Depth fog — thicker at back
             <span className="block font-type text-[9px] normal-case tracking-normal text-paper/45">
-              Fog banks opacity = lerp(0.1,0.6, y/100). Background hazier. Auto with fog particles, toggle for any scene.
+              Fog banks opacity = lerp(0.1,0.6, y/100). Background hazier. Off unless ticked; shows with fog particles.
             </span>
           </span>
         </label>
-        {c.depthFog !== false && (
+        {c.depthFog === true && (
           <Field label={`Fog strength ${((c.fogStrength ?? 0.6) * 100).toFixed(0)}%`}>
             <div className="flex items-center gap-2">
               <input type="range" min={0} max={1} step={0.05} value={c.fogStrength ?? 0.6} className="flex-1 accent-pink-500" onChange={(e) => set({ fogStrength: Number(e.target.value) })} />

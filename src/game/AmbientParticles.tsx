@@ -1169,7 +1169,8 @@ export function Particles({ kind, soundOn, cinematic, reducedMotion, ambientAudi
   }
 
   const isRain = kind === "rain" || kind === "drizzle" || kind === "storm";
-  const depthFogOn = (cinematic as any)?.depthFog !== false;
+  // Off unless a scene asks for it (the director had it taken off every scene on 11 October 2026)
+  const depthFogOn = (cinematic as any)?.depthFog === true;
   const fogStrength = (cinematic as any)?.fogStrength ?? 0.6;
   // Defaults to ON for rain scenes, but an EXPLICIT false from Studio (the
   // checkbox writes false, not undefined) must win — the render gate below
