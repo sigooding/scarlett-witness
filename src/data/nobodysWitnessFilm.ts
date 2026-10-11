@@ -178,369 +178,465 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 1940,
    "y": 820
   },
-  "nw_s39": {
+  "nw_cut_inn-raid_01": {
    "x": 2320,
    "y": 820
   },
-  "nw_s40": {
+  "nw_cut_inn-raid_02": {
    "x": 2700,
    "y": 820
   },
-  "nw_s41": {
+  "nw_cut_inn-raid_03": {
    "x": 3080,
    "y": 820
   },
-  "nw_s42": {
+  "nw_cut_inn-raid_04": {
    "x": 3460,
    "y": 820
   },
-  "nw_s43": {
+  "nw_cut_inn-raid_05": {
    "x": 3840,
    "y": 820
   },
-  "nw_s44": {
+  "nw_cut_inn-raid_06": {
    "x": 4220,
    "y": 820
   },
-  "nw_s45": {
+  "nw_cut_inn-raid_07": {
    "x": 40,
    "y": 1080
   },
-  "nw_s46": {
+  "nw_cut_inn-raid_08": {
    "x": 420,
    "y": 1080
   },
-  "nw_s47": {
+  "nw_cut_inn-raid_09": {
    "x": 800,
    "y": 1080
   },
-  "nw_s48": {
+  "nw_cut_inn-raid_10": {
    "x": 1180,
    "y": 1080
   },
-  "nw_s49": {
+  "nw_cut_inn-raid_11": {
    "x": 1560,
    "y": 1080
+  },
+  "nw_cut_inn-raid_12": {
+   "x": 1940,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_13": {
+   "x": 2320,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_14": {
+   "x": 2700,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_15": {
+   "x": 3080,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_16": {
+   "x": 3460,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_17": {
+   "x": 3840,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_18": {
+   "x": 4220,
+   "y": 1080
+  },
+  "nw_cut_inn-raid_19": {
+   "x": 40,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_20": {
+   "x": 420,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_21": {
+   "x": 800,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_22": {
+   "x": 1180,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_23": {
+   "x": 1560,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_24": {
+   "x": 1940,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_25": {
+   "x": 2320,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_26": {
+   "x": 2700,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_27": {
+   "x": 3080,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_28": {
+   "x": 3460,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_29": {
+   "x": 3840,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_30": {
+   "x": 4220,
+   "y": 1340
+  },
+  "nw_cut_inn-raid_31": {
+   "x": 40,
+   "y": 1600
+  },
+  "nw_cut_inn-raid_32": {
+   "x": 420,
+   "y": 1600
+  },
+  "nw_cut_inn-raid_33": {
+   "x": 800,
+   "y": 1600
+  },
+  "nw_cut_inn-raid_34": {
+   "x": 1180,
+   "y": 1600
+  },
+  "nw_cut_inn-raid_35": {
+   "x": 1560,
+   "y": 1600
   },
   "nw_s50": {
    "x": 1940,
-   "y": 1080
+   "y": 1600
   },
   "nw_s51": {
    "x": 2320,
-   "y": 1080
+   "y": 1600
   },
   "nw_s52": {
    "x": 2700,
-   "y": 1080
+   "y": 1600
   },
   "nw_s53": {
    "x": 3080,
-   "y": 1080
+   "y": 1600
   },
   "nw_m53": {
    "x": 3460,
-   "y": 1080
+   "y": 1600
   },
   "nw_s53a": {
    "x": 3840,
-   "y": 1080
+   "y": 1600
   },
   "nw_s54": {
    "x": 4220,
-   "y": 1080
+   "y": 1600
   },
   "nw_s55": {
    "x": 40,
-   "y": 1340
+   "y": 1860
   },
   "nw_s56": {
    "x": 420,
-   "y": 1340
+   "y": 1860
   },
   "nw_s57": {
    "x": 800,
-   "y": 1340
+   "y": 1860
   },
   "nw_s58": {
    "x": 1180,
-   "y": 1340
+   "y": 1860
   },
   "nw_s59": {
    "x": 1560,
-   "y": 1340
+   "y": 1860
   },
   "nw_s60": {
    "x": 1940,
-   "y": 1340
+   "y": 1860
   },
   "nw_s61": {
    "x": 2320,
-   "y": 1340
+   "y": 1860
   },
   "nw_s62": {
    "x": 2700,
-   "y": 1340
+   "y": 1860
   },
   "nw_s63": {
    "x": 3080,
-   "y": 1340
+   "y": 1860
   },
   "nw_s63a": {
    "x": 3460,
-   "y": 1340
+   "y": 1860
   },
   "nw_s64": {
    "x": 3840,
-   "y": 1340
+   "y": 1860
   },
   "nw_s65": {
    "x": 4220,
-   "y": 1340
+   "y": 1860
   },
   "nw_s65_b": {
    "x": 40,
-   "y": 1600
+   "y": 2120
   },
   "nw_s66": {
    "x": 420,
-   "y": 1600
+   "y": 2120
   },
   "nw_s67": {
    "x": 800,
-   "y": 1600
+   "y": 2120
   },
   "nw_s68": {
    "x": 1180,
-   "y": 1600
+   "y": 2120
   },
   "nw_s69": {
    "x": 1560,
-   "y": 1600
+   "y": 2120
   },
   "nw_s70": {
    "x": 1940,
-   "y": 1600
+   "y": 2120
   },
   "nw_s71": {
    "x": 2320,
-   "y": 1600
+   "y": 2120
   },
   "nw_s72": {
    "x": 2700,
-   "y": 1600
+   "y": 2120
   },
   "nw_s72_b": {
    "x": 3080,
-   "y": 1600
+   "y": 2120
   },
   "nw_s73": {
    "x": 3460,
-   "y": 1600
+   "y": 2120
   },
   "nw_s74": {
    "x": 3840,
-   "y": 1600
+   "y": 2120
   },
   "nw_s75": {
    "x": 4220,
-   "y": 1600
+   "y": 2120
   },
   "nw_s76": {
    "x": 40,
-   "y": 1860
+   "y": 2380
   },
   "nw_s77": {
    "x": 420,
-   "y": 1860
+   "y": 2380
   },
   "nw_s78": {
    "x": 800,
-   "y": 1860
+   "y": 2380
   },
   "nw_s79": {
    "x": 1180,
-   "y": 1860
+   "y": 2380
   },
   "nw_s80": {
    "x": 1560,
-   "y": 1860
+   "y": 2380
   },
   "nw_s81": {
    "x": 1940,
-   "y": 1860
+   "y": 2380
   },
   "nw_s82": {
    "x": 2320,
-   "y": 1860
+   "y": 2380
   },
   "nw_s82a": {
    "x": 2700,
-   "y": 1860
+   "y": 2380
   },
   "nw_s83": {
    "x": 3080,
-   "y": 1860
+   "y": 2380
   },
   "nw_s84": {
    "x": 3460,
-   "y": 1860
+   "y": 2380
   },
   "nw_song_raid_01": {
    "x": 3840,
-   "y": 1860
+   "y": 2380
   },
   "nw_song_raid_02": {
    "x": 4220,
-   "y": 1860
+   "y": 2380
   },
   "nw_song_raid_03": {
    "x": 40,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_04": {
    "x": 420,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_05": {
    "x": 800,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_06": {
    "x": 1180,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_07": {
    "x": 1560,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_08": {
    "x": 1940,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_09": {
    "x": 2320,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_10": {
    "x": 2700,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_11": {
    "x": 3080,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_12": {
    "x": 3460,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_13": {
    "x": 3840,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_14": {
    "x": 4220,
-   "y": 2120
+   "y": 2640
   },
   "nw_song_raid_15": {
    "x": 40,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_16": {
    "x": 420,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_17": {
    "x": 800,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_18": {
    "x": 1180,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_19": {
    "x": 1560,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_20": {
    "x": 1940,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_21": {
    "x": 2320,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_22": {
    "x": 2700,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_23": {
    "x": 3080,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_24": {
    "x": 3460,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_25": {
    "x": 3840,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_26": {
    "x": 4220,
-   "y": 2380
+   "y": 2900
   },
   "nw_song_raid_27": {
    "x": 40,
-   "y": 2640
+   "y": 3160
   },
   "nw_song_raid_28": {
    "x": 420,
-   "y": 2640
+   "y": 3160
   },
   "nw_song_raid_29": {
    "x": 800,
-   "y": 2640
+   "y": 3160
   },
   "nw_s92_after": {
    "x": 1180,
-   "y": 2640
+   "y": 3160
   },
   "nw_s93": {
    "x": 1560,
-   "y": 2640
+   "y": 3160
   },
   "nw_s94": {
    "x": 1940,
-   "y": 2640
+   "y": 3160
   },
   "nw_s95": {
    "x": 2320,
-   "y": 2640
+   "y": 3160
   },
   "nw_s96": {
    "x": 2700,
-   "y": 2640
+   "y": 3160
   },
   "nw_s98": {
    "x": 3080,
-   "y": 2640
+   "y": 3160
   },
   "nw_s99a": {
    "x": 3460,
-   "y": 2640
+   "y": 3160
   },
   "nw_s100": {
    "x": 3840,
-   "y": 2640
+   "y": 3160
   },
   "nw_credits": {
    "x": 4220,
-   "y": 2640
+   "y": 3160
   },
   "nw_end": {
    "x": 40,
-   "y": 2900
+   "y": 3420
   }
  },
  "dialogueBox": {
@@ -4118,7 +4214,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s9",
@@ -4303,7 +4400,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s10",
@@ -4847,7 +4945,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s11",
@@ -5192,7 +5291,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s12",
@@ -5502,7 +5602,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s14",
@@ -5868,7 +5969,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s14a",
@@ -6687,7 +6789,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s15",
@@ -6819,7 +6922,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s16",
@@ -7453,7 +7557,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
    "musicLevel": 0.2,
-   "musicFadeSeconds": 6
+   "musicFadeSeconds": 6,
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_m18",
@@ -8553,7 +8658,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s23",
@@ -9362,7 +9468,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s25a",
@@ -9686,7 +9793,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s26",
@@ -9936,7 +10044,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s27",
@@ -10685,7 +10794,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s30",
@@ -11404,7 +11514,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s37",
@@ -11570,7 +11681,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s39",
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_01",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1,
      "sfxUrl": "/film/sfx/gravel-tyres.mp3",
@@ -11583,10 +11694,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": []
   },
   {
-   "id": "nw_s39",
-   "title": "39 — The curtain gap",
+   "id": "nw_cut_inn-raid_01",
+   "title": "The raid on the inn: Jack's eyes open. Tyres on gravel.",
    "background": "/film/img/s39/174-he-has-heard-the-gravel.jpg",
-   "prose": "INT. ROADSIDE INN, JACK'S ROOM - CONTINUOUS",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -11594,169 +11718,92 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "dialogueBeats": [
-    {
-     "id": "nw_b788",
-     "characterId": "nw_narrator",
-     "text": "Jack's eyes open in the dark. He has heard the gravel.",
-     "silent": true
-    },
-    {
-     "id": "nw_b789",
-     "characterId": "nw_narrator",
-     "text": "He goes to the window. Lifts one corner of the thin curtain.",
-     "silent": true,
-     "background": "/film/img/s39/174-he-has-heard-the-gravel.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b790",
-     "characterId": "nw_narrator",
-     "text": "HIS POV THROUGH THE CURTAIN GAP: four black cars in an arc across the lot, headlights on, rain visible only inside the beams.",
-     "silent": true,
-     "background": "/film/img/s39/175-the-curtain-gap.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "lights": [
-       {
-        "x": 28,
-        "y": 69,
-        "color": "#eef4ff",
-        "size": 8,
-        "intensity": 0.45,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.05
-       },
-       {
-        "x": 41,
-        "y": 54,
-        "color": "#eef4ff",
-        "size": 7,
-        "intensity": 0.4,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.05
-       },
-       {
-        "x": 61,
-        "y": 53,
-        "color": "#eef4ff",
-        "size": 7,
-        "intensity": 0.4,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.05
-       },
-       {
-        "x": 76,
-        "y": 69,
-        "color": "#eef4ff",
-        "size": 8,
-        "intensity": 0.45,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.05
-       }
-      ],
-      "lensFlare": {
-       "preset": "anamorphic-blue",
-       "x": 28,
-       "y": 69,
-       "intensity": 0.3,
-       "streakIntensity": 0.55,
-       "starburstIntensity": 0.2,
-       "ghostIntensity": 0.3,
-       "pulseAmount": 0.15
-      }
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b791",
-     "characterId": "nw_narrator",
-     "text": "Eight MEN step out, two from each car. Black clothes. Masks. Compact submachine guns held low and easy.",
-     "silent": true
-    },
-    {
-     "id": "nw_b792",
-     "characterId": "nw_narrator",
-     "text": "They don't rush. They split without speaking. Two toward the entrance. Two around the back. Two toward the side. Two stay by the cars.",
-     "silent": true
-    },
-    {
-     "id": "nw_b793",
-     "characterId": "nw_narrator",
-     "text": "Jack lets the curtain fall.",
-     "silent": true
-    },
-    {
-     "id": "nw_b794",
-     "characterId": "nw_narrator",
-     "text": "He moves fast and quietly: sweeps the receipts into his jacket, pulls on his shoes, takes nothing else.",
-     "silent": true,
-     "background": "/film/img/s39/461-takes-nothing-else.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b795",
-     "characterId": "nw_narrator",
-     "text": "Downstairs, the baseball crowd CHEERS on the TV.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s40",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/tv-crowd-cheer.mp3",
-     "sfxVolume": 0.12
-    }
-   ],
-   "hotspots": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b1",
+     "characterId": "nw_narrator",
+     "text": "Jack's eyes open. Tyres on gravel.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/gravel-tyres.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.22,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_02"
+    }
+   ]
   },
   {
-   "id": "nw_s40",
-   "title": "40 — Plaster rains down",
-   "background": "/film/img/s40/176-were-closed.jpg",
-   "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
+   "id": "nw_cut_inn-raid_02",
+   "title": "The raid on the inn: Four black cars. Eight masked men.",
+   "background": "/film/img/s39/175-the-curtain-gap.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 28,
+      "y": 69,
+      "color": "#eef4ff",
+      "size": 8,
+      "intensity": 0.45,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     },
+     {
+      "x": 41,
+      "y": 54,
+      "color": "#eef4ff",
+      "size": 7,
+      "intensity": 0.4,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     },
+     {
+      "x": 61,
+      "y": 53,
+      "color": "#eef4ff",
+      "size": 7,
+      "intensity": 0.4,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     },
+     {
+      "x": 76,
+      "y": 69,
+      "color": "#eef4ff",
+      "size": 8,
+      "intensity": 0.45,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     }
+    ],
+    "lensFlare": {
+     "preset": "anamorphic-blue",
+     "x": 28,
+     "y": 69,
+     "intensity": 0.3,
+     "streakIntensity": 0.55,
+     "starburstIntensity": 0.2,
+     "ghostIntensity": 0.3,
+     "pulseAmount": 0.15
+    }
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -11764,121 +11811,364 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b796",
+     "id": "nw_cut_inn-raid_b2",
      "characterId": "nw_narrator",
-     "text": "The front door opens. Two masked men step in, weapons up.",
+     "text": "Four black cars. Eight masked men.",
      "silent": true,
-     "background": "/film/img/s40/176-were-closed.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 22,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_03"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_03",
+   "title": "The raid on the inn: They split up without a word.",
+   "background": "/film/img/s39/175-the-curtain-gap.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "lights": [
+     {
+      "x": 28,
+      "y": 69,
+      "color": "#eef4ff",
+      "size": 8,
+      "intensity": 0.45,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     {
+      "x": 41,
+      "y": 54,
+      "color": "#eef4ff",
+      "size": 7,
+      "intensity": 0.4,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     },
+     {
+      "x": 61,
+      "y": 53,
+      "color": "#eef4ff",
+      "size": 7,
+      "intensity": 0.4,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     },
+     {
+      "x": 76,
+      "y": 69,
+      "color": "#eef4ff",
+      "size": 8,
+      "intensity": 0.45,
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05
+     }
+    ],
+    "lensFlare": {
+     "preset": "anamorphic-blue",
+     "x": 28,
+     "y": 69,
+     "intensity": 0.3,
+     "streakIntensity": 0.55,
+     "starburstIntensity": 0.2,
+     "ghostIntensity": 0.3,
+     "pulseAmount": 0.15
+    }
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b797",
+     "id": "nw_cut_inn-raid_b3",
      "characterId": "nw_narrator",
-     "text": "The first is the MASKED LEADER (40s), a man in a plain dark suit, nothing about him to remember. His face stays behind the mask.",
-     "silent": true
-    },
+     "text": "They split up without a word.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-doors-open.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.92,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_04"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_04",
+   "title": "The raid on the inn: He takes the receipts. Nothing else.",
+   "background": "/film/img/s39/461-takes-nothing-else.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b798",
+     "id": "nw_cut_inn-raid_b4",
      "characterId": "nw_narrator",
-     "text": "The man who touched his earpiece in the Kanda rain.",
-     "silent": true
-    },
+     "text": "He takes the receipts. Nothing else.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-crowd-cheer.mp3",
+     "sfxVolume": 0.12,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.82,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_05"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_05",
+   "title": "The raid on the inn: Two masked men walk in. The first is the",
+   "background": "/film/img/s40/176-were-closed.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b799",
+     "id": "nw_cut_inn-raid_b5",
      "characterId": "nw_narrator",
-     "text": "Mr. Noda wakes in his chair. Stares.",
-     "silent": true
-    },
+     "text": "Two masked men walk in. The first is the man from the Kanda rain.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_06"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_06",
+   "title": "The raid on the inn: We're closed —",
+   "background": "/film/img/s40/176-were-closed.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b800",
      "characterId": "nw_mr_noda",
      "text": "We're closed —",
-     "audioUrl": "/film/voice/s40/178-mrnoda-we-re-closed.mp3"
-    },
-    {
-     "id": "nw_b801",
-     "characterId": "nw_narrator",
-     "text": "A burst of suppressed fire into the ceiling. Plaster rains down. Mr. Noda throws himself behind the counter.",
-     "silent": true,
-     "background": "/film/img/s40/177-behind-the-counter.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.45,
-      "shakeDuration": 0.25
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
-     "sfxVolume": 0.9
-    },
-    {
-     "id": "nw_b802",
-     "characterId": "nw_narrator",
-     "text": "The souvenir case shatters. The CRT keeps playing baseball.",
-     "silent": true,
-     "background": "/film/img/s40/178-staff-side.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 15,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.3,
-      "shakeDuration": 0.25
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s41",
+     "audioUrl": "/film/voice/s40/178-mrnoda-we-re-closed.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_07"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_07",
+   "title": "The raid on the inn: A burst into the ceiling. Plaster rains ",
+   "background": "/film/img/s40/177-behind-the-counter.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.45,
+    "shakeDuration": 0.25
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b7",
+     "characterId": "nw_narrator",
+     "text": "A burst into the ceiling. Plaster rains down.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
+     "sfxVolume": 0.7,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_08"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_08",
+   "title": "The raid on the inn: The souvenir case shatters.",
+   "background": "/film/img/s40/178-staff-side.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.25
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b8",
+     "characterId": "nw_narrator",
+     "text": "The souvenir case shatters.",
+     "silent": true,
      "sfxUrl": "/film/sfx/glass-case-shatter.mp3",
-     "sfxVolume": 0.8
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.22,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_09"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s41",
-   "title": "41 — Boots below",
+   "id": "nw_cut_inn-raid_09",
+   "title": "The raid on the inn: Boots on the stairs. Jack goes the other",
    "background": "/film/img/s41/177-boots-below.jpg",
-   "prose": "INT. ROADSIDE INN, UPSTAIRS CORRIDOR - CONTINUOUS",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -11886,110 +12176,100 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b803",
+     "id": "nw_cut_inn-raid_b9",
      "characterId": "nw_narrator",
-     "text": "Jack at the top of the stairs. He hears boots below. He goes the other way, toward the bath.",
+     "text": "Boots on the stairs. Jack goes the other way.",
      "silent": true,
-     "background": "/film/img/s41/177-boots-below.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 14,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.82,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_10"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_10",
+   "title": "The raid on the inn: Gunfire down the corridor. The screens b",
+   "background": "/film/img/s41/178-the-screens.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.45,
+    "shakeDuration": 0.25
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b804",
+     "id": "nw_cut_inn-raid_b10",
      "characterId": "nw_narrator",
-     "text": "Behind him, a masked man reaches the top of the stairs and fires down the corridor.",
+     "text": "Gunfire down the corridor. The screens burst apart.",
      "silent": true,
-     "background": "/film/img/s41/178-the-screens.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.45,
-      "shakeDuration": 0.25
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
-     "sfxVolume": 0.8
-    },
-    {
-     "id": "nw_b805",
-     "characterId": "nw_narrator",
-     "text": "The paper screens along one wall burst apart in a line of holes.",
-     "silent": true
-    },
-    {
-     "id": "nw_b806",
-     "characterId": "nw_narrator",
-     "text": "Jack is already through the bathroom door.",
-     "silent": true,
-     "background": "/film/img/s41/179-same-wood.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 55%",
-      "zoomDuration": 16,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "depthMap": "/film/depth/s41/179-same-wood/depth.png",
-      "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s41/179-same-wood/cutout-1.png",
-        "depth": 0.365
-       }
-      ],
-      "depthMotion": "push",
-      "depthAmount": 0.54,
-      "depthSeconds": 16
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s42",
+     "sfxVolume": 0.7,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_11"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s42",
-   "title": "42 — The third time",
-   "background": "/film/img/s42/210-the-third-time.jpg",
-   "prose": "INT. ROADSIDE INN, BATHROOM - CONTINUOUS",
+   "id": "nw_cut_inn-raid_11",
+   "title": "The raid on the inn: Through the bathroom door.",
+   "background": "/film/img/s41/179-same-wood.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 55%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+    "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+      "depth": 0.365
+     }
+    ],
+    "depthMotion": "push",
+    "depthAmount": 0.54,
+    "depthSeconds": 16
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -11997,73 +12277,91 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "dialogueBeats": [
-    {
-     "id": "nw_b807",
-     "characterId": "nw_narrator",
-     "text": "Dark. Steam still hanging. Jack climbs onto the edge of the deep tub and hits the swollen window frame with the heel of his hand. Once.",
-     "silent": true
-    },
-    {
-     "id": "nw_b808",
-     "characterId": "nw_narrator",
-     "text": "Twice. It won't move.",
-     "silent": true
-    },
-    {
-     "id": "nw_b809",
-     "characterId": "nw_narrator",
-     "text": "Boots in the corridor.",
-     "silent": true
-    },
-    {
-     "id": "nw_b810",
-     "characterId": "nw_narrator",
-     "text": "The third time, he hits it with everything he has. The frame cracks open. Rain pours in.",
-     "silent": true,
-     "background": "/film/img/s42/210-the-third-time.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 16,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.3,
-      "shakeDuration": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/window-forced.mp3",
-     "sfxVolume": 0.8
-    },
-    {
-     "id": "nw_b811",
-     "characterId": "nw_narrator",
-     "text": "He hauls himself through.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s43",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
-    }
-   ],
-   "hotspots": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b11",
+     "characterId": "nw_narrator",
+     "text": "Through the bathroom door.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.02,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
+    }
+   ]
   },
   {
-   "id": "nw_s43",
-   "title": "43 — Wet tin",
+   "id": "nw_cut_inn-raid_12",
+   "title": "The raid on the inn: Once. Twice. The third time, the window ",
+   "background": "/film/img/s42/210-the-third-time.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b12",
+     "characterId": "nw_narrator",
+     "text": "Once. Twice. The third time, the window gives.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/window-forced.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.82,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_13"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_13",
+   "title": "The raid on the inn: Down the wet tin. He catches the gutter.",
    "background": "/film/img/s43/211-wet-tin.jpg",
-   "prose": "EXT. ROADSIDE INN, KITCHEN ROOF - CONTINUOUS",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 15,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
    "particleConfig": {
@@ -12071,49 +12369,44 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "dialogueBeats": [
-    {
-     "id": "nw_b812",
-     "characterId": "nw_narrator",
-     "text": "A low slope of wet tin below the bathroom window. Jack drops onto it, slides, catches the gutter, and swings down —",
-     "silent": true,
-     "background": "/film/img/s43/211-wet-tin.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 15,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.3,
-      "shakeDuration": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s44",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/tin-roof-slide.mp3",
-     "sfxVolume": 0.8
-    }
-   ],
-   "hotspots": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b13",
+     "characterId": "nw_narrator",
+     "text": "Down the wet tin. He catches the gutter.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/tin-roof-slide.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_14"
+    }
+   ]
   },
   {
-   "id": "nw_s44",
-   "title": "44 — Stay whatever you hear",
+   "id": "nw_cut_inn-raid_14",
+   "title": "The raid on the inn: Mrs. Noda, crouched in the kitchen. Into",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
-   "prose": "INT. ROADSIDE INN, KITCHEN - CONTINUOUS",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -12121,81 +12414,85 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b813",
+     "id": "nw_cut_inn-raid_b14",
      "characterId": "nw_narrator",
-     "text": "— through the open back door into the kitchen, where Mrs. Noda is crouched on the floor behind the steel counter, rigid with fear.",
-     "silent": true
-    },
-    {
-     "id": "nw_b814",
-     "characterId": "nw_narrator",
-     "text": "He grabs her arm, pulls her low toward the pantry, opens it, puts her inside.",
-     "silent": true
-    },
+     "text": "Mrs. Noda, crouched in the kitchen. Into the pantry.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.82,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_15"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_15",
+   "title": "The raid on the inn: Stay. Whatever you hear.",
+   "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b815",
      "characterId": "nw_jack",
      "text": "Stay. Whatever you hear.",
      "audioUrl": "/film/voice/s44/214-jack-stay-whatever-you-hear.mp3",
-     "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 16,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b816",
-     "characterId": "nw_mrs_noda",
-     "text": "My husband —",
-     "audioUrl": "/film/voice/s44/214-mrsnoda-my-husband.mp3"
-    },
-    {
-     "id": "nw_b817",
-     "characterId": "nw_jack",
-     "text": "I'll get him.",
-     "audioUrl": "/film/voice/s44/214-jack-i-ll-get-him.mp3"
-    },
-    {
-     "id": "nw_b818",
-     "characterId": "nw_narrator",
-     "text": "He closes the pantry door on her.",
-     "silent": true
-    },
-    {
-     "id": "nw_b819",
-     "characterId": "nw_narrator",
-     "text": "He moves up the corridor toward the lobby, keeping low along the wall.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s45",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_16"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s45",
-   "title": "45 — The lobby goes dark",
-   "background": "/film/img/s45/462-a-finger-to-his-lips.jpg",
-   "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
+   "id": "nw_cut_inn-raid_16",
+   "title": "The raid on the inn: My husband —",
+   "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -12203,194 +12500,329 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b820",
-     "characterId": "nw_narrator",
-     "text": "From the corridor, Jack can see the lobby. One masked man stands in the middle of the room, weapon up, covering the stairs.",
-     "silent": true
-    },
+     "id": "nw_b816",
+     "characterId": "nw_mrs_noda",
+     "text": "My husband —",
+     "audioUrl": "/film/voice/s44/214-mrsnoda-my-husband.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_17"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_17",
+   "title": "The raid on the inn: I'll get him.",
+   "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b821",
-     "characterId": "nw_narrator",
-     "text": "The other has gone up.",
-     "silent": true
-    },
+     "id": "nw_b817",
+     "characterId": "nw_jack",
+     "text": "I'll get him.",
+     "audioUrl": "/film/voice/s44/214-jack-i-ll-get-him.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_18"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_18",
+   "title": "The raid on the inn: One gunman in the lobby. Mr. Noda behind",
+   "background": "/film/img/s45/462-a-finger-to-his-lips.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 21,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b822",
+     "id": "nw_cut_inn-raid_b18",
      "characterId": "nw_narrator",
-     "text": "Mr. Noda is behind the counter, out of the gunman's line of sight. He sees Jack. Jack puts a finger to his lips.",
+     "text": "One gunman in the lobby. Mr. Noda behind the counter.",
      "silent": true,
-     "background": "/film/img/s45/462-a-finger-to-his-lips.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.82,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_19"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_19",
+   "title": "The raid on the inn: Jack kills the lights.",
+   "background": "/film/img/s45/178-thank-you-very-much.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "midnight-teal",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "dimAmount": 0.35,
+    "lights": [
+     {
+      "x": 80,
+      "y": 15,
+      "color": "#7fa8ff",
+      "size": 30,
+      "intensity": 0.45,
+      "pulseSeconds": 0.6,
+      "pulseAmount": 0.8
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     {
+      "x": 37,
+      "y": 56,
+      "color": "#e3f1ff",
+      "size": 10,
+      "intensity": 0.3,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     }
+    ]
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b823",
+     "id": "nw_cut_inn-raid_b19",
      "characterId": "nw_narrator",
-     "text": "Jack reaches out and flips the lobby light switch. DARK.",
+     "text": "Jack kills the lights.",
      "silent": true,
-     "background": "/film/img/s45/178-thank-you-very-much.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "midnight-teal",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "dimAmount": 0.35,
-      "lights": [
-       {
-        "x": 80,
-        "y": 15,
-        "color": "#7fa8ff",
-        "size": 30,
-        "intensity": 0.45,
-        "pulseSeconds": 0.6,
-        "pulseAmount": 0.8
-       },
-       {
-        "x": 37,
-        "y": 56,
-        "color": "#e3f1ff",
-        "size": 10,
-        "intensity": 0.3,
-        "pulseSeconds": 2.2,
-        "pulseAmount": 0.12
-       }
-      ]
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/main-switch-blackout.mp3",
-     "sfxVolume": 0.6
-    },
+     "sfxVolume": 0.6,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.02,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_20"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_20",
+   "title": "The raid on the inn: The gunman fires blind into the dark.",
+   "background": "/film/img/s45/178-thank-you-very-much.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "midnight-teal",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "dimAmount": 0.35,
+    "lights": [
+     {
+      "x": 80,
+      "y": 15,
+      "color": "#7fa8ff",
+      "size": 30,
+      "intensity": 0.45,
+      "pulseSeconds": 0.6,
+      "pulseAmount": 0.8
+     },
+     {
+      "x": 37,
+      "y": 56,
+      "color": "#e3f1ff",
+      "size": 10,
+      "intensity": 0.3,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     }
+    ]
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b824",
+     "id": "nw_cut_inn-raid_b20",
      "characterId": "nw_narrator",
-     "text": "Only the TV lights the room now: blue, flickering.",
-     "silent": true
-    },
-    {
-     "id": "nw_b825",
-     "characterId": "nw_narrator",
-     "text": "The masked man spins and fires toward the corridor. The shots stitch across the wall above Jack's head.",
+     "text": "The gunman fires blind into the dark.",
      "silent": true,
      "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
-     "sfxVolume": 0.8
-    },
-    {
-     "id": "nw_b826",
-     "characterId": "nw_narrator",
-     "text": "One tears through the beer vending machine by the door.",
-     "silent": true
-    },
-    {
-     "id": "nw_b827",
-     "characterId": "nw_narrator",
-     "text": "It lights up and CHIMES:",
-     "silent": true,
-     "sfxUrl": "/film/sfx/vending-machine-buzz.mp3",
-     "sfxVolume": 0.6
-    },
+     "sfxVolume": 0.7,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.72,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_21"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_21",
+   "title": "The raid on the inn: Thank you very much.",
+   "background": "/film/img/s45/178-thank-you-very-much.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "midnight-teal",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "dimAmount": 0.35,
+    "lights": [
+     {
+      "x": 80,
+      "y": 15,
+      "color": "#7fa8ff",
+      "size": 30,
+      "intensity": 0.45,
+      "pulseSeconds": 0.6,
+      "pulseAmount": 0.8
+     },
+     {
+      "x": 37,
+      "y": 56,
+      "color": "#e3f1ff",
+      "size": 10,
+      "intensity": 0.3,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     }
+    ]
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b828",
      "characterId": "nw_vending_machine",
      "text": "Thank you very much.",
      "audioUrl": "/film/voice/s45/180-vendingmachine-thank-you-very-much.mp3",
-     "expression": "recorded"
-    },
-    {
-     "id": "nw_b829",
-     "characterId": "nw_narrator",
-     "text": "The gunman flinches toward the sound.",
-     "silent": true
-    },
-    {
-     "id": "nw_b830",
-     "characterId": "nw_narrator",
-     "text": "In that half-second, Jack is across the dark lobby, behind the counter. He grabs Mr. Noda by the collar and drags him down the corridor.",
-     "silent": true,
-     "background": "/film/img/s45/180-the-shoulder.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b831",
-     "characterId": "nw_narrator",
-     "text": "On the wall, the pink payphone starts to RING.",
-     "silent": true,
-     "background": "/film/img/s45/179-it-rings.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/phone.mp3"
-    },
-    {
-     "id": "nw_b832",
-     "characterId": "nw_narrator",
-     "text": "No one answers it. It rings and rings.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s46",
+     "expression": "recorded",
+     "sfxUrl": "/film/sfx/vending-machine-buzz.mp3",
+     "sfxVolume": 0.6,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_22"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s46",
-   "title": "46 — Clutch each other",
-   "background": "/film/img/s46/213-clutch-each-other.jpg",
-   "prose": "INT. ROADSIDE INN, KITCHEN - CONTINUOUS",
+   "id": "nw_cut_inn-raid_22",
+   "title": "The raid on the inn: In that half-second, Jack has him.",
+   "background": "/film/img/s45/180-the-shoulder.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.35,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "particleConfig": {
@@ -12398,63 +12830,175 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b833",
+     "id": "nw_cut_inn-raid_b22",
      "characterId": "nw_narrator",
-     "text": "Jack pushes Mr. Noda into the pantry beside his wife. The old couple clutch each other in the dark.",
+     "text": "In that half-second, Jack has him.",
      "silent": true,
-     "background": "/film/img/s46/213-clutch-each-other.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 15,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_23",
+   "title": "The raid on the inn: The pink payphone starts to ring.",
+   "background": "/film/img/s45/179-it-rings.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b834",
+     "id": "nw_cut_inn-raid_b23",
      "characterId": "nw_narrator",
-     "text": "Jack looks at them.",
-     "silent": true
-    },
+     "text": "The pink payphone starts to ring.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/phone.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_24"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_24",
+   "title": "The raid on the inn: The old couple, together in the dark.",
+   "background": "/film/img/s46/213-clutch-each-other.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b24",
+     "characterId": "nw_narrator",
+     "text": "The old couple, together in the dark.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_25"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_25",
+   "title": "The raid on the inn: I'm sorry.",
+   "background": "/film/img/s46/213-clutch-each-other.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b835",
      "characterId": "nw_jack",
      "text": "I'm sorry.",
-     "audioUrl": "/film/voice/s46/215-jack-i-m-sorry.mp3"
-    },
-    {
-     "id": "nw_b836",
-     "characterId": "nw_narrator",
-     "text": "He shuts the door. He goes out the back.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s47",
+     "audioUrl": "/film/voice/s46/215-jack-i-m-sorry.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_26"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s47",
-   "title": "47 — Mud and impacts",
+   "id": "nw_cut_inn-raid_26",
+   "title": "The raid on the inn: Gunfire chases him through the mud.",
    "background": "/film/img/s47/222-mud-and-impacts.jpg",
-   "prose": "EXT. ROADSIDE INN, BACK YARD - CONTINUOUS",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.5,
+    "shakeDuration": 0.25
+   },
+   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
@@ -12462,73 +13006,93 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "dialogueBeats": [
-    {
-     "id": "nw_b837",
-     "characterId": "nw_narrator",
-     "text": "Rain. Mud. The farm gate. The pickup truck.",
-     "silent": true
-    },
-    {
-     "id": "nw_b838",
-     "characterId": "nw_narrator",
-     "text": "A masked man comes round the side of the building. Sees him.",
-     "silent": true
-    },
-    {
-     "id": "nw_b839",
-     "characterId": "nw_narrator",
-     "text": "Jack runs. Gunfire kicks up mud behind him. He dives behind the truck.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
-     "sfxVolume": 0.7
-    },
-    {
-     "id": "nw_b840",
-     "characterId": "nw_narrator",
-     "text": "Bullets punch through the bodywork above his head, through the tailgate, through a wheel.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/bullets-car.mp3",
-     "sfxVolume": 0.8
-    },
-    {
-     "id": "nw_b841",
-     "characterId": "nw_narrator",
-     "text": "He yanks open the driver's door and pulls himself in, flat along the seat.",
-     "silent": true,
-     "background": "/film/img/s47/222-mud-and-impacts.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s48",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
-    }
-   ],
-   "hotspots": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b26",
+     "characterId": "nw_narrator",
+     "text": "Gunfire chases him through the mud.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
+     "sfxVolume": 0.7,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_27"
+    }
+   ]
   },
   {
-   "id": "nw_s48",
-   "title": "48 — Come on come on",
+   "id": "nw_cut_inn-raid_27",
+   "title": "The raid on the inn: Rounds punch through the truck.",
+   "background": "/film/img/s47/222-mud-and-impacts.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.5,
+    "shakeDuration": 0.25
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b27",
+     "characterId": "nw_narrator",
+     "text": "Rounds punch through the truck.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/bullets-car.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.32,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_28"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_28",
+   "title": "The raid on the inn: The keys are in it. The engine coughs. D",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
-   "prose": "INT. PICKUP TRUCK - CONTINUOUS",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
    "ambientAudio": "",
    "particles": "motes",
    "particleConfig": {
@@ -12536,81 +13100,185 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b842",
+     "id": "nw_cut_inn-raid_b28",
      "characterId": "nw_narrator",
-     "text": "The keys are in the ignition, exactly where she said.",
-     "silent": true,
-     "background": "/film/img/s48/214-come-on-come-on.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 15,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.3,
-      "shakeDuration": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b843",
-     "characterId": "nw_narrator",
-     "text": "He turns them. The engine coughs. Dies.",
+     "text": "The keys are in it. The engine coughs. Dies.",
      "silent": true,
      "sfxUrl": "/film/sfx/engine-cough-die.mp3",
-     "sfxVolume": 0.8
-    },
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.82,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_29"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_29",
+   "title": "The raid on the inn: A round through the windscreen.",
+   "background": "/film/img/s48/214-come-on-come-on.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b844",
+     "id": "nw_cut_inn-raid_b29",
      "characterId": "nw_narrator",
-     "text": "The windscreen cracks as a round goes through it.",
+     "text": "A round through the windscreen.",
      "silent": true,
      "sfxUrl": "/film/sfx/windscreen-crack.mp3",
-     "sfxVolume": 0.8
-    },
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.12,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_30"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_30",
+   "title": "The raid on the inn: Come on. Come on.",
+   "background": "/film/img/s48/214-come-on-come-on.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b845",
      "characterId": "nw_jack",
      "text": "Come on. Come on.",
-     "audioUrl": "/film/voice/s48/216-jack-come-on-come-on.mp3"
-    },
-    {
-     "id": "nw_b846",
-     "characterId": "nw_narrator",
-     "text": "He turns the key again. The engine catches. Roars.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s49",
+     "audioUrl": "/film/voice/s48/216-jack-come-on-come-on.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/car-engine-start.mp3",
-     "sfxVolume": 0.8
+     "afterBeatDelaySeconds": 0.57,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_31"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "rainOnLens": true,
-    "rainLensIntensity": 1
-   }
+   ]
   },
   {
-   "id": "nw_s49",
-   "title": "49 — No need to chase",
+   "id": "nw_cut_inn-raid_31",
+   "title": "The raid on the inn: It catches. Roars.",
+   "background": "/film/img/s48/214-come-on-come-on.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "",
+   "particles": "motes",
+   "particleConfig": {
+    "density": 0.35,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b31",
+     "characterId": "nw_narrator",
+     "text": "It catches. Roars.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-engine-start.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.52,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_32"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_32",
+   "title": "The raid on the inn: Through the farm gate.",
    "background": "/film/img/s49/463-through-the-farm-gate.jpg",
-   "prose": "EXT. ROADSIDE INN, BACK YARD - CONTINUOUS",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 14,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.5,
+    "shakeDuration": 0.25
+   },
+   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "particleConfig": {
@@ -12618,96 +13286,162 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b847",
+     "id": "nw_cut_inn-raid_b32",
      "characterId": "nw_narrator",
-     "text": "The truck lurches forward and smashes through the farm gate. Two masked men throw themselves aside.",
+     "text": "Through the farm gate.",
      "silent": true,
-     "background": "/film/img/s49/463-through-the-farm-gate.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 14,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/gate-smash.mp3",
-     "sfxVolume": 0.9
-    },
+     "sfxVolume": 0.9,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_33"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_33",
+   "title": "The raid on the inn: They don't chase him. They don't need to",
+   "background": "/film/img/s49/215-no-need-to-chase.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b848",
-     "characterId": "nw_narrator",
-     "text": "The truck fishtails through the mud onto the farm track, then onto the highway.",
-     "silent": true
-    },
-    {
-     "id": "nw_b849",
-     "characterId": "nw_narrator",
-     "text": "The eight men walk out into the lot, one by one, and stand in the headlights of their cars, watching the single red taillight shrink into the rain.",
-     "silent": true
-    },
-    {
-     "id": "nw_b850",
+     "id": "nw_cut_inn-raid_b33",
      "characterId": "nw_narrator",
      "text": "They don't chase him. They don't need to.",
      "silent": true,
-     "background": "/film/img/s49/215-no-need-to-chase.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 16,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
-      "shakeAmount": 0.3,
-      "shakeDuration": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b851",
-     "characterId": "nw_narrator",
-     "text": "The MASKED LEADER touches his earpiece.",
-     "silent": true
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_34"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_34",
+   "title": "The raid on the inn: He's gone. He has what she gave him.",
+   "background": "/film/img/s49/215-no-need-to-chase.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b852",
      "characterId": "nw_masked_leader",
      "text": "He's gone. He has what she gave him.",
-     "audioUrl": "/film/voice/s49/217-maskedleader-he-s-gone-he-has-what.mp3"
-    },
-    {
-     "id": "nw_b853",
-     "characterId": "nw_narrator",
-     "text": "Behind them, inside the lobby, the pink payphone is still ringing.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/phone.mp3",
-     "afterBeatTargetSceneId": "nw_s50",
+     "audioUrl": "/film/voice/s49/217-maskedleader-he-s-gone-he-has-what.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_35"
     }
-   ],
-   "hotspots": [],
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_35",
+   "title": "The raid on the inn: Inside, the payphone is still ringing.",
+   "background": "/film/img/s49/215-no-need-to-chase.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": true,
+    "filmGradeStrength": 0.3,
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.3
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
+   "particles": "rain",
+   "particleConfig": {
+    "density": 0.9,
+    "opacity": 0.55
+   },
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b35",
+     "characterId": "nw_narrator",
+     "text": "Inside, the payphone is still ringing.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/phone.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.52,
+     "afterBeatTargetSceneId": "nw_s50"
+    }
+   ]
   },
   {
    "id": "nw_s50",
@@ -13552,7 +14286,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false,
    "choices": [],
    "musicMode": "none",
-   "musicFadeSeconds": 4
+   "musicFadeSeconds": 4,
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s54",
@@ -13802,7 +14537,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "cinematic": {
     "volumetricShafts": true,
     "shaftsIntensity": 1.5
-   }
+   },
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s56",
@@ -13942,7 +14678,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s57",
@@ -16123,7 +16860,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "animaticReadPace": 0.75
   },
   {
    "id": "nw_s69",
