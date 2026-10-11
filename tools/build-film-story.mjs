@@ -462,6 +462,10 @@ for (const seg of edits.soundtracks ?? []) {
   console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${after.id} fades it out`);
 }
 
+// No letterbox bars (11 October 2026, the director): they are drawn over the picture and cut off its top and bottom
+// rather than changing its shape. Taken off every node last, after the Studio edits and the soundtracks have set them.
+for (const s of scenes) delete s.letterbox;
+
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));
 const story = {
   id: "nobodys-witness-film", pulpPaper: false, title: "Nobody's Witness", tagline: "Tokyo as a memory that is still happening.", gameKind: "vn",

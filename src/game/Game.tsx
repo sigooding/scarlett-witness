@@ -2154,11 +2154,17 @@ function BeatBackground({
 
   if (!layers.length) return null;
 
+  // A true dissolve: while a new picture comes in over it, the one going out stays solid underneath (it is removed once
+  // the new one is in). Fading both at once let the scene's own picture, an earlier shot, show through mid-dissolve at a
+  // quarter strength: a ghost of the previous shot. A dip to black goes through black for the same reason.
+  const incoming = layers.some((l) => !l.exiting);
+  const dissolving = incoming && layers.some((l) => l.exiting);
   return (
     <>
+      {dissolving && transitionName === "fade-black" && <div className="absolute inset-0 z-[2] bg-black" />}
       {layers.map((l) => {
         const { className: cinClass, style: cinStyle } = cinematicLayer(l.cinematic, l.background.startsWith("video:") ? "" : l.background, { reducedMotion: prefersReducedMotionPure() });
-        const animClass = l.exiting ? "beatbg-out" : `beatbg-in-${transitionName}`;
+        const animClass = l.exiting ? (incoming && transitionName !== "fade-black" ? "" : "beatbg-out") : `beatbg-in-${transitionName}`;
         const pOn = hasParallax(l.cinematic);
         return (
           <div
