@@ -891,7 +891,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_prologue",
    "musicLevel": 1.05,
-   "letterbox": true,
    "autoAdvanceDelaySeconds": 232,
    "cinematic": {
     "mode": "pan",
@@ -914,7 +913,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.5
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 2.2,
    "cinematic": {
@@ -986,7 +984,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -1780,7 +1777,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -2160,7 +2156,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -2314,7 +2309,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -2719,7 +2713,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -2998,7 +2991,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -3748,7 +3740,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -3917,7 +3908,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -4094,7 +4084,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -4264,7 +4253,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -4713,7 +4701,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -5027,7 +5014,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -5290,7 +5276,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -5609,7 +5594,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -6333,7 +6317,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -6450,7 +6433,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -6642,7 +6624,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -6889,7 +6870,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -7034,7 +7014,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/montage18/01.jpg",
    "prose": "",
    "hideHud": true,
-   "letterbox": true,
    "credits": {
     "title": "",
     "subtitle": "",
@@ -7081,7 +7060,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -7147,7 +7125,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -7576,7 +7553,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -7735,7 +7711,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -8064,7 +8039,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.45
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -8421,7 +8395,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -8763,7 +8736,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -9018,7 +8990,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -9221,7 +9192,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -9327,7 +9297,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -9599,7 +9568,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -9658,7 +9626,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -9926,7 +9893,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10022,7 +9988,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10109,7 +10074,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10232,7 +10196,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10315,7 +10278,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10407,7 +10369,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10456,7 +10417,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10614,7 +10574,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10709,7 +10668,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10776,7 +10734,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -10931,7 +10888,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11054,7 +11010,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11166,7 +11121,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11241,7 +11195,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11292,7 +11245,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11375,7 +11327,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11555,7 +11506,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11620,7 +11570,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11695,7 +11644,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11778,7 +11726,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11866,7 +11813,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -11973,7 +11919,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12066,7 +12011,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12137,7 +12081,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12363,7 +12306,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/montage53/01.jpg",
    "prose": "",
    "hideHud": true,
-   "letterbox": true,
    "credits": {
     "title": "",
     "subtitle": "",
@@ -12410,7 +12352,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12599,7 +12540,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12694,7 +12634,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12803,7 +12742,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -12928,7 +12866,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13011,7 +12948,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13110,7 +13046,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13317,7 +13252,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13454,7 +13388,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13636,7 +13569,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13792,7 +13724,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -13952,7 +13883,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -14162,7 +14092,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -14277,7 +14206,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -14360,7 +14288,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "cut",
    "transitionSpeed": 0.2,
    "musicMode": "track",
@@ -14466,7 +14393,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "musicMode": "none",
@@ -14615,7 +14541,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -14698,7 +14623,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -14800,7 +14724,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -14961,7 +14884,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -15144,7 +15066,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -15379,7 +15300,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -15555,7 +15475,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "cut",
    "transitionSpeed": 0.2,
    "musicMode": "track",
@@ -15623,7 +15542,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -15826,7 +15744,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -16289,7 +16206,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -16556,7 +16472,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -16732,7 +16647,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -16886,7 +16800,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "musicMode": "none",
@@ -17022,7 +16935,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -17270,7 +17182,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -17505,7 +17416,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -17634,7 +17544,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -17920,7 +17829,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -18108,7 +18016,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -18421,7 +18328,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -18853,7 +18759,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -18904,7 +18809,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -18961,7 +18865,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19007,7 +18910,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19051,7 +18953,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19095,7 +18996,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19139,7 +19039,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19183,7 +19082,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19265,7 +19163,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19322,7 +19219,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19368,7 +19264,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19435,7 +19330,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19481,7 +19375,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19525,7 +19418,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19569,7 +19461,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19635,7 +19526,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19692,7 +19582,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19749,7 +19638,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19821,7 +19709,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19876,7 +19763,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19920,7 +19806,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -19964,7 +19849,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20010,7 +19894,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20056,7 +19939,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20115,7 +19997,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20167,7 +20048,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20240,7 +20120,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20315,7 +20194,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20388,7 +20266,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
    "noTypewriter": true,
@@ -20415,7 +20292,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
@@ -20480,7 +20356,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -20561,7 +20436,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -20755,7 +20629,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -20834,7 +20707,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -20974,7 +20846,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -21385,7 +21256,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
@@ -21584,7 +21454,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "opacity": 0.55
    },
    "hideHud": true,
-   "letterbox": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
    "dialogueBeats": [

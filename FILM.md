@@ -6,6 +6,16 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## No black bars; shot changes without a ghost (11 October 2026)
+
+* **No letterbox bars.** They were drawn over the picture and hid its top and bottom (131 of 133 nodes had them). The
+  builder now takes `letterbox` off every node after the Studio edits and the soundtracks; the pictures fill the frame.
+* **A true dissolve between shots** (`BeatBackground` in `src/game/Game.tsx`): the picture going out stays solid while
+  the new one fades in over it, then is removed; a dip to black goes through black. Before, both faded at once, so the
+  scene's own picture (its first shot) showed through mid-dissolve at a quarter strength: the flicker of "the previous
+  shot overlayed", in the game and in the animatic alike.
+* **Depth fog** ("thicker at back") is off unless a scene ticks it.
+
 ## The radio song, the credits, no saxophones, the animatic export (10 October 2026)
 
 * **Scene 65:** the director's song `soundtrack_nobodys_witness.mp3` is the neighbour's radio through Vera's wall. It starts on "the neighbour's radio begins to play" (the scene splits there into `nw_s65_b`, which also keeps the room tone and the window rain), plays once at 0.6 under the rest of the scene (the make-up, the umbrella, "Borrowing it."), and fades over 4 s as the hotel lounge (66) begins. Cue `radio` in `tools/build-film-story.mjs`; the visual novel's importer puts it in `src/film/story.json`.
