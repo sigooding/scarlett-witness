@@ -1661,9 +1661,9 @@
     },
     "222-mud-and-impacts": {
       "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 16
+        "mode": "shake",
+        "shakeAmount": 0.5,
+        "shakeDuration": 0.25
       }
     },
     "214-come-on-come-on": {
@@ -3932,6 +3932,248 @@
         "panDistance": 2,
         "zoomDuration": 16
       }
+    },
+    "180-the-shoulder": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.35,
+        "shakeDuration": 0.3
+      }
+    },
+    "463-through-the-farm-gate": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.5,
+        "shakeDuration": 0.25
+      }
+    },
+    "176-were-closed": {
+      "cinematic": {
+        "mode": "shake",
+        "shakeAmount": 0.25,
+        "shakeDuration": 0.3
+      }
     }
-  }
+  },
+  "cutscenes": [
+    {
+      "id": "inn-raid",
+      "title": "The raid on the inn",
+      "from": "nw_s39",
+      "to": "nw_s49",
+      "shotSeconds": 2.4,
+      "note": "11 October 2026, the director: the roadside raid should play as fast action. Scenes 39-49 as quick shots with a caption each, every recorded line and sound kept; scene 50 follows as usual.",
+      "shots": [
+        {
+          "pic": "174-he-has-heard-the-gravel",
+          "text": "Jack's eyes open. Tyres on gravel.",
+          "sfx": "gravel-tyres",
+          "seconds": 2.8
+        },
+        {
+          "pic": "175-the-curtain-gap",
+          "text": "Four black cars. Eight masked men.",
+          "seconds": 3
+        },
+        {
+          "pic": "175-the-curtain-gap",
+          "text": "They split up without a word.",
+          "sfx": "car-doors-open",
+          "seconds": 2.2
+        },
+        {
+          "pic": "461-takes-nothing-else",
+          "text": "He takes the receipts. Nothing else.",
+          "sfx": "tv-crowd-cheer",
+          "seconds": 2.4
+        },
+        {
+          "pic": "176-were-closed",
+          "text": "Two masked men walk in. The first is the man from the Kanda rain.",
+          "seconds": 3.2
+        },
+        {
+          "pic": "176-were-closed",
+          "line": "We're closed"
+        },
+        {
+          "pic": "177-behind-the-counter",
+          "text": "A burst into the ceiling. Plaster rains down.",
+          "sfx": "smg-burst-suppressed",
+          "seconds": 2.2
+        },
+        {
+          "pic": "178-staff-side",
+          "text": "The souvenir case shatters.",
+          "sfx": "glass-case-shatter",
+          "seconds": 1.8
+        },
+        {
+          "pic": "177-boots-below",
+          "text": "Boots on the stairs. Jack goes the other way.",
+          "seconds": 2.4
+        },
+        {
+          "pic": "178-the-screens",
+          "text": "Gunfire down the corridor. The screens burst apart.",
+          "sfx": "smg-burst-suppressed",
+          "seconds": 2.2
+        },
+        {
+          "pic": "179-same-wood",
+          "text": "Through the bathroom door.",
+          "seconds": 1.6
+        },
+        {
+          "pic": "210-the-third-time",
+          "text": "Once. Twice. The third time, the window gives.",
+          "sfx": "window-forced",
+          "seconds": 2.4
+        },
+        {
+          "pic": "211-wet-tin",
+          "text": "Down the wet tin. He catches the gutter.",
+          "sfx": "tin-roof-slide",
+          "seconds": 2.2
+        },
+        {
+          "pic": "212-stay-whatever-you-hear",
+          "text": "Mrs. Noda, crouched in the kitchen. Into the pantry.",
+          "seconds": 2.4
+        },
+        {
+          "pic": "212-stay-whatever-you-hear",
+          "line": "Stay. Whatever you hear."
+        },
+        {
+          "pic": "212-stay-whatever-you-hear",
+          "line": "My husband"
+        },
+        {
+          "pic": "212-stay-whatever-you-hear",
+          "line": "I'll get him."
+        },
+        {
+          "pic": "462-a-finger-to-his-lips",
+          "text": "One gunman in the lobby. Mr. Noda behind the counter.",
+          "seconds": 2.4
+        },
+        {
+          "pic": "178-thank-you-very-much",
+          "text": "Jack kills the lights.",
+          "sfx": "main-switch-blackout",
+          "seconds": 1.6
+        },
+        {
+          "pic": "178-thank-you-very-much",
+          "text": "The gunman fires blind into the dark.",
+          "sfx": "smg-burst-suppressed",
+          "seconds": 2
+        },
+        {
+          "pic": "178-thank-you-very-much",
+          "line": "Thank you very much.",
+          "sfx": "vending-machine-buzz"
+        },
+        {
+          "pic": "180-the-shoulder",
+          "text": "In that half-second, Jack has him.",
+          "seconds": 2
+        },
+        {
+          "pic": "179-it-rings",
+          "text": "The pink payphone starts to ring.",
+          "sfx": "phone",
+          "seconds": 2
+        },
+        {
+          "pic": "213-clutch-each-other",
+          "text": "The old couple, together in the dark.",
+          "seconds": 2
+        },
+        {
+          "pic": "213-clutch-each-other",
+          "line": "I'm sorry."
+        },
+        {
+          "pic": "222-mud-and-impacts",
+          "text": "Gunfire chases him through the mud.",
+          "sfx": "smg-burst-suppressed",
+          "seconds": 2
+        },
+        {
+          "pic": "222-mud-and-impacts",
+          "text": "Rounds punch through the truck.",
+          "sfx": "bullets-car",
+          "seconds": 1.6
+        },
+        {
+          "pic": "214-come-on-come-on",
+          "text": "The keys are in it. The engine coughs. Dies.",
+          "sfx": "engine-cough-die",
+          "seconds": 2.4
+        },
+        {
+          "pic": "214-come-on-come-on",
+          "text": "A round through the windscreen.",
+          "sfx": "windscreen-crack",
+          "seconds": 1.4
+        },
+        {
+          "pic": "214-come-on-come-on",
+          "line": "Come on. Come on."
+        },
+        {
+          "pic": "214-come-on-come-on",
+          "text": "It catches. Roars.",
+          "sfx": "car-engine-start",
+          "seconds": 1.8
+        },
+        {
+          "pic": "463-through-the-farm-gate",
+          "text": "Through the farm gate.",
+          "sfx": "gate-smash",
+          "seconds": 2.2
+        },
+        {
+          "pic": "215-no-need-to-chase",
+          "text": "They don't chase him. They don't need to.",
+          "seconds": 3
+        },
+        {
+          "pic": "215-no-need-to-chase",
+          "line": "He's gone.",
+          "hold": 0.8
+        },
+        {
+          "pic": "215-no-need-to-chase",
+          "text": "Inside, the payphone is still ringing.",
+          "sfx": "phone",
+          "seconds": 2.8
+        }
+      ]
+    }
+  ],
+  "readPace": {
+    "nw_s8": 0.75,
+    "nw_s9": 0.75,
+    "nw_s10": 0.75,
+    "nw_s11": 0.75,
+    "nw_s12": 0.75,
+    "nw_s14": 0.75,
+    "nw_s14a": 0.75,
+    "nw_s15": 0.75,
+    "nw_s18": 0.75,
+    "nw_s22": 0.75,
+    "nw_s25": 0.75,
+    "nw_s25a": 0.75,
+    "nw_s26": 0.75,
+    "nw_s29": 0.75,
+    "nw_s36": 0.75,
+    "nw_s53a": 0.75,
+    "nw_s55": 0.75,
+    "nw_s56": 0.75,
+    "nw_s68": 0.75
+  },
+  "readPaceNote": "11 October 2026: these scenes read their narration a quarter faster in the animatic so no picture holds for more than about 30 s (the director: \"could just reduce timings there so don't need as many images\")."
 }

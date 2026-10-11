@@ -1839,6 +1839,9 @@ export interface SceneNode {
    * coin, and Esc always opens the quit dialog (Save & exit), so nobody is
    * ever trapped. */
   hideHud?: boolean;
+  /** Animatic only: multiplies the reading time of this scene's silent lines (0.75 = a quarter quicker). Set by the film
+   * builder from studio-edits "readPace" so narration does not hold one picture for half a minute. */
+  animaticReadPace?: number;
   /** Marks this scene as the END OF A PART. On leaving it, the game shows the
    * route flowchart for the part just played before continuing. The string is
    * the part's display name (e.g. "Part 3 — Two Hundred and Eleven Thousand").

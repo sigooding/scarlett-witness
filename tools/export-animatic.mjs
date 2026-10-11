@@ -101,7 +101,7 @@ function estimator(durations) {
   const by = new Map(film.scenes.map((s) => [s.id, s]));
   const lengthOf = (url) => durations[decodeURIComponent(String(url).split(/[?#]/)[0])];
   // the same timings and joined action lines as src/game/animatic.tsx (readingSeconds, AFTER_VOICE_SECONDS, joinActionLines)
-  const read = (t) => Math.min(9, Math.max(1.8, 0.5 + String(t ?? "").replace(/\s+/g, " ").trim().length / 18)) * pace;
+  const read = (t, k = 1) => Math.min(9, Math.max(1.8, 0.5 + String(t ?? "").replace(/\s+/g, " ").trim().length / 18)) * pace * k;
   const lone = (b) => !b.audioUrl && b.silent && b.text && b.text !== "·";
   const join = (beats) => beats.reduce((out, b) => {
     const prev = out[out.length - 1];
@@ -128,11 +128,11 @@ function estimator(durations) {
     }
     const prose = (s.prose ?? "").trim();
     if (prose) total += /^(INT|EXT|I\/E)[./\s]/i.test(prose) ? 1.6 * pace : read(prose);
-    const beats = join(s.dialogueBeats ?? []);
+    const beats = join(s.dialogueBeats ?? []), k = s.animaticReadPace ?? 1;
     beats.forEach((b, i) => {
       const last = i === beats.length - 1, delay = b.afterBeatDelaySeconds;
       if (b.audioUrl) total += (lengthOf(b.audioUrl) ?? 3) + (last ? delay ?? 1 : 0.45) + 0.1;
-      else total += last ? (delay === 1 || delay == null ? Math.max(1, read(b.text)) : delay) : read(b.text) + 0.05;
+      else total += last ? (delay === 1 || delay == null ? Math.max(1, read(b.text, k)) : delay) : read(b.text, k) + 0.05;
     });
     return total + Math.min(2.4, Number(s.transitionSpeed) || 1.1);
   };

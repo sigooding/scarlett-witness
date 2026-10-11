@@ -462,6 +462,81 @@ for (const seg of edits.soundtracks ?? []) {
   console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${after.id} fades it out`);
 }
 
+// Cutscenes (src/film/studio-edits.json "cutscenes", 11 October 2026: the director asked for the inn raid to play as fast action): a run of
+// scenes replaced by an authored list of quick shots that plays hands-off, with no song. Each entry of `shots` is a picture (`pic`, its file
+// name without extension) with either a short caption (`text`, held `seconds`, default `shotSeconds`) or a recorded line of the run (`line`,
+// the start of its words; the take plays and the shot moves on just after it), and an optional sound (`sfx`, a file in public/film/sfx).
+// Several shots on one picture cut straight to each other, so one picture can carry several sounds. The captions are the narration; the
+// run's own beats are left out. The scene after the run follows as usual.
+for (const seg of edits.cutscenes ?? []) {
+  const a = scenes.findIndex(s => s.id === seg.from);
+  const b = scenes.reduce((last, s, i) => (s.id === seg.to || s.id.startsWith(`${seg.to}_`) ? i : last), -1);
+  if (a < 0 || b < a || b + 1 >= scenes.length) { console.warn(`cutscene ${seg.id}: scenes ${seg.from} to ${seg.to} not found`); continue; }
+  const block = scenes.slice(a, b + 1), next = scenes[b + 1];
+  const base = bg => bg.replace(/^.*\//, "").replace(/\.[a-z0-9]+$/i, "");
+  const round = x => Math.round(x * 100) / 100;
+  const LOOK = ["ambientAudio", "particles", "particleConfig"];
+  const pics = new Map(), lines = [], sounds = new Map();
+  for (const node of block) {
+    if (node.background) pics.set(base(node.background), { bg: node.background, node });
+    for (const beat of node.dialogueBeats ?? []) {
+      if (beat.background && !beat.background.startsWith("video:")) pics.set(base(beat.background), { bg: beat.background, node });
+      if (beat.audioUrl) lines.push(beat);
+      if (beat.sfxUrl) sounds.set(base(beat.sfxUrl), { sfxUrl: beat.sfxUrl, sfxVolume: beat.sfxVolume ?? 0.8 });
+    }
+  }
+  const soundOf = name => sounds.get(name) ?? (existsSync(resolve(root, `public/film/sfx/${name}.mp3`)) ? { sfxUrl: P(`/sfx/${name}.mp3`), sfxVolume: 0.8 } : (console.warn(`cutscene ${seg.id}: no sound ${name}`), {}));
+  const norm = t => (t ?? "").replace(/[—–-]+/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+  const TRAN = 0.3, LAG = seg.lag ?? 0.18, GAP = 0.65;
+  const chain = [], used = new Set();
+  let prev = null, total = 0;
+  for (const sh of seg.shots) {
+    const pic = pics.get(sh.pic);
+    if (!pic) { console.warn(`cutscene ${seg.id}: no picture ${sh.pic} in ${seg.from}–${seg.to}`); continue; }
+    const look = Object.fromEntries(LOOK.filter(k => pic.node[k] !== undefined).map(k => [k, pic.node[k]]));
+    const same = prev === sh.pic;
+    const sound = sh.sfx ? soundOf(sh.sfx) : {};
+    let beat;
+    if (sh.line) {
+      const line = lines.find(l => !used.has(l) && norm(l.text).startsWith(norm(sh.line)));
+      if (!line) { console.warn(`cutscene ${seg.id}: no recorded line "${sh.line}"`); continue; }
+      used.add(line);
+      const { background: _bg, backgroundTransition: _bt, backgroundTransitionSpeed: _bs, cinematic: _c, sfxUrl: _s, sfxVolume: _v, ...rest } = line;
+      const hold = sh.hold ?? 0.5;
+      beat = { ...rest, ...sound, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, GAP - 0.4 + hold - LAG)) };
+      total += (voiceDur.get(line.audioUrl) ?? 2.5) + GAP + hold;
+    } else {
+      const seconds = sh.seconds ?? seg.shotSeconds ?? 2.4;
+      beat = { id: `nw_cut_${seg.id}_b${chain.length + 1}`, characterId: charOf(null), text: sh.text, silent: true, ...sound, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - (same ? 0 : TRAN) - 0.1 - LAG)) };
+      total += seconds;
+    }
+    chain.push({
+      id: `nw_cut_${seg.id}_${String(chain.length + 1).padStart(2, "0")}`, title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`,
+      background: pic.bg, cinematic: { ...camera(pic.bg), ...(lookFor(pic.bg)?.cinematic ?? {}) }, prose: "", ...look, hideHud: true,
+      transition: same ? "cut" : "fade", transitionSpeed: same ? 0.05 : TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat],
+    });
+    prev = sh.pic;
+  }
+  const missed = lines.filter(l => !used.has(l));
+  if (missed.length) console.warn(`cutscene ${seg.id}: ${missed.length} recorded line(s) of the run not used: ${missed.map(l => `"${l.text}"`).join(", ")}`);
+  chain.forEach((nd, k) => Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: k + 1 < chain.length ? chain[k + 1].id : next.id }));
+  const removed = new Set(block.map(s => s.id));
+  scenes.splice(a, b - a + 1, ...chain);
+  for (const s of scenes) {
+    if (chain.includes(s)) continue;
+    for (const bt of s.dialogueBeats ?? []) if (removed.has(bt.afterBeatTargetSceneId)) bt.afterBeatTargetSceneId = chain[0].id;
+    if (removed.has(s.autoAdvanceTargetSceneId)) s.autoAdvanceTargetSceneId = chain[0].id;
+  }
+  console.log(`cutscene ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed shots, about ${Math.round(total)} s`);
+}
+
+// Animatic reading pace per scene (studio-edits "readPace", scene id → multiplier): a scene whose narration would hold one picture for
+// half a minute reads its silent lines faster in the animatic (0.75 = a quarter quicker). In the game the reader sets the pace.
+for (const s of scenes) {
+  const pace = edits.readPace?.[s.id.replace(/_[a-z]$/, "")];
+  if (pace) s.animaticReadPace = pace;
+}
+
 // No letterbox bars (11 October 2026, the director): they are drawn over the picture and cut off its top and bottom
 // rather than changing its shape. Taken off every node last, after the Studio edits and the soundtracks have set them.
 for (const s of scenes) delete s.letterbox;
