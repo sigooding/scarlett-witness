@@ -247,6 +247,9 @@ eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, midnightRun[0].
 eq(midnightRun.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s80", "and the midnight run ends where the notebook scene did, on the detectives' room");
 eq(FILM.scenes.filter((s) => /^nw_s7[3-9]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 79 play inside the two runs (nothing of them is left to click through)");
 eq(FILM.scenes.filter((s) => s.id.startsWith("nw_song_bad-guy_") || s.id.startsWith("nw_song_midnight_")).filter((s) => !s.hideHud).map((s) => s.id), [], "every node of both runs is a cutscene node (no HUD; the builder takes the bars off every node last)");
+// the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels, on the same picture
+const heels = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/heels-running-wet.mp3");
+check(heels >= 0 && badGuy[heels + 1]?.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3" && badGuy[heels + 1]?.background === badGuy[heels]?.background, "the car-pass effect plays right after the heels, on the same picture (a shot can be cut into several parts, each with its own sound)");
 const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).filter((b) => b.silent).map((b) => b.afterBeatDelaySeconds ?? 0);
 check(Math.min(...heldFor(badGuy), ...heldFor(midnightRun)) >= 2.5, "no silent shot of either run is shorter than 2.5 s");
 const songSeconds = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).reduce((n, b) => n + (b.afterBeatDelaySeconds ?? 0), 0);

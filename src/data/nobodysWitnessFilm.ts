@@ -558,248 +558,252 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 1560,
    "y": 2900
   },
-  "nw_song_midnight_01": {
+  "nw_song_bad-guy_34": {
    "x": 1940,
+   "y": 2900
+  },
+  "nw_song_midnight_01": {
+   "x": 2320,
    "y": 2900
   },
   "nw_song_midnight_02": {
-   "x": 2320,
+   "x": 2700,
    "y": 2900
   },
   "nw_song_midnight_03": {
-   "x": 2700,
+   "x": 3080,
    "y": 2900
   },
   "nw_song_midnight_04": {
-   "x": 3080,
+   "x": 3460,
    "y": 2900
   },
   "nw_song_midnight_05": {
-   "x": 3460,
+   "x": 3840,
    "y": 2900
   },
   "nw_song_midnight_06": {
-   "x": 3840,
+   "x": 4220,
    "y": 2900
   },
   "nw_song_midnight_07": {
-   "x": 4220,
-   "y": 2900
+   "x": 40,
+   "y": 3160
   },
   "nw_song_midnight_08": {
-   "x": 40,
+   "x": 420,
    "y": 3160
   },
   "nw_song_midnight_09": {
-   "x": 420,
+   "x": 800,
    "y": 3160
   },
   "nw_song_midnight_10": {
-   "x": 800,
+   "x": 1180,
    "y": 3160
   },
   "nw_song_midnight_11": {
-   "x": 1180,
+   "x": 1560,
    "y": 3160
   },
   "nw_song_midnight_12": {
-   "x": 1560,
+   "x": 1940,
    "y": 3160
   },
   "nw_song_midnight_13": {
-   "x": 1940,
+   "x": 2320,
    "y": 3160
   },
   "nw_song_midnight_14": {
-   "x": 2320,
+   "x": 2700,
    "y": 3160
   },
   "nw_song_midnight_15": {
-   "x": 2700,
+   "x": 3080,
    "y": 3160
   },
   "nw_song_midnight_16": {
-   "x": 3080,
+   "x": 3460,
    "y": 3160
   },
   "nw_s80": {
-   "x": 3460,
+   "x": 3840,
    "y": 3160
   },
   "nw_s81": {
-   "x": 3840,
+   "x": 4220,
    "y": 3160
   },
   "nw_s82": {
-   "x": 4220,
-   "y": 3160
+   "x": 40,
+   "y": 3420
   },
   "nw_s82a": {
-   "x": 40,
+   "x": 420,
    "y": 3420
   },
   "nw_s83": {
-   "x": 420,
+   "x": 800,
    "y": 3420
   },
   "nw_s84": {
-   "x": 800,
+   "x": 1180,
    "y": 3420
   },
   "nw_song_raid_01": {
-   "x": 1180,
+   "x": 1560,
    "y": 3420
   },
   "nw_song_raid_02": {
-   "x": 1560,
+   "x": 1940,
    "y": 3420
   },
   "nw_song_raid_03": {
-   "x": 1940,
+   "x": 2320,
    "y": 3420
   },
   "nw_song_raid_04": {
-   "x": 2320,
+   "x": 2700,
    "y": 3420
   },
   "nw_song_raid_05": {
-   "x": 2700,
+   "x": 3080,
    "y": 3420
   },
   "nw_song_raid_06": {
-   "x": 3080,
+   "x": 3460,
    "y": 3420
   },
   "nw_song_raid_07": {
-   "x": 3460,
+   "x": 3840,
    "y": 3420
   },
   "nw_song_raid_08": {
-   "x": 3840,
+   "x": 4220,
    "y": 3420
   },
   "nw_song_raid_09": {
-   "x": 4220,
-   "y": 3420
+   "x": 40,
+   "y": 3680
   },
   "nw_song_raid_10": {
-   "x": 40,
+   "x": 420,
    "y": 3680
   },
   "nw_song_raid_11": {
-   "x": 420,
+   "x": 800,
    "y": 3680
   },
   "nw_song_raid_12": {
-   "x": 800,
+   "x": 1180,
    "y": 3680
   },
   "nw_song_raid_13": {
-   "x": 1180,
+   "x": 1560,
    "y": 3680
   },
   "nw_song_raid_14": {
-   "x": 1560,
+   "x": 1940,
    "y": 3680
   },
   "nw_song_raid_15": {
-   "x": 1940,
+   "x": 2320,
    "y": 3680
   },
   "nw_song_raid_16": {
-   "x": 2320,
+   "x": 2700,
    "y": 3680
   },
   "nw_song_raid_17": {
-   "x": 2700,
+   "x": 3080,
    "y": 3680
   },
   "nw_song_raid_18": {
-   "x": 3080,
+   "x": 3460,
    "y": 3680
   },
   "nw_song_raid_19": {
-   "x": 3460,
+   "x": 3840,
    "y": 3680
   },
   "nw_song_raid_20": {
-   "x": 3840,
+   "x": 4220,
    "y": 3680
   },
   "nw_song_raid_21": {
-   "x": 4220,
-   "y": 3680
+   "x": 40,
+   "y": 3940
   },
   "nw_song_raid_22": {
-   "x": 40,
+   "x": 420,
    "y": 3940
   },
   "nw_song_raid_23": {
-   "x": 420,
+   "x": 800,
    "y": 3940
   },
   "nw_song_raid_24": {
-   "x": 800,
+   "x": 1180,
    "y": 3940
   },
   "nw_song_raid_25": {
-   "x": 1180,
+   "x": 1560,
    "y": 3940
   },
   "nw_song_raid_26": {
-   "x": 1560,
+   "x": 1940,
    "y": 3940
   },
   "nw_song_raid_27": {
-   "x": 1940,
-   "y": 3940
-  },
-  "nw_song_raid_28": {
    "x": 2320,
    "y": 3940
   },
-  "nw_song_raid_29": {
+  "nw_song_raid_28": {
    "x": 2700,
    "y": 3940
   },
-  "nw_s92_after": {
+  "nw_song_raid_29": {
    "x": 3080,
    "y": 3940
   },
-  "nw_s93": {
+  "nw_s92_after": {
    "x": 3460,
    "y": 3940
   },
-  "nw_s94": {
+  "nw_s93": {
    "x": 3840,
    "y": 3940
   },
-  "nw_s95": {
+  "nw_s94": {
    "x": 4220,
    "y": 3940
   },
-  "nw_s96": {
+  "nw_s95": {
    "x": 40,
    "y": 4200
   },
-  "nw_s98": {
+  "nw_s96": {
    "x": 420,
    "y": 4200
   },
-  "nw_s99a": {
+  "nw_s98": {
    "x": 800,
    "y": 4200
   },
-  "nw_s100": {
+  "nw_s99a": {
    "x": 1180,
    "y": 4200
   },
-  "nw_credits": {
+  "nw_s100": {
    "x": 1560,
    "y": 4200
   },
-  "nw_end": {
+  "nw_credits": {
    "x": 1940,
+   "y": 4200
+  },
+  "nw_end": {
+   "x": 2320,
    "y": 4200
   }
  },
@@ -18220,13 +18224,56 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/heels-running-wet.mp3",
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.17,
+     "afterBeatDelaySeconds": 4.3,
      "afterBeatTargetSceneId": "nw_song_bad-guy_06"
     }
    ]
   },
   {
    "id": "nw_song_bad-guy_06",
+   "title": "The night after the call: A car passes, its tyres hissing. She can",
+   "background": "/film/img/s73/70-not-elegantly-badly.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b5",
+     "characterId": "nw_narrator",
+     "text": "A car passes, its tyres hissing. She cannot hear the song over her own breath.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-pass.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 4.55,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_07"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_07",
    "title": "The night after the call: She runs past a vending machine. It glow",
    "background": "/film/img/s73/548-the-machine-glows.jpg",
    "cinematic": {
@@ -18254,18 +18301,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b5",
+     "id": "nw_song_b6",
      "characterId": "nw_narrator",
      "text": "She runs past a vending machine. It glows, indifferent.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_07"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_08"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_07",
+   "id": "nw_song_bad-guy_08",
    "title": "The night after the call: At the crossing, the old melody chimes f",
    "background": "/film/img/s73/549-the-crossing-chimes.jpg",
    "cinematic": {
@@ -18293,7 +18340,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b6",
+     "id": "nw_song_b7",
      "characterId": "nw_narrator",
      "text": "At the crossing, the old melody chimes for her.",
      "silent": true,
@@ -18301,12 +18348,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_08"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_09"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_08",
+   "id": "nw_song_bad-guy_09",
    "title": "The night after the call: She runs through it on red.",
    "background": "/film/img/s73/388-through-the-crossing.jpg",
    "cinematic": {
@@ -18334,18 +18381,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b7",
+     "id": "nw_song_b8",
      "characterId": "nw_narrator",
      "text": "She runs through it on red.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_09"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_10"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_09",
+   "id": "nw_song_bad-guy_10",
    "title": "The night after the call: One heel skids. The shoe stays behind in",
    "background": "/film/img/s73/72-the-lost-heel.jpg",
    "cinematic": {
@@ -18375,7 +18422,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b8",
+     "id": "nw_song_b9",
      "characterId": "nw_narrator",
      "text": "One heel skids. The shoe stays behind in a puddle. She runs on.",
      "silent": true,
@@ -18383,12 +18430,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_10"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_11"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_10",
+   "id": "nw_song_bad-guy_11",
    "title": "The night after the call: In a city of fourteen million people, no",
    "background": "/film/img/s74/500-no-one-else-is-here.jpg",
    "cinematic": {
@@ -18416,18 +18463,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b9",
+     "id": "nw_song_b10",
      "characterId": "nw_narrator",
      "text": "In a city of fourteen million people, no one else is here.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_11"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_12"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_11",
+   "id": "nw_song_bad-guy_12",
    "title": "The night after the call: Don't.",
    "background": "/film/img/s74/74-twenty-metres-apart.jpg",
    "cinematic": {
@@ -18497,12 +18544,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/74-vera-dont.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_12"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_13"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_12",
+   "id": "nw_song_bad-guy_13",
    "title": "The night after the call: You knew.",
    "background": "/film/img/s74/501-one-shoe.jpg",
    "cinematic": {
@@ -18536,12 +18583,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/74-vera-you-knew.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_13"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_14"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_13",
+   "id": "nw_song_bad-guy_14",
    "title": "The night after the call: You knew where she was.",
    "background": "/film/img/s74/75-one-desperate-blow.jpg",
    "cinematic": {
@@ -18586,12 +18633,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/75-vera-where-she-was.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_14"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_15"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_14",
+   "id": "nw_song_bad-guy_15",
    "title": "The night after the call: Why didn't you tell me?",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
@@ -18625,12 +18672,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/75-vera-why-didnt-you.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.1,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_15"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_16"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_15",
+   "id": "nw_song_bad-guy_16",
    "title": "The night after the call: She was waiting for me.",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
@@ -18664,12 +18711,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/75-vera-waiting-for-me.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.1,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_16"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_17"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_16",
+   "id": "nw_song_bad-guy_17",
    "title": "The night after the call: And I was waiting for you.",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
@@ -18703,12 +18750,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/75-vera-waiting-for-you.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.1,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_17"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_18"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_17",
+   "id": "nw_song_bad-guy_18",
    "title": "The night after the call: And you were with her.",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
@@ -18742,12 +18789,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s74/75-vera-with-her.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_18"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_19"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_18",
+   "id": "nw_song_bad-guy_19",
    "title": "The night after the call: Her hands grab the front of his coat. Sh",
    "background": "/film/img/s74/503-she-holds-on.jpg",
    "cinematic": {
@@ -18775,18 +18822,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b10",
+     "id": "nw_song_b11",
      "characterId": "nw_narrator",
      "text": "Her hands grab the front of his coat. She holds on.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_19"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_20"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_19",
+   "id": "nw_song_bad-guy_20",
    "title": "The night after the call: Two small figures on a huge, empty, shin",
    "background": "/film/img/s74/73-two-small-figures.jpg",
    "cinematic": {
@@ -18845,18 +18892,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b11",
+     "id": "nw_song_b12",
      "characterId": "nw_narrator",
      "text": "Two small figures on a huge, empty, shining street.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_20"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_21"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_20",
+   "id": "nw_song_bad-guy_21",
    "title": "The night after the call: In the black water, her reflection. For ",
    "background": "/film/img/s74/76-the-reflection.jpg",
    "cinematic": {
@@ -18884,18 +18931,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b12",
+     "id": "nw_song_b13",
      "characterId": "nw_narrator",
      "text": "In the black water, her reflection. For a second, the street is different.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_21"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_22"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_21",
+   "id": "nw_song_bad-guy_22",
    "title": "The night after the call: Above them, an elevated train passes.",
    "background": "/film/img/s74/504-nobody-looks-down.jpg",
    "cinematic": {
@@ -18923,7 +18970,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b13",
+     "id": "nw_song_b14",
      "characterId": "nw_narrator",
      "text": "Above them, an elevated train passes.",
      "silent": true,
@@ -18931,12 +18978,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_22"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_23"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_22",
+   "id": "nw_song_bad-guy_23",
    "title": "The night after the call: A single red shoe in a puddle on an empt",
    "background": "/film/img/s75/77-the-red-shoe.jpg",
    "cinematic": {
@@ -18964,18 +19011,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b14",
+     "id": "nw_song_b15",
      "characterId": "nw_narrator",
      "text": "A single red shoe in a puddle on an empty street.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_23"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_24"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_23",
+   "id": "nw_song_bad-guy_24",
    "title": "The night after the call: The hotel lounge, empty. The blue umbrel",
    "background": "/film/img/s75/78-the-empty-lounge.jpg",
    "cinematic": {
@@ -19009,18 +19056,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b15",
+     "id": "nw_song_b16",
      "characterId": "nw_narrator",
      "text": "The hotel lounge, empty. The blue umbrella still leans on the stool.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_24"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_25"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_24",
+   "id": "nw_song_bad-guy_25",
    "title": "The night after the call: The Hive at night. The noodle shop shutt",
    "background": "/film/img/s75/79-the-hive-shut.jpg",
    "cinematic": {
@@ -19082,18 +19129,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b16",
+     "id": "nw_song_b17",
      "characterId": "nw_narrator",
      "text": "The Hive at night. The noodle shop shutter is down.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_25"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_26"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_25",
+   "id": "nw_song_bad-guy_26",
    "title": "The night after the call: The vending machine hums, lit, waiting f",
    "background": "/film/img/s75/80-the-machine-waits.jpg",
    "cinematic": {
@@ -19145,18 +19192,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b17",
+     "id": "nw_song_b18",
      "characterId": "nw_narrator",
      "text": "The vending machine hums, lit, waiting for no one.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_26"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_27"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_26",
+   "id": "nw_song_bad-guy_27",
    "title": "The night after the call: A small television in a shop window, sho",
    "background": "/film/img/s75/81-static-in-a-window.jpg",
    "cinematic": {
@@ -19199,7 +19246,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b18",
+     "id": "nw_song_b19",
      "characterId": "nw_narrator",
      "text": "A small television in a shop window, showing only static.",
      "silent": true,
@@ -19207,12 +19254,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.02,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_27"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_28"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_27",
+   "id": "nw_song_bad-guy_28",
    "title": "The night after the call: The signal turns green for no one. The o",
    "background": "/film/img/s75/314-the-empty-crossing.jpg",
    "cinematic": {
@@ -19255,7 +19302,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b19",
+     "id": "nw_song_b20",
      "characterId": "nw_narrator",
      "text": "The signal turns green for no one. The old melody chimes.",
      "silent": true,
@@ -19263,12 +19310,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_28"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_29"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_28",
+   "id": "nw_song_bad-guy_29",
    "title": "The night after the call: Vera sits on the floor, still in the rui",
    "background": "/film/img/s76/82-on-the-floor.jpg",
    "cinematic": {
@@ -19296,18 +19343,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b20",
+     "id": "nw_song_b21",
      "characterId": "nw_narrator",
      "text": "Vera sits on the floor, still in the ruined red dress.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_29"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_30"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_29",
+   "id": "nw_song_bad-guy_30",
    "title": "The night after the call: Vera? Honey?",
    "background": "/film/img/s76/315-the-number-pressed.jpg",
    "cinematic": {
@@ -19353,12 +19400,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "expression": "v.o. · filtered",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.1,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_30"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_31"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_30",
+   "id": "nw_song_bad-guy_31",
    "title": "The night after the call: Vera?",
    "background": "/film/img/s76/315-the-number-pressed.jpg",
    "cinematic": {
@@ -19404,12 +19451,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "expression": "v.o.",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_31"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_32"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_31",
+   "id": "nw_song_bad-guy_32",
    "title": "The night after the call: The old steel lighter. She opens it. Clo",
    "background": "/film/img/s76/83-the-lighter.jpg",
    "cinematic": {
@@ -19437,7 +19484,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b21",
+     "id": "nw_song_b22",
      "characterId": "nw_narrator",
      "text": "The old steel lighter. She opens it. Closes it. Opens it.",
      "silent": true,
@@ -19445,12 +19492,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_32"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_33"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_32",
+   "id": "nw_song_bad-guy_33",
    "title": "The night after the call: She holds it against her chest and cries",
    "background": "/film/img/s76/84-cries-without-a-sound.jpg",
    "cinematic": {
@@ -19478,18 +19525,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_song_b22",
+     "id": "nw_song_b23",
      "characterId": "nw_narrator",
      "text": "She holds it against her chest and cries without a sound.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 9.17,
-     "afterBeatTargetSceneId": "nw_song_bad-guy_33"
+     "afterBeatTargetSceneId": "nw_song_bad-guy_34"
     }
    ]
   },
   {
-   "id": "nw_song_bad-guy_33",
+   "id": "nw_song_bad-guy_34",
    "title": "The night after the call: You're the first person I've trusted sin",
    "background": "/film/img/s77/85-the-desk-lamp.jpg",
    "cinematic": {
@@ -25114,5 +25161,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "fa1869eb69e6"
+ "builtinRevision": "6ccbd877370c"
 } as unknown as Story;
