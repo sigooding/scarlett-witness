@@ -426,217 +426,381 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 2700,
    "y": 2120
   },
-  "nw_s72_b": {
+  "nw_song_bad-guy_01": {
    "x": 3080,
    "y": 2120
   },
-  "nw_s73": {
+  "nw_song_bad-guy_02": {
    "x": 3460,
    "y": 2120
   },
-  "nw_s74": {
+  "nw_song_bad-guy_03": {
    "x": 3840,
    "y": 2120
   },
-  "nw_s75": {
+  "nw_song_bad-guy_04": {
    "x": 4220,
    "y": 2120
   },
-  "nw_s76": {
+  "nw_song_bad-guy_05": {
    "x": 40,
    "y": 2380
   },
-  "nw_s77": {
+  "nw_song_bad-guy_06": {
    "x": 420,
    "y": 2380
   },
-  "nw_s78": {
+  "nw_song_bad-guy_07": {
    "x": 800,
    "y": 2380
   },
-  "nw_s79": {
+  "nw_song_bad-guy_08": {
    "x": 1180,
    "y": 2380
+  },
+  "nw_song_bad-guy_09": {
+   "x": 1560,
+   "y": 2380
+  },
+  "nw_song_bad-guy_10": {
+   "x": 1940,
+   "y": 2380
+  },
+  "nw_song_bad-guy_11": {
+   "x": 2320,
+   "y": 2380
+  },
+  "nw_song_bad-guy_12": {
+   "x": 2700,
+   "y": 2380
+  },
+  "nw_song_bad-guy_13": {
+   "x": 3080,
+   "y": 2380
+  },
+  "nw_song_bad-guy_14": {
+   "x": 3460,
+   "y": 2380
+  },
+  "nw_song_bad-guy_15": {
+   "x": 3840,
+   "y": 2380
+  },
+  "nw_song_bad-guy_16": {
+   "x": 4220,
+   "y": 2380
+  },
+  "nw_song_bad-guy_17": {
+   "x": 40,
+   "y": 2640
+  },
+  "nw_song_bad-guy_18": {
+   "x": 420,
+   "y": 2640
+  },
+  "nw_song_bad-guy_19": {
+   "x": 800,
+   "y": 2640
+  },
+  "nw_song_bad-guy_20": {
+   "x": 1180,
+   "y": 2640
+  },
+  "nw_song_bad-guy_21": {
+   "x": 1560,
+   "y": 2640
+  },
+  "nw_song_bad-guy_22": {
+   "x": 1940,
+   "y": 2640
+  },
+  "nw_song_bad-guy_23": {
+   "x": 2320,
+   "y": 2640
+  },
+  "nw_song_bad-guy_24": {
+   "x": 2700,
+   "y": 2640
+  },
+  "nw_song_bad-guy_25": {
+   "x": 3080,
+   "y": 2640
+  },
+  "nw_song_bad-guy_26": {
+   "x": 3460,
+   "y": 2640
+  },
+  "nw_song_bad-guy_27": {
+   "x": 3840,
+   "y": 2640
+  },
+  "nw_song_bad-guy_28": {
+   "x": 4220,
+   "y": 2640
+  },
+  "nw_song_bad-guy_29": {
+   "x": 40,
+   "y": 2900
+  },
+  "nw_song_bad-guy_30": {
+   "x": 420,
+   "y": 2900
+  },
+  "nw_song_bad-guy_31": {
+   "x": 800,
+   "y": 2900
+  },
+  "nw_song_bad-guy_32": {
+   "x": 1180,
+   "y": 2900
+  },
+  "nw_song_bad-guy_33": {
+   "x": 1560,
+   "y": 2900
+  },
+  "nw_song_midnight_01": {
+   "x": 1940,
+   "y": 2900
+  },
+  "nw_song_midnight_02": {
+   "x": 2320,
+   "y": 2900
+  },
+  "nw_song_midnight_03": {
+   "x": 2700,
+   "y": 2900
+  },
+  "nw_song_midnight_04": {
+   "x": 3080,
+   "y": 2900
+  },
+  "nw_song_midnight_05": {
+   "x": 3460,
+   "y": 2900
+  },
+  "nw_song_midnight_06": {
+   "x": 3840,
+   "y": 2900
+  },
+  "nw_song_midnight_07": {
+   "x": 4220,
+   "y": 2900
+  },
+  "nw_song_midnight_08": {
+   "x": 40,
+   "y": 3160
+  },
+  "nw_song_midnight_09": {
+   "x": 420,
+   "y": 3160
+  },
+  "nw_song_midnight_10": {
+   "x": 800,
+   "y": 3160
+  },
+  "nw_song_midnight_11": {
+   "x": 1180,
+   "y": 3160
+  },
+  "nw_song_midnight_12": {
+   "x": 1560,
+   "y": 3160
+  },
+  "nw_song_midnight_13": {
+   "x": 1940,
+   "y": 3160
+  },
+  "nw_song_midnight_14": {
+   "x": 2320,
+   "y": 3160
+  },
+  "nw_song_midnight_15": {
+   "x": 2700,
+   "y": 3160
+  },
+  "nw_song_midnight_16": {
+   "x": 3080,
+   "y": 3160
   },
   "nw_s80": {
-   "x": 1560,
-   "y": 2380
+   "x": 3460,
+   "y": 3160
   },
   "nw_s81": {
-   "x": 1940,
-   "y": 2380
+   "x": 3840,
+   "y": 3160
   },
   "nw_s82": {
-   "x": 2320,
-   "y": 2380
+   "x": 4220,
+   "y": 3160
   },
   "nw_s82a": {
-   "x": 2700,
-   "y": 2380
-  },
-  "nw_s83": {
-   "x": 3080,
-   "y": 2380
-  },
-  "nw_s84": {
-   "x": 3460,
-   "y": 2380
-  },
-  "nw_song_raid_01": {
-   "x": 3840,
-   "y": 2380
-  },
-  "nw_song_raid_02": {
-   "x": 4220,
-   "y": 2380
-  },
-  "nw_song_raid_03": {
-   "x": 40,
-   "y": 2640
-  },
-  "nw_song_raid_04": {
-   "x": 420,
-   "y": 2640
-  },
-  "nw_song_raid_05": {
-   "x": 800,
-   "y": 2640
-  },
-  "nw_song_raid_06": {
-   "x": 1180,
-   "y": 2640
-  },
-  "nw_song_raid_07": {
-   "x": 1560,
-   "y": 2640
-  },
-  "nw_song_raid_08": {
-   "x": 1940,
-   "y": 2640
-  },
-  "nw_song_raid_09": {
-   "x": 2320,
-   "y": 2640
-  },
-  "nw_song_raid_10": {
-   "x": 2700,
-   "y": 2640
-  },
-  "nw_song_raid_11": {
-   "x": 3080,
-   "y": 2640
-  },
-  "nw_song_raid_12": {
-   "x": 3460,
-   "y": 2640
-  },
-  "nw_song_raid_13": {
-   "x": 3840,
-   "y": 2640
-  },
-  "nw_song_raid_14": {
-   "x": 4220,
-   "y": 2640
-  },
-  "nw_song_raid_15": {
-   "x": 40,
-   "y": 2900
-  },
-  "nw_song_raid_16": {
-   "x": 420,
-   "y": 2900
-  },
-  "nw_song_raid_17": {
-   "x": 800,
-   "y": 2900
-  },
-  "nw_song_raid_18": {
-   "x": 1180,
-   "y": 2900
-  },
-  "nw_song_raid_19": {
-   "x": 1560,
-   "y": 2900
-  },
-  "nw_song_raid_20": {
-   "x": 1940,
-   "y": 2900
-  },
-  "nw_song_raid_21": {
-   "x": 2320,
-   "y": 2900
-  },
-  "nw_song_raid_22": {
-   "x": 2700,
-   "y": 2900
-  },
-  "nw_song_raid_23": {
-   "x": 3080,
-   "y": 2900
-  },
-  "nw_song_raid_24": {
-   "x": 3460,
-   "y": 2900
-  },
-  "nw_song_raid_25": {
-   "x": 3840,
-   "y": 2900
-  },
-  "nw_song_raid_26": {
-   "x": 4220,
-   "y": 2900
-  },
-  "nw_song_raid_27": {
-   "x": 40,
-   "y": 3160
-  },
-  "nw_song_raid_28": {
-   "x": 420,
-   "y": 3160
-  },
-  "nw_song_raid_29": {
-   "x": 800,
-   "y": 3160
-  },
-  "nw_s92_after": {
-   "x": 1180,
-   "y": 3160
-  },
-  "nw_s93": {
-   "x": 1560,
-   "y": 3160
-  },
-  "nw_s94": {
-   "x": 1940,
-   "y": 3160
-  },
-  "nw_s95": {
-   "x": 2320,
-   "y": 3160
-  },
-  "nw_s96": {
-   "x": 2700,
-   "y": 3160
-  },
-  "nw_s98": {
-   "x": 3080,
-   "y": 3160
-  },
-  "nw_s99a": {
-   "x": 3460,
-   "y": 3160
-  },
-  "nw_s100": {
-   "x": 3840,
-   "y": 3160
-  },
-  "nw_credits": {
-   "x": 4220,
-   "y": 3160
-  },
-  "nw_end": {
    "x": 40,
    "y": 3420
+  },
+  "nw_s83": {
+   "x": 420,
+   "y": 3420
+  },
+  "nw_s84": {
+   "x": 800,
+   "y": 3420
+  },
+  "nw_song_raid_01": {
+   "x": 1180,
+   "y": 3420
+  },
+  "nw_song_raid_02": {
+   "x": 1560,
+   "y": 3420
+  },
+  "nw_song_raid_03": {
+   "x": 1940,
+   "y": 3420
+  },
+  "nw_song_raid_04": {
+   "x": 2320,
+   "y": 3420
+  },
+  "nw_song_raid_05": {
+   "x": 2700,
+   "y": 3420
+  },
+  "nw_song_raid_06": {
+   "x": 3080,
+   "y": 3420
+  },
+  "nw_song_raid_07": {
+   "x": 3460,
+   "y": 3420
+  },
+  "nw_song_raid_08": {
+   "x": 3840,
+   "y": 3420
+  },
+  "nw_song_raid_09": {
+   "x": 4220,
+   "y": 3420
+  },
+  "nw_song_raid_10": {
+   "x": 40,
+   "y": 3680
+  },
+  "nw_song_raid_11": {
+   "x": 420,
+   "y": 3680
+  },
+  "nw_song_raid_12": {
+   "x": 800,
+   "y": 3680
+  },
+  "nw_song_raid_13": {
+   "x": 1180,
+   "y": 3680
+  },
+  "nw_song_raid_14": {
+   "x": 1560,
+   "y": 3680
+  },
+  "nw_song_raid_15": {
+   "x": 1940,
+   "y": 3680
+  },
+  "nw_song_raid_16": {
+   "x": 2320,
+   "y": 3680
+  },
+  "nw_song_raid_17": {
+   "x": 2700,
+   "y": 3680
+  },
+  "nw_song_raid_18": {
+   "x": 3080,
+   "y": 3680
+  },
+  "nw_song_raid_19": {
+   "x": 3460,
+   "y": 3680
+  },
+  "nw_song_raid_20": {
+   "x": 3840,
+   "y": 3680
+  },
+  "nw_song_raid_21": {
+   "x": 4220,
+   "y": 3680
+  },
+  "nw_song_raid_22": {
+   "x": 40,
+   "y": 3940
+  },
+  "nw_song_raid_23": {
+   "x": 420,
+   "y": 3940
+  },
+  "nw_song_raid_24": {
+   "x": 800,
+   "y": 3940
+  },
+  "nw_song_raid_25": {
+   "x": 1180,
+   "y": 3940
+  },
+  "nw_song_raid_26": {
+   "x": 1560,
+   "y": 3940
+  },
+  "nw_song_raid_27": {
+   "x": 1940,
+   "y": 3940
+  },
+  "nw_song_raid_28": {
+   "x": 2320,
+   "y": 3940
+  },
+  "nw_song_raid_29": {
+   "x": 2700,
+   "y": 3940
+  },
+  "nw_s92_after": {
+   "x": 3080,
+   "y": 3940
+  },
+  "nw_s93": {
+   "x": 3460,
+   "y": 3940
+  },
+  "nw_s94": {
+   "x": 3840,
+   "y": 3940
+  },
+  "nw_s95": {
+   "x": 4220,
+   "y": 3940
+  },
+  "nw_s96": {
+   "x": 40,
+   "y": 4200
+  },
+  "nw_s98": {
+   "x": 420,
+   "y": 4200
+  },
+  "nw_s99a": {
+   "x": 800,
+   "y": 4200
+  },
+  "nw_s100": {
+   "x": 1180,
+   "y": 4200
+  },
+  "nw_credits": {
+   "x": 1560,
+   "y": 4200
+  },
+  "nw_end": {
+   "x": 1940,
+   "y": 4200
   }
  },
  "dialogueBox": {
@@ -17828,7 +17992,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Your sister was found tonight. I'm very sorry. She died a short time ago.",
      "audioUrl": "/film/voice/s72/86-ishida-your-sister-was-found-tonight-i.mp3",
      "expression": "v.o.",
-     "afterBeatTargetSceneId": "nw_s72_b",
+     "afterBeatTargetSceneId": "nw_song_bad-guy_01",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
     }
@@ -17839,1824 +18003,2192 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": []
   },
   {
-   "id": "nw_s72_b",
-   "title": "72 — The call (cont.)",
+   "id": "nw_song_bad-guy_01",
+   "title": "The night after the call: She was with Mr. Jack. He had been hidin",
    "background": "/film/img/s72/70-the-call.jpg",
+   "cinematic": {
+    "mode": "dolly-zoom",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 18,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "dollyZoomAmount": 1.18,
+    "dollyZoomDuration": 6,
+    "dollyZoomDirection": "push",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
    "prose": "",
    "ambientAudio": "",
    "particles": "motes",
    "hideHud": true,
-   "transition": "cut",
-   "transitionSpeed": 0.2,
-   "musicMode": "track",
-   "musicUrl": "/film/audio/bad-guy.mp3",
-   "musicFadeSeconds": 5,
-   "musicLoop": false,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
-    {
-     "id": "nw_b1186",
-     "characterId": "nw_narrator",
-     "text": "Vera doesn't move. The piano plays on.",
-     "silent": true
-    },
     {
      "id": "nw_b1187",
      "characterId": "nw_ishida",
      "text": "She was with Mr. Jack. He had been hiding her for several days, it seems. In the Hive. I'm sorry. I thought you knew.",
      "audioUrl": "/film/voice/s72/86-ishida-she-was-with-mr-jack-he.mp3",
-     "expression": "v.o."
-    },
-    {
-     "id": "nw_b1188",
-     "characterId": "nw_narrator",
-     "text": "The phone slowly lowers from her ear.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1189",
-     "characterId": "nw_narrator",
-     "text": "The pianist plays. The clock ticks. Somewhere a glass is set down.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/lounge-clock-glass.mp3",
-     "sfxVolume": 0.5
-    },
-    {
-     "id": "nw_b1190",
-     "characterId": "nw_narrator",
-     "text": "Vera walks out of the lounge. Not running yet. Walking very carefully, as if the floor might give way.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1191",
-     "characterId": "nw_narrator",
-     "text": "The blue umbrella stays where she left it, leaning against the empty stool.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s73",
+     "expression": "v.o.",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_02"
     }
    ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   "musicMode": "track",
+   "musicUrl": "/film/audio/bad-guy.mp3",
+   "musicLevel": 0.9,
+   "musicFadeSeconds": 5,
+   "musicLoop": false
   },
   {
-   "id": "nw_s73",
-   "title": "73 — Vera runs",
+   "id": "nw_song_bad-guy_02",
+   "title": "The night after the call: Vera comes out of the hotel into the rai",
    "background": "/film/img/s73/69-vera-runs.jpg",
-   "prose": "EXT. TOKYO STREETS - NIGHT",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1192",
+     "id": "nw_song_b1",
      "characterId": "nw_narrator",
      "text": "Vera comes out of the hotel into the rain and starts to run.",
      "silent": true,
-     "background": "/film/img/s73/69-vera-runs.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "shakeAmount": 0.2,
-      "shakeDuration": 0.7,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1193",
-     "characterId": "nw_narrator",
-     "text": "The phone is still in her fist, the call still lit on its screen: ISHIDA. She is not running away from anything.",
-     "silent": true,
-     "background": "/film/img/s73/387-the-street-too-long.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "50% 55%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "shakeAmount": 0.15,
-      "shakeDuration": 0.7,
-      "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
-      "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
-        "depth": 0.541
-       }
-      ],
-      "depthMotion": "push",
-      "depthAmount": 0.54,
-      "depthSeconds": 18,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1194",
-     "characterId": "nw_narrator",
-     "text": "She is running toward the one address she has left. The Hive, and wherever they have laid her sister down.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1195",
-     "characterId": "nw_narrator",
-     "text": "The elevated railway glows at the far end of the street, and she runs at it as if she could still get there in time.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1196",
-     "characterId": "nw_narrator",
-     "text": "Not elegantly. Badly. In heels, in the red dress, no coat, no umbrella. Slipping. Stumbling.",
-     "silent": true,
-     "background": "/film/img/s73/70-not-elegantly-badly.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "shakeAmount": 0.25,
-      "shakeDuration": 0.7,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/heels-running-wet.mp3",
-     "sfxVolume": 0.7
-    },
-    {
-     "id": "nw_b1197",
-     "characterId": "nw_narrator",
-     "text": "Stopping for half a second because she can't breathe, then forcing herself on.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1198",
-     "characterId": "nw_narrator",
-     "text": "Rain plasters her hair to her face. Her mascara runs.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1199",
-     "characterId": "nw_narrator",
-     "text": "The song comes up under the rain, and she cannot hear it over her own breath. Her heels on wet pavement. Her breath.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/vera-running-heels.mp3",
-     "sfxVolume": 0.8
-    },
-    {
-     "id": "nw_b1200",
-     "characterId": "nw_narrator",
-     "text": "A car passing, its tyres hissing.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1201",
-     "characterId": "nw_narrator",
-     "text": "She runs past a vending machine. It glows, indifferent. She keeps going; the machine falls behind her.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1202",
-     "characterId": "nw_narrator",
-     "text": "Just beyond it, at a crossing, the old melody chimes for her, and she runs through it on red.",
-     "silent": true,
-     "background": "/film/img/s73/388-through-the-crossing.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/crossing.mp3",
-     "sfxVolume": 0.5
-    },
-    {
-     "id": "nw_b1203",
-     "characterId": "nw_narrator",
-     "text": "One heel skids. Her ankle turns. The shoe comes off and stays behind in a puddle. She doesn't stop. She runs on in one shoe.",
-     "silent": true,
-     "background": "/film/img/s73/72-the-lost-heel.jpg",
-     "cinematic": {
-      "mode": "shake",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 18,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "shakeAmount": 0.3,
-      "shakeDuration": 0.7,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s74",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/shoe-splash.mp3",
-     "sfxVolume": 0.8
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_03"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s74",
-   "title": "74 — The empty street",
+   "id": "nw_song_bad-guy_03",
+   "title": "The night after the call: The call is still lit in her fist: ISHID",
+   "background": "/film/img/s73/547-the-call-still-lit.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b2",
+     "characterId": "nw_narrator",
+     "text": "The call is still lit in her fist: ISHIDA.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_04"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_04",
+   "title": "The night after the call: The railway glows at the end of the stre",
+   "background": "/film/img/s73/387-the-street-too-long.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "50% 55%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "shakeAmount": 0.15,
+    "shakeDuration": 0.7,
+    "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+    "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
+      "depth": 0.541
+     }
+    ],
+    "depthMotion": "push",
+    "depthAmount": 0.54,
+    "depthSeconds": 18,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b3",
+     "characterId": "nw_narrator",
+     "text": "The railway glows at the end of the street. She runs at it.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_05"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_05",
+   "title": "The night after the call: Not elegantly. Badly. In heels, in the r",
+   "background": "/film/img/s73/70-not-elegantly-badly.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b4",
+     "characterId": "nw_narrator",
+     "text": "Not elegantly. Badly. In heels, in the red dress, no coat.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/heels-running-wet.mp3",
+     "sfxVolume": 0.7,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_06"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_06",
+   "title": "The night after the call: She runs past a vending machine. It glow",
+   "background": "/film/img/s73/548-the-machine-glows.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 14,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b5",
+     "characterId": "nw_narrator",
+     "text": "She runs past a vending machine. It glows, indifferent.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_07"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_07",
+   "title": "The night after the call: At the crossing, the old melody chimes f",
+   "background": "/film/img/s73/549-the-crossing-chimes.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b6",
+     "characterId": "nw_narrator",
+     "text": "At the crossing, the old melody chimes for her.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/crossing.mp3",
+     "sfxVolume": 0.5,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_08"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_08",
+   "title": "The night after the call: She runs through it on red.",
+   "background": "/film/img/s73/388-through-the-crossing.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b7",
+     "characterId": "nw_narrator",
+     "text": "She runs through it on red.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_09"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_09",
+   "title": "The night after the call: One heel skids. The shoe stays behind in",
+   "background": "/film/img/s73/72-the-lost-heel.jpg",
+   "cinematic": {
+    "mode": "shake",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 18,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "shakeAmount": 0.3,
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b8",
+     "characterId": "nw_narrator",
+     "text": "One heel skids. The shoe stays behind in a puddle. She runs on.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/shoe-splash.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_10"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_10",
+   "title": "The night after the call: In a city of fourteen million people, no",
    "background": "/film/img/s74/500-no-one-else-is-here.jpg",
-   "prose": "EXT. EMPTY STREET UNDER THE TRACKS - NIGHT",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1204",
-     "characterId": "nw_narrator",
-     "text": "A long, empty street beside the elevated railway. Shuttered shops.",
-     "silent": true,
-     "background": "/film/img/s74/500-no-one-else-is-here.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 16,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1205",
-     "characterId": "nw_narrator",
-     "text": "A row of vending machines, their cold white light the only light, rain falling through it in columns. The black road shining like water.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1206",
+     "id": "nw_song_b9",
      "characterId": "nw_narrator",
      "text": "In a city of fourteen million people, no one else is here.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1207",
-     "characterId": "nw_narrator",
-     "text": "Jack walks out of the dark from the direction of the Hive. His coat is soaked. His hands are dark. He has not washed them.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1208",
-     "characterId": "nw_narrator",
-     "text": "He sees her at the far end of the street.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1209",
-     "characterId": "nw_narrator",
-     "text": "He stops under the awning of a closed shop.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1210",
-     "characterId": "nw_narrator",
-     "text": "Vera slows. Stops. Twenty metres apart.",
      "silent": true,
-     "background": "/film/img/s74/74-twenty-metres-apart.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 7,
-        "y": 39,
-        "color": "#e3f1ff",
-        "size": 10,
-        "intensity": 0.4,
-        "pulseSeconds": 2.2,
-        "pulseAmount": 0.12
-       },
-       {
-        "x": 16,
-        "y": 39,
-        "color": "#e3f1ff",
-        "size": 10,
-        "intensity": 0.4,
-        "pulseSeconds": 2.2,
-        "pulseAmount": 0.12
-       }
-      ],
-      "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
-      "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
-        "depth": 0.703
-       },
-       {
-        "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
-        "depth": 0.727
-       }
-      ],
-      "depthMotion": "truck",
-      "depthAmount": 0.72,
-      "depthSeconds": 16,
-      "depthDirection": "right",
-      "filmGrade": false,
-      "volumetricShafts": false
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_11"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_11",
+   "title": "The night after the call: Don't.",
+   "background": "/film/img/s74/74-twenty-metres-apart.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 7,
+      "y": 39,
+      "color": "#e3f1ff",
+      "size": 10,
+      "intensity": 0.4,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1211",
-     "characterId": "nw_narrator",
-     "text": "For a moment neither of them says anything. She is crying, almost silently.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1212",
-     "characterId": "nw_narrator",
-     "text": "Jack takes one step toward her.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1213",
-     "characterId": "nw_narrator",
-     "text": "She shakes her head.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1214",
-     "characterId": "nw_vera",
-     "text": "Don't.",
-     "audioUrl": "/film/voice/s74/74-vera-dont.mp3"
-    },
+     {
+      "x": 16,
+      "y": 39,
+      "color": "#e3f1ff",
+      "size": 10,
+      "intensity": 0.4,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     }
+    ],
+    "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
+    "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
+      "depth": 0.703
+     },
+     {
+      "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
+      "depth": 0.727
+     }
+    ],
+    "depthMotion": "truck",
+    "depthAmount": 0.72,
+    "depthSeconds": 16,
+    "depthDirection": "right",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b1215",
-     "characterId": "nw_narrator",
-     "text": "He stops.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1216",
-     "characterId": "nw_narrator",
-     "text": "She looks at him. There is something almost childlike in her face now. Not rage. Disbelief.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1217",
-     "characterId": "nw_narrator",
-     "text": "As though she is still hoping he will tell her that what she's heard is wrong.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1218",
-     "characterId": "nw_narrator",
-     "text": "She walks toward him. Slowly. One shoe, one bare foot on the wet road.",
-     "silent": true,
-     "background": "/film/img/s74/501-one-shoe.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1219",
      "characterId": "nw_vera",
-     "text": "You knew.",
-     "audioUrl": "/film/voice/s74/74-vera-you-knew.mp3"
-    },
+     "text": "Don't.",
+     "audioUrl": "/film/voice/s74/74-vera-dont.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_12"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_12",
+   "title": "The night after the call: You knew.",
+   "background": "/film/img/s74/501-one-shoe.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b1220",
-     "characterId": "nw_narrator",
-     "text": "Jack doesn't answer.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1221",
-     "characterId": "nw_narrator",
-     "text": "Her face changes. That silence is the answer.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1222",
-     "characterId": "nw_narrator",
-     "text": "She hits him. Not a big cinematic slap. One desperate blow against his chest with her fist.",
-     "silent": true,
-     "background": "/film/img/s74/75-one-desperate-blow.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "62% 42%",
-      "zoomDuration": 14,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
-      "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s74/75-one-desperate-blow/cutout-1.png",
-        "depth": 0.792
-       }
-      ],
-      "depthMotion": "push",
-      "depthAmount": 0.72,
-      "depthSeconds": 14,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1223",
-     "characterId": "nw_narrator",
-     "text": "He takes it.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1224",
-     "characterId": "nw_narrator",
-     "text": "She hits him again. Then again.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1225",
      "characterId": "nw_vera",
-     "text": "You knew where she was.",
-     "audioUrl": "/film/voice/s74/75-vera-where-she-was.mp3"
-    },
+     "text": "You knew.",
+     "audioUrl": "/film/voice/s74/74-vera-you-knew.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_13"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_13",
+   "title": "The night after the call: You knew where she was.",
+   "background": "/film/img/s74/75-one-desperate-blow.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "62% 42%",
+    "zoomDuration": 14,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
+    "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/75-one-desperate-blow/cutout-1.png",
+      "depth": 0.792
+     }
+    ],
+    "depthMotion": "push",
+    "depthAmount": 0.72,
+    "depthSeconds": 14,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b1226",
-     "characterId": "nw_narrator",
-     "text": "He says nothing. He can't. Behind his silence is a promise to a dead girl, and the audience knows it, and Vera doesn't.",
-     "silent": true
-    },
+     "characterId": "nw_vera",
+     "text": "You knew where she was.",
+     "audioUrl": "/film/voice/s74/75-vera-where-she-was.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_14"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_14",
+   "title": "The night after the call: Why didn't you tell me?",
+   "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1227",
-     "characterId": "nw_narrator",
-     "text": "She hits him again, weaker. And then the anger drains out of her all at once. Her hands just fall.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1228",
+     "id": "nw_b1229",
      "characterId": "nw_vera",
      "text": "Why didn't you tell me?",
      "audioUrl": "/film/voice/s74/75-vera-why-didnt-you.mp3",
-     "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 22,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1229",
-     "characterId": "nw_narrator",
-     "text": "Jack opens his mouth. Nothing comes.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1230",
-     "characterId": "nw_vera",
-     "text": "She was waiting for me.",
-     "audioUrl": "/film/voice/s74/75-vera-waiting-for-me.mp3"
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_15"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_15",
+   "title": "The night after the call: She was waiting for me.",
+   "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b1231",
-     "characterId": "nw_narrator",
-     "text": "That line is almost inaudible.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1232",
-     "characterId": "nw_narrator",
-     "text": "Jack looks away.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1233",
      "characterId": "nw_vera",
-     "text": "And I was waiting for you.",
-     "audioUrl": "/film/voice/s74/75-vera-waiting-for-you.mp3"
-    },
+     "text": "She was waiting for me.",
+     "audioUrl": "/film/voice/s74/75-vera-waiting-for-me.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_16"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_16",
+   "title": "The night after the call: And I was waiting for you.",
+   "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
      "id": "nw_b1234",
      "characterId": "nw_vera",
-     "text": "And you were with her.",
-     "audioUrl": "/film/voice/s74/75-vera-with-her.mp3"
-    },
-    {
-     "id": "nw_b1235",
-     "characterId": "nw_narrator",
-     "text": "Jack closes his eyes.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1236",
-     "characterId": "nw_narrator",
-     "text": "And that is when Vera finally breaks. Not screaming. She simply folds. Her knees hit the wet pavement.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1237",
-     "characterId": "nw_narrator",
-     "text": "Jack drops down instinctively, reaching for her.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1238",
-     "characterId": "nw_narrator",
-     "text": "Her hands grab the front of his coat. She holds on. For one second it looks as if she is going to let him hold her.",
-     "silent": true,
-     "background": "/film/img/s74/503-she-holds-on.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 22,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1239",
-     "characterId": "nw_narrator",
-     "text": "Then she realises whose coat it is.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1240",
-     "characterId": "nw_narrator",
-     "text": "She pushes him away.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1241",
-     "characterId": "nw_narrator",
-     "text": "And sits there, in the rain, in the red dress.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1242",
-     "characterId": "nw_narrator",
-     "text": "Jack kneels a few feet away. He doesn't touch her again.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1243",
-     "characterId": "nw_narrator",
-     "text": "WIDE. EXTREME WIDE.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1244",
-     "characterId": "nw_narrator",
-     "text": "Two small figures on a huge, empty, shining street. The vending machines hum. The rain falls through their light.",
-     "silent": true,
-     "background": "/film/img/s74/73-two-small-figures.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "70% 45%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 10,
-        "y": 31,
-        "color": "#e3f1ff",
-        "size": 8,
-        "intensity": 0.4,
-        "pulseSeconds": 2.2,
-        "pulseAmount": 0.12
-       },
-       {
-        "x": 16,
-        "y": 31,
-        "color": "#e3f1ff",
-        "size": 8,
-        "intensity": 0.4,
-        "pulseSeconds": 2.2,
-        "pulseAmount": 0.12
-       }
-      ],
-      "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
-      "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s74/73-two-small-figures/cutout-1.png",
-        "depth": 0.102
-       }
-      ],
-      "depthMotion": "push",
-      "depthAmount": 0.8,
-      "depthSeconds": 18,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1245",
-     "characterId": "nw_narrator",
-     "text": "Every sound drops away except the rain.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1246",
-     "characterId": "nw_narrator",
-     "text": "In the black water beside Vera, her reflection.",
-     "silent": true,
-     "background": "/film/img/s74/76-the-reflection.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1247",
-     "characterId": "nw_narrator",
-     "text": "And in the reflection, for less than a second, the street is slightly different: a shutter open that is closed, a warm light in a window that is dark, and a figure under a pale blue umbrella who could be Mara, or could be no one.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1248",
-     "characterId": "nw_narrator",
-     "text": "It is gone.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1249",
-     "characterId": "nw_narrator",
-     "text": "Vera covers her face with her hands.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1250",
-     "characterId": "nw_narrator",
-     "text": "Above them, an elevated train passes, a long ribbon of lit windows. Inside, strangers sleep, read, stare at their phones. Nobody looks down.",
-     "silent": true,
-     "background": "/film/img/s74/504-nobody-looks-down.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/train.mp3",
-     "sfxVolume": 0.5
-    },
-    {
-     "id": "nw_b1251",
-     "characterId": "nw_narrator",
-     "text": "Only now does the SCORE enter: sparse and mournful, as if coming from very far away.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1252",
-     "characterId": "nw_narrator",
-     "text": "The shot holds. Long enough that it becomes hard to watch. There is nothing Jack can say. Nothing that fixes it.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s75",
+     "text": "And I was waiting for you.",
+     "audioUrl": "/film/voice/s74/75-vera-waiting-for-you.mp3",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_17"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s75",
-   "title": "75 — Still frames — what the night left",
+   "id": "nw_song_bad-guy_17",
+   "title": "The night after the call: And you were with her.",
+   "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_b1235",
+     "characterId": "nw_vera",
+     "text": "And you were with her.",
+     "audioUrl": "/film/voice/s74/75-vera-with-her.mp3",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_18"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_18",
+   "title": "The night after the call: Her hands grab the front of his coat. Sh",
+   "background": "/film/img/s74/503-she-holds-on.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b10",
+     "characterId": "nw_narrator",
+     "text": "Her hands grab the front of his coat. She holds on.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_19"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_19",
+   "title": "The night after the call: Two small figures on a huge, empty, shin",
+   "background": "/film/img/s74/73-two-small-figures.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "70% 45%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 10,
+      "y": 31,
+      "color": "#e3f1ff",
+      "size": 8,
+      "intensity": 0.4,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     },
+     {
+      "x": 16,
+      "y": 31,
+      "color": "#e3f1ff",
+      "size": 8,
+      "intensity": 0.4,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     }
+    ],
+    "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
+    "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/73-two-small-figures/cutout-1.png",
+      "depth": 0.102
+     }
+    ],
+    "depthMotion": "push",
+    "depthAmount": 0.8,
+    "depthSeconds": 18,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b11",
+     "characterId": "nw_narrator",
+     "text": "Two small figures on a huge, empty, shining street.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_20"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_20",
+   "title": "The night after the call: In the black water, her reflection. For ",
+   "background": "/film/img/s74/76-the-reflection.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b12",
+     "characterId": "nw_narrator",
+     "text": "In the black water, her reflection. For a second, the street is different.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_21"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_21",
+   "title": "The night after the call: Above them, an elevated train passes.",
+   "background": "/film/img/s74/504-nobody-looks-down.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b13",
+     "characterId": "nw_narrator",
+     "text": "Above them, an elevated train passes.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.5,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_22"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_22",
+   "title": "The night after the call: A single red shoe in a puddle on an empt",
    "background": "/film/img/s75/77-the-red-shoe.jpg",
-   "prose": "INT./EXT. VARIOUS - NIGHT - SERIES OF SHOTS",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
    "ambientAudio": "rain",
    "particles": "drizzle",
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "dialogueBeats": [
-    {
-     "id": "nw_b1253",
-     "characterId": "nw_narrator",
-     "text": "Still frames. No people.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1254",
-     "characterId": "nw_narrator",
-     "text": "— A single red high-heeled shoe lying in a puddle on an empty street, rain dimpling the water around it.",
-     "silent": true,
-     "background": "/film/img/s75/77-the-red-shoe.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1255",
-     "characterId": "nw_narrator",
-     "text": "— The hotel lounge, empty, the chairs up. The pale blue umbrella still leaning against the bar stool.",
-     "silent": true,
-     "background": "/film/img/s75/78-the-empty-lounge.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.48,
-      "depthSeconds": 18,
-      "depthDirection": "right",
-      "depthFocus": 0.5,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1256",
-     "characterId": "nw_narrator",
-     "text": "— The Hive at night, the noodle shop shutter down, its old sign still faintly glowing.",
-     "silent": true,
-     "background": "/film/img/s75/79-the-hive-shut.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 28,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 50,
-        "y": 48,
-        "color": "#ffb25a",
-        "size": 16,
-        "intensity": 0.4,
-        "pulseSeconds": 4,
-        "pulseAmount": 0.3
-       },
-       {
-        "x": 49,
-        "y": 10,
-        "color": "#ffc56b",
-        "size": 8,
-        "intensity": 0.3,
-        "pulseSeconds": 6,
-        "pulseAmount": 0.15
-       },
-       {
-        "x": 84,
-        "y": 27,
-        "color": "#dfe9ff",
-        "size": 8,
-        "intensity": 0.3,
-        "pulseSeconds": 6,
-        "pulseAmount": 0.1
-       }
-      ],
-      "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
-      "depthMotion": "drift",
-      "depthAmount": 0.22,
-      "depthSeconds": 28,
-      "depthDirection": "left",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1257",
-     "characterId": "nw_narrator",
-     "text": "— The vending machine on the empty street, humming, lit, waiting for no one.",
-     "silent": true,
-     "background": "/film/img/s75/80-the-machine-waits.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "34% 52%",
-      "zoomDuration": 16,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 35,
-        "y": 39,
-        "color": "#e3f1ff",
-        "size": 18,
-        "intensity": 0.4,
-        "pulseSeconds": 2.2,
-        "pulseAmount": 0.12
-       },
-       {
-        "x": 78,
-        "y": 26,
-        "color": "#ffcf8a",
-        "size": 6,
-        "intensity": 0.35,
-        "pulseSeconds": 6,
-        "pulseAmount": 0.1
-       }
-      ],
-      "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.32,
-      "depthSeconds": 16,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1258",
-     "characterId": "nw_narrator",
-     "text": "— A small television in a shop window, showing only static.",
-     "silent": true,
-     "background": "/film/img/s75/81-static-in-a-window.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "52% 48%",
-      "zoomDuration": 14,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 50,
-        "y": 57,
-        "color": "#e6ecf5",
-        "size": 14,
-        "intensity": 0.4,
-        "pulseSeconds": 0.5,
-        "pulseAmount": 1
-       }
-      ],
-      "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.26,
-      "depthSeconds": 14,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "glitch",
-     "backgroundTransitionSpeed": 0.5,
-     "sfxUrl": "/film/sfx/tv-static.mp3",
-     "sfxVolume": 0.02
-    },
-    {
-     "id": "nw_b1259",
-     "characterId": "nw_narrator",
-     "text": "— The pedestrian crossing from 27 and 62. Empty.",
-     "silent": true,
-     "background": "/film/img/s75/314-the-empty-crossing.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 54%",
-      "zoomDuration": 18,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 22,
-        "y": 25,
-        "color": "#3dff9a",
-        "size": 8,
-        "intensity": 0.5,
-        "pulseSeconds": 1.2,
-        "pulseAmount": 0.3
-       }
-      ],
-      "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.45,
-      "depthSeconds": 18,
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1260",
-     "characterId": "nw_narrator",
-     "text": "The signal turns green for no one, and the old melody CHIMES across the wet street, all the way to the end.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s76",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/crossing.mp3",
-     "sfxVolume": 0.5
-    }
-   ],
-   "hotspots": [],
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b14",
+     "characterId": "nw_narrator",
+     "text": "A single red shoe in a puddle on an empty street.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_23"
+    }
+   ]
   },
   {
-   "id": "nw_s76",
-   "title": "76 — The lighter",
+   "id": "nw_song_bad-guy_23",
+   "title": "The night after the call: The hotel lounge, empty. The blue umbrel",
+   "background": "/film/img/s75/78-the-empty-lounge.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.48,
+    "depthSeconds": 18,
+    "depthDirection": "right",
+    "depthFocus": 0.5,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b15",
+     "characterId": "nw_narrator",
+     "text": "The hotel lounge, empty. The blue umbrella still leans on the stool.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_24"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_24",
+   "title": "The night after the call: The Hive at night. The noodle shop shutt",
+   "background": "/film/img/s75/79-the-hive-shut.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 28,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 50,
+      "y": 48,
+      "color": "#ffb25a",
+      "size": 16,
+      "intensity": 0.4,
+      "pulseSeconds": 4,
+      "pulseAmount": 0.3
+     },
+     {
+      "x": 49,
+      "y": 10,
+      "color": "#ffc56b",
+      "size": 8,
+      "intensity": 0.3,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.15
+     },
+     {
+      "x": 84,
+      "y": 27,
+      "color": "#dfe9ff",
+      "size": 8,
+      "intensity": 0.3,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.1
+     }
+    ],
+    "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
+    "depthMotion": "drift",
+    "depthAmount": 0.22,
+    "depthSeconds": 28,
+    "depthDirection": "left",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b16",
+     "characterId": "nw_narrator",
+     "text": "The Hive at night. The noodle shop shutter is down.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_25"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_25",
+   "title": "The night after the call: The vending machine hums, lit, waiting f",
+   "background": "/film/img/s75/80-the-machine-waits.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "34% 52%",
+    "zoomDuration": 16,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 35,
+      "y": 39,
+      "color": "#e3f1ff",
+      "size": 18,
+      "intensity": 0.4,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     },
+     {
+      "x": 78,
+      "y": 26,
+      "color": "#ffcf8a",
+      "size": 6,
+      "intensity": 0.35,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.1
+     }
+    ],
+    "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.32,
+    "depthSeconds": 16,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b17",
+     "characterId": "nw_narrator",
+     "text": "The vending machine hums, lit, waiting for no one.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_26"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_26",
+   "title": "The night after the call: A small television in a shop window, sho",
+   "background": "/film/img/s75/81-static-in-a-window.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "52% 48%",
+    "zoomDuration": 14,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 50,
+      "y": 57,
+      "color": "#e6ecf5",
+      "size": 14,
+      "intensity": 0.4,
+      "pulseSeconds": 0.5,
+      "pulseAmount": 1
+     }
+    ],
+    "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.26,
+    "depthSeconds": 14,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b18",
+     "characterId": "nw_narrator",
+     "text": "A small television in a shop window, showing only static.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/tv-static.mp3",
+     "sfxVolume": 0.02,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_27"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_27",
+   "title": "The night after the call: The signal turns green for no one. The o",
+   "background": "/film/img/s75/314-the-empty-crossing.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 54%",
+    "zoomDuration": 18,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 22,
+      "y": 25,
+      "color": "#3dff9a",
+      "size": 8,
+      "intensity": 0.5,
+      "pulseSeconds": 1.2,
+      "pulseAmount": 0.3
+     }
+    ],
+    "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.45,
+    "depthSeconds": 18,
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b19",
+     "characterId": "nw_narrator",
+     "text": "The signal turns green for no one. The old melody chimes.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/crossing.mp3",
+     "sfxVolume": 0.5,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_28"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_28",
+   "title": "The night after the call: Vera sits on the floor, still in the rui",
    "background": "/film/img/s76/82-on-the-floor.jpg",
-   "prose": "INT. VERA'S APARTMENT - NIGHT",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 21,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1261",
+     "id": "nw_song_b20",
      "characterId": "nw_narrator",
-     "text": "Darkness. Rain on the window.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1262",
-     "characterId": "nw_narrator",
-     "text": "Vera sits on the floor with her back against the bed, still in the ruined red dress, mascara dried on her face. One shoe.",
+     "text": "Vera sits on the floor, still in the ruined red dress.",
      "silent": true,
-     "background": "/film/img/s76/82-on-the-floor.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 21,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_29"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_29",
+   "title": "The night after the call: Vera? Honey?",
+   "background": "/film/img/s76/315-the-number-pressed.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 19,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 50,
+      "y": 45,
+      "color": "#c8dcff",
+      "size": 32,
+      "intensity": 0.25,
+      "pulseSeconds": 4,
+      "pulseAmount": 0.2
+     }
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1263",
-     "characterId": "nw_narrator",
-     "text": "The phone lights her face. A contact: MOM. She presses it.",
-     "silent": true,
-     "background": "/film/img/s76/315-the-number-pressed.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 19,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 50,
-        "y": 45,
-        "color": "#c8dcff",
-        "size": 32,
-        "intensity": 0.25,
-        "pulseSeconds": 4,
-        "pulseAmount": 0.2
-       }
-      ],
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1264",
-     "characterId": "nw_narrator",
-     "text": "Far away, in another morning, it's answered.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1265",
+     "id": "nw_b1266",
      "characterId": "nw_mother",
      "text": "Vera? Honey?",
      "audioUrl": "/film/voice/s76/315-mother-warmly-vera-honey.mp3",
-     "expression": "v.o. · filtered"
-    },
-    {
-     "id": "nw_b1266",
-     "characterId": "nw_narrator",
-     "text": "Vera opens her mouth. Nothing comes.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1267",
-     "characterId": "nw_mother",
-     "text": "Vera?",
-     "audioUrl": "/film/voice/s76/315-mother-calling-out-vera.mp3",
-     "expression": "v.o."
-    },
-    {
-     "id": "nw_b1268",
-     "characterId": "nw_narrator",
-     "text": "She ends the call. The screen goes dark.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1269",
-     "characterId": "nw_narrator",
-     "text": "In her hand, the old steel lighter.",
-     "silent": true,
-     "background": "/film/img/s76/83-the-lighter.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/lighter-flick.mp3",
-     "sfxVolume": 0.5
-    },
-    {
-     "id": "nw_b1270",
-     "characterId": "nw_narrator",
-     "text": "She opens it. Closes it. Opens it.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1271",
-     "characterId": "nw_narrator",
-     "text": "She should throw it away. She holds it against her chest instead, and bends over it, and cries without making a sound.",
-     "silent": true,
-     "background": "/film/img/s76/84-cries-without-a-sound.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 19,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1272",
-     "characterId": "nw_narrator",
-     "text": "She still loves him. She hates herself for it.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s77",
+     "expression": "v.o. · filtered",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_30"
     }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
+   ]
   },
   {
-   "id": "nw_s77",
-   "title": "77 — The envelope",
-   "background": "/film/img/s77/85-the-desk-lamp.jpg",
-   "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "dialogueBeats": [
-    {
-     "id": "nw_b1273",
-     "characterId": "nw_narrator",
-     "text": "The desk lamp. Static on the TV. Jack sits in his wet coat at the desk. He still hasn't washed his hands.",
-     "silent": true,
-     "background": "/film/img/s77/85-the-desk-lamp.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "lights": [
-       {
-        "x": 31,
-        "y": 44,
-        "color": "#ffd27a",
-        "size": 16,
-        "intensity": 0.45,
-        "pulseSeconds": 5,
-        "pulseAmount": 0.2
-       },
-       {
-        "x": 79,
-        "y": 24,
-        "color": "#e6ecf5",
-        "size": 10,
-        "intensity": 0.3,
-        "pulseSeconds": 0.5,
-        "pulseAmount": 1
-       }
-      ],
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/tv-static.mp3",
-     "sfxVolume": 0.02
-    },
-    {
-     "id": "nw_b1274",
-     "characterId": "nw_narrator",
-     "text": "On the desk: Daniel Voss's notebook.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1275",
-     "characterId": "nw_narrator",
-     "text": "He hears her voice. Over and over. Not the words from tonight. The words from the noodle counter at 11:40.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1276",
-     "characterId": "nw_vera",
-     "text": "You're the first person I've trusted since she disappeared.",
-     "audioUrl": "/film/voice/s77/87-vera-drowsily-you-re-the-first-person.mp3",
-     "expression": "v.o."
-    },
-    {
-     "id": "nw_b1277",
-     "characterId": "nw_narrator",
-     "text": "He opens the drawer. Takes out a clean envelope.",
-     "silent": true,
-     "background": "/film/img/s77/86-the-clean-envelope.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/drawer-open.mp3",
-     "sfxVolume": 0.6
-    },
-    {
-     "id": "nw_b1278",
-     "characterId": "nw_narrator",
-     "text": "Takes Sakai's letter from his coat, smooths it once more along its crease, and folds it inside the notebook's cover.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1279",
-     "characterId": "nw_narrator",
-     "text": "Puts the notebook in the envelope.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/envelope-mat.mp3",
-     "sfxVolume": 0.5
-    },
-    {
-     "id": "nw_b1280",
-     "characterId": "nw_narrator",
-     "text": "He picks up a pen to write something on the envelope. He holds it over the paper for a long time.",
-     "silent": true,
-     "background": "/film/img/s77/87-he-writes-nothing.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1281",
-     "characterId": "nw_narrator",
-     "text": "He writes nothing.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s78",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
-    }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
-  },
-  {
-   "id": "nw_s78",
-   "title": "78 — No name",
-   "background": "/film/img/s78/88-the-walkway.jpg",
-   "prose": "EXT. VERA'S APARTMENT BUILDING, CORRIDOR - DAWN",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
-   "particles": "rain",
-   "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
-   "musicMode": "none",
-   "musicFadeSeconds": 4,
-   "musicLoop": false,
-   "dialogueBeats": [
-    {
-     "id": "nw_b1282",
-     "characterId": "nw_narrator",
-     "text": "Grey light. An open-air walkway along the third floor. Rain dripping from the railing.",
-     "silent": true,
-     "background": "/film/img/s78/88-the-walkway.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 15,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1283",
-     "characterId": "nw_narrator",
-     "text": "Jack at Vera's door. He doesn't knock. He sets the envelope on the mat, squares it to the door, and goes.",
-     "silent": true,
-     "background": "/film/img/s78/316-squared-to-the-door.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/envelope-mat.mp3",
-     "sfxVolume": 0.5
-    },
-    {
-     "id": "nw_b1284",
-     "characterId": "nw_narrator",
-     "text": "Vera opens her door. She is still in the dress. She hasn't slept.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1285",
-     "characterId": "nw_narrator",
-     "text": "On the doormat: a plain envelope. No name.",
-     "silent": true,
-     "background": "/film/img/s78/89-no-name.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 21,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1286",
-     "characterId": "nw_narrator",
-     "text": "She picks it up. Opens it. The cloth-covered notebook. And tucked inside its cover, a folded sheet of lined paper.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1287",
-     "characterId": "nw_narrator",
-     "text": "She sees the name inside the cover, and her whole body goes still.",
-     "silent": true,
-     "background": "/film/img/s78/90-daniel-voss.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1288",
-     "characterId": "nw_narrator",
-     "text": "DANIEL VOSS.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s79",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
-    }
-   ],
-   "hotspots": [],
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "choices": []
-  },
-  {
-   "id": "nw_s79",
-   "title": "79 — Her father's handwriting",
-   "background": "/film/img/s79/91-grey-light.jpg",
-   "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
+   "id": "nw_song_bad-guy_30",
+   "title": "The night after the call: Vera?",
+   "background": "/film/img/s76/315-the-number-pressed.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 19,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 50,
+      "y": 45,
+      "color": "#c8dcff",
+      "size": 32,
+      "intensity": 0.25,
+      "pulseSeconds": 4,
+      "pulseAmount": 0.2
+     }
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1289",
+     "id": "nw_b1268",
+     "characterId": "nw_mother",
+     "text": "Vera?",
+     "audioUrl": "/film/voice/s76/315-mother-calling-out-vera.mp3",
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_31"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_31",
+   "title": "The night after the call: The old steel lighter. She opens it. Clo",
+   "background": "/film/img/s76/83-the-lighter.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b21",
      "characterId": "nw_narrator",
-     "text": "Vera sits at the low table in the dawn light. Beside her, the two cups from the beginning of the film, both empty now.",
+     "text": "The old steel lighter. She opens it. Closes it. Opens it.",
      "silent": true,
-     "background": "/film/img/s79/91-grey-light.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "sfxUrl": "/film/sfx/lighter-flick.mp3",
+     "sfxVolume": 0.5,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_32"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_32",
+   "title": "The night after the call: She holds it against her chest and cries",
+   "background": "/film/img/s76/84-cries-without-a-sound.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 19,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1290",
+     "id": "nw_song_b22",
      "characterId": "nw_narrator",
-     "text": "She unfolds the lined paper first.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1291",
-     "characterId": "nw_narrator",
-     "text": "Careful, laborious English handwriting. \"Miss Voss. Your father did not kill himself. I can prove it.\"",
-     "silent": true
-    },
-    {
-     "id": "nw_b1292",
-     "characterId": "nw_narrator",
-     "text": "It is the letter she threw away. Smoothed flat by someone else's hands.",
+     "text": "She holds it against her chest and cries without a sound.",
      "silent": true,
-     "background": "/film/img/s79/286-smoothed-flat.jpg",
-     "cinematic": {
-      "mode": "dolly-zoom",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "dollyZoomAmount": 1.12,
-      "dollyZoomDuration": 7,
-      "dollyZoomDirection": "push",
-      "filmGrade": false,
-      "volumetricShafts": false
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.17,
+     "afterBeatTargetSceneId": "nw_song_bad-guy_33"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_bad-guy_33",
+   "title": "The night after the call: You're the first person I've trusted sin",
+   "background": "/film/img/s77/85-the-desk-lamp.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "lights": [
+     {
+      "x": 31,
+      "y": 44,
+      "color": "#ffd27a",
+      "size": 16,
+      "intensity": 0.45,
+      "pulseSeconds": 5,
+      "pulseAmount": 0.2
      },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     {
+      "x": 79,
+      "y": 24,
+      "color": "#e6ecf5",
+      "size": 10,
+      "intensity": 0.3,
+      "pulseSeconds": 0.5,
+      "pulseAmount": 1
+     }
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1293",
-     "characterId": "nw_narrator",
-     "text": "She understands, all at once, why her sister was in a Kanda backstreet at one in the morning.",
-     "silent": true
-    },
+     "id": "nw_b1277",
+     "characterId": "nw_vera",
+     "text": "You're the first person I've trusted since she disappeared.",
+     "audioUrl": "/film/voice/s77/87-vera-drowsily-you-re-the-first-person.mp3",
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 2.57,
+     "afterBeatTargetSceneId": "nw_song_midnight_01"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_01",
+   "title": "The envelope and the notebook: He opens the drawer. A clean envelope. S",
+   "background": "/film/img/s77/86-the-clean-envelope.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 21,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1294",
+     "id": "nw_song_b1",
      "characterId": "nw_narrator",
-     "text": "Mara went to find the truth Vera refused to look at.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1295",
-     "characterId": "nw_narrator",
-     "text": "She sets the letter down very carefully, beside the empty cups. Then she opens the notebook and turns the pages.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1296",
-     "characterId": "nw_narrator",
-     "text": "Her father's handwriting. Neat, slanted, careful.",
+     "text": "He opens the drawer. A clean envelope. Sakai's letter folded inside the notebook's cover.",
      "silent": true,
-     "background": "/film/img/s79/505-neat-slanted-careful.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 22,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "sfxUrl": "/film/sfx/drawer-open.mp3",
+     "sfxVolume": 0.6,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_02"
+    }
+   ],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/midnight-in-the-rain.mp3",
+   "musicLevel": 0.9,
+   "musicFadeSeconds": 3,
+   "musicLoop": false
+  },
+  {
+   "id": "nw_song_midnight_02",
+   "title": "The envelope and the notebook: He holds a pen over the envelope for a l",
+   "background": "/film/img/s77/87-he-writes-nothing.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1297",
+     "id": "nw_song_b2",
+     "characterId": "nw_narrator",
+     "text": "He holds a pen over the envelope for a long time. He writes nothing.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_03"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_03",
+   "title": "The envelope and the notebook: Grey light. The third-floor walkway. Rai",
+   "background": "/film/img/s78/88-the-walkway.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 15,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b3",
+     "characterId": "nw_narrator",
+     "text": "Grey light. The third-floor walkway. Rain dripping from the railing.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_04"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_04",
+   "title": "The envelope and the notebook: He sets the envelope on the mat, squares",
+   "background": "/film/img/s78/316-squared-to-the-door.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b4",
+     "characterId": "nw_narrator",
+     "text": "He sets the envelope on the mat, squares it to the door, and goes.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/envelope-mat.mp3",
+     "sfxVolume": 0.5,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_05"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_05",
+   "title": "The envelope and the notebook: On the doormat: a plain envelope. No nam",
+   "background": "/film/img/s78/89-no-name.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 21,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b5",
+     "characterId": "nw_narrator",
+     "text": "On the doormat: a plain envelope. No name.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_06"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_06",
+   "title": "The envelope and the notebook: She sees the name inside the cover, and ",
+   "background": "/film/img/s78/90-daniel-voss.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "particles": "rain",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b6",
+     "characterId": "nw_narrator",
+     "text": "She sees the name inside the cover, and her whole body goes still.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_07"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_07",
+   "title": "The envelope and the notebook: Vera sits at the low table in the dawn l",
+   "background": "/film/img/s79/91-grey-light.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b7",
+     "characterId": "nw_narrator",
+     "text": "Vera sits at the low table in the dawn light, the two cups beside her.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_08"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_08",
+   "title": "The envelope and the notebook: The letter she threw away, smoothed flat",
+   "background": "/film/img/s79/286-smoothed-flat.jpg",
+   "cinematic": {
+    "mode": "dolly-zoom",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "dollyZoomAmount": 1.12,
+    "dollyZoomDuration": 7,
+    "dollyZoomDirection": "push",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b8",
+     "characterId": "nw_narrator",
+     "text": "The letter she threw away, smoothed flat by someone else's hands.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_09"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_09",
+   "title": "The envelope and the notebook: Shiohama. Third visit. The residents say",
+   "background": "/film/img/s79/505-neat-slanted-careful.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_b1298",
      "characterId": "nw_daniel",
      "text": "Shiohama. Third visit. The residents say men came in the spring with flowers, and then in the summer with iron bars. The fire began in two places at once. Fires don't do that.",
      "audioUrl": "/film/voice/s79/286-daniel-evenly-shiohama-third-visit-the-residents.mp3",
-     "expression": "v.o."
-    },
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_midnight_10"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_10",
+   "title": "The envelope and the notebook: The claim will be paid. Everyone wants i",
+   "background": "/film/img/s79/506-faster.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 18,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1298",
-     "characterId": "nw_narrator",
-     "text": "She turns pages. The handwriting grows faster.",
-     "silent": true,
-     "background": "/film/img/s79/506-faster.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 18,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1299",
+     "id": "nw_b1300",
      "characterId": "nw_daniel",
      "text": "The claim will be paid. Everyone wants it paid. The company, the police, the man who owns the land now. Kurose. Always Kurose.",
      "audioUrl": "/film/voice/s79/286-daniel-evenly-the-claim-will-be-paid.mp3",
-     "expression": "v.o."
-    },
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_midnight_11"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_11",
+   "title": "The envelope and the notebook: The police have given me a young detecti",
+   "background": "/film/img/s79/506-faster.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 18,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1300",
-     "characterId": "nw_narrator",
-     "text": "Pages.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1301",
+     "id": "nw_b1302",
      "characterId": "nw_daniel",
      "text": "The police have given me a young detective who speaks English. They call him Jack. He's bright. He believes me. We ate noodles at Kaneko's and I told him everything and he wrote it all down.",
      "audioUrl": "/film/voice/s79/286-daniel-quietly-the-police-have-given-me.mp3",
-     "expression": "v.o."
-    },
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_midnight_12"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_12",
+   "title": "The envelope and the notebook: Her hand goes to her mouth.",
+   "background": "/film/img/s79/507-her-hand-goes-to-her-mouth.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1302",
-     "characterId": "nw_narrator",
-     "text": "Vera stops. Reads that line again.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1303",
+     "id": "nw_song_b9",
      "characterId": "nw_narrator",
      "text": "Her hand goes to her mouth.",
      "silent": true,
-     "background": "/film/img/s79/507-her-hand-goes-to-her-mouth.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_song_midnight_13"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_13",
+   "title": "The envelope and the notebook: Today Jack signed the report. Accidental",
+   "background": "/film/img/s79/92-underlined-twice.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1304",
-     "characterId": "nw_narrator",
-     "text": "She turns the page. The line we didn't see Jack read, underlined twice.",
-     "silent": true,
-     "background": "/film/img/s79/92-underlined-twice.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 15,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1305",
+     "id": "nw_b1306",
      "characterId": "nw_daniel",
      "text": "Today Jack signed the report. Accidental fire. I don't blame him. He is twenty-eight years old and they own his whole life. But I thought, of all of them, he would stand with me.",
      "audioUrl": "/film/voice/s79/94-daniel-quietly-today-jack-signed-the-report.mp3",
-     "expression": "v.o."
-    },
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.1,
+     "afterBeatTargetSceneId": "nw_song_midnight_14"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_14",
+   "title": "The envelope and the notebook: I'll go on alone. I've done it before.",
+   "background": "/film/img/s79/92-underlined-twice.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1306",
-     "characterId": "nw_narrator",
-     "text": "Vera stares at the page.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1307",
+     "id": "nw_b1308",
      "characterId": "nw_daniel",
      "text": "I'll go on alone. I've done it before.",
      "audioUrl": "/film/voice/s79/94-daniel-tired-i-ll-go-on-alone.mp3",
-     "expression": "v.o."
-    },
+     "expression": "v.o.",
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 0.87,
+     "afterBeatTargetSceneId": "nw_song_midnight_15"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_midnight_15",
+   "title": "The envelope and the notebook: They followed me home again tonight. The",
+   "background": "/film/img/s79/508-almost-unrecognisable.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1308",
-     "characterId": "nw_narrator",
-     "text": "The last pages. The handwriting is almost unrecognisable now.",
-     "silent": true,
-     "background": "/film/img/s79/508-almost-unrecognisable.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1309",
+     "id": "nw_b1310",
      "characterId": "nw_daniel",
      "text": "They followed me home again tonight. The girls were asleep. I stood at the door a long time. If something happens to me, it will not be what they say. Tell Vera. When she is old enough. Tell her it will not be what they say.",
      "audioUrl": "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again.mp3",
-     "expression": "v.o."
-    },
-    {
-     "id": "nw_b1310",
-     "characterId": "nw_narrator",
-     "text": "Vera closes the notebook.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1311",
-     "characterId": "nw_narrator",
-     "text": "For twenty years she believed her father chose to leave her.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1312",
-     "characterId": "nw_narrator",
-     "text": "She sits in the grey light, holding the notebook against her chest, the way she held the lighter.",
-     "silent": true,
-     "background": "/film/img/s79/93-against-her-chest.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1313",
-     "characterId": "nw_narrator",
-     "text": "She has been given back her father and taken Jack away in the same hour. She doesn't know which to feel first.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s80",
+     "expression": "v.o.",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 2.57,
+     "afterBeatTargetSceneId": "nw_song_midnight_16"
     }
-   ],
-   "hotspots": [],
+   ]
+  },
+  {
+   "id": "nw_song_midnight_16",
+   "title": "The envelope and the notebook: She sits in the grey light, the notebook",
+   "background": "/film/img/s79/93-against-her-chest.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b10",
+     "characterId": "nw_narrator",
+     "text": "She sits in the grey light, the notebook held against her chest.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 9.96,
+     "afterBeatTargetSceneId": "nw_s80"
+    }
+   ]
   },
   {
    "id": "nw_s80",
@@ -19670,25 +20202,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1314",
+     "id": "nw_b1315",
      "characterId": "nw_narrator",
      "text": "Rows of cluttered desks, most of them empty: the shift change.",
      "silent": true
     },
     {
-     "id": "nw_b1315",
+     "id": "nw_b1316",
      "characterId": "nw_narrator",
      "text": "Two young detectives at the far end, heads down over paperwork, too far away to hear. On the wall, the clock that runs a minute fast.",
      "silent": true
     },
     {
-     "id": "nw_b1316",
+     "id": "nw_b1317",
      "characterId": "nw_narrator",
      "text": "Ishida sits at his desk writing a report in careful longhand.",
      "silent": true
     },
     {
-     "id": "nw_b1317",
+     "id": "nw_b1318",
      "characterId": "nw_narrator",
      "text": "Jack walks the length of the room. The young detectives glance up and then look away. He hasn't shaved.",
      "silent": true,
@@ -19710,13 +20242,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1318",
+     "id": "nw_b1319",
      "characterId": "nw_narrator",
      "text": "There is still dried blood in the creases of his knuckles.",
      "silent": true
     },
     {
-     "id": "nw_b1319",
+     "id": "nw_b1320",
      "characterId": "nw_narrator",
      "text": "He stops at Ishida's desk. Ishida doesn't look up.",
      "silent": true,
@@ -19738,37 +20270,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1320",
+     "id": "nw_b1321",
      "characterId": "nw_jack",
      "text": "Nine o'clock. A grey car. Your driver.",
      "audioUrl": "/film/voice/s80/97-jack-evenly-nine-o-clock-a-grey.mp3"
     },
     {
-     "id": "nw_b1321",
+     "id": "nw_b1322",
      "characterId": "nw_narrator",
      "text": "Ishida finishes his sentence. Puts down the pen.",
      "silent": true
     },
     {
-     "id": "nw_b1322",
+     "id": "nw_b1323",
      "characterId": "nw_jack",
      "text": "Only you knew.",
      "audioUrl": "/film/voice/s80/97-jack-flatly-only-you-knew.mp3"
     },
     {
-     "id": "nw_b1323",
+     "id": "nw_b1324",
      "characterId": "nw_narrator",
      "text": "A long pause.",
      "silent": true
     },
     {
-     "id": "nw_b1324",
+     "id": "nw_b1325",
      "characterId": "nw_ishida",
      "text": "You told me yourself, Jack. You always tell the wrong person.",
      "audioUrl": "/film/voice/s80/97-ishida-gently-you-told-me-yourself-jack.mp3"
     },
     {
-     "id": "nw_b1325",
+     "id": "nw_b1326",
      "characterId": "nw_narrator",
      "text": "Jack's hands close at his sides. The far end of the room has gone quiet.",
      "silent": true,
@@ -19790,13 +20322,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1326",
+     "id": "nw_b1327",
      "characterId": "nw_jack",
      "text": "Twenty years ago. Daniel. Was that you?",
      "audioUrl": "/film/voice/s80/98-jack-evenly-twenty-years-ago-daniel-was.mp3"
     },
     {
-     "id": "nw_b1327",
+     "id": "nw_b1328",
      "characterId": "nw_ishida",
      "text": "I have never killed anyone in my life. I only ever told people where to find them.",
      "audioUrl": "/film/voice/s80/99-ishida-gently-i-have-never-killed-anyone.mp3",
@@ -19818,25 +20350,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1328",
+     "id": "nw_b1329",
      "characterId": "nw_narrator",
      "text": "Jack looks at him for a long time. Ishida almost seems to want him to.",
      "silent": true
     },
     {
-     "id": "nw_b1329",
+     "id": "nw_b1330",
      "characterId": "nw_narrator",
      "text": "He doesn't.",
      "silent": true
     },
     {
-     "id": "nw_b1330",
+     "id": "nw_b1331",
      "characterId": "nw_ishida",
      "text": "Where is it? Sakai's thing.",
      "audioUrl": "/film/voice/s80/99-ishida-calmly-where-is-it-sakai-s.mp3"
     },
     {
-     "id": "nw_b1331",
+     "id": "nw_b1332",
      "characterId": "nw_narrator",
      "text": "Jack turns and walks away down the long room, past the desks, past the clock.",
      "silent": true,
@@ -19858,7 +20390,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1332",
+     "id": "nw_b1333",
      "characterId": "nw_narrator",
      "text": "Ishida watches him go. For the first time, he looks afraid.",
      "silent": true,
@@ -19886,7 +20418,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicMode": "none",
+   "musicFadeSeconds": 3
   },
   {
    "id": "nw_s81",
@@ -19900,7 +20434,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1333",
+     "id": "nw_b1334",
      "characterId": "nw_narrator",
      "text": "The bar in daylight. Chairs on the tables. Okada behind the counter.",
      "silent": true,
@@ -19922,7 +20456,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1334",
+     "id": "nw_b1335",
      "characterId": "nw_narrator",
      "text": "He sees Jack's face and his hands, and he doesn't ask. He opens the cash drawer, lifts out the tray, and hands Jack the cassette.",
      "silent": true,
@@ -19946,7 +20480,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1335",
+     "id": "nw_b1336",
      "characterId": "nw_narrator",
      "text": "Jack holds it.",
      "silent": true,
@@ -19968,19 +20502,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1336",
+     "id": "nw_b1337",
      "characterId": "nw_okada",
      "text": "The girl?",
      "audioUrl": "/film/voice/s81/104-okada-puzzled-the-girl.mp3"
     },
     {
-     "id": "nw_b1337",
+     "id": "nw_b1338",
      "characterId": "nw_narrator",
      "text": "Jack can't answer.",
      "silent": true
     },
     {
-     "id": "nw_b1338",
+     "id": "nw_b1339",
      "characterId": "nw_narrator",
      "text": "Okada closes his eyes. Then he pours two small glasses and puts one in front of Jack. They drink together, without a toast.",
      "silent": true,
@@ -20024,7 +20558,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1339",
+     "id": "nw_b1340",
      "characterId": "nw_narrator",
      "text": "An old newspaper office. Stacks of paper. Desks jammed together. Televisions on the walls showing three different channels.",
      "silent": true,
@@ -20069,25 +20603,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1340",
+     "id": "nw_b1341",
      "characterId": "nw_narrator",
      "text": "Nobody under fifty looks up from a screen.",
      "silent": true
     },
     {
-     "id": "nw_b1341",
+     "id": "nw_b1342",
      "characterId": "nw_narrator",
      "text": "In a glass-walled office at the back: HARADA (50s), the editor, grey-haired, sleeves rolled.",
      "silent": true
     },
     {
-     "id": "nw_b1342",
+     "id": "nw_b1343",
      "characterId": "nw_narrator",
      "text": "On her desk, a framed photo of the JOURNALIST from the bar, laughing at some office party.",
      "silent": true
     },
     {
-     "id": "nw_b1343",
+     "id": "nw_b1344",
      "characterId": "nw_narrator",
      "text": "On the desk between them: an old cassette player, borrowed from somewhere, and the tape.",
      "silent": true,
@@ -20109,7 +20643,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1344",
+     "id": "nw_b1345",
      "characterId": "nw_narrator",
      "text": "Harada presses PLAY.",
      "silent": true,
@@ -20131,7 +20665,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1345",
+     "id": "nw_b1346",
      "characterId": "nw_narrator",
      "text": "Hiss. Then two men's voices, twenty years younger. Sakai's rough. The other one smooth, patient, faintly bored.",
      "silent": true,
@@ -20155,35 +20689,35 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1346",
+     "id": "nw_b1347",
      "characterId": "nw_sakai",
      "text": "There are still people in the building. Old people. They won't sign.",
      "audioUrl": "/film/voice/s82/108-sakai-gruffly-there-are-still-people-in.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1347",
+     "id": "nw_b1348",
      "characterId": "nw_kurose",
      "text": "The building must be empty by the end of the month.",
      "audioUrl": "/film/voice/s82/108-kurose-calmly-the-building-must-be-empty.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1348",
+     "id": "nw_b1349",
      "characterId": "nw_sakai",
      "text": "And if it isn't?",
      "audioUrl": "/film/voice/s82/108-sakai-gruffly-and-if-it-isn-t.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1349",
+     "id": "nw_b1350",
      "characterId": "nw_kurose",
      "text": "Then it will be empty in a different way. Don't make me say it more clearly, Sakai. I don't like to repeat myself.",
      "audioUrl": "/film/voice/s82/108-kurose-calmly-then-it-will-be-empty.mp3",
      "expression": "v.o. · recorded"
     },
     {
-     "id": "nw_b1350",
+     "id": "nw_b1351",
      "characterId": "nw_narrator",
      "text": "Harada stops the tape. The newsroom noise outside the glass seems very far away.",
      "silent": true,
@@ -20207,37 +20741,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.7
     },
     {
-     "id": "nw_b1351",
+     "id": "nw_b1352",
      "characterId": "nw_harada",
      "text": "That's Kurose.",
      "audioUrl": "/film/voice/s82/108-harada-gravely-that-s-kurose.mp3"
     },
     {
-     "id": "nw_b1352",
+     "id": "nw_b1353",
      "characterId": "nw_jack",
      "text": "That's Kurose.",
      "audioUrl": "/film/voice/s82/108-jack-flatly-that-s-kurose.mp3"
     },
     {
-     "id": "nw_b1353",
+     "id": "nw_b1354",
      "characterId": "nw_harada",
      "text": "A voice on a twenty-year-old tape. His lawyers will say it's a fake. They'll say Sakai was a gangster with a grudge.",
      "audioUrl": "/film/voice/s82/108-harada-dryly-a-voice-on-a-twenty.mp3"
     },
     {
-     "id": "nw_b1354",
+     "id": "nw_b1355",
      "characterId": "nw_jack",
      "text": "Then you'll need a witness.",
      "audioUrl": "/film/voice/s82/108-jack-evenly-then-you-ll-need-a.mp3"
     },
     {
-     "id": "nw_b1355",
+     "id": "nw_b1356",
      "characterId": "nw_narrator",
      "text": "She looks at him.",
      "silent": true
     },
     {
-     "id": "nw_b1356",
+     "id": "nw_b1357",
      "characterId": "nw_jack",
      "text": "Twenty years ago I was a police detective. An American insurance investigator named Daniel Voss proved the Shiohama fire was arson. I believed him. I was ordered to close the case, and I signed a report saying the fire was an accident. Weeks later he was found dead. I didn't ask any questions.",
      "audioUrl": "/film/voice/s82/108-jack-quietly-twenty-years-ago-i-was.mp3",
@@ -20259,19 +20793,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1357",
+     "id": "nw_b1358",
      "characterId": "nw_harada",
      "text": "You understand what you're saying. You'll be named. Your part too.",
      "audioUrl": "/film/voice/s82/108-harada-evenly-you-understand-what-you-re.mp3"
     },
     {
-     "id": "nw_b1358",
+     "id": "nw_b1359",
      "characterId": "nw_jack",
      "text": "Start with my part.",
      "audioUrl": "/film/voice/s82/108-jack-firmly-start-with-my-part.mp3"
     },
     {
-     "id": "nw_b1359",
+     "id": "nw_b1360",
      "characterId": "nw_narrator",
      "text": "Harada looks at him for a long moment. Then she looks at the photograph of her dead reporter on the desk.",
      "silent": true,
@@ -20293,19 +20827,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1360",
+     "id": "nw_b1361",
      "characterId": "nw_narrator",
      "text": "She takes a notebook from her drawer and opens it to a clean page.",
      "silent": true
     },
     {
-     "id": "nw_b1361",
+     "id": "nw_b1362",
      "characterId": "nw_harada",
      "text": "From the beginning.",
      "audioUrl": "/film/voice/s82/109-harada-gently-from-the-beginning.mp3"
     },
     {
-     "id": "nw_b1362",
+     "id": "nw_b1363",
      "characterId": "nw_narrator",
      "text": "Jack begins to talk. We don't hear it.",
      "silent": true,
@@ -20327,7 +20861,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1363",
+     "id": "nw_b1364",
      "characterId": "nw_narrator",
      "text": "We watch him through the glass wall of her office, among the busy desks and flickering televisions: a man, for the first time in twenty years, not silent.",
      "silent": true,
@@ -20353,7 +20887,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1364",
+     "id": "nw_b1365",
      "characterId": "nw_narrator",
      "text": "Vera stands at the edge of the newsroom with a plain folder under her arm and her father's notebook in both hands.",
      "silent": true,
@@ -20375,19 +20909,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1365",
+     "id": "nw_b1366",
      "characterId": "nw_narrator",
      "text": "Through the glass wall of the office at the back, Jack, talking. She can't hear him. She has never seen him say anything true in that voice.",
      "silent": true
     },
     {
-     "id": "nw_b1366",
+     "id": "nw_b1367",
      "characterId": "nw_narrator",
      "text": "She doesn't go in.",
      "silent": true
     },
     {
-     "id": "nw_b1367",
+     "id": "nw_b1368",
      "characterId": "nw_narrator",
      "text": "A YOUNG COPY CLERK at a photocopier lays the notebook open under the lid and presses the button.",
      "silent": true,
@@ -20422,19 +20956,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5
     },
     {
-     "id": "nw_b1368",
+     "id": "nw_b1369",
      "characterId": "nw_narrator",
      "text": "A bar of light passes under the page: her father's handwriting, flashing white. Turn. Press. Turn. Press.",
      "silent": true
     },
     {
-     "id": "nw_b1369",
+     "id": "nw_b1370",
      "characterId": "nw_narrator",
      "text": "Harada comes out of the office and pulls the door closed behind her.",
      "silent": true
     },
     {
-     "id": "nw_b1370",
+     "id": "nw_b1371",
      "characterId": "nw_harada",
      "text": "Two hours. He hasn't stopped.",
      "audioUrl": "/film/voice/s82a/301-harada-evenly-two-hours-he-hasn-t.mp3",
@@ -20456,31 +20990,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1371",
+     "id": "nw_b1372",
      "characterId": "nw_vera",
      "text": "I know. I can see.",
      "audioUrl": "/film/voice/s82a/301-vera-gently-i-know-i-can-see.mp3"
     },
     {
-     "id": "nw_b1372",
+     "id": "nw_b1373",
      "characterId": "nw_narrator",
      "text": "Harada watches the pages come out of the machine.",
      "silent": true
     },
     {
-     "id": "nw_b1373",
+     "id": "nw_b1374",
      "characterId": "nw_harada",
      "text": "Every page. Then the original goes in the safe downstairs, and nobody touches it. Including you.",
      "audioUrl": "/film/voice/s82a/301-harada-evenly-every-page-then-the-original.mp3"
     },
     {
-     "id": "nw_b1374",
+     "id": "nw_b1375",
      "characterId": "nw_vera",
      "text": "It's all I have of him.",
      "audioUrl": "/film/voice/s82a/301-vera-sadly-it-s-all-i-have.mp3"
     },
     {
-     "id": "nw_b1375",
+     "id": "nw_b1376",
      "characterId": "nw_harada",
      "text": "Then I will take care of it. Kondo's files were in his desk. Six months of redevelopment money, and Kurose's name in most of it. And the grey car that left the Hive last night was found burnt out in Adachi at dawn. Registered to a security company. The company belongs to Kurose Development. Tomorrow we put it to them for comment. They will refuse to see a reporter.",
      "audioUrl": "/film/voice/s82a/301-harada-evenly-then-i-will-take-care.mp3",
@@ -20502,19 +21036,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1376",
+     "id": "nw_b1377",
      "characterId": "nw_vera",
      "text": "I'll go.",
      "audioUrl": "/film/voice/s82a/301-vera-evenly-i-ll-go.mp3"
     },
     {
-     "id": "nw_b1377",
+     "id": "nw_b1378",
      "characterId": "nw_harada",
      "text": "That is not your job.",
      "audioUrl": "/film/voice/s82a/301-harada-firmly-that-is-not-your-job.mp3"
     },
     {
-     "id": "nw_b1378",
+     "id": "nw_b1379",
      "characterId": "nw_vera",
      "text": "It isn't yours either. He'll see me. He'll want to look at me.",
      "audioUrl": "/film/voice/s82a/301-vera-evenly-it-isn-t-yours-either.mp3",
@@ -20536,13 +21070,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1379",
+     "id": "nw_b1380",
      "characterId": "nw_narrator",
      "text": "Harada studies her. Then hands her the folder: a stack of photocopies, warm from the machine.",
      "silent": true
     },
     {
-     "id": "nw_b1380",
+     "id": "nw_b1381",
      "characterId": "nw_harada",
      "text": "The copies. Not the original.",
      "audioUrl": "/film/voice/s82a/302-harada-evenly-the-copies-not-the-original.mp3",
@@ -20584,7 +21118,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1381",
+     "id": "nw_b1382",
      "characterId": "nw_narrator",
      "text": "The fortieth floor. Rain on the glass. Tokyo grey and endless below.",
      "silent": true,
@@ -20606,25 +21140,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1382",
+     "id": "nw_b1383",
      "characterId": "nw_narrator",
      "text": "Vera sits in a leather chair in front of Kurose's desk. She wears a plain dark coat.",
      "silent": true
     },
     {
-     "id": "nw_b1383",
+     "id": "nw_b1384",
      "characterId": "nw_narrator",
      "text": "A plain folder is on her lap, her hands flat on its cover: photocopies of every page of her father's notebook.",
      "silent": true
     },
     {
-     "id": "nw_b1384",
+     "id": "nw_b1385",
      "characterId": "nw_narrator",
      "text": "Across from her sits THE CHAIRMAN, KUROSE (70s). Silver hair. A beautiful suit. The stillness of a man who has never had to hurry.",
      "silent": true
     },
     {
-     "id": "nw_b1385",
+     "id": "nw_b1386",
      "characterId": "nw_narrator",
      "text": "Courteous. Curious. He pours her tea himself.",
      "silent": true,
@@ -20648,31 +21182,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.7
     },
     {
-     "id": "nw_b1386",
+     "id": "nw_b1387",
      "characterId": "nw_kurose",
      "text": "When my secretary said the daughter of Daniel Voss wanted to see me, I didn't believe her.",
      "audioUrl": "/film/voice/s83/111-kurose-gently-when-my-secretary-said-the.mp3"
     },
     {
-     "id": "nw_b1387",
+     "id": "nw_b1388",
      "characterId": "nw_narrator",
      "text": "His English is perfect. Old-fashioned.",
      "silent": true
     },
     {
-     "id": "nw_b1388",
+     "id": "nw_b1389",
      "characterId": "nw_kurose",
      "text": "He sat where you're sitting. He looked at me the way you are. As if I'd done something.",
      "audioUrl": "/film/voice/s83/111-kurose-evenly-he-sat-where-you-re.mp3"
     },
     {
-     "id": "nw_b1389",
+     "id": "nw_b1390",
      "characterId": "nw_vera",
      "text": "Did you?",
      "audioUrl": "/film/voice/s83/111-vera-evenly-did-you.mp3"
     },
     {
-     "id": "nw_b1390",
+     "id": "nw_b1391",
      "characterId": "nw_kurose",
      "text": "To him? I don't remember. Your father was a good man, Miss Voss. I mean that sincerely. There are not many. Good men are very expensive.",
      "audioUrl": "/film/voice/s83/112-kurose-calmly-to-him-i-don-t.mp3",
@@ -20694,19 +21228,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1391",
+     "id": "nw_b1392",
      "characterId": "nw_narrator",
      "text": "Vera doesn't touch the tea.",
      "silent": true
     },
     {
-     "id": "nw_b1392",
+     "id": "nw_b1393",
      "characterId": "nw_kurose",
      "text": "What is it you want?",
      "audioUrl": "/film/voice/s83/112-kurose-calmly-what-is-it-you-want.mp3"
     },
     {
-     "id": "nw_b1393",
+     "id": "nw_b1394",
      "characterId": "nw_narrator",
      "text": "He takes a plain envelope, thick with cash, from a drawer and lays it on the glass between them. She doesn't look at it.",
      "silent": true,
@@ -20728,43 +21262,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1394",
+     "id": "nw_b1395",
      "characterId": "nw_vera",
      "text": "The Toto Shimbun will print tomorrow. They asked me to bring you the chance to reply.",
      "audioUrl": "/film/voice/s83/317-vera-evenly-the-toto-shimbun-will-print.mp3"
     },
     {
-     "id": "nw_b1395",
+     "id": "nw_b1396",
      "characterId": "nw_kurose",
      "text": "And they sent you.",
      "audioUrl": "/film/voice/s83/317-kurose-dryly-and-they-sent-you.mp3"
     },
     {
-     "id": "nw_b1396",
+     "id": "nw_b1397",
      "characterId": "nw_vera",
      "text": "I said I'd come.",
      "audioUrl": "/film/voice/s83/317-vera-evenly-i-said-i-d-come.mp3"
     },
     {
-     "id": "nw_b1397",
+     "id": "nw_b1398",
      "characterId": "nw_kurose",
      "text": "Why?",
      "audioUrl": "/film/voice/s83/317-kurose-curious-why.mp3"
     },
     {
-     "id": "nw_b1398",
+     "id": "nw_b1399",
      "characterId": "nw_vera",
      "text": "I wanted to see your face.",
      "audioUrl": "/film/voice/s83/317-vera-evenly-i-wanted-to-see-your.mp3"
     },
     {
-     "id": "nw_b1399",
+     "id": "nw_b1400",
      "characterId": "nw_kurose",
      "text": "And?",
      "audioUrl": "/film/voice/s24/201-kurose-and.mp3"
     },
     {
-     "id": "nw_b1400",
+     "id": "nw_b1401",
      "characterId": "nw_vera",
      "text": "It's just a face.",
      "audioUrl": "/film/voice/s83/113-vera-firmly-it-s-just-a-face.mp3",
@@ -20786,19 +21320,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1401",
+     "id": "nw_b1402",
      "characterId": "nw_narrator",
      "text": "For the first time, something flickers in him. Not fear. Irritation, perhaps, at being looked at like that.",
      "silent": true
     },
     {
-     "id": "nw_b1402",
+     "id": "nw_b1403",
      "characterId": "nw_narrator",
      "text": "Vera stands. She holds up a page of the photocopy. Not threatening. Just showing it to him.",
      "silent": true
     },
     {
-     "id": "nw_b1403",
+     "id": "nw_b1404",
      "characterId": "nw_vera",
      "text": "My father kept notes. He wrote your name on every page. And now I know.",
      "audioUrl": "/film/voice/s83/114-vera-evenly-my-father-kept-notes-he.mp3",
@@ -20820,19 +21354,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1404",
+     "id": "nw_b1405",
      "characterId": "nw_narrator",
      "text": "She walks to the door. On her way out, she stops at the model. Where the Hive stood, there's only the white plaza.",
      "silent": true
     },
     {
-     "id": "nw_b1405",
+     "id": "nw_b1406",
      "characterId": "nw_narrator",
      "text": "Tiny painted people cross it.",
      "silent": true
     },
     {
-     "id": "nw_b1406",
+     "id": "nw_b1407",
      "characterId": "nw_vera",
      "text": "It's very clean.",
      "audioUrl": "/film/voice/s83/115-vera-dryly-it-s-very-clean.mp3",
@@ -20854,19 +21388,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1407",
+     "id": "nw_b1408",
      "characterId": "nw_narrator",
      "text": "She goes.",
      "silent": true
     },
     {
-     "id": "nw_b1408",
+     "id": "nw_b1409",
      "characterId": "nw_narrator",
      "text": "Kurose sits still for a moment. Then he presses a button on his desk phone.",
      "silent": true
     },
     {
-     "id": "nw_b1409",
+     "id": "nw_b1410",
      "characterId": "nw_kurose",
      "text": "Follow her.",
      "audioUrl": "/film/voice/s83/116-kurose-calmly-follow-her.mp3",
@@ -20908,7 +21442,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1410",
+     "id": "nw_b1411",
      "characterId": "nw_narrator",
      "text": "The bulb. The flour sacks. The futon, folded now.",
      "silent": true,
@@ -20941,7 +21475,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1411",
+     "id": "nw_b1412",
      "characterId": "nw_narrator",
      "text": "On it, a neat stack of drawings, dried flat, their edges rippled from the wet floor.",
      "silent": true,
@@ -20963,7 +21497,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1412",
+     "id": "nw_b1413",
      "characterId": "nw_narrator",
      "text": "Jack sits on the floor against the wall. He has been hiding here since the newspaper; he can't go home. His face is grey with exhaustion.",
      "silent": true,
@@ -20985,31 +21519,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1413",
+     "id": "nw_b1414",
      "characterId": "nw_narrator",
      "text": "The curtain opens. Kaneko.",
      "silent": true
     },
     {
-     "id": "nw_b1414",
+     "id": "nw_b1415",
      "characterId": "nw_kaneko",
      "text": "Someone for you.",
      "audioUrl": "/film/voice/s84/318-kaneko-gruffly-someone-for-you.mp3"
     },
     {
-     "id": "nw_b1415",
+     "id": "nw_b1416",
      "characterId": "nw_narrator",
      "text": "She stands aside.",
      "silent": true
     },
     {
-     "id": "nw_b1416",
+     "id": "nw_b1417",
      "characterId": "nw_narrator",
      "text": "Vera.",
      "silent": true
     },
     {
-     "id": "nw_b1417",
+     "id": "nw_b1418",
      "characterId": "nw_narrator",
      "text": "Jack gets to his feet. Neither of them moves toward the other.",
      "silent": true,
@@ -21031,37 +21565,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1418",
+     "id": "nw_b1419",
      "characterId": "nw_vera",
      "text": "She asked me to come. Kaneko. She said I should see where Mara was.",
      "audioUrl": "/film/voice/s84/318-vera-evenly-she-asked-me-to-come.mp3"
     },
     {
-     "id": "nw_b1419",
+     "id": "nw_b1420",
      "characterId": "nw_narrator",
      "text": "In her hands, a small cloth bag with one strap frayed. Kaneko put it there at the door.",
      "silent": true
     },
     {
-     "id": "nw_b1420",
+     "id": "nw_b1421",
      "characterId": "nw_narrator",
      "text": "She looks around the tiny room. The bare bulb. The flour sacks.",
      "silent": true
     },
     {
-     "id": "nw_b1421",
+     "id": "nw_b1422",
      "characterId": "nw_narrator",
      "text": "And on the wall, taped up with rice-paper tape, pages from Mara's sketchbook: drawings of the noodle counter, but from the inside now.",
      "silent": true
     },
     {
-     "id": "nw_b1422",
+     "id": "nw_b1423",
      "characterId": "nw_narrator",
      "text": "From behind the curtain. The back of a head.",
      "silent": true
     },
     {
-     "id": "nw_b1423",
+     "id": "nw_b1424",
      "characterId": "nw_narrator",
      "text": "Vera walks to the wall. Looks at the drawing for a long time.",
      "silent": true,
@@ -21083,43 +21617,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1424",
+     "id": "nw_b1425",
      "characterId": "nw_vera",
      "text": "That's me.",
      "audioUrl": "/film/voice/s84/118-vera-gently-that-s-me.mp3"
     },
     {
-     "id": "nw_b1425",
+     "id": "nw_b1426",
      "characterId": "nw_jack",
      "text": "She drew it after you left.",
      "audioUrl": "/film/voice/s84/118-jack-tenderly-she-drew-it-after-you.mp3"
     },
     {
-     "id": "nw_b1426",
+     "id": "nw_b1427",
      "characterId": "nw_vera",
      "text": "She was here. The day I came.",
      "audioUrl": "/film/voice/s84/118-vera-sadly-she-was-here-the-day.mp3"
     },
     {
-     "id": "nw_b1427",
+     "id": "nw_b1428",
      "characterId": "nw_jack",
      "text": "Three feet away.",
      "audioUrl": "/film/voice/s84/118-jack-flatly-three-feet-away.mp3"
     },
     {
-     "id": "nw_b1428",
+     "id": "nw_b1429",
      "characterId": "nw_narrator",
      "text": "Vera touches the paper with one finger.",
      "silent": true
     },
     {
-     "id": "nw_b1429",
+     "id": "nw_b1430",
      "characterId": "nw_vera",
      "text": "And you told her not to come out.",
      "audioUrl": "/film/voice/s84/118-vera-bitterly-and-you-told-her-not.mp3"
     },
     {
-     "id": "nw_b1430",
+     "id": "nw_b1431",
      "characterId": "nw_jack",
      "text": "She told herself. She was protecting you. So was I.",
      "audioUrl": "/film/voice/s84/119-jack-sadly-she-told-herself-pause-she.mp3",
@@ -21141,13 +21675,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1431",
+     "id": "nw_b1432",
      "characterId": "nw_vera",
      "text": "Ishida called me before it was on any news. He knew exactly where she was.",
      "audioUrl": "/film/voice/s84/119-vera-evenly-ishida-called-me-before-it.mp3"
     },
     {
-     "id": "nw_b1432",
+     "id": "nw_b1433",
      "characterId": "nw_jack",
      "text": "I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine.",
      "audioUrl": "/film/voice/s84/119-jack-quietly-i-told-him-pause-where.mp3",
@@ -21169,19 +21703,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1433",
+     "id": "nw_b1434",
      "characterId": "nw_vera",
      "text": "I told you about the detective. The one who promised a car. You never asked who.",
      "audioUrl": "/film/voice/s84/119-vera-evenly-i-told-you-about-the.mp3"
     },
     {
-     "id": "nw_b1434",
+     "id": "nw_b1435",
      "characterId": "nw_jack",
      "text": "No.",
      "audioUrl": "/film/voice/s84/119-jack-flatly-no.mp3"
     },
     {
-     "id": "nw_b1435",
+     "id": "nw_b1436",
      "characterId": "nw_narrator",
      "text": "Vera says nothing for a while. She does not say it's all right.",
      "silent": true,
@@ -21203,19 +21737,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1436",
+     "id": "nw_b1437",
      "characterId": "nw_vera",
      "text": "I'm not going to tell you it wasn't yours.",
      "audioUrl": "/film/voice/s84/119-vera-firmly-i-m-not-going-to.mp3"
     },
     {
-     "id": "nw_b1437",
+     "id": "nw_b1438",
      "characterId": "nw_jack",
      "text": "Don't.",
      "audioUrl": "/film/voice/s84/119-jack-pleading-don-t.mp3"
     },
     {
-     "id": "nw_b1438",
+     "id": "nw_b1439",
      "characterId": "nw_narrator",
      "text": "She opens the bag. Folded pages, soft with handling. She smooths one flat on the flour sack: a counter seen from the floor.",
      "silent": true,
@@ -21237,25 +21771,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1439",
+     "id": "nw_b1440",
      "characterId": "nw_narrator",
      "text": "Two pairs of shoes. A stool going over. A hand. Beside the shoes, in block capitals: EXCUSE ME.",
      "silent": true
     },
     {
-     "id": "nw_b1440",
+     "id": "nw_b1441",
      "characterId": "nw_vera",
      "text": "She drew what she saw. All of it.",
      "audioUrl": "/film/voice/s84/119-vera-tenderly-she-drew-what-she-saw.mp3"
     },
     {
-     "id": "nw_b1441",
+     "id": "nw_b1442",
      "characterId": "nw_jack",
      "text": "She never told me she'd kept them.",
      "audioUrl": "/film/voice/s84/119-jack-sadly-she-never-told-me-she.mp3"
     },
     {
-     "id": "nw_b1442",
+     "id": "nw_b1443",
      "characterId": "nw_vera",
      "text": "I'm taking these to Harada. Somebody has to look at them. I read his notebook.",
      "audioUrl": "/film/voice/s84/119-vera-evenly-i-m-taking-these-to.mp3",
@@ -21277,37 +21811,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1443",
+     "id": "nw_b1444",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s84/119-jack-evenly-i-know.mp3"
     },
     {
-     "id": "nw_b1444",
+     "id": "nw_b1445",
      "characterId": "nw_vera",
      "text": "He didn't blame you.",
      "audioUrl": "/film/voice/s84/119-vera-gently-he-didn-t-blame-you.mp3"
     },
     {
-     "id": "nw_b1445",
+     "id": "nw_b1446",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s84/119-jack-heavily-i-know.mp3"
     },
     {
-     "id": "nw_b1446",
+     "id": "nw_b1447",
      "characterId": "nw_vera",
      "text": "I don't know if I'm as good as he was.",
      "audioUrl": "/film/voice/s84/119-vera-hesitantly-i-don-t-know-if.mp3"
     },
     {
-     "id": "nw_b1447",
+     "id": "nw_b1448",
      "characterId": "nw_jack",
      "text": "I'm not asking you to be.",
      "audioUrl": "/film/voice/s84/119-jack-gently-i-m-not-asking-you.mp3"
     },
     {
-     "id": "nw_b1448",
+     "id": "nw_b1449",
      "characterId": "nw_narrator",
      "text": "Silence. A train passes overhead. The bulb swings.",
      "silent": true,
@@ -21331,7 +21865,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1449",
+     "id": "nw_b1450",
      "characterId": "nw_narrator",
      "text": "And under the train, so quietly it's almost part of it: in the passage outside, a man's voice, murmuring into his sleeve.",
      "silent": true,
@@ -21339,14 +21873,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.07
     },
     {
-     "id": "nw_b1450",
+     "id": "nw_b1451",
      "characterId": "nw_masked_man",
      "text": "Position.",
      "audioUrl": "/film/voice/s84/119-maskedman-curtly-position.mp3",
      "expression": "o.s."
     },
     {
-     "id": "nw_b1451",
+     "id": "nw_b1452",
      "characterId": "nw_narrator",
      "text": "Jack's head snaps round. Vera sees his face and understands.",
      "silent": true,
@@ -21379,7 +21913,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1452",
+     "id": "nw_b1453",
      "characterId": "nw_narrator",
      "text": "The bulb goes on swinging.",
      "silent": true,
@@ -21590,7 +22124,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1460",
+     "id": "nw_b1461",
      "characterId": "nw_kaneko",
      "text": "Up. Through the back. The stairs by the dentist. Then go through the neighbours. Everyone will open a door.",
      "audioUrl": "/film/voice/s86/124-kaneko-urgently-up-through-the-back-the.mp3",
@@ -21629,7 +22163,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1461",
+     "id": "nw_b1462",
      "characterId": "nw_vera",
      "text": "They don't know me.",
      "audioUrl": "/film/voice/s86/124-vera-evenly-i-know-them.mp3",
@@ -21668,7 +22202,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1463",
+     "id": "nw_b1464",
      "characterId": "nw_jack",
      "text": "Come with us.",
      "audioUrl": "/film/voice/s86/124-jack-urgently-come-with-us.mp3",
@@ -21707,7 +22241,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1464",
+     "id": "nw_b1465",
      "characterId": "nw_kaneko",
      "text": "I have lived here fifty years. They can come and find me.",
      "audioUrl": "/film/voice/s86/125-kaneko-dryly-i-have-lived-here-fifty.mp3",
@@ -21746,7 +22280,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1465",
+     "id": "nw_b1466",
      "characterId": "nw_kaneko",
      "text": "Go now. They will help you.",
      "audioUrl": "/film/voice/s86/125-kaneko-urgently-go-now-they-will-help.mp3",
@@ -22794,7 +23328,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1519",
+     "id": "nw_b1520",
      "characterId": "nw_vera",
      "text": "Is Kaneko —",
      "audioUrl": "/film/voice/s92/137-vera-urgently-is-kaneko.mp3",
@@ -22862,7 +23396,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1520",
+     "id": "nw_b1521",
      "characterId": "nw_jack",
      "text": "The Hive looks after its own.",
      "audioUrl": "/film/voice/s92/137-jack-evenly-the-hive-looks-after-its.mp3",
@@ -22888,13 +23422,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 0.2,
    "dialogueBeats": [
     {
-     "id": "nw_b1521",
+     "id": "nw_b1522",
      "characterId": "nw_narrator",
      "text": "She nods. She looks up at the building full of light.",
      "silent": true
     },
     {
-     "id": "nw_b1522",
+     "id": "nw_b1523",
      "characterId": "nw_vera",
      "text": "Mara was safe here. Until us.",
      "audioUrl": "/film/voice/s92/138-vera-sadly-mara-was-safe-here-until.mp3",
@@ -22916,7 +23450,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1523",
+     "id": "nw_b1524",
      "characterId": "nw_narrator",
      "text": "He has no answer to that. She doesn't need one.",
      "silent": true,
@@ -22940,13 +23474,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1524",
+     "id": "nw_b1525",
      "characterId": "nw_narrator",
      "text": "Rain. Ishida comes down the front steps without an umbrella.",
      "silent": true
     },
     {
-     "id": "nw_b1525",
+     "id": "nw_b1526",
      "characterId": "nw_narrator",
      "text": "At the kerb, a black sedan. Engine running. Wipers beating slowly.",
      "silent": true,
@@ -22968,13 +23502,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1526",
+     "id": "nw_b1527",
      "characterId": "nw_narrator",
      "text": "He stops. He knows this car.",
      "silent": true
     },
     {
-     "id": "nw_b1527",
+     "id": "nw_b1528",
      "characterId": "nw_narrator",
      "text": "A long moment. Then the rear door opens from inside.",
      "silent": true,
@@ -23016,7 +23550,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1528",
+     "id": "nw_b1529",
      "characterId": "nw_narrator",
      "text": "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going.",
      "silent": true,
@@ -23076,13 +23610,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1529",
+     "id": "nw_b1530",
      "characterId": "nw_narrator",
      "text": "Its rear door stands open: warm amber light, leather.",
      "silent": true
     },
     {
-     "id": "nw_b1530",
+     "id": "nw_b1531",
      "characterId": "nw_narrator",
      "text": "Ishida stands in the rain. He looks back up at the station, at one lit window on the second floor where somebody is still working.",
      "silent": true,
@@ -23133,7 +23667,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1531",
+     "id": "nw_b1532",
      "characterId": "nw_narrator",
      "text": "From inside the car, a man's clean hand holds out a cup of tea. The watch from the model.",
      "silent": true,
@@ -23155,13 +23689,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1532",
+     "id": "nw_b1533",
      "characterId": "nw_kurose",
      "text": "It's only tea.",
      "audioUrl": "/film/voice/s94/143-kurose-gently-it-s-only-tea.mp3"
     },
     {
-     "id": "nw_b1533",
+     "id": "nw_b1534",
      "characterId": "nw_narrator",
      "text": "Ishida gets in. The door closes. The rain is suddenly very far away.",
      "silent": true,
@@ -23205,7 +23739,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1534",
+     "id": "nw_b1535",
      "characterId": "nw_narrator",
      "text": "The black car recedes down a long wet road, its taillights smearing red, exactly like the car in the first scene of the film.",
      "silent": true,
@@ -23253,7 +23787,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.5
     },
     {
-     "id": "nw_b1535",
+     "id": "nw_b1536",
      "characterId": "nw_narrator",
      "text": "It turns a corner. Gone.",
      "silent": true,
@@ -23279,7 +23813,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1536",
+     "id": "nw_b1537",
      "characterId": "nw_narrator",
      "text": "Grey daylight. A cardboard box on Ishida's desk. A young detective is clearing it.",
      "silent": true,
@@ -23301,7 +23835,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1537",
+     "id": "nw_b1538",
      "characterId": "nw_narrator",
      "text": "He opens the bottom drawer. Empty.",
      "silent": true,
@@ -23338,13 +23872,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1538",
+     "id": "nw_b1539",
      "characterId": "nw_narrator",
      "text": "The desk phone rings. He picks it up.",
      "silent": true
     },
     {
-     "id": "nw_b1539",
+     "id": "nw_b1540",
      "characterId": "nw_young_detective",
      "text": "Yes. Where? In his own car. Under the expressway. Sitting up, engine off. No marks. He left a statement.",
      "audioUrl": "/film/voice/s96/303-youngdetective-evenly-yes-pause-where-pause-in.mp3",
@@ -23366,13 +23900,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1540",
+     "id": "nw_b1541",
      "characterId": "nw_narrator",
      "text": "He puts the phone down very slowly. He looks at the empty chair. At the empty drawer.",
      "silent": true
     },
     {
-     "id": "nw_b1541",
+     "id": "nw_b1542",
      "characterId": "nw_narrator",
      "text": "On the wall, the clock still runs a minute fast.",
      "silent": true,
@@ -23414,13 +23948,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1542",
+     "id": "nw_b1543",
      "characterId": "nw_narrator",
      "text": "FIVE DAYS LATER",
      "silent": true
     },
     {
-     "id": "nw_b1543",
+     "id": "nw_b1544",
      "characterId": "nw_narrator",
      "text": "Days later. The rain has stopped for the first time in the film. The sky is pale and washed and enormous.",
      "silent": true,
@@ -23442,31 +23976,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1544",
+     "id": "nw_b1545",
      "characterId": "nw_narrator",
      "text": "A small flat roof: laundry poles, a water tank, a single potted plant someone has kept alive.",
      "silent": true
     },
     {
-     "id": "nw_b1545",
+     "id": "nw_b1546",
      "characterId": "nw_narrator",
      "text": "Below, the elevated railway, and the trains going past at eye level.",
      "silent": true
     },
     {
-     "id": "nw_b1546",
+     "id": "nw_b1547",
      "characterId": "nw_narrator",
      "text": "Jack stands at the railing. He hears the door behind him.",
      "silent": true
     },
     {
-     "id": "nw_b1547",
+     "id": "nw_b1548",
      "characterId": "nw_narrator",
      "text": "Vera. In a plain coat. Her hair dry.",
      "silent": true
     },
     {
-     "id": "nw_b1548",
+     "id": "nw_b1549",
      "characterId": "nw_narrator",
      "text": "She comes to stand beside him at the railing. Not close. Not far.",
      "silent": true,
@@ -23488,49 +24022,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1549",
+     "id": "nw_b1550",
      "characterId": "nw_vera",
      "text": "Harada says the prosecutors want you to testify.",
      "audioUrl": "/film/voice/s98/155-vera-evenly-harada-says-the-prosecutors-want.mp3"
     },
     {
-     "id": "nw_b1550",
+     "id": "nw_b1551",
      "characterId": "nw_jack",
      "text": "Yes.",
      "audioUrl": "/film/voice/s98/155-jack-evenly-yes.mp3"
     },
     {
-     "id": "nw_b1551",
+     "id": "nw_b1552",
      "characterId": "nw_vera",
      "text": "And your licence?",
      "audioUrl": "/film/voice/s98/155-vera-evenly-and-your-licence.mp3"
     },
     {
-     "id": "nw_b1552",
+     "id": "nw_b1553",
      "characterId": "nw_jack",
      "text": "Gone. It should have gone twenty years ago.",
      "audioUrl": "/film/voice/s98/155-jack-dryly-gone-pause-it-should-have.mp3"
     },
     {
-     "id": "nw_b1553",
+     "id": "nw_b1554",
      "characterId": "nw_vera",
      "text": "Ishida left a statement. He acted alone.",
      "audioUrl": "/film/voice/s98/155-vera-evenly-ishida-left-a-statement-he.mp3"
     },
     {
-     "id": "nw_b1554",
+     "id": "nw_b1555",
      "characterId": "nw_jack",
      "text": "Is that what it says?",
      "audioUrl": "/film/voice/s98/155-jack-dryly-is-that-what-it-says.mp3"
     },
     {
-     "id": "nw_b1555",
+     "id": "nw_b1556",
      "characterId": "nw_vera",
      "text": "That's what the police say it says.",
      "audioUrl": "/film/voice/s98/155-vera-dryly-that-s-what-the-police.mp3"
     },
     {
-     "id": "nw_b1556",
+     "id": "nw_b1557",
      "characterId": "nw_vera",
      "text": "Harada has Mara's drawings. The pages from the floor of the bar. She says they're the only eyewitness there is.",
      "audioUrl": "/film/voice/s98/155-vera-evenly-harada-has-mara-s-drawings.mp3",
@@ -23552,19 +24086,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1557",
+     "id": "nw_b1558",
      "characterId": "nw_jack",
      "text": "She'd have liked that. Being asked.",
      "audioUrl": "/film/voice/s98/155-jack-tenderly-she-d-have-liked-that.mp3"
     },
     {
-     "id": "nw_b1558",
+     "id": "nw_b1559",
      "characterId": "nw_vera",
      "text": "Nobody asked her. She drew it anyway.",
      "audioUrl": "/film/voice/s98/155-vera-firmly-nobody-asked-her-she-drew.mp3"
     },
     {
-     "id": "nw_b1559",
+     "id": "nw_b1560",
      "characterId": "nw_narrator",
      "text": "A train passes below. They watch it.",
      "silent": true,
@@ -23572,7 +24106,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.4
     },
     {
-     "id": "nw_b1560",
+     "id": "nw_b1561",
      "characterId": "nw_narrator",
      "text": "Jack takes something from his pocket. Holds it out on his open palm.",
      "silent": true,
@@ -23594,31 +24128,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1561",
+     "id": "nw_b1562",
      "characterId": "nw_narrator",
      "text": "The red bird clip.",
      "silent": true
     },
     {
-     "id": "nw_b1562",
+     "id": "nw_b1563",
      "characterId": "nw_jack",
      "text": "This is yours.",
      "audioUrl": "/film/voice/s98/156-jack-gently-this-is-yours.mp3"
     },
     {
-     "id": "nw_b1563",
+     "id": "nw_b1564",
      "characterId": "nw_narrator",
      "text": "Vera looks at it. She takes it.",
      "silent": true
     },
     {
-     "id": "nw_b1564",
+     "id": "nw_b1565",
      "characterId": "nw_jack",
      "text": "She said your father gave it to her. She said you only claim it was yours.",
      "audioUrl": "/film/voice/s98/156-jack-gently-she-said-your-father-gave.mp3"
     },
     {
-     "id": "nw_b1565",
+     "id": "nw_b1566",
      "characterId": "nw_narrator",
      "text": "Vera laughs. It comes out broken.",
      "silent": true,
@@ -23640,25 +24174,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1566",
+     "id": "nw_b1567",
      "characterId": "nw_vera",
      "text": "Liar. It was mine.",
      "audioUrl": "/film/voice/s98/156-vera-voice-breaking-liar-it-was-mine.mp3"
     },
     {
-     "id": "nw_b1567",
+     "id": "nw_b1568",
      "characterId": "nw_narrator",
      "text": "She closes her hand around it.",
      "silent": true
     },
     {
-     "id": "nw_b1568",
+     "id": "nw_b1569",
      "characterId": "nw_narrator",
      "text": "Jack looks at the trains. It is the hardest thing he will ever say, and he says it simply.",
      "silent": true
     },
     {
-     "id": "nw_b1569",
+     "id": "nw_b1570",
      "characterId": "nw_jack",
      "text": "At the end, she asked me to tell you something.",
      "audioUrl": "/film/voice/s98/156-jack-tell-her-sorry.mp3",
@@ -23680,43 +24214,43 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1570",
+     "id": "nw_b1571",
      "characterId": "nw_narrator",
      "text": "Vera goes very still.",
      "silent": true
     },
     {
-     "id": "nw_b1571",
+     "id": "nw_b1572",
      "characterId": "nw_jack",
      "text": "She said to tell you she was sorry.",
      "audioUrl": "/film/voice/s98/156-jack-tenderly-she-said-to-tell-you.mp3"
     },
     {
-     "id": "nw_b1572",
+     "id": "nw_b1573",
      "characterId": "nw_narrator",
      "text": "Vera stares at him.",
      "silent": true
     },
     {
-     "id": "nw_b1573",
+     "id": "nw_b1574",
      "characterId": "nw_narrator",
      "text": "And then she understands. Not the words. What they mean. The fight. The last cruel things she said at the door. The flight home.",
      "silent": true
     },
     {
-     "id": "nw_b1574",
+     "id": "nw_b1575",
      "characterId": "nw_narrator",
      "text": "Everything she has carried since the first scene.",
      "silent": true
     },
     {
-     "id": "nw_b1575",
+     "id": "nw_b1576",
      "characterId": "nw_narrator",
      "text": "Mara wasn't angry. Mara had forgiven her the whole time.",
      "silent": true
     },
     {
-     "id": "nw_b1576",
+     "id": "nw_b1577",
      "characterId": "nw_narrator",
      "text": "Vera turns away to the railing. Her shoulders shake. Jack doesn't touch her.",
      "silent": true,
@@ -23738,37 +24272,37 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1577",
+     "id": "nw_b1578",
      "characterId": "nw_narrator",
      "text": "He stands beside her while she cries, the way he knelt beside her in the rain. Close enough. Not closer.",
      "silent": true
     },
     {
-     "id": "nw_b1578",
+     "id": "nw_b1579",
      "characterId": "nw_narrator",
      "text": "When she can speak:",
      "silent": true
     },
     {
-     "id": "nw_b1579",
+     "id": "nw_b1580",
      "characterId": "nw_vera",
      "text": "You could have told me that in the rain.",
      "audioUrl": "/film/voice/s98/157-vera-in-the-rain.mp3"
     },
     {
-     "id": "nw_b1580",
+     "id": "nw_b1581",
      "characterId": "nw_jack",
      "text": "I couldn't say anything in the rain.",
      "audioUrl": "/film/voice/s98/157-jack-sadly-i-couldn-t-say-anything.mp3"
     },
     {
-     "id": "nw_b1581",
+     "id": "nw_b1582",
      "characterId": "nw_vera",
      "text": "No. Neither could I.",
      "audioUrl": "/film/voice/s98/157-vera-gently-no-pause-neither-could-i.mp3"
     },
     {
-     "id": "nw_b1582",
+     "id": "nw_b1583",
      "characterId": "nw_narrator",
      "text": "A train. They watch it pass.",
      "silent": true,
@@ -23790,31 +24324,31 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1583",
+     "id": "nw_b1584",
      "characterId": "nw_vera",
      "text": "I don't know what we are.",
      "audioUrl": "/film/voice/s98/157-vera-wistfully-i-don-t-know-what.mp3"
     },
     {
-     "id": "nw_b1584",
+     "id": "nw_b1585",
      "characterId": "nw_jack",
      "text": "Neither do I.",
      "audioUrl": "/film/voice/s98/157-jack-earnestly-neither-do-i.mp3"
     },
     {
-     "id": "nw_b1585",
+     "id": "nw_b1586",
      "characterId": "nw_vera",
      "text": "I still have your lighter.",
      "audioUrl": "/film/voice/s98/157-vera-dryly-i-still-have-your-lighter.mp3"
     },
     {
-     "id": "nw_b1586",
+     "id": "nw_b1587",
      "characterId": "nw_jack",
      "text": "I know.",
      "audioUrl": "/film/voice/s98/157-jack-gently-i-know.mp3"
     },
     {
-     "id": "nw_b1587",
+     "id": "nw_b1588",
      "characterId": "nw_narrator",
      "text": "She takes it from her coat pocket. Looks at it. Opens it. Closes it.",
      "silent": true,
@@ -23836,19 +24370,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1588",
+     "id": "nw_b1589",
      "characterId": "nw_narrator",
      "text": "She doesn't give it back. She puts it away again.",
      "silent": true
     },
     {
-     "id": "nw_b1589",
+     "id": "nw_b1590",
      "characterId": "nw_vera",
      "text": "Kaneko's opening a new place. Near the station, under the arches. She's taking the sign.",
      "audioUrl": "/film/voice/s98/157-vera-warmly-kaneko-s-opening-a-new.mp3"
     },
     {
-     "id": "nw_b1590",
+     "id": "nw_b1591",
      "characterId": "nw_narrator",
      "text": "She walks to the rooftop door. Stops. Doesn't look back.",
      "silent": true,
@@ -23870,19 +24404,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1591",
+     "id": "nw_b1592",
      "characterId": "nw_vera",
      "text": "She says she opens at six.",
      "audioUrl": "/film/voice/s98/157-vera-warmly-she-says-she-opens-at.mp3"
     },
     {
-     "id": "nw_b1592",
+     "id": "nw_b1593",
      "characterId": "nw_narrator",
      "text": "She goes.",
      "silent": true
     },
     {
-     "id": "nw_b1593",
+     "id": "nw_b1594",
      "characterId": "nw_narrator",
      "text": "Jack stands alone at the railing. A train passes, its windows full of people.",
      "silent": true,
@@ -23906,7 +24440,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.4
     },
     {
-     "id": "nw_b1594",
+     "id": "nw_b1595",
      "characterId": "nw_narrator",
      "text": "For a moment, in one of the windows, the reflection of his own face.",
      "silent": true,
@@ -23932,13 +24466,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1595",
+     "id": "nw_b1596",
      "characterId": "nw_narrator",
      "text": "Weeks later.",
      "silent": true
     },
     {
-     "id": "nw_b1596",
+     "id": "nw_b1597",
      "characterId": "nw_narrator",
      "text": "The Hive is coming down.",
      "silent": true,
@@ -23960,7 +24494,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1597",
+     "id": "nw_b1598",
      "characterId": "nw_narrator",
      "text": "Excavators bite into the walls with long steel jaws. Concrete falls in slow grey curtains. Dust hangs in the air.",
      "silent": true,
@@ -23968,7 +24502,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1598",
+     "id": "nw_b1599",
      "characterId": "nw_narrator",
      "text": "The building has been cut open like the illustrated cross-sections in an old book.",
      "silent": true,
@@ -23990,25 +24524,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1599",
+     "id": "nw_b1600",
      "characterId": "nw_narrator",
      "text": "Rooms stand exposed to the sky, stacked one above another: a wall of flowered wallpaper, a calendar still pinned beside a window, a mirror, a child's height marks pencilled on a doorframe.",
      "silent": true
     },
     {
-     "id": "nw_b1600",
+     "id": "nw_b1601",
      "characterId": "nw_narrator",
      "text": "The camera tracks slowly sideways along the ruined face of the building, as it tracked along the lit windows of the living one.",
      "silent": true
     },
     {
-     "id": "nw_b1601",
+     "id": "nw_b1602",
      "characterId": "nw_narrator",
      "text": "Empty room after empty room. We remember who lived in each.",
      "silent": true
     },
     {
-     "id": "nw_b1602",
+     "id": "nw_b1603",
      "characterId": "nw_narrator",
      "text": "At ground level, Kaneko's counter is still standing. Its six old stools in a row.",
      "silent": true,
@@ -24030,13 +24564,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1603",
+     "id": "nw_b1604",
      "characterId": "nw_narrator",
      "text": "At the barrier on the street, a small crowd watches. The radio repairman. The family. The girl with the violin case.",
      "silent": true
     },
     {
-     "id": "nw_b1604",
+     "id": "nw_b1605",
      "characterId": "nw_narrator",
      "text": "Kaneko stands among them, holding the old noodle-shop sign against her chest, wrapped in a blanket.",
      "silent": true,
@@ -24058,13 +24592,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1605",
+     "id": "nw_b1606",
      "characterId": "nw_narrator",
      "text": "Months later. Winter light, thin and clear. No rain.",
      "silent": true
     },
     {
-     "id": "nw_b1606",
+     "id": "nw_b1607",
      "characterId": "nw_narrator",
      "text": "The white plaza from the model, built.",
      "silent": true,
@@ -24090,7 +24624,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1607",
+     "id": "nw_b1608",
      "characterId": "nw_narrator",
      "text": "Real people cross it now, exactly like the painted ones. A strip of new grass. A bench nobody sits on.",
      "silent": true,
@@ -24112,7 +24646,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1608",
+     "id": "nw_b1609",
      "characterId": "nw_narrator",
      "text": "Nothing marks where anything was.",
      "silent": true,
@@ -24158,19 +24692,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_b1609",
+     "id": "nw_b1610",
      "characterId": "nw_narrator",
      "text": "A tiny place in a brick railway arch near the station. Steam. One warm bulb.",
      "silent": true
     },
     {
-     "id": "nw_b1610",
+     "id": "nw_b1611",
      "characterId": "nw_narrator",
      "text": "Above the counter, the old hand-painted sign. Faded. Unmistakable.",
      "silent": true
     },
     {
-     "id": "nw_b1611",
+     "id": "nw_b1612",
      "characterId": "nw_narrator",
      "text": "A train goes over. The bottles tick against each other and settle.",
      "silent": true,
@@ -24178,7 +24712,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6
     },
     {
-     "id": "nw_b1612",
+     "id": "nw_b1613",
      "characterId": "nw_narrator",
      "text": "On a shelf above the door, a small old television with the sound down: the evening news.",
      "silent": true,
@@ -24220,19 +24754,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1613",
+     "id": "nw_b1614",
      "characterId": "nw_narrator",
      "text": "KUROSE walking into a building between lawyers, cameras flashing, his face composed. A photograph of ISHIDA in uniform. Then the weather.",
      "silent": true
     },
     {
-     "id": "nw_b1614",
+     "id": "nw_b1615",
      "characterId": "nw_narrator",
      "text": "Nobody looks up.",
      "silent": true
     },
     {
-     "id": "nw_b1615",
+     "id": "nw_b1616",
      "characterId": "nw_narrator",
      "text": "Kaneko ladles. JACK sits at the counter, a bowl in front of him, a space beside him.",
      "silent": true,
@@ -24254,13 +24788,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1616",
+     "id": "nw_b1617",
      "characterId": "nw_narrator",
      "text": "The curtain in the doorway moves. VERA. The red bird clip in her hair.",
      "silent": true
     },
     {
-     "id": "nw_b1617",
+     "id": "nw_b1618",
      "characterId": "nw_narrator",
      "text": "She stands a moment. Then she sits down beside him.",
      "silent": true,
@@ -24282,7 +24816,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1618",
+     "id": "nw_b1619",
      "characterId": "nw_narrator",
      "text": "Kaneko sets a bowl in front of her. Vera eats. All of it.",
      "silent": true,
@@ -24304,19 +24838,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b1619",
+     "id": "nw_b1620",
      "characterId": "nw_narrator",
      "text": "She puts money on the counter. Too much. Kaneko looks at it, then at her, and leaves it where it is.",
      "silent": true
     },
     {
-     "id": "nw_b1620",
+     "id": "nw_b1621",
      "characterId": "nw_narrator",
      "text": "Past the curtain: a lit window, a radio through a wall, the city going on.",
      "silent": true
     },
     {
-     "id": "nw_b1621",
+     "id": "nw_b1622",
      "characterId": "nw_narrator",
      "text": "HOLD on the three of them in the steam.",
      "silent": true,
@@ -24496,16 +25030,16 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "montage": [
      "/film/img/s1/01-backstreet.jpg",
      "/film/img/s3/31-the-lit-window.jpg",
-     "/film/img/s6/408-a-matter-between-criminal-groups.jpg",
-     "/film/img/s11/375-he-sets-the-receiver-down.jpg",
-     "/film/img/s16/249-the-chair.jpg",
-     "/film/img/s23/197-you-never-call.jpg",
-     "/film/img/s27a/290-daylight-again.jpg",
-     "/film/img/s41/177-boots-below.jpg",
-     "/film/img/s55/471-where-a-childs-hand-would-reach.jpg",
-     "/film/img/s65/487-the-top-of-the-wardrobe.jpg",
-     "/film/img/s71/406-the-pages.jpg",
-     "/film/img/s78/90-daniel-voss.jpg",
+     "/film/img/s6/61-in-japanese.jpg",
+     "/film/img/s11/250-the-lighter.jpg",
+     "/film/img/s16/186-everybody-sees-him.jpg",
+     "/film/img/s23/350-the-skewer-turns.jpg",
+     "/film/img/s27a/455-she-was-fifteen.jpg",
+     "/film/img/s41/178-the-screens.jpg",
+     "/film/img/s56/223-the-third-stool.jpg",
+     "/film/img/s65/232-the-wine-red-dress.jpg",
+     "/film/img/s72/497-eleven-fifty-two.jpg",
+     "/film/img/s78/89-no-name.jpg",
      "/film/img/s83/111-just-a-face.jpg",
      "/film/img/s91/133-inches-apart.jpg"
     ],
@@ -24544,34 +25078,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.15
        }
       ]
-     },
-     "/film/img/s16/249-the-chair.jpg": {
-      "mode": "pan",
-      "panDistance": 2,
-      "zoomDuration": 18,
-      "depthMap": "/film/depth/s16/249-the-chair/depth.png",
-      "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s16/249-the-chair/cutout-1.png",
-        "depth": 0.514
-       }
-      ],
-      "depthMotion": "truck",
-      "depthAmount": 0.54,
-      "depthSeconds": 16,
-      "depthDirection": "right",
-      "lights": [
-       {
-        "x": 83,
-        "y": 8,
-        "color": "#dfe9ff",
-        "size": 22,
-        "intensity": 0.25,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.1
-       }
-      ]
      }
     }
    },
@@ -24608,5 +25114,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "f2c7f1ed816d"
+ "builtinRevision": "fa1869eb69e6"
 } as unknown as Story;

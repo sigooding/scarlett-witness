@@ -128,11 +128,6 @@
       "musicLevel": 1,
       "musicFadeSeconds": 12
     },
-    "nw_s78": {
-      "musicMode": "none",
-      "musicUrl": null,
-      "musicFadeSeconds": 4
-    },
     "nw_s48": {
       "cinematic": {
         "rainOnLens": true,
@@ -1423,6 +1418,128 @@
           {
             "file": "jack-running",
             "volume": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "bad-guy",
+      "title": "The night after the call",
+      "musicUrl": "/audio/bad-guy.mp3",
+      "seconds": 265,
+      "from": "nw_s72_b",
+      "to": "nw_s77",
+      "stopBefore": "He opens the drawer.",
+      "musicLevel": 0.9,
+      "fadeIn": 5,
+      "fadeOut": 3,
+      "slack": 2,
+      "endHold": 2.5,
+      "captions": {
+        "69-vera-runs": "Vera comes out of the hotel into the rain and starts to run.",
+        "547-the-call-still-lit": "The call is still lit in her fist: ISHIDA.",
+        "387-the-street-too-long": "The railway glows at the end of the street. She runs at it.",
+        "70-not-elegantly-badly": "Not elegantly. Badly. In heels, in the red dress, no coat.",
+        "548-the-machine-glows": "She runs past a vending machine. It glows, indifferent.",
+        "549-the-crossing-chimes": "At the crossing, the old melody chimes for her.",
+        "388-through-the-crossing": "She runs through it on red.",
+        "72-the-lost-heel": "One heel skids. The shoe stays behind in a puddle. She runs on.",
+        "500-no-one-else-is-here": "In a city of fourteen million people, no one else is here.",
+        "503-she-holds-on": "Her hands grab the front of his coat. She holds on.",
+        "73-two-small-figures": "Two small figures on a huge, empty, shining street.",
+        "76-the-reflection": "In the black water, her reflection. For a second, the street is different.",
+        "504-nobody-looks-down": "Above them, an elevated train passes.",
+        "77-the-red-shoe": "A single red shoe in a puddle on an empty street.",
+        "78-the-empty-lounge": "The hotel lounge, empty. The blue umbrella still leans on the stool.",
+        "79-the-hive-shut": "The Hive at night. The noodle shop shutter is down.",
+        "80-the-machine-waits": "The vending machine hums, lit, waiting for no one.",
+        "81-static-in-a-window": "A small television in a shop window, showing only static.",
+        "314-the-empty-crossing": "The signal turns green for no one. The old melody chimes.",
+        "82-on-the-floor": "Vera sits on the floor, still in the ruined red dress.",
+        "83-the-lighter": "The old steel lighter. She opens it. Closes it. Opens it.",
+        "84-cries-without-a-sound": "She holds it against her chest and cries without a sound."
+      },
+      "cues": {
+        "70-not-elegantly-badly": [
+          {
+            "file": "heels-running-wet",
+            "volume": 0.7
+          }
+        ],
+        "549-the-crossing-chimes": [
+          {
+            "file": "crossing",
+            "volume": 0.5
+          }
+        ],
+        "72-the-lost-heel": [
+          {
+            "file": "shoe-splash",
+            "volume": 0.8
+          }
+        ],
+        "504-nobody-looks-down": [
+          {
+            "file": "train",
+            "volume": 0.5
+          }
+        ],
+        "81-static-in-a-window": [
+          {
+            "file": "tv-static",
+            "volume": 0.02
+          }
+        ],
+        "314-the-empty-crossing": [
+          {
+            "file": "crossing",
+            "volume": 0.5
+          }
+        ],
+        "83-the-lighter": [
+          {
+            "file": "lighter-flick",
+            "volume": 0.5
+          }
+        ]
+      },
+      "note": "The song is 268.27 s; the run is planned to 265 s because its voiced shots run about 6 s longer than the plan (measured 12 October 2026: the handoff to the midnight song came at 268.7 s on the 268.27 s plan), so the midnight song fades in over the last seconds of this one."
+    },
+    {
+      "id": "midnight",
+      "title": "The envelope and the notebook",
+      "musicUrl": "/audio/midnight-in-the-rain.mp3",
+      "seconds": 182.74,
+      "from": "nw_s77_after",
+      "to": "nw_s79",
+      "musicLevel": 0.9,
+      "fadeIn": 3,
+      "fadeOut": 3,
+      "slack": 2,
+      "endHold": 2.5,
+      "captions": {
+        "86-the-clean-envelope": "He opens the drawer. A clean envelope. Sakai's letter folded inside the notebook's cover.",
+        "87-he-writes-nothing": "He holds a pen over the envelope for a long time. He writes nothing.",
+        "88-the-walkway": "Grey light. The third-floor walkway. Rain dripping from the railing.",
+        "316-squared-to-the-door": "He sets the envelope on the mat, squares it to the door, and goes.",
+        "89-no-name": "On the doormat: a plain envelope. No name.",
+        "90-daniel-voss": "She sees the name inside the cover, and her whole body goes still.",
+        "91-grey-light": "Vera sits at the low table in the dawn light, the two cups beside her.",
+        "286-smoothed-flat": "The letter she threw away, smoothed flat by someone else's hands.",
+        "507-her-hand-goes-to-her-mouth": "Her hand goes to her mouth.",
+        "93-against-her-chest": "She sits in the grey light, the notebook held against her chest."
+      },
+      "cues": {
+        "86-the-clean-envelope": [
+          {
+            "file": "drawer-open",
+            "volume": 0.6
+          }
+        ],
+        "316-squared-to-the-door": [
+          {
+            "file": "envelope-mat",
+            "volume": 0.5
           }
         ]
       }
