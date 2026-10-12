@@ -17,7 +17,8 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { NOBODYS_WITNESS_FILM as FILM } from "../src/data/nobodysWitnessFilm";
-import { validateStory, deepClone } from "../src/logic";
+import { validateStory, deepClone, latestSave, writeSave } from "../src/logic";
+import { creditsRollSeconds } from "../src/credits";
 import { visitStoryMediaFields } from "../src/data/storyMedia";
 import { collectStoryAssetIds, resolveMediaValue } from "../src/data/mediaLibrary";
 import { parseAmbient, joinAmbient } from "../src/studio/ambientParts";
@@ -42,7 +43,7 @@ console.log("Every field the film uses can be authored in the Studio");
 // (ids, layout) rather than a control.
 const REGISTRY: Record<string, Record<string, RegExp | null>> = {
   story: {
-    id: null, title: /Story title/, tagline: /tagline/, pulpPaper: /pulpPaper/, gameKind: /gameKind/, coverImage: /coverImage/,
+    id: null, builtinRevision: null, title: /Story title/, tagline: /tagline/, pulpPaper: /pulpPaper/, gameKind: /gameKind/, coverImage: /coverImage/,
     startSceneId: /startSceneId/, layout: /layout/, dialogueBox: /dialogueBox/, briefing: /briefing/, characters: /characters/, items: /items/, scenes: /scenes/,
   },
   scene: {
@@ -190,5 +191,48 @@ const edits = JSON.parse(read("src/film/studio-edits.json"));
 const raid = edits.cutscenes.find((c: { id: string }) => c.id === "inn-raid");
 const jackBreaths = raid.shots.filter((shot: { sfx?: string }) => /^jack-(running|grunt|shaky-breath|sigh)/.test(shot.sfx ?? ""));
 check(jackBreaths.length <= 1, `the inn raid carries at most one breath or grunt effect on Jack (the director found too many; it has ${jackBreaths.length})`);
+
+/* ---- 13. the film opens on scenes 1 and 2, then the titles (this regressed twice: a stale Studio copy, then the export dialog) ---- */
+console.log("The film opens on scene 1 and 2, then the opening titles");
+const byId = new Map(FILM.scenes.map((s) => [s.id, s]));
+const nextOf = (id: string) => { const sc = byId.get(id)!; const beats = sc.dialogueBeats ?? []; return beats[beats.length - 1]?.afterBeatTargetSceneId || sc.autoAdvanceTargetSceneId || sc.choices?.[0]?.targetSceneId; };
+const order: string[] = [];
+for (let id: string | undefined = FILM.startSceneId; id && byId.has(id) && !order.includes(id); id = nextOf(id)) order.push(id);
+eq(order.slice(0, 5), ["nw_s1", "nw_s2", "nw_title", "nw_prologue", "nw_s3"], "the film starts on scene 1, then scene 2, the opening titles, the prologue and scene 3");
+check(order.length > 100, `and plays on through the whole film (${order.length} nodes in play order)`);
+check(typeof FILM.builtinRevision === "string" && FILM.builtinRevision.length >= 8, "each build of the film is stamped, so a saved Studio copy from an older build can be told from it");
+const appSrc = read("src/App.tsx");
+check(/saved\.builtinRevision !== revision/.test(appSrc) && /data-testid="stale-copy-notice"/.test(appSrc), "the newsstand says so when a saved copy of the film is from an older build, and offers the current film");
+check(/STORIES\.find\(\(s\) => s\.id === "nobodys-witness-film"\)/.test(appSrc), "the animatic dialog lists the shipped film's scenes, not a saved copy's (the exporter renders the shipped film)");
+const exportServer = read("tools/vite-animatic-export.mjs");
+check(/\.\.\.\(whole \? \[\] : \["--from"/.test(exportServer), "a whole-film export passes no --from: it starts where the film starts");
+// a reload resumes the last checkpoint, which must never be a credits roll (the opening titles sent it past scenes 1 and 2)
+{
+  const mem = new Map<string, string>();
+  (globalThis as unknown as { localStorage: Storage }).localStorage = { getItem: (k: string) => mem.get(k) ?? null, setItem: (k: string, v: string) => void mem.set(k, v), removeItem: (k: string) => void mem.delete(k), clear: () => mem.clear(), key: () => null, length: 0 } as Storage;
+  const base = { storyId: FILM.id, sceneTitle: "", activeFlags: [], inventory: [], meters: {}, characterTrust: {}, memories: {}, proseAcknowledged: true, beatIdx: 0, usedHotspots: [], usedChoices: [], visitedScenes: [], encounteredCharacters: [], expiredChoices: [], choiceClocks: {} } as never;
+  writeSave(0, { ...(base as object), sceneId: "nw_s2", savedAt: 1 } as never);
+  writeSave(0, { ...(base as object), sceneId: "nw_title", savedAt: 2 } as never); // an older build's checkpoint on the opening titles
+  eq(latestSave(FILM), null, "an automatic checkpoint on the opening titles is not offered for resume");
+  writeSave(1, { ...(base as object), sceneId: "nw_title", savedAt: 3 } as never);
+  eq(latestSave(FILM)?.slot, 1, "a manual save on a credits roll is the player's own choice and stays");
+  mem.clear();
+}
+const gameSrc = read("src/game/Game.tsx");
+check((gameSrc.match(/scene\.nodeType === "credits"/g) ?? []).length >= 2, "the player writes no automatic checkpoint on a credits roll (arrival or mid-scene)");
+
+/* ---- 14. the opening titles last 1:50 ---- */
+console.log("The opening titles last 1 minute 50");
+const titles = byId.get("nw_title")!;
+eq(titles.autoAdvanceDelaySeconds, 110, "the opening titles run 110 s (1:50), not the song's 3:53");
+check(creditsRollSeconds(titles.prose ?? "", titles.credits) <= 110, `and their own roll (${creditsRollSeconds(titles.prose ?? "", titles.credits).toFixed(1)} s) fits inside it, so the delay is what sets the length`);
+
+/* ---- 15. no 35mm film grade and no volumetric shafts, anywhere ---- */
+console.log("No film grade and no volumetric shafts on any scene or beat");
+const looks = FILM.scenes.flatMap((sc) => [sc.cinematic, ...(sc.dialogueBeats ?? []).map((b) => b.cinematic)]).filter(Boolean) as { filmGrade?: boolean; filmGradeStrength?: number; volumetricShafts?: boolean }[];
+check(looks.length > 400, `${looks.length} scene and beat looks checked`);
+eq(looks.filter((c) => c.filmGrade).length, 0, "none has the 35mm film grade on");
+eq(looks.filter((c) => c.volumetricShafts !== false).length, 0, "every one has the volumetric shafts switched off");
+eq(Object.keys(edits.scenes).filter((k) => JSON.stringify(edits.scenes[k]).includes("volumetricShafts\": true")), [], "and no Studio edit switches them back on");
 
 console.log(`\nfilm backend: ${checks} checks passed`);

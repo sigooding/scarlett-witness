@@ -644,10 +644,14 @@ export function latestSave(story: Story): { save: GameSave; slot: number; episod
     ? story.episodes.map((e) => e?.id).filter((id): id is string => typeof id === "string")
     : [undefined];
   let best: { save: GameSave; slot: number; episodeId?: string } | null = null;
+  // A checkpoint written on a credits roll by an older build is not a place to resume to (the opening titles would send a
+  // reload past the first scenes); a manual slot is the player's own choice and stays.
+  const credits = new Set((story.scenes ?? []).filter((s) => s.nodeType === "credits").map((s) => s.id));
   episodeIds.forEach((episodeId) => {
     // Include the auto checkpoint (slot 0) alongside the manual slots.
     for (let slot = AUTO_SLOT; slot <= SAVE_SLOTS; slot++) {
       const save = readSave(story.id, slot, episodeId);
+      if (save && slot === AUTO_SLOT && credits.has(save.sceneId)) continue;
       if (save && (!best || save.savedAt > best!.save.savedAt)) best = { save, slot, episodeId };
     }
   });

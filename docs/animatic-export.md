@@ -21,7 +21,7 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
 
    | Option | |
    |---|---|
-   | `--from <scene id>` | first scene (default: the film's first, scene 1: the film opens on scenes 1 and 2, then the titles, set in the Studio) |
+   | `--from <scene id>` | first scene (default: the film's first, scene 1: the film opens on scenes 1 and 2, then the titles, set in the Studio). The dialog's whole-film job passes no `--from`, so it always starts there, and it lists the shipped film's scenes whatever Studio copy the browser holds |
    | `--to <scene id>` | last scene, its continuation parts (`nw_s65_b`) included; leave it out to play to the end of the credits. The raid is one run of nodes: `--to nw_s92_after` ends after it |
    | `--size 1280x720` or `1920x1080` | picture size |
    | `--fps 24` | frame rate |

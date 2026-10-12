@@ -150,6 +150,51 @@ function loadPublishedCatalog(): Story[] {
   return [...builtIns, ...custom].filter((story, index, all) => all.findIndex((candidate) => candidate.id === story.id) === index);
 }
 
+const staleAckKey = (id: string) => `scarlet-reel-stale-copy-ack-${id}`;
+const backupKey = (stamp: number, key: string) => `scarlet-studio-backup-${stamp}-${key}`;
+
+/**
+ * Built-in stories (the film) whose saved Studio copy was made from an older build. The Studio saves a draft the moment a
+ * story is opened in it, and the newsstand plays a saved copy in preference to the built-in, so that copy would keep
+ * playing the old story (its old running order, missing scenes, old titles) however often the story is rebuilt. The
+ * generator stamps each build (`builtinRevision`); a copy with another stamp, or none, is stale.
+ */
+function staleSavedCopies(): { id: string; title: string; revision: string; keys: string[] }[] {
+  const out: { id: string; title: string; revision: string; keys: string[] }[] = [];
+  for (const builtIn of STORIES) {
+    const revision = builtIn.builtinRevision;
+    if (!revision) continue;
+    try {
+      if (localStorage.getItem(staleAckKey(builtIn.id)) === revision) continue;
+    } catch { /* no storage */ }
+    const keys = [publishedKey(builtIn.id), draftKey(builtIn.id)].filter((key) => {
+      try {
+        const raw = localStorage.getItem(key);
+        if (!raw) return false;
+        const saved = JSON.parse(raw) as Story;
+        return !!saved?.scenes?.length && saved.builtinRevision !== revision;
+      } catch {
+        return false;
+      }
+    });
+    if (keys.length) out.push({ id: builtIn.id, title: builtIn.title, revision, keys });
+  }
+  return out;
+}
+
+/** Put the built-in story back in play: each stale saved copy is copied to a backup key (never read or deleted by the app) and then removed. */
+function retireStaleCopies(keys: string[]): boolean {
+  const stamp = Date.now();
+  try {
+    const raws = keys.map((key) => [key, localStorage.getItem(key)] as const).filter(([, raw]) => raw !== null);
+    for (const [key, raw] of raws) localStorage.setItem(backupKey(stamp, key), raw as string);
+    for (const [key] of raws) localStorage.removeItem(key);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 interface Settings {
   volumes: Record<MixChannel, number>;
   typeSpeed: number;
@@ -194,6 +239,8 @@ export default function App() {
   const [settings, setSettings] = useState<Settings>(loadSettings);
   const [endings, setEndings] = useState<EndingLog>(loadEndings);
   const [catalog, setCatalog] = useState<Story[]>(loadPublishedCatalog);
+  const [staleCopies, setStaleCopies] = useState(staleSavedCopies);
+  const [staleError, setStaleError] = useState("");
   const [hiddenStories, setHiddenStories] = useState<string[]>(loadHiddenStories);
   const [, setCustomStories] = useState<Story[]>(loadCustomStories);
   const [globalTitleTheme, setGlobalTitleTheme] = useState<TitleTheme>(loadGlobalTitleTheme);
@@ -338,6 +385,7 @@ export default function App() {
       }
       setEndings(loadEndings());
       setCatalog(loadPublishedCatalog());
+      setStaleCopies(staleSavedCopies());
       setHiddenStories(loadHiddenStories());
       // Re-read settings so volumes changed inside a story (which persist
       // straight to localStorage) show up in the Sound Booth and menu music.
@@ -352,8 +400,9 @@ export default function App() {
   }, [mode.kind, resolvedTitleTheme.musicUrl, startMenuMusic]);
 
   const allStories = useMemo(() => (imported ? [...catalog, imported] : catalog), [catalog, imported]);
-  /** The film, for 🎞 Export animatic (src/AnimaticExport.tsx) */
-  const filmStory = useMemo(() => allStories.find((s) => s.id === "nobodys-witness-film") ?? null, [allStories]);
+  /** The film, for 🎞 Export animatic (src/AnimaticExport.tsx). The exporter renders the film as shipped, in a browser of its
+   *  own, so the dialog lists the shipped film's scenes, not those of a saved Studio copy that may be from an older build. */
+  const filmStory = useMemo(() => STORIES.find((s) => s.id === "nobodys-witness-film") ?? allStories.find((s) => s.id === "nobodys-witness-film") ?? null, [allStories]);
   /** ★ FEATURED — the big banner cards at the top of the newsstand, in the
    *  order the author listed them. Unresolvable ids are skipped so a hidden
    *  or deleted case can't leave a hole on the front page. */
@@ -898,6 +947,40 @@ export default function App() {
                 )}
               </div>
               {animaticExportOpen && filmStory && <AnimaticExportDialog story={filmStory} onClose={() => setAnimaticExportOpen(false)} />}
+              {staleCopies.map((c) => (
+                <div key={c.id} role="status" data-testid="stale-copy-notice" className="mx-auto mt-5 max-w-2xl border border-gold/60 bg-gold/10 px-4 py-3 text-left font-type text-sm text-paper/90">
+                  <div className="font-pulp text-[10px] uppercase tracking-[0.25em] text-gold">A saved copy from an older build</div>
+                  <p className="mt-1">
+                    This browser holds a saved Studio copy of <span className="text-gold">{c.title}</span> (the Studio saves one as soon as the film is opened
+                    there) that was made before the film was last rebuilt. ▶ Play and the Studio use that copy, so you may be seeing the old film:
+                    its old running order, missing scenes, old titles and pictures.
+                  </p>
+                  {staleError && <p className="mt-1 text-red-300">{staleError}</p>}
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <button
+                      onClick={() => {
+                        if (retireStaleCopies(c.keys)) {
+                          setStaleError("");
+                          setCatalog(loadPublishedCatalog());
+                          setStaleCopies(staleSavedCopies());
+                        } else setStaleError("Could not keep a backup of the saved copy (browser storage is full), so it was left as it is.");
+                      }}
+                      className="border border-gold bg-gold/15 px-3 py-1.5 font-pulp text-[10px] uppercase tracking-[0.2em] text-gold hover:bg-gold/25"
+                    >
+                      Use the current film (keeps a backup of my copy)
+                    </button>
+                    <button
+                      onClick={() => {
+                        try { localStorage.setItem(staleAckKey(c.id), c.revision); } catch { /* no storage: the notice returns next time */ }
+                        setStaleCopies(staleSavedCopies());
+                      }}
+                      className="border border-paper/40 px-3 py-1.5 font-pulp text-[10px] uppercase tracking-[0.2em] text-paper/80 hover:border-gold hover:text-gold"
+                    >
+                      Keep my saved copy
+                    </button>
+                  </div>
+                </div>
+              ))}
             </header>
 
             <div className="mt-4 flex justify-end gap-2">

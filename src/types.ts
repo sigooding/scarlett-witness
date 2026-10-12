@@ -2204,6 +2204,9 @@ export interface StoryMap {
 export type GameKind = "noir-rail" | "adventure" | "vn" | "first-person";
 
 export interface Story {
+  /** Stamped by the tool that generates a built-in story (the film): a fingerprint of that build. A Studio draft or a
+   *  publication made from an older build carries the older stamp, so the newsstand can say it is not the shipped story. */
+  builtinRevision?: string;
   /** Default halftone/grain setting for a new player. Existing player
    * preference still wins. False is useful for photographic adventures. */
   pulpPaper?: boolean;

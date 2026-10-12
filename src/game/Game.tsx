@@ -4107,6 +4107,9 @@ function CasePlayer({
       writeCoverage(next);
     }
     if (scene.isEnding) return;
+    // A credits roll is never a place to resume to: the opening titles would send a reload straight past the first scenes,
+    // and the end credits would reopen a finished film on its roll. The slot keeps the last scene before it.
+    if (scene.nodeType === "credits") return;
     const t = window.setTimeout(() => writeCheckpoint({ flash: true, mirror: true }), 400);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -4791,7 +4794,7 @@ function CasePlayer({
    * arrival checkpoint is the escape the stranded panel offers, so refreshing
    * it with the spent world would poison the one recovery that always works. */
   useEffect(() => {
-    if (!scene || scene.isEnding || strandedVerdict.stranded) return;
+    if (!scene || scene.nodeType === "credits" || scene.isEnding || strandedVerdict.stranded) return;
     const since = Date.now() - lastCheckpointAtRef.current;
     const wait = Math.max(CHECKPOINT_QUIET_MS, CHECKPOINT_MIN_GAP_MS - since);
     const t = window.setTimeout(() => writeCheckpoint({}), wait);

@@ -918,7 +918,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthSeconds": 32,
       "focalPoint": "58% 54%",
       "panDistance": 2,
-      "zoomDuration": 32
+      "zoomDuration": 32,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "/film/img/s75/80-the-machine-waits.jpg": {
       "lights": [
@@ -987,7 +989,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false,
    "autoAdvanceTargetSceneId": "nw_prologue",
    "musicLevel": 1.05,
-   "autoAdvanceDelaySeconds": 232,
+   "autoAdvanceDelaySeconds": 110,
    "cinematic": {
     "mode": "pan",
     "depthMap": "/film/depth/montage/m4-railway-rain/depth.png",
@@ -996,7 +998,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "depthSeconds": 32,
     "focalPoint": "58% 54%",
     "panDistance": 2,
-    "zoomDuration": 32
+    "zoomDuration": 32,
+    "filmGrade": false,
+    "volumetricShafts": false
    }
   },
   {
@@ -1012,12 +1016,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "focalPoint": "50% 55%",
     "zoomDuration": 60,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "depthMap": "/film/depth/s1/377-the-hive-remembered/depth.png",
     "depthMotion": "push",
     "depthAmount": 0.48,
-    "depthSeconds": 20
+    "depthSeconds": 20,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "Night. Rain. An eleven-storey block of balconies and wires wedged between glass towers.",
    "ambientAudio": "rain",
@@ -1097,12 +1101,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s1/01-backstreet/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.38,
-      "depthSeconds": 16
+      "depthSeconds": 16,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1123,8 +1127,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 31,
@@ -1148,7 +1150,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s1/02-vending/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
-      "depthSeconds": 16
+      "depthSeconds": 16,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1169,8 +1173,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1191,8 +1195,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1221,8 +1225,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1243,8 +1247,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1265,8 +1269,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 63,
@@ -1286,7 +1288,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1307,8 +1311,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1341,8 +1345,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 80,
@@ -1366,7 +1368,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.35,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1396,8 +1400,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1430,8 +1434,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1452,8 +1456,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1474,8 +1478,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1496,8 +1500,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lensFlare": {
        "preset": "anamorphic-blue",
        "x": 61,
@@ -1507,7 +1509,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "starburstIntensity": 0.25,
        "ghostIntensity": 0.4,
        "pulseAmount": 0.15
-      }
+      },
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1544,8 +1548,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lensFlare": {
        "preset": "anamorphic-blue",
        "x": 63,
@@ -1555,7 +1557,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "starburstIntensity": 0.2,
        "ghostIntensity": 0.3,
        "pulseAmount": 0.15
-      }
+      },
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1588,10 +1592,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.3,
-      "shakeDuration": 0.3
+      "shakeDuration": 0.3,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "zoom",
      "backgroundTransitionSpeed": 0.3,
@@ -1620,8 +1624,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1648,8 +1652,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1678,8 +1682,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1708,8 +1712,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.6
@@ -1730,8 +1734,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1770,8 +1774,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1792,8 +1796,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.2,
       "shakeDuration": 0.7,
       "lights": [
@@ -1815,7 +1817,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 2.2,
         "pulseAmount": 0.12
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1836,8 +1840,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1883,8 +1887,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s2/19-the-bar/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
@@ -1908,7 +1910,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1935,8 +1939,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -1965,10 +1969,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.2,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -1997,8 +2001,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2019,8 +2023,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2050,8 +2054,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2072,8 +2076,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2094,8 +2098,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.3,
       "shakeDuration": 0.3,
       "lights": [
@@ -2108,7 +2110,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.7,
         "pulseAmount": 0.6
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "zoom",
      "backgroundTransitionSpeed": 0.3,
@@ -2130,8 +2134,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2164,8 +2168,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2188,8 +2192,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 59,
@@ -2209,7 +2211,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2269,14 +2273,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/29-apartment-block/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.29,
       "depthSeconds": 24,
       "depthDirection": "left",
-      "depthFocus": 0.48
+      "depthFocus": 0.48,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2297,12 +2301,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/32-laundry-in-the-rain/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.29,
-      "depthSeconds": 14
+      "depthSeconds": 14,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2323,14 +2327,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.56,
       "depthSeconds": 18,
       "depthDirection": "left",
-      "depthFocus": 0.5
+      "depthFocus": 0.5,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2353,8 +2357,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.56,
@@ -2370,7 +2372,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2412,8 +2416,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2440,8 +2444,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2462,8 +2466,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "spielberg-golden",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2496,8 +2500,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2518,8 +2522,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2540,8 +2544,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2581,8 +2585,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2611,8 +2615,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2633,8 +2637,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2673,8 +2677,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2703,8 +2707,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 61,
@@ -2715,7 +2717,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.9,
         "pulseAmount": 0.4
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2736,8 +2740,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2764,8 +2768,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2817,8 +2821,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 23,
@@ -2842,7 +2844,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s5/43-the-front-counter/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.22,
-      "depthSeconds": 20
+      "depthSeconds": 20,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2869,8 +2873,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2891,8 +2895,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -2943,8 +2947,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2973,8 +2977,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -2997,8 +3001,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3027,8 +3031,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3049,8 +3053,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -3093,13 +3097,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.48,
       "depthSeconds": 14,
-      "depthDirection": "right"
+      "depthDirection": "right",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3120,8 +3124,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3142,8 +3146,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3164,8 +3168,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3186,8 +3190,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3232,8 +3236,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3260,8 +3264,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3324,8 +3328,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3364,8 +3368,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3404,8 +3408,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3432,8 +3436,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3472,8 +3476,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3512,8 +3516,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3576,8 +3580,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3616,8 +3620,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -3640,8 +3644,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3686,8 +3690,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3720,8 +3724,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3754,8 +3758,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3800,8 +3804,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3822,8 +3826,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3870,12 +3874,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s7/63-the-detectives-room/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3896,8 +3900,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -3920,8 +3924,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3942,8 +3946,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -3964,8 +3968,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -3988,12 +3992,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s7/68-the-clock/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.4,
-      "depthSeconds": 14
+      "depthSeconds": 14,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -4034,8 +4038,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4094,8 +4098,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4134,8 +4138,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s8/240-the-far-end/depth.png",
       "depthPlate": "/film/depth/s8/240-the-far-end/plate.jpg",
       "depthCutouts": [
@@ -4147,7 +4149,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "truck",
       "depthAmount": 0.54,
       "depthSeconds": 16,
-      "depthDirection": "left"
+      "depthDirection": "left",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4174,8 +4178,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4236,8 +4240,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4258,8 +4262,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4286,8 +4290,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4332,8 +4336,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4378,8 +4382,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -4421,8 +4425,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4468,8 +4472,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4504,8 +4508,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 42,
@@ -4525,7 +4527,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.7,
         "pulseAmount": 0.6
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -4584,8 +4588,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4612,8 +4616,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4690,11 +4694,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "spielberg-golden",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "dollyZoomAmount": 1.15,
       "dollyZoomDuration": 7,
-      "dollyZoomDirection": "push"
+      "dollyZoomDirection": "push",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4757,8 +4761,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "spielberg-golden",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4815,8 +4819,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4855,8 +4859,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4913,8 +4917,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -4970,8 +4974,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 32,
@@ -4991,7 +4993,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.5,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5024,8 +5028,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "spielberg-golden",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5052,8 +5056,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "spielberg-golden",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5092,8 +5096,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -5168,8 +5172,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5203,8 +5207,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5225,8 +5229,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -5249,8 +5253,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -5308,8 +5312,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5369,8 +5373,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5397,8 +5401,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -5451,8 +5455,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5485,8 +5489,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5545,8 +5549,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 76,
@@ -5566,7 +5568,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -5627,8 +5631,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5661,8 +5665,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5695,8 +5699,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5735,8 +5739,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5757,8 +5761,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5803,8 +5807,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5843,8 +5847,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5865,8 +5869,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5911,8 +5915,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -5972,8 +5976,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -5994,7 +5996,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "starburstIntensity": 0.2,
        "ghostIntensity": 0.3,
        "pulseAmount": 0.15
-      }
+      },
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6039,12 +6043,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s14a/335-the-lane-mouth/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.45,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6093,8 +6097,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6135,8 +6139,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6193,8 +6197,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6235,8 +6239,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 77,
@@ -6247,7 +6249,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 3.5,
         "pulseAmount": 0.3
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6300,8 +6304,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6364,8 +6368,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6399,8 +6403,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6439,8 +6443,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6479,8 +6483,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6507,8 +6511,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
       "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg",
       "depthCutouts": [
@@ -6548,7 +6550,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6577,8 +6581,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6617,8 +6621,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6679,8 +6683,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6733,8 +6737,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6755,8 +6759,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6812,8 +6816,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6840,8 +6844,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6892,8 +6896,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -6935,8 +6939,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -6963,8 +6967,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s16/249-the-chair/depth.png",
       "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg",
       "depthCutouts": [
@@ -6987,7 +6989,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 8,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7022,8 +7026,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 51,
@@ -7052,7 +7054,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 4,
         "pulseAmount": 0.25
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7092,8 +7096,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -7105,11 +7109,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "volumetricShafts": true,
-    "shaftsIntensity": 1.5
-   }
+   "choices": []
   },
   {
    "id": "nw_s17",
@@ -7150,8 +7150,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50.5,
@@ -7171,7 +7169,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 3,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7204,8 +7204,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7232,8 +7232,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7284,8 +7284,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -7320,8 +7320,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7354,8 +7354,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -7396,8 +7396,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -7450,8 +7450,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 27,
@@ -7462,7 +7460,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.2
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7503,8 +7503,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7603,8 +7603,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -7615,7 +7613,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 4,
         "pulseAmount": 0.25
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -7683,8 +7683,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -7695,7 +7693,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 4,
         "pulseAmount": 0.2
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7716,8 +7716,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7750,8 +7750,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7796,8 +7796,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7818,8 +7818,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7846,8 +7846,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7910,8 +7910,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7938,8 +7938,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7960,8 +7960,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -7982,8 +7982,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8028,8 +8028,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
       "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg",
       "depthCutouts": [
@@ -8055,7 +8053,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 1.2,
         "pulseAmount": 0.3
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8120,8 +8120,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8172,8 +8172,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8226,8 +8226,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -8268,8 +8268,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s22/195-somewhere-like-this/depth.png",
       "depthPlate": "/film/depth/s22/195-somewhere-like-this/plate.jpg",
       "depthCutouts": [
@@ -8289,7 +8287,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "truck",
       "depthAmount": 0.54,
       "depthSeconds": 16,
-      "depthDirection": "left"
+      "depthDirection": "left",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8330,8 +8330,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -8366,8 +8366,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8394,8 +8394,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8422,8 +8422,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8468,8 +8468,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8498,8 +8498,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8520,8 +8520,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8554,8 +8554,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8608,8 +8608,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8669,8 +8669,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 14,
@@ -8717,7 +8715,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8744,8 +8744,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -8768,8 +8768,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8790,8 +8790,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8830,8 +8830,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8858,8 +8858,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8892,8 +8892,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8926,8 +8926,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -8948,8 +8948,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 14,
@@ -9004,7 +9002,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthAmount": 0.25,
       "depthSeconds": 24,
       "depthDirection": "left",
-      "depthFocus": 0.48
+      "depthFocus": 0.48,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -9027,8 +9027,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9079,8 +9079,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
       "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg",
       "depthCutouts": [
@@ -9106,7 +9104,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 4,
         "pulseAmount": 0.25
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9127,8 +9127,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9191,8 +9191,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9219,8 +9219,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9265,8 +9265,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9299,8 +9299,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9327,8 +9327,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 55,
@@ -9339,7 +9337,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9402,8 +9402,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9442,8 +9442,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9517,8 +9517,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 84,
@@ -9538,7 +9536,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.6,
         "pulseAmount": 0.6
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9559,8 +9559,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9605,8 +9605,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9639,8 +9639,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9691,8 +9691,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9713,8 +9713,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -9767,8 +9767,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9818,8 +9818,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9846,8 +9846,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9892,8 +9892,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -9970,8 +9970,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10010,8 +10010,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10032,8 +10032,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10101,8 +10101,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 34,
@@ -10113,7 +10111,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 1.2,
         "pulseAmount": 0.3
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10134,8 +10134,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10182,8 +10182,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10204,8 +10204,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10238,8 +10238,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10278,8 +10278,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10324,8 +10324,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10358,8 +10358,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10404,8 +10404,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
       "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg",
       "depthCutouts": [
@@ -10416,7 +10414,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMotion": "push",
       "depthAmount": 0.45,
-      "depthSeconds": 14
+      "depthSeconds": 14,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10493,8 +10493,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10547,8 +10547,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10595,8 +10595,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10617,8 +10617,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
       "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg",
       "depthCutouts": [
@@ -10649,7 +10647,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.7,
         "pulseAmount": 0.5
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10676,8 +10676,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10716,8 +10716,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10744,8 +10744,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -10772,8 +10772,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10821,8 +10821,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 64,
@@ -10865,7 +10863,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -10924,8 +10924,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 29,
@@ -10945,7 +10943,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11020,8 +11020,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 80,
@@ -11041,7 +11039,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.7,
         "pulseAmount": 0.6
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11064,8 +11064,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11106,8 +11106,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11152,8 +11152,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11206,8 +11206,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 38,
@@ -11218,7 +11216,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.2
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11239,8 +11239,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11287,8 +11287,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11331,8 +11331,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11398,8 +11398,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11438,8 +11438,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11466,8 +11466,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11523,8 +11523,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11545,8 +11545,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11579,8 +11579,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -11651,14 +11651,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.56,
       "depthSeconds": 18,
       "depthDirection": "right",
-      "depthFocus": 0.7
+      "depthFocus": 0.7,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -11688,8 +11688,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11734,8 +11734,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 28,
@@ -11783,7 +11781,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "starburstIntensity": 0.2,
      "ghostIntensity": 0.3,
      "pulseAmount": 0.15
-    }
+    },
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11821,8 +11821,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 28,
@@ -11870,7 +11868,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "starburstIntensity": 0.2,
      "ghostIntensity": 0.3,
      "pulseAmount": 0.15
-    }
+    },
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11910,8 +11910,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11951,10 +11951,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.25,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11992,10 +11992,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.25,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -12033,10 +12033,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.45,
-    "shakeDuration": 0.25
+    "shakeDuration": 0.25,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -12076,10 +12076,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.25
+    "shakeDuration": 0.25,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -12119,10 +12119,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.25,
-    "shakeDuration": 0.5
+    "shakeDuration": 0.5,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12162,10 +12162,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.45,
-    "shakeDuration": 0.25
+    "shakeDuration": 0.25,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12205,10 +12205,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.25,
-    "shakeDuration": 0.5
+    "shakeDuration": 0.5,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12246,10 +12246,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12289,10 +12289,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/rain-tin-roof.mp3",
@@ -12332,8 +12332,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12371,8 +12371,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12410,8 +12410,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12449,8 +12449,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12488,8 +12488,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12527,8 +12527,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "dimAmount": 0.35,
     "lights": [
      {
@@ -12549,7 +12547,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 2.2,
       "pulseAmount": 0.12
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12589,8 +12589,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "dimAmount": 0.35,
     "lights": [
      {
@@ -12611,7 +12609,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 2.2,
       "pulseAmount": 0.12
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12651,8 +12651,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "dimAmount": 0.35,
     "lights": [
      {
@@ -12673,7 +12671,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 2.2,
       "pulseAmount": 0.12
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12714,10 +12714,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.35,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12755,8 +12755,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12796,8 +12796,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12835,8 +12835,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -12874,10 +12874,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.5,
-    "shakeDuration": 0.25
+    "shakeDuration": 0.25,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -12917,10 +12917,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.5,
-    "shakeDuration": 0.25
+    "shakeDuration": 0.25,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -12960,10 +12960,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "",
@@ -13003,10 +13003,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "",
@@ -13046,10 +13046,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "",
@@ -13087,10 +13087,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "",
@@ -13130,10 +13130,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.5,
-    "shakeDuration": 0.25
+    "shakeDuration": 0.25,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -13173,10 +13173,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -13214,10 +13214,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -13255,10 +13255,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.3,
-    "shakeDuration": 0.3
+    "shakeDuration": 0.3,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -13317,10 +13317,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.12,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13347,8 +13347,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13401,7 +13401,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "cinematic": {
     "rainOnLens": true,
-    "rainLensIntensity": 0.8
+    "rainLensIntensity": 0.8,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "musicMode": "none",
    "musicFadeSeconds": 3
@@ -13445,8 +13447,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13479,8 +13481,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -13521,8 +13523,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -13557,8 +13559,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -13645,8 +13647,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -13669,8 +13671,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13703,8 +13705,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13725,8 +13727,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13759,8 +13761,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13781,8 +13783,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13809,8 +13811,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13855,8 +13857,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -13978,8 +13980,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14018,8 +14020,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14070,8 +14072,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14110,8 +14112,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14150,8 +14152,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -14195,8 +14197,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14241,8 +14243,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14313,8 +14315,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14349,8 +14351,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14391,8 +14393,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -14405,10 +14407,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "noTypewriter": true,
    "autoNarrate": false,
    "choices": [],
-   "cinematic": {
-    "volumetricShafts": true,
-    "shaftsIntensity": 1.5
-   },
    "animaticReadPace": 0.75
   },
   {
@@ -14438,8 +14436,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14484,8 +14482,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14532,8 +14530,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -14583,8 +14581,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14655,8 +14653,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14683,8 +14681,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14711,8 +14709,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14739,8 +14737,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -14795,12 +14793,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
-      "depthSeconds": 16
+      "depthSeconds": 16,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14821,8 +14819,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14843,8 +14841,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14865,8 +14863,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14887,8 +14885,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14915,8 +14913,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -14949,8 +14947,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15015,8 +15013,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15067,8 +15065,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15113,8 +15111,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15179,8 +15177,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 36,
@@ -15209,7 +15205,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15242,8 +15240,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15282,8 +15280,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15328,8 +15326,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15356,8 +15354,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15390,7 +15388,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "cinematic": {
     "rainOnLens": true,
-    "rainLensIntensity": 0.6
+    "rainLensIntensity": 0.6,
+    "filmGrade": false,
+    "volumetricShafts": false
    }
   },
   {
@@ -15420,8 +15420,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15484,8 +15484,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15524,8 +15524,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 35,
@@ -15554,7 +15552,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 3.5,
         "pulseAmount": 0.3
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15621,8 +15621,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -15633,7 +15631,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.5,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15662,8 +15662,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15684,8 +15684,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15770,8 +15770,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15804,8 +15804,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 15,
@@ -15834,7 +15832,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 3,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15871,8 +15871,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15921,8 +15921,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -15969,8 +15969,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -15997,8 +15997,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -16079,8 +16079,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16113,8 +16113,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16141,8 +16141,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -16200,8 +16200,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16234,8 +16234,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16256,8 +16256,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16330,8 +16330,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16358,8 +16358,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16386,8 +16386,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 6,
@@ -16407,7 +16405,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16446,12 +16446,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s66/278-the-clock-reads-ten/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.32,
-      "depthSeconds": 14
+      "depthSeconds": 14,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -16507,8 +16507,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 59,
@@ -16532,7 +16530,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
-      "depthSeconds": 16
+      "depthSeconds": 16,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -16573,8 +16573,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16631,8 +16631,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16653,8 +16653,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16715,8 +16715,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -16739,8 +16739,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16779,8 +16779,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16819,8 +16819,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16858,11 +16858,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "cinematic": {
-    "volumetricShafts": true,
-    "shaftsIntensity": 1.5
-   }
+   "choices": []
   },
   {
    "id": "nw_s70",
@@ -16891,8 +16887,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16913,8 +16909,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -16960,8 +16956,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17006,8 +17002,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17036,10 +17032,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.3,
-      "shakeDuration": 0.3
+      "shakeDuration": 0.3,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17060,8 +17056,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17088,8 +17084,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17111,8 +17107,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17135,8 +17131,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17163,8 +17159,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17186,8 +17182,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17228,8 +17224,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17252,8 +17248,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17274,8 +17270,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17302,8 +17298,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17348,8 +17344,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17382,8 +17378,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17422,8 +17418,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17462,14 +17458,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s71/313-drawings-in-the-water/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.56,
       "depthSeconds": 18,
       "depthDirection": "left",
-      "depthFocus": 0.6
+      "depthFocus": 0.6,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17496,8 +17492,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17530,8 +17526,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17558,8 +17554,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17602,8 +17598,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17624,8 +17620,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 6.5,
@@ -17645,7 +17639,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 5,
         "pulseAmount": 0.15
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17678,8 +17674,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -17728,8 +17724,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17769,11 +17765,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "dollyZoomAmount": 1.18,
       "dollyZoomDuration": 6,
-      "dollyZoomDirection": "push"
+      "dollyZoomDirection": "push",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17884,10 +17880,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.2,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17908,8 +17904,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.15,
       "shakeDuration": 0.7,
       "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
@@ -17922,7 +17916,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMotion": "push",
       "depthAmount": 0.54,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -17955,10 +17951,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.25,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -18013,8 +18009,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -18037,10 +18033,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "shakeAmount": 0.3,
-      "shakeDuration": 0.7
+      "shakeDuration": 0.7,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -18083,8 +18079,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18135,8 +18131,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 7,
@@ -18172,7 +18166,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "truck",
       "depthAmount": 0.72,
       "depthSeconds": 16,
-      "depthDirection": "right"
+      "depthDirection": "right",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18235,8 +18231,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18275,8 +18271,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
       "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg",
       "depthCutouts": [
@@ -18287,7 +18281,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMotion": "push",
       "depthAmount": 0.72,
-      "depthSeconds": 14
+      "depthSeconds": 14,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18338,8 +18334,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18414,8 +18410,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18466,8 +18462,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 10,
@@ -18498,7 +18492,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMotion": "push",
       "depthAmount": 0.8,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18525,8 +18521,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18565,8 +18561,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -18627,8 +18623,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18649,14 +18645,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.48,
       "depthSeconds": 18,
       "depthDirection": "right",
-      "depthFocus": 0.5
+      "depthFocus": 0.5,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18677,8 +18673,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -18712,7 +18706,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "drift",
       "depthAmount": 0.22,
       "depthSeconds": 28,
-      "depthDirection": "left"
+      "depthDirection": "left",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18733,8 +18729,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 35,
@@ -18758,7 +18752,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.32,
-      "depthSeconds": 16
+      "depthSeconds": 16,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18779,8 +18775,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -18795,7 +18789,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.26,
-      "depthSeconds": 14
+      "depthSeconds": 14,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "glitch",
      "backgroundTransitionSpeed": 0.5,
@@ -18818,8 +18814,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 22,
@@ -18834,7 +18828,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.45,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18889,8 +18885,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18911,8 +18907,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -18923,7 +18917,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 4,
         "pulseAmount": 0.2
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -18976,8 +18972,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19006,8 +19002,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19054,8 +19050,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 31,
@@ -19075,7 +19069,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.5,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19117,8 +19113,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19155,8 +19151,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19206,8 +19202,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19228,8 +19224,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19258,8 +19254,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19286,8 +19282,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19334,8 +19330,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19368,11 +19364,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "dollyZoomAmount": 1.12,
       "dollyZoomDuration": 7,
-      "dollyZoomDirection": "push"
+      "dollyZoomDirection": "push",
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19411,8 +19407,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19440,8 +19436,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19488,8 +19484,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19510,8 +19506,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19552,8 +19548,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19593,8 +19589,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19659,8 +19655,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19687,8 +19683,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19739,8 +19735,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19767,8 +19763,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19807,8 +19803,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19829,8 +19825,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19871,8 +19867,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19893,8 +19889,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19917,8 +19913,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -19951,8 +19947,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -19995,8 +19991,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
       "depthPlate": "/film/depth/s82/104-the-newsroom/plate.jpg",
       "depthCutouts": [
@@ -20019,7 +20013,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       ],
       "depthMotion": "push",
       "depthAmount": 0.25,
-      "depthSeconds": 20
+      "depthSeconds": 20,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20058,8 +20054,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20080,8 +20076,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20102,8 +20098,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -20154,8 +20150,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -20208,8 +20204,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20242,8 +20238,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20276,8 +20272,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20324,8 +20320,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20358,8 +20354,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 40,
@@ -20370,7 +20364,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 1.2,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -20405,8 +20401,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20451,8 +20447,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20485,8 +20481,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20513,8 +20509,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -20555,8 +20551,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20595,8 +20591,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -20643,8 +20639,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20677,8 +20673,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20735,8 +20731,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20769,8 +20765,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20803,8 +20799,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20837,8 +20833,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -20879,8 +20875,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 57.5,
@@ -20891,7 +20885,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 4,
         "pulseAmount": 0.25
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20912,8 +20908,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20934,8 +20930,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -20980,8 +20976,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21032,8 +21028,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21090,8 +21086,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21118,8 +21114,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21152,8 +21148,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21186,8 +21182,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21226,8 +21222,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21278,8 +21274,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -21317,8 +21313,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 71,
@@ -21329,7 +21323,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 1.4,
         "pulseAmount": 0.9
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -21363,8 +21359,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 57.5,
@@ -21393,7 +21387,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 5,
       "pulseAmount": 0.1
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -21438,8 +21434,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -21479,8 +21475,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 32.5,
@@ -21491,7 +21485,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 4,
       "pulseAmount": 0.25
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21531,8 +21527,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21570,8 +21566,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21609,8 +21605,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21648,8 +21644,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21687,8 +21683,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -21726,8 +21722,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 63,
@@ -21765,7 +21759,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 3,
       "pulseAmount": 0.2
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -21805,8 +21801,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 12.5,
@@ -21817,7 +21811,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.5,
       "pulseAmount": 1
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -21857,8 +21853,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -21898,8 +21894,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 40,
@@ -21920,7 +21914,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "starburstIntensity": 0.2,
      "ghostIntensity": 0.3,
      "pulseAmount": 0.15
-    }
+    },
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -21958,10 +21954,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.1,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -22001,10 +21997,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -22042,8 +22038,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
@@ -22083,8 +22079,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 83,
@@ -22104,7 +22098,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 4,
       "pulseAmount": 0.25
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22142,8 +22138,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.12,
     "shakeDuration": 0.7,
     "lights": [
@@ -22156,7 +22150,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.7,
       "pulseAmount": 0.5
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22194,8 +22190,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.12,
     "shakeDuration": 0.7,
     "lights": [
@@ -22208,7 +22202,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 3,
       "pulseAmount": 0.1
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22248,8 +22244,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.15,
     "shakeDuration": 0.7,
     "lights": [
@@ -22277,7 +22271,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
     ],
     "depthMotion": "drift",
     "depthAmount": 0.16,
-    "depthSeconds": 26
+    "depthSeconds": 26,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22317,8 +22313,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 67,
@@ -22329,7 +22323,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.8,
       "pulseAmount": 0.5
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22367,10 +22363,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22410,10 +22406,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22453,10 +22449,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -22496,8 +22492,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
@@ -22537,8 +22533,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "shakeAmount": 0.35,
     "shakeDuration": 0.2,
     "lights": [
@@ -22551,7 +22545,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.5,
       "pulseAmount": 0.7
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
@@ -22591,14 +22587,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
     "depthMotion": "truck",
     "depthAmount": 0.56,
     "depthSeconds": 18,
     "depthDirection": "left",
-    "depthFocus": 0.55
+    "depthFocus": 0.55,
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
@@ -22636,8 +22632,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 31,
@@ -22666,7 +22660,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.75,
       "pulseAmount": 1
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -22706,8 +22702,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 31,
@@ -22736,7 +22730,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.75,
       "pulseAmount": 1
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -22774,8 +22770,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "neon-noir",
-    "filmGrade": true,
-    "filmGradeStrength": 0.3,
     "lights": [
      {
       "x": 31,
@@ -22804,7 +22798,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseSeconds": 0.75,
       "pulseAmount": 1
      }
-    ]
+    ],
+    "filmGrade": false,
+    "volumetricShafts": false
    },
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -22865,8 +22861,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -22917,8 +22913,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -22945,8 +22941,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -22987,8 +22983,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 50,
@@ -23026,7 +23020,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 8,
         "pulseAmount": 0.05
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23053,8 +23049,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 55,
@@ -23083,7 +23077,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 6,
         "pulseAmount": 0.1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23104,8 +23100,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23132,8 +23128,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -23176,8 +23172,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 53,
@@ -23201,7 +23195,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMap": "/film/depth/s95/142-taillights/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.48,
-      "depthSeconds": 16
+      "depthSeconds": 16,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -23250,8 +23246,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23272,8 +23268,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s96/144-empty/depth.png",
       "depthPlate": "/film/depth/s96/144-empty/plate.jpg",
       "depthCutouts": [
@@ -23286,7 +23280,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthAmount": 0.54,
       "depthSeconds": 16,
       "depthDirection": "right",
-      "depthFocus": 0.6
+      "depthFocus": 0.6,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -23315,8 +23311,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23343,8 +23339,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -23391,8 +23387,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23437,8 +23433,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23501,8 +23497,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23543,8 +23539,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23589,8 +23585,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23629,8 +23625,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23687,8 +23683,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23739,8 +23735,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23785,8 +23781,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23819,8 +23815,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23853,8 +23849,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -23909,8 +23905,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23939,8 +23935,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -23979,8 +23975,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24007,8 +24003,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24035,12 +24031,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s99a/305-the-plaza/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.32,
-      "depthSeconds": 18
+      "depthSeconds": 18,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24061,8 +24057,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24083,12 +24079,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "nolan-imax",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "depthMap": "/film/depth/s99a/307-the-gardener/depth.png",
       "depthMotion": "push",
       "depthAmount": 0.35,
-      "depthSeconds": 24
+      "depthSeconds": 24,
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -24149,8 +24145,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3,
       "lights": [
        {
         "x": 32,
@@ -24170,7 +24164,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseSeconds": 0.5,
         "pulseAmount": 1
        }
-      ]
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24203,8 +24199,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24231,8 +24227,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24253,8 +24249,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
@@ -24287,8 +24283,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
+      "filmGrade": false,
+      "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
@@ -24535,5 +24531,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "noTypewriter": true,
    "autoNarrate": false
   }
- ]
+ ],
+ "builtinRevision": "68a3225b0fa8"
 } as unknown as Story;
