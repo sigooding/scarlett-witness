@@ -13712,7 +13712,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b887",
      "characterId": "nw_vera",
-     "text": "What?",
+     "text": "What is it?",
      "audioUrl": "/film/voice/s53/221-vera-what.mp3"
     },
     {
@@ -13762,7 +13762,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b890",
      "characterId": "nw_vera",
-     "text": "Jack. What?",
+     "text": "Jack. What!",
      "audioUrl": "/film/voice/s53/221-vera-jack-what.mp3"
     },
     {
