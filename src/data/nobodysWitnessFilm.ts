@@ -11493,7 +11493,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s37",
    "title": "37 — The keys are always in it",
-   "background": "/film/img/s37/460-parked-crooked.jpg",
+   "background": "/film/img/s37/209-the-keys-are-always-in-it.jpg",
    "prose": "INT. ROADSIDE INN, KITCHEN DOORWAY - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
@@ -11511,7 +11511,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b776",
      "characterId": "nw_narrator",
      "text": "The kitchen's back door stands open to the rain. Mrs. Noda sits on the step outside under the eave, smoking.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s37/209-the-keys-are-always-in-it.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 21,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b777",
@@ -11563,23 +11579,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b782",
      "characterId": "nw_mrs_noda",
      "text": "Sorry about the truck. He parks it like he's drunk. He's never drunk. The keys are always in it. Who would steal that?",
-     "audioUrl": "/film/voice/s37/211-mrsnoda-sorry-about-the-truck-he-parks.mp3",
-     "background": "/film/img/s37/209-the-keys-are-always-in-it.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": true,
-      "filmGradeStrength": 0.3
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "audioUrl": "/film/voice/s37/211-mrsnoda-sorry-about-the-truck-he-parks.mp3"
     },
     {
      "id": "nw_b783",
@@ -13485,7 +13485,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s52",
    "title": "52 — She pulls him in",
-   "background": "/film/img/s52/218-she-pulls-him-in.jpg",
+   "background": "/film/img/s52/541-a-knock-at-the-door.jpg",
    "prose": "INT. VERA'S APARTMENT - DAWN",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
@@ -13498,6 +13498,22 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "A knock at the door. Vera opens it in a sweater, barely awake.",
      "silent": true,
+     "background": "/film/img/s52/541-a-knock-at-the-door.jpg",
+     "cinematic": {
+      "mode": "dolly",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 19,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/door-knock-wood.mp3",
      "sfxVolume": 0.7
     },
@@ -24423,13 +24439,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "cardMotion": "fade",
     "montage": [
      "/film/img/s1/01-backstreet.jpg",
-     "/film/img/s3/30-the-elevated-line.jpg",
-     "/film/img/s6/60-the-crushed-cup.jpg",
-     "/film/img/s11/249-the-line.jpg",
-     "/film/img/s15/185-then-he-goes-in.jpg",
-     "/film/img/s22/440-she-rests-her-head.jpg",
-     "/film/img/s27a/373-okada-polishes-the-glass.jpg",
-     "/film/img/s41/178-the-screens.jpg",
+     "/film/img/s3/31-the-lit-window.jpg",
+     "/film/img/s6/408-a-matter-between-criminal-groups.jpg",
+     "/film/img/s11/375-he-sets-the-receiver-down.jpg",
+     "/film/img/s16/433-barely-shoulder-wide.jpg",
+     "/film/img/s22/196-back-from-the-edge.jpg",
+     "/film/img/s27a/455-she-was-fifteen.jpg",
+     "/film/img/s41/179-same-wood.jpg",
      "/film/img/s56/223-the-third-stool.jpg",
      "/film/img/s65/232-the-wine-red-dress.jpg",
      "/film/img/s71/407-the-bulbs-swing.jpg",
@@ -24455,16 +24471,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "panDistance": 2,
       "zoomDuration": 16
      },
-     "/film/img/s3/30-the-elevated-line.jpg": {
-      "mode": "pan",
-      "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
+     "/film/img/s3/31-the-lit-window.jpg": {
+      "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
       "depthMotion": "truck",
       "depthAmount": 0.56,
-      "depthSeconds": 18,
+      "depthSeconds": 16,
       "depthDirection": "left",
-      "depthFocus": 0.5,
-      "panDistance": 2,
-      "zoomDuration": 18
+      "lights": [
+       {
+        "x": 50,
+        "y": 47,
+        "color": "#ffc56b",
+        "size": 12,
+        "intensity": 0.45,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.15
+       }
+      ]
      },
      "/film/img/s91/134-the-walkway-is-empty.jpg": {
       "mode": "pan",
