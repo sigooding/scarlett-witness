@@ -400,7 +400,8 @@ for (const seg of edits.soundtracks ?? []) {
   let cur = null, rest = null;
   const open = (bg, node) => { cur = bg; shots.push({ bg, look: looks(node), lines: [] }); };
   scan: for (const node of block) {
-    if (node.background !== cur) open(node.background, node);
+    // the node a song run leaves behind (`…_after`) carries the picture the run ended on; when the next run starts on it, its first beat's own picture opens the shot
+    if (node.background !== cur && !(node.id.endsWith("_after") && node.dialogueBeats?.[0]?.background)) open(node.background, node);
     const beats = node.dialogueBeats ?? [];
     for (let i = 0; i < beats.length; i++) {
       const beat = beats[i];

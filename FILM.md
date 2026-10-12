@@ -143,7 +143,7 @@ The engine loops a scene's music until another cue changes or silences it; that 
 
 **Narration.** Every scene has `autoNarrate: false` (Studio → Audio → "Auto-play prose voice on first scene entry" off), set in the generator, so the browser voice never reads the scene prose; the recorded takes still play.
 
-**Scene 78.** The "midnight in the rain" cue is removed (the scene is music-off, 4 s fade); the opening-scene score `midnight-in-the-rain-v6.mp3` is a different file and stays.
+**Scene 78.** The "midnight in the rain" cue was removed (the scene was music-off, 4 s fade) and **since 12 October 2026 the midnight song carries scenes 77's second half to 79 again** (see "Two songs carry the night", under Soundtracks); the opening-scene score `midnight-in-the-rain-v6.mp3` is a different file and stays.
 
 **Text and theme (7 October 2026, later).** Every scene has `noTypewriter: true` (the words appear at once; the recorded voice sets the pace). The reading panel uses the in-game theme options through `dialogueBox` in `studio-edits.json`: Playfair Display (`elegant`) for body and headings, the `midnight-teal` HUD scheme (it sits with the cool slate grade of the pictures), text 10% larger, no panel box (the default gradient scrim under the text). Change those in Studio (In-game theme) or in the file.
 **Ambient loops (7 October 2026, later).** Ten looping beds generated with ElevenLabs sound effects (24 s, `loop`, levelled to about -30 dB mean) in `public/film/sfx/loop-*.mp3`, placed through `ambientAdd`: Yamanote carriage (26), police station (5, 6, 7, 80, 96), newsroom (53A, 82, 82A), noodle counter (17, 19, 22, 56, 58, 86, 100), hotel lounge (66, 72), roadside at night (30, 31, 38, 47, 49), harbour (28), rooftop wind (98), yakitori grill (23), idling car in rain (61, 94; 61 no longer layers the tin-roof rain). Ambient files play at a fixed gain, so level a loop in the file itself.
@@ -172,6 +172,19 @@ The engine loops a scene's music until another cue changes or silences it; that 
 * **Vera's line** in the kitchen scene (86) is "They don't know me." (was "I know them."), a new take; the change is in PlayFrame's screenplay and `docs/neonoire/voice/manifest.json` first.
 
 Fields: `from`, `to` (node ids, parts included), `stopBefore` (the text of the first beat that is left to the ordinary scene), `musicUrl`, `seconds`, `fadeIn`, `fadeOut`, `slack`, `endHold`, `captionSeconds`, `lag`, `captions`, `cues`. `node tools/build-film-story.mjs` applies it after the Studio edits; the original scenes stay in `src/film/story.json`. Deep link: `?story=nobodys-witness-film&scene=nw_song_raid_01`.
+
+### Two songs carry the night (12 October 2026)
+
+*"the whole scene needs to be timed to the playing song up until end of jack sitting in office and then jacks office plays the midnight song up until the end of her reading notebook scene."* Two more `"soundtracks"` entries, in order (the second starts on the node the first leaves behind):
+
+* **`bad-guy`**, "Bad Guy" (`public/film/audio/bad-guy.mp3`, 4:28.27), from `nw_s72_b` (the continuation node that starts the song in the hotel lounge, "Vera doesn't move. The piano plays on.") through scenes 73 to 77, `stopBefore: "He opens the drawer."`: the run ends when Jack has sat down at his desk with the notebook and Vera's voice in his head. 33 timed nodes over 29 shots (22 captioned, 7 with 11 recorded lines). It is planned to 265 s of the song's 268 s because the voiced shots run a few seconds past the plan: **measured in headless Chromium, the midnight song takes over 263.3 s into Bad Guy**, so the last five seconds of Bad Guy fade under it.
+* **`midnight`**, "Midnight in the Rain" (`midnight-in-the-rain.mp3`, 3:02.74), from `nw_s77_after` (the rest of Jack's office: the clean envelope, the pen that writes nothing) through 78 (the envelope on the mat) and 79 (Vera reading the notebook) to the end of 79, then it fades out into the detectives' room. 16 timed nodes over 14 shots (10 captioned, 4 with 6 lines); **measured, the run hands on to the detectives' room 179.5 s into its 182.7 s song**, which fades out over the first 3 s of scene 80. The scene 78 music-off edit is gone: the run replaces the scene.
+
+Both run hands-off like the raid: every shot is its own node with a one-line caption (`captions`), the recorded lines keep their takes and subtitles, and effects are `cues` per picture (one each: the heels, the crossing melody, the shoe splash, the train, the lighter, the drawer, the envelope on the mat). The narration under the pictures is left out. **The silent shots hold about 10 s each** (9.9 s in the first run, 10.5 s in the second), because the songs are long and the pictures few: scene 73 has eight pictures for a minute of song. More pictures in scene 73 (PlayFrame's queued frames, `docs/neonoire/passes/vera-run-queued-2026-10-12.md` there) shorten those holds.
+
+Builder change: a node a run leaves behind (`…_after`) no longer reopens the picture the earlier run ended on when its first beat has a picture of its own (otherwise the midnight run would have started on Bad Guy's last shot). Deep links: `?story=nobodys-witness-film&scene=nw_song_bad-guy_01` and `…&scene=nw_song_midnight_01`. `scripts/film-backend.entry.ts` check 16 holds both runs (each song starts once, the runs hand on to each other and to scene 80, scenes 73–79 are inside them, no silent shot under 2.5 s).
+
+**Scene 73 (12 October 2026):** three pictures were added in PlayFrame (547 the phone still lit, 548 the vending machine, 549 the crossing signal); 388's beat is now the second half of its sentence.
 
 ## Scene effects, TV and radio voices, picture effects (9 October 2026)
 

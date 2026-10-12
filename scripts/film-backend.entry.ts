@@ -235,4 +235,22 @@ eq(looks.filter((c) => c.filmGrade).length, 0, "none has the 35mm film grade on"
 eq(looks.filter((c) => c.volumetricShafts !== false).length, 0, "every one has the volumetric shafts switched off");
 eq(Object.keys(edits.scenes).filter((k) => JSON.stringify(edits.scenes[k]).includes("volumetricShafts\": true")), [], "and no Studio edit switches them back on");
 
+/* ---- 16. Bad Guy carries the night to the moment Jack sits at his desk, then Midnight in the Rain to the end of the notebook (12 October 2026) ---- */
+console.log("Two songs carry the night: Bad Guy, then Midnight in the Rain");
+const runOf = (id: string) => FILM.scenes.filter((s) => s.id.startsWith(`nw_song_${id}_`));
+const badGuy = runOf("bad-guy"), midnightRun = runOf("midnight");
+check(badGuy.length > 20 && midnightRun.length > 10, `Bad Guy's run has ${badGuy.length} timed nodes and the midnight run ${midnightRun.length}`);
+eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/bad-guy.mp3").map((s) => s.id), [badGuy[0].id], "Bad Guy is started once, on its run's first node (it never restarts)");
+eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp3").map((s) => s.id), [midnightRun[0].id], "and the midnight song is started once, on its run's first node");
+check(badGuy[0].musicLoop === false && midnightRun[0].musicLoop === false, "both play once");
+eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, midnightRun[0].id, "Bad Guy's run hands on to the midnight run");
+eq(midnightRun.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s80", "and the midnight run ends where the notebook scene did, on the detectives' room");
+eq(FILM.scenes.filter((s) => /^nw_s7[3-9]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 79 play inside the two runs (nothing of them is left to click through)");
+eq(FILM.scenes.filter((s) => s.id.startsWith("nw_song_bad-guy_") || s.id.startsWith("nw_song_midnight_")).filter((s) => !s.hideHud).map((s) => s.id), [], "every node of both runs is a cutscene node (no HUD; the builder takes the bars off every node last)");
+const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).filter((b) => b.silent).map((b) => b.afterBeatDelaySeconds ?? 0);
+check(Math.min(...heldFor(badGuy), ...heldFor(midnightRun)) >= 2.5, "no silent shot of either run is shorter than 2.5 s");
+const songSeconds = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).reduce((n, b) => n + (b.afterBeatDelaySeconds ?? 0), 0);
+check(songSeconds(badGuy) > 150 && songSeconds(badGuy) < 268.27, `Bad Guy's run is timed to fit its 268 s (${songSeconds(badGuy).toFixed(0)} s of delays plus the voices' own lengths)`);
+check(songSeconds(midnightRun) > 100 && songSeconds(midnightRun) < 182.74, `and the midnight run its 183 s (${songSeconds(midnightRun).toFixed(0)} s of delays plus the voices' own lengths)`);
+
 console.log(`\nfilm backend: ${checks} checks passed`);
