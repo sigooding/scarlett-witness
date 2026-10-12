@@ -137,4 +137,14 @@ check(/looks\?\.\[img\]/.test(read("src/game/Game.tsx")), "montageLooks are look
 check(/sfxUrl/.test(read("src/game/Game.tsx")) && /audio\.playSfx\(currentBeat\.sfxUrl/.test(read("src/game/Game.tsx")), "a beat's sfxUrl is played when the beat starts");
 check(!/particleConfig/.test(read("tools/build-film-story.mjs").replace(/const LOOK = [^\n]+/g, "")), "the film builder no longer sets a particleConfig the engine ignored (the film keeps the look it was approved with)");
 
+/* ---- 7. the film's music cues point at real files, and scene 4's radio stops with the scene ---- */
+console.log("The film's music cues point at real files");
+const tracks = FILM.scenes.filter((s) => s.musicMode === "track" && s.musicUrl);
+const missingTracks = [...new Set(tracks.map((s) => s.musicUrl as string))].filter((u) => !existsSync(join(ROOT, "public", u.replace(/^\/film\//, "film/"))));
+eq(missingTracks, [], `all ${new Set(tracks.map((s) => s.musicUrl)).size} soundtrack files exist`);
+const at = (id: string) => FILM.scenes.find((s) => s.id === id);
+check(at("nw_s4")?.musicUrl === "/film/audio/it-aint-easy-wall.mp3" && (at("nw_s4")?.musicLevel ?? 1) <= 0.5, "scene 4: the neighbour's radio plays quietly through the wall");
+check(at("nw_s4")?.musicLoop === false, "and plays once");
+check(at("nw_s5")?.musicMode === "none", "scene 5 ends it (the door has closed on the song)");
+
 console.log(`\nfilm backend: ${checks} checks passed`);

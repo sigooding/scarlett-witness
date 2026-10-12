@@ -2783,7 +2783,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/it-aint-easy-wall.mp3",
+   "musicFadeSeconds": 4,
+   "musicLevel": 0.4,
+   "musicLoop": false
   },
   {
    "id": "nw_s5",
@@ -3057,7 +3062,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicMode": "none",
+   "musicFadeSeconds": 3
   },
   {
    "id": "nw_s6",

@@ -185,6 +185,17 @@
     },
     "nw_s8": {
       "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3"
+    },
+    "nw_s4": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/it-aint-easy-wall.mp3",
+      "musicFadeSeconds": 4,
+      "musicLevel": 0.4,
+      "musicLoop": false
+    },
+    "nw_s5": {
+      "musicMode": "none",
+      "musicFadeSeconds": 3
     }
   },
   "startSceneId": "nw_s1",

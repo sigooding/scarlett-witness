@@ -1,6 +1,6 @@
 # The film and the Studio (12 October 2026)
 
-Nobody's Witness is a compiled Story like any other. Everything it uses can be made from the Studio, with these exceptions: the cutscene and soundtrack timing fit, and the cut-out depth layers, live in `src/film/studio-edits.json` and `tools/`. `npm run test:film-backend` (32 checks) and `npm run test:film-backend:browser` (the Studio, an export and the player, about a minute) guard the rest.
+Nobody's Witness is a compiled Story like any other. Everything it uses can be made from the Studio, with these exceptions: the cutscene and soundtrack timing fit, and the cut-out depth layers, live in `src/film/studio-edits.json` and `tools/`. `npm run test:film-backend` (36 checks) and `npm run test:film-backend:browser` (the Studio, an export and the player, about a minute) guard the rest.
 
 ## What the film uses
 
