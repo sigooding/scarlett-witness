@@ -59,6 +59,20 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
   shot overlayed", in the game and in the animatic alike.
 * **Depth fog** ("thicker at back") is off unless a scene ticks it.
 
+## The scene's own picture no longer flickers between shots (12 October 2026)
+
+* **Cause.** `BeatBackground` mounted a shot's picture as a CSS `background-image` the moment its beat began. The image
+  loads asynchronously, so on a slow connection (or the first time through a scene) the new layer was transparent while
+  the outgoing one was pruned after about a second, and the scene's own plate underneath showed through: the "main
+  background flickering over the beat images". The existing preloader only warms the next beat and stands down on
+  slow connections, which is exactly when pictures arrive late.
+* **Fix** (`src/game/preloadPicture.ts`, `BeatBackground`): a beat's picture is mounted only once it has decoded
+  (`pictureReady`, else `preloadPicture`, with a six-second timeout so a missing file cannot hold the film), so the
+  outgoing shot stays solid until the next one is really there. The next five beats' pictures, and the next scene's
+  first two, are warmed ahead (respecting the data-saver / 2g stand-down).
+* **Test:** `scripts/browser/film-backend.spec.ts` plays the film under 1.5 s of emulated latency and records every
+  `[data-beat-bg]` layer as it is added; none may be added before its picture is complete. It fails on the old code.
+
 ## The radio song, the credits, no saxophones, the animatic export (10 October 2026)
 
 * **Scene 65:** the director's song *It ain't easy* is the neighbour's radio through Vera's wall, as an AM radio: `it-aint-easy-radio.mp3` is the upload (`public/film/audio/It ain't easy.mp3`, untouched) through mono, 280–3,200 Hz, light compression and faint hiss, loudness-matched to the song it replaced on 11 October 2026 (`soundtrack_nobodys_witness.mp3`). It starts on "the neighbour's radio begins to play" (the scene splits there into `nw_s65_b`, which also keeps the room tone and the window rain), plays once at 0.48 (0.6 before 11 October) under the rest of the scene (the make-up, the umbrella, "Borrowing it."), and fades over 4 s as the hotel lounge (66) begins. Cue `radio` in `tools/build-film-story.mjs`; the visual novel's importer puts it in `src/film/story.json`.

@@ -82,6 +82,7 @@ import {
   writeSaveFile,
 } from "./saveFiles";
 import { assetBackground, assetUrl } from "../assetPath";
+import { pictureReady, preloadPicture } from "./preloadPicture";
 import { mediaPreloader, shouldPreloadMedia } from "../mediaPreload";
 import { nextSceneMediaPlan } from "./scenePreload";
 import { interruptibleNow, showsCountdownRing, silenceOutcome, TIMER_STYLE, timerFlavour } from "./conversationTimer";
@@ -2128,16 +2129,30 @@ function BeatBackground({
     const bg = beat?.background;
     if (bg) {
       if (activeBgRef.current === bg) return; // same image already showing
-      setLayers((prev) => {
-        if (transitionName === "cut") {
-          return [{ key: beat.id, background: bg, cinematic: beat.cinematic, exiting: false }];
-        }
-        return [
-          ...prev.map((l) => ({ ...l, exiting: true })),
-          { key: beat.id, background: bg, cinematic: beat.cinematic, exiting: false },
-        ];
-      });
-      activeBgRef.current = bg;
+      let cancelled = false;
+      const beatId = beat.id;
+      const cinematic = beat.cinematic;
+      // The new picture is mounted only once it is decoded; until then the one before it stays up (a late picture used to leave the
+      // scene's own plate showing through: preloadPicture.ts).
+      const mount = () => {
+        if (cancelled) return;
+        setLayers((prev) => {
+          if (transitionName === "cut") {
+            return [{ key: beatId, background: bg, cinematic, exiting: false }];
+          }
+          return [
+            ...prev.map((l) => ({ ...l, exiting: true })),
+            { key: beatId, background: bg, cinematic, exiting: false },
+          ];
+        });
+        activeBgRef.current = bg;
+      };
+      const url = assetBackground(bg);
+      if (pictureReady(url)) mount();
+      else void preloadPicture(url).then(mount);
+      return () => {
+        cancelled = true;
+      };
     } else if (activeBgRef.current !== null) {
       // No replacement image: fade out whatever is showing (reveal scene bg).
       setLayers((prev) => prev.map((l) => ({ ...l, exiting: true })));
@@ -2169,6 +2184,7 @@ function BeatBackground({
         return (
           <div
             key={l.key}
+            data-beat-bg={l.background}
             className={`absolute inset-0 z-[2] ${animClass}`}
             style={{ "--beatbg-speed": `${speed}s` } as React.CSSProperties}
           >
@@ -4492,6 +4508,20 @@ function CasePlayer({
     }
     return held;
   }, [inBeats, beatIdx, visibleBeats]);
+  // Fetch and decode the pictures the next few beats (and the node this one leads on to) will show, while the player reads, so a
+  // picture is ready when its beat begins (preloadPicture.ts).
+  useEffect(() => {
+    if (!scene || !shouldPreloadMedia()) return;   // a data-saving or very slow connection is left alone, as for the next-room lookahead
+    const urls: string[] = [];
+    for (const b of visibleBeats.slice(beatIdx, beatIdx + 5)) if (b.background) urls.push(assetBackground(b.background));
+    const next = scene.autoAdvanceTargetSceneId ? story.scenes.find((c) => c.id === scene.autoAdvanceTargetSceneId) : undefined;
+    if (next) {
+      if (next.background) urls.push(assetBackground(next.background));
+      const first = next.dialogueBeats?.find((b) => b.background);
+      if (first?.background) urls.push(assetBackground(first.background));
+    }
+    for (const url of urls) void preloadPicture(url);
+  }, [scene, beatIdx, visibleBeats, story]);
   // Effective text with memory recall substitution — an NPC echoing what you
   // said, not just a flag-gated generic line.
   const currentBeatText = currentBeat

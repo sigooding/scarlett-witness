@@ -133,3 +133,40 @@ test("the Studio asks before it bundles the whole film, and a cancelled export c
   await expect(page.getByRole("dialog", { name: "Export reel", exact: true })).toBeHidden();
   await expect(page.getByRole("textbox", { name: "Story title", exact: true })).toHaveValue(/Nobody's Witness/);
 });
+
+test("a beat's picture is on screen only once it has loaded, so the scene's own picture never shows through", async ({ page }) => {
+  test.setTimeout(120_000);
+  // Scene 53 of the film, played with every picture taking 1.5 s to arrive (a first visit over a slow connection: the browser then
+  // reports 2g and the player's own lookahead stands down). The old
+  // player mounted a beat's picture as the beat began and dropped the one before it a second later, so a late picture left the
+  // scene's own plate (the first shot) showing through: the "main background flickering over the beat images".
+  await page.goto("./?story=nobodys-witness-film&scene=nw_s53&seed=flicker");
+  await page.waitForTimeout(2500);
+  await page.evaluate(() => {
+    const seen: { url: string; complete: boolean }[] = [];
+    (window as unknown as { __beatLayers: typeof seen }).__beatLayers = seen;
+    new MutationObserver((records) => {
+      for (const record of records) {
+        for (const node of record.addedNodes) {
+          const el = node as HTMLElement;
+          const layers = el.matches?.("[data-beat-bg]") ? [el] : [...(el.querySelectorAll?.("[data-beat-bg]") ?? [])];
+          for (const layer of layers) {
+            const url = layer.getAttribute("data-beat-bg")!;
+            const img = new Image();
+            img.src = new URL(url, location.href).href;
+            // an image the browser already has decoded is complete the moment it is asked for
+            seen.push({ url, complete: img.complete });
+          }
+        }
+      }
+    }).observe(document.body, { childList: true, subtree: true });
+  });
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send("Network.enable");
+  await cdp.send("Network.emulateNetworkConditions", { offline: false, latency: 1500, downloadThroughput: -1, uploadThroughput: -1 });
+  for (let i = 0; i < 16; i++) { await page.keyboard.press("Space"); await page.waitForTimeout(1700); }
+  const seen: { url: string; complete: boolean }[] = await page.evaluate(() => (window as unknown as { __beatLayers: { url: string; complete: boolean }[] }).__beatLayers);
+  expect(seen.length, "several beat pictures were shown").toBeGreaterThan(3);
+  expect(seen.filter((s) => !s.complete).map((s) => s.url), "no beat picture was mounted before it had loaded").toEqual([]);
+});
+
