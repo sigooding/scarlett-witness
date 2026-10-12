@@ -235,25 +235,32 @@ eq(looks.filter((c) => c.filmGrade).length, 0, "none has the 35mm film grade on"
 eq(looks.filter((c) => c.volumetricShafts !== false).length, 0, "every one has the volumetric shafts switched off");
 eq(Object.keys(edits.scenes).filter((k) => JSON.stringify(edits.scenes[k]).includes("volumetricShafts\": true")), [], "and no Studio edit switches them back on");
 
-/* ---- 16. Bad Guy carries the night to the moment Jack sits at his desk, then Midnight in the Rain to the end of the notebook (12 October 2026) ---- */
-console.log("Two songs carry the night: Bad Guy, then Midnight in the Rain");
+/* ---- 16. Bad Guy carries the night to the moment Jack sits at his desk (12 October 2026); the midnight song is out (13 October); Baby Fool plays through the newsroom ---- */
+console.log("Bad Guy carries the night, the midnight song is out, Baby Fool plays through scene 82");
 const runOf = (id: string) => FILM.scenes.filter((s) => s.id.startsWith(`nw_song_${id}_`));
-const badGuy = runOf("bad-guy"), midnightRun = runOf("midnight");
-check(badGuy.length > 20 && midnightRun.length > 10, `Bad Guy's run has ${badGuy.length} timed nodes and the midnight run ${midnightRun.length}`);
+const badGuy = runOf("bad-guy");
+check(badGuy.length > 20, `Bad Guy's run has ${badGuy.length} timed nodes`);
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/bad-guy.mp3").map((s) => s.id), [badGuy[0].id], "Bad Guy is started once, on its run's first node (it never restarts)");
-eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp3").map((s) => s.id), [midnightRun[0].id], "and the midnight song is started once, on its run's first node");
-check(badGuy[0].musicLoop === false && midnightRun[0].musicLoop === false, "both play once");
-eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, midnightRun[0].id, "Bad Guy's run hands on to the midnight run");
-eq(midnightRun.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s80", "and the midnight run ends where the notebook scene did, on the detectives' room");
-eq(FILM.scenes.filter((s) => /^nw_s7[3-9]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 79 play inside the two runs (nothing of them is left to click through)");
-eq(FILM.scenes.filter((s) => s.id.startsWith("nw_song_bad-guy_") || s.id.startsWith("nw_song_midnight_")).filter((s) => !s.hideHud).map((s) => s.id), [], "every node of both runs is a cutscene node (no HUD; the builder takes the bars off every node last)");
+check(badGuy[0].musicLoop === false, "and plays once");
+eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s77_after", "the run hands on to the rest of Jack's office (the clean envelope, the pen), an ordinary click-through node");
+eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, "none", "which fades the song out");
+eq(runOf("midnight").map((s) => s.id), [], "the midnight song's run is gone");
+eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp3").map((s) => s.id), [], "and nothing in the film starts the midnight song");
+eq(["nw_s78", "nw_s79"].map((id) => FILM.scenes.find((s) => s.id === id)?.musicMode), ["none", undefined], "scene 78 is music-off again and scene 79 plays on the silence");
+eq(FILM.scenes.filter((s) => /^nw_s7[3-6]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 76 play inside the Bad Guy run (nothing of them is left to click through)");
+eq(badGuy.filter((s) => !s.hideHud).map((s) => s.id), [], "every node of the run is a cutscene node (no HUD; the builder takes the bars off every node last)");
 // the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels, on the same picture
 const heels = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/heels-running-wet.mp3");
 check(heels >= 0 && badGuy[heels + 1]?.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3" && badGuy[heels + 1]?.background === badGuy[heels]?.background, "the car-pass effect plays right after the heels, on the same picture (a shot can be cut into several parts, each with its own sound)");
 const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).filter((b) => b.silent).map((b) => b.afterBeatDelaySeconds ?? 0);
-check(Math.min(...heldFor(badGuy), ...heldFor(midnightRun)) >= 2.5, "no silent shot of either run is shorter than 2.5 s");
+check(Math.min(...heldFor(badGuy)) >= 2.5, "no silent shot of the run is shorter than 2.5 s");
 const songSeconds = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).reduce((n, b) => n + (b.afterBeatDelaySeconds ?? 0), 0);
 check(songSeconds(badGuy) > 150 && songSeconds(badGuy) < 268.27, `Bad Guy's run is timed to fit its 268 s (${songSeconds(badGuy).toFixed(0)} s of delays plus the voices' own lengths)`);
-check(songSeconds(midnightRun) > 100 && songSeconds(midnightRun) < 182.74, `and the midnight run its 183 s (${songSeconds(midnightRun).toFixed(0)} s of delays plus the voices' own lengths)`);
+// "Baby Fool" (the director's song) plays once through the newsroom scene, from Jack's walk in, and scene 82A stops it
+const newsroom = FILM.scenes.find((s) => s.id === "nw_s82");
+check(newsroom?.musicMode === "track" && newsroom?.musicUrl === "/film/audio/baby-fool.mp3" && newsroom?.musicLoop === false, "Baby Fool starts on the newsroom scene's first node and plays once");
+eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/baby-fool.mp3").map((s) => s.id), ["nw_s82"], "and nothing else starts it");
+eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "none", "the notebook's photocopying (82A) fades it out");
+check(existsSync(join(ROOT, "public/film/audio/baby-fool.mp3")), "the song is on disk");
 
 console.log(`\nfilm backend: ${checks} checks passed`);

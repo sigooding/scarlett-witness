@@ -173,6 +173,11 @@
     "nw_s5": {
       "musicMode": "none",
       "musicFadeSeconds": 3
+    },
+    "nw_s78": {
+      "musicMode": "none",
+      "musicUrl": null,
+      "musicFadeSeconds": 4
     }
   },
   "startSceneId": "nw_s1",
@@ -1510,46 +1515,7 @@
           }
         ]
       },
-      "note": "The song is 268.27 s; the run is planned to 265 s because its voiced shots run about 6 s longer than the plan (measured 12 October 2026: the handoff to the midnight song came at 268.7 s on the 268.27 s plan), so the midnight song fades in over the last seconds of this one."
-    },
-    {
-      "id": "midnight",
-      "title": "The envelope and the notebook",
-      "musicUrl": "/audio/midnight-in-the-rain.mp3",
-      "seconds": 182.74,
-      "from": "nw_s77_after",
-      "to": "nw_s79",
-      "musicLevel": 0.9,
-      "fadeIn": 3,
-      "fadeOut": 3,
-      "slack": 2,
-      "endHold": 2.5,
-      "captions": {
-        "86-the-clean-envelope": "He opens the drawer. A clean envelope. Sakai's letter folded inside the notebook's cover.",
-        "87-he-writes-nothing": "He holds a pen over the envelope for a long time. He writes nothing.",
-        "88-the-walkway": "Grey light. The third-floor walkway. Rain dripping from the railing.",
-        "316-squared-to-the-door": "He sets the envelope on the mat, squares it to the door, and goes.",
-        "89-no-name": "On the doormat: a plain envelope. No name.",
-        "90-daniel-voss": "She sees the name inside the cover, and her whole body goes still.",
-        "91-grey-light": "Vera sits at the low table in the dawn light, the two cups beside her.",
-        "286-smoothed-flat": "The letter she threw away, smoothed flat by someone else's hands.",
-        "507-her-hand-goes-to-her-mouth": "Her hand goes to her mouth.",
-        "93-against-her-chest": "She sits in the grey light, the notebook held against her chest."
-      },
-      "cues": {
-        "86-the-clean-envelope": [
-          {
-            "file": "drawer-open",
-            "volume": 0.6
-          }
-        ],
-        "316-squared-to-the-door": [
-          {
-            "file": "envelope-mat",
-            "volume": 0.5
-          }
-        ]
-      }
+      "note": "The song is 268.27 s; the run is planned to 265 s because its voiced shots run a few seconds past the plan (measured 12 October 2026: the run ends 263.3 s into the song). The rest of Jack's office (the clean envelope, the pen) follows as an ordinary click-through node that fades the song out; the scenes after it are music-off (the midnight song was taken out again on 13 October 2026)."
     }
   ],
   "pictureCaptions": {
