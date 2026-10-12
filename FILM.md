@@ -23,6 +23,13 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
   * 177 and 179 get a running shake; 178 keeps its gunfire shake.
   * 179 was one of the fourteen depth shots on the director's own maps (below). Its map, plate and cut-out were made from the old picture, with Jack walking, so they no longer fit. The shot now plays the running shake instead. The files stay in `public/film/depth/s41/179-same-wood/` unused; a new map would have to be made from the new picture.
 
+## The closed bar, Jack's office, three effects removed (12 October 2026)
+
+* **Scene 8 (the closed bar):** it played `amb-bar.mp3`, a crowd of customers (about -20 dB). It is now a room tone and rain on the window (`amb-room-tone`, `loop-window-rain`; `nw_s8` in `studio-edits.json`). Scenes 2, 27A, 64 and 81 keep the customers.
+* **Jack's office (10, 11, 18, 21, 77):** `loop-neon-office` is off. Measured, it had about 7 clicks a second (a crackling neon buzz); `amb-office` alone is left. The file stays in `public/film/sfx/`, unused.
+* **Removed effects:** the breath on "Vera stops breathing." (9, `vera-gasp`) and `landline-dead` on "The line goes dead." (11) and "The line clicks dead." (18): it was button presses. The clips stay in `public/film/sfx/`.
+* **Scene 10:** Jack's reply is Draft 1's "Depends who's calling." again (PlayFrame bible item 25). `src/film/story.json` was also behind on the breathless takes' durations (scenes 44, 46, 48, 92); they are current now.
+
 ## Breaths, breathless lines and the Hive escape's shake (11 October 2026, later)
 
 * **Breathless lines** (PlayFrame's re-recordings, through the visual novel): the inn raid's "Stay. Whatever you hear.", "My husband —", "I'll get him.", "I'm sorry.", "Come on. Come on." and scene 92's three lines.

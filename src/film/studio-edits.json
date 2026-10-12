@@ -182,6 +182,9 @@
       "musicFadeSeconds": 3,
       "musicLevel": 0.8,
       "musicLoop": true
+    },
+    "nw_s8": {
+      "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3"
     }
   },
   "startSceneId": "nw_s1",
@@ -420,21 +423,6 @@
     ],
     "nw_s79": [
       "loop-window-rain"
-    ],
-    "nw_s10": [
-      "loop-neon-office"
-    ],
-    "nw_s11": [
-      "loop-neon-office"
-    ],
-    "nw_s18": [
-      "loop-neon-office"
-    ],
-    "nw_s21": [
-      "loop-neon-office"
-    ],
-    "nw_s77": [
-      "loop-neon-office"
     ],
     "nw_s50": [
       "loop-pickup-truck"
@@ -770,12 +758,6 @@
     },
     {
       "scene": "nw_s11",
-      "find": "The line goes dead.",
-      "file": "landline-dead",
-      "volume": 0.6
-    },
-    {
-      "scene": "nw_s11",
       "find": "He sets it down.",
       "file": "phone-hang-up",
       "volume": 0.6
@@ -851,12 +833,6 @@
       "find": "The old television plays static.",
       "file": "tv-static",
       "volume": 0.02
-    },
-    {
-      "scene": "nw_s18",
-      "find": "The line clicks dead.",
-      "file": "landline-dead",
-      "volume": 0.6
     },
     {
       "scene": "nw_s22",
@@ -1306,12 +1282,6 @@
       "scene": "nw_s56",
       "find": "breath catches",
       "file": "vera-breath-catches",
-      "volume": 0.8
-    },
-    {
-      "scene": "nw_s9",
-      "find": "Vera stops breathing.",
-      "file": "vera-gasp",
       "volume": 0.8
     },
     {

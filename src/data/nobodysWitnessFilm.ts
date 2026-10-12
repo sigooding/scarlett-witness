@@ -4037,7 +4037,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "8 — We're closed",
    "background": "/film/img/s8/160-were-closed.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
-   "ambientAudio": "file:/film/sfx/amb-bar.mp3",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -4301,9 +4301,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b209",
      "characterId": "nw_narrator",
      "text": "Vera stops breathing.",
-     "silent": true,
-     "sfxUrl": "/film/sfx/vera-gasp.mp3",
-     "sfxVolume": 0.8
+     "silent": true
     },
     {
      "id": "nw_b210",
@@ -4431,10 +4429,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_s10",
-   "title": "10 — Who calls me that?",
+   "title": "10 — Depends who's calling",
    "background": "/film/img/s10/412-pressed-against-the-railway.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -4580,7 +4578,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b231",
      "characterId": "nw_jack",
-     "text": "Who calls me that?",
+     "text": "Depends who's calling.",
      "audioUrl": "/film/voice/s10/166-jack-dryly-depends-who-s-calling.mp3"
     },
     {
@@ -4979,7 +4977,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "11 — Two men laughing",
    "background": "/film/img/s11/243-the-box.jpg",
    "prose": "INT. JACK'S OFFICE - LATER",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -5250,9 +5248,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGradeStrength": 0.3
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9,
-     "sfxUrl": "/film/sfx/landline-dead.mp3",
-     "sfxVolume": 0.6
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b299",
@@ -7443,7 +7439,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "18 — After the last train",
    "background": "/film/img/s18/435-the-last-page.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -7589,9 +7585,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_m18",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1,
-     "sfxUrl": "/film/sfx/landline-dead.mp3",
-     "sfxVolume": 0.6
+     "afterBeatDelaySeconds": 1
     }
    ],
    "hotspots": [],
@@ -8175,7 +8169,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "21 — Footsteps on the stairs",
    "background": "/film/img/s21/193-footsteps-on-the-stairs.jpg",
    "prose": "INT. JACK'S OFFICE - DAY",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -11853,7 +11847,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/gravel-tyres.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.05,
+     "afterBeatDelaySeconds": 2.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_02"
     }
    ],
@@ -11949,7 +11943,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Four black cars. Eight masked men.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.31,
+     "afterBeatDelaySeconds": 3.18,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_03"
     }
    ]
@@ -12042,7 +12036,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/car-doors-open.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.57,
+     "afterBeatDelaySeconds": 2.48,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_04"
     }
    ]
@@ -12087,7 +12081,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/tv-crowd-cheer.mp3",
      "sfxVolume": 0.12,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.53,
+     "afterBeatDelaySeconds": 2.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_05"
     }
    ]
@@ -12132,7 +12126,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Two masked men walk in. The first is the man from the Kanda rain.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.57,
+     "afterBeatDelaySeconds": 3.44,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_06"
     }
    ]
@@ -12224,7 +12218,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.27,
+     "afterBeatDelaySeconds": 2.18,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_08"
     }
    ]
@@ -12271,7 +12265,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/glass-case-shatter.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.76,
+     "afterBeatDelaySeconds": 1.68,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_09"
     }
    ]
@@ -12318,7 +12312,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/jack-running.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.53,
+     "afterBeatDelaySeconds": 2.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_10"
     }
    ]
@@ -12365,7 +12359,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.27,
+     "afterBeatDelaySeconds": 2.18,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_11"
     }
    ]
@@ -12412,7 +12406,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/jack-running.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.5,
+     "afterBeatDelaySeconds": 1.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
     }
    ]
@@ -12459,7 +12453,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/window-forced.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.53,
+     "afterBeatDelaySeconds": 2.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_13"
     }
    ]
@@ -12506,7 +12500,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/tin-roof-slide.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.27,
+     "afterBeatDelaySeconds": 2.18,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_14"
     }
    ]
@@ -12549,7 +12543,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Mrs. Noda, crouched in the kitchen. Into the pantry.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.53,
+     "afterBeatDelaySeconds": 2.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_15"
     }
    ]
@@ -12721,7 +12715,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "One gunman in the lobby. Mr. Noda behind the counter.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.53,
+     "afterBeatDelaySeconds": 2.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_19"
     }
    ]
@@ -12787,7 +12781,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/main-switch-blackout.mp3",
      "sfxVolume": 0.6,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.5,
+     "afterBeatDelaySeconds": 1.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_20"
     }
    ]
@@ -12853,7 +12847,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.32,
+     "afterBeatDelaySeconds": 2.23,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_21"
     }
    ]
@@ -12967,7 +12961,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/jack-grunt.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.02,
+     "afterBeatDelaySeconds": 1.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
     }
    ]
@@ -13012,7 +13006,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/phone.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.02,
+     "afterBeatDelaySeconds": 1.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_24"
     }
    ]
@@ -13055,7 +13049,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The old couple, together in the dark.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.02,
+     "afterBeatDelaySeconds": 1.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_25"
     }
    ]
@@ -13145,7 +13139,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/smg-burst-suppressed.mp3",
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.02,
+     "afterBeatDelaySeconds": 1.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_27"
     }
    ]
@@ -13192,7 +13186,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/bullets-car.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.8,
+     "afterBeatDelaySeconds": 1.73,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_28"
     }
    ]
@@ -13239,7 +13233,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/engine-cough-die.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.53,
+     "afterBeatDelaySeconds": 2.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_29"
     }
    ]
@@ -13286,7 +13280,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/windscreen-crack.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.54,
+     "afterBeatDelaySeconds": 1.48,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_30"
     }
    ]
@@ -13378,7 +13372,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/car-engine-start.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.06,
+     "afterBeatDelaySeconds": 1.98,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_32"
     }
    ]
@@ -13425,7 +13419,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/gate-smash.mp3",
      "sfxVolume": 0.9,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.27,
+     "afterBeatDelaySeconds": 2.18,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_33"
     }
    ]
@@ -13470,7 +13464,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "They don't chase him. They don't need to.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.31,
+     "afterBeatDelaySeconds": 3.18,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_34"
     }
    ]
@@ -13562,7 +13556,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/phone.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.35,
+     "afterBeatDelaySeconds": 3.23,
      "afterBeatTargetSceneId": "nw_s50"
     }
    ]
@@ -19385,7 +19379,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "77 — The envelope",
    "background": "/film/img/s77/85-the-desk-lamp.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-neon-office.mp3",
+   "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "particleConfig": {
     "density": 0.35,
@@ -21807,7 +21801,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/pipe-alarm.mp3",
      "sfxVolume": 0.9,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_02"
     }
    ],
@@ -21857,7 +21851,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/doors-close-softly.mp3",
      "sfxVolume": 0.6,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_03"
     }
    ]
@@ -21913,7 +21907,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/shutter-crash.mp3",
      "sfxVolume": 0.9,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_04"
     }
    ]
@@ -22211,7 +22205,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/boots-single-file.mp3",
      "sfxVolume": 0.4,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_10"
     }
    ]
@@ -22267,7 +22261,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/main-switch-blackout.mp3",
      "sfxVolume": 0.9,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_11"
     }
    ]
@@ -22312,7 +22306,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/flashlights-snap-on.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_12"
     }
    ]
@@ -22376,7 +22370,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Faces at the windows vanish from the beams.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_13"
     }
    ]
@@ -22423,7 +22417,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/vera-running.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_14"
     }
    ]
@@ -22468,7 +22462,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "She finds Jack's hand and pulls him up after her.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_15"
     }
    ]
@@ -22513,7 +22507,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/boots-single-file.mp3",
      "sfxVolume": 0.3,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_16"
     }
    ]
@@ -22576,7 +22570,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "A door opens before Vera can knock.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_17"
     }
    ]
@@ -22632,7 +22626,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Room after room, the Hive opens a way through.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_18"
     }
    ]
@@ -22690,7 +22684,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/jack-running.mp3",
      "sfxVolume": 0.85,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_19"
     }
    ]
@@ -22763,7 +22757,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/vera-running.mp3",
      "sfxVolume": 0.85,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_20"
     }
    ]
@@ -22817,7 +22811,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "A grandmother lifts the altar cloth: a low hatch.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_21"
     }
    ]
@@ -22864,7 +22858,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/jack-running.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_22"
     }
    ]
@@ -22911,7 +22905,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/pipe-alarm.mp3",
      "sfxVolume": 0.4,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_23"
     }
    ]
@@ -22958,7 +22952,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/doors-close-softly.mp3",
      "sfxVolume": 0.5,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_24"
     }
    ]
@@ -23003,7 +22997,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/train.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_25"
     }
    ]
@@ -23061,7 +23055,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/fire-ladder-rungs.mp3",
      "sfxVolume": 0.6,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_26"
     }
    ]
@@ -23110,7 +23104,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "When the train has passed, the ladder is empty.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 3.48,
+     "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_27"
     }
    ]
