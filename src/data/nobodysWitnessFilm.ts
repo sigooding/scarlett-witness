@@ -11533,7 +11533,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b777",
      "characterId": "nw_mrs_noda",
      "text": "Don't tell my husband.",
-     "audioUrl": "/film/voice/s37/211-mrsnoda-don-t-tell-my-husband.mp3"
+     "audioUrl": "/film/voice/s37/211-mrsnoda-don-t-tell-my-husband.mp3",
+     "background": "/film/img/s37/542-dont-tell-my-husband.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 15,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": true,
+      "filmGradeStrength": 0.3
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b778",
@@ -12210,8 +12226,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Through the bathroom door.",
      "silent": true,
-     "sfxUrl": "/film/sfx/jack-running.mp3",
-     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
@@ -12721,8 +12735,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "In that half-second, Jack has him.",
      "silent": true,
-     "sfxUrl": "/film/sfx/jack-grunt.mp3",
-     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
@@ -24445,13 +24457,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "/film/img/s16/433-barely-shoulder-wide.jpg",
      "/film/img/s22/196-back-from-the-edge.jpg",
      "/film/img/s27a/455-she-was-fifteen.jpg",
-     "/film/img/s41/179-same-wood.jpg",
-     "/film/img/s56/223-the-third-stool.jpg",
-     "/film/img/s65/232-the-wine-red-dress.jpg",
-     "/film/img/s71/407-the-bulbs-swing.jpg",
-     "/film/img/s79/91-grey-light.jpg",
-     "/film/img/s83/112-every-page.jpg",
-     "/film/img/s91/134-the-walkway-is-empty.jpg"
+     "/film/img/s41/178-the-screens.jpg",
+     "/film/img/s55/221-they-match.jpg",
+     "/film/img/s65/488-wine-red-silk.jpg",
+     "/film/img/s71/238-everyones-awake.jpg",
+     "/film/img/s78/90-daniel-voss.jpg",
+     "/film/img/s83/111-just-a-face.jpg",
+     "/film/img/s91/133-inches-apart.jpg"
     ],
     "montageSeconds": 7.5,
     "montageTransition": "dissolve",
@@ -24488,17 +24500,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.15
        }
       ]
-     },
-     "/film/img/s91/134-the-walkway-is-empty.jpg": {
-      "mode": "pan",
-      "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.56,
-      "depthSeconds": 18,
-      "depthDirection": "left",
-      "depthFocus": 0.55,
-      "panDistance": 2,
-      "zoomDuration": 18
      }
     }
    },

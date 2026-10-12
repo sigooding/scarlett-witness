@@ -4093,8 +4093,7 @@
         {
           "pic": "179-same-wood",
           "text": "Through the bathroom door.",
-          "seconds": 1.6,
-          "sfx": "jack-running"
+          "seconds": 1.6
         },
         {
           "pic": "210-the-third-time",
@@ -4150,8 +4149,7 @@
         {
           "pic": "180-the-shoulder",
           "text": "In that half-second, Jack has him.",
-          "seconds": 2,
-          "sfx": "jack-grunt"
+          "seconds": 2
         },
         {
           "pic": "179-it-rings",

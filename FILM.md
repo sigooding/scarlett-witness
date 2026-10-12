@@ -30,12 +30,16 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 * **Removed effects:** the breath on "Vera stops breathing." (9, `vera-gasp`) and `landline-dead` on "The line goes dead." (11) and "The line clicks dead." (18): it was button presses. The clips stay in `public/film/sfx/`.
 * **Scene 10:** Jack's reply is Draft 1's "Depends who's calling." again (PlayFrame bible item 25). `src/film/story.json` was also behind on the breathless takes' durations (scenes 44, 46, 48, 92); they are current now.
 
+## Space skips the credits again (12 October 2026)
+
+* **The director:** *"if you press space bar on credits you can no longer skip them."* On a credits node Space (or Enter) went to the page-turning keys: the first press finished the "typing", the second "acknowledged" the roll, which also hid the **Skip title sequence** button, so a four-minute title sequence could not be left (the mouse button vanished too). Space / Enter now skips the roll exactly as the button does (`skipCredits` in `src/game/Game.tsx`), on the opening titles, the two mid-film title cards and the end credits; a held key does not chain into the next credits node. `scripts/dom-smoke.mjs` ("Space skipped the title sequence") fails without it.
+
 ## Breaths, breathless lines and the Hive escape's shake (11 October 2026, later)
 
 * **Breathless lines** (PlayFrame's re-recordings, through the visual novel): the inn raid's "Stay. Whatever you hear.", "My husband —", "I'll get him.", "I'm sorry.", "Come on. Come on." and scene 92's three lines.
 * **Breaths and sighs** in `public/film/sfx/` (from PlayFrame `public/audio/neonoire/breaths/`):
   * On the screenplay beats that write them (`sfx` in `studio-edits.json`): Jack's sigh (14A), Ishida's sigh (23), Vera's gasp at the clip (9), Jack's shaky breath (50), Vera's breath catching (56) and Vera's breath as she runs in heels (73).
-  * Running breaths on the inn raid's 177 and 179, and a grunt on 180.
+  * Running breaths on the inn raid's 177 and 179, and a grunt on 180. **Thinned on 12 October 2026** (the director: *"too many breath effects on Jack in there, just remove a couple"*): Jack's breaths came every couple of seconds (the running breaths two shots apart, then a grunt, over the four breathless lines), so 179's running breath and 180's grunt are out; the one on 177 ("Boots on the stairs. Jack goes the other way.") stays. The clips stay in `public/film/sfx/`; to bring one back, add `"sfx": "jack-running"` (or `"jack-grunt"`) to that shot in `studio-edits.json`'s `cutscenes`.
   * In the Hive escape, cues on 128, 378, 379 and 381.
 * **Shake cam in the Hive escape:** a running shake (0.2) on 129, 381, 382 and `132-the-gap`. 378 keeps its existing shake, and 379 and 380 keep their own looks.
 * Nobody has listened.
