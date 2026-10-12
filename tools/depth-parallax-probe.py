@@ -86,7 +86,7 @@ def settings_for(name):
     focus = c.get("depthFocus")
     if focus is None:
         focus = sum(k["depth"] for k in cuts) / len(cuts) if cuts else 0.5
-    return dict(motion=c.get("depthMotion", "push"), amount=min(1, max(0, c.get("depthAmount", 0.4))),
+    return dict(motion=c.get("depthMotion", "truck"), amount=min(1, max(0, c.get("depthAmount", 0.4))),
                 seconds=max(2, c.get("depthSeconds", 14)),
                 direction=-1 if c.get("depthDirection") == "left" else 1,
                 focus=min(1, max(0, focus)), focal=c.get("focalPoint"))

@@ -82,7 +82,7 @@ test("a depth map, a sound effect and a recorded loop uploaded in the Studio rea
   expect(scene.dialogueBeats[0].sfxUrl).toMatch(/^asset:/);
   expect(scene.dialogueBeats[0].sfxVolume).toBeCloseTo(0.5, 2);
   expect(scene.cinematic.depthMap).toMatch(/^asset:/);
-  expect(scene.cinematic).toMatchObject({ depthMotion: "push", depthAmount: 0.4, depthSeconds: 14, mode: "pan" });
+  expect(scene.cinematic).toMatchObject({ depthMotion: "truck", depthAmount: 0.4, depthSeconds: 14, mode: "pan" });
 
   // what the export carries: the scene with the three uploaded files and the film's own static ones, bundled rather than left as
   // dangling paths (the whole film is a 380 MB export, so one scene's worth is bundled here)

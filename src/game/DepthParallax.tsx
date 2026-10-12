@@ -164,7 +164,7 @@ export function DepthParallaxLayer({ cinematic, picture, reducedMotion }: {
   const cutouts: DepthCutout[] = (cinematic?.depthCutouts ?? []).filter((k) => k.image).slice(0, MAX_CUTOUTS);
   const cutKey = cutouts.map((k) => `${k.image}@${k.depth}`).join(",");
   const amount = Math.max(0, Math.min(1, cinematic?.depthAmount ?? 0.4));
-  const motion = cinematic?.depthMotion ?? "push";
+  const motion = cinematic?.depthMotion ?? "truck";
   const seconds = Math.max(2, cinematic?.depthSeconds ?? 14);
   const direction = cinematic?.depthDirection === "left" ? -1 : 1;
   // Truck and drift turn around the still plane: by default the cut-outs' depth, so the people hold and the world moves past.

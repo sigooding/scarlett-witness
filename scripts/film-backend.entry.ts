@@ -177,4 +177,11 @@ check(/film-gate-weave/.test(gradeRule) && !/film-flicker/.test(gradeRule) && !/
 check(/film-flicker/.test(rule(".film-grade > .film-flicker")) && /background:\s*#000/.test(rule(".film-flicker")), "the exposure flicker is a black veil above the plate");
 check(/<div className="film-flicker"/.test(game), "CinematicOverlays renders the veil with the scratches");
 
+/* ---- 11. a depth map's default move is a truck ---- */
+console.log("A depth map with no move set trucks");
+check(/cinematic\?\.depthMotion \?\? "truck"/.test(read("src/game/DepthParallax.tsx")), "the engine's default move is a truck");
+const controls = read("src/studio/CinematicControls.tsx");
+check(/depthMotion: c\.depthMotion \?\? "truck"/.test(controls) && /value=\{c\.depthMotion \?\? "truck"\}/.test(controls), "the Studio starts a new map on a truck and shows it as the Move");
+check(!/depthMotion[^\n]*\?\? "push"/.test(controls + read("src/game/DepthParallax.tsx")), "nothing still falls back to a push");
+
 console.log(`\nfilm backend: ${checks} checks passed`);

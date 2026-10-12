@@ -1187,8 +1187,8 @@ export interface CinematicSettings {
    * about 5% larger and the nearest about 14% at 0.4. Truck/drift: a plane one
    * unit of depth from the still plane slides 3% of the frame width at 0.4. */
   depthAmount?: number;
-  /** The move: "push" (dolly in toward `focalPoint`, then hold; default),
-   * "truck" (slide sideways around the still plane, then hold), "drift" (a slow
+  /** The move: "truck" (slide sideways around the still plane, then hold;
+   * default), "push" (dolly in toward `focalPoint`, then hold), "drift" (a slow
    * loop from side to side). */
   depthMotion?: "push" | "truck" | "drift";
   /** Truck/drift: which way the camera moves first (default "right"). */
