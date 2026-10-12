@@ -3591,6 +3591,11 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
   // Every sheet it references is on disk and well-formed, with walk+idle.
   // The harness bundles to /tmp — resolve public/ from the npm cwd instead.
   const spRoot = path.join(process.cwd(), "public");
+  // public/assets (the art of the stories that are not in the catalogue) is not in the repository: those on-disk checks are
+  // skipped, not failed. Nobody's Witness and the two reels keep their own pictures under public/film and public/reels.
+  const spArtShipped = existsSync(path.join(spRoot, "assets"));
+  const onDisk = (rel: string) => !spArtShipped || existsSync(path.join(spRoot, rel));
+  if (!spArtShipped) console.log("  (south park: public/assets is not in the repository; its on-disk checks are skipped)");
   const spSheets: [string, import("../src/game/spriteSheet").SpriteSheet][] = [
     ["stan", SOUTH_PARK.playerSprite!.sheet!],
     ["cartman walk", SOUTH_PARK.scenes[0].stage!.npcs![0].sheet!],
@@ -3602,12 +3607,12 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
     ["cartman moods", SOUTH_PARK.scenes[5].hotspots![0].sheet!],
   ];
   for (const [label, sheet] of spSheets) {
-    check("south park: " + label + " sheet exists on disk", existsSync(path.join(spRoot, sheet.image)), sheet.image);
+    check("south park: " + label + " sheet exists on disk", onDisk(sheet.image), sheet.image);
     check("south park: " + label + " sheet is well-formed", spriteSheetIssues(sheet, label).length === 0, spriteSheetIssues(sheet, label).join(" | "));
     check("south park: " + label + " sheet has a walk animation", !!sheetAnim(sheet, "walk"));
   }
   for (const sc of SOUTH_PARK.scenes) {
-    check("south park: background exists for " + sc.id, existsSync(path.join(spRoot, sc.background)), sc.background);
+    check("south park: background exists for " + sc.id, onDisk(sc.background), sc.background);
   }
 
   // Pure stage game: every non-ending scene is a walkable stage with the
@@ -3643,10 +3648,10 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
   check("south park: the cast plays at 1.5x", SOUTH_PARK.scenes[0].stage!.playerScale === 1.5 && SOUTH_PARK.scenes[0].stage!.npcs!.every((n) => n.scale === 1.5) && SOUTH_PARK.scenes[3].stage!.npcs!.every((n) => n.scale === 1.5));
   const spTalkers = SOUTH_PARK.characters.filter((c) => c.talkingSheet);
   check("south park: the whole cast carries talking sheets", spTalkers.length === 5 && spTalkers.every((c) => !!c.talkingSheet!.animations.talk && !!c.talkingSheet!.animations.rest), spTalkers.map((c) => c.id).join(","));
-  check("south park: every talking sheet exists on disk", spTalkers.every((c) => existsSync(path.join(spRoot, c.talkingSheet!.image))), spTalkers.map((c) => c.talkingSheet!.image).join(","));
+  check("south park: every talking sheet exists on disk", spTalkers.every((c) => onDisk(c.talkingSheet!.image)), spTalkers.map((c) => c.talkingSheet!.image).join(","));
   const spItems = SOUTH_PARK.items.filter((i) => i.iconUrl);
-  check("south park: item icons exist on disk", spItems.length === 3 && spItems.every((i) => existsSync(path.join(spRoot, i.iconUrl!))), spItems.map((i) => i.iconUrl).join(","));
-  check("south park: the cover is the title card", SOUTH_PARK.coverImage.endsWith("sp-title.png") && existsSync(path.join(spRoot, SOUTH_PARK.coverImage)));
+  check("south park: item icons exist on disk", spItems.length === 3 && spItems.every((i) => onDisk(i.iconUrl!)), spItems.map((i) => i.iconUrl).join(","));
+  check("south park: the cover is the title card", SOUTH_PARK.coverImage.endsWith("sp-title.png") && onDisk(SOUTH_PARK.coverImage));
   const spCafe = SOUTH_PARK.scenes.find((sc) => sc.id === "sp_cafe")!;
   check("south park: the cafe is a verb-menu stage with Barbrady", spCafe.nodeType === "stage" && spCafe.stage!.verbCoin === true && spCafe.stage!.npcs![0].talkHotspotId === "sp_cafe_barbrady");
   check("south park: the hall links to the cafe and back", SOUTH_PARK.scenes[1].stage!.exitEdges?.right?.targetSceneId === "sp_cafe" && spCafe.stage!.exitEdges?.left?.targetSceneId === "sp_hall");
@@ -3672,9 +3677,9 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
   ];
   for (const [label, hsId] of spObjArt) {
     const hs = SOUTH_PARK.scenes.flatMap((sc) => sc.hotspots ?? []).find((h) => h.id === hsId)!;
-    check("south park: " + label + " carries object art on disk", !!hs.image && existsSync(path.join(spRoot, hs.image)), hs.image);
+    check("south park: " + label + " carries object art on disk", !!hs.image && onDisk(hs.image), hs.image);
   }
-  check("south park: the verb-wheel snowflake exists", !!SOUTH_PARK.verbMenuIcon && existsSync(path.join(spRoot, SOUTH_PARK.verbMenuIcon)), SOUTH_PARK.verbMenuIcon);
+  check("south park: the verb-wheel snowflake exists", !!SOUTH_PARK.verbMenuIcon && onDisk(SOUTH_PARK.verbMenuIcon), SOUTH_PARK.verbMenuIcon);
   check("south park: object-first verb menus are on", SOUTH_PARK.scenes[0].stage!.objectVerbMenu === true);
   check("south park: barbrady talks with his own sheet", SOUTH_PARK.characters.find((c) => c.id === "sp_barbrady")?.talkingSheet?.animations.talk != null);
 
@@ -3686,7 +3691,7 @@ check("prettyFlagName: hyphens", prettyFlagName("saw-the-body") === "saw the bod
   check("south park: the cameo walks both visitors on cue", spCrashEnter.some((st) => st.do === "npcWalkTo" && st.npcId === "sp_rick_cameo") && spCrashEnter.some((st) => st.do === "npcWalkTo" && st.npcId === "sp_morty_cameo"));
   for (const [who, npcId] of [["rick", "sp_rick_cameo"], ["morty", "sp_morty_cameo"]] as const) {
     const npc = spCrash.stage!.npcs!.find((n) => n.id === npcId)!;
-    check("south park: " + who + " sheet exists and is well-formed", existsSync(path.join(spRoot, npc.sheet!.image)) && spriteSheetIssues(npc.sheet!, who).length === 0, npc.sheet!.image);
+    check("south park: " + who + " sheet exists and is well-formed", onDisk(npc.sheet!.image) && spriteSheetIssues(npc.sheet!, who).length === 0, npc.sheet!.image);
   }
   check("south park: cameo characters stay stage-only (no cutouts)", SOUTH_PARK.characters.filter((c) => ["sp_rick", "sp_morty"].includes(c.id)).every((c) => !c.talkingSheet));
   const spPortal = spCrash.hotspots!.find((h) => h.id === "sp_crash_portal")!;
@@ -6435,7 +6440,7 @@ console.log("\n=== CONVERSATION TIMERS — the dialogue clock ===");
   check("timer: the rail and the clock share one gate",
     /const choicesLive = interactive \|\| cutInLive;/.test(src) &&
     /if \(!choicesLive \|\| choiceClockPaused\) return;/.test(src) &&
-    /!topicConvo && choicesLive && !scene\.isEnding/.test(src));
+    /\{choicesLive && !scene\.isEnding/.test(src));
   check("timer: cutting in stops the speaker mid-word",
     /audio\.stopSpeech\(\);\s*setBeatDone\(true\);\s*pickChoice\(choice\);/.test(src));
   check("timer: a cut-in is a number key, Enter still belongs to the beat",

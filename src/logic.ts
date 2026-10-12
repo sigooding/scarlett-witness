@@ -3472,12 +3472,21 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
   // storm was mute.) Keep in sync with audio.ts registry / Studio AMBIENTS.
   const knownAmbients = new Set(["none", "rain", "jazz", "drone", "tension"]);
   story.scenes.forEach((sc) => {
-    if (sc.ambientAudio && !knownAmbients.has(sc.ambientAudio))
-      issues.push({
-        severity: "warning",
-        sceneId: sc.id,
-        message: `Scene "${sc.title}" ambient loop "${sc.ambientAudio}" is not a known synth loop (${[...knownAmbients].join(" / ")}) — it will play as silence. Did you mean the Particle Effects preset?`,
-      });
+    if (!sc.ambientAudio) return;
+    // An ambience may layer parts with "+": synth presets and recorded loops ("file:<url or asset:id>", see audio.ts buildMix).
+    for (const part of sc.ambientAudio.split("+").map((p) => p.trim()).filter(Boolean)) {
+      if (part.startsWith("file:")) {
+        if (part.length <= 5)
+          issues.push({ severity: "warning", sceneId: sc.id, message: `Scene "${sc.title}" has a recorded ambient loop with no file ("file:") — it will play as silence.` });
+        continue;
+      }
+      if (!knownAmbients.has(part))
+        issues.push({
+          severity: "warning",
+          sceneId: sc.id,
+          message: `Scene "${sc.title}" ambient loop "${part}" is not a known synth loop (${[...knownAmbients].join(" / ")}) or a recorded "file:" loop — it will play as silence. Did you mean the Particle Effects preset?`,
+        });
+    }
   });
 
   // items that can never be obtained but are required somewhere
