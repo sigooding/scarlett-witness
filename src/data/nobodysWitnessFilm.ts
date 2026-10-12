@@ -9288,34 +9288,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Mara opens her fist. The coin-locker key on its worn tag.",
      "silent": true,
-     "background": "/film/img/s25/201-the-stamp.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b613",
-     "characterId": "nw_mara",
-     "text": "This.",
-     "audioUrl": "/film/voice/s25/202-mara-this.mp3"
-    },
-    {
-     "id": "nw_b614",
-     "characterId": "nw_narrator",
-     "text": "Jack takes it. Turns it over under the bulb. The number on the worn tag, still legible: 114.",
-     "silent": true,
      "background": "/film/img/s25/370-the-tag-114.jpg",
      "cinematic": {
       "mode": "zoom-hold",
@@ -9343,6 +9315,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b613",
+     "characterId": "nw_mara",
+     "text": "This.",
+     "audioUrl": "/film/voice/s25/202-mara-this.mp3"
+    },
+    {
+     "id": "nw_b614",
+     "characterId": "nw_narrator",
+     "text": "Jack takes it. Turns it over under the bulb. The number on the worn tag, still legible: 114.",
+     "silent": true
     },
     {
      "id": "nw_b615",
@@ -9874,7 +9858,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b662",
      "characterId": "nw_narrator",
      "text": "The train sways. Her shoulder settles against his.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s26/543-her-shoulder-settles.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 19,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b663",
@@ -9903,6 +9903,22 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "She takes it. Opens it. Closes it. Opens it.",
      "silent": true,
+     "background": "/film/img/s26/544-opens-it-closes-it.jpg",
+     "cinematic": {
+      "mode": "dolly",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 18,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/lighter-flick.mp3",
      "sfxVolume": 0.6
     },
@@ -9910,7 +9926,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b665",
      "characterId": "nw_vera",
      "text": "You don't smoke.",
-     "audioUrl": "/film/voice/s26/257-vera-you-don-t-smoke.mp3"
+     "audioUrl": "/film/voice/s26/257-vera-you-don-t-smoke.mp3",
+     "background": "/film/img/s26/545-you-dont-smoke.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b666",
@@ -9952,7 +9984,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b672",
      "characterId": "nw_narrator",
      "text": "He looks at her. She has no idea how true that is.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s26/546-how-true-that-is.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b673",
@@ -24450,13 +24498,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "/film/img/s3/31-the-lit-window.jpg",
      "/film/img/s6/408-a-matter-between-criminal-groups.jpg",
      "/film/img/s11/375-he-sets-the-receiver-down.jpg",
-     "/film/img/s16/433-barely-shoulder-wide.jpg",
-     "/film/img/s22/196-back-from-the-edge.jpg",
-     "/film/img/s27a/455-she-was-fifteen.jpg",
-     "/film/img/s41/178-the-screens.jpg",
-     "/film/img/s55/221-they-match.jpg",
-     "/film/img/s65/488-wine-red-silk.jpg",
-     "/film/img/s71/238-everyones-awake.jpg",
+     "/film/img/s16/249-the-chair.jpg",
+     "/film/img/s23/197-you-never-call.jpg",
+     "/film/img/s27a/290-daylight-again.jpg",
+     "/film/img/s41/177-boots-below.jpg",
+     "/film/img/s55/471-where-a-childs-hand-would-reach.jpg",
+     "/film/img/s65/487-the-top-of-the-wardrobe.jpg",
+     "/film/img/s71/406-the-pages.jpg",
      "/film/img/s78/90-daniel-voss.jpg",
      "/film/img/s83/111-just-a-face.jpg",
      "/film/img/s91/133-inches-apart.jpg"
@@ -24496,6 +24544,34 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.15
        }
       ]
+     },
+     "/film/img/s16/249-the-chair.jpg": {
+      "mode": "pan",
+      "panDistance": 2,
+      "zoomDuration": 18,
+      "depthMap": "/film/depth/s16/249-the-chair/depth.png",
+      "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s16/249-the-chair/cutout-1.png",
+        "depth": 0.514
+       }
+      ],
+      "depthMotion": "truck",
+      "depthAmount": 0.54,
+      "depthSeconds": 16,
+      "depthDirection": "right",
+      "lights": [
+       {
+        "x": 83,
+        "y": 8,
+        "color": "#dfe9ff",
+        "size": 22,
+        "intensity": 0.25,
+        "pulseSeconds": 8,
+        "pulseAmount": 0.1
+       }
+      ]
      }
     }
    },
@@ -24532,5 +24608,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "68a3225b0fa8"
+ "builtinRevision": "f2c7f1ed816d"
 } as unknown as Story;
