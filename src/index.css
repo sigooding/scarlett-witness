@@ -2465,23 +2465,42 @@ body,
 }
 
 /* ---------- film stock emulation ---------- */
-/* Weave + flicker on the wrapper; grain/scratches are pseudo-elements so no
- * extra DOM is needed in the no-grade case. */
+/* Weave on the plate; grain/halation are pseudo-elements and the exposure flicker is a veil, so no
+ * extra DOM is needed in the no-grade case.
+ *
+ * The plate itself is NEVER faded. Its opacity used to flicker (0.95 to 1, every 0.38 s), and a plate
+ * that is not fully opaque shows whatever is underneath it: in the film that is the scene's own picture
+ * (a different shot, ungraded) behind every beat picture, so the "35mm print" made the main background
+ * flicker over the beat images. The flicker is now a black veil above the plate (.film-flicker): it
+ * dims the plate by the same amount and reveals nothing. The weave is scaled up a hair so a half-pixel
+ * shift never exposes the plate's own edge either. */
 .film-grade {
-  animation: film-gate-weave var(--film-weave-dur, 3.4s) ease-in-out infinite alternate,
-    film-flicker var(--film-flicker-dur, 0.38s) steps(2, end) infinite;
-  will-change: transform, opacity;
+  animation: film-gate-weave var(--film-weave-dur, 3.4s) ease-in-out infinite alternate;
+  will-change: transform;
 }
 @keyframes film-gate-weave {
-  0%   { transform: translate(0.4px, -0.3px); }
-  50%  { transform: translate(-0.5px, 0.3px); }
-  100% { transform: translate(0.3px, 0.4px); }
+  0%   { transform: translate(0.4px, -0.3px) scale(1.004); }
+  50%  { transform: translate(-0.5px, 0.3px) scale(1.004); }
+  100% { transform: translate(0.3px, 0.4px) scale(1.004); }
+}
+/* Exposure flicker: a black veil on top of the film-graded plate (rendered by CinematicOverlays; it only
+ * animates where the plate carries .film-grade, so a video cutscene's overlays stay as they were). */
+.film-flicker {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9;
+  background: #000;
+  opacity: 0;
+}
+.film-grade > .film-flicker {
+  animation: film-flicker var(--film-flicker-dur, 0.38s) steps(2, end) infinite;
 }
 @keyframes film-flicker {
-  0%   { opacity: 1; }
-  40%  { opacity: calc(1 - var(--film-flicker-amp, 0.05)); }
-  60%  { opacity: 1; }
-  100% { opacity: calc(1 - var(--film-flicker-amp, 0.05) * 0.6); }
+  0%   { opacity: 0; }
+  40%  { opacity: var(--film-flicker-amp, 0.05); }
+  60%  { opacity: 0; }
+  100% { opacity: calc(var(--film-flicker-amp, 0.05) * 0.6); }
 }
 /* Halation bloom: warm light bleed around highlights, like a print's silver
  * halide glow. Painted once over the grade. */
@@ -2574,6 +2593,7 @@ body,
 @media (prefers-reduced-motion: reduce) {
   .film-grade,
   .film-grade::after,
+  .film-grade > .film-flicker,
   .film-scratches,
   .parallax-plate,
   .parallax-mid,

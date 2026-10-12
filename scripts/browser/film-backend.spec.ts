@@ -170,3 +170,40 @@ test("a beat's picture is on screen only once it has loaded, so the scene's own 
   expect(seen.filter((s) => !s.complete).map((s) => s.url), "no beat picture was mounted before it had loaded").toEqual([]);
 });
 
+test("the 35mm film grade never fades a beat's picture, so the picture under it cannot flicker through", async ({ page }) => {
+  test.setTimeout(120_000);
+  // The film's beat pictures all carry the film grade. Its exposure flicker used to be the plate's own opacity (0.95 to 1 every 0.38 s),
+  // and a plate that is not fully opaque shows what is underneath it: the scene's own, ungraded picture. Now the plate stays fully
+  // opaque and the flicker is a black veil above it.
+  await page.goto("./?story=nobodys-witness-film&scene=nw_s53&seed=grade");
+  await page.waitForTimeout(3000);
+  for (let i = 0; i < 24 && !(await page.locator("[data-beat-bg] .film-grade").count()); i++) {
+    await page.keyboard.press("Space");
+    await page.waitForTimeout(900);
+  }
+  await expect(page.locator("[data-beat-bg] .film-grade").first()).toBeVisible();
+  await page.waitForTimeout(2500); // the picture's own entrance dissolve has finished
+  const seen = await page.evaluate(async () => {
+    const plate = document.querySelector<HTMLElement>("[data-beat-bg] .film-grade")!;
+    const layer = plate.closest<HTMLElement>("[data-beat-bg]")!;
+    const veil = plate.querySelector<HTMLElement>(":scope > .film-flicker");
+    const effective = () => {
+      let o = 1;
+      for (let e: HTMLElement | null = plate; e; e = e === layer ? null : e.parentElement) o *= parseFloat(getComputedStyle(e).opacity);
+      return o;
+    };
+    const plateOpacity: number[] = [];
+    const veilOpacity: number[] = [];
+    const t0 = performance.now();
+    while (performance.now() - t0 < 2500) {
+      plateOpacity.push(effective());
+      veilOpacity.push(veil ? parseFloat(getComputedStyle(veil).opacity) : -1);
+      await new Promise((r) => setTimeout(r, 30));
+    }
+    return { plateMin: Math.min(...plateOpacity), veilMin: Math.min(...veilOpacity), veilMax: Math.max(...veilOpacity), hasVeil: !!veil };
+  });
+  expect(seen.plateMin, "the picture is fully opaque in every frame, so nothing underneath shows through").toBe(1);
+  expect(seen.hasVeil, "the print's flicker is a veil above the picture").toBe(true);
+  expect(seen.veilMax, "and the print still flickers").toBeGreaterThan(0.02);
+  expect(seen.veilMin, "back to clear between flickers").toBe(0);
+});

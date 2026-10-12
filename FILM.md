@@ -72,6 +72,15 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
   first two, are warmed ahead (respecting the data-saver / 2g stand-down).
 * **Test:** `scripts/browser/film-backend.spec.ts` plays the film under 1.5 s of emulated latency and records every
   `[data-beat-bg]` layer as it is added; none may be added before its picture is complete. It fails on the old code.
+* **The 35mm film grade was the second cause.** Every beat picture in the film carries the film grade, and its flicker
+  animated the picture's own opacity (0.95 to 1 every 0.38 s). A picture that is not fully opaque shows what is under
+  it: the scene's own, ungraded picture, a different shot, so about 2 to 5 % of the main background flickered over each
+  beat picture. The flicker is now a black veil above the picture (`.film-flicker`, drawn with the scratches by
+  `CinematicOverlays`): it dims by the same amount and reveals nothing. The picture itself stays fully opaque, and the
+  weave is scaled up 0.4 % so a half-pixel shift never shows its edge. Grain, halation, weave and scratches are as they
+  were. A second browser test samples the picture's effective opacity for 2.5 s and fails on the old code (0.95).
+  (Noticed, not changed: `.film-grade`'s `animation` replaces the plate's own pan / dolly / zoom, so a film-graded
+  picture holds still apart from the weave.)
 
 ## The radio song, the credits, no saxophones, the animatic export (10 October 2026)
 
