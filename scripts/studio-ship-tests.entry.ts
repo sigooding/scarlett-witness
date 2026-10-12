@@ -201,7 +201,9 @@ eq(machine.acceptsItems, ["fg_powered_remote"], "resolved item override leaves t
 const badStateItem = fresh(); badStateItem.scenes.find((s) => s.id === "fg_basement")!.hotspots![1].states![0].acceptsItems = ["missing-item"];
 check(validateStory(badStateItem).some((i) => i.severity === "error" && i.message.includes('accepts unknown item "missing-item"')), "state item overrides are validated");
 const media = new Set(JSON.stringify(FAMILY_GUY).match(/\/assets\/family-guy\/[^"\\]+/g) ?? []);
-for (const value of media) check(existsSync(`public${value}`), `shipped local media exists: ${value}`);
+// public/assets (the art of the stories that are not in the catalogue) is not in the repository: skipped, not failed.
+if (existsSync("public/assets")) for (const value of media) check(existsSync(`public${value}`), `shipped local media exists: ${value}`);
+else console.log("  (Family Guy: public/assets is not in the repository; its shipped-media checks are skipped)");
 function step(sim: SimState, match: (d: Decision) => boolean): SimState {
   const choices = availableDecisions(FAMILY_GUY, sim); const d = choices.find(match);
   assert.ok(d, `No requested decision in ${sim.sceneId}: ${choices.map((x) => x.label).join(" | ")}`);

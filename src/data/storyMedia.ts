@@ -39,11 +39,29 @@ export function visitStoryMediaFields(story: Story, visit: (field: StoryMediaFie
   const beat = (b: DialogueBeat | undefined, label: string) => {
     if (!b) return;
     field(b, "audioUrl", `${label} voice clip`, "audio");
+    field(b, "sfxUrl", `${label} sound effect`, "audio");
     field(b, "background", `${label} background`);
     cinematic(b.cinematic, label);
     // A nested reaction can carry its own plate, foregrounds and voice.
     if (b.lie?.caughtBeat && b.lie.caughtBeat !== b) beat(b.lie.caughtBeat, `${label} caught beat`);
     if (b.lie?.wrongBeat && b.lie.wrongBeat !== b) beat(b.lie.wrongBeat, `${label} bluff beat`);
+  };
+  // An ambience may layer parts with "+": synth presets ("rain") and recorded loops ("file:<url or asset:id>"). Each recorded
+  // loop is a media field of its own; the others are never visited. (The film's 154 atmospheres are made this way.)
+  const ambientLayers = (sc: Story["scenes"][number]) => {
+    const raw = sc.ambientAudio;
+    if (!raw || !raw.includes("file:")) return;
+    const parts = raw.split("+").map((p) => p.trim());
+    parts.forEach((part, i) => {
+      if (!part.startsWith("file:") || part.length <= 5) return;
+      visit({
+        value: part.slice(5),
+        label: `recorded ambience loop #${i + 1}`,
+        sceneId,
+        kind: "audio",
+        set: (next) => { parts[i] = `file:${next}`; sc.ambientAudio = parts.join("+"); },
+      });
+    });
   };
   const action = (a: HotspotAction | undefined, label: string) => {
     if (!a) return;
@@ -64,6 +82,7 @@ export function visitStoryMediaFields(story: Story, visit: (field: StoryMediaFie
     field(sc, "narrationAudioUrl", "narration audio", "audio");
     // Bare ambient ids (rain, wind, none…) name synth presets, not files.
     if (sc.ambientAudio?.startsWith("mp3:")) field(sc, "ambientAudio", "recorded ambience", "audio");
+    ambientLayers(sc);
     field(sc.stage, "playerImage", "stage walker image");
     field(sc.stage, "objectMenuIcon", "stage verb-menu icon");
     field(sc.stage?.playerSheet, "image", "stage walker sheet");

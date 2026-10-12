@@ -19,3 +19,7 @@ Check maps with `tools/review-depth-maps.py` and watch the move with `tools/dept
 ## No saxophones
 
 The director wants no saxophone anywhere in Nobody's Witness: not in the screenplay, the effects or the music cues. Do not generate or place one.
+
+## The film and the Studio
+
+Read `docs/film-backend.md`. Everything Nobody's Witness uses (depth maps and their suggested move, beat sound effects, recorded ambience layers, loop switch, reading pace, particles, montage looks) is a Scene or Beat field the Studio can set, and the media walker `visitStoryMediaFields` (`src/data/storyMedia.ts`) is the one place resolve, collect and export agree. If you add a media field to a Scene or Beat, visit it there and add a check to `scripts/film-backend.entry.ts`. `npm run test:film-backend` and `npm run test:film-backend:browser` guard it.

@@ -19,12 +19,16 @@ export type ParticleKind =
   | "fireflies"
   | "motes";
 
+export type ParticleConfig = NonNullable<import("../types").SceneNode["particleConfig"]>;
+
 interface ParticlesProps {
   kind: ParticleKind;
   soundOn: boolean;
   cinematic?: CinematicSettings;
   reducedMotion?: boolean;
   ambientAudio?: string;
+  /** scene.particleConfig: density 0..2 (how many drops/motes), opacity 0..1 (how strong), wind 0..3 (rain gusts); unset = 1 */
+  config?: ParticleConfig;
 }
 
 /* ------------------------------------------------------------------ */
@@ -762,7 +766,7 @@ function FirefliesCanvas({ cinematic: _cinematic }: { cinematic?: CinematicSetti
 /* ------------------------------------------------------------------ */
 /*  RAIN — enhanced canvas with wind, depth, splash                     */
 /* ------------------------------------------------------------------ */
-function RainCanvas({ intensity = 1 }: { intensity?: number }) {
+function RainCanvas({ intensity = 1, wind = 1 }: { intensity?: number; wind?: number }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<
     { x: number; y: number; vx: number; vy: number; len: number; alpha: number; depth: number }[]
@@ -801,7 +805,7 @@ function RainCanvas({ intensity = 1 }: { intensity?: number }) {
       last = now;
       windRef.current.t += dt;
       if (windRef.current.t > 2.5) {
-        windRef.current.target = rand(-2.2, 2.2);
+        windRef.current.target = rand(-2.2, 2.2) * wind;
         windRef.current.t = 0;
       }
       windRef.current.x += (windRef.current.target - windRef.current.x) * dt * 0.8;
@@ -838,7 +842,7 @@ function RainCanvas({ intensity = 1 }: { intensity?: number }) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [wind]);
 
   return <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 z-[20] h-full w-full" aria-hidden />;
 }
@@ -1149,7 +1153,7 @@ export function AmbientAtmosphere({
 /* ------------------------------------------------------------------ */
 /*  MAIN PARTICLES SWITCH                                                */
 /* ------------------------------------------------------------------ */
-export function Particles({ kind, soundOn, cinematic, reducedMotion, ambientAudio }: ParticlesProps) {
+export function Particles({ kind, soundOn, cinematic, reducedMotion, ambientAudio, config }: ParticlesProps) {
   if (kind === "none") {
     // still render subtle atmosphere if scene has lights/dim
     return <AmbientAtmosphere cinematic={cinematic} reducedMotion={reducedMotion} ambientAudio={ambientAudio} />;
@@ -1178,24 +1182,31 @@ export function Particles({ kind, soundOn, cinematic, reducedMotion, ambientAudi
   const rainLensOn = (cinematic as any)?.rainOnLens ?? isRain;
   const rainLensIntensity = (cinematic as any)?.rainLensIntensity ?? (kind === "storm" ? 1.6 : kind === "rain" ? 1.2 : 0.6);
 
+  // scene.particleConfig (Studio: Particle Effects sliders). Unset leaves every effect exactly as it was.
+  const dens = Math.max(0, Math.min(2, config?.density ?? 1));
+  const gust = Math.max(0, Math.min(3, config?.wind ?? 1));
+  const strength = Math.max(0, Math.min(1, config?.opacity ?? 1));
+
   return (
     <div className="pointer-events-none absolute inset-0 z-[20] overflow-hidden" aria-hidden>
-      {kind === "rain" && <RainCanvas intensity={1.2} />}
-      {kind === "drizzle" && <RainCanvas intensity={0.45} />}
-      {kind === "storm" && (
-        <>
-          <RainCanvas intensity={1.5} />
-          <StormLightning soundOn={soundOn} />
-        </>
-      )}
-      {kind === "snow" && <SnowCanvas kind="snow" />}
-      {kind === "smoke" && <SmokeCanvas />}
-      {kind === "dust" && <DustCanvas cinematic={cinematic} density={88} />}
-      {kind === "motes" && <DustCanvas cinematic={cinematic} density={54} />}
-      {kind === "fog" && depthFogOn && <FogBanks cinematic={cinematic} density={fogStrength * 1.8} />}
-      {kind === "ember" && <EmberCanvas kind="ember" cinematic={cinematic} />}
-      {kind === "ash" && <EmberCanvas kind="ash" cinematic={cinematic} />}
-      {kind === "fireflies" && <FirefliesCanvas cinematic={cinematic} />}
+      <div className="pointer-events-none absolute inset-0" style={strength < 1 ? { opacity: strength } : undefined} data-particle-strength={strength}>
+        {kind === "rain" && <RainCanvas key={`rain-${dens}`} intensity={1.2 * dens} wind={gust} />}
+        {kind === "drizzle" && <RainCanvas key={`drizzle-${dens}`} intensity={0.45 * dens} wind={gust} />}
+        {kind === "storm" && (
+          <>
+            <RainCanvas key={`storm-${dens}`} intensity={1.5 * dens} wind={gust} />
+            <StormLightning soundOn={soundOn} />
+          </>
+        )}
+        {kind === "snow" && <SnowCanvas kind="snow" />}
+        {kind === "smoke" && <SmokeCanvas />}
+        {kind === "dust" && <DustCanvas key={`dust-${dens}`} cinematic={cinematic} density={Math.round(88 * dens)} />}
+        {kind === "motes" && <DustCanvas key={`motes-${dens}`} cinematic={cinematic} density={Math.round(54 * dens)} />}
+        {kind === "fog" && depthFogOn && <FogBanks cinematic={cinematic} density={fogStrength * 1.8} />}
+        {kind === "ember" && <EmberCanvas kind="ember" cinematic={cinematic} />}
+        {kind === "ash" && <EmberCanvas kind="ash" cinematic={cinematic} />}
+        {kind === "fireflies" && <FirefliesCanvas cinematic={cinematic} />}
+      </div>
       {/* rain on lens overlay — improved glass droplets with tail. Gated on
        * rainLensOn ALONE: it already defaults to isRain, and OR-ing isRain in
        * again would make an explicit "off" from Studio impossible on rain

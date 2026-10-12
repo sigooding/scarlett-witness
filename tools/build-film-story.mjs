@@ -126,7 +126,7 @@ scenes.push({
 });
 scenes.push({
   id: "nw_prologue", title: "Prologue — The Hive, remembered", background: P("/img/s1/377-the-hive-remembered.jpg"),
-  particles: "rain", particleConfig: { density: 0.8, opacity: 0.5 }, hideHud: true, letterbox: true, transition: "fade-black", transitionSpeed: 2.2,
+  particles: "rain", hideHud: true, letterbox: true, transition: "fade-black", transitionSpeed: 2.2,
   // Its backdrop takes the picture's look (studio-edits "pictureLook") like any beat's picture, its depth move with it.
   cinematic: { mode: "zoom-hold", focalPoint: "50% 52%", zoomDuration: 60, colorGrade: "neon-noir", filmGrade: true, filmGradeStrength: 0.3, ...(lookFor("/img/s1/377-the-hive-remembered.jpg")?.cinematic ?? {}) },
   prose: "Night. Rain. An eleven-storey block of balconies and wires wedged between glass towers.", ambientAudio: "rain", musicMode: "none", musicFadeSeconds: 3,
@@ -140,7 +140,7 @@ const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-ai
 const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.48 } };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
-  particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes", particleConfig: { density: sc.exterior ? 0.9 : 0.35, opacity: 0.55 },
+  particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes",
   hideHud: true, letterbox: true,
 });
 // Pictures waiting for words. Several shots can share one paragraph of the screenplay (the visual novel holds each for 2.2 s); the film

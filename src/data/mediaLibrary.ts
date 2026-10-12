@@ -571,7 +571,20 @@ export async function resolveStoryMedia(story: Story): Promise<Story> {
   }
 
   const next = JSON.parse(JSON.stringify(story)) as Story;
+  // A credits montage keeps a camera look per still, keyed by the still's stored reference; the player looks it up by the
+  // resolved URL, so re-key it when the still itself is resolved (an uploaded still is `asset:<id>` until then).
+  const stills = next.scenes.map((sc) => [...(sc.credits?.montage ?? [])]);
   visitStoryMediaFields(next, ({ value, set }) => set(resolveMediaValue(value, map) ?? value));
+  next.scenes.forEach((sc, i) => {
+    const looks = sc.credits?.montageLooks;
+    if (!looks) return;
+    const rekeyed: typeof looks = { ...looks };
+    stills[i].forEach((was, k) => {
+      const now = sc.credits!.montage![k];
+      if (was !== now && looks[was] && !rekeyed[now]) rekeyed[now] = looks[was];
+    });
+    sc.credits!.montageLooks = rekeyed;
+  });
   return next;
 }
 

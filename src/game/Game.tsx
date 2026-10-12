@@ -6651,6 +6651,7 @@ function CasePlayer({
         cinematic={bgCinematic}
         reducedMotion={prefersReducedMotion}
         ambientAudio={scene.ambientAudio}
+        config={scene.particleConfig}
       />
       {/* Subtle atmosphere underlay for light interaction when particles are heavy */}
       {particleKind !== "none" && particleKind !== "dust" && particleKind !== "motes" && particleKind !== "fog" && (

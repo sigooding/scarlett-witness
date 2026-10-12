@@ -70,6 +70,7 @@ import {
   type ValidationIssue,
 } from "../logic";
 import { MediaLibrary, AssetDropdown, MediaUploadButton, CharacterVoiceFiles } from "./MediaLibrary";
+import { AmbientLayers } from "./AmbientLayers";
 import { ImagePicker } from "./ImagePicker";
 import { EXTRA_PRESET, SheetLab, SpriteSheetControls, TALKING_PRESET, WALKER_PRESET } from "./SheetEditor";
 import { SheetSprite } from "../game/SheetSprite";
@@ -195,7 +196,6 @@ const BACKGROUNDS = [
   "/img/bg-saltflats.jpg",
 ];
 
-const AMBIENTS = ["none", "rain", "jazz", "drone", "tension"];
 
 /** The title-sequence faces as CSS variables — used by the credits preset
  * picker to render each card's name in the very typeface the look dials in.
@@ -7218,8 +7218,17 @@ function StudioInner({
                         placeholder="Or use uploaded audio..."
                       />
                     </div>
+                    <label className="mt-1 flex items-center gap-2 text-[10px] text-paper/60">
+                      <input
+                        type="checkbox"
+                        aria-label="Loop this track"
+                        checked={scene.musicLoop !== false}
+                        onChange={(e) => updateScene(scene.id, { musicLoop: e.target.checked ? undefined : false })}
+                      />
+                      Loop this track (off = a song: it plays once, then the scenes after it stay silent until another cue)
+                    </label>
                     <p className="mt-1 font-type text-[9px] text-paper/40">
-                      This track loops until another scene chooses a different track or a scene with <b className="text-crimson">No music</b> is reached.
+                      A looping track runs until another scene chooses a different track or a scene with <b className="text-crimson">No music</b> is reached.
                     </p>
                     <Field label={`Music level (${Math.round((scene.musicLevel ?? 1) * 100)}%) — loudness of THIS track`}>
                       <input
@@ -7278,6 +7287,22 @@ function StudioInner({
                     />
                     Auto-play prose voice on first scene entry
                   </label>
+                </Field>
+                <Field label={`Animatic reading pace (${(scene.animaticReadPace ?? 1).toFixed(2)}×) — how long silent lines stay up in an exported animatic`}>
+                  <input
+                    type="range"
+                    min={0.5}
+                    max={1.5}
+                    step={0.05}
+                    aria-label="Animatic reading pace"
+                    className="w-full accent-gold"
+                    value={scene.animaticReadPace ?? 1}
+                    onChange={(e) => {
+                      const v = parseFloat(e.target.value);
+                      updateScene(scene.id, { animaticReadPace: Math.abs(v - 1) < 0.001 ? undefined : v });
+                    }}
+                  />
+                  <p className="mt-1 font-type text-[9px] text-paper/40">Below 1 = quicker (a long narration that held one picture too long), above 1 = slower. Only the exported animatic uses it.</p>
                 </Field>
                 <p className="font-type text-[10px] text-paper/40">Music loops until the next scene. Recorded narration plays once. If no narration MP3 is set, the selected Web Speech narrator is used.</p>
               </div>
@@ -7847,6 +7872,27 @@ function StudioInner({
                     </div>
                     {(scene.credits?.montage?.length ?? 0) > 0 && (
                       <>
+                        <Field label="Camera look per still (optional — a depth-map move, pan, lights, grade for one still of the montage)">
+                          {(scene.credits?.montage ?? []).map((still, i) => (
+                            <details key={`${still}-${i}`} className="mb-1 border border-noir-600 p-1" open={!!scene.credits?.montageLooks?.[still]}>
+                              <summary className="cursor-pointer font-type text-[10px] text-paper/70">
+                                Still #{i + 1}{scene.credits?.montageLooks?.[still] ? " · has a camera look" : ""}
+                              </summary>
+                              <CinematicControls
+                                cinematic={scene.credits?.montageLooks?.[still]}
+                                previewUrl={media(still) ?? still}
+                                storyId={story.id}
+                                media={media}
+                                onChange={(next) => {
+                                  const looks = { ...(scene.credits?.montageLooks ?? {}) };
+                                  if (next) looks[still] = next;
+                                  else delete looks[still];
+                                  updateScene(scene.id, { credits: { ...(scene.credits ?? {}), montageLooks: Object.keys(looks).length ? looks : undefined } });
+                                }}
+                              />
+                            </details>
+                          ))}
+                        </Field>
                         <Field label={`Seconds per still ${(scene.credits?.montageSeconds ?? 5).toFixed(1)}s`}>
                           <input
                             type="range"
@@ -8049,16 +8095,13 @@ function StudioInner({
                     <div className="h-20 w-full" style={bgStyle(media(scene.background) ?? scene.background)} />
                   )}
                 </div>
-                <Field label="Ambient loop (synth)">
-                  <select
-                    className={inputCls}
-                    value={scene.ambientAudio ?? "none"}
-                    onChange={(e) => updateScene(scene.id, { ambientAudio: e.target.value })}
-                  >
-                    {AMBIENTS.map((a) => (
-                      <option key={a}>{a}</option>
-                    ))}
-                  </select>
+                <Field label="Ambient loop (synth preset + recorded loops)">
+                  <AmbientLayers
+                    storyId={story.id}
+                    value={scene.ambientAudio}
+                    media={media}
+                    onChange={(next) => updateScene(scene.id, { ambientAudio: next })}
+                  />
                 </Field>
                 <Field label="Particle Effects (Weather/Atmosphere) — smart, light-reactive">
                   <select
@@ -8094,6 +8137,33 @@ function StudioInner({
                                 ? "Fireflies pulse sharp on/off, warm glow, drift lazy."
                                 : "Canvas-based, respects reduced-motion (static fallback)."}
                     </p>
+                  )}
+                  {scene.particles && scene.particles !== "none" && (
+                    <div className="mt-2 grid grid-cols-1 gap-1 border border-noir-600 p-2">
+                      {([
+                        ["density", "Density", 0, 2, 0.05, 1, "how many drops or motes (1 = as designed)"],
+                        ["opacity", "Strength", 0, 1, 0.05, 1, "how visible the whole effect is"],
+                        ["wind", "Wind", 0, 3, 0.1, 1, "rain gusts (1 = as designed)"],
+                      ] as const).map(([key, label, min, max, step, dflt, hint]) => (
+                        <label key={key} className="flex items-center gap-2 font-type text-[9px] text-paper/60" title={hint}>
+                          <span className="w-16">{label} {(scene.particleConfig?.[key] ?? dflt).toFixed(2)}</span>
+                          <input
+                            type="range"
+                            min={min}
+                            max={max}
+                            step={step}
+                            aria-label={`Particle ${label.toLowerCase()}`}
+                            className="flex-1 accent-cyan-400"
+                            value={scene.particleConfig?.[key] ?? dflt}
+                            onChange={(e) => {
+                              const next = { ...(scene.particleConfig ?? {}), [key]: parseFloat(e.target.value) };
+                              if (Math.abs((next[key] as number) - dflt) < 0.001) delete next[key];
+                              updateScene(scene.id, { particleConfig: Object.keys(next).length ? next : undefined });
+                            }}
+                          />
+                        </label>
+                      ))}
+                    </div>
                   )}
                 </Field>
 
@@ -9018,6 +9088,92 @@ function StudioInner({
                             </button>
                           )}
                         </div>
+                      </Field>
+                      <Field label="🔊 Sound effect on this beat (optional — a one-shot that plays as the beat starts, over the voice)">
+                        <div className="flex gap-1">
+                          <input
+                            className={inputCls}
+                            aria-label={`Sound effect for beat ${b.id}`}
+                            placeholder="/audio/door-creak.mp3 or upload"
+                            value={mediaField(b.sfxUrl)}
+                            onChange={(e) =>
+                              mutate((d) => {
+                                const s = d.scenes.find((x) => x.id === scene.id)!;
+                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = e.target.value || undefined;
+                              })
+                            }
+                          />
+                          <MediaUploadButton
+                            storyId={story.id}
+                            accept="audio/*"
+                            label="⇧ Upload"
+                            onUploaded={(_url, assetId) =>
+                              mutate((d) => {
+                                const s = d.scenes.find((x) => x.id === scene.id)!;
+                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = `asset:${assetId}`;
+                              })
+                            }
+                          />
+                        </div>
+                        <div className="mt-1">
+                          <AssetDropdown
+                            storyId={story.id}
+                            assetType="audio"
+                            returnReference
+                            value={b.sfxUrl}
+                            onChange={(url) =>
+                              mutate((d) => {
+                                const s = d.scenes.find((x) => x.id === scene.id)!;
+                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = url || undefined;
+                              })
+                            }
+                            placeholder="Or pick uploaded audio..."
+                          />
+                        </div>
+                        {b.sfxUrl ? (
+                          <div className="mt-1 flex items-center gap-2">
+                            <button
+                              type="button"
+                              className="border border-cyan-neon/40 px-2 py-0.5 font-pulp text-[8px] uppercase tracking-widest text-cyan-neon hover:bg-cyan-neon/10"
+                              title="Hear it exactly as the game will play it"
+                              onClick={() => audio.playSfx(media(b.sfxUrl) ?? b.sfxUrl!, b.sfxVolume ?? 1)}
+                            >
+                              ▶ Test
+                            </button>
+                            <label className="flex flex-1 items-center gap-2 font-type text-[9px] text-paper/60">
+                              Volume {Math.round((b.sfxVolume ?? 1) * 100)}%
+                              <input
+                                type="range"
+                                min={0}
+                                max={1}
+                                step={0.05}
+                                aria-label={`Sound effect volume for beat ${b.id}`}
+                                className="flex-1 accent-cyan-neon"
+                                value={b.sfxVolume ?? 1}
+                                onChange={(e) =>
+                                  mutate((d) => {
+                                    const s = d.scenes.find((x) => x.id === scene.id)!;
+                                    const v = Number(e.target.value);
+                                    s.dialogueBeats!.find((x) => x.id === b.id)!.sfxVolume = v === 1 ? undefined : v;
+                                  })
+                                }
+                              />
+                            </label>
+                            <button
+                              type="button"
+                              className="border border-crimson/40 px-2 py-0.5 font-pulp text-[8px] uppercase tracking-widest text-crimson hover:bg-crimson/10"
+                              onClick={() =>
+                                mutate((d) => {
+                                  const beat = d.scenes.find((x) => x.id === scene.id)!.dialogueBeats!.find((x) => x.id === b.id)!;
+                                  beat.sfxUrl = undefined;
+                                  beat.sfxVolume = undefined;
+                                })
+                              }
+                            >
+                              ✕ Remove
+                            </button>
+                          </div>
+                        ) : null}
                       </Field>
                       {/* Audio tags — v3 performs sound cues (laugh/cough);
                           older models get only voice-delivery direction like

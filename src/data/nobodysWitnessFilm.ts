@@ -1004,10 +1004,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "Prologue — The Hive, remembered",
    "background": "/film/img/s1/377-the-hive-remembered.jpg",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.8,
-    "opacity": 0.5
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 2.2,
@@ -1075,10 +1071,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -1871,10 +1863,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. SMALL BAR, KANDA - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -2255,10 +2243,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. VERA'S APARTMENT BUILDING - DUSK",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -2408,10 +2392,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -2812,10 +2792,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. POLICE STATION, FRONT COUNTER - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -3090,10 +3066,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. POLICE STATION, INTERVIEW ROOM - MOMENTS LATER",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -3871,10 +3843,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3+file:/film/sfx/police-radio-low.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -4039,10 +4007,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. SMALL BAR, KANDA - DAY",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -4232,10 +4196,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. KANDA STREET - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -4434,10 +4394,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. JACK'S OFFICE - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -4979,10 +4935,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. JACK'S OFFICE - LATER",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -5323,10 +5275,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3+file:/film/sfx/vending-hum.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -5634,10 +5582,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. MARA'S APARTMENT - DAY",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -6001,10 +5945,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT./EXT. JACK'S CAR, KANDA - NIGHT",
    "ambientAudio": "rain",
    "particles": "drizzle",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -6839,10 +6779,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. THE HIVE - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -6972,10 +6908,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -7179,10 +7111,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -7441,10 +7369,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. JACK'S OFFICE - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -7646,10 +7570,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. KANEKO'S NOODLE COUNTER - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -7711,10 +7631,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -8171,10 +8087,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. JACK'S OFFICE - DAY",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -8329,10 +8241,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ALL-NIGHT NOODLE COUNTER, UNDER THE TRACKS - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -8722,10 +8630,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. YAKITORI STALL, UNDER THE TRACKS - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3+file:/film/sfx/walla-izakaya.mp3",
    "particles": "smoke",
-   "particleConfig": {
-    "density": 0.7,
-    "opacity": 0.45
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -9135,7 +9039,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "particleConfig": {
+    "density": 0.7,
+    "opacity": 0.45
+   }
   },
   {
    "id": "nw_s25",
@@ -9144,10 +9052,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -9566,10 +9470,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. TINY BREAKFAST COUNTER, NEAR THE STATION - MORNING",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-breakfast-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -9891,10 +9791,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. YAMANOTE LINE TRAIN - DAY",
    "ambientAudio": "file:/film/sfx/loop-train-yamanote.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -10158,10 +10054,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. PEDESTRIAN CROSSING - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -10263,10 +10155,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. SMALL BAR, KANDA - DAY",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -10566,10 +10454,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. FISHING TOWN, BOSO COAST - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-harbour.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -10624,10 +10508,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. MRS. SAKAI'S HOUSE - DAY",
    "ambientAudio": "",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -10908,10 +10788,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. COUNTRY HIGHWAY - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11003,10 +10879,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. ROADSIDE INN - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11089,10 +10961,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11211,10 +11079,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ROADSIDE INN, CORRIDOR AND BATH - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11309,10 +11173,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ROADSIDE INN, JACK'S ROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11400,10 +11260,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ROADSIDE INN, LOBBY - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11448,10 +11304,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11638,10 +11490,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ROADSIDE INN, KITCHEN DOORWAY - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11748,10 +11596,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. ROADSIDE INN - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -11827,10 +11671,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -11925,10 +11765,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12016,10 +11852,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12061,10 +11893,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12108,10 +11936,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12153,10 +11977,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12198,10 +12018,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12245,10 +12061,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12292,10 +12104,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12339,10 +12147,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12386,10 +12190,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12433,10 +12233,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12480,10 +12276,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12525,10 +12317,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12568,10 +12356,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12611,10 +12395,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12654,10 +12434,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12697,10 +12473,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12761,10 +12533,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12827,10 +12595,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12893,10 +12657,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -12941,10 +12701,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -12986,10 +12742,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -13031,10 +12783,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -13074,10 +12822,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13119,10 +12863,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -13166,10 +12906,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13213,10 +12949,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -13260,10 +12992,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13307,10 +13035,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13352,10 +13076,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13399,10 +13119,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -13446,10 +13162,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -13491,10 +13203,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13536,10 +13244,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.05,
@@ -13568,10 +13272,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. PICKUP TRUCK - MOVING - DAWN",
    "ambientAudio": "file:/film/sfx/loop-pickup-truck.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -13694,10 +13394,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAWN",
    "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -13786,10 +13482,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT - DAWN",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -13856,10 +13548,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT, BATHROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -14197,10 +13885,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -14418,10 +14102,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. OLD TOBACCO KIOSK - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -14528,10 +14208,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, PASSAGES - DAY",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -14669,10 +14345,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -14812,10 +14484,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -14894,10 +14562,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -15024,10 +14688,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. THE HIVE - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -15262,10 +14922,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -15430,10 +15086,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. ISHIDA'S CAR - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -15675,10 +15327,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. PEDESTRIAN CROSSING - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -15862,10 +15510,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. KATO RENTAL LOCKERS, UENO - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-viaduct.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16021,10 +15665,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. UENO, UNDER THE RAILWAY ARCHES - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16230,10 +15870,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. SMALL BAR, KANDA - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16344,10 +15980,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT - EVENING",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16458,10 +16090,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.2,
@@ -16595,10 +16223,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. HOTEL LOUNGE - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16778,10 +16402,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16860,10 +16480,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -16994,10 +16610,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, PASSAGES - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -17186,10 +16798,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -17527,10 +17135,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, PASSAGE - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -17905,10 +17509,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. HOTEL LOUNGE - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -18128,10 +17728,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "cut",
    "transitionSpeed": 0.2,
@@ -18195,10 +17791,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. TOKYO STREETS - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -18398,10 +17990,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. EMPTY STREET UNDER THE TRACKS - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/vending-hum.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -18940,10 +18528,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT./EXT. VARIOUS - NIGHT - SERIES OF SHOTS",
    "ambientAudio": "rain",
    "particles": "drizzle",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -19206,10 +18790,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -19381,10 +18961,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. JACK'S OFFICE - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -19534,10 +19110,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. VERA'S APARTMENT BUILDING, CORRIDOR - DAWN",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -19669,10 +19241,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -19980,10 +19548,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - DAY",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -20214,10 +19778,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. SMALL BAR, KANDA - DAY",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -20342,10 +19902,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -20675,10 +20231,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. TOTO SHIMBUN NEWSROOM, CORRIDOR - LATER",
    "ambientAudio": "file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -20910,10 +20462,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAY",
    "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -21238,10 +20786,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -21781,10 +21325,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -21831,10 +21371,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -21887,10 +21423,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -21932,10 +21464,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -21975,10 +21503,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22018,10 +21542,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22061,10 +21581,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22104,10 +21620,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22185,10 +21697,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22241,10 +21749,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22286,10 +21790,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22352,10 +21852,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22397,10 +21893,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22444,10 +21936,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22487,10 +21975,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-hive-stairwell.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22552,10 +22036,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22608,10 +22088,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22664,10 +22140,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22737,10 +22209,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22793,10 +22261,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22838,10 +22302,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22885,10 +22345,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22932,10 +22388,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -22977,10 +22429,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -23035,10 +22483,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -23086,10 +22530,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -23158,10 +22598,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -23232,10 +22668,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -23304,10 +22736,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 0.3,
@@ -23330,10 +22758,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "hotspots": [],
    "noTypewriter": true,
@@ -23394,10 +22818,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. POLICE STATION - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -23474,10 +22894,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. POLICE STATION / INT. BLACK SEDAN - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -23667,10 +23083,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. TOKYO STREET - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
    "particles": "rain",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -23745,10 +23157,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - MORNING",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -23884,10 +23292,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. ROOFTOP OF JACK'S BUILDING - DAY",
    "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-rooftop-wind.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -24406,10 +23810,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "EXT. THE HIVE / THE PLAZA, WHERE THE HIVE WAS - DAY",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.9,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
@@ -24636,10 +24036,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "prose": "INT. KANEKO'S NEW COUNTER - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
-   "particleConfig": {
-    "density": 0.35,
-    "opacity": 0.55
-   },
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,

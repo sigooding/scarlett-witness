@@ -1908,7 +1908,8 @@ export interface SceneNode {
    * ember/ash (rising), snow/drizzle, fireflies — each smarter and reacting
    * to lights, dim, wind and parallax. */
   particles?: "none" | "rain" | "drizzle" | "snow" | "smoke" | "storm" | "dust" | "fog" | "ember" | "ash" | "fireflies" | "motes";
-  /** fine-tune for the new particle systems: density 0..2, wind influence, tint */
+  /** fine-tune the particle effect: density 0..2 (how many drops or motes; 1 = as designed), opacity 0..1 (how strong), wind 0..3
+   *  (rain gusts; 1 = as designed). Unset leaves every effect exactly as it was. `tint` is reserved and not applied yet. */
   particleConfig?: { density?: number; wind?: number; tint?: string; opacity?: number };
   /** STAGE NODES — the walkable-stage configuration. When the
    * scene's nodeType is "stage" this drives the whole scene: the player
