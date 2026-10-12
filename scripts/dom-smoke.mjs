@@ -709,6 +709,19 @@ win.history.replaceState(null, "", "/");
   failed |= report("CREDITS opening titles").crashed;
   r.unmount(); await sleep(200); problems.length = 0;
 
+  // (b2) Space (or Enter) skips a credits roll, as the button does. It used to finish a typing line, then "acknowledge" the roll,
+  //      which hid the Skip button and left no way out of a four-minute title sequence.
+  r = await bootCredits(nwFilm, "nw_title"); problems.length = 0;
+  const upBeforeKey = !!skipBtn();
+  const key = (init) => win.dispatchEvent(new win.KeyboardEvent("keydown", { bubbles: true, cancelable: true, ...init }));
+  key({ code: "Space", key: " " });
+  await sleep(2500);
+  const spaceLeft = upBeforeKey && !skipBtn() && !container.querySelector(".credits-card");
+  console.log("  Space skipped the title sequence:", spaceLeft);
+  if (!spaceLeft) failed = true;
+  failed |= report("CREDITS Space skips").crashed;
+  r.unmount(); await sleep(200); problems.length = 0;
+
   // (c) end credits: nobody touches it, and it still ends. Same node, three
   //     credit lines instead of 29 so the roll is 6s rather than 99s.
   const fastEnd = {

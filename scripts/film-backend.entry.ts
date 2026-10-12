@@ -184,4 +184,11 @@ const controls = read("src/studio/CinematicControls.tsx");
 check(/depthMotion: c\.depthMotion \?\? "truck"/.test(controls) && /value=\{c\.depthMotion \?\? "truck"\}/.test(controls), "the Studio starts a new map on a truck and shows it as the Move");
 check(!/depthMotion[^\n]*\?\? "push"/.test(controls + read("src/game/DepthParallax.tsx")), "nothing still falls back to a push");
 
+/* ---- 12. Jack's breath effects at the inn are few ---- */
+console.log("Jack's breath effects in the inn raid are few");
+const edits = JSON.parse(read("src/film/studio-edits.json"));
+const raid = edits.cutscenes.find((c: { id: string }) => c.id === "inn-raid");
+const jackBreaths = raid.shots.filter((shot: { sfx?: string }) => /^jack-(running|grunt|shaky-breath|sigh)/.test(shot.sfx ?? ""));
+check(jackBreaths.length <= 1, `the inn raid carries at most one breath or grunt effect on Jack (the director found too many; it has ${jackBreaths.length})`);
+
 console.log(`\nfilm backend: ${checks} checks passed`);

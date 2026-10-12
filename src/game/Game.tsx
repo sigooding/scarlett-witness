@@ -6346,6 +6346,18 @@ function CasePlayer({
       if ((e.code === "Space" || e.key === "Enter") && !overlay) {
         const tag = (e.target as HTMLElement).tagName;
         if (tag !== "BUTTON" && tag !== "INPUT" && tag !== "TEXTAREA") {
+          // A credits roll is a piece of film, not a page to read through: Space / Enter skips it, exactly as the on-screen "Skip
+          // title sequence" button does. (The page-turning below used to take the press instead: the first finished the "typing", the
+          // second "acknowledged" the roll, which also hid the Skip button, so a four-minute title sequence could no longer be left.)
+          // A held key must not chain through the next credits node too.
+          if (isCredits && scene && !scene.isEnding) {
+            e.preventDefault();
+            if (!e.repeat) {
+              audio.click();
+              skipCredits();
+            }
+            return;
+          }
           if (!proseAcknowledged && !proseDone) {
             // First press finishes the typing instead of doing nothing —
             // the player never has to hunt for "." mid-sentence.
@@ -6405,7 +6417,7 @@ function CasePlayer({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [overlay, menuOpen, mixerOpen, partBreak, actMap, pendingAct, proseAcknowledged, proseDone, inBeats, choicesLive, cutInLive, availableChoices, choiceFocus, advanceBeat, pickChoice, pickCutIn, skipCurrentText, goBack, goToSceneStart, doRewindDecision, story, dialogueLog.length, soundOn, enableSound, triggerHint]);
+  }, [overlay, menuOpen, mixerOpen, partBreak, actMap, pendingAct, proseAcknowledged, proseDone, inBeats, isCredits, scene, skipCredits, choicesLive, cutInLive, availableChoices, choiceFocus, advanceBeat, pickChoice, pickCutIn, skipCurrentText, goBack, goToSceneStart, doRewindDecision, story, dialogueLog.length, soundOn, enableSound, triggerHint]);
 
   // Characters "on stage": anyone with talking frames (or a resting pose) who
   // speaks in this scene. The active speaker cycles their keyframes; the rest

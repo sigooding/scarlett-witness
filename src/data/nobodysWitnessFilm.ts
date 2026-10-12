@@ -12210,8 +12210,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Through the bathroom door.",
      "silent": true,
-     "sfxUrl": "/film/sfx/jack-running.mp3",
-     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.43,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
@@ -12721,8 +12719,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "In that half-second, Jack has him.",
      "silent": true,
-     "sfxUrl": "/film/sfx/jack-grunt.mp3",
-     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.93,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
