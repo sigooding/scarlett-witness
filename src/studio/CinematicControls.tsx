@@ -873,10 +873,11 @@ export function CinematicControls({
               set(
                 v && !c.depthMap
                   ? {
-                      // A newly added map starts on the suggested move (docs/depth-camera.md, "Choose the move"): a push in
-                      // over a slight pan of the same length. Anything already set is kept; dolly cannot carry a depth layer.
+                      // A newly added map starts on the suggested move (docs/depth-camera.md, "Choose the move"): a truck
+                      // (the default move) over a slight pan of the same length. Anything already set is kept; dolly cannot
+                      // carry a depth layer. The focal point is only used if the move is changed to a push.
                       depthMap: v,
-                      depthMotion: c.depthMotion ?? "push",
+                      depthMotion: c.depthMotion ?? "truck",
                       depthAmount: c.depthAmount ?? 0.4,
                       depthSeconds: c.depthSeconds ?? 14,
                       focalPoint: c.focalPoint ?? "50% 55%",
@@ -955,11 +956,11 @@ export function CinematicControls({
             <Field label="Move">
               <select
                 className={inputCls}
-                value={c.depthMotion ?? "push"}
+                value={c.depthMotion ?? "truck"}
                 onChange={(e) => set({ depthMotion: e.target.value as CinematicSettings["depthMotion"] })}
               >
+                <option value="truck">↔ Truck — slide sideways around the still plane, then hold (default)</option>
                 <option value="push">⇥ Push — a slow dolly in toward the focal point, then hold</option>
-                <option value="truck">↔ Truck — slide sideways around the still plane, then hold</option>
                 <option value="drift">∿ Drift — a slow loop from side to side</option>
               </select>
             </Field>
@@ -974,7 +975,7 @@ export function CinematicControls({
                 onChange={(e) => set({ depthAmount: Number(e.target.value) })}
               />
             </Field>
-            <Field label={`${(c.depthMotion ?? "push") === "drift" ? "One loop" : "Move length"} ${c.depthSeconds ?? 14}s`}>
+            <Field label={`${(c.depthMotion ?? "truck") === "drift" ? "One loop" : "Move length"} ${c.depthSeconds ?? 14}s`}>
               <input
                 type="range"
                 min={4}
@@ -985,7 +986,7 @@ export function CinematicControls({
                 onChange={(e) => set({ depthSeconds: Number(e.target.value) })}
               />
             </Field>
-            {(c.depthMotion ?? "push") !== "push" && (
+            {(c.depthMotion ?? "truck") !== "push" && (
               <>
                 <Field label="Direction">
                   <select
@@ -1010,7 +1011,7 @@ export function CinematicControls({
                 </Field>
               </>
             )}
-            {(c.depthMotion ?? "push") === "push" && (
+            {(c.depthMotion ?? "truck") === "push" && (
               <p className="font-type text-[9px] leading-snug text-paper/45">The push closes in on the focal point (📷 Camera).</p>
             )}
           </>
