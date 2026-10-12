@@ -479,6 +479,9 @@ export function CinematicOverlays({ cinematic }: { cinematic?: CinematicSettings
           style={{ "--film-strength": strength } as React.CSSProperties}
         />
       )}
+      {/* The print's exposure flicker: a black veil, never the plate's own opacity (a plate that is not fully
+          opaque shows the picture underneath it, which was the scene's own shot flickering over the beat's). */}
+      {film && <div className="film-flicker" aria-hidden />}
     </>
   );
 }

@@ -168,4 +168,13 @@ check(/pictureReady\(url\)/.test(game) && /preloadPicture\(url\)\.then\(mount\)/
 check(/preloadPicture\(url\)/.test(game) && /visibleBeats\.slice\(beatIdx, beatIdx \+ 5\)/.test(game), "and the next beats' pictures, and the next node's, are fetched while the player reads");
 check(existsSync(join(ROOT, "src/game/preloadPicture.ts")), "preloadPicture.ts holds the preloading");
 
+/* ---- 10. the film grade's flicker never fades the plate ---- */
+console.log("The 35mm film grade flickers a veil, never the picture");
+const css = read("src/index.css");
+const rule = (sel: string) => (css.match(new RegExp(`(^|\\n)${sel.replace(/[.>]/g, "\\$&")} \\{([^}]*)\\}`)) ?? [])[2] ?? "";
+const gradeRule = rule(".film-grade");
+check(/film-gate-weave/.test(gradeRule) && !/film-flicker/.test(gradeRule) && !/opacity/.test(gradeRule), "the film-graded plate weaves but is never faded (its opacity once flickered over whatever was beneath it)");
+check(/film-flicker/.test(rule(".film-grade > .film-flicker")) && /background:\s*#000/.test(rule(".film-flicker")), "the exposure flicker is a black veil above the plate");
+check(/<div className="film-flicker"/.test(game), "CinematicOverlays renders the veil with the scratches");
+
 console.log(`\nfilm backend: ${checks} checks passed`);
