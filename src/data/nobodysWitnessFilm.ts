@@ -562,249 +562,197 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 1940,
    "y": 2900
   },
-  "nw_song_midnight_01": {
+  "nw_s77_after": {
    "x": 2320,
    "y": 2900
   },
-  "nw_song_midnight_02": {
+  "nw_s78": {
    "x": 2700,
    "y": 2900
   },
-  "nw_song_midnight_03": {
+  "nw_s79": {
    "x": 3080,
    "y": 2900
-  },
-  "nw_song_midnight_04": {
-   "x": 3460,
-   "y": 2900
-  },
-  "nw_song_midnight_05": {
-   "x": 3840,
-   "y": 2900
-  },
-  "nw_song_midnight_06": {
-   "x": 4220,
-   "y": 2900
-  },
-  "nw_song_midnight_07": {
-   "x": 40,
-   "y": 3160
-  },
-  "nw_song_midnight_08": {
-   "x": 420,
-   "y": 3160
-  },
-  "nw_song_midnight_09": {
-   "x": 800,
-   "y": 3160
-  },
-  "nw_song_midnight_10": {
-   "x": 1180,
-   "y": 3160
-  },
-  "nw_song_midnight_11": {
-   "x": 1560,
-   "y": 3160
-  },
-  "nw_song_midnight_12": {
-   "x": 1940,
-   "y": 3160
-  },
-  "nw_song_midnight_13": {
-   "x": 2320,
-   "y": 3160
-  },
-  "nw_song_midnight_14": {
-   "x": 2700,
-   "y": 3160
-  },
-  "nw_song_midnight_15": {
-   "x": 3080,
-   "y": 3160
-  },
-  "nw_song_midnight_16": {
-   "x": 3460,
-   "y": 3160
   },
   "nw_s80": {
-   "x": 3840,
-   "y": 3160
+   "x": 3460,
+   "y": 2900
   },
   "nw_s81": {
+   "x": 3840,
+   "y": 2900
+  },
+  "nw_s82": {
+   "x": 4220,
+   "y": 2900
+  },
+  "nw_s82a": {
+   "x": 40,
+   "y": 3160
+  },
+  "nw_s83": {
+   "x": 420,
+   "y": 3160
+  },
+  "nw_s84": {
+   "x": 800,
+   "y": 3160
+  },
+  "nw_song_raid_01": {
+   "x": 1180,
+   "y": 3160
+  },
+  "nw_song_raid_02": {
+   "x": 1560,
+   "y": 3160
+  },
+  "nw_song_raid_03": {
+   "x": 1940,
+   "y": 3160
+  },
+  "nw_song_raid_04": {
+   "x": 2320,
+   "y": 3160
+  },
+  "nw_song_raid_05": {
+   "x": 2700,
+   "y": 3160
+  },
+  "nw_song_raid_06": {
+   "x": 3080,
+   "y": 3160
+  },
+  "nw_song_raid_07": {
+   "x": 3460,
+   "y": 3160
+  },
+  "nw_song_raid_08": {
+   "x": 3840,
+   "y": 3160
+  },
+  "nw_song_raid_09": {
    "x": 4220,
    "y": 3160
   },
-  "nw_s82": {
-   "x": 40,
-   "y": 3420
-  },
-  "nw_s82a": {
-   "x": 420,
-   "y": 3420
-  },
-  "nw_s83": {
-   "x": 800,
-   "y": 3420
-  },
-  "nw_s84": {
-   "x": 1180,
-   "y": 3420
-  },
-  "nw_song_raid_01": {
-   "x": 1560,
-   "y": 3420
-  },
-  "nw_song_raid_02": {
-   "x": 1940,
-   "y": 3420
-  },
-  "nw_song_raid_03": {
-   "x": 2320,
-   "y": 3420
-  },
-  "nw_song_raid_04": {
-   "x": 2700,
-   "y": 3420
-  },
-  "nw_song_raid_05": {
-   "x": 3080,
-   "y": 3420
-  },
-  "nw_song_raid_06": {
-   "x": 3460,
-   "y": 3420
-  },
-  "nw_song_raid_07": {
-   "x": 3840,
-   "y": 3420
-  },
-  "nw_song_raid_08": {
-   "x": 4220,
-   "y": 3420
-  },
-  "nw_song_raid_09": {
-   "x": 40,
-   "y": 3680
-  },
   "nw_song_raid_10": {
-   "x": 420,
-   "y": 3680
+   "x": 40,
+   "y": 3420
   },
   "nw_song_raid_11": {
-   "x": 800,
-   "y": 3680
+   "x": 420,
+   "y": 3420
   },
   "nw_song_raid_12": {
-   "x": 1180,
-   "y": 3680
+   "x": 800,
+   "y": 3420
   },
   "nw_song_raid_13": {
-   "x": 1560,
-   "y": 3680
+   "x": 1180,
+   "y": 3420
   },
   "nw_song_raid_14": {
-   "x": 1940,
-   "y": 3680
+   "x": 1560,
+   "y": 3420
   },
   "nw_song_raid_15": {
-   "x": 2320,
-   "y": 3680
+   "x": 1940,
+   "y": 3420
   },
   "nw_song_raid_16": {
-   "x": 2700,
-   "y": 3680
+   "x": 2320,
+   "y": 3420
   },
   "nw_song_raid_17": {
-   "x": 3080,
-   "y": 3680
+   "x": 2700,
+   "y": 3420
   },
   "nw_song_raid_18": {
-   "x": 3460,
-   "y": 3680
+   "x": 3080,
+   "y": 3420
   },
   "nw_song_raid_19": {
-   "x": 3840,
-   "y": 3680
+   "x": 3460,
+   "y": 3420
   },
   "nw_song_raid_20": {
+   "x": 3840,
+   "y": 3420
+  },
+  "nw_song_raid_21": {
+   "x": 4220,
+   "y": 3420
+  },
+  "nw_song_raid_22": {
+   "x": 40,
+   "y": 3680
+  },
+  "nw_song_raid_23": {
+   "x": 420,
+   "y": 3680
+  },
+  "nw_song_raid_24": {
+   "x": 800,
+   "y": 3680
+  },
+  "nw_song_raid_25": {
+   "x": 1180,
+   "y": 3680
+  },
+  "nw_song_raid_26": {
+   "x": 1560,
+   "y": 3680
+  },
+  "nw_song_raid_27": {
+   "x": 1940,
+   "y": 3680
+  },
+  "nw_song_raid_28": {
+   "x": 2320,
+   "y": 3680
+  },
+  "nw_song_raid_29": {
+   "x": 2700,
+   "y": 3680
+  },
+  "nw_s92_after": {
+   "x": 3080,
+   "y": 3680
+  },
+  "nw_s93": {
+   "x": 3460,
+   "y": 3680
+  },
+  "nw_s94": {
+   "x": 3840,
+   "y": 3680
+  },
+  "nw_s95": {
    "x": 4220,
    "y": 3680
   },
-  "nw_song_raid_21": {
-   "x": 40,
-   "y": 3940
-  },
-  "nw_song_raid_22": {
-   "x": 420,
-   "y": 3940
-  },
-  "nw_song_raid_23": {
-   "x": 800,
-   "y": 3940
-  },
-  "nw_song_raid_24": {
-   "x": 1180,
-   "y": 3940
-  },
-  "nw_song_raid_25": {
-   "x": 1560,
-   "y": 3940
-  },
-  "nw_song_raid_26": {
-   "x": 1940,
-   "y": 3940
-  },
-  "nw_song_raid_27": {
-   "x": 2320,
-   "y": 3940
-  },
-  "nw_song_raid_28": {
-   "x": 2700,
-   "y": 3940
-  },
-  "nw_song_raid_29": {
-   "x": 3080,
-   "y": 3940
-  },
-  "nw_s92_after": {
-   "x": 3460,
-   "y": 3940
-  },
-  "nw_s93": {
-   "x": 3840,
-   "y": 3940
-  },
-  "nw_s94": {
-   "x": 4220,
-   "y": 3940
-  },
-  "nw_s95": {
-   "x": 40,
-   "y": 4200
-  },
   "nw_s96": {
-   "x": 420,
-   "y": 4200
+   "x": 40,
+   "y": 3940
   },
   "nw_s98": {
-   "x": 800,
-   "y": 4200
+   "x": 420,
+   "y": 3940
   },
   "nw_s99a": {
-   "x": 1180,
-   "y": 4200
+   "x": 800,
+   "y": 3940
   },
   "nw_s100": {
-   "x": 1560,
-   "y": 4200
+   "x": 1180,
+   "y": 3940
   },
   "nw_credits": {
-   "x": 1940,
-   "y": 4200
+   "x": 1560,
+   "y": 3940
   },
   "nw_end": {
-   "x": 2320,
-   "y": 4200
+   "x": 1940,
+   "y": 3940
   }
  },
  "dialogueBox": {
@@ -19591,651 +19539,535 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "expression": "v.o.",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.57,
-     "afterBeatTargetSceneId": "nw_song_midnight_01"
+     "afterBeatTargetSceneId": "nw_s77_after"
     }
    ]
   },
   {
-   "id": "nw_song_midnight_01",
-   "title": "The envelope and the notebook: He opens the drawer. A clean envelope. S",
-   "background": "/film/img/s77/86-the-clean-envelope.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "35% 50%",
-    "zoomDuration": 21,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
+   "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "hotspots": [],
    "choices": [],
+   "id": "nw_s77_after",
+   "title": "77 — The envelope (after the song)",
+   "background": "/film/img/s77/85-the-desk-lamp.jpg",
+   "prose": "",
+   "transition": "cut",
+   "transitionSpeed": 0.2,
    "dialogueBeats": [
     {
-     "id": "nw_song_b1",
+     "id": "nw_b1278",
      "characterId": "nw_narrator",
-     "text": "He opens the drawer. A clean envelope. Sakai's letter folded inside the notebook's cover.",
+     "text": "He opens the drawer. Takes out a clean envelope.",
      "silent": true,
+     "background": "/film/img/s77/86-the-clean-envelope.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 21,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/drawer-open.mp3",
-     "sfxVolume": 0.6,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_02"
-    }
-   ],
-   "musicMode": "track",
-   "musicUrl": "/film/audio/midnight-in-the-rain.mp3",
-   "musicLevel": 0.9,
-   "musicFadeSeconds": 3,
-   "musicLoop": false
-  },
-  {
-   "id": "nw_song_midnight_02",
-   "title": "The envelope and the notebook: He holds a pen over the envelope for a l",
-   "background": "/film/img/s77/87-he-writes-nothing.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "50% 45%",
-    "zoomDuration": 17,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-office.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "sfxVolume": 0.6
+    },
     {
-     "id": "nw_song_b2",
+     "id": "nw_b1279",
      "characterId": "nw_narrator",
-     "text": "He holds a pen over the envelope for a long time. He writes nothing.",
-     "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_03"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_03",
-   "title": "The envelope and the notebook: Grey light. The third-floor walkway. Rai",
-   "background": "/film/img/s78/88-the-walkway.jpg",
-   "cinematic": {
-    "mode": "pan",
-    "focalPoint": "42% 38%",
-    "zoomDuration": 15,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
-   "particles": "rain",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "text": "Takes Sakai's letter from his coat, smooths it once more along its crease, and folds it inside the notebook's cover.",
+     "silent": true
+    },
     {
-     "id": "nw_song_b3",
+     "id": "nw_b1280",
      "characterId": "nw_narrator",
-     "text": "Grey light. The third-floor walkway. Rain dripping from the railing.",
-     "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_04"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_04",
-   "title": "The envelope and the notebook: He sets the envelope on the mat, squares",
-   "background": "/film/img/s78/316-squared-to-the-door.jpg",
-   "cinematic": {
-    "mode": "pan",
-    "focalPoint": "50% 45%",
-    "zoomDuration": 17,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
-   "particles": "rain",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
-    {
-     "id": "nw_song_b4",
-     "characterId": "nw_narrator",
-     "text": "He sets the envelope on the mat, squares it to the door, and goes.",
+     "text": "Puts the notebook in the envelope.",
      "silent": true,
      "sfxUrl": "/film/sfx/envelope-mat.mp3",
-     "sfxVolume": 0.5,
+     "sfxVolume": 0.5
+    },
+    {
+     "id": "nw_b1281",
+     "characterId": "nw_narrator",
+     "text": "He picks up a pen to write something on the envelope. He holds it over the paper for a long time.",
+     "silent": true,
+     "background": "/film/img/s77/87-he-writes-nothing.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1282",
+     "characterId": "nw_narrator",
+     "text": "He writes nothing.",
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s78",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_05"
+     "afterBeatDelaySeconds": 1
     }
-   ]
+   ],
+   "musicMode": "none",
+   "musicFadeSeconds": 3
   },
   {
-   "id": "nw_song_midnight_05",
-   "title": "The envelope and the notebook: On the doormat: a plain envelope. No nam",
-   "background": "/film/img/s78/89-no-name.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "42% 38%",
-    "zoomDuration": 21,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
+   "id": "nw_s78",
+   "title": "78 — No name",
+   "background": "/film/img/s78/88-the-walkway.jpg",
+   "prose": "EXT. VERA'S APARTMENT BUILDING, CORRIDOR - DAWN",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade-black",
+   "transitionSpeed": 1.1,
+   "musicMode": "none",
+   "musicFadeSeconds": 4,
+   "musicLoop": false,
    "dialogueBeats": [
     {
-     "id": "nw_song_b5",
+     "id": "nw_b1283",
+     "characterId": "nw_narrator",
+     "text": "Grey light. An open-air walkway along the third floor. Rain dripping from the railing.",
+     "silent": true,
+     "background": "/film/img/s78/88-the-walkway.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 15,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1284",
+     "characterId": "nw_narrator",
+     "text": "Jack at Vera's door. He doesn't knock. He sets the envelope on the mat, squares it to the door, and goes.",
+     "silent": true,
+     "background": "/film/img/s78/316-squared-to-the-door.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/envelope-mat.mp3",
+     "sfxVolume": 0.5
+    },
+    {
+     "id": "nw_b1285",
+     "characterId": "nw_narrator",
+     "text": "Vera opens her door. She is still in the dress. She hasn't slept.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1286",
      "characterId": "nw_narrator",
      "text": "On the doormat: a plain envelope. No name.",
      "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_06"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_06",
-   "title": "The envelope and the notebook: She sees the name inside the cover, and ",
-   "background": "/film/img/s78/90-daniel-voss.jpg",
-   "cinematic": {
-    "mode": "pan",
-    "focalPoint": "50% 45%",
-    "zoomDuration": 17,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
-   "particles": "rain",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "background": "/film/img/s78/89-no-name.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 21,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
     {
-     "id": "nw_song_b6",
+     "id": "nw_b1287",
+     "characterId": "nw_narrator",
+     "text": "She picks it up. Opens it. The cloth-covered notebook. And tucked inside its cover, a folded sheet of lined paper.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1288",
      "characterId": "nw_narrator",
      "text": "She sees the name inside the cover, and her whole body goes still.",
      "silent": true,
+     "background": "/film/img/s78/90-daniel-voss.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1289",
+     "characterId": "nw_narrator",
+     "text": "DANIEL VOSS.",
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s79",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_07"
+     "afterBeatDelaySeconds": 1
     }
-   ]
+   ],
+   "hotspots": [],
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "choices": []
   },
   {
-   "id": "nw_song_midnight_07",
-   "title": "The envelope and the notebook: Vera sits at the low table in the dawn l",
+   "id": "nw_s79",
+   "title": "79 — Her father's handwriting",
    "background": "/film/img/s79/91-grey-light.jpg",
-   "cinematic": {
-    "mode": "dolly",
-    "focalPoint": "50% 60%",
-    "zoomDuration": 20,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
+   "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
+   "transition": "fade-black",
+   "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
-     "id": "nw_song_b7",
+     "id": "nw_b1290",
      "characterId": "nw_narrator",
-     "text": "Vera sits at the low table in the dawn light, the two cups beside her.",
+     "text": "Vera sits at the low table in the dawn light. Beside her, the two cups from the beginning of the film, both empty now.",
      "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_08"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_08",
-   "title": "The envelope and the notebook: The letter she threw away, smoothed flat",
-   "background": "/film/img/s79/286-smoothed-flat.jpg",
-   "cinematic": {
-    "mode": "dolly-zoom",
-    "focalPoint": "42% 38%",
-    "zoomDuration": 18,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "dollyZoomAmount": 1.12,
-    "dollyZoomDuration": 7,
-    "dollyZoomDirection": "push",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "background": "/film/img/s79/91-grey-light.jpg",
+     "cinematic": {
+      "mode": "dolly",
+      "focalPoint": "50% 60%",
+      "zoomDuration": 20,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
     {
-     "id": "nw_song_b8",
+     "id": "nw_b1291",
      "characterId": "nw_narrator",
-     "text": "The letter she threw away, smoothed flat by someone else's hands.",
+     "text": "She unfolds the lined paper first.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1292",
+     "characterId": "nw_narrator",
+     "text": "Careful, laborious English handwriting. \"Miss Voss. Your father did not kill himself. I can prove it.\"",
+     "silent": true
+    },
+    {
+     "id": "nw_b1293",
+     "characterId": "nw_narrator",
+     "text": "It is the letter she threw away. Smoothed flat by someone else's hands.",
      "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_09"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_09",
-   "title": "The envelope and the notebook: Shiohama. Third visit. The residents say",
-   "background": "/film/img/s79/505-neat-slanted-careful.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "65% 50%",
-    "zoomDuration": 22,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "background": "/film/img/s79/286-smoothed-flat.jpg",
+     "cinematic": {
+      "mode": "dolly-zoom",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 18,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "dollyZoomAmount": 1.12,
+      "dollyZoomDuration": 7,
+      "dollyZoomDirection": "push",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1294",
+     "characterId": "nw_narrator",
+     "text": "She understands, all at once, why her sister was in a Kanda backstreet at one in the morning.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1295",
+     "characterId": "nw_narrator",
+     "text": "Mara went to find the truth Vera refused to look at.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1296",
+     "characterId": "nw_narrator",
+     "text": "She sets the letter down very carefully, beside the empty cups. Then she opens the notebook and turns the pages.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1297",
+     "characterId": "nw_narrator",
+     "text": "Her father's handwriting. Neat, slanted, careful.",
+     "silent": true,
+     "background": "/film/img/s79/505-neat-slanted-careful.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 22,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
     {
      "id": "nw_b1298",
      "characterId": "nw_daniel",
      "text": "Shiohama. Third visit. The residents say men came in the spring with flowers, and then in the summer with iron bars. The fire began in two places at once. Fires don't do that.",
      "audioUrl": "/film/voice/s79/286-daniel-evenly-shiohama-third-visit-the-residents.mp3",
-     "expression": "v.o.",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_midnight_10"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_10",
-   "title": "The envelope and the notebook: The claim will be paid. Everyone wants i",
-   "background": "/film/img/s79/506-faster.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "35% 50%",
-    "zoomDuration": 18,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "expression": "v.o."
+    },
+    {
+     "id": "nw_b1299",
+     "characterId": "nw_narrator",
+     "text": "She turns pages. The handwriting grows faster.",
+     "silent": true,
+     "background": "/film/img/s79/506-faster.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 18,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
     {
      "id": "nw_b1300",
      "characterId": "nw_daniel",
      "text": "The claim will be paid. Everyone wants it paid. The company, the police, the man who owns the land now. Kurose. Always Kurose.",
      "audioUrl": "/film/voice/s79/286-daniel-evenly-the-claim-will-be-paid.mp3",
-     "expression": "v.o.",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.1,
-     "afterBeatTargetSceneId": "nw_song_midnight_11"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_11",
-   "title": "The envelope and the notebook: The police have given me a young detecti",
-   "background": "/film/img/s79/506-faster.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "35% 50%",
-    "zoomDuration": 18,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "expression": "v.o."
+    },
+    {
+     "id": "nw_b1301",
+     "characterId": "nw_narrator",
+     "text": "Pages.",
+     "silent": true
+    },
     {
      "id": "nw_b1302",
      "characterId": "nw_daniel",
      "text": "The police have given me a young detective who speaks English. They call him Jack. He's bright. He believes me. We ate noodles at Kaneko's and I told him everything and he wrote it all down.",
      "audioUrl": "/film/voice/s79/286-daniel-quietly-the-police-have-given-me.mp3",
-     "expression": "v.o.",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_midnight_12"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_12",
-   "title": "The envelope and the notebook: Her hand goes to her mouth.",
-   "background": "/film/img/s79/507-her-hand-goes-to-her-mouth.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "50% 60%",
-    "zoomDuration": 20,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "expression": "v.o."
+    },
     {
-     "id": "nw_song_b9",
+     "id": "nw_b1303",
+     "characterId": "nw_narrator",
+     "text": "Vera stops. Reads that line again.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1304",
      "characterId": "nw_narrator",
      "text": "Her hand goes to her mouth.",
      "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_song_midnight_13"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_13",
-   "title": "The envelope and the notebook: Today Jack signed the report. Accidental",
-   "background": "/film/img/s79/92-underlined-twice.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "35% 50%",
-    "zoomDuration": 15,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "background": "/film/img/s79/507-her-hand-goes-to-her-mouth.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 60%",
+      "zoomDuration": 20,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1305",
+     "characterId": "nw_narrator",
+     "text": "She turns the page. The line we didn't see Jack read, underlined twice.",
+     "silent": true,
+     "background": "/film/img/s79/92-underlined-twice.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 15,
+      "panDirection": "left",
+      "panDistance": 2,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
     {
      "id": "nw_b1306",
      "characterId": "nw_daniel",
      "text": "Today Jack signed the report. Accidental fire. I don't blame him. He is twenty-eight years old and they own his whole life. But I thought, of all of them, he would stand with me.",
      "audioUrl": "/film/voice/s79/94-daniel-quietly-today-jack-signed-the-report.mp3",
-     "expression": "v.o.",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.1,
-     "afterBeatTargetSceneId": "nw_song_midnight_14"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_14",
-   "title": "The envelope and the notebook: I'll go on alone. I've done it before.",
-   "background": "/film/img/s79/92-underlined-twice.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "35% 50%",
-    "zoomDuration": 15,
-    "panDirection": "left",
-    "panDistance": 2,
-    "dollyDirection": "left",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "expression": "v.o."
+    },
+    {
+     "id": "nw_b1307",
+     "characterId": "nw_narrator",
+     "text": "Vera stares at the page.",
+     "silent": true
+    },
     {
      "id": "nw_b1308",
      "characterId": "nw_daniel",
      "text": "I'll go on alone. I've done it before.",
      "audioUrl": "/film/voice/s79/94-daniel-tired-i-ll-go-on-alone.mp3",
-     "expression": "v.o.",
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_song_midnight_15"
-    }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_15",
-   "title": "The envelope and the notebook: They followed me home again tonight. The",
-   "background": "/film/img/s79/508-almost-unrecognisable.jpg",
-   "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "42% 38%",
-    "zoomDuration": 18,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
-   "noTypewriter": true,
-   "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
+     "expression": "v.o."
+    },
+    {
+     "id": "nw_b1309",
+     "characterId": "nw_narrator",
+     "text": "The last pages. The handwriting is almost unrecognisable now.",
+     "silent": true,
+     "background": "/film/img/s79/508-almost-unrecognisable.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 18,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
     {
      "id": "nw_b1310",
      "characterId": "nw_daniel",
      "text": "They followed me home again tonight. The girls were asleep. I stood at the door a long time. If something happens to me, it will not be what they say. Tell Vera. When she is old enough. Tell her it will not be what they say.",
      "audioUrl": "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again.mp3",
-     "expression": "v.o.",
+     "expression": "v.o."
+    },
+    {
+     "id": "nw_b1311",
+     "characterId": "nw_narrator",
+     "text": "Vera closes the notebook.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1312",
+     "characterId": "nw_narrator",
+     "text": "For twenty years she believed her father chose to leave her.",
+     "silent": true
+    },
+    {
+     "id": "nw_b1313",
+     "characterId": "nw_narrator",
+     "text": "She sits in the grey light, holding the notebook against her chest, the way she held the lighter.",
+     "silent": true,
+     "background": "/film/img/s79/93-against-her-chest.jpg",
+     "cinematic": {
+      "mode": "pan",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "panDirection": "right",
+      "panDistance": 2,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "neon-noir",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b1314",
+     "characterId": "nw_narrator",
+     "text": "She has been given back her father and taken Jack away in the same hour. She doesn't know which to feel first.",
+     "silent": true,
+     "afterBeatTargetSceneId": "nw_s80",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 2.57,
-     "afterBeatTargetSceneId": "nw_song_midnight_16"
+     "afterBeatDelaySeconds": 1
     }
-   ]
-  },
-  {
-   "id": "nw_song_midnight_16",
-   "title": "The envelope and the notebook: She sits in the grey light, the notebook",
-   "background": "/film/img/s79/93-against-her-chest.jpg",
-   "cinematic": {
-    "mode": "pan",
-    "focalPoint": "50% 45%",
-    "zoomDuration": 17,
-    "panDirection": "right",
-    "panDistance": 2,
-    "dollyDirection": "right",
-    "dollyDistance": 3,
-    "dollyDuration": 24,
-    "colorGrade": "neon-noir",
-    "filmGrade": false,
-    "volumetricShafts": false
-   },
-   "prose": "",
-   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
-   "particles": "motes",
-   "hideHud": true,
-   "transition": "fade",
-   "transitionSpeed": 0.3,
+   ],
+   "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "hotspots": [],
-   "choices": [],
-   "dialogueBeats": [
-    {
-     "id": "nw_song_b10",
-     "characterId": "nw_narrator",
-     "text": "She sits in the grey light, the notebook held against her chest.",
-     "silent": true,
-     "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 9.96,
-     "afterBeatTargetSceneId": "nw_s80"
-    }
-   ]
+   "choices": []
   },
   {
    "id": "nw_s80",
@@ -20465,9 +20297,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "musicMode": "none",
-   "musicFadeSeconds": 3
+   "choices": []
   },
   {
    "id": "nw_s81",
@@ -20603,6 +20433,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
+   "musicMode": "track",
+   "musicUrl": "/film/audio/baby-fool.mp3",
+   "musicFadeSeconds": 2,
+   "musicLoop": false,
+   "musicLevel": 0.75,
    "dialogueBeats": [
     {
      "id": "nw_b1340",
@@ -20932,6 +20767,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
+   "musicMode": "none",
+   "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
      "id": "nw_b1365",
@@ -25161,5 +24998,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "6ccbd877370c"
+ "builtinRevision": "663bcc8ca34a"
 } as unknown as Story;
