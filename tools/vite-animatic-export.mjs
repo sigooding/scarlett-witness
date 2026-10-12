@@ -38,7 +38,10 @@ export function animaticExportPlugin() {
         if (req.method === "GET" && parts[0] === "jobs" && parts.length === 1) return send(res, 200, [...jobs.values()].reverse().map(view));
         if (req.method === "POST" && parts[0] === "jobs" && parts.length === 1) {
           const b = await readBody(req);
-          if (!b || !ID.test(b.from ?? "") || (b.to && !ID.test(b.to))) return send(res, 422, { error: "Choose the scenes to export." });
+          // The whole film always starts where the film itself starts (the exporter's own default): the dialog's copy of the story
+          // may be a Studio draft from an older build, and its first scene is not the shipped film's.
+          const whole = !!b?.whole && !b.to;
+          if (!b || (!whole && !ID.test(b.from ?? "")) || (b.to && !ID.test(b.to))) return send(res, 422, { error: "Choose the scenes to export." });
           const size = ["1280x720", "1920x1080"].includes(b.size) ? b.size : "1280x720";
           const fps = [12, 24, 25, 30].includes(Number(b.fps)) ? Number(b.fps) : 24;
           const pace = Math.min(2, Math.max(0.5, Number(b.pace) || 1));
@@ -46,11 +49,11 @@ export function animaticExportPlugin() {
           const id = randomUUID();
           const out = join(root, "exports/animatics", id);
           mkdirSync(out, { recursive: true });
-          const args = ["tools/export-animatic.mjs", "--from", b.from, ...(b.to ? ["--to", b.to] : []), "--size", size, "--fps", String(fps), "--pace", String(pace),
+          const args = ["tools/export-animatic.mjs", ...(whole ? [] : ["--from", b.from, ...(b.to ? ["--to", b.to] : [])]), "--size", size, "--fps", String(fps), "--pace", String(pace),
             "--out", out, "--url", `http://${req.headers.host}`, "--progress-json", ...(b.subtitles === false ? ["--no-subs"] : []), ...(b.descriptions === false ? ["--no-desc"] : []),
             ...(b.gpu ? ["--gpu"] : []), ...(parts > 1 ? ["--parts", String(parts)] : [])];
           const child = spawn(process.execPath, args, { cwd: root, env: process.env });
-          const job = { id, child, out, status: "running", options: { from: b.from, to: b.to ?? null, whole: !!b.whole && !b.to, size, fps, pace, gpu: !!b.gpu, parts, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
+          const job = { id, child, out, status: "running", options: { from: whole ? "" : b.from, to: b.to ?? null, whole, size, fps, pace, gpu: !!b.gpu, parts, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
           jobs.set(id, job);
           let buf = "";
           child.stdout.on("data", (d) => {

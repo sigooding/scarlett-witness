@@ -6,6 +6,15 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## Opening titles 1:50; no film grade, no light shafts; scenes 1 and 2 always first (12 October 2026, evening)
+
+* **Opening titles:** 110 s (1 min 50 s, `nw_title.autoAdvanceDelaySeconds` in `src/film/studio-edits.json`), down from the 3:53 song. The card roll is 27.6 s and the montage loops under the rest; the song is faded out by the prologue's 3 s fade, so it is cut at 1:50, not played to its end. The delay may only stretch the roll, never cut it short (`static check 14`).
+* **No 35mm film grade and no volumetric light shafts, anywhere.** The builder's last pass (`noGradeNoShafts` in `tools/build-film-story.mjs`) sets `filmGrade: false` and `volumetricShafts: false` on every scene's and every beat's look, whatever a Studio edit or a picture's look says; the three scenes (16, 55, 69) that switched shafts up are gone from `studio-edits.json`. The neon-noir colour tint (`colorGrade`), the light glows and the credits' gate weave stay. The engine still has both effects for other stories (a plate flickers a veil, never its own opacity).
+* **Scenes 1 and 2 first.** On a clean browser, and in the exporter, the film has opened on scene 1, scene 2, the titles, the prologue and scene 3 since 7 October (`static check 13` pins the order). Two things in a browser could still send it to the titles, both fixed:
+  * **A saved Studio copy of an older build.** The Studio writes a draft the moment the film is opened in it, and the newsstand plays a saved copy in preference to the built-in, so a copy made before 7 October (when the start moved from the titles to scene 1) kept playing the old order however often the film was rebuilt. The builder now stamps each build (`Story.builtinRevision`); the newsstand shows a notice when the browser holds a copy with another stamp, with **Use the current film** (the copy is kept under `scarlet-studio-backup-<time>-…`) and **Keep my saved copy**. A copy the Studio saves from the current build raises no notice (browser spec, "a saved copy of the film from an older build is flagged").
+  * **The export dialog read that copy too.** It listed the saved copy's scenes while the exporter renders the shipped film in a browser of its own, so "whole film" could be sent as `--from nw_title`. The dialog now lists the shipped film, and a whole-film job passes no `--from` at all (the exporter starts where the film starts).
+* **A reload never resumes into a credits roll.** The automatic checkpoint is no longer written on a credits node, and an older checkpoint left on one is ignored by ▶ Resume and the session restore (a manual save there is kept). Before, closing the tab on the opening titles and reloading sent you past scenes 1 and 2.
+
 ## Scenes 1 and 2 to *Glimmering Haze*; the inn raid to *Hounds*, with Jack running (11 October 2026, late)
 
 * **Scenes 1 and 2:** the director's *Glimmering Haze* loops under the backstreet and the bar.
@@ -101,7 +110,7 @@ Several shots often cover one paragraph of the screenplay. The visual novel hold
 
 ## Songs play once (9 October 2026)
 
-The engine loops a scene's music until another cue changes or silences it; that suits a bed but not a song: "Bad Guy" (4:28) under scenes 72–77 would start again in scene 77 if the reader took longer than the song, and the opening titles (set to 300 s over a 3:53 song) restarted theirs. A scene can now set `musicLoop: false` (`src/types.ts`): the track it starts plays once, and a click or the sound toggle never restarts a song that has finished. The film's songs (the opening titles, the scene-72 song, the raid) carry it; the opening titles now last 232 s, the song's length, and the end credits run for their roll.
+The engine loops a scene's music until another cue changes or silences it; that suits a bed but not a song: "Bad Guy" (4:28) under scenes 72–77 would start again in scene 77 if the reader took longer than the song, and the opening titles (set to 300 s over a 3:53 song) restarted theirs. A scene can now set `musicLoop: false` (`src/types.ts`): the track it starts plays once, and a click or the sound toggle never restarts a song that has finished. The film's songs (the opening titles, the scene-72 song, the raid) carry it; the opening titles last 110 s (they were 232 s, the song's length, until 12 October 2026), and the end credits run for their roll.
 
 ## Notes on the pictures, clips and sound (as of 6 October 2026)
 

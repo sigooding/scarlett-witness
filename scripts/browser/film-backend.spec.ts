@@ -170,11 +170,69 @@ test("a beat's picture is on screen only once it has loaded, so the scene's own 
   expect(seen.filter((s) => !s.complete).map((s) => s.url), "no beat picture was mounted before it had loaded").toEqual([]);
 });
 
-test("the 35mm film grade never fades a beat's picture, so the picture under it cannot flicker through", async ({ page }) => {
+/** a saved Studio copy of the film (the Studio writes one the moment the film is opened in it), changed by `edit` */
+async function saveFilmCopy(page: Page, edit: "graded" | "old-build") {
+  await page.goto("./");
+  await page.evaluate(async (how) => {
+    const { NOBODYS_WITNESS_FILM } = await import("/src/data/nobodysWitnessFilm.ts");
+    const film = JSON.parse(JSON.stringify(NOBODYS_WITNESS_FILM));
+    if (how === "graded") for (const sc of film.scenes) for (const b of sc.dialogueBeats ?? []) if (b.cinematic) b.cinematic.filmGrade = true;
+    if (how === "old-build") { delete film.builtinRevision; film.startSceneId = "nw_title"; } // how a copy saved before 7 October 2026 began
+    localStorage.setItem("scarlet-studio-draft-nobodys-witness-film", JSON.stringify(film));
+  }, edit);
+}
+
+test("a saved copy of the film from an older build is flagged, and the current film opens on scene 1", async ({ page }) => {
   test.setTimeout(120_000);
-  // The film's beat pictures all carry the film grade. Its exposure flicker used to be the plate's own opacity (0.95 to 1 every 0.38 s),
-  // and a plate that is not fully opaque shows what is underneath it: the scene's own, ungraded picture. Now the plate stays fully
-  // opaque and the flicker is a black veil above it.
+  await saveFilmCopy(page, "old-build");
+  await page.goto("./");
+  const notice = page.getByTestId("stale-copy-notice");
+  await expect(notice).toBeVisible();
+  await expect(notice).toContainText("older build");
+  // it really did start on the opening titles
+  await page.getByRole("button", { name: /^▶ Play Nobody/i }).click();
+  await expect(page.locator("[data-scene-id]")).toHaveAttribute("data-scene-id", "nw_title", { timeout: 20_000 });
+
+  // back to the newsstand; one click puts the current film back, and keeps the old copy under another name
+  await page.goto("./");
+  await expect(notice).toBeVisible();
+  await notice.getByRole("button", { name: /Use the current film/ }).click();
+  await expect(notice).toBeHidden();
+  const keys: string[] = await page.evaluate(() => Object.keys(localStorage));
+  expect(keys, "the saved copy is no longer the film's draft").not.toContain("scarlet-studio-draft-nobodys-witness-film");
+  expect(keys.some((k) => /^scarlet-studio-backup-\d+-scarlet-studio-draft-nobodys-witness-film$/.test(k)), "but it is kept, under a backup name").toBe(true);
+  await page.getByRole("button", { name: /^▶ Play Nobody/i }).click();
+  await expect(page.locator("[data-scene-id]")).toHaveAttribute("data-scene-id", "nw_s1", { timeout: 20_000 });
+
+  // a copy the Studio saves from this build is the current film's own, and raises no notice
+  await page.goto("./");
+  await page.getByRole("button", { name: /studio/i }).first().click();
+  await page.getByRole("combobox", { name: "Choose story to edit" }).selectOption("nobodys-witness-film");
+  await expect(page.getByRole("textbox", { name: "Story title", exact: true })).toHaveValue(/Nobody's Witness/);
+  await expect.poll(() => page.evaluate(() => !!localStorage.getItem("scarlet-studio-draft-nobodys-witness-film")), { timeout: 15_000 }).toBe(true);
+  await page.evaluate(() => localStorage.removeItem("scarlet-reel-session")); // a reload would otherwise reopen the Studio
+  await page.goto("./");
+  await expect(page.getByRole("button", { name: /^▶ Play Nobody/i })).toBeVisible();
+  await expect(page.getByTestId("stale-copy-notice")).toBeHidden();
+});
+
+test("the export dialog lists the shipped film from scene 1, whatever copy the browser holds", async ({ page }) => {
+  await saveFilmCopy(page, "old-build");
+  await page.goto("./");
+  await page.getByRole("button", { name: /Export animatic/ }).click();
+  const dialog = page.getByRole("dialog", { name: "Export animatic" });
+  await expect(dialog).toBeVisible();
+  // the whole film is the default, and its preview link starts on the film's own first scene
+  const link = await dialog.locator("a[href*='animatic=1']").first().getAttribute("href");
+  expect(link).toContain("scene=nw_s1");
+});
+
+test("the 35mm film grade, where a story uses it, never fades a beat's picture, so the picture under it cannot flicker through", async ({ page }) => {
+  test.setTimeout(120_000);
+  // The film itself no longer uses the grade (12 October 2026), so this plays a copy with it switched on. Its exposure flicker used to be
+  // the plate's own opacity (0.95 to 1 every 0.38 s), and a plate that is not fully opaque shows what is underneath it: the scene's
+  // own, ungraded picture. Now the plate stays fully opaque and the flicker is a black veil above it.
+  await saveFilmCopy(page, "graded");
   await page.goto("./?story=nobodys-witness-film&scene=nw_s53&seed=grade");
   await page.waitForTimeout(3000);
   for (let i = 0; i < 24 && !(await page.locator("[data-beat-bg] .film-grade").count()); i++) {

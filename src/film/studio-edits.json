@@ -51,7 +51,7 @@
       "musicFadeSeconds": 0.1,
       "musicLevel": 1.05,
       "letterbox": true,
-      "autoAdvanceDelaySeconds": 232,
+      "autoAdvanceDelaySeconds": 110,
       "autoAdvanceHideTimer": null,
       "cinematic": {
         "mode": "pan",
@@ -156,24 +156,6 @@
       "particleConfig": {
         "density": 0.7,
         "opacity": 0.45
-      }
-    },
-    "nw_s16": {
-      "cinematic": {
-        "volumetricShafts": true,
-        "shaftsIntensity": 1.5
-      }
-    },
-    "nw_s55": {
-      "cinematic": {
-        "volumetricShafts": true,
-        "shaftsIntensity": 1.5
-      }
-    },
-    "nw_s69": {
-      "cinematic": {
-        "volumetricShafts": true,
-        "shaftsIntensity": 1.5
       }
     },
     "nw_s66": {
