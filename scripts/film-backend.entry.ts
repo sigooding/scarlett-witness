@@ -161,4 +161,11 @@ check((read("src/studio/CinematicControls.tsx").match(/groups=\{FILM_DEPTH\}/g) 
 const depthFiles = readdirSync(join(ROOT, "public/film/depth"), { recursive: true }).filter((f) => /depth\.png$/.test(String(f)));
 check(depthFiles.length > 40, `${depthFiles.length} depth maps are on offer`);
 
+/* ---- 9. the player never lets the scene's own picture show through a beat's ---- */
+console.log("The player holds the picture before until the next one has loaded");
+const game = read("src/game/Game.tsx");
+check(/pictureReady\(url\)/.test(game) && /preloadPicture\(url\)\.then\(mount\)/.test(game), "a beat's picture is mounted only once it is decoded (the one before it stays up until then)");
+check(/preloadPicture\(url\)/.test(game) && /visibleBeats\.slice\(beatIdx, beatIdx \+ 5\)/.test(game), "and the next beats' pictures, and the next node's, are fetched while the player reads");
+check(existsSync(join(ROOT, "src/game/preloadPicture.ts")), "preloadPicture.ts holds the preloading");
+
 console.log(`\nfilm backend: ${checks} checks passed`);
