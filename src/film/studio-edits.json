@@ -1439,7 +1439,10 @@
         "69-vera-runs": "Vera comes out of the hotel into the rain and starts to run.",
         "547-the-call-still-lit": "The call is still lit in her fist: ISHIDA.",
         "387-the-street-too-long": "The railway glows at the end of the street. She runs at it.",
-        "70-not-elegantly-badly": "Not elegantly. Badly. In heels, in the red dress, no coat.",
+        "70-not-elegantly-badly": [
+          "Not elegantly. Badly. In heels, in the red dress, no coat.",
+          "A car passes, its tyres hissing. She cannot hear the song over her own breath."
+        ],
         "548-the-machine-glows": "She runs past a vending machine. It glows, indifferent.",
         "549-the-crossing-chimes": "At the crossing, the old melody chimes for her.",
         "388-through-the-crossing": "She runs through it on red.",
@@ -1464,6 +1467,10 @@
           {
             "file": "heels-running-wet",
             "volume": 0.7
+          },
+          {
+            "file": "car-pass",
+            "volume": 0.8
           }
         ],
         "549-the-crossing-chimes": [

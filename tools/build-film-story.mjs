@@ -414,7 +414,10 @@ for (const seg of edits.soundtracks ?? []) {
   // LAG: measured in headless Chromium, every node takes about this much longer than its delay says (render, fade-in)
   const GAP = 0.65, CAPTION = seg.captionSeconds ?? 2.6, TRAN = 0.3, END = seg.endHold ?? 2.5, LAG = seg.lag ?? 0.18;
   const lenOf = beat => voiceDur.get(beat.audioUrl) ?? (console.warn(`soundtrack ${seg.id}: no length for ${beat.audioUrl}`), 3);
-  const caption = s => seg.captions?.[base(s.bg)];
+  // a shot's caption may be a list: the shot is then cut into that many parts on the same picture (a straight cut between them), each with its own caption
+  // and its own sound (the shot's `cues` list, one entry per part); a voiced shot shows the first one before its lines
+  const parts = s => [].concat(seg.captions?.[base(s.bg)] ?? []);
+  const caption = s => parts(s)[0];
   for (const s of shots) if (!s.lines.length && !caption(s)) console.warn(`soundtrack ${seg.id}: no caption for ${base(s.bg)}`);
   // the time the voiced shots take (their lines, the caption before them, a short hold after); the silent shots share the rest of the song
   const voiced = shots.filter(s => s.lines.length);
@@ -426,15 +429,20 @@ for (const seg of edits.soundtracks ?? []) {
   const chain = [];
   const nodeId = () => `nw_song_${seg.id}_${String(chain.length + 1).padStart(2, "0")}`;
   let beatNo2 = 0;
-  const cueOf = s => { const c = seg.cues?.[base(s.bg)] ?? []; return c.length ? { sfxUrl: P(`/sfx/${c[0].file}.mp3`), sfxVolume: c[0].volume ?? 0.8 } : {}; };
+  const cueAt = (s, k) => { const c = seg.cues?.[base(s.bg)]?.[k]; return c ? { sfxUrl: P(`/sfx/${c.file}.mp3`), sfxVolume: c.volume ?? 0.8 } : {}; };
+  const cueOf = s => cueAt(s, 0);
   const node = (s, beat, ...more) => ({
     id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, background: s.bg, cinematic: { ...camera(s.bg), ...(lookFor(s.bg)?.cinematic ?? {}) }, prose: "", ...s.look, hideHud: true, letterbox: true,
     transition: "fade", transitionSpeed: TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat], ...Object.assign({}, ...more),
   });
-  const captionBeat = (s, seconds, cue) => ({ id: `nw_song_b${++beatNo2}`, characterId: charOf(null), text: caption(s) ?? "·", silent: true, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - TRAN - 0.1 - LAG)) });
+  const captionBeat = (s, seconds, cue, text = caption(s), tran = TRAN) => ({ id: `nw_song_b${++beatNo2}`, characterId: charOf(null), text: text ?? "·", silent: true, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - tran - 0.1 - LAG)) });
   for (const s of shots) {
     let cue = cueOf(s);
-    if (!s.lines.length) { chain.push(node(s, captionBeat(s, each, cue))); continue; }
+    if (!s.lines.length) {
+      const ps = parts(s), n = Math.max(1, ps.length);
+      for (let k = 0; k < n; k++) chain.push(node(s, captionBeat(s, each / n, cueAt(s, k), ps[k], k ? 0.05 : TRAN), k ? { transition: "cut", transitionSpeed: 0.05 } : {}));
+      continue;
+    }
     if (caption(s)) { chain.push(node(s, captionBeat(s, CAPTION, cue))); cue = {}; }
     s.lines.forEach((line, k) => {
       const last = k === s.lines.length - 1, isEnd = s === voiced.at(-1);
