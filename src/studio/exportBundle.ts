@@ -100,6 +100,18 @@ export async function bundleStoryFileRefs(story: Story): Promise<PortableStoryBu
   return { story: next, assets: entries.flatMap(([ref]) => results.get(ref) ? [results.get(ref)!] : []), missing: entries.filter(([ref]) => failed.has(ref)).map(([ref]) => ref) };
 }
 
+/** How many different files an export of this story has to fetch and embed (uploads and inline data are already in the library). */
+export function countExportFiles(story: Story): number {
+  const files = new Set<string>();
+  visitStoryMediaFields(story, ({ value }) => {
+    const { raw } = unwrap(value);
+    if (isFile(raw)) files.add(raw);
+  });
+  return files.size;
+}
+/** Past this many files an export is a long wait and a very large file (the whole film is about 390 MB and two minutes), so the Studio asks first. */
+export const LARGE_EXPORT_FILES = 300;
+
 /** A complete Studio/individual-newsstand export: uploaded rows + inline
  * assets + local/remote media files, with original ids preserved for imports. */
 export async function createPortableStoryBundle(story: Story): Promise<PortableStoryBundle> {

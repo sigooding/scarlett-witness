@@ -1,15 +1,19 @@
 import { exportedReelJson } from "./export-driver";
 import { test, expect, type Page, type Locator } from "@playwright/test";
 import { FAMILY_GUY } from "../../src/data/familyGuy";
+import { HANGAR_COLD_OPEN_REEL } from "../../src/data/hangarColdOpenReel";
 
+// Family Guy is no longer in the catalogue (the app lists Nobody's Witness and the two PlayFrame reels), so these tests keep it as a
+// writer's own story: every page starts with it among the custom stories, unless the test has put something there already.
 const storyId = FAMILY_GUY.id;
+const CUSTOM_KEY = "scarlet-reel-custom-stories-v1";
 const key = `scarlet-studio-draft-${storyId}`;
 const readDraft = (page: Page) => page.evaluate((k) => JSON.parse(localStorage.getItem(k) ?? "null"), key);
-async function studio(page: Page) {
+async function studio(page: Page, id: string = storyId) {
   await page.goto("./");
   await page.getByRole("button", { name: /studio/i }).first().click();
   await expect(page.getByRole("textbox", { name: "Story title", exact: true })).toBeVisible();
-  await page.getByRole("combobox", { name: "Choose story to edit" }).selectOption(storyId);
+  await page.getByRole("combobox", { name: "Choose story to edit" }).selectOption(id);
 }
 async function selectScene(page: Page, id: string) {
   await page.getByRole("searchbox", { name: "Search scenes" }).fill("");
@@ -24,7 +28,34 @@ async function advanceTo(page: Page, target: Locator, limit = 18) {
   await expect(target).toBeVisible();
 }
 
+/** A marker with a single possible action does it at once; with several it opens a menu. Click the verb only when the menu is there. */
+async function verb(page: Page, name: string) {
+  const item = page.getByRole("button", { name, exact: true });
+  try { await item.waitFor({ state: "visible", timeout: 2_000 }); } catch { return; }
+  await item.click();
+}
+
+// Family Guy's pictures and sounds are not in the repository (public/assets is not committed). The tests only need the requests to be
+// answered, so a one-pixel picture and a silent clip stand in for them; nothing here judges how the story looks.
+const PIXEL = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==", "base64");
+function silence(): Buffer {
+  const samples = 800, wav = Buffer.alloc(44 + samples, 0x80);
+  wav.write("RIFF", 0); wav.writeUInt32LE(36 + samples, 4); wav.write("WAVEfmt ", 8); wav.writeUInt32LE(16, 16);
+  wav.writeUInt16LE(1, 20); wav.writeUInt16LE(1, 22); wav.writeUInt32LE(8000, 24); wav.writeUInt32LE(8000, 28);
+  wav.writeUInt16LE(1, 32); wav.writeUInt16LE(8, 34); wav.write("data", 36); wav.writeUInt32LE(samples, 40);
+  return wav;
+}
+const SILENCE = silence();
+
 test.beforeEach(async ({ page }) => {
+  await page.route("**/assets/family-guy/**", (route) => {
+    const url = route.request().url();
+    if (/\.(wav|mp3|ogg)(\?|$)/i.test(url)) return route.fulfill({ status: 200, contentType: "audio/wav", body: SILENCE });
+    return route.fulfill({ status: 200, contentType: "image/png", body: PIXEL });
+  });
+  await page.addInitScript(([k, story]) => {
+    try { if (!localStorage.getItem(k)) localStorage.setItem(k, JSON.stringify([story])); } catch { /* storage blocked */ }
+  }, [CUSTOM_KEY, FAMILY_GUY] as const);
   await page.addInitScript(() => {
     const plays: string[] = [];
     (window as Window & { mediaPlays: string[] }).mediaPlays = plays;
@@ -150,7 +181,8 @@ for (const width of [1280, 768, 390]) test(`Studio layout remains usable at ${wi
 });
 
 test("app upgrades preserve authored built-in drafts, publications and backups", async ({ page }) => {
-  const draft = { ...FAMILY_GUY, title: "An edited built-in after an upgrade", episodes: [] };
+  const builtIn = HANGAR_COLD_OPEN_REEL;
+  const draft = { ...builtIn, title: "An edited built-in after an upgrade", episodes: [] };
   await page.addInitScript((story) => {
     localStorage.setItem("scarlet-reel-story-snapshot-build", "ancient-build");
     localStorage.setItem("scarlet-reel-content-revision", "1");
@@ -158,10 +190,10 @@ test("app upgrades preserve authored built-in drafts, publications and backups",
     localStorage.setItem(`scarlet-reel-published-${story.id}`, JSON.stringify(story));
     localStorage.setItem("scarlet-reel-backup-qa", "do not erase");
   }, draft);
-  await studio(page);
+  await studio(page, builtIn.id);
   await expect(page.getByRole("textbox", { name: "Story title", exact: true })).toHaveValue(draft.title);
   expect(await page.evaluate(() => localStorage.getItem("scarlet-reel-backup-qa"))).toBe("do not erase");
-  expect(await page.evaluate((id) => JSON.parse(localStorage.getItem(`scarlet-reel-published-${id}`)!).title, storyId)).toBe(draft.title);
+  expect(await page.evaluate((id) => JSON.parse(localStorage.getItem(`scarlet-reel-published-${id}`)!).title, builtIn.id)).toBe(draft.title);
 });
 
 test("custom-story branch links open the authored scene, not a built-in", async ({ page }) => {
@@ -188,10 +220,9 @@ test("Family Guy adventure: collect, craft, preload next room and install", asyn
   await expect(page.getByRole("button", { name: "Close mixer", exact: true })).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page.getByRole("button", { name: "Close mixer", exact: true })).toBeHidden();
-  async function useMarker(name: string, verb: string) {
+  async function useMarker(name: string, action: string) {
     await page.getByRole("button", { name, exact: true }).click();
-    const menu = page.getByRole("button", { name: verb, exact: true });
-    await menu.click();
+    await verb(page, action);
   }
   await useMarker("Remote on the table", "Pick up");
   await expect(page.getByRole("button", { name: "Remote on the table", exact: true })).toBeHidden({ timeout: 15_000 });
@@ -212,7 +243,9 @@ test("Family Guy adventure: collect, craft, preload next room and install", asyn
   await useMarker("Down to Stewie's lab", "Go to");
   await expect(page.getByRole("button", { name: "Install the powered remote", exact: true })).toBeVisible({ timeout: 15_000 });
   await useMarker("Install the powered remote", "Use");
-  await page.getByRole("button", { name: /Powered remote/, exact: false }).last().click();
+  // With the one matching item in the pockets the engine uses it straight away; otherwise it asks which one.
+  const powered = page.getByRole("button", { name: /Powered remote/, exact: false }).last();
+  try { await powered.waitFor({ state: "visible", timeout: 2_000 }); await powered.click(); } catch { /* used already */ }
   await expect(page.getByRole("button", { name: "Tune the signal", exact: true })).toBeVisible({ timeout: 15_000 });
 });
 
@@ -269,7 +302,7 @@ test("closing a solved puzzle cancels its delayed navigation and reopening start
   await page.goto(`./?story=${storyId}&scene=fg_basement&flags=fg_installed&seed=browser`);
   async function openPuzzle() {
     await page.getByRole("button", { name: "Tune the signal", exact: true }).click();
-    await page.getByRole("button", { name: "Use", exact: true }).click();
+    await verb(page, "Use");
     await expect(page.getByRole("dialog", { name: "Stewie's signal tuner" })).toBeVisible();
   }
   await openPuzzle();
@@ -312,10 +345,10 @@ test("inventory modal is keyboard-contained, pauses QTE, and inspect is not hidd
 test("Family Guy optional receipt, keyboard deduction, lie, reply and gold ending", async ({ page }) => {
   await page.goto(`./?story=${storyId}&scene=fg_yard&flags=fg_mission,fg_remote,fg_installed&seed=browser`);
   await page.getByRole("button", { name: "Receipt in the mailbox", exact: true }).click();
-  await page.getByRole("button", { name: "Pick up", exact: true }).click();
+  await verb(page, "Pick up");
   await expect(page.getByRole("button", { name: "Receipt in the mailbox", exact: true })).toBeHidden({ timeout: 15_000 });
   await page.getByRole("button", { name: "Walk to the Drunken Clam", exact: true }).click();
-  await page.getByRole("button", { name: "Go to", exact: true }).click();
+  await verb(page, "Go to");
   const press = page.getByRole("button", { name: "🎯 Press them on that", exact: true });
   await advanceTo(page, press, 35);
   await page.keyboard.press("b");
@@ -335,7 +368,7 @@ test("Family Guy optional receipt, keyboard deduction, lie, reply and gold endin
   await page.getByRole("menuitem", { name: /Back to Stewie's lab/ }).click();
   await expect(page.getByRole("button", { name: "Tune the signal", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Tune the signal", exact: true }).click();
-  await page.getByRole("button", { name: "Use", exact: true }).click();
+  await verb(page, "Use");
   await page.getByRole("button", { name: /GREEN — home frequency/ }).click();
   await page.getByRole("button", { name: /BLUE — stabiliser/ }).click();
   await page.getByRole("button", { name: "Flag pattern", exact: true }).click();

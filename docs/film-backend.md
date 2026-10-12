@@ -1,13 +1,13 @@
 # The film and the Studio (12 October 2026)
 
-Nobody's Witness is a compiled Story like any other. Everything it uses can be made from the Studio, with these exceptions: the cutscene and soundtrack timing fit, and the cut-out depth layers, live in `src/film/studio-edits.json` and `tools/`. `npm run test:film-backend` (32 checks) and `npm run test:film-backend:browser` (the Studio, an export and the player, about a minute) guard the rest.
+Nobody's Witness is a compiled Story like any other. Everything it uses can be made from the Studio, with these exceptions: the cutscene and soundtrack timing fit, and the cut-out depth layers, live in `src/film/studio-edits.json` and `tools/`. `npm run test:film-backend` (43 checks) and `npm run test:film-backend:browser` (the Studio, an export and the player, about a minute) guard the rest.
 
 ## What the film uses
 
 | In the film | Where it is in the Studio | Notes |
 |---|---|---|
 | Scene and credits nodes (153 and 4) | Scenes tab | Every field the film sets is a field of `Scene`. |
-| Depth map on a picture (`cinematic.depthMap`, `depthMotion`, `depthAmount`, `depthSeconds`) | Scene tab, Depth-map camera | A new map starts on the suggested move (push, 0.4, 14 s, pan). The picker lists built-ins and uploads, not `/film/depth/...` paths. |
+| Depth map on a picture (`cinematic.depthMap`, `depthMotion`, `depthAmount`, `depthSeconds`) | Scene tab, Depth-map camera | A new map starts on the suggested move (push, 0.4, 14 s, pan). The depth map, clean plate and cut-out pickers also list the film's own files under `public/film/depth` (group `film-depth` in `vite.config.ts`'s image plugin, `groups` on `ImagePicker`), labelled by shot. |
 | Sound effect on a beat (`sfxUrl`, `sfxVolume`) | Beats tab, "Sound effect on this beat" | Uploaded files become `asset:` references. |
 | Ambient loop, synth preset and recorded loops (`ambientAudio` = `preset+file:<url>`) | Scene tab, Look, atmosphere and camera, "Ambient loop" | New layers editor (`src/studio/AmbientLayers.tsx`, parsing in `ambientParts.ts`). |
 | Music loops (`musicLoop`) | Scene tab, "Loop this track" | A song never restarts when this is off. |
@@ -26,6 +26,7 @@ Nobody's Witness is a compiled Story like any other. Everything it uses can be m
 
 ## Facts for later
 
-* The whole-film export is about 387 MB and takes about two minutes.
-* `scripts/dom-smoke.mjs` and `scripts/browser/studio.spec.ts` still look for stories that are no longer in the catalogue; they were not changed.
+* The whole-film export is about 387 MB and takes about two minutes; from 300 files up (`LARGE_EXPORT_FILES` in `src/studio/exportBundle.ts`) the Studio asks before it starts, and a cancelled export changes nothing.
+* The cutscene and soundtrack timing fit, and the cut-outs, still live in `studio-edits.json` and `tools/`; the Studio cannot make them.
+* `scripts/dom-smoke.mjs` and `scripts/browser/studio.spec.ts` were stale (the Neon Diner and Family Guy are no longer in the catalogue) and are fixed: both seed those stories as the writer's own, and the Studio spec answers Family Guy's missing pictures and sounds with placeholders. Run the browser specs with `PLAYWRIGHT_CHROMIUM_PATH` set to the installed Chromium when Playwright's own download is not there.
 * Never hand-edit `src/data/nobodysWitnessFilm.ts`; change `src/film/studio-edits.json` and run `node tools/build-film-story.mjs`.

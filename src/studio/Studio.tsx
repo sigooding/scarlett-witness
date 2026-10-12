@@ -135,7 +135,7 @@ import {
   useStorageAvailable,
 } from "../data/mediaLibrary";
 import { onFileMenu } from "../game/saveFiles";
-import { EXPORT_PREVIEW_LIMIT, exportPreviewText, createPortableStoryBundle } from "./exportBundle";
+import { EXPORT_PREVIEW_LIMIT, LARGE_EXPORT_FILES, countExportFiles, exportPreviewText, createPortableStoryBundle } from "./exportBundle";
 import { caseFilesAvailable, openCaseFile, parseCaseFile, saveCaseFile, suggestedCaseName, tailCasePath } from "./caseFiles";
 import type {
   Character,
@@ -4668,6 +4668,13 @@ function StudioInner({
     if (exportingRef.current) return;
     (document.activeElement as HTMLElement | null)?.blur?.();
     const snapshot = deepClone(storyRef.current);
+    const files = countExportFiles(snapshot);
+    if (files >= LARGE_EXPORT_FILES && !window.confirm(
+      `This reel uses ${files.toLocaleString()} pictures, sounds and other files from the site. Bundling them into one reel file can run to hundreds of megabytes and take a couple of minutes, and the file is slow to open. Your draft is not touched either way.\n\nExport anyway?`,
+    )) {
+      say("Export cancelled. Your draft has not changed.");
+      return;
+    }
     exportingRef.current = true;
     setExportBusy(true);
     say("Bundling this reel's artwork, sprites and sound. Your draft stays editable.");

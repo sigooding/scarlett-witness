@@ -146,8 +146,11 @@ const report = (phase, extra = "") => {
 };
 
 let failed = false;
-const mountFresh = async () => {
+// customStories: stories that are no longer in the catalogue (the Neon Diner) but still exist as data are put in the writer's own
+// stories, which a deep link can open like any other.
+const mountFresh = async (customStories) => {
   try { win.localStorage.clear(); win.sessionStorage.clear(); } catch {}
+  if (customStories) try { win.localStorage.setItem("scarlet-reel-custom-stories-v1", JSON.stringify(customStories)); } catch {}
   container.innerHTML = "";
   const root = createRoot(container);
   root.render(createElement(StrictMode, null, createElement(ErrorBoundary, null, createElement(App))));
@@ -374,8 +377,9 @@ root.unmount();
 // whole point of the feature.
 root.unmount(); await sleep(200); problems.length = 0;
 try { win.localStorage.clear(); } catch {}
+const { NEON_DINER: ndLink } = await import("../../src/data/neonDiner.ts");
 win.history.replaceState(null, "", "/?story=neon-diner&scene=nd_freezer&items=burner&flags=examined_note&meters=Clever:4&seed=domsmoke");
-root = await mountFresh();
+root = await mountFresh([ndLink]);
 await sleep(2500);
 {
   // The linked scene may open behind a title/credits card; step past it.
@@ -399,7 +403,7 @@ await sleep(2500);
 root.unmount(); await sleep(200); problems.length = 0;
 try { win.localStorage.clear(); } catch {}
 win.history.replaceState(null, "", "/?story=neon-diner&scene=no_such_scene&items=no_such_item");
-root = await mountFresh();
+root = await mountFresh([ndLink]);
 await sleep(2000);
 {
   const html = container.innerHTML;
@@ -419,7 +423,7 @@ win.history.replaceState(null, "", "/");
 // with a real choice rail rather than behind the title card.
 try { win.localStorage.clear(); } catch {}
 win.history.replaceState(null, "", "/?story=neon-diner&scene=nd_freezer&seed=domsmoke");
-root = await mountFresh(); problems.length = 0;
+root = await mountFresh([ndLink]); problems.length = 0;
 await sleep(2500);
 {
   for (let i = 0; i < 4; i++) {
