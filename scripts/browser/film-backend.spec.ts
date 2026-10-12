@@ -68,6 +68,9 @@ test("a depth map, a sound effect and a recorded loop uploaded in the Studio rea
   await page.locator("#studio-tab-scene").click();
   await page.getByRole("button", { name: /Depth-map camera/ }).click();
   await page.getByText("Pick this picture's depth map…").click();
+  // the picker also offers the film's own depth maps (public/film/depth), labelled by shot
+  await page.getByPlaceholder(/^Filter \d+ images/).fill("222-mud-and-impacts");
+  await expect(page.getByRole("button", { name: /^Depth \(s47\/222-mud-and-impacts\)/ })).toBeVisible();
   await page.getByPlaceholder(/^Filter \d+ images/).fill("depth.png");
   await page.getByRole("button", { name: /^depth\.png/ }).first().click();
 
@@ -117,4 +120,16 @@ test("a depth map, a sound effect and a recorded loop uploaded in the Studio rea
   for (let i = 0; i < 6; i++) { await page.keyboard.press("Space"); await page.waitForTimeout(250); }
   const plays: string[] = await page.evaluate(() => (window as unknown as { __plays: string[] }).__plays);
   expect(plays.some((u) => /^(data|blob):audio\//.test(u) || /^(data|blob):/.test(u)), `the uploaded sound effect was played (saw ${plays.map((u) => u.slice(0, 40)).join(" | ")})`).toBe(true);
+});
+
+test("the Studio asks before it bundles the whole film, and a cancelled export changes nothing", async ({ page }) => {
+  await openFilmInStudio(page);
+  let asked = "";
+  page.once("dialog", (dialog) => { asked = dialog.message(); void dialog.dismiss(); });
+  await page.getByRole("button", { name: "⤓ Export", exact: true }).click();
+  await expect.poll(() => asked, { timeout: 15_000 }).toMatch(/pictures, sounds and other files/);
+  expect(asked).toMatch(/hundreds of megabytes/);
+  // nothing was bundled: no export window, and the draft is still the film
+  await expect(page.getByRole("dialog", { name: "Export reel", exact: true })).toBeHidden();
+  await expect(page.getByRole("textbox", { name: "Story title", exact: true })).toHaveValue(/Nobody's Witness/);
 });

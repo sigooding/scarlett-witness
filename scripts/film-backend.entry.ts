@@ -21,6 +21,7 @@ import { validateStory, deepClone } from "../src/logic";
 import { visitStoryMediaFields } from "../src/data/storyMedia";
 import { collectStoryAssetIds, resolveMediaValue } from "../src/data/mediaLibrary";
 import { parseAmbient, joinAmbient } from "../src/studio/ambientParts";
+import { countExportFiles, LARGE_EXPORT_FILES } from "../src/studio/exportBundle";
 
 let checks = 0;
 const check = (value: unknown, message: string) => { assert.ok(value, message); checks++; };
@@ -146,5 +147,18 @@ const at = (id: string) => FILM.scenes.find((s) => s.id === id);
 check(at("nw_s4")?.musicUrl === "/film/audio/it-aint-easy-wall.mp3" && (at("nw_s4")?.musicLevel ?? 1) <= 0.5, "scene 4: the neighbour's radio plays quietly through the wall");
 check(at("nw_s4")?.musicLoop === false, "and plays once");
 check(at("nw_s5")?.musicMode === "none", "scene 5 ends it (the door has closed on the song)");
+
+/* ---- 8. the Studio helps with what the film uses ---- */
+console.log("The Studio helps with what the film uses");
+const small = { ...FILM, scenes: FILM.scenes.slice(0, 3) };
+check(countExportFiles(FILM) >= LARGE_EXPORT_FILES, `the whole film (${countExportFiles(FILM)} files) is above the size at which the Studio asks before exporting`);
+check(countExportFiles(small) < LARGE_EXPORT_FILES, `three of its scenes (${countExportFiles(small)} files) export without asking`);
+check(countExportFiles({ ...FILM, scenes: [] }) < 40, `a story with no scenes has only its cover, avatars and the like (${countExportFiles({ ...FILM, scenes: [] })} files)`);
+const vite = read("vite.config.ts");
+check(/film\/depth/.test(vite) && /group: "film-depth"/.test(vite), "the image picker's built-in list includes public/film/depth under the group film-depth");
+check(/groups\?\.includes\(b\.group\)/.test(read("src/studio/ImagePicker.tsx")), "and only the pickers that ask for the group show it");
+check((read("src/studio/CinematicControls.tsx").match(/groups=\{FILM_DEPTH\}/g) ?? []).length === 3, "the depth map, clean plate and cut-out pickers ask for it");
+const depthFiles = readdirSync(join(ROOT, "public/film/depth"), { recursive: true }).filter((f) => /depth\.png$/.test(String(f)));
+check(depthFiles.length > 40, `${depthFiles.length} depth maps are on offer`);
 
 console.log(`\nfilm backend: ${checks} checks passed`);

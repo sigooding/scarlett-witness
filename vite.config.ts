@@ -28,9 +28,12 @@ function builtinImagesPlugin() {
   // prefix it's served under. /img is the scene library; /assets holds shipped
   // sprites such as the character keyframe animations under /assets/animations
   // — the Foreground image and keyframe pickers need those available too.
-  const roots = [
+  // `group` marks files that only some pickers offer: the film's own depth maps, clean plates and cut-outs (public/film/depth) are
+  // for the depth-camera fields; they would only clutter a background picker.
+  const roots: { dir: string; prefix: string; group?: string }[] = [
     { dir: path.resolve(__dirname, "public/img"), prefix: "/img" },
     { dir: path.resolve(__dirname, "public/assets"), prefix: "/assets" },
+    { dir: path.resolve(__dirname, "public/film/depth"), prefix: "/film/depth", group: "film-depth" },
   ];
   const exts = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".svg"];
 
@@ -48,8 +51,8 @@ function builtinImagesPlugin() {
   };
 
   const scan = () => {
-    const out: { url: string; label: string }[] = [];
-    for (const { dir, prefix } of roots) {
+    const out: { url: string; label: string; group?: string }[] = [];
+    for (const { dir, prefix, group } of roots) {
       if (!fs.existsSync(dir)) continue;
       const walk = (d: string, rel: string) => {
         let entries: fs.Dirent[];
@@ -66,7 +69,7 @@ function builtinImagesPlugin() {
             walk(path.join(d, entry.name), relPath);
           } else {
             const ext = entry.name.toLowerCase().match(/\.[^.]+$/)?.[0] ?? "";
-            if (exts.includes(ext)) out.push({ url: `${prefix}/${relPath}`, label: labelFor(relPath) });
+            if (exts.includes(ext)) out.push({ url: `${prefix}/${relPath}`, label: labelFor(relPath), ...(group ? { group } : {}) });
           }
         }
       };

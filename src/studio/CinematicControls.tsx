@@ -62,6 +62,10 @@ import { EXTRA_PRESET, SpriteSheetControls } from "./SheetEditor";
 import { SpriteBoxEditor } from "./SpriteBoxEditor";
 import { CollapsibleSection, Field, bgStyle, inputCls, mediaField } from "./studioLeaves";
 
+
+/** The film's own depth maps, clean plates and cut-outs (public/film/depth) are offered by the depth-camera pickers. A stable array: the picker memoises on it. */
+const FILM_DEPTH = ["film-depth"];
+
 /** Live animated preview of the chosen cinematic — the same camera layer the
  * player sees, so authors can watch the motion instead of guessing. */
 function CinematicPreview({
@@ -864,6 +868,7 @@ export function CinematicControls({
             value={c.depthMap}
             includeGradients={false}
             placeholder="Pick this picture's depth map…"
+            groups={FILM_DEPTH}
             onChange={(v) =>
               set(
                 v && !c.depthMap
@@ -891,6 +896,7 @@ export function CinematicControls({
                 value={c.depthPlate}
                 includeGradients={false}
                 placeholder="Optional: the picture without its people…"
+                groups={FILM_DEPTH}
                 onChange={(v) => set({ depthPlate: v || undefined })}
               />
             </Field>
@@ -902,6 +908,7 @@ export function CinematicControls({
                       value={k.image}
                       includeGradients={false}
                       placeholder="A transparent PNG the size of the picture…"
+                      groups={FILM_DEPTH}
                       onChange={(v) => {
                         const cuts = [...(c.depthCutouts ?? [])];
                         cuts[i] = { ...k, image: v ?? "" };

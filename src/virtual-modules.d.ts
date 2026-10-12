@@ -8,6 +8,8 @@ declare module "virtual:builtin-images" {
     url: string;
     /** human-readable label derived from the file name */
     label: string;
+    /** set for files only some pickers offer ("film-depth": the film's depth maps, plates and cut-outs) */
+    group?: string;
   }
   const images: BuiltinImage[];
   export default images;

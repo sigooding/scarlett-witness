@@ -262,7 +262,7 @@ A still picture paired with a grayscale depth map (white = near, black = far) pl
 
 ## The film is reproducible from the Studio (12 October 2026)
 
-A depth map, a beat sound effect and a recorded ambience loop uploaded in the Studio reach the saved draft, the exported reel and the player: `docs/film-backend.md`, `npm run test:film-backend` (36 checks), `npm run test:film-backend:browser`. The film's whole export is about 387 MB. Before this pass the export dropped 135 sfx and ambience files, the validator gave 143 false warnings on the film and `particleConfig` did nothing.
+A depth map, a beat sound effect and a recorded ambience loop uploaded in the Studio reach the saved draft, the exported reel and the player: `docs/film-backend.md`, `npm run test:film-backend` (43 checks), `npm run test:film-backend:browser`. The film's whole export is about 387 MB. Before this pass the export dropped 135 sfx and ambience files, the validator gave 143 false warnings on the film and `particleConfig` did nothing.
 
 ## Scene 4: the neighbour's radio through the wall (12 October 2026)
 
