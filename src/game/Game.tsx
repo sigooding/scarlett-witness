@@ -3758,6 +3758,10 @@ function CasePlayer({
       // Inherit: leave whatever is playing untouched (sync mute state only).
       const a = sceneAudioRef.current;
       if (a) a.muted = !soundOnRef.current;
+      // The opening scene's track is primed on the start click (App.tsx). Entering the story anywhere else (Resume,
+      // a chapter, an animatic from a later scene) on a scene that inherits would leave that primer looping, unowned,
+      // under the whole film: stop it unless it is the soundtrack this player adopted.
+      if (primedMusic && primedMusic.el !== a && !primedMusic.el.paused) fadeOutAndStop(primedMusic.el, fadeMs);
       setMusicTrack(musicSrcRef.current);
     }
     audio.setAmbient(soundOnRef.current ? scene.ambientAudio ?? null : null);
