@@ -15,7 +15,8 @@ Please double-check this work before calling it done. Most of it was done in one
 
 - Kurose is in the right-hand rear seat in every interior picture (141, 368). Ishida gets in on the left (368 shows him climbing in).
 - `s94/139-only-tea.jpg` was redone to match the sedan in `s93/138`.
-- The "car still wrong" note is closed, but check the car in 137 and 140 in the preview.
+- Car model: 138 is the master car. 137, 139 and 140 were regenerated from it so the same sedan appears in all four. Check the preview: the interior (141, 368) may still be a different seat style from the exterior.
+- 142 (taillights) shows the street, not the car.
 
 ## Done in the latest round
 
