@@ -6,6 +6,10 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## "What Made You, You" carries Mara's service (13 October 2026, later)
+
+The director: *"song for service what made you,you.mp3"* (uploaded as `public/film/audio/What Made You, You (2).mp3`, 3:19; the build copies it from the visual novel as `what-made-you-you.mp3`). Scene 97A plays hands-off for the song's length, like the "Bad Guy" run: a `service` soundtrack in `src/film/studio-edits.json`, the fourteen stills each about 13.5 s with a short caption (the last split in two, the train passing over it), 191 s of the song's 196, and the rooftop (98) fades it out. The visual novel plays the same song through 97A (nobodys-witness#36). Backend check 17. Nobody has watched it with the song.
+
 ## The rooftop rewritten, "He left a note.", and Mara's service (13 October 2026)
 
 Re-imported from PlayFrame (sigooding/PlayFrame#118, through nobodys-witness#35). **Scene 98** is the director's rewrite: her mother flying home with Mara, Jack's statement on Monday, Ishida's note, the clip, the promise kept, and Vera staying. Its twelve new lines play with their takes, and the train effects still land on their lines. **Scene 96** ends "He left a note." **Scene 97A, Mara's service**, is new and silent, between 96 and 98: the director's fourteen stills from `art/mara-service/` (PlayFrame shots 556–569) under the screenplay's stage directions, with the Hive bed under it. No song was added to it. The film has 187 scenes. Nobody has watched the new scene in sequence.

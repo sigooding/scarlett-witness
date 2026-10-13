@@ -14,7 +14,7 @@ const P = p => `/film${p}`;
 for (const dir of ["img", "voice"]) mkdirSync(resolve(root, "public/film", dir), { recursive: true });
 for (const dir of ["img", "voice"]) cpSync(resolve(src, "public", dir), resolve(root, "public/film", dir), { recursive: true });
 mkdirSync(resolve(root, "public/film/audio"), { recursive: true });
-for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "baby-fool.mp3", "soundtrack_nobodys_witness.mp3", "it-aint-easy-radio.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
+for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "baby-fool.mp3", "what-made-you-you.mp3", "soundtrack_nobodys_witness.mp3", "it-aint-easy-radio.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
 
 const nice = s => s.toLowerCase().replace(/(^|[\s.-])([a-z])/g, (_, a, b) => a + b.toUpperCase());
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
@@ -134,12 +134,13 @@ scenes.push({
   dialogueBeats: PRO.map(([text, k]) => beat("KANEKO", { text, audioUrl: P(`/voice/prologue/${k}.mp3`) })),
 });
 
-const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-aint-easy-radio", babyfool: "baby-fool" };
+const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-aint-easy-radio", babyfool: "baby-fool", service: "what-made-you-you" };
 // The neighbour's radio through Vera's wall (65) plays the director's song: in quickly, as a radio starts, and under the score's level.
 // Since 11 October 2026 it is "It ain't easy" (public/film/audio/It ain't easy.mp3, the director's upload) baked as an AM radio in
 // it-aint-easy-radio.mp3 (mono, 280-3200 Hz, light compression, faint hiss, loudness-matched to the old radio song), a little quieter.
 // "Baby Fool" (the director's song, uploaded 12 October 2026) plays once through the newsroom scene (82), from Jack's walk in; the engine ducks it under the voices
-const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.48 }, babyfool: { musicFadeSeconds: 2, musicLevel: 0.75 } };
+// "What Made You, You" (the director's song, uploaded 13 October 2026) plays through Mara's silent service (97A), timed to it by the "service" soundtrack
+const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.48 }, babyfool: { musicFadeSeconds: 2, musicLevel: 0.75 }, service: { musicFadeSeconds: 2, musicLevel: 0.85 } };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
   particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes",
