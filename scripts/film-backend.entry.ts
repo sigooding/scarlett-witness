@@ -263,4 +263,17 @@ eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/baby-fool.mp3").map((s)
 eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "none", "the notebook's photocopying (82A) fades it out");
 check(existsSync(join(ROOT, "public/film/audio/baby-fool.mp3")), "the song is on disk");
 
+
+/* ---- 17. "What Made You, You" carries Mara's silent service (97A, 13 October 2026) ---- */
+console.log("What Made You, You plays through Mara's service, one still at a time");
+const service = runOf("service");
+eq(service.length, 15, "the service's run is its fourteen stills, the last cut in two");
+eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/what-made-you-you.mp3").map((s) => s.id), [service[0].id], "the song starts once, on the run's first node");
+check(service[0].musicLoop === false, "and plays once");
+eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothing of 97A is left to click through: the whole scene plays to the song");
+eq(service.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s98", "the run hands on to the rooftop");
+eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, "none", "which fades the song out");
+check(service.every((s) => s.hideHud && s.dialogueBeats?.every((b) => b.silent)), "every node is a silent cutscene node: nobody speaks at the service");
+check(songSeconds(service) > 170 && songSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${songSeconds(service).toFixed(0)} s)`);
+check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);

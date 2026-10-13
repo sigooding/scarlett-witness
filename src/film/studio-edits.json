@@ -1516,6 +1516,47 @@
         ]
       },
       "note": "The song is 268.27 s; the run is planned to 265 s because its voiced shots run a few seconds past the plan (measured 12 October 2026: the run ends 263.3 s into the song). The rest of Jack's office (the clean envelope, the pen) follows as an ordinary click-through node that fades the song out; the scenes after it are music-off (the midnight song was taken out again on 13 October 2026)."
+    },
+    {
+      "id": "service",
+      "title": "Mara's service",
+      "musicUrl": "/audio/what-made-you-you.mp3",
+      "seconds": 196,
+      "from": "nw_s97a",
+      "to": "nw_s97a",
+      "musicLevel": 0.85,
+      "fadeIn": 3,
+      "fadeOut": 3,
+      "slack": 2,
+      "endHold": 2.5,
+      "captions": {
+        "556-the-lane-from-above": "Rain, the last of the light. Mourners under black umbrellas in the lane behind the Hive. One pale blue umbrella.",
+        "557-the-umbrellas": "The umbrellas crowd the doorway. The blue one comes last.",
+        "558-the-blue-umbrella": "Vera closes Mara's blue umbrella and stands it with the black ones.",
+        "559-shoes-at-the-step": "Shoes in a row below the step.",
+        "560-jack-at-the-door": "Jack is the last one in. He stops at the door and looks back at the rain.",
+        "561-the-small-service": "Kaneko's room. Mara's photograph, chrysanthemums, incense. Nobody speaks.",
+        "562-kanekos-parcel": "Kaneko leaves rice balls wrapped in newspaper, as she gave them to Mara for the car.",
+        "563-the-saved-drawing": "Jack straightens the photograph. Beside it, Mara's drawing of the arches in the rain.",
+        "564-the-room-from-above": "The incense goes straight up.",
+        "565-they-bow": "Vera and Jack bow.",
+        "566-her-mothers-hand": "Her mother's hand finds Vera's and holds it. Vera lets her.",
+        "567-okada-at-the-door": "Okada from the bar, late, at the door. He doesn't come in.",
+        "568-kaneko-and-okada": "Kaneko sits with him by the lamp.",
+        "569-after-the-service": [
+          "They come out into the lane under their umbrellas. A train goes over.",
+          "Her mother stays with the photograph a while longer. It rains all night."
+        ]
+      },
+      "cues": {
+        "569-after-the-service": [
+          {
+            "file": "train",
+            "volume": 0.4
+          }
+        ]
+      },
+      "note": "13 October 2026, the director: \"song for service what made you,you.mp3\" (uploaded as public/film/audio/What Made You, You (2).mp3, 3:19). Mara's silent service (97A) plays hands-off for the song's length, a caption per still; the rooftop (98) fades it out."
     }
   ],
   "pictureCaptions": {

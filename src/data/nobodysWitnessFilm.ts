@@ -734,29 +734,85 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 40,
    "y": 3940
   },
-  "nw_s97a": {
+  "nw_song_service_01": {
    "x": 420,
    "y": 3940
   },
-  "nw_s98": {
+  "nw_song_service_02": {
    "x": 800,
    "y": 3940
   },
-  "nw_s99a": {
+  "nw_song_service_03": {
    "x": 1180,
    "y": 3940
   },
-  "nw_s100": {
+  "nw_song_service_04": {
    "x": 1560,
    "y": 3940
   },
-  "nw_credits": {
+  "nw_song_service_05": {
    "x": 1940,
    "y": 3940
   },
-  "nw_end": {
+  "nw_song_service_06": {
    "x": 2320,
    "y": 3940
+  },
+  "nw_song_service_07": {
+   "x": 2700,
+   "y": 3940
+  },
+  "nw_song_service_08": {
+   "x": 3080,
+   "y": 3940
+  },
+  "nw_song_service_09": {
+   "x": 3460,
+   "y": 3940
+  },
+  "nw_song_service_10": {
+   "x": 3840,
+   "y": 3940
+  },
+  "nw_song_service_11": {
+   "x": 4220,
+   "y": 3940
+  },
+  "nw_song_service_12": {
+   "x": 40,
+   "y": 4200
+  },
+  "nw_song_service_13": {
+   "x": 420,
+   "y": 4200
+  },
+  "nw_song_service_14": {
+   "x": 800,
+   "y": 4200
+  },
+  "nw_song_service_15": {
+   "x": 1180,
+   "y": 4200
+  },
+  "nw_s98": {
+   "x": 1560,
+   "y": 4200
+  },
+  "nw_s99a": {
+   "x": 1940,
+   "y": 4200
+  },
+  "nw_s100": {
+   "x": 2320,
+   "y": 4200
+  },
+  "nw_credits": {
+   "x": 2700,
+   "y": 4200
+  },
+  "nw_end": {
+   "x": 3080,
+   "y": 4200
   }
  },
  "dialogueBox": {
@@ -23814,7 +23870,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      },
      "backgroundTransition": "crossfade",
      "backgroundTransitionSpeed": 0.9,
-     "afterBeatTargetSceneId": "nw_s97a",
+     "afterBeatTargetSceneId": "nw_song_service_01",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
     }
@@ -23825,374 +23881,596 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": []
   },
   {
-   "id": "nw_s97a",
-   "title": "97 — Mara's service",
+   "id": "nw_song_service_01",
+   "title": "Mara's service: Rain, the last of the light. Mourners un",
    "background": "/film/img/s97a/556-the-lane-from-above.jpg",
-   "prose": "INT./EXT. THE HIVE, KANEKO'S ROOM - DUSK",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 21,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "drizzle",
    "hideHud": true,
-   "transition": "fade-black",
-   "transitionSpeed": 1.1,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_b1543",
+     "id": "nw_song_b1",
      "characterId": "nw_narrator",
-     "text": "Rain. The last of the light.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1544",
-     "characterId": "nw_narrator",
-     "text": "From high above, the narrow lane behind the Hive: wet stone, one lit doorway, a few mourners under black umbrellas.",
+     "text": "Rain, the last of the light. Mourners under black umbrellas in the lane behind the Hive. One pale blue umbrella.",
      "silent": true,
-     "background": "/film/img/s97a/556-the-lane-from-above.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_02"
+    }
+   ],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/what-made-you-you.mp3",
+   "musicLevel": 0.85,
+   "musicFadeSeconds": 3,
+   "musicLoop": false
+  },
+  {
+   "id": "nw_song_service_02",
+   "title": "Mara's service: The umbrellas crowd the doorway. The blu",
+   "background": "/film/img/s97a/557-the-umbrellas.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 19,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1545",
+     "id": "nw_song_b2",
      "characterId": "nw_narrator",
-     "text": "Among them, one pale blue umbrella.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1546",
-     "characterId": "nw_narrator",
-     "text": "The umbrellas crowd the doorway, beaded with rain. The blue one comes last.",
+     "text": "The umbrellas crowd the doorway. The blue one comes last.",
      "silent": true,
-     "background": "/film/img/s97a/557-the-umbrellas.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 19,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_03"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_03",
+   "title": "Mara's service: Vera closes Mara's blue umbrella and sta",
+   "background": "/film/img/s97a/558-the-blue-umbrella.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1547",
+     "id": "nw_song_b3",
      "characterId": "nw_narrator",
-     "text": "At the threshold Vera closes the blue umbrella and stands it in the rack with the black ones.",
+     "text": "Vera closes Mara's blue umbrella and stands it with the black ones.",
      "silent": true,
-     "background": "/film/img/s97a/558-the-blue-umbrella.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_04"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_04",
+   "title": "Mara's service: Shoes in a row below the step.",
+   "background": "/film/img/s97a/559-shoes-at-the-step.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 16,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1548",
+     "id": "nw_song_b4",
      "characterId": "nw_narrator",
-     "text": "Shoes in a row below the step. Stockinged feet on the old wood.",
+     "text": "Shoes in a row below the step.",
      "silent": true,
-     "background": "/film/img/s97a/559-shoes-at-the-step.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 16,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_05"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_05",
+   "title": "Mara's service: Jack is the last one in. He stops at the",
+   "background": "/film/img/s97a/560-jack-at-the-door.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
     {
-     "id": "nw_b1549",
+     "id": "nw_song_b5",
      "characterId": "nw_narrator",
      "text": "Jack is the last one in. He stops at the door and looks back at the rain.",
      "silent": true,
-     "background": "/film/img/s97a/560-jack-at-the-door.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1550",
-     "characterId": "nw_narrator",
-     "text": "Kaneko's room: tatami, a lamp, a window onto the next building.",
-     "silent": true,
-     "background": "/film/img/s97a/561-the-small-service.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1551",
-     "characterId": "nw_narrator",
-     "text": "On a low table, Mara's photograph, white chrysanthemums, a bowl of incense, a cup of tea, and a few of her drawings, dried flat.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1552",
-     "characterId": "nw_narrator",
-     "text": "On one side, Vera, her mother and Jack. On the other, three neighbours from the Hive.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1553",
-     "characterId": "nw_narrator",
-     "text": "Nobody speaks.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1554",
-     "characterId": "nw_narrator",
-     "text": "Kaneko sets a small parcel by the photograph, wrapped in newspaper. Rice balls, as she gave them to Mara for the car.",
-     "silent": true,
-     "background": "/film/img/s97a/562-kanekos-parcel.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 22,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1555",
-     "characterId": "nw_narrator",
-     "text": "Jack straightens the photograph. Kaneko's hand steadies the frame, beside Mara's drawing of the arches in the rain.",
-     "silent": true,
-     "background": "/film/img/s97a/563-the-saved-drawing.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1556",
-     "characterId": "nw_narrator",
-     "text": "From above: the whole room around the table. The incense goes straight up.",
-     "silent": true,
-     "background": "/film/img/s97a/564-the-room-from-above.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 15,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1557",
-     "characterId": "nw_narrator",
-     "text": "Vera goes to the table. Jack goes with her. They bow.",
-     "silent": true,
-     "background": "/film/img/s97a/565-they-bow.jpg",
-     "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1558",
-     "characterId": "nw_narrator",
-     "text": "Her mother's hand finds Vera's on the table and holds it. Vera lets her.",
-     "silent": true,
-     "background": "/film/img/s97a/566-her-mothers-hand.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1559",
-     "characterId": "nw_narrator",
-     "text": "Okada from the bar stands at the door in a black suit, late, his umbrella planted like a cane. He doesn't come in.",
-     "silent": true,
-     "background": "/film/img/s97a/567-okada-at-the-door.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1560",
-     "characterId": "nw_narrator",
-     "text": "Kaneko goes to him. They sit together by the lamp. His hand rests on hers, once.",
-     "silent": true,
-     "background": "/film/img/s97a/568-kaneko-and-okada.jpg",
-     "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "panDirection": "left",
-      "panDistance": 2,
-      "dollyDirection": "left",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1561",
-     "characterId": "nw_narrator",
-     "text": "Later. They come out into the lane under their umbrellas, and a train goes over on the viaduct. Vera carries the blue umbrella.",
-     "silent": true,
-     "background": "/film/img/s97a/569-after-the-service.jpg",
-     "cinematic": {
-      "mode": "pan",
-      "focalPoint": "42% 38%",
-      "zoomDuration": 18,
-      "panDirection": "right",
-      "panDistance": 2,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "neon-noir",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
-    },
-    {
-     "id": "nw_b1562",
-     "characterId": "nw_narrator",
-     "text": "Her mother stays behind with the photograph a while longer.",
-     "silent": true
-    },
-    {
-     "id": "nw_b1563",
-     "characterId": "nw_narrator",
-     "text": "It rains all night.",
-     "silent": true,
-     "afterBeatTargetSceneId": "nw_s98",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_06"
     }
-   ],
-   "hotspots": [],
+   ]
+  },
+  {
+   "id": "nw_song_service_06",
+   "title": "Mara's service: Kaneko's room. Mara's photograph, chrysa",
+   "background": "/film/img/s97a/561-the-small-service.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 21,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b6",
+     "characterId": "nw_narrator",
+     "text": "Kaneko's room. Mara's photograph, chrysanthemums, incense. Nobody speaks.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_07"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_07",
+   "title": "Mara's service: Kaneko leaves rice balls wrapped in news",
+   "background": "/film/img/s97a/562-kanekos-parcel.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "60% 42%",
+    "zoomDuration": 22,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b7",
+     "characterId": "nw_narrator",
+     "text": "Kaneko leaves rice balls wrapped in newspaper, as she gave them to Mara for the car.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_08"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_08",
+   "title": "Mara's service: Jack straightens the photograph. Beside ",
+   "background": "/film/img/s97a/563-the-saved-drawing.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 17,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b8",
+     "characterId": "nw_narrator",
+     "text": "Jack straightens the photograph. Beside it, Mara's drawing of the arches in the rain.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_09"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_09",
+   "title": "Mara's service: The incense goes straight up.",
+   "background": "/film/img/s97a/564-the-room-from-above.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 15,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b9",
+     "characterId": "nw_narrator",
+     "text": "The incense goes straight up.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_10"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_10",
+   "title": "Mara's service: Vera and Jack bow.",
+   "background": "/film/img/s97a/565-they-bow.jpg",
+   "cinematic": {
+    "mode": "dolly",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 20,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b10",
+     "characterId": "nw_narrator",
+     "text": "Vera and Jack bow.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_11"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_11",
+   "title": "Mara's service: Her mother's hand finds Vera's and holds",
+   "background": "/film/img/s97a/566-her-mothers-hand.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "35% 50%",
+    "zoomDuration": 21,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b11",
+     "characterId": "nw_narrator",
+     "text": "Her mother's hand finds Vera's and holds it. Vera lets her.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_12"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_12",
+   "title": "Mara's service: Okada from the bar, late, at the door. H",
+   "background": "/film/img/s97a/567-okada-at-the-door.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b12",
+     "characterId": "nw_narrator",
+     "text": "Okada from the bar, late, at the door. He doesn't come in.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_13"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_13",
+   "title": "Mara's service: Kaneko sits with him by the lamp.",
+   "background": "/film/img/s97a/568-kaneko-and-okada.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 60%",
+    "zoomDuration": 17,
+    "panDirection": "left",
+    "panDistance": 2,
+    "dollyDirection": "left",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b13",
+     "characterId": "nw_narrator",
+     "text": "Kaneko sits with him by the lamp.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 12.94,
+     "afterBeatTargetSceneId": "nw_song_service_14"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_14",
+   "title": "Mara's service: They come out into the lane under their ",
+   "background": "/film/img/s97a/569-after-the-service.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b14",
+     "characterId": "nw_narrator",
+     "text": "They come out into the lane under their umbrellas. A train goes over.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.4,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 6.18,
+     "afterBeatTargetSceneId": "nw_song_service_15"
+    }
+   ]
+  },
+  {
+   "id": "nw_song_service_15",
+   "title": "Mara's service: Her mother stays with the photograph a w",
+   "background": "/film/img/s97a/569-after-the-service.jpg",
+   "cinematic": {
+    "mode": "pan",
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
+    "panDirection": "right",
+    "panDistance": 2,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "neon-noir",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
+   "particles": "drizzle",
+   "hideHud": true,
+   "transition": "cut",
+   "transitionSpeed": 0.05,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_song_b15",
+     "characterId": "nw_narrator",
+     "text": "Her mother stays with the photograph a while longer. It rains all night.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 6.43,
+     "afterBeatTargetSceneId": "nw_s98"
+    }
+   ]
   },
   {
    "id": "nw_s98",
@@ -24204,6 +24482,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hideHud": true,
    "transition": "fade-black",
    "transitionSpeed": 1.1,
+   "musicMode": "none",
+   "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
      "id": "nw_b1564",
@@ -25352,5 +25632,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "6c5c2a69ee41"
+ "builtinRevision": "6945d43f1fd3"
 } as unknown as Story;
