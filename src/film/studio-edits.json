@@ -680,7 +680,7 @@
     {
       "scene": "nw_s4",
       "find": "BEEP.",
-      "file": "voicemail-beep",
+      "file": "answerphone-beep",
       "volume": 0.6
     },
     {
@@ -1332,7 +1332,7 @@
         "119-single-file": [
           {
             "file": "pipe-alarm",
-            "volume": 0.9
+            "volume": 0.3
           }
         ],
         "120-the-hive-is-watching": [
@@ -1374,7 +1374,7 @@
         "382-the-pipe-gallery": [
           {
             "file": "pipe-alarm",
-            "volume": 0.4
+            "volume": 0.12
           }
         ],
         "132-the-gap": [

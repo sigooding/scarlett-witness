@@ -1156,7 +1156,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicFadeSeconds": 0.1,
    "musicLoop": false,
    "ambientAudio": "",
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.5,
    "dialogueBeats": [],
    "hotspots": [],
@@ -1185,7 +1185,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/s1/377-the-hive-remembered.jpg",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 2.2,
    "cinematic": {
     "mode": "zoom-hold",
@@ -1252,7 +1252,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -2044,7 +2044,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-bar.mp3+file:/film/sfx/tv-murmur.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -2424,7 +2424,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -2573,7 +2573,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -2772,7 +2772,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "BEEP.",
      "silent": true,
-     "sfxUrl": "/film/sfx/voicemail-beep.mp3",
+     "sfxUrl": "/film/sfx/answerphone-beep.mp3",
      "sfxVolume": 0.6
     },
     {
@@ -2978,7 +2978,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -3254,7 +3254,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -4031,7 +4031,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3+file:/film/sfx/police-radio-low.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -4195,7 +4195,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -4384,7 +4384,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -4582,7 +4582,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -5123,7 +5123,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -5463,7 +5463,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3+file:/film/sfx/vending-hum.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -5770,7 +5770,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -6133,7 +6133,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain",
    "particles": "drizzle",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -6870,7 +6870,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b428",
      "characterId": "nw_jack",
-     "text": "Call me when you go somewhere.",
+     "text": "Call me if you plan on going somewhere next time.",
      "audioUrl": "/film/voice/s14a/343-jack-evenly-call-me-when-you-go.mp3"
     },
     {
@@ -6967,7 +6967,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -7096,7 +7096,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -7295,7 +7295,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -7553,7 +7553,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -7735,7 +7735,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
    "musicLevel": 0.7,
    "musicFadeSeconds": 10,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.2,
    "dialogueBeats": [],
    "hotspots": [],
@@ -7754,7 +7754,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -7815,7 +7815,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -8271,7 +8271,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -8425,7 +8425,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -8814,7 +8814,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3+file:/film/sfx/walla-izakaya.mp3",
    "particles": "smoke",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -9236,7 +9236,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -9638,7 +9638,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-breakfast-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -9959,7 +9959,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-train-yamanote.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -10286,7 +10286,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -10387,7 +10387,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -10686,7 +10686,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-harbour.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -10740,7 +10740,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11020,7 +11020,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11111,7 +11111,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11193,7 +11193,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11311,7 +11311,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11405,7 +11405,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11492,7 +11492,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11536,7 +11536,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11722,7 +11722,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -11844,7 +11844,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -13516,7 +13516,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-pickup-truck.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -13640,7 +13640,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -13728,7 +13728,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -13810,7 +13810,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14166,7 +14166,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
    "musicLevel": 0.7,
    "musicFadeSeconds": 10,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.2,
    "dialogueBeats": [],
    "hotspots": [],
@@ -14185,7 +14185,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14402,7 +14402,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14508,7 +14508,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14641,7 +14641,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14780,7 +14780,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14858,7 +14858,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -14984,7 +14984,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -15218,7 +15218,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -15382,7 +15382,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -15625,7 +15625,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -15808,7 +15808,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-viaduct.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -15963,7 +15963,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -16168,7 +16168,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -16278,7 +16278,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -16521,7 +16521,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "musicMode": "track",
    "musicFadeSeconds": 3,
@@ -16700,7 +16700,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -16778,7 +16778,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -16908,7 +16908,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -17092,7 +17092,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -17429,7 +17429,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -17803,7 +17803,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -19699,7 +19699,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "musicMode": "none",
    "musicFadeSeconds": 4,
@@ -19830,7 +19830,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -20137,7 +20137,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -20367,7 +20367,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -20491,7 +20491,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "musicMode": "track",
    "musicUrl": "/film/audio/baby-fool.mp3",
@@ -20825,7 +20825,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "musicMode": "none",
    "musicFadeSeconds": 4,
@@ -21058,7 +21058,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -21382,7 +21382,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -21934,7 +21934,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Four masked men enter the Hive, single file.",
      "silent": true,
      "sfxUrl": "/film/sfx/pipe-alarm.mp3",
-     "sfxVolume": 0.9,
+     "sfxVolume": 0.3,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_02"
@@ -22954,7 +22954,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The pipes ring softly: one rap means clear.",
      "silent": true,
      "sfxUrl": "/film/sfx/pipe-alarm.mp3",
-     "sfxVolume": 0.4,
+     "sfxVolume": 0.12,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 3.45,
      "afterBeatTargetSceneId": "nw_song_raid_23"
@@ -23414,7 +23414,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -23490,7 +23490,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -23679,7 +23679,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -23753,7 +23753,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -24480,7 +24480,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-rooftop-wind.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "musicMode": "none",
    "musicFadeSeconds": 4,
@@ -24988,7 +24988,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -25214,7 +25214,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 1.1,
    "dialogueBeats": [
     {
@@ -25603,7 +25603,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicUrl": "/film/audio/the-show.mp3",
    "musicFadeSeconds": 12,
    "ambientAudio": "",
-   "transition": "fade-black",
+   "transition": "fade",
    "transitionSpeed": 2,
    "dialogueBeats": [],
    "hotspots": [],
@@ -25632,5 +25632,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "6945d43f1fd3"
+ "builtinRevision": "a43f92ecd60c"
 } as unknown as Story;
