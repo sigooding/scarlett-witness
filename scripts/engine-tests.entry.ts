@@ -156,6 +156,7 @@ import {
   TIMER_STYLE,
   timerFlavour,
 } from "../src/game/conversationTimer";
+import { fadeAudio, isFading, settleRunningFades } from "../src/game/audioFade";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { applyEdgeFloodKey, applyKey, despeckle, sampleCorners, sampleEdges } from "../src/studio/spriteForge";
@@ -6450,6 +6451,78 @@ console.log("\n=== CONVERSATION TIMERS — the dialogue clock ===");
     /conversation clock: a shrinking ring/.test(readFileSync("src/studio/Studio.tsx", "utf8")));
   check("timer: Studio exposes the interruptible toggle",
     /interruptibleDialogue: e\.target\.checked \|\| undefined/.test(readFileSync("src/studio/Studio.tsx", "utf8")));
+}
+
+/* ================================================================== */
+/*  N. music fades finish even when no frame is ever drawn              */
+/* ================================================================== */
+/*  The soundtrack is an <audio> element outside the WebAudio graph: the  */
+/*  fade is a loop on .volume. Frames alone were not enough — a browser    */
+/*  stops drawing in a hidden tab or a minimised window, so the ramp sat   */
+/*  where it was and `onDone` (which pauses and releases the outgoing      */
+/*  track) never ran. A cue that LOOPS then played on: the opening song of */
+/*  Nobody's Witness ran under scenes long after scene 2.                  */
+
+{
+  console.log("Music fades land without a frame");
+  const el = { volume: 0.6 } as unknown as HTMLAudioElement;
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+  const frameGlobals = globalThis as unknown as Record<string, unknown>;
+  const savedRaf = frameGlobals.requestAnimationFrame;
+  const savedCancel = frameGlobals.cancelAnimationFrame;
+
+  // 1. A frame API that is never called back — exactly a hidden tab.
+  frameGlobals.requestAnimationFrame = () => 1;
+  frameGlobals.cancelAnimationFrame = () => {};
+  let done = 0;
+  fadeAudio(el, 0, 5, () => done++);
+  check("fade: a ramp is in flight while it runs", isFading(el));
+  await sleep(30);
+  check("fade: no frame, no deadline yet — the ramp is still where it was", done === 0);
+  await sleep(150);
+  check("fade: the wall-clock deadline lands the ramp with no frame at all (volume 0)", el.volume === 0 && done === 1, [el.volume, done]);
+  check("fade: and the element is released, so the mixer may write to it again", !isFading(el));
+
+  // 2. The page going hidden settles every ramp at once.
+  el.volume = 0.4;
+  let hidden = 0;
+  fadeAudio(el, 0, 60000, () => hidden++);
+  settleRunningFades();
+  check("fade: hiding the page settles the ramp on the spot (the track is paused, not left playing)",
+    el.volume === 0 && hidden === 1 && !isFading(el), [el.volume, hidden]);
+
+  // 3. Frames still drive the ramp when they are running (the ordinary case).
+  frameGlobals.requestAnimationFrame = (cb: (t: number) => void) => {
+    setTimeout(() => cb(performance.now() + 1), 4);
+    return 1;
+  };
+  el.volume = 0.5;
+  let smooth = 0;
+  fadeAudio(el, 0, 100000, () => {}).cancel(); // a cancelled ramp leaves nothing behind
+  el.volume = 0.5;
+  fadeAudio(el, 0, 400, () => smooth++);
+  await sleep(30);
+  const midway = el.volume;
+  await sleep(560);
+  check("fade: frames ramp the volume down steadily", midway >= 0 && midway < 0.5, midway);
+  check("fade: and the ramp still ends at the target with the frame loop running", el.volume === 0 && smooth === 1, [el.volume, smooth]);
+
+  // 4. A cancelled ramp never reports done.
+  el.volume = 0.5;
+  let cancelledDone = 0;
+  fadeAudio(el, 0, 4000, () => cancelledDone++).cancel();
+  await sleep(80);
+  check("fade: a cancelled ramp leaves the volume alone and reports nothing", el.volume === 0.5 && cancelledDone === 0);
+
+  if (savedRaf === undefined) delete frameGlobals.requestAnimationFrame;
+  else frameGlobals.requestAnimationFrame = savedRaf;
+  if (savedCancel === undefined) delete frameGlobals.cancelAnimationFrame;
+  else frameGlobals.cancelAnimationFrame = savedCancel;
+
+  // 5. The film's own music code goes through this module, and the film's opening
+  //    song is a scene-1/2 cue the next scene replaces.
+  const gameSrcFade = readFileSync("src/game/Game.tsx", "utf8");
+  check("fade: Game.tsx uses the shared fade engine", /from "\.\/audioFade"/.test(gameSrcFade) && !/requestAnimationFrame\(step\)/.test(gameSrcFade));
 }
 
 console.log(`\nengine tests: ${passed} passed, ${failures.length} failed`);

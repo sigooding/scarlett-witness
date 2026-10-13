@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { audio, resolveTransitionSound, transitionTravelDir, type MixChannel } from "../audio";
+import { fadeAudio, isFading, MUSIC_FADE_MS } from "./audioFade";
 import { DialogFrame } from "../components/DialogFrame";
 import {
   calculateGhostElements,
@@ -219,104 +220,11 @@ function proseNarrationDelayMs(scene: SceneNode) {
 /* ------------------------------------------------------------------ *
  *  MUSIC FADES
  *
- *  The soundtrack is a raw <audio> element outside the WebAudio graph, so
- *  there is no GainNode to automate — the fade is a rAF loop on .volume.
- *
- *  Two rules make this feel like a film rather than a playlist:
- *    · leaving a track always RAMPS DOWN, never cuts
- *    · a replacement track ramps UP over the same window, so the two
- *      overlap into a crossfade instead of leaving a hole
- *
- *  equalPower keeps perceived loudness steady through the overlap. A linear
- *  crossfade dips in the middle, because two signals at half amplitude are
- *  quieter than one at full.
+ *  The fade engine itself lives in ./audioFade: an equal-power ramp on the
+ *  track element's .volume, with a wall-clock deadline so a ramp still lands
+ *  when the page stops drawing (a hidden tab used to leave a looping track
+ *  playing under the film, because a frame-driven ramp never finished).
  * ------------------------------------------------------------------ */
-
-/** Default fade length. Long enough to read as intentional, short enough
- *  that it never delays a scene change the player has already committed to. */
-const MUSIC_FADE_MS = 1400;
-
-/** Equal-power crossfade pair. sin² + cos² = 1 at every t, so a track fading
- *  out on `down` and one fading in on `up` sum to constant perceived
- *  loudness. The obvious `1 - sin` for the outgoing side is NOT equivalent:
- *  it dips to ~0.51 of full power halfway through, an audible hole in the
- *  middle of the crossfade. */
-const clamp01 = (t: number) => Math.min(1, Math.max(0, t));
-const fadeUpCurve = (t: number) => Math.sin((clamp01(t) * Math.PI) / 2);
-const fadeDownCurve = (t: number) => Math.cos((clamp01(t) * Math.PI) / 2);
-
-/**
- * Ramp an element's volume to `to` over `ms`, then optionally stop it.
- * Returns a cancel function. Any previous ramp on the same element is
- * cancelled first, so rapid scene changes can't leave two loops fighting
- * over one volume property.
- */
-type FadeHandle = { cancel: () => void };
-const activeFades = new WeakMap<HTMLAudioElement, FadeHandle>();
-
-/** True while a ramp is in flight on this element. Callers that set .volume
- *  directly (the mixer faders) must not fight a running fade. */
-const isFading = (el: HTMLAudioElement) => activeFades.has(el);
-
-function fadeAudio(
-  el: HTMLAudioElement,
-  to: number,
-  ms: number,
-  onDone?: () => void
-): FadeHandle {
-  activeFades.get(el)?.cancel();
-  const from = el.volume;
-  // Nothing to do — still run onDone so callers can rely on it firing.
-  if (ms <= 0 || Math.abs(to - from) < 0.001) {
-    try {
-      el.volume = clamp01(to);
-    } catch {
-      /* element detached */
-    }
-    onDone?.();
-    const noop = { cancel: () => {} };
-    return noop;
-  }
-  const start = performance.now();
-  let raf = 0;
-  let cancelled = false;
-  const step = (now: number) => {
-    if (cancelled) return;
-    const t = Math.min(1, (now - start) / ms);
-    // Going down travels the cos curve from `from` to `to`; going up travels
-    // the sin curve. Run as a simultaneous pair they hold constant power.
-    const v =
-      to < from
-        ? to + (from - to) * fadeDownCurve(t)
-        : from + (to - from) * fadeUpCurve(t);
-    try {
-      el.volume = clamp01(v);
-    } catch {
-      /* element detached mid-ramp */
-    }
-    if (t < 1) {
-      raf = requestAnimationFrame(step);
-    } else {
-      try {
-        el.volume = clamp01(to);
-      } catch {
-        /* noop */
-      }
-      activeFades.delete(el);
-      onDone?.();
-    }
-  };
-  raf = requestAnimationFrame(step);
-  const handle: FadeHandle = {
-    cancel: () => {
-      cancelled = true;
-      cancelAnimationFrame(raf);
-      activeFades.delete(el);
-    },
-  };
-  activeFades.set(el, handle);
-  return handle;
-}
 
 const ATTITUDE_COLOR: Record<string, string> = {
   Sultry: "border-neon/70 text-neon",

@@ -64,3 +64,48 @@ Please double-check this work before calling it done. Most of it was done in one
 - "Kaneko's spanner on the pipes" = the pipe-alarm volume plus the picture at 123.
 - "Detective in the car / plate number" = the line changed to "We have a plate number." No new picture was made for it.
 - "Black transitions" = all `fade-black` removed, not just the ones in the Hive.
+
+---
+
+# Review, later on 13 October 2026
+
+Everything above was checked: every picture opened, the film rebuilt from the committed sources (a
+rebuild on the untouched tree is byte-identical, so the committed `nobodysWitnessFilm.ts` is what the
+sources produce), `npm test`, `test:film-backend`, `test:film-depth`, `test:dom`, `test:validator`
+and `test:engine` run. The full write-up, the contact sheets and the fresh takes are in
+**`public/film/review/2026-10-13/`** (`REVIEW.md` beside them).
+
+**Two changes in the tree:**
+
+1. **`nw_s98` in `src/film/studio-edits.json` is now `{}`** — `npm run test:film-backend` was red on
+   the day's build (93/94) because the film declared `what-made-you-you.mp3` on the rooftop as well
+   as on Mara's service, so the song starts twice ("the song starts once, on the run's first node").
+   Removing the edit hands the hand-off decision in the notes above ("service music into the
+   rooftop") back to the builder, which is what writes "the rooftop fades it out". Putting the Scene
+   98 entry back is the one-line way to choose the other option; then the test's expectation, not the
+   film, is what changes.
+2. **A music fade now always lands** — `src/game/audioFade.ts` (new), used by `src/game/Game.tsx`,
+   with six engine checks. This is the fix for "the song in scene 1 loops throughout the movie": the
+   ramp that was meant to take Glimmering Haze out stalled when the page stopped drawing (hidden
+   tab, minimised window, busy machine), its completion callback never ran, and the looping cue was
+   never paused. Details in `FILM.md`.
+
+**Corrections to the notes above:**
+
+- `s132/132-the-gap.jpg` is **`s90/132-the-gap.jpg`** — there is no `s132` folder (scene 132 is a
+  different scene). `s91/133-inches-apart.jpg` is right.
+- "Shake cam off" is half done: the nine shots' `pictureLook` no longer shakes, but each shot's own
+  inline camera in the film data does (128, 129, 131, 133, 378, 379, 381, 382; `132-the-gap` is the
+  one that is genuinely off).
+- Scene 82 has a **fourth** new narration line ("…eyes on the glass office at the back."), and
+  "Nobody stops him." appears twice.
+- The spanner line is in the screenplay and reaches the film as the raid caption for
+  `123-fifty-years` through a **missing caption entry**, not an authored one.
+- The build warns, by itself, that scene 73's `sfx` edit duplicates the car-pass cue the Bad Guy run
+  already gives that beat.
+- `s20/346-the-bulb-hums.jpg` was regenerated but its **depth rig was not**, so the moving shot
+  draws the old art's plate and cut-out — and the same is true of any picture regenerated since its
+  rig was cut.
+- `s93/137`, `s93/138`, `s94/139` and `s20/346` are 1365×768, not 1920×1080.
+- The Black Mass Bride media checks in `npm test` fail on this checkout (their files are not here);
+  ignored on the director's instruction.
