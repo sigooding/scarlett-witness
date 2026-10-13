@@ -178,6 +178,12 @@
       "musicMode": "none",
       "musicUrl": null,
       "musicFadeSeconds": 4
+    },
+    "nw_s98": {
+      "musicMode": "track",
+      "musicUrl": "/film/audio/what-made-you-you.mp3",
+      "musicLevel": 0.85,
+      "musicFadeSeconds": 2
     }
   },
   "startSceneId": "nw_s1",

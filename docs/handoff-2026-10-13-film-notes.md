@@ -11,6 +11,11 @@ Please double-check this work before calling it done. Most of it was done in one
 - Rebuilding from the committed sources is the only way `src/data/nobodysWitnessFilm.ts` should change. Do not hand-edit it.
 - Not run this session: `npm test`, `npm run test:film-backend`, the browser spec, or a preview. node_modules was not installed. Run them first.
 
+## Done in the latest round
+
+- **Newsroom, Jack walks in (×3).** `s82/new-jack-walks-in-1.jpg`, `-2.jpg`, `-3.jpg`, generated with the film's newsroom (`s82/104`) and Jack (`s82/105`, `s14a/426`) as references. Inserted into scene 82 after Harada is introduced and before the tape scene, with three short narration lines that are new: "Jack walks in through the glass doors, determined…", "He comes down the aisle…", "Nobody stops him." Check the wording against the screenplay.
+- **Scene 20.** Last picture regenerated with Mara and Jack matched to references (`s20/346`).
+
 ## Done this session
 
 - **Shake cam off in the Hive escape.** The shake modes on 128, 129, 131, 132, 133, 378, 379, 381 and 382 are now `zoom-hold`. I read "shake cam" as the Hive escape only. Other shakes in the film are untouched (for example the inn raid, scene 1 and scene 2).
@@ -30,8 +35,7 @@ Please double-check this work before calling it done. Most of it was done in one
 
 ## Not done
 
-- **Newsroom: Jack walking in, determined (×3).** Not generated. The image tool hit its per-turn limit. Make three pictures with `offer_options: true`, then add them to scene 82 (or 82A) in `src/film/story.json` and rebuild.
-- **Service music into the rooftop (scene 98).** Not implemented. The "service" soundtrack still fades out at the end of 97A. The song should carry on through 98. Check how the engine continues a track with the same `musicUrl`, then set `nw_s98` and the segment timing to match.
+- **Service music into the rooftop (scene 98): needs a decision.** Scene 98 now has the service track set (`nw_s98` in `studio-edits.json`, same `musicUrl`), so the engine keeps the song running into the rooftop instead of fading it. But the song is 196 s and the silent service pictures use 191 s of it, so only about 5 s is left for the rooftop. Options for the director: (a) accept the song ending about 5 s into the rooftop, (b) re-cut the song so it runs longer, or (c) loop its last section.
 - **Jack's backstory and flashback.** Not added. Jack's past is deliberately held back in the screenplay (scene 20: "Twenty years of silence sit behind his eyes"). A flashback would be new scenes and new pictures, so it needs the director's call.
 - **Voice takes that no longer match the text.** Two lines need re-recording in ElevenLabs:
   - `public/film/voice/s14a/342-jack-dryly-i-think-it-s-a.mp3` (the old "I think it's a plate number")
