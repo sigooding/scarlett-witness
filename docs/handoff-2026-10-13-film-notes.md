@@ -11,6 +11,12 @@ Please double-check this work before calling it done. Most of it was done in one
 - Rebuilding from the committed sources is the only way `src/data/nobodysWitnessFilm.ts` should change. Do not hand-edit it.
 - Not run this session: `npm test`, `npm run test:film-backend`, the browser spec, or a preview. node_modules was not installed. Run them first.
 
+## Car in scenes 93–94 (latest)
+
+- Kurose is in the right-hand rear seat in every interior picture (141, 368). Ishida gets in on the left (368 shows him climbing in).
+- `s94/139-only-tea.jpg` was redone to match the sedan in `s93/138`.
+- The "car still wrong" note is closed, but check the car in 137 and 140 in the preview.
+
 ## Done in the latest round
 
 - **Newsroom, Jack walks in (×3).** `s82/new-jack-walks-in-1.jpg`, `-2.jpg`, `-3.jpg`, generated with the film's newsroom (`s82/104`) and Jack (`s82/105`, `s14a/426`) as references. Inserted into scene 82 after Harada is introduced and before the tape scene, with three short narration lines that are new: "Jack walks in through the glass doors, determined…", "He comes down the aisle…", "Nobody stops him." Check the wording against the screenplay.
