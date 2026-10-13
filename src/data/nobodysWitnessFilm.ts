@@ -24548,8 +24548,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hideHud": true,
    "transition": "fade",
    "transitionSpeed": 1.1,
-   "musicMode": "track",
-   "musicFadeSeconds": 2,
+   "musicMode": "none",
+   "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
      "id": "nw_b1566",
@@ -25044,9 +25044,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": [],
-   "musicUrl": "/film/audio/what-made-you-you.mp3",
-   "musicLevel": 0.85
+   "choices": []
   },
   {
    "id": "nw_s99a",
@@ -25690,5 +25688,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "dbd049a915b1"
+ "builtinRevision": "83df9bfd7472"
 } as unknown as Story;
