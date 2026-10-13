@@ -20,3 +20,5 @@ This folder contains 14 selected stills:
 12. `12-kaneko-offering.jpg` — Kaneko’s personal offering
 13. `13-okada-arrives.jpg` — Okada arrives
 14. `14-kaneko-and-okada.jpg` — Kaneko and Okada in a quiet moment
+
+**Integrated 13 October 2026.** The fourteen stills are now scene **97A** of the film and the visual novel (Mara's service, a silent scene between 96 and 98, the day before the rooftop), as PlayFrame shots 556–569: 01 → 556, 02 → 557, 03 → 558, 04 → 559, 11 → 560, 05 → 561, 12 → 562, 06 → 563, 09 → 564, 07 → 565, 10 → 566, 13 → 567, 14 → 568, 08 → 569 (sigooding/PlayFrame#118, `docs/neonoire/scenes/n97a-mara-s-service.md`). The originals here are unchanged.
