@@ -1,0 +1,6 @@
+{
+  "note": "Talking shots: a lip-synced clip stands in for the still while the line is spoken (the clip carries no sound), then the still returns. Keyed by the take's path under public/film/, value is the clip under public/film/. Kept here so tools/build-film-story.mjs can build without the visual novel's checkout next door; when that checkout is present its src/story/clips.ts is merged over this file and wins.",
+  "clips": {
+    "/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3": "/video/14-lipsync.mp4"
+  }
+}

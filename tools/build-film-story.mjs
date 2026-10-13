@@ -11,10 +11,14 @@ const root = process.cwd();
 const src = process.env.FILM_SRC || resolve(root, "../nobodys-witness");
 const film = JSON.parse(readFileSync(resolve(root, "src/film/story.json"), "utf8"));
 const P = p => `/film${p}`;
+// The media lives in this repo under public/film/. When the visual novel's checkout is next door it is copied over the top
+// (that is how new pictures and takes arrive); when it is not, the build runs off the committed copies instead of failing.
+const copyFrom = (from, to) => { if (existsSync(from)) cpSync(from, to, { recursive: true }); };
 for (const dir of ["img", "voice"]) mkdirSync(resolve(root, "public/film", dir), { recursive: true });
-for (const dir of ["img", "voice"]) cpSync(resolve(src, "public", dir), resolve(root, "public/film", dir), { recursive: true });
+for (const dir of ["img", "voice"]) copyFrom(resolve(src, "public", dir), resolve(root, "public/film", dir));
 mkdirSync(resolve(root, "public/film/audio"), { recursive: true });
-for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "baby-fool.mp3", "what-made-you-you.mp3", "soundtrack_nobodys_witness.mp3", "it-aint-easy-radio.mp3"]) cpSync(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
+for (const f of ["nobodys-witness.mp3", "midnight-in-the-rain.mp3", "bad-guy.mp3", "baby-fool.mp3", "what-made-you-you.mp3", "soundtrack_nobodys_witness.mp3", "it-aint-easy-radio.mp3"]) copyFrom(resolve(src, "public/audio/music", f), resolve(root, "public/film/audio", f));
+if (!existsSync(resolve(src, "public/img"))) console.warn(`build-film-story: no visual novel checkout at ${src} — building from the media already in public/film/.`);
 
 const nice = s => s.toLowerCase().replace(/(^|[\s.-])([a-z])/g, (_, a, b) => a + b.toUpperCase());
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
@@ -50,9 +54,16 @@ for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "am
   if (existsSync(from)) cpSync(from, resolve(root, "public/film/sfx", `${f}.mp3`));
 }
 // Talking shots: a lip-synced clip stands in for the still while the line is spoken (the clip carries no sound), then the still returns.
-const CLIPS = existsSync(resolve(src, "src/story/clips.ts"))
-  ? Object.fromEntries([...readFileSync(resolve(src, "src/story/clips.ts"), "utf8").matchAll(/"(\/voice\/[^"]+)":\s*"(\/video\/[^"]+)"/g)].map(m => [m[1], m[2]]))
-  : {};
+// The mapping itself is kept in src/film/clips.json so the build does not need the visual novel's checkout; that checkout's
+// clips.ts is merged over it (it wins) when it is there.
+const CLIPS = (() => {
+  const own = resolve(root, "src/film/clips.json");
+  const local = existsSync(own) ? JSON.parse(readFileSync(own, "utf8")).clips ?? {} : {};
+  const vn = existsSync(resolve(src, "src/story/clips.ts"))
+    ? Object.fromEntries([...readFileSync(resolve(src, "src/story/clips.ts"), "utf8").matchAll(/"(\/voice\/[^"]+)":\s*"(\/video\/[^"]+)"/g)].map(m => [m[1], m[2]]))
+    : {};
+  return { ...local, ...vn };
+})();
 mkdirSync(resolve(root, "public/film/video"), { recursive: true });
 for (const v of Object.values(CLIPS)) if (existsSync(resolve(src, "public", v.slice(1)))) cpSync(resolve(src, "public", v.slice(1)), resolve(root, "public/film", v.slice(1)));
 const bedFor = sc => {
@@ -88,7 +99,7 @@ const camera = (src, held) => {
 const pictureLook = (() => { try { return JSON.parse(readFileSync(resolve(root, "src/film/studio-edits.json"), "utf8")).pictureLook ?? {}; } catch { return {}; } })();
 const lookFor = bg => pictureLook[bg.replace(/^.*\//, "").replace(/\.[a-z0-9]+$/i, "")];
 const bgFields = (bg, extra = {}) => {
-  if (bg.startsWith("gradient:")) return { background: bg, backgroundTransition: "fade-black", backgroundTransitionSpeed: 0.8, ...extra };
+  if (bg.startsWith("gradient:")) return { background: bg, backgroundTransition: "fade", backgroundTransitionSpeed: 0.8, ...extra };
   const { cinematic, ...cut } = lookFor(bg) ?? {};
   return { background: bg, cinematic: { ...camera(bg), ...(cinematic ?? {}) }, backgroundTransition: "crossfade", backgroundTransitionSpeed: 0.9, ...cut, ...extra };
 };
@@ -122,12 +133,12 @@ scenes.push({
   id: "nw_title", title: "Opening titles", nodeType: "credits", background: P(keyStills[0]),
   prose: "Nobody's Witness\nAn interactive visual novel",
   credits: { title: "Nobody's Witness", subtitle: "An interactive visual novel", lines: [{ role: "A film of", name: "Tokyo in the rain" }, { role: "Written by", name: "Scott Gooding" }, { role: "Starring", name: "Jack · Vera · Mara" }, { role: "Music", name: "Scott Gooding · enhanced with suno.ai" }], font: "type", style: "cards", cardSeconds: 3.8, cardMotion: "letterspace", montage: keyStills.map(P), montageSeconds: 4.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#eceae4", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
-  musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 2, musicLoop: false, ambientAudio: "", transition: "fade-black", transitionSpeed: 1.5,
+  musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 2, musicLoop: false, ambientAudio: "", transition: "fade", transitionSpeed: 1.5,
   dialogueBeats: [], hotspots: [], choices: [],
 });
 scenes.push({
   id: "nw_prologue", title: "Prologue — The Hive, remembered", background: P("/img/s1/377-the-hive-remembered.jpg"),
-  particles: "rain", hideHud: true, letterbox: true, transition: "fade-black", transitionSpeed: 2.2,
+  particles: "rain", hideHud: true, letterbox: true, transition: "fade", transitionSpeed: 2.2,
   // Its backdrop takes the picture's look (studio-edits "pictureLook") like any beat's picture, its depth move with it.
   cinematic: { mode: "zoom-hold", focalPoint: "50% 52%", zoomDuration: 60, colorGrade: "neon-noir", ...(lookFor("/img/s1/377-the-hive-remembered.jpg")?.cinematic ?? {}) },
   prose: "Night. Rain. An eleven-storey block of balconies and wires wedged between glass towers.", ambientAudio: "rain", musicMode: "none", musicFadeSeconds: 3,
@@ -201,7 +212,7 @@ film.scenes.forEach((sc, si) => {
     scenes.push({
       id: `nw_s${sc.id}${part ? `_${"abcdefgh"[part]}` : ""}`.toLowerCase(), title: `${sc.n} — ${sc.title}${part ? " (cont.)" : ""}`,
       background: (part ? lastBg : bg0) ?? "gradient:linear-gradient(#000,#000)", prose: part ? "" : `${sc.heading}`, ...lookOf(sc),
-      transition: part ? "cut" : "fade-black", transitionSpeed: part ? 0.2 : 1.1, ...(music ?? {}), dialogueBeats: beats,
+      transition: part ? "cut" : "fade", transitionSpeed: part ? 0.2 : 1.1, ...(music ?? {}), dialogueBeats: beats,
     });
     beats = []; part++; music = null;
   };
@@ -215,7 +226,8 @@ film.scenes.forEach((sc, si) => {
       if (beats.length) close();
       music = cue;
     }
-    else if (st.t === "black") { for (const pic of pend.splice(0)) beats.push(captionBeat(pic)); pend.push({ bg: "gradient:linear-gradient(#000,#000)" }); lastBg = pend[0].bg; }
+    // "Cut to black" is no longer a black picture (13 October 2026, the director: no black then image): the shot before it just ends and the next one crossfades in.
+    else if (st.t === "black") { for (const pic of pend.splice(0)) beats.push(captionBeat(pic)); }
     else if (st.t === "card") {
       if (pend.length > 1) pend = pend.filter(pic => !pic.restore);
       while (pend.length > 1) beats.push(captionBeat(pend.shift()));
@@ -277,7 +289,7 @@ scenes.push({
   id: "nw_credits", title: "Credits", nodeType: "credits", background: P("/img/s1/377-the-hive-remembered.jpg"),
   prose: "Nobody's Witness\nTokyo as a memory that is still happening.",
   credits: { title: "Nobody's Witness", subtitle: "Tokyo as a memory that is still happening.", lines: creditLines, font: "elegant", style: "cards", cardSeconds: 3.2, cardMotion: "fade", montage, montageSeconds: 7.5, montageTransition: "dissolve", montageLoop: true, titleColor: "#e9e2d0", accentColor: "#e8a24a", titleEntrance: "fade-up", gateWeave: "subtle" },
-  musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 4, ambientAudio: "", transition: "fade-black", transitionSpeed: 2,
+  musicMode: "track", musicUrl: P("/audio/nobodys-witness.mp3"), musicFadeSeconds: 4, ambientAudio: "", transition: "fade", transitionSpeed: 2,
   dialogueBeats: [], hotspots: [], choices: [],
 });
 scenes.push({
@@ -296,7 +308,7 @@ for (const m of edits.montages ?? []) {
   const montage = {
     id: m.id, title: m.title, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
     credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: m.images.map(P), montageSeconds: m.seconds ?? 5, montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
-    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: m.musicFadeSeconds ?? 2, transition: "fade-black", transitionSpeed: 1.2,
+    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: m.musicFadeSeconds ?? 2, transition: "fade", transitionSpeed: 1.2,
     dialogueBeats: [], hotspots: [], choices: [],
   };
   const fresh = [montage];
