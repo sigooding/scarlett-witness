@@ -6,6 +6,10 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## The rooftop rewritten, "He left a note.", and Mara's service (13 October 2026)
+
+Re-imported from PlayFrame (sigooding/PlayFrame#118, through nobodys-witness#35). **Scene 98** is the director's rewrite: her mother flying home with Mara, Jack's statement on Monday, Ishida's note, the clip, the promise kept, and Vera staying. Its twelve new lines play with their takes, and the train effects still land on their lines. **Scene 96** ends "He left a note." **Scene 97A, Mara's service**, is new and silent, between 96 and 98: the director's fourteen stills from `art/mara-service/` (PlayFrame shots 556–569) under the screenplay's stage directions, with the Hive bed under it. No song was added to it. The film has 187 scenes. Nobody has watched the new scene in sequence.
+
 ## Opening titles 1:50; no film grade, no light shafts; scenes 1 and 2 always first (12 October 2026, evening)
 
 * **Opening titles:** 110 s (1 min 50 s, `nw_title.autoAdvanceDelaySeconds` in `src/film/studio-edits.json`), down from the 3:53 song. The card roll is 27.6 s and the montage loops under the rest; the song is faded out by the prologue's 3 s fade, so it is cut at 1:50, not played to its end. The delay may only stretch the roll, never cut it short (`static check 14`).
