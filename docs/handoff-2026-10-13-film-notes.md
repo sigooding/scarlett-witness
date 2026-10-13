@@ -64,3 +64,10 @@ Please double-check this work before calling it done. Most of it was done in one
 - "Kaneko's spanner on the pipes" = the pipe-alarm volume plus the picture at 123.
 - "Detective in the car / plate number" = the line changed to "We have a plate number." No new picture was made for it.
 - "Black transitions" = all `fade-black` removed, not just the ones in the Hive.
+
+## Storeroom pictures regenerated (scene 20, follow-up)
+
+- Regenerated from scratch against the character references: `s2/21-mara-bursts-in.jpg` (Mara: blonde, red hair clip, dark denim jacket over grey tee) and `s14a/426-forty-metres.jpg` (Jack: swept-back salt-and-pepper hair, charcoal coat, cream shirt), with `s20/346` as the room reference.
+- Replaced: `s20/191, 192, 284, 309, 344, 345, 371, 372, 436, 437`. Mara is no longer in the brown cardigan.
+- `s20/346-the-bulb-hums.jpg` (the earlier regeneration) was left as it was. Its grade is warmer than the rest and Mara is in a dark sweater, not the denim jacket. Decide whether to redo it to match.
+- Still not reviewed: the car interior in `s94/141` and `s94/368` (the handoff wrote `s93`), `s90/132-the-gap.jpg`, `s91/133-inches-apart.jpg`, `s73`, `s100`, `s69`, `s25a`.
