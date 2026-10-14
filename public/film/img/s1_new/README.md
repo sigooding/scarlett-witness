@@ -12,33 +12,33 @@ scene's 23 shots were all generated again from nothing, using a new set of style
 
 ## Shots
 
-| # | File | Beat | Status |
-|---|------|------|--------|
-| 1 | `01-backstreet.jpg` | A narrow street of shuttered shops (master plate A, from the road) | ✅ |
-| 2 | `02-vending.jpg` | A vending machine hums on the corner; one lit window high up | ✅ |
-| 3 | `03-mara-walks.jpg` | Mara walks fast, arms folded, soaked, no umbrella | ✅ |
-| 4 | `04-mara-phone.jpg` | Her phone lights up: VERA | ✅ |
-| 5 | `05-phone-off.jpg` | She declines it | ✅ |
-| 6 | `328-the-scrap.jpg` | The note: "1.00 Sakai", an address, "just listen." underlined twice | ✅ |
-| 7 | `329-the-lane-the-watch.jpg` | Down the lane to the bar sign; her watch reads 12:45 | ✅ |
-| 8 | `06-barbershop-doorway.jpg` | She slips into the barbershop doorway, behind the scooter and crates | ✅ |
-| 9 | `383-the-empty-lane.jpg` | A crossing chimes for an empty intersection (master plate B, toward the road) | ✅ |
-| 10 | `07-old-man.jpg` | The old man comes in from the road, hand to his side, looking back | ✅ |
-| 11 | `330-the-red-clip.jpg` | She leans out; the red bird clip catches the light | ✅ |
-| 12 | `09-old-man-stops.jpg` | He sees it and stops six metres short; his face changes | ✅ |
-| 13 | `331-he-refuses.jpg` | He shakes his head and turns his back on her to face the road | ✅ |
-| 14 | `332-the-sedan-blocks-the-lane.jpg` | A black sedan blocks the mouth; high beams down the lane | ✅ |
-| 15 | `333-the-white-light.jpg` | Two masked men walk in; he stands in the white light | ✅ |
-| 16 | `10-the-shot.jpg` | A suppressed shot; he folds onto the street | ⏳ |
-| 17 | `12-masked-man-radio.jpg` | "First position done. Moving to second." | ✅ |
-| 18 | `13-taillights-gone.jpg` | They drive off the long way round; tail-lights gone | ✅ |
-| 19 | `14-she-kneels.jpg` | She runs to him; her bag spills across the street | ✅ |
-| 20 | `15-the-grip.jpg` | He presses something brass into her palm | ✅ |
-| 21 | `16-the-key.jpg` | A small brass key on a tag stamped 114 | ⏳ |
-| 22 | `17-she-runs.jpg` | She runs for the amber glow of the bar | ⏳ |
-| 23 | `18-the-flashlight.jpg` | Her bag, open in the rain | ⏳ |
+| # | File | Beat |
+|---|------|------|
+| 1 | `01-backstreet.jpg` | A narrow street of shuttered shops (master plate A, from the road) |
+| 2 | `02-vending.jpg` | A vending machine hums on the corner; one lit window high up |
+| 3 | `03-mara-walks.jpg` | Mara walks fast, arms folded, soaked, no umbrella |
+| 4 | `04-mara-phone.jpg` | Her phone lights up: VERA |
+| 5 | `05-phone-off.jpg` | She declines it |
+| 6 | `328-the-scrap.jpg` | The note: "1.00 Sakai", an address, "just listen." underlined twice |
+| 7 | `329-the-lane-the-watch.jpg` | Down the lane to the bar sign; her watch reads 12:45 |
+| 8 | `06-barbershop-doorway.jpg` | She slips into the barbershop doorway, behind the scooter and crates |
+| 9 | `383-the-empty-lane.jpg` | A crossing chimes for an empty intersection (master plate B, toward the road) |
+| 10 | `07-old-man.jpg` | The old man comes in from the road, hand to his side, looking back |
+| 11 | `330-the-red-clip.jpg` | She leans out; the red bird clip catches the light |
+| 12 | `09-old-man-stops.jpg` | He sees it and stops six metres short; his face changes |
+| 13 | `331-he-refuses.jpg` | He shakes his head and turns his back on her to face the road |
+| 14 | `332-the-sedan-blocks-the-lane.jpg` | A black sedan blocks the mouth; high beams down the lane |
+| 15 | `333-the-white-light.jpg` | Two masked men walk in; he stands in the white light |
+| 16 | `10-the-shot.jpg` | A suppressed shot; he folds onto the street |
+| 17 | `12-masked-man-radio.jpg` | "First position done. Moving to second." |
+| 18 | `13-taillights-gone.jpg` | They drive off the long way round; tail-lights gone |
+| 19 | `14-she-kneels.jpg` | She runs to him; her bag spills across the street |
+| 20 | `15-the-grip.jpg` | He presses something brass into her palm |
+| 21 | `16-the-key.jpg` | A small brass key on a tag stamped 114 |
+| 22 | `17-she-runs.jpg` | She runs for the amber glow of the bar |
+| 23 | `18-the-flashlight.jpg` | Her bag, open in the rain |
 
-✅ = done · ⏳ = still to generate (the set is being made in batches; this table is updated as shots land)
+`contact-sheet.jpg` shows all 23 in story order, for a quick read of the cut.
 
 ## Style sheets (`style-sheets/`)
 
@@ -48,7 +48,7 @@ scene's 23 shots were all generated again from nothing, using a new set of style
 | `old-man-sakai.jpg` | Mr. Sakai's face, grey tweed flat cap, cheap putty-beige vinyl raincoat, white shirt and grey cardigan, the hand pressed to his side |
 | `masked-men-and-sedan.jpg` | Exactly two men: the earpiece leader (black suit, open overcoat, suppressed pistol) and the second man. Also the one black late-1990s executive saloon |
 | `location-kanda-backstreet.jpg` | Master plates A (from the road) and B (toward the road), a plan of the lane with every story position, the geography rules and the look/palette |
-| `props.jpg` | ⏳ Red bird clip, brass key with its 114 tag, the scrap, the bag. Built from the finished inserts |
+| `props.jpg` | The hero props, cropped from the finished frames: the brass key and its 114 tag, the scrap, the red bird clip, the bag with its torn strap, the watch and the VERA phone. It also notes where each one turns up later in the film |
 
 `style-sheets/refs/` holds the separate reference plates (front, back and face views, the sedan, plates A and B).
 Pass them to the image model along with any new or replacement shot so it stays on model.
@@ -62,7 +62,8 @@ Pass them to the image model along with any new or replacement shot so it stays 
   between her and the road. The sedan noses in across the mouth with its high beams down the lane.
 - **Look.** Grounded contemporary Tokyo neo-noir: photographic realism, 12:45 a.m., steady cold rain, wet
   asphalt, practical light only, cool slate and blue-green shadows, restrained 35mm grain.
-- **Text.** No legible signage except the story's own words: VERA, the scrap, 12:45 and 114.
+- **Text.** No legible signage except the story's own words: VERA, the scrap, 12:45 and 114. (The barbershop
+  awning carries a faint shop name in several frames. It comes from plate B and is too small to read at frame size.)
 
 ## Before swapping any of these into the film
 
@@ -98,3 +99,7 @@ Pass them to the image model along with any new or replacement shot so it stays 
 | `330-the-red-clip` | Flopped left to right, since nothing in the frame has text. The flip puts the clip on her LEFT temple, as on every other shot, and points her eyeline at the road where the old man is. It also places the barber pole on the road side of the doorway, matching plate A. |
 | `06-barbershop-doorway` | Fixed with a follow-up image edit. The first take put a vending machine on the barbershop's side of the lane, breaking the geography, and had Mara standing lit in the doorway. The edit removed the machine and pressed her back into the shadow, looking towards the road. |
 | `333-the-white-light` | Fixed with a follow-up image edit. The first take had the old man side-on, facing the doorway where Mara hides. The edit turns his back to her, facing the two men, which is the protective stance the script describes. |
+| `07-old-man` | Fixed with a follow-up image edit. In the first take he never looked back, so the edit turns his head to glance over his shoulder at the road. The faint lettering on the awning, larger in this frame because it is closer to camera, was softened by hand so it can't be read. |
+| `10-the-shot` | The image model's content filter refused the first version (the pistol lowering as he falls). The shot is staged a beat later instead, as the original `s1` frame was: the old man down in the foreground, the two men standing in the headlights. |
+| `17-she-runs`, `18-the-flashlight` | Both came out at dusk exposure. A night grade (a midtone gamma pull plus the graduated sky grade) brings them in line with the master plates; the lamps keep their highlights. |
+| `18-the-flashlight` | The first take looked out to the road, so she was running the wrong way. It was regenerated using 17's view up the lane, so she runs towards the bar. |
