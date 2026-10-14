@@ -533,6 +533,46 @@ and that the renderer accumulates phase rather than reading a wall clock.
   breaking `GameSave` change is a two-line edit — an entry in the registry and
   a `SAVE_SCHEMA` bump — instead of a save-loss incident. Proposal 10 makes the
   refusal legible: the player is told the save came from a newer build.
+- ✅ **The validator's graph walks — one index, not 20,000 rebuilds** — done.
+  `validateStory` walks the story from a dozen angles (dangling links,
+  reachability from the start, one-way doors, and proposal 7's return-trap
+  audit for EVERY scene), and each walk used to call `storyEdges(story)` — and
+  build its own `scenes.find` Map — for itself, once per scene and once per
+  edge. On the film (201 scenes, 1643 beats) one validation rebuilt the edge
+  list **~20,000 times and allocated ~4,000,000 edge objects** — about **4.5
+  seconds**, on the main thread, on **every keystroke** in the Studio
+  (`issues` is a plain `useMemo([story])`, and prose/beat/title inputs commit
+  per character). `storyGraph(story)` in `src/logic.ts` now builds the whole
+  graph once per call — edges by source and by target, raw and note-resolved
+  adjacency, and memoised `reaches()` / `routesFrom()` walks — and
+  `auditSceneExits(story, scene, graph)` takes it as an optional third
+  argument, so every external caller (engine tests, Studio, the bot) keeps the
+  old one- and two-argument signature. Cost, measured on this repo:
+
+  | | old | new |
+  |---|---|---|
+  | film, 201 scenes | 4,489 ms | **~14 ms** |
+  | Let the Raptures Commence, 64 | 245 ms | 2.1 ms |
+  | Hangar cold open, 25 | 8.8 ms | 0.4 ms |
+  | `npm run test:engine` | 13 s | **7 s** |
+  | synthetic 400-scene chain | 110,110 ms | 24 ms |
+
+  The old cost grew ~8.5× per doubling of scene count; the new one grows ~2.2×
+  — the cubic term is gone, not just its constant. 73 engine checks pin it: the
+  index is compared against the edges it claims to describe, `reaches()` and
+  `routesFrom()` are compared against the old walks rewritten inline, the
+  indexed and unindexed exit audits must agree scene-for-scene, and the film
+  must validate inside a deliberately loose 2 s bound. A differential harness
+  over all 37 stories in `src/data` (991 scenes, three library states, every
+  scene's audit) found the new implementation byte-identical to the old one,
+  crash-for-crash.
+
+  What is left per keystroke is linear work, not graph walks (film): one edge
+  rebuild 0.75 ms, the media-reference walk 2.2 ms, flags/memories 1.5 ms, the
+  undo-coalescing signature 3.1 ms, the autosave `JSON.stringify` 4.1 ms. The
+  next win there is the one step 1's profile listed — the Studio's per-keystroke
+  React work (every card's `data` object is rebuilt, so `memo(SceneFlowNode)`
+  never hits) and the draft clone/write — not the validator.
 
 ### Next (unclaimed)
 
@@ -547,3 +587,18 @@ and that the renderer accumulates phase rather than reading a wall clock.
   counts as a way out). Once a few authored drafts have been through it without
   a false positive, promoting it would block publishing a softlock — which is
   what the dead-end error already does for the obvious case.
+- **The Studio canvas still re-renders every card per keystroke.** `nodes` and
+  `edges` in `src/studio/Studio.tsx` depend on `[story, …]` and build a fresh
+  `data` object per node, so `memo(SceneFlowNode)` never hits and all 201 cards
+  re-run their own `sceneRoutes` + `ResizeObserver` on every character. Per-node
+  data keyed on the scene's identity (plus the handful of story-level badges)
+  fixes it; the validator's index is no longer the reason a keystroke costs
+  anything.
+- **Drafts, undo and the asset list.** `DraftAutosave.write` does a synchronous
+  `JSON.stringify` + `localStorage.setItem` of the whole story (4 ms on the film,
+  and the film's own export is ~387 MB of media), `compactStoryMedia` deep-clones
+  the story and re-reads the story's entire asset library on every autosave, the
+  undo stack keeps up to 100 full stories in RAM, and `useAllAssets()` cursors
+  every library row (with its `dataUrl`) just to answer "does this asset id
+  still exist?". Move drafts to IndexedDB, keep a light metadata store for
+  pickers and the dangling-asset check, and cap undo by bytes.

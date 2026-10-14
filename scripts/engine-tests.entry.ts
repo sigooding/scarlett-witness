@@ -113,6 +113,8 @@ import {
   hotspotReachableActions,
   activeStageObstacles,
   sentenceLineText,
+  bypassedSceneId,
+  storyGraph,
 } from "../src/logic";
 import { buildRouteGraph, scenesInAct } from "../src/game/routeGraph";
 import {
@@ -6176,6 +6178,129 @@ console.log("\n=== RETURN TRAPS — re-enterable rooms whose exits are all spent
   check("repeatability: logic.ts owns the definition", /^export function choiceRepeats/m.test(logicSrc) && /^export function hotspotRepeats/m.test(logicSrc));
   check("repeatability: the decision surface re-exports the very same functions",
     decisionChoiceRepeats === logicChoiceRepeats && hotspotRepeats === logicHotspotRepeats);
+}
+
+/* ================================================================== */
+/*  THE STORY GRAPH — one index for every walk of the story             */
+/* ------------------------------------------------------------------ */
+/*  validateStory walks the graph from a dozen angles: dangling links,   */
+/*  reachability from the start, one-way doors, and a return-trap audit  */
+/*  for EVERY scene. Each of those walks used to rebuild the whole edge  */
+/*  list (and a scene-lookup Map) for itself — per scene and per edge.   */
+/*  On the film that was ~20,000 rebuilds and ~4,000,000 edge objects    */
+/*  per call, about 4.5 seconds, on the main thread, on every keystroke  */
+/*  in the Studio. The audits now share one storyGraph().                */
+/*                                                                       */
+/*  These checks pin that index to the edges it claims to describe, and  */
+/*  pin the audits' two paths — with a shared index, and with none — to  */
+/*  the same answer, so the shortcut can never drift from the walk it    */
+/*  replaced. The oracle here is the OLD algorithm, rewritten inline.    */
+/* ================================================================== */
+console.log("\n=== THE STORY GRAPH — the shared index agrees with the walk it replaced ===");
+{
+  // The catalogue plus the rooms the return-trap checks care about.
+  const graphStories: Story[] = [...STORIES, NEON_DINER, SLEDGE_HAMMER, SCOOBY_RAVENSWOOD, MATT_THE_ACCOUNTANT, POINT_CLICK_TEMPLATE];
+
+  for (const story of graphStories) {
+    const graph = storyGraph(story);
+    const edges = storyEdges(story);
+    const ids = new Set(story.scenes.map((s) => s.id));
+    const tag = story.id;
+
+    // 1. The index reports exactly the authored routes, in order.
+    check(`graph ${tag}: edges are storyEdges, unchanged`,
+      JSON.stringify(graph.edges.map((e) => [e.id, e.source, e.target, e.kind, e.label])) ===
+        JSON.stringify(edges.map((e) => [e.id, e.source, e.target, e.kind, e.label])));
+
+    // 2. The groupings are the same lists, seen by source and by raw target.
+    const groupMatches = (map: ReadonlyMap<string, StoryEdge[]>, key: "source" | "target") =>
+      story.scenes.every((s) => {
+        const expected = edges.filter((e) => e[key] === s.id).map((e) => e.id);
+        const actual = (map.get(s.id) ?? []).map((e) => e.id);
+        return JSON.stringify(expected) === JSON.stringify(actual);
+      }) && [...map.keys()].every((k) => ids.has(k));
+    check(`graph ${tag}: outRaw groups the routes by source`, groupMatches(graph.outRaw, "source"));
+    check(`graph ${tag}: inRaw groups the routes by target`, groupMatches(graph.inRaw, "target"));
+
+    // 3. outSceneIds is the raw-target adjacency, dangling targets dropped.
+    check(`graph ${tag}: outSceneIds matches the authored links`,
+      story.scenes.every((s) => JSON.stringify(graph.outSceneIds.get(s.id) ?? []) ===
+        JSON.stringify(edges.filter((e) => e.source === s.id && ids.has(e.target)).map((e) => e.target))));
+
+    // 4. inResolved is "routes that land here", note placeholders resolved.
+    check(`graph ${tag}: inResolved resolves notes through to the landing scene`,
+      story.scenes.every((s) => JSON.stringify((graph.inResolved.get(s.id) ?? []).map((e) => e.id)) ===
+        JSON.stringify(edges.filter((e) => bypassedSceneId(story, e.target) === s.id).map((e) => e.id))));
+
+    // 5 & 6. The two reachability questions, against the old walks.
+    const sceneIds = story.scenes.map((s) => s.id);
+    const naiveTargetsOf = (id: string): string[] => {
+      const out = edges.filter((e) => e.source === id).map((e) => bypassedSceneId(story, e.target));
+      // The destination computer opens from ANY scene, so every pin is an edge
+      // out of every room.
+      if (mapAvailable(story))
+        (story.map?.locations ?? []).forEach((l) => {
+          if (l.targetSceneId && ids.has(l.targetSceneId)) out.push(bypassedSceneId(story, l.targetSceneId));
+        });
+      return out.filter((t) => ids.has(t));
+    };
+    const naiveReach = (from: string): Set<string> => {
+      const seen = new Set<string>();
+      const queue = naiveTargetsOf(from);
+      while (queue.length) {
+        const id = queue.shift()!;
+        if (seen.has(id)) continue;
+        seen.add(id);
+        queue.push(...naiveTargetsOf(id));
+      }
+      return seen;
+    };
+    // routeTargetsOf + reachesFrom, as the validator wrote them before the index.
+    let reachAgrees = true;
+    for (const from of sceneIds) {
+      const expected = naiveReach(from);
+      const got = new Set(sceneIds.filter((id) => graph.reaches(from, id)));
+      if (expected.size !== got.size || [...expected].some((id) => !got.has(id))) { reachAgrees = false; break; }
+    }
+    check(`graph ${tag}: reaches() is the old reachesFrom, for every scene`, reachAgrees);
+    check(`graph ${tag}: reaches() from a scene that does not exist is false`, !graph.reaches("ghost_scene", "ghost_scene"));
+
+    // routesFrom is the raw authored walk the one-way-door check uses, and a
+    // scene reaches itself without moving.
+    let routesAgree = true;
+    for (const from of sceneIds) {
+      const raw = new Map<string, string[]>();
+      for (const e of edges) raw.set(e.source, [...(raw.get(e.source) ?? []), e.target]);
+      const closure = new Set<string>([from]);
+      const queue = [from];
+      while (queue.length) {
+        const n = queue.pop()!;
+        for (const m of raw.get(n) ?? []) if (!closure.has(m)) { closure.add(m); queue.push(m); }
+      }
+      const got = new Set(sceneIds.filter((id) => graph.routesFrom(from, id)));
+      if (closure.size !== got.size || [...closure].some((id) => !got.has(id))) { routesAgree = false; break; }
+    }
+    check(`graph ${tag}: routesFrom() is the old raw walk`, routesAgree);
+
+    // 7. THE EQUIVALENCE GATE: every scene's exit audit answers the same with
+    //    the shared index and without it. This is what lets the validator
+    //    pass one graph down instead of rebuilding it 201 times.
+    const differ = story.scenes.filter((sc) =>
+      JSON.stringify(auditSceneExits(story, sc, graph)) !== JSON.stringify(auditSceneExits(story, sc)));
+    check(`graph ${tag}: the indexed exit audit matches the unindexed one (${story.scenes.length} scenes)`,
+      differ.length === 0, differ.map((s) => s.id).slice(0, 8).join(", "));
+  }
+
+  // 8. The regression that started this: the film's validation must stay in
+  //    the neighbourhood of "one pass", not the ~4.5 s it cost when the edge
+  //    list was rebuilt inside every walk. The bound is deliberately loose
+  //    (the measured cost is tens of ms) so a slow machine never fails it —
+  //    it only catches a return to rebuilding the graph per scene.
+  const film = STORIES.reduce((biggest, s) => (s.scenes.length > biggest.scenes.length ? s : biggest), STORIES[0]);
+  const t0 = performance.now();
+  validateStory(film);
+  const ms = performance.now() - t0;
+  check(`graph: validating the biggest story (${film.id}, ${film.scenes.length} scenes) in ${ms.toFixed(0)} ms`, ms < 2000, `${ms.toFixed(0)} ms`);
 }
 
 /* ================================================================== */
