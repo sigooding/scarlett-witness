@@ -2399,42 +2399,6 @@ function hotspotRoutesOut(hs: Hotspot, known: ReadonlySet<string>): boolean {
   return Object.values(hs.verbs ?? {}).some((a) => actionRoutesOut(a, known));
 }
 
-/** Every scene a scene can route to, gates and repeatability ignored — the
- *  shape of the graph the player walks. Note nodes are transparent (the
- *  runtime bypasses them), so their targets are resolved through. */
-function routeTargetsOf(story: Story, scene: SceneNode): string[] {
-  const known = new Set(story.scenes.map((s) => s.id));
-  const out: string[] = [];
-  storyEdges(story)
-    .filter((e) => e.source === scene.id)
-    .forEach((e) => out.push(bypassedSceneId(story, e.target)));
-  if (mapAvailable(story)) {
-    // The destination computer opens from ANY scene, so every pin is an edge
-    // out of every room.
-    (story.map?.locations ?? []).forEach((l) => {
-      if (l.targetSceneId && known.has(l.targetSceneId)) out.push(bypassedSceneId(story, l.targetSceneId));
-    });
-  }
-  return out.filter((id) => known.has(id));
-}
-
-function reachesFrom(story: Story, from: string, target: string): boolean {
-  const byId = new Map(story.scenes.map((s) => [s.id, s] as const));
-  const start = byId.get(from);
-  if (!start) return false;
-  const seen = new Set<string>();
-  const queue = routeTargetsOf(story, start);
-  while (queue.length) {
-    const id = queue.shift()!;
-    if (id === target) return true;
-    if (seen.has(id)) continue;
-    seen.add(id);
-    const sc = byId.get(id);
-    if (sc) queue.push(...routeTargetsOf(story, sc));
-  }
-  return false;
-}
-
 /** Does a route still work the SECOND time the player takes it? The same
  *  consumption rules the runtime applies, read off the edge itself:
  *  an auto-advance and an entry script fire on every arrival, an after-beat
@@ -2455,6 +2419,127 @@ function routeEdgeRepeats(e: StoryEdge): boolean {
   return !!hs && !!hs.action && typeof hs.action === "object" ? hotspotRepeats(hs) : false;
 }
 
+/* --------------------------- the story graph --------------------------- */
+/* One pass over the authored routes, shared by every audit that walks the
+ * graph. Rebuilding the edge list inside those walks is what made validation
+ * super-linear: ONE validateStory() on the film (201 scenes, 1643 beats)
+ * rebuilt it ~20,000 times and allocated ~4,000,000 edge objects — the same
+ * 400 routes, over and over — which cost about 4.5 seconds per call, on the
+ * main thread, on every keystroke in the Studio. The walks only ever need a
+ * handful of Maps. With this index the same call is a few dozen milliseconds.
+ *
+ * A StoryGraph is a SNAPSHOT of one story object: build it, use it, drop it.
+ * The Studio commits a new story object per edit (never in-place mutation), so
+ * an index is safe for the length of a single validate/render pass — do not
+ * keep one across an edit or reuse one for a different story. */
+
+export interface StoryGraph {
+  /** every scene id, for the constant-time "is this a real scene?" checks */
+  sceneIds: ReadonlySet<string>;
+  /** id → scene, for the walks that used to story.scenes.find() per hop */
+  sceneById: ReadonlyMap<string, SceneNode>;
+  /** every authored route, in scene order — exactly what storyEdges(story)
+   *  returns, so callers that already had the array keep identical results */
+  edges: StoryEdge[];
+  /** authored routes grouped by source scene, and by their RAW target id */
+  outRaw: ReadonlyMap<string, StoryEdge[]>;
+  inRaw: ReadonlyMap<string, StoryEdge[]>;
+  /** source → known scene targets, raw ids (a walk through a note placeholder
+   *  keeps going because the note's own routes are in here too) */
+  outSceneIds: ReadonlyMap<string, string[]>;
+  /** source → destinations with note placeholders resolved through
+   *  (routeTargetsOf), plus EVERY travel-map pin when the map is open — the
+   *  destination computer opens from any room */
+  routeAdj: ReadonlyMap<string, string[]>;
+  /** edges landing on this scene once note placeholders are resolved through
+   *  (self-routes included), for the return-trap audit's routes-in */
+  inResolved: ReadonlyMap<string, StoryEdge[]>;
+  /** the travel map is open, so its pins are an exit from every room */
+  mapOpen: boolean;
+  /** Can a route lead from `from` to `target`? Note placeholders and map pins
+   *  count, gates and repeatability do not. Memoised per `from`. */
+  reaches(from: string, target: string): boolean;
+  /** Can an authored route lead from `from` to `target`, raw ids, map ignored?
+   *  A scene reaches itself without moving. Memoised per `from`. */
+  routesFrom(from: string, target: string): boolean;
+}
+
+export function storyGraph(story: Story): StoryGraph {
+  const sceneById = new Map<string, SceneNode>(story.scenes.map((s) => [s.id, s] as const));
+  const sceneIds = new Set(sceneById.keys());
+  const edges = storyEdges(story);
+  const outRaw = new Map<string, StoryEdge[]>();
+  const inRaw = new Map<string, StoryEdge[]>();
+  const outSceneIds = new Map<string, string[]>();
+  const inResolved = new Map<string, StoryEdge[]>();
+  const resolvedOut = new Map<string, string[]>();
+  const push = <T,>(map: Map<string, T[]>, key: string, value: T) => {
+    const list = map.get(key);
+    if (list) list.push(value);
+    else map.set(key, [value]);
+  };
+  // Note placeholders are transparent: a route through one lands on the scene
+  // behind it. The same few targets are resolved from every walk, so memoise.
+  const resolved = new Map<string, string>();
+  const resolve = (id: string): string => {
+    const memo = resolved.get(id);
+    if (memo !== undefined) return memo;
+    const landing = bypassedSceneId(story, id);
+    resolved.set(id, landing);
+    return landing;
+  };
+  for (const e of edges) {
+    push(outRaw, e.source, e);
+    push(inRaw, e.target, e);
+    if (sceneIds.has(e.target)) push(outSceneIds, e.source, e.target);
+    const landing = resolve(e.target);
+    if (sceneIds.has(landing)) {
+      push(inResolved, landing, e);
+      push(resolvedOut, e.source, landing);
+    }
+  }
+  const mapOpen = mapAvailable(story);
+  const pins = mapOpen
+    ? (story.map?.locations ?? []).map((l) => resolve(l.targetSceneId)).filter((id) => sceneIds.has(id))
+    : [];
+  const routeAdj = new Map<string, string[]>();
+  for (const sc of story.scenes) routeAdj.set(sc.id, [...(resolvedOut.get(sc.id) ?? []), ...pins]);
+
+  // Reachability, memoised per source. The two questions are asked per scene
+  // and per inbound edge by the audits below; each answer is one walk of the
+  // graph, cached, instead of a fresh BFS that rebuilt the graph under itself.
+  const walk = (targetsOf: (id: string) => string[], from: string): Set<string> => {
+    const seen = new Set<string>();
+    const queue = [...targetsOf(from)];
+    while (queue.length) {
+      const id = queue.pop()!;
+      if (seen.has(id)) continue;
+      seen.add(id);
+      for (const next of targetsOf(id)) queue.push(next);
+    }
+    return seen;
+  };
+  const memo = (targetsOf: (id: string) => string[]) => {
+    const cache = new Map<string, Set<string>>();
+    return (from: string): Set<string> => {
+      let seen = cache.get(from);
+      if (!seen) {
+        seen = walk(targetsOf, from);
+        cache.set(from, seen);
+      }
+      return seen;
+    };
+  };
+  const reach = memo((id) => routeAdj.get(id) ?? []);
+  const rawReach = memo((id) => (outRaw.get(id) ?? []).map((e) => e.target));
+  const reaches = (from: string, target: string): boolean => reach(from).has(target);
+  // A scene reaches itself without moving — the one edge case the walk can't
+  // express, because the raw walk never starts by looking at `from` itself.
+  const routesFrom = (from: string, target: string): boolean => from === target || rawReach(from).has(target);
+
+  return { sceneIds, sceneById, edges, outRaw, inRaw, outSceneIds, routeAdj, inResolved, mapOpen, reaches, routesFrom };
+}
+
 export interface SceneExitAudit {
   /** ways out that still work when the player walks back in */
   surviving: string[];
@@ -2472,9 +2557,12 @@ export interface SceneExitAudit {
 }
 
 /** Audit one scene's exits against a RETURN visit. Pure; the validator, the
- *  engine tests and Studio all read the same answer. */
-export function auditSceneExits(story: Story, scene: SceneNode): SceneExitAudit {
-  const known = new Set(story.scenes.map((s) => s.id));
+ *  engine tests and Studio all read the same answer. Pass the story's
+ *  StoryGraph when you have one (the validator does): without it this rebuilds
+ *  the whole graph for one scene, which is what made the per-scene audit
+ *  quadratic. */
+export function auditSceneExits(story: Story, scene: SceneNode, graph: StoryGraph = storyGraph(story)): SceneExitAudit {
+  const known = graph.sceneIds;
   const surviving: string[] = [];
   const spent: string[] = [];
 
@@ -2507,7 +2595,7 @@ export function auditSceneExits(story: Story, scene: SceneNode): SceneExitAudit 
       surviving.push(`➜ walk off the ${side} edge → ${exit.targetSceneId}`);
     }
   }
-  if (mapAvailable(story)) {
+  if (graph.mapOpen) {
     const pin = (story.map?.locations ?? []).find(
       (l) => l.targetSceneId && l.targetSceneId !== scene.id && known.has(l.targetSceneId)
     );
@@ -2527,14 +2615,13 @@ export function auditSceneExits(story: Story, scene: SceneNode): SceneExitAudit 
   // 👣 door marker, an auto-advance) is enough, and so are two distinct
   // one-shot ones (each buys one entry). A single one-shot route in cannot
   // strand anybody — it is spent bringing the player here the first time.
-  const inbound = storyEdges(story).filter(
-    (e) => e.source !== scene.id && bypassedSceneId(story, e.target) === scene.id
-  );
+  const inboundAll = graph.inResolved.get(scene.id) ?? [];
+  const inbound = inboundAll.filter((e) => e.source !== scene.id);
   // …and the route back has to be walkable: the scene it starts from must be
   // reachable from here, or the player can never get to it to come back.
-  const usableIn = inbound.filter((e) => reachesFrom(story, scene.id, e.source));
+  const usableIn = inbound.filter((e) => graph.reaches(scene.id, e.source));
   const repeatableIn = usableIn.filter(routeEdgeRepeats);
-  const mapPinIn = mapAvailable(story) && (story.map?.locations ?? []).some((l) => l.targetSceneId === scene.id);
+  const mapPinIn = graph.mapOpen && (story.map?.locations ?? []).some((l) => l.targetSceneId === scene.id);
   let via: string | null = null;
   if (repeatableIn.length) via = `"${repeatableIn[0].label}" from ${repeatableIn[0].source}`;
   else if (mapPinIn) via = "a travel-map pin";
@@ -2542,7 +2629,7 @@ export function auditSceneExits(story: Story, scene: SceneNode): SceneExitAudit 
   // A scene that routes to ITSELF needs no second entry at all: taking a
   // one-shot self-route leaves the player exactly where they were, having
   // spent it.
-  if (!via && storyEdges(story).some((e) => e.source === scene.id && bypassedSceneId(story, e.target) === scene.id && !routeEdgeRepeats(e))) {
+  if (!via && inboundAll.some((e) => e.source === scene.id && !routeEdgeRepeats(e))) {
     via = "its own one-shot route back into itself";
   }
 
@@ -2581,7 +2668,12 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
   if (story.scenes.length === 0) {
     return [{ severity: "warning", sceneId: null, message: "Blank canvas — add your first scene, then mark it as the start scene." }];
   }
-  const ids = new Set(story.scenes.map((s) => s.id));
+  // ONE index for every graph walk below. Each audit used to rebuild the edge
+  // list (and a scene lookup Map) for itself, per scene and per edge — the
+  // O(V³)-shaped cost this index exists to remove. Nothing here mutates the
+  // story, so one snapshot serves the whole validation.
+  const graph = storyGraph(story);
+  const ids = graph.sceneIds;
   const itemIds = new Set(story.items.map((i) => i.id));
   const characterIds = new Set(story.characters.map((c) => c.id));
   const memoryTags = new Set<string>();
@@ -2686,37 +2778,11 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
   if (startScene?.nodeType === "note")
     issues.push({ severity: "error", sceneId: startScene.id, message: `Start scene "${startScene.title}" is a note placeholder — the player would open on a marker, not a scene. Pick a real start scene.` });
 
-  const edges = storyEdges(story);
+  const edges = graph.edges;
   edges.forEach((e) => {
     if (!ids.has(e.target))
       issues.push({ severity: "error", sceneId: e.source, message: `Dangling link → missing scene "${e.target}" (${e.label}).` });
   });
-
-  // Authored-route adjacency over every route kind — the "can the player
-  // ever get from A to B" question, independent of gates (locked routes
-  // still count: a key can exist).
-  const routeAdj = new Map<string, string[]>();
-  for (const e of edges) {
-    const list = routeAdj.get(e.source) ?? [];
-    list.push(e.target);
-    routeAdj.set(e.source, list);
-  }
-  const routesFrom = (a: string, b: string): boolean => {
-    if (a === b) return true;
-    const seen = new Set<string>([a]);
-    const queue = [a];
-    while (queue.length) {
-      const n = queue.shift()!;
-      for (const m of routeAdj.get(n) ?? []) {
-        if (m === b) return true;
-        if (!seen.has(m)) {
-          seen.add(m);
-          queue.push(m);
-        }
-      }
-    }
-    return false;
-  };
 
   // ---- STAGE nodes (free-roam walkable scenes) ----
   // (Runs for EVERY scene first: animated foreground extras live on any node.)
@@ -2935,7 +3001,7 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
     const cur = queue.pop()!;
     if (reachable.has(cur)) continue;
     reachable.add(cur);
-    edges.filter((e) => e.source === cur && ids.has(e.target)).forEach((e) => queue.push(e.target));
+    for (const target of graph.outSceneIds.get(cur) ?? []) queue.push(target);
   }
   story.scenes.forEach((sc) => {
     const isNote = sc.nodeType === "note";
@@ -2943,7 +3009,7 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
     // would just be noise. Once something points at it, reachability matters.
     if (!reachable.has(sc.id) && !isNote)
       issues.push({ severity: "warning", sceneId: sc.id, message: `Scene "${sc.title}" is unreachable from the start.` });
-    const outs = edges.filter((e) => e.source === sc.id);
+    const outs = graph.outRaw.get(sc.id) ?? [];
     if (isNote) {
       // Notes bypass in play by following their FIRST outgoing route, so a
       // wired-in note with no route out is a soft-lock: flag it loudly.
@@ -3011,10 +3077,13 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
     const onMap = mapAvailable(story) && (story.map?.locations ?? []).some((loc) =>
       loc.targetSceneId !== sc.id && ids.has(loc.targetSceneId) && gateSatisfiableLocally(loc.gating, sc));
     if (!sc.isEnding && sc.nodeType === "stage" && reachable.has(sc.id) && !onMap) {
-      for (const e of edges.filter((x) => x.target === sc.id)) {
-        const from = story.scenes.find((s) => s.id === e.source);
+      // graph.routesFrom is the authored-route adjacency over every route kind
+      // — the "can the player ever get from A to B" question, independent of
+      // gates (locked routes still count: a key can exist), memoised per scene.
+      for (const e of graph.inRaw.get(sc.id) ?? []) {
+        const from = graph.sceneById.get(e.source);
         if (!from || from.nodeType !== "stage" || e.source === sc.id) continue;
-        if (routesFrom(sc.id, e.source)) continue;
+        if (graph.routesFrom(sc.id, e.source)) continue;
         issues.push({
           severity: "warning",
           sceneId: sc.id,
@@ -3029,7 +3098,7 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
     // else flags it — the graph has no dead end, every exit "works" once — and
     // a random playthrough only drowns in it by luck. See auditSceneExits.
     if (!sc.isEnding && sc.nodeType !== "note" && sc.nodeType !== "credits" && reachable.has(sc.id)) {
-      const audit = auditSceneExits(story, sc);
+      const audit = auditSceneExits(story, sc, graph);
       if (audit.trapped) {
         const way = audit.afterBeatOnly
           ? "its only route out is an after-beat cut, which does NOT replay on a return visit (the beats the player has seen are skipped)"
@@ -3354,7 +3423,7 @@ export function validateStory(story: Story, ctx?: ValidateContext): ValidationIs
       issues.push({ severity: "warning", sceneId: sc.id, message: `Scene "${sc.title}" isn't in any episode — players can reach it but it has no title card, recap or save slots.` });
     });
     // Cross-episode edges that skip the episode handoff.
-    storyEdges(story).forEach((edge) => {
+    edges.forEach((edge) => {
       const from = sceneOwner.get(edge.source);
       const to = sceneOwner.get(edge.target);
       if (from && to && from !== to)
