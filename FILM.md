@@ -6,6 +6,40 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## The new backstreet, no slow pan, one grade, no shake in scenes 1 and 2 (15 October 2026, the director)
+
+* **Scene 1's reshoot is in the film — thirteen of its twenty-three plates.** `public/film/img/s1_new/` (the 14 October
+  reshoot; same filenames as `s1/`, so the sets swap one for one) is copied over `public/film/img/s1/` for shots
+  **1–13 and 17–18**: `01-backstreet`, `02-vending`, `03-mara-walks`, `04-mara-phone`, `05-phone-off`,
+  `06-barbershop-doorway`, `07-old-man`, `09-old-man-stops`, `10-the-shot`, `12-masked-man-radio`,
+  `13-taillights-gone`, `17-she-runs`, `18-the-flashlight`. Nothing else in `s1/` changed (328, 329, 330, 331, 332,
+  333, 383 and 14/15/16 stay the old plates — 14 keeps the still its `14-lipsync.mp4` clip was made from). The old
+  plates are in git; `s1_new/` keeps its README, style sheets and contact sheet for the rest.
+* **Two depth maps no longer fit and are switched off.** `01-backstreet` and `02-vending` had depth maps made from the
+  old plates (`public/film/depth/s1/…`), so the 2.5D camera would warp the new picture against the old shape
+  (CLAUDE.md rule 1). Their depth entries are out of `src/film/studio-edits.json` (`pictureLook`) — the shots hold
+  still — until new maps are made from the new plates with `tools/make-depth-layers.py` (`docs/depth-camera.md`).
+  `329-the-lane-the-watch` and `383-the-empty-lane` also have maps from the old plates but were not swapped, so they
+  are untouched and still play.
+* **No slow pan, anywhere.** The builder's last pass (`noSlowPan` in `tools/build-film-story.mjs`) turns every
+  `mode: "pan"` into `"static"` on every scene, every beat and every credits-montage look, after the Studio edits.
+  `camera()` no longer hands out a pan either (its rotation is push, push, hold, dolly) and no longer writes
+  `panDistance`/`panDirection`. The zoom-to-subject (249 blocks), the rail dolly (118), the four vertigo dolly-zooms
+  and the depth-map camera are their own moves and stay.
+* **One grade over the film: Midnight Teal — Lab Cold** (`midnightTeal`, the same last pass; preset
+  `"midnight-teal"`). Scene and beat alike, whatever a picture's look says: the five warm-photograph beats
+  (`35-the-photograph`, `165-face-up`, `166-by-its-edges`, `167-two-men-laughing`, `244-daniel-voss-41`, all
+  `spielberg-golden`) and the nine ending beats in 98/99A (`nolan-imax`) were graded differently until now. The three
+  inn-raid scenes that already were teal (19–21) are unchanged in effect. All 577 camera blocks carry it (573
+  scene/beat cinematics + the 4 credits-montage looks).
+* **No handheld shake in scenes 1 and 2** (`noShake`, `nw_s1`/`nw_s2` only): the four beats that had it —
+  `10-the-shot` (0.3), `17-she-runs` (0.2), `21-mara-bursts-in` (0.2), `26-the-variety-show` (0.3) — hold still
+  instead. The cut into `10-the-shot` (a "zoom" background transition) is not a shake and stays, as does every shake
+  elsewhere (the inn raid, the songs, the Hive escape: 36 shake blocks left).
+* **Checked:** `npm run test:film-depth` (all checks passed), `npm run test:film-backend` (111 checks),
+  `npm run test:validator` (32 passed, 0 failed), `npm run check` (all 2,612 story assets present). Nobody has watched
+  the new scene 1 in sequence.
+
 ## A music fade now always lands, even when no frame is drawn (13 October 2026, review)
 
 Reported while reviewing the day's notes: *"song in scene one loops throughout movie but should end after scene 2."* The cue itself was right — Glimmering Haze (61 s) on scenes 1 and 2 only, `musicLoop: true`, replaced by the title song on the credits node — but the **fade that was supposed to take it out never finished**. The fade was a `requestAnimationFrame` loop on the old element's `.volume`, and the music code pauses and releases that element from the ramp's completion callback. Frames stop when the page stops drawing (a hidden tab, a minimised window, a locked screen) and slow down on a busy machine, so the ramp stalled, `onDone` never ran and the **looping** cue played on under the film (and the incoming track's fade-up stalled at 0 too, on the same hidden page).

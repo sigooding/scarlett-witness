@@ -1925,10 +1925,6 @@
           }
         ],
         "mode": "pan",
-        "depthMap": "/film/depth/s1/02-vending/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.48,
-        "depthSeconds": 16,
         "focalPoint": "30% 50%",
         "panDistance": 2,
         "zoomDuration": 16
@@ -3889,10 +3885,6 @@
     "01-backstreet": {
       "cinematic": {
         "mode": "pan",
-        "depthMap": "/film/depth/s1/01-backstreet/depth.png",
-        "depthMotion": "push",
-        "depthAmount": 0.38,
-        "depthSeconds": 16,
         "focalPoint": "50% 52%",
         "panDistance": 2,
         "zoomDuration": 16
