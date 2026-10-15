@@ -12,6 +12,15 @@ Read `docs/depth-camera.md` before adding or changing any depth map, plate or cu
 
 Check maps with `tools/review-depth-maps.py` and watch the move with `tools/depth-frames.mjs` before calling a shot done.
 
+## The Studio's image library
+
+`tools/builtin-images.mjs` is what every image box in the Studio can offer: `public/img` and `public/assets`, the
+film's own pictures (`public/film/img`, group `film-img`, labelled by scene) and its depth layers
+(`public/film/depth`, group `film-depth`, labelled by the shot they belong to). Grouped files are listed by the
+fields that ask for them, by a field already pointing into them, or behind the picker's "Show every group too".
+Uploads go straight into the box (`⇧ Upload an image…`, or drop a file on it) and are filed under the folder the
+field asks for. `npm run test:image-picker` drives the real picker over the real scan.
+
 ## Animatic export
 
 `docs/animatic-export.md`: `npm run export:animatic -- --from nw_s65 --to nw_s65`, or 🎞 Export animatic on the home screen under `npm run dev`. Do not edit `src/` while an export runs from a dev server (Vite reloads the page and the capture breaks).

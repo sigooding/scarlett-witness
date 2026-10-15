@@ -613,8 +613,9 @@
                      locks the Continue button and choices while the intro plays.
    TITLE             the name shown in the HUD.
    BACKGROUND        an image browser (searchable dropdown over every built-in
-                     scene image in /img and /assets, plus all your uploads,
-                     plus gradient presets — hover any name for a full preview).
+                     scene image in /img and /assets, the film's own pictures
+                     when this field is already on one, every upload, plus
+                     gradient presets — hover any name for a full preview).
                      The box carries its own "⇧ Upload an image..." row, and
                      takes a dropped file as well, so a new plate can go from
                      your desktop to this field without leaving it. Also accepts
@@ -792,9 +793,10 @@
    indicator tells you if uploads will survive a reload. Every image field in
    Studio now uses the IMAGE BROWSER — a searchable dropdown that lists every
    built-in image shipped in /img and /assets (all scenes, characters, covers,
-   animation sprites) PLUS all your uploads PLUS gradient presets. Hover any
-   name for a full-size rollover preview. Uploaded audio appears in the
-   music/narration/voice pickers; uploaded video in the cutscene picker.
+   animation sprites), Nobody's Witness's own pictures and depth layers, all
+   your uploads and the gradient presets. Hover any name for a full-size
+   rollover preview. Uploaded audio appears in the music/narration/voice
+   pickers; uploaded video in the cutscene picker.
 
    THE IMAGE BROWSER, FIELD BY FIELD
    One box serves every picture field: a scene's BACKGROUND, a beat's
@@ -802,15 +804,25 @@
    CUT-OUTS, foreground layers and alpha masks, portraits, cursor art, the
    credits montage and the travel map. It lists EVERY available image:
      - every built-in file under /img and /assets;
-     - the film's own depth maps, clean plates and cut-outs under /film/depth,
-       under their own heading (background pickers keep these out of the way —
-       tick "Show every group too" to list them anywhere);
+     - Nobody's Witness's own pictures under /film/img (811 of them), labelled
+       by scene and shot ("377 The Hive Remembered (s1)", "M4 Railway Rain
+       (montage)");
+     - the film's depth maps, clean plates and cut-outs under /film/depth,
+       labelled by the shot they belong to ("377 The Hive Remembered —
+       depth (s1)", "74 Twenty Metres Apart — cut-out 1 (s74)");
      - the gradient presets;
      - every upload in the library, whatever story it came from.
+   The film's pictures and depth layers are GROUPED, so a background list for
+   another story is not swamped by 800-odd plates. A field lists a group when
+   it asks for it (the three depth-camera fields ask for the depth layers),
+   when the field's current value is already in it (a film scene's background
+   IS a /film/img/… picture, so those lists carry the film's pictures), or when
+   you tick "Show every group too (N more …)". Nothing is unreachable.
    Rows are grouped under headings — Your uploads first, then Gradient presets,
-   Built-in art & sprites and Film depth maps, plates & cut-outs. Type in the filter box to
-   narrow the list, press Enter to take the first match, and roll the pointer
-   over any row for a full-size preview.
+   Built-in art & sprites, Film pictures (Nobody's Witness) and Film depth
+   maps, plates & cut-outs. Type in the filter box to narrow the list, press
+   Enter to take the first match, and roll the pointer over any row for a
+   full-size preview.
    UPLOADING FROM THE BOX: "⇧ Upload an image..." sits at the top of the open
    list. The file is saved to the shared library, filed in the folder the field
    asks for (depth-map fields use "depth maps"), and picked for the field

@@ -23,6 +23,7 @@ import { visitStoryMediaFields } from "../src/data/storyMedia";
 import { collectStoryAssetIds, resolveMediaValue } from "../src/data/mediaLibrary";
 import { parseAmbient, joinAmbient } from "../src/studio/ambientParts";
 import { countExportFiles, LARGE_EXPORT_FILES } from "../src/studio/exportBundle";
+import { scanBuiltinImages, labelFor } from "../tools/builtin-images.mjs";
 
 let checks = 0;
 const check = (value: unknown, message: string) => { assert.ok(value, message); checks++; };
@@ -155,10 +156,27 @@ const small = { ...FILM, scenes: FILM.scenes.slice(0, 3) };
 check(countExportFiles(FILM) >= LARGE_EXPORT_FILES, `the whole film (${countExportFiles(FILM)} files) is above the size at which the Studio asks before exporting`);
 check(countExportFiles(small) < LARGE_EXPORT_FILES, `three of its scenes (${countExportFiles(small)} files) export without asking`);
 check(countExportFiles({ ...FILM, scenes: [] }) < 40, `a story with no scenes has only its cover, avatars and the like (${countExportFiles({ ...FILM, scenes: [] })} files)`);
-const vite = read("vite.config.ts");
-check(/film\/depth/.test(vite) && /group: "film-depth"/.test(vite), "the image picker's built-in list includes public/film/depth under the group film-depth");
-check(/groups\?\.includes\(b\.group\)/.test(read("src/studio/ImagePicker.tsx")), "and only the pickers that ask for the group show it");
-check((read("src/studio/CinematicControls.tsx").match(/groups=\{FILM_DEPTH\}/g) ?? []).length === 3, "the depth map, clean plate and cut-out pickers ask for it");
+// The image browser's list is scanned from disk by tools/builtin-images.mjs.
+// Every picture, plate and depth map the film uses must be IN it — otherwise
+// the film's own art is not something the Studio can re-pick.
+const BUILTINS = scanBuiltinImages(ROOT);
+const pickerUrls = new Set(BUILTINS.map((b) => b.url));
+const pictureUrls = new Set(BUILTINS.filter((b) => b.group === "film-img").map((b) => b.url));
+const layerUrls = new Set(BUILTINS.filter((b) => b.group === "film-depth").map((b) => b.url));
+
+const filmRefs = new Set<string>();
+visitStoryMediaFields(deepClone(FILM), ({ value }) => { if (value) filmRefs.add(value); });
+const filmPictures = [...filmRefs].filter((v) => v.startsWith("/film/img/"));
+const filmLayers = [...filmRefs].filter((v) => v.startsWith("/film/depth/"));
+check(filmPictures.length > 200, `the film references ${filmPictures.length} of its own pictures`);
+eq(filmPictures.filter((u) => !pictureUrls.has(u)), [], "every picture the film uses is in the image browser (group film-img)");
+eq(filmLayers.filter((u) => !layerUrls.has(u)), [], `every one of its ${filmLayers.length} depth maps, plates and cut-outs is there too (group film-depth)`);
+check(pickerUrls.size === BUILTINS.length && BUILTINS.length > 800, `the browser offers all ${BUILTINS.length} images the scan finds`);
+check(labelFor("s1/377-the-hive-remembered.jpg") === "377 The Hive Remembered (s1)", "pictures are labelled by scene and shot");
+check(labelFor("s1/377-the-hive-remembered/depth.png") === "377 The Hive Remembered — depth (s1)", "depth layers are labelled by the shot they belong to");
+check(/groups\?\.includes\(b\.group\)/.test(read("src/studio/ImagePicker.tsx")) && /autoGroups\.includes\(b\.group\)/.test(read("src/studio/ImagePicker.tsx")),
+  "and only the pickers that ask for a group — or already point into one — show it");
+check((read("src/studio/CinematicControls.tsx").match(/groups=\{FILM_DEPTH\}/g) ?? []).length === 3, "the depth map, clean plate and cut-out pickers ask for the depth layers");
 const depthFiles = readdirSync(join(ROOT, "public/film/depth"), { recursive: true }).filter((f) => /depth\.png$/.test(String(f)));
 check(depthFiles.length > 40, `${depthFiles.length} depth maps are on offer`);
 

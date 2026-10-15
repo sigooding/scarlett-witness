@@ -67,10 +67,11 @@ test("a depth map, a sound effect and a recorded loop uploaded in the Studio rea
   // 4. the scene's camera: a depth map, which starts on the suggested move
   await page.locator("#studio-tab-scene").click();
   await page.getByRole("button", { name: /Depth-map camera/ }).click();
-  await page.getByText("Pick this picture's depth map…").click();
-  // the picker also offers the film's own depth maps (public/film/depth), labelled by shot
+  await page.getByText(/Pick this picture's depth map/).click();
+  // the picker also offers the film's own depth maps (public/film/depth), labelled by the shot
+  // they belong to — the label is the picture's name, not the file's (tools/builtin-images.mjs)
   await page.getByPlaceholder(/^Filter \d+ images/).fill("222-mud-and-impacts");
-  await expect(page.getByRole("button", { name: /^Depth \(s47\/222-mud-and-impacts\)/ })).toBeVisible();
+  await expect(page.getByRole("button", { name: /^222 Mud And Impacts — depth \(s47\)/ })).toBeVisible();
   await page.getByPlaceholder(/^Filter \d+ images/).fill("depth.png");
   await page.getByRole("button", { name: /^depth\.png/ }).first().click();
 

@@ -16,6 +16,7 @@ const GRADIENT_PRESETS: { value: string; label: string }[] = [
 
 /** Heading shown above a group of images the scan tagged with a `group`. */
 const GROUP_LABELS: Record<string, string> = {
+  "film-img": "Film pictures (Nobody's Witness)",
   "film-depth": "Film depth maps, plates & cut-outs",
 };
 
@@ -60,12 +61,19 @@ function Swatch({
  * It lists EVERY available image. Your own uploads lead the list (the folder
  * the field prefers first, e.g. "sprites" or "depth maps", then the rest A→Z),
  * then the gradient presets, then all built-in art shipped in `/img` and
- * `/assets` (via the `virtual:builtin-images` plugin) and — under its own
- * heading, and one click away behind “show every group” for pickers that
- * don't ask for it — the film's depth maps / plates / cut-outs from
- * `/film/depth`. Rows carry group headings, a filter box narrows the list
- * (Enter takes the first match), and rolling the pointer over any entry pops a
- * large preview so you can actually see what you're choosing.
+ * `/assets` (via the `virtual:builtin-images` plugin), the film's own pictures
+ * from `/film/img`, and its depth maps / plates / cut-outs from `/film/depth`
+ * (see `tools/builtin-images.mjs` for the roots and the labels).
+ *
+ * The last two are group-tagged, so a picker lists them when its call site
+ * asks for them (`groups`), when the field's current value already points into
+ * them (a film scene's background is a `/film/img/…` picture), or when the
+ * author ticks “Show every group too” — nothing is unreachable, and a
+ * background picker for another story isn't swamped by 800 film plates.
+ *
+ * Rows carry group headings, a filter box narrows the list (Enter takes the
+ * first match), and rolling the pointer over any entry pops a large preview so
+ * you can actually see what you're choosing.
  *
  * It also uploads: the ⇧ Upload row at the top of the panel takes a file
  * straight into the shared library and selects it, so no field needs a separate
@@ -147,6 +155,22 @@ export function ImagePicker({
     }
   }, [open]);
 
+  /** Groups the current value already lives in. A film scene's background IS a
+   *  `/film/img/…` picture, so that field lists the film's pictures straight
+   *  away rather than hiding 800 of them behind the switch — and a field
+   *  pointing at a depth layer lists the film's depth files the same way. */
+  const autoGroups = useMemo(() => {
+    if (!value || /^(asset:|gradient:|video:|data:)/.test(value)) return [];
+    const out: string[] = [];
+    const seen = new Set<string>();
+    for (const b of builtinImages) {
+      if (!b.group || !b.prefix || seen.has(b.group)) continue;
+      seen.add(b.group);
+      if (value.startsWith(`${b.prefix}/`)) out.push(b.group);
+    }
+    return out;
+  }, [value]);
+
   /** Everything this picker can offer, plus the group-tagged files it holds
    *  back until “show every group” is switched on (the film's depth maps would
    *  only clutter a background picker). */
@@ -174,8 +198,8 @@ export function ImagePicker({
       for (const g of GRADIENT_PRESETS) shown.push({ kind: "gradient", ...g, section: "Gradient presets" });
     if (includeBuiltins)
       for (const b of builtinImages) {
-        const section = b.group ? GROUP_LABELS[b.group] ?? `More images (${b.group})` : "Built-in art & sprites";
-        const listed = !b.group || groups?.includes(b.group) || showEveryGroup;
+        const section = b.group ? GROUP_LABELS[b.group] ?? `More images (${b.prefix})` : "Built-in art & sprites";
+        const listed = !b.group || groups?.includes(b.group) || autoGroups.includes(b.group) || showEveryGroup;
         if (!listed) {
           heldBackCount += 1;
           heldBack.add(section);
@@ -190,7 +214,7 @@ export function ImagePicker({
       hiddenSections: [...heldBack],
       builtinCount: builtins,
     };
-  }, [includeGradients, includeBuiltins, uploads, returnReference, preferFolder, groups, showEveryGroup]);
+  }, [includeGradients, includeBuiltins, uploads, returnReference, preferFolder, groups, autoGroups, showEveryGroup]);
 
   /** The visible rows: filtered, with a heading whenever the source changes —
    *  so a long list reads as tintable sections instead of one wall of names. */

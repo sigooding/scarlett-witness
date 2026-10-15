@@ -8,7 +8,15 @@ declare module "virtual:builtin-images" {
     url: string;
     /** human-readable label derived from the file name */
     label: string;
-    /** set for files only some pickers offer ("film-depth": the film's depth maps, plates and cut-outs) */
+    /** public prefix of the root the file lives under, e.g. "/film/img" */
+    prefix: string;
+    /**
+     * set for files only some pickers offer by default: "film-img" (Nobody's
+     * Witness's own pictures) and "film-depth" (its depth maps, plates and
+     * cut-outs). A picker lists such a group when the call site asks for it,
+     * when the value already points into it, or when the author ticks
+     * “Show every group too”.
+     */
     group?: string;
   }
   const images: BuiltinImage[];

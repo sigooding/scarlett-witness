@@ -2,21 +2,32 @@
  * IMAGE PICKER BETA PROBE — mounts the REAL <ImagePicker/> in happy-dom and
  * drives the two things every image box in the Studio promises:
  *
- *   A — the list: every built-in image, the film's own depth maps / plates /
- *       cut-outs behind “show every group”, the gradient presets, the uploads
- *       of every story, the filter, Enter-to-pick and the rollover preview;
+ *   A — the list: every built-in image the scan finds (the film's 800+
+ *       pictures under public/film/img, its depth layers under
+ *       public/film/depth, /img and /assets where they exist), the group
+ *       headings, the “show every group too” switch, the presets, the filter,
+ *       Enter-to-pick and the rollover preview;
  *   B — the upload button inside the box: ⇧ Upload → real (fake-)IndexedDB,
  *       the file is picked AND filed in the folder the field asked for, a
  *       dropped file does the same, a picker with no story id still files
  *       under the case Studio has open, and a non-image is refused politely.
  *
- * Nothing here trusts a claim from an earlier pass: every gate re-runs from
- * scratch against the rendered DOM and the library rows that really landed.
+ * The list under test is the repo's own: the harness bakes
+ * tools/builtin-images.mjs's scan into the bundle and passes the counts and a
+ * few real file names in as defines (__FILM_PICTURE_COUNT__ etc.), so every
+ * count below is a statement about what is on disk, not about a stub.
  */
 import { createRoot, type Root } from "react-dom/client";
 import { useState } from "react";
 import { ImagePicker, setImagePickerStoryId } from "IMAGE_PICKER_PATH";
 import { loadAllAssets, loadAssets, type MediaAsset } from "MEDIA_PATH";
+
+declare const __FILM_PICTURE_COUNT__: number;
+declare const __FILM_LAYER_COUNT__: number;
+declare const __HIVE_PICTURE__: string;
+declare const __HIVE_DEPTH__: string;
+declare const __HIVE_PICTURE_LABEL__: string;
+declare const __HIVE_DEPTH_LABEL__: string;
 
 interface Ctx {
   win: any;
@@ -28,6 +39,16 @@ let win: any;
 let root: Root | null = null;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+/** Wait for a condition instead of guessing at a sleep: React updates, the
+ *  panel opening and the (fake-)IndexedDB writes are all asynchronous, and a
+ *  fixed delay is only ever a race waiting to be lost under load. */
+async function waitFor(pred: () => boolean | Promise<boolean>, ms = 4000, step = 20): Promise<boolean> {
+  for (let waited = 0; waited <= ms; waited += step) {
+    if (await pred()) return true;
+    await sleep(step);
+  }
+  return pred();
+}
 let passed = 0;
 let failed = 0;
 
@@ -44,7 +65,6 @@ process.on("uncaughtException", (e) => problems.push(["uncaught", String((e as a
 process.on("unhandledRejection", (e) => problems.push(["unhandled rejection", String((e as Error)?.stack || e).slice(0, 800)]));
 
 const panelOf = (sel: string): any => win.document.querySelector(`${sel} .absolute.z-50`);
-/** The trigger is the first button inside the box (the panel's rows come later). */
 const triggerOf = (sel: string): any => win.document.querySelector(`${sel} button`);
 const textOf = (el: any): string => (el?.textContent ?? "").replace(/\s+/g, " ").trim();
 const rowsOf = (panel: any): any[] => [...(panel?.querySelectorAll("button") ?? [])];
@@ -53,7 +73,13 @@ const allText = () => (win.document.body.textContent ?? "").replace(/\s+/g, " ")
 
 async function openPicker(sel: string) {
   triggerOf(sel)?.click();
-  await sleep(40);
+  await waitFor(() => !!panelOf(sel));
+}
+
+/** Close an open panel (clicking its trigger again). */
+async function closePicker(sel: string) {
+  triggerOf(sel)?.click();
+  await waitFor(() => !panelOf(sel));
 }
 
 /** happy-dom needs the native setter for React-controlled inputs. */
@@ -71,7 +97,8 @@ async function feedFile(sel: string, file: any) {
   if (!input) return false;
   Object.defineProperty(input, "files", { value: [file], configurable: true });
   input.dispatchEvent(new win.Event("change", { bubbles: true }));
-  await sleep(80);
+  // The upload finishes when the library row can be read back.
+  await waitFor(async () => (await loadAllAssets("image")).some((a) => a.name === file.name));
   return true;
 }
 
@@ -87,14 +114,15 @@ async function dropFile(sel: string, file: any) {
   const drop = new win.Event("drop", { bubbles: true, cancelable: true });
   Object.defineProperty(drop, "dataTransfer", { value: dt, configurable: true });
   wrapper.dispatchEvent(drop);
-  await sleep(120);
+  await waitFor(async () => (await loadAllAssets("image")).some((a) => a.name === file.name));
   return hot;
 }
 
-/** The four boxes the Studio shows: a scene background, a beat shot, a
- *  depth-map field (with the film's group listed and an upload folder), one
- *  with no story id, and one that must stay pick-only. */
+/** The boxes the Studio shows: a plain scene background, one already pointing
+ *  at a film picture (auto-reveal), the depth-map field (its own group + an
+ *  upload folder), one with no story id, and one that must stay pick-only. */
 let bgValue: string | undefined;
+let filmValue: string | undefined = __HIVE_PICTURE__;
 let depthValue: string | undefined;
 let anonymousValue: string | undefined;
 
@@ -105,6 +133,9 @@ function App() {
     <div>
       <div className="p-bg">
         <ImagePicker value={bgValue} storyId="case-a" placeholder="bg…" onChange={(v) => { bgValue = v; bump(); }} />
+      </div>
+      <div className="p-film">
+        <ImagePicker value={filmValue} storyId="case-a" placeholder="film…" onChange={(v) => { filmValue = v; bump(); }} />
       </div>
       <div className="p-depth">
         <ImagePicker
@@ -130,101 +161,114 @@ function App() {
 export async function run({ doc, container }: Ctx) {
   win = globalThis.window as any;
 
-  // The stub virtual:builtin-images list the harness injects (2 ungrouped
-  // plates + 2 of the film's own depth-layer files).
-  const BUILTINS = 4;
-
   root = createRoot(container);
   root.render(<App />);
-  await sleep(80);
+  await waitFor(() => !!triggerOf(".p-bg"));
 
   console.log("\n=== A · THE BOX LISTS EVERY AVAILABLE IMAGE ===");
-  check("A1 four image boxes mount", ["p-bg", "p-depth", "p-anon", "p-no-upload"].every((c) => !!triggerOf(`.${c}`)));
+  check(
+    `A0 the repo's own scan carries the film's pictures and depth layers (${__FILM_PICTURE_COUNT__} + ${__FILM_LAYER_COUNT__})`,
+    __FILM_PICTURE_COUNT__ >= 800 && __FILM_LAYER_COUNT__ >= 50,
+    { pictures: __FILM_PICTURE_COUNT__, layers: __FILM_LAYER_COUNT__ },
+  );
+  check("A1 five image boxes mount", ["p-bg", "p-film", "p-depth", "p-anon", "p-no-upload"].every((c) => !!triggerOf(`.${c}`)));
   check("A2 trigger shows the placeholder until something is picked", textOf(triggerOf(".p-bg")).includes("bg…"));
 
   await openPicker(".p-bg");
   const bg = panelOf(".p-bg");
   check("A3 the panel opens", !!bg);
-  check("A4 the list offers every built-in plate", !!rowNamed(bg, "Alley") && !!rowNamed(bg, "Leather Case"));
-  check("A5 the gradient presets are listed too", !!rowNamed(bg, "Indigo → Magenta"));
-  check("A6 the film's depth maps stay out of a background list", !rowNamed(bg, "The Hive Remembered"), allText().slice(0, 120));
-  check("A7 …but the box says so, and offers them in one click", /Show every group too \(2 more/.test(allText()));
-  const grouped = bg?.querySelector('input[type="checkbox"]');
-  grouped?.click();
-  await sleep(40);
-  check("A8 ticking it lists the film's own depth files", !!rowNamed(panelOf(".p-bg"), "The Hive Remembered"));
-  check("A9 …under their own heading", allText().includes("Film depth maps, plates & cut-outs"));
+  check("A4 the gradient presets are always listed", !!rowNamed(bg, "Indigo → Magenta"));
+  check("A5 the film's pictures stay out of a plain background list", !rowNamed(bg, __HIVE_PICTURE_LABEL__));
+  check("A6 …and the box says how many are held back, and names them",
+    new RegExp(`Show every group too \\(${__FILM_PICTURE_COUNT__ + __FILM_LAYER_COUNT__} more — film pictures \\(nobody's witness\\), film depth maps, plates & cut-outs\\)`).test(allText()),
+    allText().slice(-220));
+  bg.querySelector('input[type="checkbox"]')?.click();
+  await waitFor(() => !!rowNamed(panelOf(".p-bg"), __HIVE_DEPTH_LABEL__));
+  check("A7 ticking it lists every film picture and depth layer", !!rowNamed(panelOf(".p-bg"), __HIVE_PICTURE_LABEL__) && !!rowNamed(panelOf(".p-bg"), __HIVE_DEPTH_LABEL__));
+  const panelText = textOf(panelOf(".p-bg"));
+  check("A8 the pictures sit under their own heading, ahead of the depth layers",
+    panelText.indexOf("Film pictures (Nobody's Witness)") >= 0 &&
+      panelText.indexOf("Film pictures (Nobody's Witness)") < panelText.indexOf(__HIVE_PICTURE_LABEL__) &&
+      panelText.indexOf(__HIVE_PICTURE_LABEL__) < panelText.indexOf("Film depth maps, plates & cut-outs"),
+    panelText.slice(0, 200));
   const filter = panelOf(".p-bg").querySelector('input:not([type="file"]):not([type="checkbox"])');
-  check("A10 the filter box counts what it can offer", /Filter \d+ images/.test(filter?.placeholder ?? ""), filter?.placeholder);
-  if (!filter) { check("A10 the filter box is present", false); return; }
-  setInput(filter, "case");
-  await sleep(40);
-  check("A11 filtering narrows the list to the match", !!rowNamed(panelOf(".p-bg"), "Leather Case") && !rowNamed(panelOf(".p-bg"), "Alley"));
+  check("A9 the filter box counts what it can offer", /Filter \d+ images/.test(filter?.placeholder ?? ""), filter?.placeholder);
+  setInput(filter, "hive-remembered");
+  await waitFor(() => !!rowNamed(panelOf(".p-bg"), __HIVE_PICTURE_LABEL__) && !rowNamed(panelOf(".p-bg"), "M4 Railway Rain (montage)"));
+  check("A10 filtering narrows the list to the shot", !!rowNamed(panelOf(".p-bg"), __HIVE_PICTURE_LABEL__) && !rowNamed(panelOf(".p-bg"), "M4 Railway Rain (montage)"));
   filter.dispatchEvent(new win.KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
-  await sleep(60);
-  check("A12 Enter picks the first match and closes the box", bgValue === "/assets/ui/case.png" && !panelOf(".p-bg"), bgValue);
-  check("A13 the trigger then names what is picked", textOf(triggerOf(".p-bg")).includes("Leather Case"), textOf(triggerOf(".p-bg")));
+  await waitFor(() => bgValue === __HIVE_PICTURE__);
+  check("A11 Enter picks the first match and closes the box", bgValue === __HIVE_PICTURE__, bgValue);
+  check("A12 the trigger then names what is picked", textOf(triggerOf(".p-bg")).includes(__HIVE_PICTURE_LABEL__), textOf(triggerOf(".p-bg")));
 
-  await openPicker(".p-bg");
-  const hoverRow = rowNamed(panelOf(".p-bg"), "Alley");
-  hoverRow?.dispatchEvent(new win.MouseEvent("mouseover", { bubbles: true }));
-  await sleep(40);
-  const preview = [...doc.querySelectorAll("div")].find((d: any) => (d.getAttribute("style") ?? "").includes("position: fixed") && d.textContent.includes("Alley"));
-  check("A14 hovering a row pops the big preview", !!preview);
-  check("A15 every listed group carries a heading", allText().includes("Built-in art & sprites"));
-  triggerOf(".p-bg")?.click();
-  await sleep(30);
+  await openPicker(".p-film");
+  const filmPanel = panelOf(".p-film");
+  await waitFor(() => !!rowNamed(panelOf(".p-film"), __HIVE_PICTURE_LABEL__));
+  check("A13 a field already on a film picture lists the film's pictures straight away", !!rowNamed(filmPanel, __HIVE_PICTURE_LABEL__));
+  check("A14 …while its depth layers stay one click away",
+    !rowNamed(filmPanel, __HIVE_DEPTH_LABEL__) && new RegExp(`Show every group too \\(${__FILM_LAYER_COUNT__} more — film depth maps`).test(textOf(filmPanel)),
+    textOf(filmPanel).slice(-200));
+  const activeRow = rowNamed(filmPanel, __HIVE_PICTURE_LABEL__);
+  check("A15 the field's current picture is marked as the picked one", /✓/.test(textOf(activeRow)));
+  check("A16 the value also drives the trigger label", textOf(triggerOf(".p-film")).includes(__HIVE_PICTURE_LABEL__));
+  activeRow.dispatchEvent(new win.MouseEvent("mouseover", { bubbles: true }));
+  const previewOf = () =>
+    [...doc.querySelectorAll("div")].find((d: any) => (d.getAttribute("style") ?? "").includes("position: fixed") && textOf(d).includes(__HIVE_PICTURE_LABEL__));
+  await waitFor(() => !!previewOf());
+  check("A17 hovering a row pops the big preview", !!previewOf());
+  await closePicker(".p-film");
+
+  await openPicker(".p-depth");
+  await waitFor(() => !!rowNamed(panelOf(".p-depth"), __HIVE_DEPTH_LABEL__));
+  const depthPanel = panelOf(".p-depth");
+  check("A18 the depth box lists the film's own depth files by default, labelled by shot", !!rowNamed(depthPanel, __HIVE_DEPTH_LABEL__));
+  check("A19 …and still offers the upload button in the box itself", /⇧ Upload an image/.test(textOf(depthPanel)), textOf(depthPanel).slice(0, 120));
 
   console.log("\n=== B · THE UPLOAD BUTTON INSIDE THE BOX ===");
-  await openPicker(".p-depth");
-  const depthPanel = panelOf(".p-depth");
-  check("B1 the depth box lists the film's own files by default", !!rowNamed(depthPanel, "The Hive Remembered"));
-  check("B2 …and offers the upload button in the box itself", /⇧ Upload an image/.test(textOf(depthPanel)), textOf(depthPanel).slice(0, 120));
   const ok = await feedFile(".p-depth", pngFile("depth-test.png"));
-  check("B3 the hidden file input takes a file", ok);
+  check("B1 the hidden file input takes a file", ok);
   const all: MediaAsset[] = await loadAllAssets("image");
   const uploaded = all.find((a) => a.name === "depth-test.png");
-  check("B4 the upload really landed in the library", !!uploaded, all.map((a) => a.name));
-  check("B5 the field is set to the new asset reference", !!uploaded && depthValue === `asset:${uploaded.id}`, { depthValue, id: uploaded?.id });
-  check("B6 it was filed in the folder the field asked for", uploaded?.folder === "depth maps", uploaded?.folder);
-  check("B7 the box keeps itself open and confirms what happened", /✓ depth-test\.png/.test(textOf(panelOf(".p-depth"))), textOf(panelOf(".p-depth")).slice(-160));
-  check("B8 the new image is listed under “Your uploads”", !!rowNamed(panelOf(".p-depth"), "📁 depth maps / depth-test.png"));
-  check("B9 the trigger shows the freshly uploaded file", textOf(triggerOf(".p-depth")).includes("depth-test.png"), textOf(triggerOf(".p-depth")));
+  check("B2 the upload really landed in the library", !!uploaded, all.map((a) => a.name));
+  check("B3 the field is set to the new asset reference", !!uploaded && depthValue === `asset:${uploaded.id}`, { depthValue, id: uploaded?.id });
+  check("B4 it was filed in the folder the field asked for", uploaded?.folder === "depth maps", uploaded?.folder);
+  check("B5 the box keeps itself open and confirms what happened", /✓ depth-test\.png/.test(textOf(panelOf(".p-depth"))), textOf(panelOf(".p-depth")).slice(-160));
+  await waitFor(() => !!rowNamed(panelOf(".p-depth"), "📁 depth maps / depth-test.png"));
+  check("B6 the new image is listed under “Your uploads”", !!rowNamed(panelOf(".p-depth"), "📁 depth maps / depth-test.png"));
   const imageRows = rowsOf(panelOf(".p-depth")).filter((b: any) => b.querySelector("img"));
-  check("B9b the new image leads the list, not buried under the library", textOf(imageRows[0]).includes("depth-test.png"), textOf(imageRows[0]));
+  check("B7 the new image leads the list, not buried under the library", textOf(imageRows[0]).includes("depth-test.png"), textOf(imageRows[0]));
+  check("B8 the trigger shows the freshly uploaded file", textOf(triggerOf(".p-depth")).includes("depth-test.png"), textOf(triggerOf(".p-depth")));
+  await waitFor(() => /✓ depth-test\.png/.test(textOf(panelOf(".p-depth"))));
   const refused = await feedFile(".p-depth", new win.File(["not an image"], "notes.txt", { type: "text/plain" }));
-  check("B10 a non-image is refused in the box, not silently kept", refused && /✕/.test(textOf(panelOf(".p-depth"))), textOf(panelOf(".p-depth")).slice(-120));
-  check("B11 …and the field is untouched by the refusal", depthValue === `asset:${uploaded?.id}`, depthValue);
+  await waitFor(() => /✕/.test(textOf(panelOf(".p-depth"))));
+  check("B9 a non-image is refused in the box, not silently kept", refused && /✕/.test(textOf(panelOf(".p-depth"))), textOf(panelOf(".p-depth")).slice(-120));
+  check("B10 …and the field is untouched by the refusal", depthValue === `asset:${uploaded?.id}`, depthValue);
 
   const hot = await dropFile(".p-bg", pngFile("drop-test.png"));
-  check("B12 dragging a file over the box highlights it", hot);
+  check("B11 dragging a file over the box highlights it", hot);
   const dropped = (await loadAllAssets("image")).find((a) => a.name === "drop-test.png");
-  check("B13 dropping a file uploads and picks it", !!dropped && bgValue === `asset:${dropped.id}`, { bgValue, dropped: dropped?.id });
-  check("B14 a picker with no upload folder leaves it unfiled", !dropped?.folder, dropped?.folder);
+  check("B12 dropping a file uploads and picks it", !!dropped && bgValue === `asset:${dropped.id}`, { bgValue, dropped: dropped?.id });
+  check("B13 a picker with no upload folder leaves it unfiled", !dropped?.folder, dropped?.folder);
 
   setImagePickerStoryId("case-z");
   await openPicker(".p-anon");
   await feedFile(".p-anon", pngFile("anon-test.png"));
+  await waitFor(async () => (await loadAssets("case-z")).some((a) => a.name === "anon-test.png"));
   const filed = await loadAssets("case-z");
-  check("B15 a picker with no story id files under the case Studio has open", !!filed.find((a) => a.name === "anon-test.png"), filed.map((a) => a.name));
-  check("B16 …and still picks it", (anonymousValue ?? "").startsWith("asset:"), anonymousValue);
+  check("B14 a picker with no story id files under the case Studio has open", !!filed.find((a) => a.name === "anon-test.png"), filed.map((a) => a.name));
+  check("B15 …and still picks it", (anonymousValue ?? "").startsWith("asset:"), anonymousValue);
 
   await openPicker(".p-no-upload");
-  check("B17 a pick-only box shows no upload row", !/⇧ Upload an image/.test(textOf(panelOf(".p-no-upload"))) && !panelOf(".p-no-upload").querySelector('input[type="file"]'));
+  check("B16 a pick-only box shows no upload row", !/⇧ Upload an image/.test(textOf(panelOf(".p-no-upload"))) && !panelOf(".p-no-upload").querySelector('input[type="file"]'));
 
-  await sleep(60);
+  await sleep(50);
   if (problems.length) {
     console.log("\nconsole errors / throws during the probe:");
     for (const [kind, msg] of problems.slice(0, 6)) console.log(`  ${kind}: ${msg.slice(0, 400)}`);
   }
-  check("B18 no console errors, uncaught throws or rejected promises", problems.length === 0, problems.length);
-
-  const crashed = /the reel snapped|something broke/i.test(doc.body.innerHTML);
-  check("B19 no error boundary trip", !crashed);
+  check("B17 no console errors, uncaught throws or rejected promises", problems.length === 0, problems.length);
+  check("B18 no error boundary trip", !/the reel snapped|something broke/i.test(doc.body.innerHTML));
 
   console.log(`\nimage picker: ${passed} passed, ${failed} failed`);
-  if (failed) {
-    console.log(`(stub built-in list held ${BUILTINS} files; the harness lists what the real /img scan would)`);
-    throw new Error(`${failed} image-picker check(s) failed`);
-  }
+  if (failed) throw new Error(`${failed} image-picker check(s) failed`);
 }
