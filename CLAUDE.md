@@ -12,6 +12,36 @@ Read `docs/depth-camera.md` before adding or changing any depth map, plate or cu
 
 Check maps with `tools/review-depth-maps.py` and watch the move with `tools/depth-frames.mjs` before calling a shot done.
 
+## The Studio's image library
+
+`tools/builtin-images.mjs` is what every image box in the Studio can offer: `public/img` and `public/assets`, the
+film's own pictures (`public/film/img`, group `film-img`, labelled by scene) and its depth layers
+(`public/film/depth`, group `film-depth`, labelled by the shot they belong to). Grouped files are listed by the
+fields that ask for them, by a field already pointing into them, or behind the picker's "Show every group too".
+Uploads go straight into the box (`⇧ Upload an image…`, or drop a file on it) and are filed under the folder the
+field asks for. `npm run test:image-picker` drives the real picker over the real scan. A list longer than
+`ROW_WINDOW` (250 rows) is shown as a window with a "Show all" button and no per-row thumbnail — the film's 800+
+pictures made an unwindowed list cost seconds to open.
+
+## Studio editing speed
+
+`npm run perf:studio` (`scripts/studio-perf.mjs`) prints what one edit really costs on Nobody's Witness: the
+per-keystroke deep clone, the undo fingerprint, the validator, the autosave's serialise/compact — then mounts the
+real `<Studio/>` in happy-dom and times a typing burst, the autosave behind it and opening an image picker, and
+counts media-library reads with the code that asked for them. happy-dom's absolute milliseconds are pessimistic
+(no paint); compare two versions of the same code, not two machines.
+
+## The Studio's sound library
+
+`tools/builtin-audio.mjs` is what the sound boxes can offer: `virtual:builtin-audio` (vite.config.ts) bakes
+its scan of every audio file under `public/` into the app — the film's one-shots and ambience (`public/film/sfx`,
+148 files, where all 166 of the film's `sfxUrl` references live), alternate takes, music cues, voice takes, the
+other reels' audio and `public/uploads`. Sections come from `sectionFor(folder)` in the tool, so the headings are
+defined in one place. `src/studio/AudioPicker.tsx` is the browser both sound fields use (a beat's "sound effect on
+this beat", a scene's recorded-loop adder); it auditions on hover through one shared player and windows lists past
+`ROW_WINDOW`. `npm run test:audio-picker` drives it over the real scan, and `npm run test:film-backend` asserts
+every sound the film plays is in that scan.
+
 ## Animatic export
 
 `docs/animatic-export.md`: `npm run export:animatic -- --from nw_s65 --to nw_s65`, or 🎞 Export animatic on the home screen under `npm run dev`. Do not edit `src/` while an export runs from a dev server (Vite reloads the page and the capture breaks).

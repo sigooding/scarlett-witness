@@ -1,4 +1,4 @@
-import { createContext, memo, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, memo, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
   Background,
   BackgroundVariant,
@@ -70,8 +70,9 @@ import {
   type ValidationIssue,
 } from "../logic";
 import { MediaLibrary, AssetDropdown, MediaUploadButton, CharacterVoiceFiles } from "./MediaLibrary";
+import { AudioPicker } from "./AudioPicker";
 import { AmbientLayers } from "./AmbientLayers";
-import { ImagePicker } from "./ImagePicker";
+import { ImagePicker, setImagePickerStoryId } from "./ImagePicker";
 import { EXTRA_PRESET, SheetLab, SpriteSheetControls, TALKING_PRESET, WALKER_PRESET } from "./SheetEditor";
 import { SheetSprite } from "../game/SheetSprite";
 import { sheetDrawable } from "../game/spriteSheet";
@@ -3447,6 +3448,13 @@ function StudioInner({
       /* storage unavailable — this session only */
     }
   }, [story.id]);
+  // Every image picker that wasn't handed a story id files its uploads under
+  // the case being edited (see ImagePicker's ⇧ Upload row), so an image dropped
+  // into any depth-map / plate / cut-out / mask field belongs to this story and
+  // travels with it on export.
+  useEffect(() => {
+    setImagePickerStoryId(story.id);
+  }, [story.id]);
   const past = useRef<Story[]>([]);
   const future = useRef<Story[]>([]);
   const [, forceTick] = useState(0);
@@ -3702,9 +3710,19 @@ function StudioInner({
   // first render would flag EVERY uploaded reference as missing, so hold the
   // check until the library has actually reported in.
   const libraryReady = allLibraryAssets.length > 0;
+  // VALIDATE THE STORY BEHIND THE TYPING, NOT DURING IT. validateStory walks
+  // every scene, beat, choice, hotspot, gate and media reference — ~9 ms on the
+  // 201-scene film, on top of the clone and the structural fingerprint every
+  // edit already pays for. With a deferred story React renders the keystroke at
+  // full priority (the text appears at once) and runs the validator in a
+  // low-priority pass that is abandoned and re-run when the next key lands, so
+  // a burst of typing pays for one validation instead of one per character. The
+  // badges, node dots and the Test tab briefly show the previous verdict, which
+  // is what "behind" means — they catch up the moment typing pauses.
+  const deferredStory = useDeferredValue(story);
   const issues = useMemo(
-    () => validateStory(story, libraryReady ? { knownAssetIds } : undefined),
-    [story, knownAssetIds, libraryReady],
+    () => validateStory(deferredStory, libraryReady ? { knownAssetIds } : undefined),
+    [deferredStory, knownAssetIds, libraryReady],
   );
   // Every flag referenced anywhere in the story — the source list for the flag
   // dropdowns so authors can pick (and keep track of) existing flag names.
@@ -8040,7 +8058,7 @@ function StudioInner({
                       includeBuiltins
                       includeGradients
                       allowClear={false}
-                      placeholder="Browse all images…"
+                      placeholder="Browse every image, or upload one…"
                     />
                   )}
                   <div className="mt-1 flex gap-1">
@@ -8060,7 +8078,7 @@ function StudioInner({
                     )}
                   </div>
                   <p className="mt-1 font-type text-[9px] text-paper/40">
-                    Browse every built-in scene plus your {uploadedImages.length} uploaded image{uploadedImages.length === 1 ? "" : "s"} — hover any name to preview it.
+                    Browse every built-in scene plus your {uploadedImages.length} uploaded image{uploadedImages.length === 1 ? "" : "s"} — hover any name to preview it, or use ⇧ Upload inside the list (or the button below) to add a new one.
                     {storageAvailable === false && (
                       <span className="text-crimson"> ⚠ This browser can't store files — uploads won't survive a reload.</span>
                     )}
@@ -9097,56 +9115,29 @@ function StudioInner({
                         </div>
                       </Field>
                       <Field label="🔊 Sound effect on this beat (optional — a one-shot that plays as the beat starts, over the voice)">
-                        <div className="flex gap-1">
-                          <input
-                            className={inputCls}
-                            aria-label={`Sound effect for beat ${b.id}`}
-                            placeholder="/audio/door-creak.mp3 or upload"
-                            value={mediaField(b.sfxUrl)}
-                            onChange={(e) =>
-                              mutate((d) => {
-                                const s = d.scenes.find((x) => x.id === scene.id)!;
-                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = e.target.value || undefined;
-                              })
-                            }
-                          />
-                          <MediaUploadButton
-                            storyId={story.id}
-                            accept="audio/*"
-                            label="⇧ Upload"
-                            onUploaded={(_url, assetId) =>
-                              mutate((d) => {
-                                const s = d.scenes.find((x) => x.id === scene.id)!;
-                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = `asset:${assetId}`;
-                              })
-                            }
-                          />
-                        </div>
-                        <div className="mt-1">
-                          <AssetDropdown
-                            storyId={story.id}
-                            assetType="audio"
-                            returnReference
-                            value={b.sfxUrl}
-                            onChange={(url) =>
-                              mutate((d) => {
-                                const s = d.scenes.find((x) => x.id === scene.id)!;
-                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = url || undefined;
-                              })
-                            }
-                            placeholder="Or pick uploaded audio..."
-                          />
-                        </div>
+                        {/* The browser lists every sound the project ships — the
+                            film's own one-shots and ambience included — plus
+                            your uploads, with hover audition. It replaces the
+                            old "type a path" box + uploaded-only dropdown,
+                            which could not show what was already available. */}
+                        <AudioPicker
+                          storyId={story.id}
+                          label={`Sound effect for beat ${b.id}`}
+                          placeholder="/film/sfx/… — browse every sound, or upload"
+                          uploadFolder="sound effects"
+                          value={b.sfxUrl}
+                          resolve={media}
+                          testVolume={b.sfxVolume ?? 1}
+                          onChange={(url) =>
+                            mutate((d) => {
+                              const s = d.scenes.find((x) => x.id === scene.id)!;
+                              s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = url || undefined;
+                            })
+                          }
+                        />
                         {b.sfxUrl ? (
                           <div className="mt-1 flex items-center gap-2">
-                            <button
-                              type="button"
-                              className="border border-cyan-neon/40 px-2 py-0.5 font-pulp text-[8px] uppercase tracking-widest text-cyan-neon hover:bg-cyan-neon/10"
-                              title="Hear it exactly as the game will play it"
-                              onClick={() => audio.playSfx(media(b.sfxUrl) ?? b.sfxUrl!, b.sfxVolume ?? 1)}
-                            >
-                              ▶ Test
-                            </button>
+                            <span className="font-pulp text-[8px] uppercase tracking-widest text-paper/40">Level</span>
                             <label className="flex flex-1 items-center gap-2 font-type text-[9px] text-paper/60">
                               Volume {Math.round((b.sfxVolume ?? 1) * 100)}%
                               <input
@@ -9280,6 +9271,7 @@ function StudioInner({
                       </div>
                       <div className="mt-1">
                         <ImagePicker
+                          storyId={story.id}
                           value={b.background}
                           onChange={(v) =>
                             mutate((d) => {
@@ -9287,7 +9279,7 @@ function StudioInner({
                               s.dialogueBeats!.find((x) => x.id === b.id)!.background = v || undefined;
                             })
                           }
-                          placeholder="🖼 or browse the image library… (leave blank for scene default)"
+                          placeholder="🖼 browse every image or upload… (blank = scene default)"
                         />
                       </div>
                       {b.background && b.background.startsWith("video:") && (
