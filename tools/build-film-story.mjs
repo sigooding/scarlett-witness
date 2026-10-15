@@ -86,11 +86,12 @@ const ambientOf = sc => {
 let beatNo = 0;
 const hash = str => [...str].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7);
 const FOCI = ["50% 45%", "35% 50%", "65% 50%", "50% 60%", "42% 38%", "60% 42%"];
-/** A slow, varied camera for every shot: pushes, drifts and the odd dolly, graded for rain-city night. */
+/** A slow, varied camera for every shot: a push-to-subject, a still hold and the odd dolly, graded Midnight Teal.
+ *  No pan since 15 October 2026 (the director): the drift is off everywhere, so the third slot is a hold now. */
 const camera = (src, held) => {
   const h = Math.abs(hash(src));
-  const mode = held ? "zoom-hold" : ["zoom-hold", "zoom-hold", "pan", "dolly"][h % 4];
-  return { mode, focalPoint: FOCI[h % FOCI.length], zoomDuration: 14 + (h % 9), panDirection: h % 2 ? "left" : "right", panDistance: 2, dollyDirection: h % 2 ? "left" : "right", dollyDistance: 3, dollyDuration: 24, colorGrade: "neon-noir" };
+  const mode = held ? "zoom-hold" : ["zoom-hold", "zoom-hold", "static", "dolly"][h % 4];
+  return { mode, focalPoint: FOCI[h % FOCI.length], zoomDuration: 14 + (h % 9), dollyDirection: h % 2 ? "left" : "right", dollyDistance: 3, dollyDuration: 24, colorGrade: "midnight-teal" };
 };
 // Per-picture looks (src/film/studio-edits.json "pictureLook", keyed by the picture's file name without extension): camera and lens
 // effects that belong to one shot (a handheld shake on a gunshot, rain on the lens in a parked car, a flare off headlights) and,
@@ -586,9 +587,33 @@ for (const s of scenes) {
 for (const s of scenes) delete s.letterbox;
 
 // No 35mm film grade and no volumetric light shafts anywhere in the film (12 October 2026, the director): switched off on every
-// scene and every beat, whatever the Studio edits or a picture's look set. The neon-noir colour tint and the light glows stay.
+// scene and every beat, whatever the Studio edits or a picture's look set. The colour grade and the light glows stay.
 const noGradeNoShafts = (c) => { if (!c) return; c.filmGrade = false; delete c.filmGradeStrength; c.volumetricShafts = false; delete c.shaftsIntensity; };
-for (const s of scenes) { noGradeNoShafts(s.cinematic); for (const b of s.dialogueBeats ?? []) noGradeNoShafts(b.cinematic); }
+
+// No slow pan anywhere in the film (15 October 2026, the director): the "pan" camera drifted the frame on about every fourth
+// shot and on most of the Studio's per-picture looks. A pan becomes a still hold here; the zoom-to-subject, the rail dolly and
+// the depth-map camera are moves of their own and stay (a depth move still plays on a held frame).
+const noSlowPan = (c) => { if (!c || c.mode !== "pan") return; c.mode = "static"; delete c.panDistance; delete c.panDirection; };
+
+// One grade over everything: Midnight Teal — Lab Cold (15 October 2026, the director). Scene and beat alike, whatever the Studio
+// edits or a picture's look set — the warm photograph beats and the cool ending were graded differently until now.
+const midnightTeal = (c) => { if (c) c.colorGrade = "midnight-teal"; };
+
+// No handheld shake in scenes 1 and 2 (15 October 2026, the director): the suppressed shot, the run and the two bar beats hold
+// still instead — the cut into 10-the-shot (a "zoom" punch) is not a shake and stays. Shake anywhere else (the inn raid, the
+// songs) is untouched.
+const NO_SHAKE_IN = new Set(["nw_s1", "nw_s2"]);
+const noShake = (c) => { if (!c || c.mode !== "shake") return; c.mode = "static"; delete c.shakeAmount; delete c.shakeRotation; delete c.shakeDuration; };
+
+for (const s of scenes) {
+  // Every camera in the film: the scene's own, each beat's, and a credits montage's per-still looks (which drive those stills' depth moves).
+  for (const c of [s.cinematic, ...(s.dialogueBeats ?? []).map(b => b.cinematic), ...Object.values(s.credits?.montageLooks ?? {})]) {
+    noGradeNoShafts(c);
+    noSlowPan(c);
+    midnightTeal(c);
+    if (NO_SHAKE_IN.has(s.id)) noShake(c);
+  }
+}
 
 const layout = Object.fromEntries(scenes.map((s, i) => [s.id, { x: 40 + (i % 12) * 380, y: 40 + Math.floor(i / 12) * 260 }]));
 const story = {
