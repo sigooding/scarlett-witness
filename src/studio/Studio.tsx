@@ -71,7 +71,7 @@ import {
 } from "../logic";
 import { MediaLibrary, AssetDropdown, MediaUploadButton, CharacterVoiceFiles } from "./MediaLibrary";
 import { AmbientLayers } from "./AmbientLayers";
-import { ImagePicker } from "./ImagePicker";
+import { ImagePicker, setImagePickerStoryId } from "./ImagePicker";
 import { EXTRA_PRESET, SheetLab, SpriteSheetControls, TALKING_PRESET, WALKER_PRESET } from "./SheetEditor";
 import { SheetSprite } from "../game/SheetSprite";
 import { sheetDrawable } from "../game/spriteSheet";
@@ -3446,6 +3446,13 @@ function StudioInner({
     } catch {
       /* storage unavailable — this session only */
     }
+  }, [story.id]);
+  // Every image picker that wasn't handed a story id files its uploads under
+  // the case being edited (see ImagePicker's ⇧ Upload row), so an image dropped
+  // into any depth-map / plate / cut-out / mask field belongs to this story and
+  // travels with it on export.
+  useEffect(() => {
+    setImagePickerStoryId(story.id);
   }, [story.id]);
   const past = useRef<Story[]>([]);
   const future = useRef<Story[]>([]);
@@ -8040,7 +8047,7 @@ function StudioInner({
                       includeBuiltins
                       includeGradients
                       allowClear={false}
-                      placeholder="Browse all images…"
+                      placeholder="Browse every image, or upload one…"
                     />
                   )}
                   <div className="mt-1 flex gap-1">
@@ -8060,7 +8067,7 @@ function StudioInner({
                     )}
                   </div>
                   <p className="mt-1 font-type text-[9px] text-paper/40">
-                    Browse every built-in scene plus your {uploadedImages.length} uploaded image{uploadedImages.length === 1 ? "" : "s"} — hover any name to preview it.
+                    Browse every built-in scene plus your {uploadedImages.length} uploaded image{uploadedImages.length === 1 ? "" : "s"} — hover any name to preview it, or use ⇧ Upload inside the list (or the button below) to add a new one.
                     {storageAvailable === false && (
                       <span className="text-crimson"> ⚠ This browser can't store files — uploads won't survive a reload.</span>
                     )}
@@ -9280,6 +9287,7 @@ function StudioInner({
                       </div>
                       <div className="mt-1">
                         <ImagePicker
+                          storyId={story.id}
                           value={b.background}
                           onChange={(v) =>
                             mutate((d) => {
@@ -9287,7 +9295,7 @@ function StudioInner({
                               s.dialogueBeats!.find((x) => x.id === b.id)!.background = v || undefined;
                             })
                           }
-                          placeholder="🖼 or browse the image library… (leave blank for scene default)"
+                          placeholder="🖼 browse every image or upload… (blank = scene default)"
                         />
                       </div>
                       {b.background && b.background.startsWith("video:") && (

@@ -615,9 +615,12 @@
    BACKGROUND        an image browser (searchable dropdown over every built-in
                      scene image in /img and /assets, plus all your uploads,
                      plus gradient presets — hover any name for a full preview).
-                     Also accepts a path, "gradient:..." string, uploaded image
+                     The box carries its own "⇧ Upload an image..." row, and
+                     takes a dropped file as well, so a new plate can go from
+                     your desktop to this field without leaving it. Also accepts
+                     a path, "gradient:..." string, uploaded image
                      ("asset:<id>"), or "video:<url>" that overrides the image.
-                     All image fields across Studio now use this browser.
+                     All image fields across Studio use this browser.
    AMBIENT LOOP      none / rain / jazz / drone / tension (a synth atmosphere).
    PARTICLES         Auto (derived from the audio), none, rain, smoke, storm.
    PROSE             the narrator's opening paragraph (typewritten in-game).
@@ -641,7 +644,8 @@
                       to expand). Fields:
      SPEAKER          a character, or the reserved "Narrator (V.O.)".
      EXPRESSION       a free-text emotional cue, shown as a tag on the portrait.
-     REPLACEMENT BACKGROUND  an image for just this beat, with its own:
+     REPLACEMENT BACKGROUND  an image for just this beat (browse the image
+                              library or upload straight from the box), with:
                               TRANSITION  cut / fade / crossfade / fade-black /
                                            slide-left / slide-right / iris-in
                               SPEED       seconds for the transition (0.5 default)
@@ -791,6 +795,29 @@
    animation sprites) PLUS all your uploads PLUS gradient presets. Hover any
    name for a full-size rollover preview. Uploaded audio appears in the
    music/narration/voice pickers; uploaded video in the cutscene picker.
+
+   THE IMAGE BROWSER, FIELD BY FIELD
+   One box serves every picture field: a scene's BACKGROUND, a beat's
+   REPLACEMENT BACKGROUND, the depth-map camera's DEPTH MAP / CLEAN PLATE /
+   CUT-OUTS, foreground layers and alpha masks, portraits, cursor art, the
+   credits montage and the travel map. It lists EVERY available image:
+     - every built-in file under /img and /assets;
+     - the film's own depth maps, clean plates and cut-outs under /film/depth,
+       under their own heading (background pickers keep these out of the way —
+       tick "Show every group too" to list them anywhere);
+     - the gradient presets;
+     - every upload in the library, whatever story it came from.
+   Rows are grouped under headings — Your uploads first, then Gradient presets,
+   Built-in art & sprites and Film depth maps, plates & cut-outs. Type in the filter box to
+   narrow the list, press Enter to take the first match, and roll the pointer
+   over any row for a full-size preview.
+   UPLOADING FROM THE BOX: "⇧ Upload an image..." sits at the top of the open
+   list. The file is saved to the shared library, filed in the folder the field
+   asks for (depth-map fields use "depth maps"), and picked for the field
+   straight away — the list stays open and confirms what it did. You can also
+   drag an image file onto the box, closed or open. Pickers that were never
+   handed a story id file their uploads under the case Studio has open, so an
+   image added from any field belongs to this story when you export it.
 
    The tab also carries three image tools:
 
@@ -1598,7 +1625,10 @@
 
    PER-BEAT REPLACEMENT BACKGROUND
    -------------------------------
-   Gives this one beat its own image (different from the scene background). It
+   Gives this one beat its own image (different from the scene background).
+   Pick it from the image browser below the path field — the same box as every
+   other picture field, so it lists all built-in art, every upload, and carries
+   its own ⇧ Upload row (and takes a dropped file). It
    transitions in and out when the beat starts/ends. Transitions available:
      cut / fade / crossfade / fade-black / slide-left / slide-right / iris-in.
    You control the transition speed too. A beat's replacement image has its own

@@ -865,10 +865,12 @@ export function CinematicControls({
         </p>
         <Field label="Depth map (grayscale, white = near)">
           <ImagePicker
+            storyId={storyId}
             value={c.depthMap}
             includeGradients={false}
-            placeholder="Pick this picture's depth map…"
+            placeholder="Pick this picture's depth map, or upload one…"
             groups={FILM_DEPTH}
+            uploadFolder="depth maps"
             onChange={(v) =>
               set(
                 v && !c.depthMap
@@ -894,10 +896,12 @@ export function CinematicControls({
           <>
             <Field label="Clean plate (the picture with the cut-outs painted out)">
               <ImagePicker
+                storyId={storyId}
                 value={c.depthPlate}
                 includeGradients={false}
-                placeholder="Optional: the picture without its people…"
+                placeholder="Optional: the picture without its people, or upload one…"
                 groups={FILM_DEPTH}
+                uploadFolder="depth maps"
                 onChange={(v) => set({ depthPlate: v || undefined })}
               />
             </Field>
@@ -906,10 +910,12 @@ export function CinematicControls({
                 <div key={i} className="mb-2 space-y-1 border border-cyan-neon/20 bg-cyan-neon/5 p-2">
                   <div className="flex items-center justify-between gap-2">
                     <ImagePicker
+                      storyId={storyId}
                       value={k.image}
                       includeGradients={false}
-                      placeholder="A transparent PNG the size of the picture…"
+                      placeholder="A transparent PNG the size of the picture, or upload one…"
                       groups={FILM_DEPTH}
+                      uploadFolder="depth maps"
                       onChange={(v) => {
                         const cuts = [...(c.depthCutouts ?? [])];
                         cuts[i] = { ...k, image: v ?? "" };
