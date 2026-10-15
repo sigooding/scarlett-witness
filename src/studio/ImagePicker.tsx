@@ -20,6 +20,20 @@ const GROUP_LABELS: Record<string, string> = {
   "film-depth": "Film depth maps, plates & cut-outs",
 };
 
+/**
+ * How many rows are created at once. The film offers 921 built-in images and a
+ * full /img library is bigger still, so a list that renders every one of them
+ * costs a keystroke-sized hitch on the filter box and a screenful of DOM on
+ * open. Past the window the panel says so and offers "Show all", and the
+ * picked image is always rendered even when it sits beyond it.
+ */
+const ROW_WINDOW = 250;
+/** Past this many matches the built-in rows draw a placeholder instead of a
+ *  thumbnail: 800 lazy <img> tags still queue 800 requests as the author
+ *  scrolls, and a film plate is a third of a megabyte. (Uploads are already in
+ *  memory as data URLs and gradients are CSS, so both always draw.) */
+const THUMB_WINDOW = 120;
+
 const isGradient = (v?: string) => !!v && v.startsWith("gradient:");
 const gradientCss = (v: string) => v.slice("gradient:".length);
 
@@ -43,13 +57,26 @@ function Swatch({
   value,
   src,
   className,
+  draw = true,
 }: {
   kind: ItemKind;
   value: string;
   src?: string;
   className?: string;
+  /** false = do not fetch a thumbnail for this row (see THUMB_WINDOW) */
+  draw?: boolean;
 }) {
   if (kind === "gradient") return <div className={className} style={{ background: gradientCss(value) }} />;
+  if (!draw) {
+    return (
+      <span
+        aria-hidden
+        className={`flex items-center justify-center rounded-sm border border-noir-600 bg-noir-800 text-[9px] text-paper/25 ${className ?? ""}`}
+      >
+        ▧
+      </span>
+    );
+  }
   return <img src={assetUrl(src)} alt="" loading="lazy" className={`object-cover ${className ?? ""}`} />;
 }
 
@@ -121,6 +148,7 @@ export function ImagePicker({
   const [query, setQuery] = useState("");
   const [hover, setHover] = useState<{ item: Item; rect: DOMRect } | null>(null);
   const [showEveryGroup, setShowEveryGroup] = useState(false);
+  const [showAllRows, setShowAllRows] = useState(false);
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState<string | null>(null);
   const [dropHot, setDropHot] = useState(false);
@@ -152,6 +180,7 @@ export function ImagePicker({
       setQuery("");
       setNote(null);
       setDropHot(false);
+      setShowAllRows(false);
     }
   }, [open]);
 
@@ -216,24 +245,36 @@ export function ImagePicker({
     };
   }, [includeGradients, includeBuiltins, uploads, returnReference, preferFolder, groups, autoGroups, showEveryGroup]);
 
-  /** The visible rows: filtered, with a heading whenever the source changes —
-   *  so a long list reads as tintable sections instead of one wall of names. */
-  const { rows, matchCount } = useMemo(() => {
+  /** The visible rows: filtered, windowed, with a heading whenever the source
+   *  changes — so a long list reads as tintable sections instead of one wall of
+   *  names, and opening one costs a screenful instead of the whole library. */
+  const { rows, matchCount, shownCount, windowedOut } = useMemo(() => {
     const q = query.trim().toLowerCase();
     const list = q
       ? items.filter((it) => it.label.toLowerCase().includes(q) || it.value.toLowerCase().includes(q))
       : items;
+    // "Show every group too" and "Show all" are both the author asking for the
+    // whole library out loud, so they get it; the window is only for the lists
+    // that appear on their own.
+    const windowed = !showAllRows && !showEveryGroup && list.length > ROW_WINDOW;
+    const shown = windowed ? list.slice(0, ROW_WINDOW) : list;
     const out: ({ kind: "header"; label: string } | { kind: "item"; item: Item })[] = [];
     let lastSection = "";
-    for (const it of list) {
+    const push = (it: Item) => {
       if (it.section !== lastSection) {
         out.push({ kind: "header", label: it.section });
         lastSection = it.section;
       }
       out.push({ kind: "item", item: it });
-    }
-    return { rows: out, matchCount: list.length };
-  }, [items, query]);
+    };
+    // Whatever the field is already set to stays on screen even when it sorts
+    // past the window — otherwise a scene's own picture could vanish from its
+    // own list.
+    const picked = value ? list.find((it) => it.value === value) : undefined;
+    if (picked && !shown.includes(picked)) push(picked);
+    for (const it of shown) push(it);
+    return { rows: out, matchCount: list.length, shownCount: shown.length, windowedOut: list.length - shown.length };
+  }, [items, query, value, showAllRows, showEveryGroup]);
 
   const firstMatch = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -335,7 +376,7 @@ export function ImagePicker({
       >
         {current ? (
           <>
-            <Swatch kind={current.kind} value={current.value} src={current.src} className="h-5 w-8 shrink-0 rounded-sm border border-noir-600" />
+            <Swatch kind={current.kind} value={current.value} src={current.src} draw={current.kind !== "builtin" || matchCount <= THUMB_WINDOW} className="h-5 w-8 shrink-0 rounded-sm border border-noir-600" />
             <span className="min-w-0 flex-1 truncate text-paper/85">{current.label}</span>
           </>
         ) : (
@@ -410,7 +451,7 @@ export function ImagePicker({
               Show every group too ({hiddenCount} more — {hiddenSections.join(", ").toLowerCase()})
             </label>
           )}
-          <div className="max-h-72 overflow-auto py-1">
+          <div className="max-h-72 overflow-auto overscroll-contain py-1">
             {allowClear && (
               <button
                 type="button"
@@ -429,11 +470,13 @@ export function ImagePicker({
                 No images match “{query}”. {allowUpload && "Use ⇧ Upload above to add it."}
               </p>
             )}
-            {rows.map((row) => {
+            {rows.map((row, rowIndex) => {
               if (row.kind === "header") {
                 return (
                   <div
-                    key={`h:${row.label}`}
+                    // Indexed: the picked image's row can sit above its own
+                    // section, so the same heading may legitimately appear twice.
+                    key={`h:${rowIndex}:${row.label}`}
                     className="sticky top-0 bg-noir-950/95 px-2 py-0.5 font-pulp text-[8px] uppercase tracking-widest text-paper/40"
                   >
                     {row.label}
@@ -454,7 +497,13 @@ export function ImagePicker({
                   }`}
                   title={it.label}
                 >
-                  <Swatch kind={it.kind} value={it.value} src={it.src} className="h-6 w-10 shrink-0 rounded-sm border border-noir-600" />
+                  <Swatch
+                    kind={it.kind}
+                    value={it.value}
+                    src={it.src}
+                    draw={it.kind !== "builtin" || matchCount <= THUMB_WINDOW || active}
+                    className="h-6 w-10 shrink-0 rounded-sm border border-noir-600"
+                  />
                   <span className="min-w-0 flex-1 truncate">{it.label}</span>
                   {it.kind === "upload" && (
                     <span className="shrink-0 text-[8px] uppercase tracking-wider text-cyan-neon/70">upload</span>
@@ -467,6 +516,20 @@ export function ImagePicker({
               );
             })}
           </div>
+          {windowedOut > 0 && (
+            <div className="flex items-center gap-2 border-t border-noir-700 bg-noir-900/60 px-2 py-1 font-type text-[9px] text-paper/60">
+              <span>
+                Showing {shownCount} of {matchCount} — type to narrow
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowAllRows(true)}
+                className="ml-auto shrink-0 border border-noir-600 px-1.5 py-0.5 font-pulp text-[8px] uppercase tracking-widest text-paper/70 hover:border-gold/60 hover:text-gold"
+              >
+                Show all {matchCount}
+              </button>
+            </div>
+          )}
           <div className="border-t border-noir-700 px-2 py-1 font-type text-[9px] text-paper/35">
             Hover any image to preview · Enter picks the first match · {builtinCount} built-in · {uploads.length} uploaded
           </div>

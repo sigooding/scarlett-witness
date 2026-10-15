@@ -135,6 +135,8 @@ const require = createRequire(import.meta.url);
     __FILM_PICTURE_COUNT__: JSON.stringify(FILM_PICTURES.length),
     __FILM_LAYER_COUNT__: JSON.stringify(FILM_LAYERS.length),
     __HIVE_PICTURE__: JSON.stringify(HIVE_PICTURE),
+    __LAST_FILM_PICTURE__: JSON.stringify(FILM_PICTURES[FILM_PICTURES.length - 1].url),
+    __LAST_FILM_PICTURE_LABEL__: JSON.stringify(FILM_PICTURES[FILM_PICTURES.length - 1].label),
     __HIVE_DEPTH__: JSON.stringify(HIVE_DEPTH),
     __HIVE_PICTURE_LABEL__: JSON.stringify(BUILTINS.find((b) => b.url === HIVE_PICTURE).label),
     __HIVE_DEPTH_LABEL__: JSON.stringify(BUILTINS.find((b) => b.url === HIVE_DEPTH).label),

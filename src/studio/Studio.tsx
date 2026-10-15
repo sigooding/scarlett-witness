@@ -1,4 +1,4 @@
-import { createContext, memo, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, memo, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
   Background,
   BackgroundVariant,
@@ -3709,9 +3709,19 @@ function StudioInner({
   // first render would flag EVERY uploaded reference as missing, so hold the
   // check until the library has actually reported in.
   const libraryReady = allLibraryAssets.length > 0;
+  // VALIDATE THE STORY BEHIND THE TYPING, NOT DURING IT. validateStory walks
+  // every scene, beat, choice, hotspot, gate and media reference — ~9 ms on the
+  // 201-scene film, on top of the clone and the structural fingerprint every
+  // edit already pays for. With a deferred story React renders the keystroke at
+  // full priority (the text appears at once) and runs the validator in a
+  // low-priority pass that is abandoned and re-run when the next key lands, so
+  // a burst of typing pays for one validation instead of one per character. The
+  // badges, node dots and the Test tab briefly show the previous verdict, which
+  // is what "behind" means — they catch up the moment typing pauses.
+  const deferredStory = useDeferredValue(story);
   const issues = useMemo(
-    () => validateStory(story, libraryReady ? { knownAssetIds } : undefined),
-    [story, knownAssetIds, libraryReady],
+    () => validateStory(deferredStory, libraryReady ? { knownAssetIds } : undefined),
+    [deferredStory, knownAssetIds, libraryReady],
   );
   // Every flag referenced anywhere in the story — the source list for the flag
   // dropdowns so authors can pick (and keep track of) existing flag names.

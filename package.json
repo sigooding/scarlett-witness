@@ -19,6 +19,7 @@
     "test:validator": "node scripts/validator-audit.mjs",
     "test:dom": "node scripts/dom-smoke.mjs",
     "test:image-picker": "node scripts/beta/image-picker-harness.mjs",
+    "perf:studio": "node scripts/studio-perf.mjs",
     "test:foreground": "node scripts/beta/foreground-harness.mjs",
     "test:media": "node scripts/ie-roundtrip/run.mjs",
     "test:media:real": "node scripts/ie-roundtrip/real-file.mjs",

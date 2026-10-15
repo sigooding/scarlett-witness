@@ -109,8 +109,12 @@ console.log("Revision-safe Studio autosave");
 const stored = new Map<string, string>();
 const writes = { setItem: (k: string, v: string) => { stored.set(k, v); } };
 const compactions: ReturnType<typeof defer<Story>>[] = [];
-const drafts = new DraftAutosave(writes, () => { const d = defer<Story>(); compactions.push(d); return d.promise; }, 60_000);
-const a = fresh(); a.title = "first"; drafts.queue(a); const firstSave = drafts.flush();
+let compactCalls = 0;
+const drafts = new DraftAutosave(writes, () => { compactCalls += 1; const d = defer<Story>(); compactions.push(d); return d.promise; }, 60_000);
+// Compaction exists for embedded media, and only runs when there IS any — so
+// these race tests carry an inline image, exactly as a first save of an
+// uploaded picture would.
+const a = fresh(); a.title = "first"; a.coverImage = "data:image/png;base64,AAAA"; drafts.queue(a); const firstSave = drafts.flush();
 const b = { ...a, title: "latest" }; drafts.queue(b); const latestSave = drafts.flush();
 compactions[1].resolve(b); await latestSave; compactions[0].resolve(a); await firstSave;
 eq(JSON.parse(stored.get(draftKey(a.id))!).title, "latest", "slow compaction cannot overwrite newer revision");
@@ -122,6 +126,21 @@ eq(JSON.parse(stored.get(draftKey(a.id))!).title, c.title, "story switch keeps t
 eq(JSON.parse(stored.get(draftKey(other.id))!).title, other.title, "other story saves independently");
 drafts.queue(a); const discardedSave = drafts.flush(); drafts.discard(a.id); stored.delete(draftKey(a.id)); compactions[4].resolve(a); await discardedSave;
 check(!stored.has(draftKey(a.id)), "discarded draft is not resurrected by in-flight compaction");
+// The common save is a clean draft: every upload is already an `asset:<id>`
+// reference, so there is nothing to compact — and compacting it used to
+// re-read every row of the media library and rebuild a second copy of the
+// story just to write the first one.
+const clean = fresh(); clean.title = "clean";
+const callsBefore = compactCalls;
+drafts.queue(clean); check(await drafts.flush(), "a clean draft saves");
+eq(compactCalls, callsBefore, "a draft with no embedded media is written without compacting");
+eq(JSON.parse(stored.get(draftKey(clean.id))!).title, "clean", "…and the draft really is on disk");
+const withMedia = fresh(); withMedia.title = "media"; withMedia.coverImage = "data:image/png;base64,BBBB";
+drafts.queue(withMedia); const mediaSave = drafts.flush();
+eq(compactCalls, callsBefore + 1, "a draft holding an inline image is compacted before it is written");
+compactions[compactions.length - 1].resolve({ ...withMedia, coverImage: "asset:one" }); await mediaSave;
+eq(JSON.parse(stored.get(draftKey(withMedia.id))!).coverImage, "asset:one", "the compacted story is what lands");
+
 const failing = new DraftAutosave({ setItem: () => { throw new Error("Quota exceeded"); } }, async (s) => s, 60_000);
 let status = ""; failing.subscribe((s) => { status = s.state; }); failing.queue(a);
 check(!failing.flushSync(), "failed safety snapshot blocks exit"); check(!(await failing.flush()), "quota error does not report success"); eq(status, "error", "quota errors are surfaced");

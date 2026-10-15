@@ -27,6 +27,8 @@ declare const __FILM_LAYER_COUNT__: number;
 declare const __HIVE_PICTURE__: string;
 declare const __HIVE_DEPTH__: string;
 declare const __HIVE_PICTURE_LABEL__: string;
+declare const __LAST_FILM_PICTURE__: string;
+declare const __LAST_FILM_PICTURE_LABEL__: string;
 declare const __HIVE_DEPTH_LABEL__: string;
 
 interface Ctx {
@@ -216,6 +218,34 @@ export async function run({ doc, container }: Ctx) {
     [...doc.querySelectorAll("div")].find((d: any) => (d.getAttribute("style") ?? "").includes("position: fixed") && textOf(d).includes(__HIVE_PICTURE_LABEL__));
   await waitFor(() => !!previewOf());
   check("A17 hovering a row pops the big preview", !!previewOf());
+
+  // 800-odd rows is a list to search, not to render: the panel builds a window
+  // of them, says how many are held back, offers the rest on request, and does
+  // not queue a thumbnail fetch per row while it is at it. The picture the
+  // field is already on is always shown, even when it sorts past the window.
+  const listRows = () => rowsOf(panelOf(".p-film")).length;
+  check(`A17a a ${__FILM_PICTURE_COUNT__}-picture list is windowed, not built whole`, listRows() > 0 && listRows() <= 260, listRows());
+  check("A17b …and says how many it is holding back, with a way to see them",
+    /Showing \d+ of \d+/.test(textOf(filmPanel)) && /Show all \d+/.test(textOf(filmPanel)),
+    textOf(filmPanel).slice(-140));
+  check("A17c …and fetches no thumbnail per row for a list that size",
+    panelOf(".p-film").querySelectorAll("img").length <= 2,
+    panelOf(".p-film").querySelectorAll("img").length);
+  const lastLabel = __LAST_FILM_PICTURE_LABEL__;
+  setInput(filmPanel.querySelector('input:not([type="file"]):not([type="checkbox"])'), lastLabel);
+  await waitFor(() => !!rowNamed(panelOf(".p-film"), lastLabel));
+  panelOf(".p-film")
+    .querySelector('input:not([type="file"]):not([type="checkbox"])')
+    .dispatchEvent(new win.KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
+  await waitFor(() => filmValue === __LAST_FILM_PICTURE__);
+  check("A17d the last picture in the library can still be searched to and picked", filmValue === __LAST_FILM_PICTURE__, filmValue);
+  await openPicker(".p-film");
+  await waitFor(() => !!rowNamed(panelOf(".p-film"), lastLabel));
+  check("A17e …and re-opening the box still shows the picture the field is on", !!rowNamed(panelOf(".p-film"), lastLabel));
+  check("A17f the window is still a window after re-opening", listRows() <= 260, listRows());
+  [...rowsOf(panelOf(".p-film"))].find((b) => /^Show all \d+$/.test(textOf(b)))?.click();
+  await waitFor(() => listRows() > 400);
+  check("A17g “Show all” really does list the rest", listRows() > 400, listRows());
   await closePicker(".p-film");
 
   await openPicker(".p-depth");
