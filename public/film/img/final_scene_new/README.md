@@ -4,8 +4,13 @@ A non-destructive redo of the film's ending — **scene 100, INT. KANEKO'S NEW C
 plus a new 8-shot dream sequence. Nothing in `s100/` or anywhere else was touched: no `story.json`,
 studio-edits or code changes. This folder is a standalone set of images and notes.
 
-**Status:** 3 of 13 shots made (01–03). Shots 04–13 are fully specified in
-`style-sheets/continuity.md` and are next.
+**Status:** 9 of 13 shots made (01–09). Shots 10–13 (the last four alternates and the final
+constellation) are fully specified in `style-sheets/continuity.md` and are next.
+
+**The bubble look** (direction given after the first pass): the bar **warps** into a water
+droplet — the set's straight lines bend into the sphere, nothing is a hard circle — each shot
+pulls back a visible step (the whole group shrinks ~15 % per shot and rises), and the palette
+stays muted: deep blue-black, slate, dim amber, with only a faint pale pearl sheen on the rims.
 
 ## The new ending (per direction)
 
@@ -28,10 +33,10 @@ never change once they appear.
 
 | File | The frame holds |
 |---|---|
-| `100-06-the-bar-becomes-a-bubble.jpg` *(to make)* | The pull-back begins: the counter's warm light gathers into one glowing sphere — inside it, Vera, the empty stool, Kaneko, steam. The street dissolves to blue bokeh. |
-| `100-07-the-tea-still-warm.jpg` *(to make)* | + the first alternate: **Mara alive** — the sisters at the low table, both tea cups steaming, mid-laugh. |
-| `100-08-father-and-son.jpg` *(to make)* | + **the father alive** — the old noodle counter, Daniel Voss and a younger Jack laughing over two bowls. |
-| `100-09-the-small-umbrella.jpg` *(to make)* | + **they stayed** — Jack and Vera crossing the rainy street under the small umbrella, laughing. |
+| `100-06-the-bar-becomes-a-bubble.jpg` | The pull-back begins: the counter WARPS — the room bends and flows into one large soft water droplet; inside it, Vera, the empty stool, Kaneko, steam. The street dissolves to blue bokeh. |
+| `100-07-the-tea-still-warm.jpg` | + the first alternate: **Mara alive** — the sisters at the low table, both tea cups steaming, mid-laugh. The group steps back. |
+| `100-08-father-and-son.jpg` | + **the father alive** — the old noodle counter, Daniel Voss and a younger Jack laughing over two bowls. The group steps back. |
+| `100-09-the-small-umbrella.jpg` | + **they stayed** — Jack and Vera crossing the rainy street under the small umbrella, laughing. The group steps back. |
 | `100-10-youve-done-well.jpg` *(to make)* | + **Ishida lived** — under the expressway, the green car, Ishida's tired kind half-smile to Jack. |
 | `100-11-the-quiet-alley.jpg` *(to make)* | + **the night with no shooting** — the quiet backstreet, just the vending machine's amber light and Mara walking home, safe. |
 | `100-12-she-stays.jpg` *(to make)* | + **she stayed on the rooftop** — Vera turning back to Jack and laughing, the train passing below. |
@@ -84,8 +89,11 @@ rain light outside. It stays identical in every interior shot and inside the cen
 
 ## Files
 
-- `100-01-…jpg` to `100-05-…jpg`: Part A, the counter and the rain (01–03 made so far).
-- `100-06-…jpg` to `100-13-…jpg`: Part B, the eight bubble shots (to make).
+- `100-01-…jpg` to `100-05-…jpg`: Part A, the counter and the rain (01–05 made).
+- `100-06-…jpg` to `100-09-…jpg`: Part B so far — the warp and the first three alternates (made,
+  warp pass).
+- `100-10-…jpg` to `100-13-…jpg`: Part B remainder — Ishida, the quiet alley, the rooftop, the
+  final constellation (to make; they continue the same pull-back from 09).
 - `style-sheets/refs/`: face and authority plates (`vera-face`, `mara-face`, `jack-face`,
   `kaneko`, `father-and-son`).
 - `style-sheets/continuity.md`: the locks, the bubble language, the alternate list and the recipe

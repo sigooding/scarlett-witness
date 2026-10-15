@@ -42,17 +42,31 @@ interior shot and in the central bubble.
 
 ## 4. The bubble language (dream-sequence lock)
 
-- A bubble is a **round, luminous, soap-like sphere** of light with a **thin iridescent rim**
-  (subtle violet-blue-pink sheen) and a soft inner glow, floating in very dark blue-black rainy air.
-- **Inside** each bubble: a crisp, warm, self-contained miniature film scene, like a lit diorama —
-  fully in focus, its own light.
+Direction (given after the first pass was rejected): the bar must **warp** into the bubble — the
+room bends and flows into a water droplet, not a hard circle pasted on; the shots must show a
+**real, visible pull-back** between frames; the palette must stay **muted** (the first pass's
+saturated violet rims were rejected).
+
+- A bubble is a **soft, luminous water-droplet sphere**: the scene inside is **curved and warped**,
+  as if seen through the surface of a droplet — the straight lines of the set bend toward the rim.
+  The rim is a **very faint pale pearl sheen** with at most the faintest blue-green iridescence.
+  Nothing neon, no saturated purple, no hard circular edge.
+- **Inside** each bubble: a crisp, warm, self-contained miniature film scene — in focus, its own
+  light, but warped by the droplet.
 - **Outside** everything: the rainy Tokyo night dissolves into soft blue bokeh, faint streetlights,
-  soft rain streaks — memory, not street. No crisp buildings, no legible text.
+  thin rain streaks — memory, not street. No crisp buildings, no legible text.
+- **The pull-back is explicit and cumulative.** Each shot the whole group of droplets is
+  **~85 % of its previous size and a little higher in the frame** (06: ~60 % of frame height →
+  07: ~51 % → 08: ~43 % → 09: ~37 % → 10: ~31 % → 11: ~27 % → 12: ~23 % → 13: small and high,
+  with Tokyo's memory filling the lower half). The camera retreat must be obvious frame to frame.
 - The **central bubble** always holds the counter scene (Vera at the counter, the empty stool,
   Kaneko, steam, the bulb) and is always the warmest and brightest.
-- The sequence is a **continuous slow pull-back**: each shot the bubbles are slightly smaller/higher
-  and one more bubble has appeared. The bubbles never change once introduced; they only stay.
-- Alternate bubbles are slightly smaller than the central one and a touch softer.
+- The sequence is a **continuous slow pull-back**: one more droplet appears per shot. The droplets
+  never change once introduced; they only stay (and only shrink with the pull-back).
+- Alternate droplets are smaller than the central one and a touch softer.
+- The **TV** inside the central droplet keeps a faint dim screen glow — its news content
+  (Kurose, the Ishida photo) is only readable at the scale of Part A; inside the droplet it must
+  stay soft and unreadable, never a wrong image.
 - The 7 alternates, in order of appearance (shot 07 → 12):
 
 | Bubble | Alternate truth | Source look |
@@ -81,10 +95,10 @@ interior shot and in the central bubble.
 
 | # | File | What's in frame | Pass | Status |
 |---|---|---|---|---|
-| 06 | `100-06-the-bar-becomes-a-bubble` | The pull-back begins: the counter's warm light gathers into ONE round glowing sphere; inside it the counter (Vera, empty stool, Kaneko, steam); the street and lamps dissolve to blue bokeh, rain into light streaks. | new 100-01, s100/158 | **to make** |
-| 07 | `100-07-the-tea-still-warm` | Edit of 06: central bubble kept; camera slightly back; + bubble LEFT: the sisters' tea (Mara alive, both cups steaming). | 06, s4/36, s1/04 | **to make** |
-| 08 | `100-08-father-and-son` | Edit of 07: + bubble RIGHT: the old counter, Daniel and young Jack laughing over bowls. | 07, s11/167 | **to make** |
-| 09 | `100-09-the-small-umbrella` | Edit of 08: + bubble LEFT (lower): the rainy crossing, Jack and Vera laughing under the small umbrella. | 08, s27/202 | **to make** |
+| 06 | `100-06-the-bar-becomes-a-bubble` | The pull-back begins: the counter WARPS — the room's lines bend and flow into one large soft water-droplet sphere (~60 % of frame height); inside it the counter (Vera, empty stool, Kaneko, steam), curved; the street and lamps dissolve to blue bokeh, rain into light streaks. | new 100-01, s100/158 | made (warp pass) |
+| 07 | `100-07-the-tea-still-warm` | Edit of 06: group to ~85 % size; + droplet UPPER LEFT (~70 % of central): the sisters' tea (Mara alive, both cups steaming). | 06w, s4/36, s1/04 | made (warp pass) |
+| 08 | `100-08-father-and-son` | Edit of 07: group to ~85 %; + droplet RIGHT (~65 %): the old counter, Daniel and young Jack laughing over bowls. | 07w, s11/167 | made (warp pass) |
+| 09 | `100-09-the-small-umbrella` | Edit of 08: group to ~85 %; + droplet LOWER LEFT (~60 %): the rainy crossing, Jack and Vera laughing under the small umbrella. | 08w, s27/202 | made (warp pass) |
 | 10 | `100-10-youve-done-well` | Edit of 09: + bubble UPPER RIGHT: under the expressway, the green car, Ishida's kind smile to Jack. | 09, jack_ishida_new/61-10 | **to make** |
 | 11 | `100-11-the-quiet-alley` | Edit of 10: + bubble LOWER RIGHT: the quiet backstreet, Mara walking home safe, vending-machine light. | 10, s1/03, s1/02 | **to make** |
 | 12 | `100-12-she-stays` | Edit of 11: + bubble LOWER LEFT: the rooftop, Vera turning back to Jack and laughing, the train below. | 11, s98/523 | **to make** |
