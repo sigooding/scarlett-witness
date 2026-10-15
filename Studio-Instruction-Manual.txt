@@ -622,7 +622,12 @@
                      a path, "gradient:..." string, uploaded image
                      ("asset:<id>"), or "video:<url>" that overrides the image.
                      All image fields across Studio use this browser.
-   AMBIENT LOOP      none / rain / jazz / drone / tension (a synth atmosphere).
+   AMBIENT LOOP      a synth atmosphere (none / rain / jazz / drone / tension)
+                     LAYERED WITH recorded loops — use the sound browser to add
+                     one (the film's own amb-hive, amb-city-traffic, loop-train-
+                     yamanote, tv-murmur … are all listed, with hover audition),
+                     or "⇧ Upload loop" for your own. Each loop shows ▶ to hear
+                     it and ✕ to remove it.
    PARTICLES         Auto (derived from the audio), none, rain, smoke, storm.
    PROSE             the narrator's opening paragraph (typewritten in-game).
    START SCENE       toggle — marks this node as the entry point.
@@ -651,6 +656,12 @@
                                            slide-left / slide-right / iris-in
                               SPEED       seconds for the transition (0.5 default)
      VOICE MP3 URL    per-line recorded audio; replaces TTS for that line only.
+     SOUND EFFECT ON THIS BEAT   an optional one-shot that plays as the beat
+                      starts, over the voice. Uses the SOUND BROWSER (Section
+                      6.11): every /film/sfx one-shot and ambience is listed
+                      with hover audition, plus your uploads. The ▶ Test button
+                      plays it at this beat's volume, and the LEVEL slider sets
+                      that volume (100% default).
      SILENT           no narration at all (text only).
      LINE             the spoken/written text.
      CONDITION RULE   a Gating that controls whether this beat plays at all.
@@ -795,8 +806,31 @@
    built-in image shipped in /img and /assets (all scenes, characters, covers,
    animation sprites), Nobody's Witness's own pictures and depth layers, all
    your uploads and the gradient presets. Hover any name for a full-size
-   rollover preview. Uploaded audio appears in the music/narration/voice
-   pickers; uploaded video in the cutscene picker.
+   rollover preview. Uploaded video appears in the cutscene picker.
+
+   THE SOUND BROWSER — FIELD BY FIELD
+   Two sound fields use a browser of their own: a beat's "🔊 Sound effect on
+   this beat" and a scene's "Ambient loop" (the recorded-loop adder under the
+   synth preset). It lists EVERY sound file in the project, not only the ones
+   already uploaded:
+     - the film's one-shots and ambience under /film/sfx (amb-hive, car-door-
+       heavy, crossing, loop-train-yamanote, …) and its alternate takes;
+     - the film's music cues under /film/audio, and its voice takes under
+       /film/voice;
+     - the other reels' audio (their scenes and sfx), public/uploads, anything
+       else dropped into public/, and every sound you have uploaded.
+   Rows are grouped under those headings and the film's own sounds come first,
+   because that is where a sound effect is almost always found. Type in the
+   filter box to narrow the list (Enter takes the first match), and point at a
+   name to HEAR it — one shared player, so auditions never stack. A list this
+   long opens as a window of 250 rows with "Show all (N)" for the rest, and the
+   sound the field is set to is always on screen.
+   "⇧ Upload a sound..." sits at the top of the open list and files the file in
+   the shared library (the beat's sound-effect fields file under "sound
+   effects"); you can also drop an audio file on the box. The ▶ Test button on
+   the box plays the sound at the exact volume the beat will use. A path or URL
+   the scan does not know is still accepted: type it in the filter box and
+   press Enter (the panel offers "Use it as it is").
 
    THE IMAGE BROWSER, FIELD BY FIELD
    One box serves every picture field: a scene's BACKGROUND, a beat's

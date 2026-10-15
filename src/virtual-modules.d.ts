@@ -33,6 +33,12 @@ declare module "virtual:builtin-audio" {
     label: string;
     /** folder relative to public/, e.g. "uploads/nobodys-witness-draft" */
     folder: string;
+    /** the picker heading this folder belongs under, e.g. "Film one-shots &
+     *  ambience (film/sfx)" — named by tools/builtin-audio.mjs, the one place
+     *  the library's sections are defined */
+    section: string;
+    /** section order (uploads lead, then the film's own sound, then the rest) */
+    rank: number;
     /** set for the voices tree: the person slug the take belongs to */
     person?: string;
     /** set for the voices tree: the scene folder under that person */

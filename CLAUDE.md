@@ -31,6 +31,17 @@ real `<Studio/>` in happy-dom and times a typing burst, the autosave behind it a
 counts media-library reads with the code that asked for them. happy-dom's absolute milliseconds are pessimistic
 (no paint); compare two versions of the same code, not two machines.
 
+## The Studio's sound library
+
+`tools/builtin-audio.mjs` is what the sound boxes can offer: `virtual:builtin-audio` (vite.config.ts) bakes
+its scan of every audio file under `public/` into the app — the film's one-shots and ambience (`public/film/sfx`,
+148 files, where all 166 of the film's `sfxUrl` references live), alternate takes, music cues, voice takes, the
+other reels' audio and `public/uploads`. Sections come from `sectionFor(folder)` in the tool, so the headings are
+defined in one place. `src/studio/AudioPicker.tsx` is the browser both sound fields use (a beat's "sound effect on
+this beat", a scene's recorded-loop adder); it auditions on hover through one shared player and windows lists past
+`ROW_WINDOW`. `npm run test:audio-picker` drives it over the real scan, and `npm run test:film-backend` asserts
+every sound the film plays is in that scan.
+
 ## Animatic export
 
 `docs/animatic-export.md`: `npm run export:animatic -- --from nw_s65 --to nw_s65`, or 🎞 Export animatic on the home screen under `npm run dev`. Do not edit `src/` while an export runs from a dev server (Vite reloads the page and the capture breaks).

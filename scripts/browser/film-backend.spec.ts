@@ -14,11 +14,15 @@ const FIX = {
   sfx: join(ROOT, "public/film/sfx/knock-glass-door.mp3"),
   loop: join(ROOT, "public/film/sfx/amb-room-tone.mp3"),
 };
-/** choose an uploaded file in a native <select> by part of its name (the option text carries a size) */
-async function pick(select: Locator, namePart: string) {
-  const value = await select.locator("option", { hasText: namePart }).first().getAttribute("value");
-  expect(value, `an uploaded file called ${namePart}`).toBeTruthy();
-  await select.selectOption(value!);
+/** Choose a sound in the SOUND BROWSER (the box both sound fields use): open
+ *  it, filter by part of the file name, take the first match. */
+async function pickSound(scope: Locator, namePart: string) {
+  await scope.getByRole("button", { name: /browse every sound/ }).click();
+  const filter = scope.getByPlaceholder(/^Filter \d+ sounds/);
+  await filter.fill(namePart);
+  const row = scope.getByRole("button", { name: new RegExp(`^${namePart.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`) }).first();
+  await expect(row, `a sound called ${namePart}`).toBeVisible({ timeout: 10_000 });
+  await row.click();
 }
 const readDraft = (page: Page) => page.evaluate((k) => JSON.parse(localStorage.getItem(k) ?? "null"), DRAFT);
 
@@ -54,14 +58,15 @@ test("a depth map, a sound effect and a recorded loop uploaded in the Studio rea
   await page.getByText("🖼 Look, atmosphere & camera").click();
   const ambient = page.locator("label", { hasText: "Ambient loop (synth preset + recorded loops)" });
   await expect(ambient.getByText("amb-office.mp3")).toBeVisible();
-  await pick(ambient.locator("select").last(), "amb-room-tone.mp3");
+  await pickSound(ambient, "amb-room-tone.mp3");
   await expect(ambient.getByText("uploaded loop")).toBeVisible();
 
   // 3. the first beat: a sound effect, at half volume
   await page.locator("#studio-tab-beats").click();
   await page.getByRole("button", { name: /^💬 Beat 1\b/ }).first().click();
   const fx = page.locator("label", { hasText: "Sound effect on this beat" }).last();
-  await pick(fx.locator("select"), "knock-glass-door.mp3");
+  // the box browses every sound the project ships; the uploaded one is in it too
+  await pickSound(fx, "knock-glass-door.mp3");
   await page.getByRole("slider", { name: /Sound effect volume for beat/ }).fill("0.5");
 
   // 4. the scene's camera: a depth map, which starts on the suggested move

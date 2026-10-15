@@ -1,5 +1,6 @@
 import { audio } from "../audio";
-import { AssetDropdown, MediaUploadButton } from "./MediaLibrary";
+import { MediaUploadButton } from "./MediaLibrary";
+import { AudioPicker } from "./AudioPicker";
 import { inputCls } from "./studioLeaves";
 import { AMBIENT_PRESETS, joinAmbient, parseAmbient } from "./ambientParts";
 
@@ -50,22 +51,27 @@ export function AmbientLayers({
           </button>
         </div>
       ))}
-      <div className="flex gap-1">
+      <div className="flex items-start gap-1">
+        {/* The browser lists every sound the project ships — the film's own
+            ambience and loops included — plus your uploads, with hover
+            audition. Uploading is the button beside it. */}
+        <div className="flex-1">
+          <AudioPicker
+            storyId={storyId}
+            label={`Ambient loop for this scene (loop ${loops.length + 1})`}
+            placeholder="Add a recorded loop — browse every sound…"
+            allowClear={false}
+            allowUpload={false}
+            resolve={media}
+            onChange={(url) => url && onChange(joinAmbient(preset, [...loops, url], other))}
+          />
+        </div>
         <MediaUploadButton
           storyId={storyId}
           accept="audio/*"
           label="⇧ Upload loop"
           onUploaded={(_url, assetId) => onChange(joinAmbient(preset, [...loops, `asset:${assetId}`], other))}
         />
-        <div className="flex-1">
-          <AssetDropdown
-            storyId={storyId}
-            assetType="audio"
-            returnReference
-            onChange={(url) => url && onChange(joinAmbient(preset, [...loops, url], other))}
-            placeholder="Add an uploaded recorded loop…"
-          />
-        </div>
       </div>
       <p className="font-type text-[9px] leading-snug text-paper/45">
         Layers play together, looping: the synth preset and any recorded loops (room tone, a distant train, a vending machine).

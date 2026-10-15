@@ -1,12 +1,12 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import fs from "node:fs";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
 import { animaticExportPlugin } from "./tools/vite-animatic-export.mjs";
 import { scanBuiltinImages } from "./tools/builtin-images.mjs";
+import { scanBuiltinAudio } from "./tools/builtin-audio.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -41,58 +41,21 @@ function builtinImagesPlugin() {
 
 /**
  * The audio counterpart of builtinImagesPlugin: EVERY sound file under public/
- * becomes a pickable { url, label, folder } entry, so the Studio's beat voice
- * picker can offer them all — including the generated
- * `voices/<person>/<scene>/<line>.mp3` tree, which a browser cannot enumerate
- * over HTTP (there is no directory listing), and the imported uploads.
+ * becomes a pickable { url, label, folder, section } entry — the film's
+ * one-shots and ambience, its music cues and voice takes, the other reels'
+ * audio, imported uploads and anything dropped into public/. A browser cannot
+ * enumerate a folder over HTTP (there is no directory listing), so the list is
+ * built in Node during both `vite dev` and `vite build` and baked into the
+ * single-file build too.
  *
- * `person`/`scene` are filled in for the voices tree so a character's own takes
- * can be grouped ahead of everything else. Scanned in Node during both
- * `vite dev` and `vite build`, so the single-file build carries the list too.
+ * The roots, the extensions and the section headings live in
+ * tools/builtin-audio.mjs so the scan can be run and checked on its own (the
+ * audio-picker harness bakes this exact list in, and scripts/film-backend.entry.ts
+ * asserts every sound the film references is in it).
  */
 function builtinAudioPlugin() {
   const virtualId = "virtual:builtin-audio";
   const resolvedId = "\0" + virtualId;
-  const root = path.resolve(__dirname, "public");
-  const exts = [".mp3", ".wav", ".ogg", ".m4a", ".flac", ".aac"];
-
-  const scan = () => {
-    const out: { url: string; label: string; folder: string; person?: string; scene?: string }[] = [];
-    const walk = (dir: string, rel: string) => {
-      let entries: fs.Dirent[];
-      try {
-        entries = fs.readdirSync(dir, { withFileTypes: true });
-      } catch {
-        return;
-      }
-      for (const entry of entries) {
-        const relPath = rel ? `${rel}/${entry.name}` : entry.name;
-        if (entry.isDirectory()) {
-          walk(path.join(dir, entry.name), relPath);
-          continue;
-        }
-        const ext = entry.name.toLowerCase().match(/\.[^.]+$/)?.[0] ?? "";
-        if (!exts.includes(ext)) continue;
-        const parts = relPath.split("/");
-        const file = parts[parts.length - 1];
-        const folders = parts.slice(0, -1);
-        const item: { url: string; label: string; folder: string; person?: string; scene?: string } = {
-          url: `/${relPath}`,
-          label: file.replace(/\.[^.]+$/, ""),
-          folder: folders.join("/"),
-        };
-        if (folders[0] === "voices" && folders[1]) {
-          item.person = folders[1];
-          item.scene = folders[2];
-        }
-        out.push(item);
-      }
-    };
-    walk(root, "");
-    out.sort((a, b) => a.url.localeCompare(b.url));
-    return out;
-  };
-
   return {
     name: "builtin-audio",
     resolveId(id: string) {
@@ -100,7 +63,7 @@ function builtinAudioPlugin() {
     },
     load(id: string) {
       if (id !== resolvedId) return null;
-      return `export default ${JSON.stringify(scan())};`;
+      return `export default ${JSON.stringify(scanBuiltinAudio())};`;
     },
   };
 }

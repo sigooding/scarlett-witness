@@ -24,6 +24,7 @@ import { collectStoryAssetIds, resolveMediaValue } from "../src/data/mediaLibrar
 import { parseAmbient, joinAmbient } from "../src/studio/ambientParts";
 import { countExportFiles, LARGE_EXPORT_FILES } from "../src/studio/exportBundle";
 import { scanBuiltinImages, labelFor } from "../tools/builtin-images.mjs";
+import { scanBuiltinAudio, sectionFor } from "../tools/builtin-audio.mjs";
 
 let checks = 0;
 const check = (value: unknown, message: string) => { assert.ok(value, message); checks++; };
@@ -186,6 +187,28 @@ const game = read("src/game/Game.tsx");
 check(/pictureReady\(url\)/.test(game) && /preloadPicture\(url\)\.then\(mount\)/.test(game), "a beat's picture is mounted only once it is decoded (the one before it stays up until then)");
 check(/preloadPicture\(url\)/.test(game) && /visibleBeats\.slice\(beatIdx, beatIdx \+ 5\)/.test(game), "and the next beats' pictures, and the next node's, are fetched while the player reads");
 check(existsSync(join(ROOT, "src/game/preloadPicture.ts")), "preloadPicture.ts holds the preloading");
+
+/* ---- 8b. every sound the film uses is in the sound browser ---- */
+// The beat's "sound effect on this beat" box and the scene's recorded-loop
+// adder both browse the scan in tools/builtin-audio.mjs. If a sound the film
+// plays were missing from it, the sound could only be set by typing a path —
+// which is exactly what the browser replaced.
+console.log("Every sound the film uses is in the sound browser");
+const SOUNDS = scanBuiltinAudio(ROOT);
+const soundUrls = new Set(SOUNDS.map((a) => a.url));
+const filmSounds = [...filmRefs].filter((v) => v.startsWith("/film/sfx/") || v.startsWith("/film/audio/"));
+check(filmSounds.length > 100, `the film references ${filmSounds.length} sound files (one-shots, ambience loops, music cues)`);
+eq(filmSounds.filter((u) => !soundUrls.has(u)), [], "and every one of them is in the sound browser");
+check(SOUNDS.length > 1000, `the browser offers all ${SOUNDS.length} sounds the scan finds under public/`);
+check(sectionFor("film/sfx").name === "Film one-shots & ambience (film/sfx)" && sectionFor("film/sfx").rank === 1, "the film's own one-shots and ambience lead the list, right after your uploads");
+check(sectionFor("film/sfx/alternates").name === "Alternate takes (film/sfx/alternates)", "alternate takes are kept apart from the finals");
+check(sectionFor("film/audio").name === "Film music cues (film/audio)", "music cues are named for what they are");
+check(sectionFor("reels/rapture/audio").name === "Other reels (reels)", "the other reels' audio is kept out of the film's way");
+check(sectionFor("uploads/nobody-draft").name === "Already in public/uploads", "imported uploads are named for what they are");
+check(/<AudioPicker/.test(read("src/studio/Studio.tsx")), "the beat's sound-effect field uses the sound browser");
+check(/<AudioPicker/.test(read("src/studio/AmbientLayers.tsx")), "and so does the scene's recorded-loop adder");
+check(/onMouseEnter=\{\(\) => audition/.test(read("src/studio/AudioPicker.tsx")) && /<audio ref=\{audioRef\}/.test(read("src/studio/AudioPicker.tsx")), "pointing at a sound auditions it through one shared player");
+check((read("src/studio/AmbientLayers.tsx").match(/<MediaUploadButton/g) ?? []).length === 1, "and the ambient field keeps its own upload button");
 
 /* ---- 10. the film grade's flicker never fades the plate ---- */
 console.log("The 35mm film grade flickers a veil, never the picture");

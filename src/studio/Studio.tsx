@@ -70,6 +70,7 @@ import {
   type ValidationIssue,
 } from "../logic";
 import { MediaLibrary, AssetDropdown, MediaUploadButton, CharacterVoiceFiles } from "./MediaLibrary";
+import { AudioPicker } from "./AudioPicker";
 import { AmbientLayers } from "./AmbientLayers";
 import { ImagePicker, setImagePickerStoryId } from "./ImagePicker";
 import { EXTRA_PRESET, SheetLab, SpriteSheetControls, TALKING_PRESET, WALKER_PRESET } from "./SheetEditor";
@@ -9114,56 +9115,29 @@ function StudioInner({
                         </div>
                       </Field>
                       <Field label="🔊 Sound effect on this beat (optional — a one-shot that plays as the beat starts, over the voice)">
-                        <div className="flex gap-1">
-                          <input
-                            className={inputCls}
-                            aria-label={`Sound effect for beat ${b.id}`}
-                            placeholder="/audio/door-creak.mp3 or upload"
-                            value={mediaField(b.sfxUrl)}
-                            onChange={(e) =>
-                              mutate((d) => {
-                                const s = d.scenes.find((x) => x.id === scene.id)!;
-                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = e.target.value || undefined;
-                              })
-                            }
-                          />
-                          <MediaUploadButton
-                            storyId={story.id}
-                            accept="audio/*"
-                            label="⇧ Upload"
-                            onUploaded={(_url, assetId) =>
-                              mutate((d) => {
-                                const s = d.scenes.find((x) => x.id === scene.id)!;
-                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = `asset:${assetId}`;
-                              })
-                            }
-                          />
-                        </div>
-                        <div className="mt-1">
-                          <AssetDropdown
-                            storyId={story.id}
-                            assetType="audio"
-                            returnReference
-                            value={b.sfxUrl}
-                            onChange={(url) =>
-                              mutate((d) => {
-                                const s = d.scenes.find((x) => x.id === scene.id)!;
-                                s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = url || undefined;
-                              })
-                            }
-                            placeholder="Or pick uploaded audio..."
-                          />
-                        </div>
+                        {/* The browser lists every sound the project ships — the
+                            film's own one-shots and ambience included — plus
+                            your uploads, with hover audition. It replaces the
+                            old "type a path" box + uploaded-only dropdown,
+                            which could not show what was already available. */}
+                        <AudioPicker
+                          storyId={story.id}
+                          label={`Sound effect for beat ${b.id}`}
+                          placeholder="/film/sfx/… — browse every sound, or upload"
+                          uploadFolder="sound effects"
+                          value={b.sfxUrl}
+                          resolve={media}
+                          testVolume={b.sfxVolume ?? 1}
+                          onChange={(url) =>
+                            mutate((d) => {
+                              const s = d.scenes.find((x) => x.id === scene.id)!;
+                              s.dialogueBeats!.find((x) => x.id === b.id)!.sfxUrl = url || undefined;
+                            })
+                          }
+                        />
                         {b.sfxUrl ? (
                           <div className="mt-1 flex items-center gap-2">
-                            <button
-                              type="button"
-                              className="border border-cyan-neon/40 px-2 py-0.5 font-pulp text-[8px] uppercase tracking-widest text-cyan-neon hover:bg-cyan-neon/10"
-                              title="Hear it exactly as the game will play it"
-                              onClick={() => audio.playSfx(media(b.sfxUrl) ?? b.sfxUrl!, b.sfxVolume ?? 1)}
-                            >
-                              ▶ Test
-                            </button>
+                            <span className="font-pulp text-[8px] uppercase tracking-widest text-paper/40">Level</span>
                             <label className="flex flex-1 items-center gap-2 font-type text-[9px] text-paper/60">
                               Volume {Math.round((b.sfxVolume ?? 1) * 100)}%
                               <input
