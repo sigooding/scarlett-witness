@@ -38,8 +38,8 @@ export class DraftAutosave {
     entry.timer = setTimeout(() => { void this.save(entry); }, this.delay);
   }
 
-  private write(story: Story) {
-    const json = JSON.stringify(story);
+  private write(story: Story, preSerialised?: string) {
+    const json = preSerialised ?? JSON.stringify(story);
     this.storage.setItem(draftKey(story.id), json);
   }
 
@@ -50,9 +50,18 @@ export class DraftAutosave {
     this.notify(id, { state: "saving" });
     entry.saving = (async () => {
       try {
-        const compacted = await this.compact(entry.story);
+        // Serialise once, and only walk the story for embedded media when
+        // there IS any. Drafts store uploads as `asset:<id>` references after
+        // the first compaction, so the common save is a keystroke's worth of
+        // text in an otherwise clean story: compacting that re-read the whole
+        // media library (every row, base64 and all) and rebuilt every string
+        // for nothing. The test is a substring check on JSON we need anyway —
+        // over-matching only compacts when it did not have to.
+        const json = JSON.stringify(entry.story);
+        const embedded = json.includes("data:");
+        const compacted = embedded ? await this.compact(entry.story) : entry.story;
         if (this.pending.get(id) !== entry) return true; // Superseded/deleted.
-        this.write(compacted);
+        this.write(compacted, compacted === entry.story ? json : undefined);
         this.pending.delete(id);
         this.notify(id, { state: "saved" });
         return true;

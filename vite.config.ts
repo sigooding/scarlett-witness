@@ -1,22 +1,25 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import fs from "node:fs";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
 import { animaticExportPlugin } from "./tools/vite-animatic-export.mjs";
+import { scanBuiltinImages } from "./tools/builtin-images.mjs";
+import { scanBuiltinAudio } from "./tools/builtin-audio.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const buildId = process.env.SCARLET_REEL_BUILD_ID ?? process.env.VITE_BUILD_ID ?? new Date().toISOString();
 
 /**
- * Exposes EVERY image shipped under public/img to the app as a stable list of
- * { url, label } — the source for the Studio image browser. Scanning the
- * directory (instead of hardcoding) means new art dropped into /img is
- * automatically available to pick, and the stored value stays the stable
- * public path (/img/…) so saves never break on a rebuild.
+ * Exposes EVERY image the Studio can offer to the app as a stable list of
+ * { url, label, prefix, group? } — the source for the Studio image browser.
+ * The roots (public/img, public/assets, public/film/img and public/film/depth)
+ * and the labelling live in tools/builtin-images.mjs, so the scan can be run
+ * and checked on its own; scanning instead of hardcoding means new art dropped
+ * into those folders is automatically pickable, and the stored value stays the
+ * stable public path (/img/…) so saves never break on a rebuild.
  *
  * Runs in Node during both `vite dev` and `vite build`, so the list is baked
  * into the bundle for the single-file build too.
@@ -24,61 +27,6 @@ const buildId = process.env.SCARLET_REEL_BUILD_ID ?? process.env.VITE_BUILD_ID ?
 function builtinImagesPlugin() {
   const virtualId = "virtual:builtin-images";
   const resolvedId = "\0" + virtualId;
-  // Roots scanned for the Studio image browser, each mapped to the public URL
-  // prefix it's served under. /img is the scene library; /assets holds shipped
-  // sprites such as the character keyframe animations under /assets/animations
-  // — the Foreground image and keyframe pickers need those available too.
-  // `group` marks files that only some pickers offer: the film's own depth maps, clean plates and cut-outs (public/film/depth) are
-  // for the depth-camera fields; they would only clutter a background picker.
-  const roots: { dir: string; prefix: string; group?: string }[] = [
-    { dir: path.resolve(__dirname, "public/img"), prefix: "/img" },
-    { dir: path.resolve(__dirname, "public/assets"), prefix: "/assets" },
-    { dir: path.resolve(__dirname, "public/film/depth"), prefix: "/film/depth", group: "film-depth" },
-  ];
-  const exts = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".svg"];
-
-  const labelFor = (rel: string) => {
-    const base = rel.replace(/\.[^.]+$/, "");
-    const last = base.split("/").pop() ?? base;
-    // Strip common pulp prefixes so "bg-office" -> "Office", "ch-lena" ->
-    // "Lena", "cover-velvet-alibi" -> "Velvet Alibi". Folders (nw2, etc.)
-    // are folded into the path so duplicate names stay disambiguated.
-    const stripped = last.replace(/^(bg-|wolf-|cover-|fg-|ch-)/, "");
-    const nice = stripped.replace(/[-_]+/g, " ").trim();
-    const titled = nice.replace(/\b\w/g, (c) => c.toUpperCase());
-    const folder = base.slice(0, Math.max(0, base.length - last.length - 1));
-    return folder ? `${titled} (${folder})` : titled;
-  };
-
-  const scan = () => {
-    const out: { url: string; label: string; group?: string }[] = [];
-    for (const { dir, prefix, group } of roots) {
-      if (!fs.existsSync(dir)) continue;
-      const walk = (d: string, rel: string) => {
-        let entries: fs.Dirent[];
-        try {
-          entries = fs.readdirSync(d, { withFileTypes: true });
-        } catch {
-          return;
-        }
-        for (const entry of entries) {
-          const relPath = rel ? `${rel}/${entry.name}` : entry.name;
-          if (entry.isDirectory()) {
-            // Raw, ignored art plates are not shipped Studio library assets.
-            if (entry.name === "src") continue;
-            walk(path.join(d, entry.name), relPath);
-          } else {
-            const ext = entry.name.toLowerCase().match(/\.[^.]+$/)?.[0] ?? "";
-            if (exts.includes(ext)) out.push({ url: `${prefix}/${relPath}`, label: labelFor(relPath), ...(group ? { group } : {}) });
-          }
-        }
-      };
-      walk(dir, "");
-    }
-    out.sort((a, b) => a.label.localeCompare(b.label));
-    return out;
-  };
-
   return {
     name: "builtin-images",
     resolveId(id: string) {
@@ -86,65 +34,28 @@ function builtinImagesPlugin() {
     },
     load(id: string) {
       if (id !== resolvedId) return null;
-      return `export default ${JSON.stringify(scan())};`;
+      return `export default ${JSON.stringify(scanBuiltinImages())};`;
     },
   };
 }
 
 /**
  * The audio counterpart of builtinImagesPlugin: EVERY sound file under public/
- * becomes a pickable { url, label, folder } entry, so the Studio's beat voice
- * picker can offer them all — including the generated
- * `voices/<person>/<scene>/<line>.mp3` tree, which a browser cannot enumerate
- * over HTTP (there is no directory listing), and the imported uploads.
+ * becomes a pickable { url, label, folder, section } entry — the film's
+ * one-shots and ambience, its music cues and voice takes, the other reels'
+ * audio, imported uploads and anything dropped into public/. A browser cannot
+ * enumerate a folder over HTTP (there is no directory listing), so the list is
+ * built in Node during both `vite dev` and `vite build` and baked into the
+ * single-file build too.
  *
- * `person`/`scene` are filled in for the voices tree so a character's own takes
- * can be grouped ahead of everything else. Scanned in Node during both
- * `vite dev` and `vite build`, so the single-file build carries the list too.
+ * The roots, the extensions and the section headings live in
+ * tools/builtin-audio.mjs so the scan can be run and checked on its own (the
+ * audio-picker harness bakes this exact list in, and scripts/film-backend.entry.ts
+ * asserts every sound the film references is in it).
  */
 function builtinAudioPlugin() {
   const virtualId = "virtual:builtin-audio";
   const resolvedId = "\0" + virtualId;
-  const root = path.resolve(__dirname, "public");
-  const exts = [".mp3", ".wav", ".ogg", ".m4a", ".flac", ".aac"];
-
-  const scan = () => {
-    const out: { url: string; label: string; folder: string; person?: string; scene?: string }[] = [];
-    const walk = (dir: string, rel: string) => {
-      let entries: fs.Dirent[];
-      try {
-        entries = fs.readdirSync(dir, { withFileTypes: true });
-      } catch {
-        return;
-      }
-      for (const entry of entries) {
-        const relPath = rel ? `${rel}/${entry.name}` : entry.name;
-        if (entry.isDirectory()) {
-          walk(path.join(dir, entry.name), relPath);
-          continue;
-        }
-        const ext = entry.name.toLowerCase().match(/\.[^.]+$/)?.[0] ?? "";
-        if (!exts.includes(ext)) continue;
-        const parts = relPath.split("/");
-        const file = parts[parts.length - 1];
-        const folders = parts.slice(0, -1);
-        const item: { url: string; label: string; folder: string; person?: string; scene?: string } = {
-          url: `/${relPath}`,
-          label: file.replace(/\.[^.]+$/, ""),
-          folder: folders.join("/"),
-        };
-        if (folders[0] === "voices" && folders[1]) {
-          item.person = folders[1];
-          item.scene = folders[2];
-        }
-        out.push(item);
-      }
-    };
-    walk(root, "");
-    out.sort((a, b) => a.url.localeCompare(b.url));
-    return out;
-  };
-
   return {
     name: "builtin-audio",
     resolveId(id: string) {
@@ -152,7 +63,7 @@ function builtinAudioPlugin() {
     },
     load(id: string) {
       if (id !== resolvedId) return null;
-      return `export default ${JSON.stringify(scan())};`;
+      return `export default ${JSON.stringify(scanBuiltinAudio())};`;
     },
   };
 }

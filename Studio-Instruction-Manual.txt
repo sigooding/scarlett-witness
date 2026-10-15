@@ -613,12 +613,21 @@
                      locks the Continue button and choices while the intro plays.
    TITLE             the name shown in the HUD.
    BACKGROUND        an image browser (searchable dropdown over every built-in
-                     scene image in /img and /assets, plus all your uploads,
-                     plus gradient presets — hover any name for a full preview).
-                     Also accepts a path, "gradient:..." string, uploaded image
+                     scene image in /img and /assets, the film's own pictures
+                     when this field is already on one, every upload, plus
+                     gradient presets — hover any name for a full preview).
+                     The box carries its own "⇧ Upload an image..." row, and
+                     takes a dropped file as well, so a new plate can go from
+                     your desktop to this field without leaving it. Also accepts
+                     a path, "gradient:..." string, uploaded image
                      ("asset:<id>"), or "video:<url>" that overrides the image.
-                     All image fields across Studio now use this browser.
-   AMBIENT LOOP      none / rain / jazz / drone / tension (a synth atmosphere).
+                     All image fields across Studio use this browser.
+   AMBIENT LOOP      a synth atmosphere (none / rain / jazz / drone / tension)
+                     LAYERED WITH recorded loops — use the sound browser to add
+                     one (the film's own amb-hive, amb-city-traffic, loop-train-
+                     yamanote, tv-murmur … are all listed, with hover audition),
+                     or "⇧ Upload loop" for your own. Each loop shows ▶ to hear
+                     it and ✕ to remove it.
    PARTICLES         Auto (derived from the audio), none, rain, smoke, storm.
    PROSE             the narrator's opening paragraph (typewritten in-game).
    START SCENE       toggle — marks this node as the entry point.
@@ -641,11 +650,18 @@
                       to expand). Fields:
      SPEAKER          a character, or the reserved "Narrator (V.O.)".
      EXPRESSION       a free-text emotional cue, shown as a tag on the portrait.
-     REPLACEMENT BACKGROUND  an image for just this beat, with its own:
+     REPLACEMENT BACKGROUND  an image for just this beat (browse the image
+                              library or upload straight from the box), with:
                               TRANSITION  cut / fade / crossfade / fade-black /
                                            slide-left / slide-right / iris-in
                               SPEED       seconds for the transition (0.5 default)
      VOICE MP3 URL    per-line recorded audio; replaces TTS for that line only.
+     SOUND EFFECT ON THIS BEAT   an optional one-shot that plays as the beat
+                      starts, over the voice. Uses the SOUND BROWSER (Section
+                      6.11): every /film/sfx one-shot and ambience is listed
+                      with hover audition, plus your uploads. The ▶ Test button
+                      plays it at this beat's volume, and the LEVEL slider sets
+                      that volume (100% default).
      SILENT           no narration at all (text only).
      LINE             the spoken/written text.
      CONDITION RULE   a Gating that controls whether this beat plays at all.
@@ -788,9 +804,66 @@
    indicator tells you if uploads will survive a reload. Every image field in
    Studio now uses the IMAGE BROWSER — a searchable dropdown that lists every
    built-in image shipped in /img and /assets (all scenes, characters, covers,
-   animation sprites) PLUS all your uploads PLUS gradient presets. Hover any
-   name for a full-size rollover preview. Uploaded audio appears in the
-   music/narration/voice pickers; uploaded video in the cutscene picker.
+   animation sprites), Nobody's Witness's own pictures and depth layers, all
+   your uploads and the gradient presets. Hover any name for a full-size
+   rollover preview. Uploaded video appears in the cutscene picker.
+
+   THE SOUND BROWSER — FIELD BY FIELD
+   Two sound fields use a browser of their own: a beat's "🔊 Sound effect on
+   this beat" and a scene's "Ambient loop" (the recorded-loop adder under the
+   synth preset). It lists EVERY sound file in the project, not only the ones
+   already uploaded:
+     - the film's one-shots and ambience under /film/sfx (amb-hive, car-door-
+       heavy, crossing, loop-train-yamanote, …) and its alternate takes;
+     - the film's music cues under /film/audio, and its voice takes under
+       /film/voice;
+     - the other reels' audio (their scenes and sfx), public/uploads, anything
+       else dropped into public/, and every sound you have uploaded.
+   Rows are grouped under those headings and the film's own sounds come first,
+   because that is where a sound effect is almost always found. Type in the
+   filter box to narrow the list (Enter takes the first match), and point at a
+   name to HEAR it — one shared player, so auditions never stack. A list this
+   long opens as a window of 250 rows with "Show all (N)" for the rest, and the
+   sound the field is set to is always on screen.
+   "⇧ Upload a sound..." sits at the top of the open list and files the file in
+   the shared library (the beat's sound-effect fields file under "sound
+   effects"); you can also drop an audio file on the box. The ▶ Test button on
+   the box plays the sound at the exact volume the beat will use. A path or URL
+   the scan does not know is still accepted: type it in the filter box and
+   press Enter (the panel offers "Use it as it is").
+
+   THE IMAGE BROWSER, FIELD BY FIELD
+   One box serves every picture field: a scene's BACKGROUND, a beat's
+   REPLACEMENT BACKGROUND, the depth-map camera's DEPTH MAP / CLEAN PLATE /
+   CUT-OUTS, foreground layers and alpha masks, portraits, cursor art, the
+   credits montage and the travel map. It lists EVERY available image:
+     - every built-in file under /img and /assets;
+     - Nobody's Witness's own pictures under /film/img (811 of them), labelled
+       by scene and shot ("377 The Hive Remembered (s1)", "M4 Railway Rain
+       (montage)");
+     - the film's depth maps, clean plates and cut-outs under /film/depth,
+       labelled by the shot they belong to ("377 The Hive Remembered —
+       depth (s1)", "74 Twenty Metres Apart — cut-out 1 (s74)");
+     - the gradient presets;
+     - every upload in the library, whatever story it came from.
+   The film's pictures and depth layers are GROUPED, so a background list for
+   another story is not swamped by 800-odd plates. A field lists a group when
+   it asks for it (the three depth-camera fields ask for the depth layers),
+   when the field's current value is already in it (a film scene's background
+   IS a /film/img/… picture, so those lists carry the film's pictures), or when
+   you tick "Show every group too (N more …)". Nothing is unreachable.
+   Rows are grouped under headings — Your uploads first, then Gradient presets,
+   Built-in art & sprites, Film pictures (Nobody's Witness) and Film depth
+   maps, plates & cut-outs. Type in the filter box to narrow the list, press
+   Enter to take the first match, and roll the pointer over any row for a
+   full-size preview.
+   UPLOADING FROM THE BOX: "⇧ Upload an image..." sits at the top of the open
+   list. The file is saved to the shared library, filed in the folder the field
+   asks for (depth-map fields use "depth maps"), and picked for the field
+   straight away — the list stays open and confirms what it did. You can also
+   drag an image file onto the box, closed or open. Pickers that were never
+   handed a story id file their uploads under the case Studio has open, so an
+   image added from any field belongs to this story when you export it.
 
    The tab also carries three image tools:
 
@@ -1598,7 +1671,10 @@
 
    PER-BEAT REPLACEMENT BACKGROUND
    -------------------------------
-   Gives this one beat its own image (different from the scene background). It
+   Gives this one beat its own image (different from the scene background).
+   Pick it from the image browser below the path field — the same box as every
+   other picture field, so it lists all built-in art, every upload, and carries
+   its own ⇧ Upload row (and takes a dropped file). It
    transitions in and out when the beat starts/ends. Transitions available:
      cut / fade / crossfade / fade-black / slide-left / slide-right / iris-in.
    You control the transition speed too. A beat's replacement image has its own
