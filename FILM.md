@@ -6,6 +6,22 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+## Newsroom staff restored, Mara's lullaby, complete closing song (16 October 2026)
+
+The “empty” newsroom meant **without Jack**, not without staff: `new-empty-newsroom.png` is corrected from the original still to keep the editor and reporters at their desks and leave Jack's visitor chair empty.
+
+Imported `public/film/audio/Maras Lullaby.mp3` from main. It plays once, quietly, starting at the red bird clip/sketchbook reveal in scene 20, and fades out before “Silence. The bulb hums.” The two music cues split scene 20 into three linked nodes; the original still and bulb light remain, with no depth cutouts.
+
+The final song is **The Show**, 217.44 seconds (MP3 metadata). Its scene-100 and credits entries now both have `musicLoop: false`. The end credits have an explicit **218-second minimum hold**, replacing the shorter card-roll clock: this gives the song time to finish even when exporting only the credits. A whole-film run keeps the existing song from scene 100 without restarting it, so it may finish before that hold expires. The exporter already honours `autoAdvanceDelaySeconds`, as does the player. No export render was run here.
+
+## Newsroom entrance and song hand-off (16 October 2026)
+
+Scene 82 now opens on `s82/new-empty-newsroom.png`, an empty-office version of the newsroom, rather than showing Jack seated before he arrives. A new walking still, `new-jack-walks-in-4.png`, plays on “He reaches the glass office without slowing.” before the cassette scene. Both are AI-generated from the existing newsroom stills; neither uses the old plate's depth layers. The source shot sequence is in `src/film/story.json`.
+
+Baby Fool still starts once in 82 (`musicLoop: false`), continues unchanged through **82A, The notebook photocopied**, and fades out over 3 seconds on entry to 83, before the Kurose meeting. The hand-off overrides live in `studio-edits.json`; backend checks guard the two pictures and the music boundary. Mara's newly uploaded lullaby was not located at this point; see the later correction above.
+
+Checked: film backend (114 checks), film depth (all passed). Not watched in sequence.
+
 ## The new backstreet, no slow pan, one grade, no shake in scenes 1 and 2 (15 October 2026, the director)
 
 * **Scene 1's reshoot is in the film — thirteen of its twenty-three plates.** `public/film/img/s1_new/` (the 14 October

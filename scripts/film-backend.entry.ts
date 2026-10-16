@@ -297,15 +297,27 @@ const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?
 check(Math.min(...heldFor(badGuy)) >= 2.5, "no silent shot of the run is shorter than 2.5 s");
 const songSeconds = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).reduce((n, b) => n + (b.afterBeatDelaySeconds ?? 0), 0);
 check(songSeconds(badGuy) > 150 && songSeconds(badGuy) < 268.27, `Bad Guy's run is timed to fit its 268 s (${songSeconds(badGuy).toFixed(0)} s of delays plus the voices' own lengths)`);
-// "Baby Fool" (the director's song) plays once through the newsroom scene, from Jack's walk in, and scene 82A stops it
+// "Baby Fool" plays once through the newsroom and the notebook photocopying, then fades out before Kurose.
 const newsroom = FILM.scenes.find((s) => s.id === "nw_s82");
 check(newsroom?.musicMode === "track" && newsroom?.musicUrl === "/film/audio/baby-fool.mp3" && newsroom?.musicLoop === false, "Baby Fool starts on the newsroom scene's first node and plays once");
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/baby-fool.mp3").map((s) => s.id), ["nw_s82"], "and nothing else starts it");
-eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "none", "the notebook's photocopying (82A) fades it out");
+eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "inherit", "the notebook's photocopying (82A) continues the song without restarting");
+eq(FILM.scenes.find((s) => s.id === "nw_s83")?.musicMode, "none", "the Kurose meeting (83) fades the song out");
+eq(newsroom?.background, "/film/img/s82/new-empty-newsroom.png", "the newsroom opens without Jack already seated");
+check(newsroom?.dialogueBeats?.some((b) => b.background === "/film/img/s82/new-jack-walks-in-4.png" && b.text === "He reaches the glass office without slowing."), "Jack's extra determined walk plays before the cassette scene");
 check(existsSync(join(ROOT, "public/film/audio/baby-fool.mp3")), "the song is on disk");
 
 
 /* ---- 17. "What Made You, You" carries Mara's silent service (97A, 13 October 2026) ---- */
+console.log("Mara's lullaby and the complete closing song");
+const lullaby = FILM.scenes.find((s) => s.musicUrl === "/film/audio/Maras Lullaby.mp3");
+check(lullaby?.musicLoop === false && lullaby.dialogueBeats?.[0]?.background === "/film/img/s20/192-the-red-bird-clip.jpg", "the lullaby starts once at the red bird clip reveal");
+const bulbSilence = FILM.scenes.find((s) => s.dialogueBeats?.some((b) => b.text === "Silence. The bulb hums."));
+check(bulbSilence?.musicMode === "none", "the bulb-hum silence fades the lullaby out");
+const closingCredits = FILM.scenes.find((s) => s.id === "nw_credits");
+check((closingCredits?.autoAdvanceDelaySeconds ?? 0) >= 217.44, "the closing credits hold for at least the full 217.44-second song, including credits-only exports");
+check(closingCredits?.musicLoop === false && FILM.scenes.find((s) => s.id === "nw_s100")?.musicLoop === false, "the closing song never loops at either entry point");
+
 console.log("What Made You, You plays through Mara's service, one still at a time");
 const service = runOf("service");
 eq(service.length, 15, "the service's run is its fourteen stills, the last cut in two");

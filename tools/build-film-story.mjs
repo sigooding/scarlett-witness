@@ -146,13 +146,13 @@ scenes.push({
   dialogueBeats: PRO.map(([text, k]) => beat("KANEKO", { text, audioUrl: P(`/voice/prologue/${k}.mp3`) })),
 });
 
-const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-aint-easy-radio", babyfool: "baby-fool", service: "what-made-you-you" };
+const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-aint-easy-radio", babyfool: "baby-fool", service: "what-made-you-you", lullaby: "Maras Lullaby" };
 // The neighbour's radio through Vera's wall (65) plays the director's song: in quickly, as a radio starts, and under the score's level.
 // Since 11 October 2026 it is "It ain't easy" (public/film/audio/It ain't easy.mp3, the director's upload) baked as an AM radio in
 // it-aint-easy-radio.mp3 (mono, 280-3200 Hz, light compression, faint hiss, loudness-matched to the old radio song), a little quieter.
 // "Baby Fool" (the director's song, uploaded 12 October 2026) plays once through the newsroom scene (82), from Jack's walk in; the engine ducks it under the voices
 // "What Made You, You" (the director's song, uploaded 13 October 2026) plays through Mara's silent service (97A), timed to it by the "service" soundtrack
-const CUE_FIELDS = { radio: { musicFadeSeconds: 2, musicLevel: 0.48 }, babyfool: { musicFadeSeconds: 2, musicLevel: 0.75 }, service: { musicFadeSeconds: 2, musicLevel: 0.85 } };
+const CUE_FIELDS = { lullaby: { musicFadeSeconds: 2, musicLevel: 0.35 }, radio: { musicFadeSeconds: 2, musicLevel: 0.48 }, babyfool: { musicFadeSeconds: 2, musicLevel: 0.75 }, service: { musicFadeSeconds: 2, musicLevel: 0.85 } };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
   particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes",
