@@ -238,6 +238,9 @@ console.log("Jack's breath effects in the inn raid are few");
 const edits = JSON.parse(read("src/film/studio-edits.json"));
 const raid = edits.cutscenes.find((c: { id: string }) => c.id === "inn-raid");
 const jackBreaths = raid.shots.filter((shot: { sfx?: string }) => /^jack-(running|grunt|shaky-breath|sigh)/.test(shot.sfx ?? ""));
+check(raid.songRunsOn === true && FILM.scenes.find((s) => s.musicUrl === "/film/audio/hounds.mp3")?.musicLoop === false, "Hounds plays once and runs on after the raid (songRunsOn)");
+check(FILM.scenes.find((s) => s.id === "nw_s50")?.musicMode === undefined && FILM.scenes.find((s) => s.id === "nw_s51")?.musicMode === undefined, "scenes 50 and 51 let it play to its end");
+check(FILM.scenes.find((s) => s.id === "nw_s52")?.musicUrl === "/film/audio/dark-hills-blues.mp3", "Vera's apartment (52) takes over with Dark Hills Blues");
 check(jackBreaths.length <= 1, `the inn raid carries at most one breath or grunt effect on Jack (the director found too many; it has ${jackBreaths.length})`);
 
 /* ---- 13. the film opens on scenes 1 and 2, then the titles (this regressed twice: a stale Studio copy, then the export dialog) ---- */

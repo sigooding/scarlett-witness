@@ -7,6 +7,11 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
 
+
+## Hounds plays once and runs on past the raid (16 October 2026)
+
+The director: *"hounds plays only once, no loop, then continue playing through; it should finish anyway before Vera's apartment."* The inn raid cutscene no longer stretches its shots to the song: `songRunsOn: true` on the `inn-raid` entry in `src/film/studio-edits.json` → `cutscenes`. The 35 shots now play at their own pace (about 87 s), *Hounds* (106 s, `musicLoop: false`, as before) keeps playing under **50, Hand starts to shake** and **51, The model, corrected** and ends by itself; scene 50 no longer fades it. **52, Vera's apartment** starts *Dark Hills Blues* as before, so a fast reader who gets there first hears a crossfade rather than a cut. Builder flag in `tools/build-film-story.mjs`; backend checks.
+
 ## You Never Call at the inn, the lullaby louder, the rice goes cold (16 October 2026)
 
 The director's **You Never Call** (`public/film/audio/You Never Call (2).mp3`, 3:25, here `you-never-call.mp3`): *"needs to go somewhere, can go between 3 scenes max, you decide."* It takes the longest near‑wordless stretch the film had left: it starts on **35, The pink payphone** (level 0.5, `musicLoop: false`, 2 s in), runs under **36, Come back safe anyway** (ducked under the call) and **37, The keys are always in it**, and **38, Four black sedans** cuts it dead (`musicMode: "none"`, 0.4 s). *Hounds* follows on 39 as before, so the sedans sit in one scene of silence between the two songs. The run is shorter than the song; it is meant to be cut, not finished. `scenes` edits in `src/film/studio-edits.json`; backend checks.

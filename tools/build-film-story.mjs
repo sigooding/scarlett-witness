@@ -527,8 +527,10 @@ for (const seg of edits.cutscenes ?? []) {
   const chain = [], used = new Set();
   let prev = null, total = 0;
   // fit to the song: the recorded lines keep their length, the caption shots share the rest
+  // songRunsOn: the shots keep their own pace and the song is not fitted to them; it plays once and runs on under the scenes
+  // after the run until it ends by itself (or the next music cue takes over)
   let fit = 1;
-  if (seg.musicUrl && seg.seconds) {
+  if (seg.musicUrl && seg.seconds && !seg.songRunsOn) {
     const taken = new Set();
     let voiced = 0, silent = 0;
     for (const sh of seg.shots) {
@@ -570,7 +572,7 @@ for (const seg of edits.cutscenes ?? []) {
   chain.forEach((nd, k) => Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: k + 1 < chain.length ? chain[k + 1].id : next.id }));
   if (seg.musicUrl) {
     Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.85, musicFadeSeconds: seg.fadeIn ?? 1, musicLoop: false });
-    if (next.musicMode === undefined) Object.assign(next, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
+    if (next.musicMode === undefined && !seg.songRunsOn) Object.assign(next, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
   }
   const removed = new Set(block.map(s => s.id));
   scenes.splice(a, b - a + 1, ...chain);

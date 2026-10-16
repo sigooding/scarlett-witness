@@ -4126,7 +4126,7 @@
    "from": "nw_s39",
    "to": "nw_s49",
    "shotSeconds": 2.4,
-   "note": "11 October 2026, the director: the roadside raid should play as fast action. Scenes 39-49 as quick shots with a caption each, every recorded line and sound kept; scene 50 follows as usual. Plays to the director's song \"Hounds\" (public/film/audio/Hounds (3) (1).mp3, copied as hounds.mp3), 11 October 2026: the caption shots are fitted to the song.",
+   "note": "11 October 2026, the director: the roadside raid should play as fast action. Scenes 39-49 as quick shots with a caption each, every recorded line and sound kept; scene 50 follows as usual. Plays to the director's song \"Hounds\" (public/film/audio/Hounds (3) (1).mp3, copied as hounds.mp3), 11 October 2026: the caption shots are fitted to the song. 16 October 2026, the director: Hounds plays once, no loop, and runs on under scenes 50 and 51 until it finishes (before Vera's apartment, 52, where Dark Hills Blues takes over); the shots are no longer fitted to the song (songRunsOn).",
    "shots": [
     {
      "pic": "174-he-has-heard-the-gravel",
@@ -4322,7 +4322,8 @@
    "musicLevel": 0.85,
    "fadeIn": 1,
    "fadeOut": 3,
-   "slack": 1
+   "slack": 1,
+   "songRunsOn": true
   }
  ],
  "readPace": {
