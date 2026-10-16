@@ -150,6 +150,13 @@ const at = (id: string) => FILM.scenes.find((s) => s.id === id);
 check(at("nw_s4")?.musicUrl === "/film/audio/it-aint-easy-wall.mp3" && (at("nw_s4")?.musicLevel ?? 1) <= 0.5, "scene 4: the neighbour's radio plays quietly through the wall");
 check(at("nw_s4")?.musicLoop === false, "and plays once");
 check(at("nw_s5")?.musicMode === "none", "scene 5 ends it (the door has closed on the song)");
+check(at("nw_s35")?.musicUrl === "/film/audio/you-never-call.mp3" && at("nw_s35")?.musicLoop === false && (at("nw_s35")?.musicLevel ?? 1) <= 0.6, "scene 35: You Never Call starts once at the pink payphone, under the picture");
+check(!at("nw_s36")?.musicMode && !at("nw_s37")?.musicMode, "scenes 36 and 37 keep it running (the call, the keys in the car)");
+check(at("nw_s38")?.musicMode === "none" && (at("nw_s38")?.musicFadeSeconds ?? 9) <= 0.5, "the four black sedans cut it dead");
+const lullabyLevel = FILM.scenes.find((s) => s.musicUrl === "/film/audio/Maras Lullaby.mp3")?.musicLevel ?? 1;
+check(lullabyLevel >= 0.45 && lullabyLevel <= 0.6, `Mara's lullaby sits at ${lullabyLevel} (it was too quiet at 0.35)`);
+const riceBeat = FILM.scenes.filter((s) => s.id.startsWith("nw_s25")).flatMap((s) => s.dialogueBeats ?? []).find((b) => b.text?.startsWith("The rice goes cold"));
+check(riceBeat?.background === "/film/img/s25/the-rice-goes-cold.jpg" && existsSync(join(ROOT, "public/film/img/s25/the-rice-goes-cold.jpg")), "scene 25: Jack and Mara at \"The rice goes cold\" have their own picture");
 
 /* ---- 8. the Studio helps with what the film uses ---- */
 console.log("The Studio helps with what the film uses");

@@ -7602,7 +7602,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicUrl": "/film/audio/Maras Lullaby.mp3",
    "musicFadeSeconds": 2,
    "musicLoop": false,
-   "musicLevel": 0.35,
+   "musicLevel": 0.5,
    "dialogueBeats": [
     {
      "id": "nw_b498",
@@ -8970,7 +8970,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b599",
      "characterId": "nw_narrator",
      "text": "The rice goes cold in Mara's lap. They talk quietly, as if the building is listening. It is.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s25/the-rice-goes-cold.jpg",
+     "cinematic": {
+      "mode": "static",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b600",
@@ -11061,7 +11075,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicMode": "track",
+   "musicUrl": "/film/audio/you-never-call.mp3",
+   "musicLevel": 0.5,
+   "musicLoop": false,
+   "musicFadeSeconds": 2
   },
   {
    "id": "nw_s36",
@@ -11415,7 +11434,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hotspots": [],
    "noTypewriter": true,
    "autoNarrate": false,
-   "choices": []
+   "choices": [],
+   "musicMode": "none",
+   "musicFadeSeconds": 0.4
   },
   {
    "id": "nw_cut_inn-raid_01",
@@ -24556,5 +24577,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "92f21475ac7b"
+ "builtinRevision": "c5a0086596bb"
 } as unknown as Story;
