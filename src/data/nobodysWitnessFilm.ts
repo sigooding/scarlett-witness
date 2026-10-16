@@ -12982,7 +12982,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s50",
    "title": "50 — Hand starts to shake",
    "background": "/film/img/s50/216-hand-starts-to-shake.jpg",
-   "prose": "INT. PICKUP TRUCK - MOVING - DAWN",
+   "prose": "INT. PICKUP TRUCK - MOVING - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-pickup-truck.mp3",
    "particles": "motes",
    "hideHud": true,
@@ -12992,7 +12992,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b853",
      "characterId": "nw_narrator",
-     "text": "Grey light. Empty highway. Rain through the shattered windscreen.",
+     "text": "Night. Empty highway. Rain through the shattered windscreen.",
      "silent": true
     },
     {
@@ -13082,7 +13082,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s51",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "background": "/film/img/s50/the-pickup-drives-on.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 21,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     }
    ],
    "hotspots": [],
@@ -16862,7 +16876,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1153",
      "characterId": "nw_mara",
      "text": "Everyone's awake.",
-     "audioUrl": "/film/voice/s71/240-mara-weakly-everyone-s-awake.mp3"
+     "audioUrl": "/film/voice/s71/240-mara-weakly-everyone-s-awake.mp3",
+     "background": "/film/img/s71/kaneko-comes-to-help.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 19,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1154",
@@ -24575,5 +24603,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "03887e790647"
+ "builtinRevision": "950f43b93fdd"
 } as unknown as Story;

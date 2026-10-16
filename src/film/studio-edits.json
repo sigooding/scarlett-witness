@@ -4353,6 +4353,16 @@
    "scene": "nw_s25",
    "find": "The rice goes cold",
    "file": "/img/s25/the-rice-goes-cold.jpg"
+  },
+  {
+   "scene": "nw_s71",
+   "find": "Everyone's awake.",
+   "file": "/img/s71/kaneko-comes-to-help.jpg"
+  },
+  {
+   "scene": "nw_s50",
+   "find": "He drives on. The wipers beat.",
+   "file": "/img/s50/the-pickup-drives-on.jpg"
   }
  ]
 }
