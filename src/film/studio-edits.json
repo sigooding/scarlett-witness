@@ -3638,9 +3638,7 @@
     },
     "128-by-touch": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.1,
-        "shakeDuration": 0.7
+        "mode": "zoom-hold"
       }
     },
     "130-the-roof": {
@@ -3669,9 +3667,7 @@
     },
     "131-she-jumps": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.12,
-        "shakeDuration": 0.7,
+        "mode": "zoom-hold",
         "lights": [
           {
             "x": 50,
@@ -3687,9 +3683,7 @@
     },
     "133-inches-apart": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.35,
-        "shakeDuration": 0.2,
+        "mode": "zoom-hold",
         "lights": [
           {
             "x": 50,
@@ -3738,9 +3732,7 @@
     },
     "378-the-barbers-shop": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.12,
-        "shakeDuration": 0.7,
+        "mode": "zoom-hold",
         "lights": [
           {
             "x": 23,
@@ -3756,9 +3748,7 @@
     },
     "379-the-laundry": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.15,
-        "shakeDuration": 0.7,
+        "mode": "zoom-hold",
         "lights": [
           {
             "x": 30,
@@ -4104,30 +4094,22 @@
     },
     "381-the-plank": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.2,
-        "shakeDuration": 0.7
+        "mode": "zoom-hold"
       }
     },
     "382-the-pipe-gallery": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.2,
-        "shakeDuration": 0.7
+        "mode": "zoom-hold"
       }
     },
     "132-the-gap": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.2,
-        "shakeDuration": 0.7
+        "mode": "zoom-hold"
       }
     },
     "129-she-lets-him": {
       "cinematic": {
-        "mode": "shake",
-        "shakeAmount": 0.2,
-        "shakeDuration": 0.7
+        "mode": "zoom-hold"
       }
     }
   },

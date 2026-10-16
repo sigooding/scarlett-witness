@@ -21526,15 +21526,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Vera climbs the black stairwell by touch",
    "background": "/film/img/s89/128-by-touch.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.1,
-    "shakeDuration": 0.7,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -21567,15 +21565,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: She finds Jack's hand and pulls him up a",
    "background": "/film/img/s89/129-she-lets-him.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "50% 45%",
     "zoomDuration": 17,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.2,
-    "shakeDuration": 0.7,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -21702,15 +21698,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Room after room, the Hive opens a way th",
    "background": "/film/img/s90/131-she-jumps.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "60% 42%",
     "zoomDuration": 19,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.12,
-    "shakeDuration": 0.7,
     "lights": [
      {
       "x": 50,
@@ -21752,15 +21746,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: The barber turns his chair to the wall.",
    "background": "/film/img/s90/378-the-barbers-shop.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.12,
-    "shakeDuration": 0.7,
     "lights": [
      {
       "x": 23,
@@ -21804,15 +21796,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Wet sheets part and close behind them.",
    "background": "/film/img/s90/379-the-laundry.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "42% 38%",
     "zoomDuration": 21,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.15,
-    "shakeDuration": 0.7,
     "lights": [
      {
       "x": 30,
@@ -21919,15 +21909,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: A plank across the gap, hauled in after ",
    "background": "/film/img/s90/381-the-plank.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "65% 50%",
     "zoomDuration": 19,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.2,
-    "shakeDuration": 0.7,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -21960,15 +21948,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: The pipes ring softly: one rap means cle",
    "background": "/film/img/s90/382-the-pipe-gallery.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.2,
-    "shakeDuration": 0.7,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -22001,15 +21987,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: Nobody speaks. Every door closes behind ",
    "background": "/film/img/s90/132-the-gap.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.2,
-    "shakeDuration": 0.7,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -22081,15 +22065,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "title": "The raid on the Hive: A train roars over them. Her hand is in ",
    "background": "/film/img/s91/133-inches-apart.jpg",
    "cinematic": {
-    "mode": "shake",
+    "mode": "zoom-hold",
     "focalPoint": "60% 42%",
     "zoomDuration": 16,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "shakeAmount": 0.35,
-    "shakeDuration": 0.2,
     "lights": [
      {
       "x": 50,
@@ -24531,5 +24513,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "7166759fe775"
+ "builtinRevision": "d1b1a9b52787"
 } as unknown as Story;
