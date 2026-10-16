@@ -152,7 +152,7 @@ const MUSIC = { song: "bad-guy", midnight: "midnight-in-the-rain", radio: "it-ai
 // it-aint-easy-radio.mp3 (mono, 280-3200 Hz, light compression, faint hiss, loudness-matched to the old radio song), a little quieter.
 // "Baby Fool" (the director's song, uploaded 12 October 2026) plays once through the newsroom scene (82), from Jack's walk in; the engine ducks it under the voices
 // "What Made You, You" (the director's song, uploaded 13 October 2026) plays through Mara's silent service (97A), timed to it by the "service" soundtrack
-const CUE_FIELDS = { lullaby: { musicFadeSeconds: 2, musicLevel: 0.35 }, radio: { musicFadeSeconds: 2, musicLevel: 0.48 }, babyfool: { musicFadeSeconds: 2, musicLevel: 0.75 }, service: { musicFadeSeconds: 2, musicLevel: 0.85 } };
+const CUE_FIELDS = { lullaby: { musicFadeSeconds: 2, musicLevel: 0.5 }, radio: { musicFadeSeconds: 2, musicLevel: 0.48 }, babyfool: { musicFadeSeconds: 2, musicLevel: 0.75 }, service: { musicFadeSeconds: 2, musicLevel: 0.85 } };
 const lookOf = sc => ({
   ambientAudio: ambientOf(sc),
   particles: indoors(sc) ? "motes" : sc.exterior && sc.rain > 0.4 ? "rain" : sc.rain > 0 ? "drizzle" : "motes",
@@ -389,6 +389,13 @@ if (existsSync(editsFile)) {
     if (beat.sfxUrl) console.warn(`studio-edits: ${e.scene} "${e.find}" already had ${beat.sfxUrl}`);
     Object.assign(beat, { sfxUrl: P(`/sfx/${e.file}.mp3`), sfxVolume: e.volume ?? 0.7 });
   }
+  // pictures: [{ scene, find, file }] — a picture made here (not in PlayFrame) on the beat whose text contains `find`
+  for (const e of file.pictures ?? []) {
+    const beat = scenes.filter(x => x.id === e.scene || x.id.startsWith(`${e.scene}_`)).flatMap(x => x.dialogueBeats).find(b => b.text?.includes(e.find));
+    if (!beat) { console.warn(`studio-edits: no beat in ${e.scene} containing "${e.find}"`); continue; }
+    if (!existsSync(resolve(root, "public", P(e.file).slice(1)))) console.warn(`studio-edits: picture ${e.file} is not in public/film`);
+    Object.assign(beat, bgFields(P(e.file)));
+  }
   if (file.startSceneId) startSceneId = file.startSceneId;
   // dialogueBox: the story-wide look of the reading panel (Studio → In-game theme: fonts, size, HUD colour scheme)
   if (file.dialogueBox) dialogueBox = file.dialogueBox;
@@ -520,8 +527,10 @@ for (const seg of edits.cutscenes ?? []) {
   const chain = [], used = new Set();
   let prev = null, total = 0;
   // fit to the song: the recorded lines keep their length, the caption shots share the rest
+  // songRunsOn: the shots keep their own pace and the song is not fitted to them; it plays once and runs on under the scenes
+  // after the run until it ends by itself (or the next music cue takes over)
   let fit = 1;
-  if (seg.musicUrl && seg.seconds) {
+  if (seg.musicUrl && seg.seconds && !seg.songRunsOn) {
     const taken = new Set();
     let voiced = 0, silent = 0;
     for (const sh of seg.shots) {
@@ -563,7 +572,7 @@ for (const seg of edits.cutscenes ?? []) {
   chain.forEach((nd, k) => Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: k + 1 < chain.length ? chain[k + 1].id : next.id }));
   if (seg.musicUrl) {
     Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.85, musicFadeSeconds: seg.fadeIn ?? 1, musicLoop: false });
-    if (next.musicMode === undefined) Object.assign(next, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
+    if (next.musicMode === undefined && !seg.songRunsOn) Object.assign(next, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
   }
   const removed = new Set(block.map(s => s.id));
   scenes.splice(a, b - a + 1, ...chain);

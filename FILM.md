@@ -6,6 +6,27 @@ The catalogue (`src/data/stories.ts`) holds one story, the film. It is generated
 
 One scene node per film scene; every shot is a dialogue beat's background, so the dialogue player, Studio flowchart and saves work unchanged. The prologue (Kaneko over the Hive) is the first node and the credits (over `nobodys-witness.mp3`) the ending. `src/film/story.json` is the same data the standalone visual novel on `main` is built from. The other stories are untouched in `src/data/`; import them in `stories.ts` to bring one back.
 
+
+
+
+## The plank, redrawn (16 October 2026)
+
+The director: *"A plank across the gap, hauled in after — change the image, should have a Japanese man holding the plank while Jack waits for Vera to pass."* `public/film/img/s90/381-the-plank.jpg` is remade from the old picture (same framing, rain and balconies): a Japanese Hive resident in the work vest braces the near end, Vera crosses in the blue coat, and Jack waits on the far balcony with a hand out for hers. The file keeps its number and name, so the raid run, its caption and `pictureLook` are untouched. **Note for a PlayFrame re-import:** shot 381 there still has the old picture; the build copies `public/img` over the top when the visual novel checkout is next door, which would bring the old one back.
+
+## Hounds plays once and runs on past the raid (16 October 2026)
+
+The director: *"hounds plays only once, no loop, then continue playing through; it should finish anyway before Vera's apartment."* The inn raid cutscene no longer stretches its shots to the song: `songRunsOn: true` on the `inn-raid` entry in `src/film/studio-edits.json` → `cutscenes`. The 35 shots now play at their own pace (about 87 s), *Hounds* (106 s, `musicLoop: false`, as before) keeps playing under **50, Hand starts to shake** and **51, The model, corrected** and ends by itself; scene 50 no longer fades it. **52, Vera's apartment** starts *Dark Hills Blues* as before, so a fast reader who gets there first hears a crossfade rather than a cut. Builder flag in `tools/build-film-story.mjs`; backend checks.
+
+## You Never Call at the inn, the lullaby louder, the rice goes cold (16 October 2026)
+
+The director's **You Never Call** (`public/film/audio/You Never Call (2).mp3`, 3:25, here `you-never-call.mp3`): *"needs to go somewhere, can go between 3 scenes max, you decide."* It takes the longest near‑wordless stretch the film had left: it starts on **35, The pink payphone** (level 0.5, `musicLoop: false`, 2 s in), runs under **36, Come back safe anyway** (ducked under the call) and **37, The keys are always in it**, and **38, Four black sedans** cuts it dead (`musicMode: "none"`, 0.4 s). *Hounds* follows on 39 as before, so the sedans sit in one scene of silence between the two songs. The run is shorter than the song; it is meant to be cut, not finished. `scenes` edits in `src/film/studio-edits.json`; backend checks.
+
+**Mara's lullaby** (scene 20) was a tad too quiet: `musicLevel` 0.35 → 0.5 (`CUE_FIELDS.lullaby` in `tools/build-film-story.mjs`).
+
+**Scene 25, The number 114:** the beat *"The rice goes cold in Mara's lap. They talk quietly…"* has a picture of its own now, Jack and Mara under the bulb, made here from shots 344 and 444 (`public/film/img/s25/the-rice-goes-cold.jpg`, not a PlayFrame shot, so no number). New Studio edit `pictures: [{ scene, find, file }]` puts a picture made in this repo on the beat whose text contains `find`, the same way `sfx` places a sound; a rebuild keeps it.
+
+Also fixed: a Studio **Play from here** (the in-place playtest) primed the story's *start* scene's track inside the click, so *Glimmering Haze* started on every mid-film playtest and faded out when the entered scene found the stray primer. `play()` in `src/App.tsx` now primes the entered scene's music.
+
 ## Newsroom staff restored, Mara's lullaby, complete closing song (16 October 2026)
 
 The “empty” newsroom meant **without Jack**, not without staff: `new-empty-newsroom.png` is corrected from the original still to keep the editor and reporters at their desks and leave Jack's visitor chair empty.
