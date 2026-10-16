@@ -467,12 +467,19 @@ export default function App() {
     // An episodic season opens on its season screen, not on a scene, so there
     // is no opening track to prime — the episode's music starts after the
     // title card, well inside a later user gesture.
-    const startScene = isEpisodic(story) ? undefined : story.scenes.find((s) => s.id === story.startSceneId);
+    //
+    // Prime the track of the scene the player is actually ENTERING. A Studio
+    // "Play from here" (or a fallback in-place playtest) opens mid-film; priming
+    // the story's start scene there made the opening song start on every
+    // playtest and loop until the entered scene faded the unowned primer out.
+    const entrySceneId = playFromSceneId ?? story.startSceneId;
+    const startScene = isEpisodic(story) ? undefined : story.scenes.find((s) => s.id === entrySceneId);
     const openingTrack = startScene?.musicUrl ?? startScene?.sceneAudioUrl;
     if (startScene?.musicMode !== "none" && openingTrack && !/^(asset:|data:|video:)/.test(openingTrack)) {
       try {
         const el = new Audio(assetUrl(openingTrack));
-        el.loop = true;
+        // a song (musicLoop: false) plays once even while primed
+        el.loop = startScene?.musicLoop !== false;
         el.volume = audio.volumes.master * audio.volumes.music;
         el.play().catch(() => {
           /* the player will adopt the element and retry on its own */
