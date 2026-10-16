@@ -120,13 +120,16 @@
       "musicMode": "track",
       "musicUrl": "/film/audio/the-show.mp3",
       "musicLevel": 0.3,
-      "musicFadeSeconds": 5
+      "musicFadeSeconds": 5,
+      "musicLoop": false
     },
     "nw_credits": {
       "musicMode": "track",
       "musicUrl": "/film/audio/the-show.mp3",
       "musicLevel": 1,
-      "musicFadeSeconds": 12
+      "musicFadeSeconds": 12,
+      "musicLoop": false,
+      "autoAdvanceDelaySeconds": 218
     },
     "nw_s48": {
       "cinematic": {
@@ -179,7 +182,16 @@
       "musicUrl": null,
       "musicFadeSeconds": 4
     },
-    "nw_s98": {}
+    "nw_s98": {},
+    "nw_s82a": {
+      "musicMode": "inherit",
+      "musicUrl": null,
+      "musicLoop": false
+    },
+    "nw_s83": {
+      "musicMode": "none",
+      "musicFadeSeconds": 3
+    }
   },
   "startSceneId": "nw_s1",
   "beats": {
@@ -2448,24 +2460,7 @@
     },
     "346-the-bulb-hums": {
       "cinematic": {
-        "mode": "pan",
-        "panDistance": 2,
-        "zoomDuration": 18,
-        "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
-        "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg",
-        "depthCutouts": [
-          {
-            "image": "/film/depth/s20/346-the-bulb-hums/cutout-1.png",
-            "depth": 0.784
-          },
-          {
-            "image": "/film/depth/s20/346-the-bulb-hums/cutout-2.png",
-            "depth": 0.51
-          }
-        ],
-        "depthMotion": "drift",
-        "depthAmount": 0.54,
-        "depthSeconds": 16,
+        "mode": "static",
         "lights": [
           {
             "x": 50,
