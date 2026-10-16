@@ -8,6 +8,11 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+
+## The plank, redrawn (16 October 2026)
+
+The director: *"A plank across the gap, hauled in after — change the image, should have a Japanese man holding the plank while Jack waits for Vera to pass."* `public/film/img/s90/381-the-plank.jpg` is remade from the old picture (same framing, rain and balconies): a Japanese Hive resident in the work vest braces the near end, Vera crosses in the blue coat, and Jack waits on the far balcony with a hand out for hers. The file keeps its number and name, so the raid run, its caption and `pictureLook` are untouched. **Note for a PlayFrame re-import:** shot 381 there still has the old picture; the build copies `public/img` over the top when the visual novel checkout is next door, which would bring the old one back.
+
 ## Hounds plays once and runs on past the raid (16 October 2026)
 
 The director: *"hounds plays only once, no loop, then continue playing through; it should finish anyway before Vera's apartment."* The inn raid cutscene no longer stretches its shots to the song: `songRunsOn: true` on the `inn-raid` entry in `src/film/studio-edits.json` → `cutscenes`. The 35 shots now play at their own pace (about 87 s), *Hounds* (106 s, `musicLoop: false`, as before) keeps playing under **50, Hand starts to shake** and **51, The model, corrected** and ends by itself; scene 50 no longer fades it. **52, Vera's apartment** starts *Dark Hills Blues* as before, so a fast reader who gets there first hears a crossfade rather than a cut. Builder flag in `tools/build-film-story.mjs`; backend checks.
