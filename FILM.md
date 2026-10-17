@@ -9,6 +9,34 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Scene 1 plays the whole reshoot (17 October 2026)
+
+The director: *"check scene 1 and make sure perfect"*. Since 15 October the film had played thirteen of the `s1_new` reshoot's
+plates beside ten from the old set, and the two sets disagree: the old 328–333, 383 and 14–16 have another lane, its sides
+mirrored (vending machine and barbershop swapped when looking out to the road), and a different Mara (curly hair, leather
+jacket). **The other ten `s1_new` plates are now in `public/film/img/s1/` too** (328, 329, 330, 331, 332, 333, 383, 14, 15,
+16), so all 23 pictures are one set: the same lane both ways (barbershop left, vending machine right looking in), the same
+Mara (denim jacket, the red clip, the gold watch, the brown bag) and the same Sakai. The old plates are in git history.
+
+* **Lights and flares moved onto the new pictures** (`pictureLook`): 02's vending-machine glow and lit window, 17's bar
+  glow and vending machine (both were still placed on the old plates after the 15 October swap), 329's bar sign and street
+  lamp, 383's vending machine and lamp, and the sedan's headlight flares in 332 and 333.
+* **383's depth move is off**: its map was made from the old plate (rule 1). 329 and 332 had no depth entry. Their old maps
+  stay in `public/film/depth/s1/` and want remaking from the new plates with `tools/make-depth-layers.py`, like 01 and 02.
+* **Shot 14's lip-sync clip is off** (`src/film/clips.json`): it was made from the old still and showed the other Mara; the
+  line plays over the new still until a clip is made from it. The video files stay in `public/film/video/`.
+* **Built from this repo's own media** (`FILM_SRC=/nonexistent node tools/build-film-story.mjs`): a build with the visual
+  novel's checkout next door copies its `public/img` over `public/film/img` and would put the old scene 1 plates back.
+
+**Still to fix, needs image credits (the ElevenLabs account has 238; a referenced frame costs 433):**
+* **04-mara-phone**: the screenplay says "Her phone lights up: VERA. She watches it ring." and the picture has her looking
+  away from the phone. Brief: the `s1_new/style-sheets/mara-voss.jpg` sheet as reference (it is on the ElevenLabs flow
+  `X7nqmG290GG6ek1bFpZb`, node `YlSPT8etwsDBPO0spyC5`); medium close-up, she has stopped and looks *down* at the phone in her
+  right hand, the screen reading VERA and lighting her face from below; barber's pole soft at right, rain, practical light.
+* **328-the-scrap**: "just listen." is underlined once, the screenplay says twice (small).
+* **14**: a new lip-sync clip from the new still.
+
+
 ## The plank, redrawn (16 October 2026)
 
 The director: *"A plank across the gap, hauled in after — change the image, should have a Japanese man holding the plank while Jack waits for Vera to pass."* `public/film/img/s90/381-the-plank.jpg` is remade from the old picture (same framing, rain and balconies): a Japanese Hive resident in the work vest braces the near end, Vera crosses in the blue coat, and Jack waits on the far balcony with a hand out for hers. The file keeps its number and name, so the raid run, its caption and `pictureLook` are untouched. **Note for a PlayFrame re-import:** shot 381 there still has the old picture; the build copies `public/img` over the top when the visual novel checkout is next door, which would bring the old one back.

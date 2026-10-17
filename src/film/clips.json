@@ -1,6 +1,4 @@
 {
-  "note": "Talking shots: a lip-synced clip stands in for the still while the line is spoken (the clip carries no sound), then the still returns. Keyed by the take's path under public/film/, value is the clip under public/film/. Kept here so tools/build-film-story.mjs can build without the visual novel's checkout next door; when that checkout is present its src/story/clips.ts is merged over this file and wins.",
-  "clips": {
-    "/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3": "/video/14-lipsync.mp4"
-  }
+  "note": "Talking shots: a lip-synced clip stands in for the still while the line is spoken (the clip carries no sound), then the still returns. Keyed by the take's path under public/film/, value is the clip under public/film/. Kept here so tools/build-film-story.mjs can build without the visual novel's checkout next door; when that checkout is present its src/story/clips.ts is merged over this file and wins. 17 October 2026: scene 1 now plays the s1_new reshoot all through, and 14-lipsync was made from the old 14-she-kneels still (a different Mara), so it is off until a clip is made from the new still; the video files stay in public/film/video/.",
+  "clips": {}
 }
