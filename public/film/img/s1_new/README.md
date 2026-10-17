@@ -8,7 +8,8 @@ scene's 23 shots were all generated again from nothing, using a new set of style
 - **Same filenames as `s1/`.** You can compare or swap the sets one for one.
 - **`377-the-hive-remembered.jpg` is not here.** It sits in `s1/` but is the prologue/credits backdrop, not an
   alley shot.
-- **House format.** Every shot is 1920×1080 sRGB JPEG at quality 92, the same as `s1/`.
+- **House format.** Every shot is 1920×1080 sRGB JPEG at quality 92, the same as `s1/`. Since 17 October 2026 that is
+  the smallest size, not a target: retakes go in with `tools/install-film-picture.mjs`, which never downscales.
 
 ## Shots
 

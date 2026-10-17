@@ -28,13 +28,16 @@ Mara (denim jacket, the red clip, the gold watch, the brown bag) and the same Sa
 * **Built from this repo's own media** (`FILM_SRC=/nonexistent node tools/build-film-story.mjs`): a build with the visual
   novel's checkout next door copies its `public/img` over `public/film/img` and would put the old scene 1 plates back.
 
+**Installing a retake:** `FFMPEG=... node tools/install-film-picture.mjs <source> public/film/img/s1/<name>.jpg`
+(crops to 16:9, never downscales, archives the old picture; CLAUDE.md, "Pictures are never downscaled").
+
 **Still to fix, needs image credits (the ElevenLabs account has 238; a referenced frame costs 433):**
 * **04-mara-phone**: the screenplay says "Her phone lights up: VERA. She watches it ring." and the picture has her looking
   away from the phone. Brief: the `s1_new/style-sheets/mara-voss.jpg` sheet as reference (it is on the ElevenLabs flow
   `X7nqmG290GG6ek1bFpZb`, node `YlSPT8etwsDBPO0spyC5`); medium close-up, she has stopped and looks *down* at the phone in her
   right hand, the screen reading VERA and lighting her face from below; barber's pole soft at right, rain, practical light.
 * ~~**328-the-scrap**~~ done 17 October: the director's retake (`s1_retakes/`, "just listen." underlined twice) is
-  installed at 1920×1080; the previous take is `archive/s1/328-the-scrap--v1.jpg`.
+  installed at 1920×1080 (it came at 1020×572, so it was enlarged); the previous take is `archive/s1/328-the-scrap--v1.jpg`.
 * **14**: a new lip-sync clip from the new still.
 
 

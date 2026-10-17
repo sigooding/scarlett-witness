@@ -2,6 +2,18 @@
 
 `FILM.md` explains how the Nobody's Witness film is built from PlayFrame's material; read it before changing the film.
 
+## Pictures are never downscaled
+
+The director's rule (17 October 2026): **never make a film picture smaller than it came.** Put every new picture or
+retake into `public/film/img/` with `FFMPEG=... node tools/install-film-picture.mjs <source> public/film/img/<scene>/<name>.jpg`.
+It only crops to an exact 16:9 and, below 1920×1080, enlarges to 1920×1080; a bigger picture keeps its full size (a
+16:9 JPEG is copied byte for byte), and the picture it replaces is archived first as
+`public/film/img/archive/<scene>/<name>--v<N>.jpg`. 1920×1080 is the smallest a picture may be, not a size to shrink to.
+Do not run resizing or optimising tools over `public/film/img/`. The depth camera only needs a map, plate and cut-outs to
+share the picture's aspect, so a larger picture works with it. (The animatic export still renders at 1080p, and the
+Hangar/Rapture reels' `tools/build-playframe-reel.mjs` writes its own smaller copies under `public/reels/`; neither touches
+the film's pictures.)
+
 ## Depth maps (the depth-map camera)
 
 Read `docs/depth-camera.md` before adding or changing any depth map, plate or cut-out. Three rules learned the hard way on 10 October 2026:
