@@ -45,7 +45,7 @@ scene's 23 shots were all generated again from nothing, using a new set of style
 
 | Sheet | What it locks down |
 |-------|--------------------|
-| `mara-voss.jpg` | Mara's face, wet hair, red enamel bird clip (left temple), denim jacket, grey tee, black jeans, white sneakers, gold watch (left wrist), brown leather Boston bag on a long strap (left shoulder) |
+| `mara-voss.jpg` | **v2, 17 October 2026: the face of the Hive scenes** (golden-blonde hair, light-blue eyes, soft oval face), from the director's references in `refs_v2/` (`mara-front.jpg`, `mara-face.jpg`, `mara-face-close.jpg`); attach those with every Mara shot. Wet hair, red enamel bird clip (left temple), denim jacket, grey tee, black jeans, white sneakers, gold watch on a thin brown strap (left wrist), brown leather Boston bag on a long strap (left shoulder). `refs/mara-*` and the first sheet (`archive/s1_new/style-sheets/mara-voss--v1.jpg`) are the earlier, darker-haired face |
 | `old-man-sakai.jpg` | Mr. Sakai's face, grey tweed flat cap, cheap putty-beige vinyl raincoat, white shirt and grey cardigan, the hand pressed to his side |
 | `masked-men-and-sedan.jpg` | Exactly two men: the earpiece leader (black suit, open overcoat, suppressed pistol) and the second man. Also the one black late-1990s executive saloon |
 | `location-kanda-backstreet.jpg` | Master plates A (from the road) and B (toward the road), a plan of the lane with every story position, the geography rules and the look/palette |
