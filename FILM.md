@@ -32,12 +32,12 @@ Mara (denim jacket, the red clip, the gold watch, the brown bag) and the same Sa
 (crops to 16:9, never downscales, archives the old picture; CLAUDE.md, "Pictures are never downscaled").
 
 **Still to fix, needs image credits (the ElevenLabs account has 238; a referenced frame costs 433):**
-* **04-mara-phone**: the screenplay says "Her phone lights up: VERA. She watches it ring." and the picture has her looking
-  away from the phone. Brief: the `s1_new/style-sheets/mara-voss.jpg` sheet as reference (it is on the ElevenLabs flow
-  `X7nqmG290GG6ek1bFpZb`, node `YlSPT8etwsDBPO0spyC5`); medium close-up, she has stopped and looks *down* at the phone in her
-  right hand, the screen reading VERA and lighting her face from below; barber's pole soft at right, rain, practical light.
-* ~~**328-the-scrap**~~ done 17 October: the director's retake (`s1_retakes/`, "just listen." underlined twice) is
-  installed at 1920×1080 (it came at 1020×572, so it was enlarged); the previous take is `archive/s1/328-the-scrap--v1.jpg`.
+* ~~**04-mara-phone**~~ done 17 October: the director's retake (1536×1024, cropped to 16:9 and enlarged) has her
+  eyes down and the call screen reading VERA. Her gaze reads down rather than squarely on the screen, and the phone's
+  glow does not light her face from below. Previous take `archive/s1/04-mara-phone--v4.jpg`.
+* ~~**328-the-scrap**~~ done 17 October: the director's second, larger retake (1672×941), "just listen." underlined
+  twice and the watch on its thin brown strap as the props sheet has it (the first retake, 1020×572, had a gold
+  bracelet; it is `archive/s1/328-the-scrap--v2.jpg`, the take before it `--v1`). The hands read a little older than 24.
 * **14**: a new lip-sync clip from the new still.
 
 
