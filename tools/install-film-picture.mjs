@@ -45,6 +45,9 @@ const s = size(src);
 // The exact 16:9 crop that keeps the most pixels.
 let cw = s.w, ch = Math.round((s.w * 9) / 16);
 if (ch > s.h) { ch = s.h; cw = Math.round((s.h * 16) / 9); }
+// Keep both sides even: ffmpeg's JPEG encoder (4:2:0) drops an odd last column/row, so a 2731-wide crop came out
+// 2730 wide and failed the never-smaller check below (14-she-kneels retake, 17 October 2026).
+cw -= cw % 2; ch -= ch % 2;
 const enlarge = cw < HOUSE_W;
 const out = enlarge ? { w: HOUSE_W, h: HOUSE_H } : { w: cw, h: ch };
 if (out.w * out.h < cw * ch) throw new Error(`refusing to shrink ${cw}×${ch} to ${out.w}×${out.h}`);
