@@ -1312,8 +1312,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lights": [
        {
-        "x": 31,
-        "y": 30,
+        "x": 59,
+        "y": 47,
         "color": "#e3f1ff",
         "size": 22,
         "intensity": 0.35,
@@ -1321,8 +1321,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.12
        },
        {
-        "x": 96,
-        "y": 19,
+        "x": 44,
+        "y": 9,
         "color": "#ffcf8a",
         "size": 6,
         "intensity": 0.35,
@@ -1440,8 +1440,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lights": [
        {
-        "x": 63,
-        "y": 42,
+        "x": 69,
+        "y": 28,
         "color": "#ffb347",
         "size": 10,
         "intensity": 0.45,
@@ -1449,8 +1449,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.3
        },
        {
-        "x": 59,
-        "y": 24,
+        "x": 69,
+        "y": 9,
         "color": "#ffcf8a",
         "size": 6,
         "intensity": 0.35,
@@ -1512,8 +1512,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lights": [
        {
-        "x": 80,
-        "y": 47,
+        "x": 22,
+        "y": 48,
         "color": "#e3f1ff",
         "size": 14,
         "intensity": 0.35,
@@ -1521,8 +1521,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.12
        },
        {
-        "x": 55,
-        "y": 27,
+        "x": 40,
+        "y": 16,
         "color": "#ffcf8a",
         "size": 6,
         "intensity": 0.35,
@@ -1530,10 +1530,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.1
        }
       ],
-      "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
-      "depthMotion": "push",
-      "depthAmount": 0.35,
-      "depthSeconds": 18,
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1657,8 +1653,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lensFlare": {
        "preset": "anamorphic-blue",
-       "x": 61,
-       "y": 52,
+       "x": 40,
+       "y": 48,
        "intensity": 0.5,
        "streakIntensity": 0.7,
        "starburstIntensity": 0.25,
@@ -1703,8 +1699,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lensFlare": {
        "preset": "anamorphic-blue",
-       "x": 63,
-       "y": 51,
+       "x": 47,
+       "y": 41,
        "intensity": 0.4,
        "streakIntensity": 0.6,
        "starburstIntensity": 0.2,
@@ -1843,21 +1839,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b40",
      "characterId": "nw_mara",
      "text": "It's okay — I'll get someone — Ambulance. I'll call. Ambulance.",
-     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3",
-     "background": "video:/film/video/14-lipsync.mp4",
-     "cinematic": {
-      "mode": "static",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 17,
-      "dollyDirection": "right",
-      "dollyDistance": 3,
-      "dollyDuration": 24,
-      "colorGrade": "midnight-teal",
-      "filmGrade": false,
-      "volumetricShafts": false
-     },
-     "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.6
+     "audioUrl": "/film/voice/s1/14-mara-breathless-it-s-okay-i-ll.mp3"
     },
     {
      "id": "nw_b41",
@@ -1933,8 +1915,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lights": [
        {
-        "x": 55,
-        "y": 19,
+        "x": 53,
+        "y": 53,
         "color": "#ffb347",
         "size": 9,
         "intensity": 0.45,
@@ -1942,8 +1924,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.3
        },
        {
-        "x": 93,
-        "y": 22,
+        "x": 82,
+        "y": 37,
         "color": "#e3f1ff",
         "size": 12,
         "intensity": 0.3,
@@ -24603,5 +24585,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "950f43b93fdd"
+ "builtinRevision": "01cb74693ddb"
 } as unknown as Story;
