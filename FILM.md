@@ -38,6 +38,10 @@ Mara (denim jacket, the red clip, the gold watch, the brown bag) and the same Sa
 * ~~**328-the-scrap**~~ done 17 October: the director's second, larger retake (1672×941), "just listen." underlined
   twice and the watch on its thin brown strap as the props sheet has it (the first retake, 1020×572, had a gold
   bracelet; it is `archive/s1/328-the-scrap--v2.jpg`, the take before it `--v1`). The hands read a little older than 24.
+* **Mara's v2 face (17 October):** `04-mara-phone`, `330-the-red-clip` and `14-she-kneels` are the director's retakes
+  against the v2 sheet (`s1_new/style-sheets/mara-voss.jpg`, `refs_v2/`), installed from `s1_retakes/` byte for byte
+  (14 at its full 2730×1536). Earlier takes: `archive/s1/04-mara-phone--v5.jpg`, `330-the-red-clip--v1.jpg`,
+  `14-she-kneels--v4.jpg`. Still to redo for her hair: `03-mara-walks`, `329-the-lane-the-watch`.
 * **14**: a new lip-sync clip from the new still.
 
 
