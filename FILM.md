@@ -9,15 +9,25 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
-## Mara's service plays the 32-shot cut (17 October 2026)
+## Mara's service plays the 34-shot cut (17 October 2026)
 
-The director asked for more shots in the service so each still holds less of "What Made You, You". Scene 97A now plays
-the `service_new/` set, not the first `s97a/` stills: those had two glued split frames (560, 567), the same wide
-twice (561, 565) and no picture of her mother staying behind. `tools/service-cut.mjs` holds the whole 32-shot cut and
-writes the shots that are on disk into scene 97A of `src/film/story.json` and the "service" soundtrack's captions, so
-16 shots play now (about 12 s each) and every new picture slots in when it is uploaded (all 32: about 6 s each). The
-sixteen still to make, with their prompts and what to attach, are in `public/film/img/service_new/README.md`, "The
-32-shot cut". This is the film only: PlayFrame's board for 97A still lists 556–569 on the `s97a` pictures.
+The director asked for more shots in the service so each still holds less of "What Made You, You". Scene 97A plays the
+`service_new/` set, not the first `s97a/` stills: those had two glued split frames (560, 567), the same wide twice (561,
+565) and no picture of her mother staying behind. `tools/service-cut.mjs` holds the whole 34-shot cut and writes the
+shots that are on disk into scene 97A of `src/film/story.json` and the "service" soundtrack's captions. 15 shots play now
+(about 12.6 s each), and every new picture slots in when it is uploaded (all 34: about 5.6 s each). The nineteen still to
+make, with their prompts and what to attach, are in `public/film/img/service_new/README.md`, "The 34-shot cut".
+
+The same day the director asked whether the cut made logical and visual sense, and it did not quite:
+- 556 shows the blue umbrella at the door and 557 shows it still coming, so 557 now plays first.
+- 568 shows Kaneko and Okada alone in an emptied room, so it now plays at the end.
+- Two extras showed another room (`mom-02`) and another lane with a different face in the photograph (`mom-04`), so both are out.
+- The three beats of the director's own stills in `service/` were missing. They are now in the cut: 571 as the director made
+  it; 570, 572 and 573 to be redone in this room.
+- The incense is lit before it is seen burning, and the train goes over once, at the end.
+
+This is the film only: PlayFrame's board for 97A still lists 556–569 on the `s97a` pictures, and its branch's three
+service lines (Jack over the photograph, Okada's umbrella, the circle) are not merged.
 
 ## Scene 1 plays the whole reshoot (17 October 2026)
 
