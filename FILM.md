@@ -33,7 +33,8 @@ Mara (denim jacket, the red clip, the gold watch, the brown bag) and the same Sa
   away from the phone. Brief: the `s1_new/style-sheets/mara-voss.jpg` sheet as reference (it is on the ElevenLabs flow
   `X7nqmG290GG6ek1bFpZb`, node `YlSPT8etwsDBPO0spyC5`); medium close-up, she has stopped and looks *down* at the phone in her
   right hand, the screen reading VERA and lighting her face from below; barber's pole soft at right, rain, practical light.
-* **328-the-scrap**: "just listen." is underlined once, the screenplay says twice (small).
+* ~~**328-the-scrap**~~ done 17 October: the director's retake (`s1_retakes/`, "just listen." underlined twice) is
+  installed at 1920×1080; the previous take is `archive/s1/328-the-scrap--v1.jpg`.
 * **14**: a new lip-sync clip from the new still.
 
 
