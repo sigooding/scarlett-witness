@@ -9,6 +9,16 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Mara's service plays the 32-shot cut (17 October 2026)
+
+The director asked for more shots in the service so each still holds less of "What Made You, You". Scene 97A now plays
+the `service_new/` set, not the first `s97a/` stills: those had two glued split frames (560, 567), the same wide
+twice (561, 565) and no picture of her mother staying behind. `tools/service-cut.mjs` holds the whole 32-shot cut and
+writes the shots that are on disk into scene 97A of `src/film/story.json` and the "service" soundtrack's captions, so
+16 shots play now (about 12 s each) and every new picture slots in when it is uploaded (all 32: about 6 s each). The
+sixteen still to make, with their prompts and what to attach, are in `public/film/img/service_new/README.md`, "The
+32-shot cut". This is the film only: PlayFrame's board for 97A still lists 556–569 on the `s97a` pictures.
+
 ## Scene 1 plays the whole reshoot (17 October 2026)
 
 The director: *"check scene 1 and make sure perfect"*. Since 15 October the film had played thirteen of the `s1_new` reshoot's

@@ -330,7 +330,10 @@ check(closingCredits?.musicLoop === false && FILM.scenes.find((s) => s.id === "n
 
 console.log("What Made You, You plays through Mara's service, one still at a time");
 const service = runOf("service");
-eq(service.length, 15, "the service's run is its fourteen stills, the last cut in two");
+// 17 October 2026: the service plays tools/service-cut.mjs's cut of the service_new set, one node per picture, as many of its 32 shots as are on disk
+const servicePics = service.map((s) => s.background);
+eq(new Set(servicePics).size, service.length, "the service's run is one node per picture");
+check(service.length >= 16 && servicePics.every((p) => /^\/film\/img\/service_new\//.test(p ?? "")), `the service plays the service_new cut (${service.length} of its 32 shots)`);
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/what-made-you-you.mp3").map((s) => s.id), [service[0].id], "the song starts once, on the run's first node");
 check(service[0].musicLoop === false, "and plays once");
 eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothing of 97A is left to click through: the whole scene plays to the song");
