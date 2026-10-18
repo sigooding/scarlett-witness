@@ -207,15 +207,17 @@ const captionFor = pic => pictureCaptions[pic.base] ?? pic.title ?? "·";
 const captionBeat = pic => beat(null, { text: captionFor(pic), silent: true, ...bgFields(pic.bg) });
 film.scenes.forEach((sc, si) => {
   let beats = [];
-  let pend = [], caption = null, bg0 = null, lastBg = null, part = 0;
+  let pend = [], caption = null, bg0 = null, lastBg = null, part = 0, partBg = null;
   let music = null;   // scene-level music for the node being built
   const close = () => {
     scenes.push({
       id: `nw_s${sc.id}${part ? `_${"abcdefgh"[part]}` : ""}`.toLowerCase(), title: `${sc.n} — ${sc.title}${part ? " (cont.)" : ""}`,
-      background: (part ? lastBg : bg0) ?? "gradient:linear-gradient(#000,#000)", prose: part ? "" : `${sc.heading}`, ...lookOf(sc),
+      // a continuation node opens on its own first picture, or on the one showing when it began; not the scene's last picture
+      // (18 October 2026: with pictures after the song's cue in scene 72, the run opened on the scene's last still)
+      background: (part ? (beats[0]?.background && !beats[0].background.startsWith("video:") ? beats[0].background : partBg ?? lastBg) : bg0) ?? "gradient:linear-gradient(#000,#000)", prose: part ? "" : `${sc.heading}`, ...lookOf(sc),
       transition: part ? "cut" : "fade", transitionSpeed: part ? 0.2 : 1.1, ...(music ?? {}), dialogueBeats: beats,
     });
-    beats = []; part++; music = null;
+    beats = []; part++; music = null; partBg = lastBg;
   };
   for (const st of sc.steps) {
     if (st.t === "bg") { const bg = P(st.src); pend.push({ bg, quote: st.quote, title: st.title, base: baseOf(st.src) }); bg0 ??= bg; lastBg = bg; }

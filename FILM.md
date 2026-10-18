@@ -9,6 +9,30 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Vera's night run plays the vera_run_new set (18 October 2026)
+
+Scenes 72 (from the song's cue) to 76 play the new `vera_run_new/` set, made from the brief on branch `film-vera-run-brief`
+(`vera_run_new/BRIEF.md` there): one Vera, one dress, one route, the crossing from scenes 27 and 62.
+- **The tool:** `tools/vera-run-cut.mjs` puts each picture in front of the screenplay beat it covers, so the voice takes stay
+  where they were. It rewrites the "bad-guy" soundtrack's captions and sound cues for these scenes, and gives the running
+  shots the shake the old run had. Run it, then `FILM_SRC=/nonexistent node tools/build-film-story.mjs`.
+- **What plays:** 40 of the 54 pictures are in. Bad Guy now carries 50 pictures, about 4.75 s per silent picture (was 9.75 s).
+- **Still to come:**
+  - `74-12`, so "She was waiting for me" plays on 74-11 for now;
+  - `75-02` to `75-06`, so the shipped still frames play;
+  - all eight of `76`, so the shipped pictures of her apartment play, and the walkway and the empty umbrella stand are left out.
+  - Each slots in when it is uploaded and the tool is run again.
+- **Builder fix:** a node that continues a scene after a music cue now opens on its own first picture, or on the one showing
+  when it began, not on the scene's last picture. That also fixes `nw_s20_b`, which opened on 371 before 192, and
+  `nw_s65_b`, which opened on 277 (Vera leaving) before she had dressed.
+- **Pictures that slip from the brief:**
+  - **73-11 and 73-12:** she runs right to left.
+  - **74-11:** it is under a bigger overpass than the rest of the street.
+  - **74-16:** it is mirrored (the vending machines on the right) and has two pale umbrellas lying on the road.
+  - **72-01:** the umbrella reads more white than pale blue.
+- **Test fix:** the service's timing check now counts each node's fade-in. It had failed since the cut grew to 34 pictures:
+  the delays alone add up to 170 s of a run that plays about 190 s.
+
 ## Mara's service plays the 34-shot cut (17 October 2026)
 
 The director asked for more shots in the service so each still holds less of "What Made You, You". Scene 97A plays the

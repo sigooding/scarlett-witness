@@ -300,11 +300,20 @@ eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp
 eq(["nw_s78", "nw_s79"].map((id) => FILM.scenes.find((s) => s.id === id)?.musicMode), ["none", undefined], "scene 78 is music-off again and scene 79 plays on the silence");
 eq(FILM.scenes.filter((s) => /^nw_s7[3-6]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 76 play inside the Bad Guy run (nothing of them is left to click through)");
 eq(badGuy.filter((s) => !s.hideHud).map((s) => s.id), [], "every node of the run is a cutscene node (no HUD; the builder takes the bars off every node last)");
-// the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels, on the same picture
+// the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels; since the vera_run_new
+// set (18 October 2026) it has its own picture, 73-10, where the old run carried both sounds on one picture cut in two
 const heels = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/heels-running-wet.mp3");
-check(heels >= 0 && badGuy[heels + 1]?.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3" && badGuy[heels + 1]?.background === badGuy[heels]?.background, "the car-pass effect plays right after the heels, on the same picture (a shot can be cut into several parts, each with its own sound)");
+const car = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3");
+check(heels >= 0 && car > heels && /\/73-10-a-car-passes\.jpg$/.test(badGuy[car]?.background ?? ""), "the car-pass effect plays after the heels, on the picture of the car passing (73-10)");
+// scenes 72 to 76 play the vera_run_new set (tools/vera-run-cut.mjs); its pictures still to come fall back to the shipped ones
+const runPics = [...new Set(badGuy.map((s) => s.background ?? ""))];
+check(runPics.filter((b) => b.includes("/vera_run_new/")).length >= 40, `Bad Guy's run plays the vera_run_new set (${runPics.filter((b) => b.includes("/vera_run_new/")).length} of its pictures)`);
+check(/\/72-01-the-piano-plays-on\.jpg$/.test(badGuy[0]?.background ?? ""), "the song opens on Vera frozen at the bar (72-01), not on the scene's last picture");
 const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).filter((b) => b.silent).map((b) => b.afterBeatDelaySeconds ?? 0);
-check(Math.min(...heldFor(badGuy)) >= 2.5, "no silent shot of the run is shorter than 2.5 s");
+// a picture's time on screen is all its nodes together: a caption before a line on the same picture is not a shot of its own
+const shotsOf = (nodes: typeof badGuy) => nodes.reduce<(typeof badGuy)[]>((g, s) => (g.length && g.at(-1)![0].background === s.background ? g.at(-1)!.push(s) : g.push([s]), g), []);
+const silentShots = shotsOf(badGuy).filter((g) => g.every((s) => (s.dialogueBeats ?? []).every((b) => b.silent)));
+check(Math.min(...silentShots.map((g) => heldFor(g).reduce((n, d) => n + d, 0))) >= 2.5, "no silent picture of the run is on screen for less than 2.5 s");
 const songSeconds = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).reduce((n, b) => n + (b.afterBeatDelaySeconds ?? 0), 0);
 check(songSeconds(badGuy) > 150 && songSeconds(badGuy) < 268.27, `Bad Guy's run is timed to fit its 268 s (${songSeconds(badGuy).toFixed(0)} s of delays plus the voices' own lengths)`);
 // "Baby Fool" plays once through the newsroom and the notebook photocopying, then fades out before Kurose.
@@ -341,6 +350,9 @@ eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothi
 eq(service.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s98", "the run hands on to the rooftop");
 eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, "none", "which fades the song out");
 check(service.every((s) => s.hideHud && s.dialogueBeats?.every((b) => b.silent)), "every node is a silent cutscene node: nobody speaks at the service");
-check(songSeconds(service) > 170 && songSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${songSeconds(service).toFixed(0)} s)`);
+// each node also takes its fade-in and the engine's lag (0.3 + 0.1 + 0.18 s), which the builder takes off its delay: with 34 pictures
+// the delays alone add up to about 170 s of a run that plays about 190 s (18 October 2026)
+const playedSeconds = (nodes: typeof service) => songSeconds(nodes) + nodes.length * 0.58;
+check(playedSeconds(service) > 180 && playedSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${playedSeconds(service).toFixed(0)} s)`);
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);
