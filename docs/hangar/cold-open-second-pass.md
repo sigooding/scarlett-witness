@@ -2,7 +2,7 @@
 
 *Untitled (working title), the 1975 cold open. Retake of the painted boards: late-1990s cel animation, painted backgrounds, 2.39:1. Generated from `docs/hangar/cold-open-prompts.json` by `node tools/cold-open-prompts.mjs pack` — change the JSON, not this page.*
 
-**Status:** 23/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
+**Status:** 32/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
 
 ## How to use this pack
 
@@ -339,7 +339,7 @@ A frame of pure film black, nothing in it at all — gunfire and then silence, a
 Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.
 ```
 
-### 2A · Establishing ▫️
+### 2A · Establishing ✅
 
 `public/reels/hangar/img/hangar-v2/shots/04-wright-patterson-night.jpg`
 
@@ -353,7 +353,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/backgrounds/hangar-exterior.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/truck.jpg`
 
-### 2B · The TV ▫️
+### 2B · The TV ✅
 
 `public/reels/hangar/img/hangar-v2/shots/05-guard-booth-tv.jpg`
 
@@ -379,7 +379,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/backgrounds/hangar-interior.jpg`
 
-### 2D · The crate ▫️
+### 2D · The crate ✅
 
 `public/reels/hangar/img/hangar-v2/shots/06-wright-field-inert.jpg`
 
@@ -393,7 +393,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/hangar-interior.jpg`
 
-### 2E · The mug ▫️
+### 2E · The mug ✅
 
 `public/reels/hangar/img/hangar-v2/shots/07-coffee-ring.jpg`
 
@@ -407,7 +407,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/sergeant.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### 2F · The hand ▫️
+### 2F · The hand ✅
 
 `public/reels/hangar/img/hangar-v2/shots/08-hand-on-lid.jpg`
 
@@ -421,7 +421,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/sergeant.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### 2G · The signature ▫️
+### 2G · The signature ✅
 
 `public/reels/hangar/img/hangar-v2/shots/09-dont-you-want-to-know.jpg`
 
@@ -436,7 +436,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/trucker.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### 3A · Skipping the scale ▫️
+### 3A · Skipping the scale ✅
 
 `public/reels/hangar/img/hangar-v2/shots/10-weigh-station.jpg`
 
@@ -450,7 +450,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/truck.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/weigh-station.jpg`
 
-### 3B · The hills ▫️
+### 3B · The hills ✅
 
 `public/reels/hangar/img/hangar-v2/shots/11-into-the-hills.jpg`
 
@@ -463,7 +463,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/backgrounds/back-road.jpg`
 
-### 3C · The cab ▫️
+### 3C · The cab ✅
 
 `public/reels/hangar/img/hangar-v2/shots/12-the-cab.jpg`
 
