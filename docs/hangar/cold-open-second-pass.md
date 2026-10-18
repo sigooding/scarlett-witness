@@ -2,7 +2,7 @@
 
 *Untitled (working title), the 1975 cold open. Retake of the painted boards: late-1990s cel animation, painted backgrounds, 2.39:1. Generated from `docs/hangar/cold-open-prompts.json` by `node tools/cold-open-prompts.mjs pack` — change the JSON, not this page.*
 
-**Status:** 13/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
+**Status:** 23/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
 
 ## How to use this pack
 
@@ -184,7 +184,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/sergeant.jpg`
 
-### small-props · Small Props ▫️
+### small-props · Small Props ✅
 
 `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 
@@ -201,7 +201,7 @@ Reference plates:
 
 Painted empty, then characters are composited over them or the plate is used as a reference.
 
-### hangar-ext · Hangar exterior ▫️
+### hangar-ext · Hangar exterior ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/hangar-exterior.jpg`
 
@@ -214,7 +214,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/truck.jpg`
 
-### hangar-int · Hangar interior ▫️
+### hangar-int · Hangar interior ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/hangar-interior.jpg`
 
@@ -227,7 +227,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### weigh-station · Weigh station ▫️
+### weigh-station · Weigh station ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/weigh-station.jpg`
 
@@ -237,7 +237,7 @@ Background painting, no characters: a highway weigh station at night beside an e
 Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.
 ```
 
-### back-road · The back road ▫️
+### back-road · The back road ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/back-road.jpg`
 
@@ -247,7 +247,7 @@ Background painting, no characters: a narrow two-lane road twisting through wood
 Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.
 ```
 
-### curve · The curve ▫️
+### curve · The curve ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/curve.jpg`
 
@@ -257,7 +257,7 @@ Background painting, no characters: a blind curve on a wooded two-lane road at n
 Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.
 ```
 
-### wooded-bank · The wooded bank ▫️
+### wooded-bank · The wooded bank ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/wooded-bank.jpg`
 
@@ -267,7 +267,7 @@ Background painting, no characters: a steep wooded slope at night, tall trunks, 
 Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.
 ```
 
-### creek-bottom · The creek bottom ▫️
+### creek-bottom · The creek bottom ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/creek-bottom.jpg`
 
@@ -277,7 +277,7 @@ Background painting, no characters: a shallow rocky creek at the bottom of a woo
 Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.
 ```
 
-### creek-bottom-flare · The creek bottom, flare version (beats 6–8) ▫️
+### creek-bottom-flare · The creek bottom, flare version (beats 6–8) ✅
 
 `public/reels/hangar/img/hangar-v2/backgrounds/creek-bottom-flare.jpg`
 
@@ -290,7 +290,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/backgrounds/creek-bottom.jpg`
 
-### key-art · Key art / cover ▫️
+### key-art · Key art / cover ✅
 
 `public/reels/hangar/img/hangar-v2/key-art.jpg`
 
