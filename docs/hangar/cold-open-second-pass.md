@@ -2,7 +2,7 @@
 
 *Untitled (working title), the 1975 cold open. Retake of the painted boards: late-1990s cel animation, painted backgrounds, 2.39:1. Generated from `docs/hangar/cold-open-prompts.json` by `node tools/cold-open-prompts.mjs pack` — change the JSON, not this page.*
 
-**Status:** 52/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
+**Status:** 60/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
 
 ## How to use this pack
 
@@ -366,7 +366,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 
-### 2C · The hangar floor ▫️
+### 2C · The hangar floor ✅
 
 `public/reels/hangar/img/hangar-v2/shots/02c-the-hangar-floor.jpg`
 
@@ -760,7 +760,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### 7C · INERT ▫️
+### 7C · INERT ✅
 
 `public/reels/hangar/img/hangar-v2/shots/33-inert-in-creek.jpg`
 
@@ -774,7 +774,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/creek-bottom-flare.jpg`
 
-### 7D · The wall ▫️
+### 7D · The wall ✅
 
 `public/reels/hangar/img/hangar-v2/shots/34-rows-of-marks.jpg`
 
@@ -789,7 +789,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 
-### 7E · The fresh stroke ▫️
+### 7E · The fresh stroke ✅
 
 `public/reels/hangar/img/hangar-v2/shots/35-newest-stroke.jpg`
 
@@ -802,7 +802,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/scratched-wall.jpg`
 
-### 7F · The far corner ▫️
+### 7F · The far corner ✅
 
 `public/reels/hangar/img/hangar-v2/shots/36-far-corner.jpg`
 
@@ -815,7 +815,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/scratched-wall.jpg`
 
-### 8A · The woods ▫️
+### 8A · The woods ✅
 
 `public/reels/hangar/img/hangar-v2/shots/37-far-off.jpg`
 
@@ -828,7 +828,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/backgrounds/wooded-bank.jpg`
 
-### 8B · He hears it ▫️
+### 8B · He hears it ✅
 
 `public/reels/hangar/img/hangar-v2/shots/38-only-airman-hears.jpg`
 
@@ -842,7 +842,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/airman.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/agents.jpg`
 
-### 8C · Burnout ▫️
+### 8C · Burnout ✅
 
 `public/reels/hangar/img/hangar-v2/shots/39-flare-sputters-out.jpg`
 

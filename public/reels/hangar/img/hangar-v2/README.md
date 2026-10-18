@@ -23,6 +23,13 @@ Rules that matter here:
 * **2.39:1 safe.** Plates are 16:9 and composed inside a centre band, because the reel letterboxes the frame.
 * **The robot stays unseen.** Nothing in the woods, the straw or the inside of the crate may read as a figure.
 
+## Where the pass stands (18 October 2026)
+
+All 60 plates are drawn: 12 model sheets, 9 backgrounds (including the flare-lit creek and the key art) and
+39 shot plates. Every picture the reel uses now points at a retake — `node tools/retake-reel-pictures.mjs hangar`
+reports `44/44`. `shots/02c-the-hangar-floor.jpg` is new: it has no first-pass board (the first pass had no
+picture for that shot and held 2B), so the second pass is the first cut to show the hangar floor.
+
 Rebuild after adding plates:
 
 ```
