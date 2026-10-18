@@ -45,7 +45,9 @@
     "test:browser": "playwright test",
     "test:black-mass-bride": "node scripts/black-mass-bride-tests.mjs",
     "art:plates": "node scripts/art-room/plate-opt.mjs",
-    "art:plates:check": "node scripts/art-room/plate-opt.mjs --check public/assets --fail-over 400"
+    "art:plates:check": "node scripts/art-room/plate-opt.mjs --check public/assets --fail-over 400",
+    "art:cold-open": "node tools/cold-open-prompts.mjs pack --write",
+    "art:retakes": "node tools/retake-reel-pictures.mjs hangar"
   },
   "dependencies": {
     "@types/three": "^0.185.4",

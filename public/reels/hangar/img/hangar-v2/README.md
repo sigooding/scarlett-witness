@@ -1,0 +1,32 @@
+# The cold open — second-pass plates
+
+Retakes of the `Untitled: the cold open` boards. The first pass (the 39 painted boards the reel shipped with) is still in
+`../hangar/`; nothing here replaces it on disk. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, where every
+picture that has a file in this folder is swapped in and everything else keeps its first-pass board.
+
+```
+sheets/       character, vehicle and prop model sheets (16:9) — the references every shot is drawn against
+backgrounds/  the location paintings, empty, plus the flare version of the creek and the key art
+shots/        the shot plates, named exactly as the first-pass files they replace (04-wright-patterson-night.jpg …)
+alt/          alternate takes, kept but not wired in — promote one by moving it up into shots/
+```
+
+Rules that matter here:
+
+* **File names are the wiring.** A plate is used only if its file name matches a first-pass picture name, so
+  `shots/07-coffee-ring.jpg` replaces the board of the same name. Anything else in the folder is ignored.
+* **No lettering.** Every stencil panel and sign is painted blank; `WRIGHT FIELD 1944 — INERT`, `AGRICULTURAL EQUIPMENT`
+  and `WEIGH STATION — ALL TRUCKS MUST ENTER` are set in a stencil face in post, because generated type garbles and a
+  garbled stencil reads as damage to the prop the film turns on.
+* **Beat 1 is black.** `01-black-radio.jpg`, `02-three-quick-one-slow.jpg` and `03-gunfire-silence.jpg` are pure black on
+  purpose: the pilot's radio, the clicking and the gunfire are heard over black, and no picture is shown.
+* **2.39:1 safe.** Plates are 16:9 and composed inside a centre band, because the reel letterboxes the frame.
+* **The robot stays unseen.** Nothing in the woods, the straw or the inside of the crate may read as a figure.
+
+Rebuild after adding plates:
+
+```
+node tools/retake-reel-pictures.mjs hangar      # or: npm run art:retakes
+node tools/cold-open-prompts.mjs list           # what is still first-pass
+node tools/cold-open-prompts.mjs pack --write    # regenerate docs/hangar/cold-open-second-pass.md
+```
