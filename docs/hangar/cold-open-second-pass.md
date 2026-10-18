@@ -2,7 +2,7 @@
 
 *Untitled (working title), the 1975 cold open. Retake of the painted boards: late-1990s cel animation, painted backgrounds, 2.39:1. Generated from `docs/hangar/cold-open-prompts.json` by `node tools/cold-open-prompts.mjs pack` — change the JSON, not this page.*
 
-**Status:** 32/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
+**Status:** 42/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
 
 ## How to use this pack
 
@@ -478,7 +478,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/airman.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/truck.jpg`
 
-### 3D · A knock from the trailer ▫️
+### 3D · A knock from the trailer ✅
 
 `public/reels/hangar/img/hangar-v2/shots/13-knock-from-trailer.jpg`
 
@@ -492,7 +492,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/trucker.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/airman.jpg`
 
-### 3E · Counting ▫️
+### 3E · Counting ✅
 
 `public/reels/hangar/img/hangar-v2/shots/14-one-two-three-four.jpg`
 
@@ -505,7 +505,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/airman.jpg`
 
-### 3F · The missing knock ▫️
+### 3F · The missing knock ✅
 
 `public/reels/hangar/img/hangar-v2/shots/15-slow-one-never-arrives.jpg`
 
@@ -518,7 +518,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/airman.jpg`
 
-### 4A · Headlights ▫️
+### 4A · Headlights ✅
 
 `public/reels/hangar/img/hangar-v2/shots/16-headlights-round-bend.jpg`
 
@@ -532,7 +532,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/wagon.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/curve.jpg`
 
-### 4B · Two more miles ▫️
+### 4B · Two more miles ✅
 
 `public/reels/hangar/img/hangar-v2/shots/17-two-more-miles.jpg`
 
@@ -546,7 +546,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/nurse-mom.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/wagon.jpg`
 
-### 4C · The near-miss ▫️
+### 4C · The near-miss ✅
 
 `public/reels/hangar/img/hangar-v2/shots/18-yank-the-wheel.jpg`
 
@@ -562,7 +562,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/nurse-mom.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/curve.jpg`
 
-### 4D · The cap ▫️
+### 4D · The cap ✅
 
 `public/reels/hangar/img/hangar-v2/shots/19-mirror-cap.jpg`
 
@@ -576,7 +576,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/nurse-mom.jpg`
 
-### 4E · The doors ▫️
+### 4E · The doors ✅
 
 `public/reels/hangar/img/hangar-v2/shots/20-the-skid.jpg`
 
@@ -590,7 +590,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/truck.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### 4F · The empty trailer ▫️
+### 4F · The empty trailer ✅
 
 `public/reels/hangar/img/hangar-v2/shots/21-missing-knock.jpg`
 
@@ -603,7 +603,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/truck.jpg`
 
-### 4G · Over the edge ▫️
+### 4G · Over the edge ✅
 
 `public/reels/hangar/img/hangar-v2/shots/22-over-the-edge.jpg`
 
