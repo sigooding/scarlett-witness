@@ -2,7 +2,7 @@
 
 *Untitled (working title), the 1975 cold open. Retake of the painted boards: late-1990s cel animation, painted backgrounds, 2.39:1. Generated from `docs/hangar/cold-open-prompts.json` by `node tools/cold-open-prompts.mjs pack` — change the JSON, not this page.*
 
-**Status:** 42/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
+**Status:** 52/60 plates redrawn, in `public/reels/hangar/img/hangar-v2/`. The playable second pass is `src/data/hangarColdOpenV2Reel.ts`, rebuilt with `node tools/retake-reel-pictures.mjs hangar`.
 
 ## How to use this pack
 
@@ -617,7 +617,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/curve.jpg`
 
-### 5A · Tumbling ▫️
+### 5A · Tumbling ✅
 
 `public/reels/hangar/img/hangar-v2/shots/23-down-the-bank.jpg`
 
@@ -631,7 +631,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/wooded-bank.jpg`
 
-### 5B · Inside the fall ▫️
+### 5B · Inside the fall ✅
 
 `public/reels/hangar/img/hangar-v2/shots/24-inside-the-crate.jpg`
 
@@ -644,7 +644,7 @@ Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Cle
 Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 
-### 5C · Stillness ▫️
+### 5C · Stillness ✅
 
 `public/reels/hangar/img/hangar-v2/shots/25-by-the-creek.jpg`
 
@@ -658,7 +658,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/creek-bottom.jpg`
 
-### 6A · She didn't stop ▫️
+### 6A · She didn't stop ✅
 
 `public/reels/hangar/img/hangar-v2/shots/26-taillights.jpg`
 
@@ -673,7 +673,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/wagon.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/back-road.jpg`
 
-### 6B · The flare ▫️
+### 6B · The flare ✅
 
 `public/reels/hangar/img/hangar-v2/shots/27-road-flares.jpg`
 
@@ -687,7 +687,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/trucker.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 
-### 6C · The cap ▫️
+### 6C · The cap ✅
 
 `public/reels/hangar/img/hangar-v2/shots/28-white-cap.jpg`
 
@@ -701,7 +701,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/agents.jpg`
 
-### 6D · They don't understand ▫️
+### 6D · They don't understand ✅
 
 `public/reels/hangar/img/hangar-v2/shots/29-where-is-it.jpg`
 
@@ -716,7 +716,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/trucker.jpg`
 - `public/reels/hangar/img/hangar-v2/sheets/small-props.jpg`
 
-### 6E · The descent ▫️
+### 6E · The descent ✅
 
 `public/reels/hangar/img/hangar-v2/shots/30-down-through-red-fog.jpg`
 
@@ -731,7 +731,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/airman.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/wooded-bank.jpg`
 
-### 7A · Arrival ▫️
+### 7A · Arrival ✅
 
 `public/reels/hangar/img/hangar-v2/shots/31-empty.jpg`
 
@@ -747,7 +747,7 @@ Reference plates:
 - `public/reels/hangar/img/hangar-v2/sheets/crate.jpg`
 - `public/reels/hangar/img/hangar-v2/backgrounds/creek-bottom-flare.jpg`
 
-### 7B · The hollow ▫️
+### 7B · The hollow ✅
 
 `public/reels/hangar/img/hangar-v2/shots/32-hollow-in-straw.jpg`
 
