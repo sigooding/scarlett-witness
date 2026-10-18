@@ -30,6 +30,12 @@ All 60 plates are drawn: 12 model sheets, 9 backgrounds (including the flare-lit
 reports `44/44`. `shots/02c-the-hangar-floor.jpg` is new: it has no first-pass board (the first pass had no
 picture for that shot and held 2B), so the second pass is the first cut to show the hangar floor.
 
+**Promoting an alternate.** `alt/weigh-station--clean-sign.jpg` is the clean-sign take that replaced the
+weathered panel on 18 October (the weathered one is kept as `alt/weigh-station--weathered.jpg`): the empty
+sign is where the WEIGH STATION stencil goes, and the old panel's grey smudges read as ghosted type at full size.
+To promote any other alternate, copy it over the plate's name in `backgrounds/` or `shots/` and re-run the two
+commands below; nothing else needs editing.
+
 Rebuild after adding plates:
 
 ```
