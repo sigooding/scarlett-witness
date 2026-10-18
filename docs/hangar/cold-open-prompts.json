@@ -1,0 +1,234 @@
+{
+  "film": "Untitled (working title) — cold open, second pass",
+  "date": "2026-10-18",
+  "frame": { "shots": "16:9 plate, composed inside a 2.39:1 centre band (the reel letterboxes)", "sheets": "16:9" },
+  "styleBlock": "Hand-drawn 2D feature animation still, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture. Characters in flat cel color with simple two-tone shadows and appealing, slightly rounded mid-century proportions. Painterly gouache and watercolor backgrounds with visible brushwork, in the spirit of mid-century American magazine illustration. Strong graphic lighting: warm practical light against cool night tones. Restrained, limited palette, atmospheric haze for depth, subtle film grain, cinematic widescreen composition. Small-town Ohio, autumn 1975.",
+  "sheetBlock": "Hand-drawn 2D animation model sheet, late-1990s traditional cel animation. Clean, confident ink linework with a slight pencil texture, flat cel color with simple two-tone shadows, appealing slightly rounded mid-century proportions. Plain warm-gray background, even neutral lighting, views evenly spaced and clearly separated, no labels.",
+  "negative": "3D render, CGI, glossy plastic shading, photorealistic, anime, manga, chibi, flat vector art, neon colors, oversaturated, heavy lens flare, modern cars, modern clothing, smartphones, text, letters, captions, watermark, logo, signature, extra fingers, distorted faces, cluttered composition",
+  "palette": [
+    { "beat": "2 · Hangar 18", "light": "Sodium-amber work lights in a cold steel dark", "keys": ["#1E2A33", "#3F5563", "#C98A3B", "#E8D7B0", "#6B5B45"] },
+    { "beat": "3 · Back road", "light": "Deep blue night, pale fog, warm dash glow", "keys": ["#0F1B2D", "#2E4A62", "#7FA3B8", "#E0A04A", "#F3E3B5"] },
+    { "beat": "4 · Swerve", "light": "Headlights blowing out to white, red taillights", "keys": ["#F7F2E1", "#B23A2E", "#6E7B3A", "#8A5A35"] },
+    { "beat": "5 · Fall", "light": "Near-black with cold shards of moonlight", "keys": ["#070B10", "#3C5A78", "#A7BCCB"] },
+    { "beat": "6 · Topside", "light": "Road-flare red swallows the blue fog", "keys": ["#D9381E", "#8E1F17", "#F5B7A0", "#1B2B3A"] },
+    { "beat": "7 · The crate", "light": "Red raking light on old gray pine; the fresh stroke glows pale", "keys": ["#9C8A74", "#2A1A1F", "#FFD8C2"] },
+    { "beat": "8 · Button", "light": "The red collapses to black", "keys": ["#3A0E0B", "#000000"] }
+  ],
+  "sheets": [
+    {
+      "id": "sergeant",
+      "file": "sheets/sergeant.jpg",
+      "title": "The Sergeant",
+      "status": "done",
+      "subject": "Character model sheet, 16:9 widescreen: full-body turnaround of an Air Force master sergeant (front, three-quarter, side, back views, evenly spaced and clearly separated) plus four expression heads in a row. He is in his late fifties, stocky and a little stooped, weathered face, close-cropped gray hair, heavy eyelids, kind tired eyes, big careful hands. Olive-green 1970s Air Force fatigues with sleeves rolled to the elbow, blank name tape, no insignia lettering. He holds a dented white enamel mug with a chipped blue rim. Expressions: tired neutral, faint private smile, wary sideways glance, quiet sorrow.",
+      "refs": []
+    },
+    {
+      "id": "airman",
+      "file": "sheets/airman.jpg",
+      "title": "The Airman",
+      "status": "done",
+      "subject": "Character model sheet, 16:9 widescreen: full-body turnaround of a 19-year-old American airman in 1975 (front, three-quarter, side, back), plus four expression heads in a row. Tall and lanky, prominent Adam's apple, regulation buzz cut, big earnest nervous eyes. Civilian clothes: tan corduroy jacket over a red plaid flannel shirt, jeans, scuffed work boots. Expressions: nervous; lips moving as he counts under his breath; dawning realization; frozen fear. Match the drawing style of the reference sheet exactly.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "trucker",
+      "file": "sheets/trucker.jpg",
+      "title": "The Trucker",
+      "status": "done",
+      "subject": "Character model sheet, 16:9 widescreen: full-body turnaround of a long-haul trucker in 1975 (front, three-quarter, side, back), plus four expression heads in a row. Mid-fifties, big and barrel-chested, gray stubble, long sideburns, a plain faded mesh trucker cap with no logo, denim jacket with a cream sheepskin collar, dark trousers, work boots, a toothpick in the corner of his mouth. Expressions: bored; grumbling; alarmed; shaken and pale. Match the drawing style of the reference sheet exactly.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "nurse-mom",
+      "file": "sheets/nurse-mom.jpg",
+      "title": "The Mom",
+      "status": "done",
+      "subject": "Character model sheet, 16:9 widescreen: full-body turnaround of a nurse in 1975 (front, three-quarter, side, back), plus four expression heads in a row. Late thirties, slim, kind face, tired eyes, brown hair pinned up and coming loose. A 1975 white nurse's uniform dress, white starched nurse's cap pinned in her hair with a small enamel hospital pin, a navy cardigan around her shoulders, white shoes. Expressions: exhausted; eyes drifting shut; startled awake; shaking in shock. Match the drawing style of the reference sheet exactly.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "agents",
+      "file": "sheets/agents.jpg",
+      "title": "The Agents",
+      "status": "done",
+      "subject": "Character model sheet, 16:9 widescreen: two government agents side by side, each in a front view and a three-quarter view, plus two expression heads each. 1975: plain dark suits, narrow ties, short side-parted haircuts, forgettable faces. The first is older and heavyset in a gray raincoat; the second is younger, lean and sharp-featured. Expressions: flat and unreadable, then stunned. Match the drawing style of the reference sheet exactly.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "truck",
+      "file": "sheets/truck.jpg",
+      "title": "The Truck",
+      "status": "done",
+      "subject": "Vehicle model sheet, 16:9 widescreen: side view, front view and three-quarter rear view, evenly spaced and clearly separated. A 1970s American long-nose semi tractor in faded cream with a chrome bumper and rust at the wheel wells, pulling a plain unmarked white box trailer with rear swing doors and vertical lock rods. No company markings, no lettering, no logos.",
+      "refs": ["sheets/sergeant.jpg", "…/s2/04-wright-patterson-night.jpg"]
+    },
+    {
+      "id": "wagon",
+      "file": "sheets/wagon.jpg",
+      "title": "The Station Wagon",
+      "status": "done",
+      "subject": "Vehicle model sheet, 16:9 widescreen: four views, evenly spaced and clearly separated. First a 1970s full-size American station wagon in faded avocado green with simulated woodgrain side panels and chrome trim, driver's side mirror on a chrome stalk, seen from the side, the front and three-quarter front. Then a second side view of the same wagon after a crash: the driver's mirror snapped off at the stalk, a long bright scrape down the driver's side, no broken glass. No lettering, no logos.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "sedan",
+      "file": "sheets/sedan.jpg",
+      "title": "The Sedan",
+      "status": "done",
+      "subject": "Vehicle model sheet, 16:9 widescreen: side view and three-quarter front view, evenly spaced and clearly separated. A 1970s full-size four-door sedan in flat black, plain steel hubcaps, a small spotlight mounted beside the driver's mirror, no markings, no lettering, no logos.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "crate",
+      "file": "sheets/crate.jpg",
+      "title": "The Crate",
+      "status": "done",
+      "subject": "Prop model sheet, 16:9 widescreen: a 1940s military wooden shipping crate about three feet long, pine boards weathered to silver-gray, steel corner brackets, rope handles, blank stencil panels on the side and on the lid. A dark ring is worn into the lid from decades of a coffee mug set down in the same spot. Show it closed from three angles, evenly spaced and clearly separated, then split open with old matted straw packing inside. No lettering, no text.",
+      "refs": ["sheets/sergeant.jpg"]
+    },
+    {
+      "id": "scratched-wall",
+      "file": "sheets/scratched-wall.jpg",
+      "title": "The Scratched Wall",
+      "status": "done",
+      "subject": "Prop detail model sheet, 16:9 widescreen: the inside wall of an old pine crate, covered edge to edge in neat rows of thousands of tiny short vertical scratch marks, each with a short diagonal stroke cut through it. The very last stroke is bright, fresh pale wood. In one far corner, a few marks have no stroke through them yet. Flat even lighting for a model sheet; the marks must read as rows, not as writing. No lettering, no text, no symbols.",
+      "refs": ["sheets/crate.jpg", "sheets/sergeant.jpg"]
+    },
+    {
+      "id": "small-props",
+      "file": "sheets/small-props.jpg",
+      "title": "Small Props",
+      "status": "todo",
+      "subject": "Prop model sheet, 16:9 widescreen, five props evenly spaced and clearly separated on a plain background: a white starched 1970s nurse's cap with a small enamel hospital pin; a chrome car side mirror snapped off its stalk; a lit road flare spitting red magnesium fire and smoke; a dented white enamel mug with a chipped blue rim; a small 1970s portable black-and-white TV with a rabbit-ear antenna. No lettering, no screen image, no logos.",
+      "refs": ["sheets/crate.jpg"]
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "hangar-ext",
+      "file": "backgrounds/hangar-exterior.jpg",
+      "title": "Hangar exterior",
+      "status": "todo",
+      "subject": "Background painting, no character in the foreground: a huge arched WWII-era aircraft hangar at night, tall doors half open and spilling amber light onto wet tarmac, a small guard booth in the foreground with the blue glow of a TV in its window, fine rain haze, dark sky. A cream semi with a plain white box trailer backs up to the doors, small in frame. The building and the trailer carry no lettering.",
+      "refs": ["sheets/truck.jpg"]
+    },
+    {
+      "id": "hangar-int",
+      "file": "backgrounds/hangar-interior.jpg",
+      "title": "Hangar interior",
+      "status": "todo",
+      "subject": "Background painting, no characters: inside a vast arched hangar at night, rows of crates and canvas-draped shapes receding into darkness, sodium work lights hanging from the steel trusses, puddles on the concrete reflecting amber, dust drifting through shafts of light, a forklift parked to one side. The crates are weathered gray pine with steel corner brackets and blank stencil panels. No lettering.",
+      "refs": ["sheets/crate.jpg"]
+    },
+    {
+      "id": "weigh-station",
+      "file": "backgrounds/weigh-station.jpg",
+      "title": "Weigh station",
+      "status": "todo",
+      "subject": "Background painting, no characters: a highway weigh station at night beside an empty exit lane, a lit blank sign panel on a post, a small inspection booth with one lit window, black woods behind. The sign panel is blank — the lettering is added in post.",
+      "refs": []
+    },
+    {
+      "id": "back-road",
+      "file": "backgrounds/back-road.jpg",
+      "title": "The back road",
+      "status": "todo",
+      "subject": "Background painting, no characters: a narrow two-lane road twisting through wooded Ohio hills at night in early autumn, fog pooling in the hollows below, a hazy moon, trees in deep blue silhouette, a faded centre line.",
+      "refs": []
+    },
+    {
+      "id": "curve",
+      "file": "backgrounds/curve.jpg",
+      "title": "The curve",
+      "status": "todo",
+      "subject": "Background painting, no characters: a blind curve on a wooded two-lane road at night, a yellow curve warning sign, no guardrail on the outside edge, the shoulder dropping away into a steep dark wooded bank, fog rising from below.",
+      "refs": []
+    },
+    {
+      "id": "wooded-bank",
+      "file": "backgrounds/wooded-bank.jpg",
+      "title": "The wooded bank",
+      "status": "todo",
+      "subject": "Background painting, no characters: a steep wooded slope at night, tall trunks, ferns, mossy rocks and fallen logs, shafts of cold moonlight cutting through drifting mist, a creek glinting far below.",
+      "refs": []
+    },
+    {
+      "id": "creek-bottom",
+      "file": "backgrounds/creek-bottom.jpg",
+      "title": "The creek bottom",
+      "status": "todo",
+      "subject": "Background painting, no characters: a shallow rocky creek at the bottom of a wooded ravine at night, low mist over the water, moonlight on wet stones, a small gravel bank at the water's edge.",
+      "refs": []
+    },
+    {
+      "id": "creek-bottom-flare",
+      "file": "backgrounds/creek-bottom-flare.jpg",
+      "title": "The creek bottom, flare version (beats 6–8)",
+      "status": "todo",
+      "subject": "Background painting, no characters: the same shallow rocky creek at the bottom of a wooded ravine, now lit only by red road-flare light from above — a deep red glow in the mist, black tree trunks, red reflections in the water, the blue of the night almost gone.",
+      "refs": ["backgrounds/creek-bottom.jpg"]
+    },
+    {
+      "id": "key-art",
+      "file": "key-art.jpg",
+      "title": "Key art / cover",
+      "status": "todo",
+      "subject": "Key art for an animated feature, no lettering: the trucker stands in red road-flare smoke on a black wet road, arm raised with the lit flare, his truck stopped crooked across both lanes with its rear doors hanging open; below the shoulder, in the dark, a split-open wooden crate lies at the edge of a creek. The flare is the only light source.",
+      "refs": ["sheets/trucker.jpg", "sheets/truck.jpg", "sheets/crate.jpg"]
+    }
+  ],
+  "shots": [
+    { "id": "1A", "file": "shots/01-black-radio.jpg", "beat": 1, "title": "Over Europe, 1944", "status": "black", "subject": "A frame of pure film black, nothing in it at all — the pilot's radio and the engine are heard over black, and no picture is ever shown.", "refs": [] },
+    { "id": "1B", "file": "shots/02-three-quick-one-slow.jpg", "beat": 1, "title": "Three quick, one slow", "status": "black", "subject": "A frame of pure film black, nothing in it at all — only the clicking in the pilot's headset.", "refs": [] },
+    { "id": "1C", "file": "shots/03-gunfire-silence.jpg", "beat": 1, "title": "Gunfire, then silence", "status": "black", "subject": "A frame of pure film black, nothing in it at all — gunfire and then silence, and we never see what he shot.", "refs": [] },
+
+    { "id": "2A", "file": "shots/04-wright-patterson-night.jpg", "beat": 2, "title": "Establishing", "status": "todo", "subject": "Wide establishing shot, night: a huge arched hangar with its doors half open, spilling amber light across wet tarmac. In the foreground, a small guard booth with a TV glowing blue in its window. A cream semi with a plain white box trailer backs up to the hangar doors. No lettering anywhere.", "refs": ["backgrounds/hangar-exterior.jpg", "sheets/truck.jpg"] },
+    { "id": "2B", "file": "shots/05-guard-booth-tv.jpg", "beat": 2, "title": "The TV", "status": "todo", "subject": "Insert, close on a small 1970s portable TV on a cluttered guard-booth desk, beside a thermos and a logbook. A grainy black-and-white image of a congressional hearing: a long table of men in suits behind microphones, faces indistinct. No readable text on the screen, the logbook or the thermos.", "refs": ["sheets/small-props.jpg"] },
+    { "id": "2C", "file": "shots/02c-the-hangar-floor.jpg", "beat": 2, "title": "The hangar floor", "status": "todo", "subject": "Wide interior shot: airmen in olive fatigues moving canvas-covered crates with a forklift under hanging sodium work lights, rows of crates disappearing into the dark, amber reflections puddled on the concrete.", "refs": ["backgrounds/hangar-interior.jpg"] },
+    { "id": "2D", "file": "shots/06-wright-field-inert.jpg", "beat": 2, "title": "The crate", "status": "todo", "subject": "Medium shot: a single weathered wooden crate sitting apart from the others in a pool of amber light, a blank stencil panel on its side, a dark coffee ring worn into its lid, steel corner brackets and rope handles. The stencil panel is blank; the lettering is painted in post.", "refs": ["sheets/crate.jpg", "backgrounds/hangar-interior.jpg"] },
+    { "id": "2E", "file": "shots/07-coffee-ring.jpg", "beat": 2, "title": "The mug", "status": "todo", "subject": "Close-up: an old sergeant's weathered hand setting a dented white enamel mug down exactly inside a dark ring worn into a wooden crate lid, a thread of steam rising, warm amber light. The mug has a chipped blue rim.", "refs": ["sheets/sergeant.jpg", "sheets/crate.jpg"] },
+    { "id": "2F", "file": "shots/08-hand-on-lid.jpg", "beat": 2, "title": "The hand", "status": "todo", "subject": "Close-up: the same weathered hand resting flat and gentle on the crate lid, the way you'd steady a sleeping animal. The mug is gone; only the ring remains. Soft amber light, shallow focus.", "refs": ["sheets/sergeant.jpg", "sheets/crate.jpg"] },
+    { "id": "2G", "file": "shots/09-dont-you-want-to-know.jpg", "beat": 2, "title": "The signature", "status": "todo", "subject": "Medium two-shot: a lanky young airman in a tan corduroy jacket holds out a clipboard, and a big trucker in a faded mesh cap signs it without looking, toothpick in his mouth. Behind them, out of focus, a forklift lifts the crate into the truck. The clipboard paper is blank; no lettering.", "refs": ["sheets/airman.jpg", "sheets/trucker.jpg", "sheets/crate.jpg"] },
+
+    { "id": "3A", "file": "shots/10-weigh-station.jpg", "beat": 3, "title": "Skipping the scale", "status": "todo", "subject": "Wide shot, night: a cream semi with a white box trailer rolls past a lit weigh-station sign without slowing, taillights streaking, black woods behind. The lit sign is a blank panel; the lettering is added in post.", "refs": ["sheets/truck.jpg", "backgrounds/weigh-station.jpg"] },
+    { "id": "3B", "file": "shots/11-into-the-hills.jpg", "beat": 3, "title": "The hills", "status": "todo", "subject": "High wide shot: one pair of truck headlights winding along a two-lane road through dark wooded hills, fog filling the hollows, a hazy moon. Far behind, a second, smaller pair of headlights.", "refs": ["backgrounds/back-road.jpg"] },
+    { "id": "3C", "file": "shots/12-the-cab.jpg", "beat": 3, "title": "The cab", "status": "todo", "subject": "Interior cab two-shot, night: the trucker driving, lit warm amber by the dashboard; the young airman in the passenger seat twisted around to look at the back wall of the cab, uneasy. Blue fog through the windshield. No lettering on the dash or the papers clipped to it.", "refs": ["sheets/trucker.jpg", "sheets/airman.jpg", "sheets/truck.jpg"] },
+    { "id": "3D", "file": "shots/13-knock-from-trailer.jpg", "beat": 3, "title": "A knock from the trailer", "status": "todo", "subject": "Interior cab shot from behind the seats: the trucker and the airman both turned to look back through the cab's rear window at the wall of the trailer behind them, their faces lit rim-light amber from the dash, the night blue outside.", "refs": ["sheets/trucker.jpg", "sheets/airman.jpg"] },
+    { "id": "3E", "file": "shots/14-one-two-three-four.jpg", "beat": 3, "title": "Counting", "status": "todo", "subject": "Close-up: the airman's fingers tapping his knee in rhythm, his lips moving as he counts under his breath, warm dash light on his face, the dark cab behind him.", "refs": ["sheets/airman.jpg"] },
+    { "id": "3F", "file": "shots/15-slow-one-never-arrives.jpg", "beat": 3, "title": "The missing knock", "status": "todo", "subject": "Close-up: the airman frozen mid-count with one finger raised, eyes locked on the back of the cab, holding his breath. Total stillness, warm dash light, deep shadow everywhere else.", "refs": ["sheets/airman.jpg"] },
+
+    { "id": "4A", "file": "shots/16-headlights-round-bend.jpg", "beat": 4, "title": "Headlights", "status": "todo", "subject": "Point of view from a truck cab through the windshield: a station wagon's headlights coming around a blind curve, drifting over the centre line, glare blooming to white.", "refs": ["sheets/wagon.jpg", "backgrounds/curve.jpg"] },
+    { "id": "4B", "file": "shots/17-two-more-miles.jpg", "beat": 4, "title": "Two more miles", "status": "todo", "subject": "Interior car shot, night: a tired nurse at the wheel of a station wagon, window down, wind pulling strands of hair loose under her white nurse's cap, eyes drifting shut. Pale dashboard glow, dark road ahead, woodgrain door panel beside her.", "refs": ["sheets/nurse-mom.jpg", "sheets/wagon.jpg"] },
+    { "id": "4C", "file": "shots/18-yank-the-wheel.jpg", "beat": 4, "title": "The near-miss", "status": "todo", "subject": "Dynamic wide action shot on a foggy night curve: a cream semi and a green woodgrain station wagon swerve past each other. The wagon's side mirror snaps off in a spray of sparks, and a white nurse's cap tumbles out of its open window. Strong diagonal composition, motion streaks.", "refs": ["sheets/truck.jpg", "sheets/wagon.jpg", "sheets/nurse-mom.jpg", "backgrounds/curve.jpg"] },
+    { "id": "4D", "file": "shots/19-mirror-cap.jpg", "beat": 4, "title": "The cap", "status": "todo", "subject": "Insert on wet asphalt at night, low angle: a chrome car mirror snapped off its stalk lying beside the white nurse's cap, red tail-light glow washing over both, rain-beaded road surface.", "refs": ["sheets/small-props.jpg", "sheets/nurse-mom.jpg"] },
+    { "id": "4E", "file": "shots/20-the-skid.jpg", "beat": 4, "title": "The doors", "status": "todo", "subject": "Rear three-quarter action shot: a white box trailer fishtailing across the lane, its rear swing doors bursting open, a wooden crate sliding out of the dark interior, tyre smoke glowing in the headlights.", "refs": ["sheets/truck.jpg", "sheets/crate.jpg"] },
+    { "id": "4F", "file": "shots/21-missing-knock.jpg", "beat": 4, "title": "The empty trailer", "status": "todo", "subject": "Wide shot up the empty lane at the fishtailing trailer's dark interior, the crate already gone out of frame, the doors swinging, fog tearing past the headlights.", "refs": ["sheets/truck.jpg"] },
+    { "id": "4G", "file": "shots/22-over-the-edge.jpg", "beat": 4, "title": "Over the edge", "status": "todo", "subject": "Wide shot from the shoulder: a wooden crate tipping over the unguarded edge of a curve into a black wooded drop, the truck's red taillights smeared across the fog.", "refs": ["sheets/crate.jpg", "backgrounds/curve.jpg"] },
+
+    { "id": "5A", "file": "shots/23-down-the-bank.jpg", "beat": 5, "title": "Tumbling", "status": "todo", "subject": "Wide shot, night: a wooden crate tumbling end over end down a steep wooded bank, boards shearing off, splinters and leaves in the air, thin shafts of moonlight through the trees.", "refs": ["sheets/crate.jpg", "backgrounds/wooded-bank.jpg"] },
+    { "id": "5B", "file": "shots/24-inside-the-crate.jpg", "beat": 5, "title": "Inside the fall", "status": "todo", "subject": "Abstract view from inside a tumbling wooden crate: near-total darkness slashed by moving stripes of moonlight through gaps between boards, straw and splinters floating. Nothing recognizable inside — no figure, no shape.", "refs": ["sheets/crate.jpg"] },
+    { "id": "5C", "file": "shots/25-by-the-creek.jpg", "beat": 5, "title": "Stillness", "status": "todo", "subject": "Wide, still shot: a wooden crate lying split open on a gravel bank beside a shallow creek, mist settling around it, moonlight on wet stones. The inside of the crate is empty and in shadow.", "refs": ["sheets/crate.jpg", "backgrounds/creek-bottom.jpg"] },
+
+    { "id": "6A", "file": "shots/26-taillights.jpg", "beat": 6, "title": "She didn't stop", "status": "todo", "subject": "Long shot down the road, night: a cream semi stopped crooked across both lanes with its rear doors hanging open. Far down the road, a station wagon's taillights disappear around the bend into fog.", "refs": ["sheets/truck.jpg", "sheets/wagon.jpg", "backgrounds/back-road.jpg"] },
+    { "id": "6B", "file": "shots/27-road-flares.jpg", "beat": 6, "title": "The flare", "status": "todo", "subject": "Medium shot: the trucker striking a road flare, red light blooming and swallowing the blue fog, his shaken face lit from below, the flare spitting sparks and smoke.", "refs": ["sheets/trucker.jpg", "sheets/small-props.jpg"] },
+    { "id": "6C", "file": "shots/28-white-cap.jpg", "beat": 6, "title": "The cap", "status": "todo", "subject": "Low insert on the asphalt: a white nurse's cap with a small enamel pin lying on black wet road, lit deep red by a flare, a snapped-off chrome side mirror beside it. A man's hand in a dark suit sleeve reaches into frame.", "refs": ["sheets/small-props.jpg", "sheets/agents.jpg"] },
+    { "id": "6D", "file": "shots/29-where-is-it.jpg", "beat": 6, "title": "They don't understand", "status": "todo", "subject": "Medium shot, red flare light: an older, heavyset agent in a gray raincoat holding the white nurse's cap in his hand, looking at it; the trucker behind him, shaken, one hand up; the lit flare on the road between them.", "refs": ["sheets/agents.jpg", "sheets/trucker.jpg", "sheets/small-props.jpg"] },
+    { "id": "6E", "file": "shots/30-down-through-red-fog.jpg", "beat": 6, "title": "The descent", "status": "todo", "subject": "Wide shot: two men in dark suits and a lanky young man start down a steep wooded bank holding road flares aloft, small silhouettes against a wall of red-lit fog and black tree trunks.", "refs": ["sheets/agents.jpg", "sheets/airman.jpg", "backgrounds/wooded-bank.jpg"] },
+
+    { "id": "7A", "file": "shots/31-empty.jpg", "beat": 7, "title": "Arrival", "status": "todo", "subject": "Wide shot at a creek, night: three men holding road flares arrive at a split-open wooden crate, red light reflecting in the water, mist curling, black trees above. The crate is empty; nothing in it or near it reads as a figure.", "refs": ["sheets/agents.jpg", "sheets/airman.jpg", "sheets/crate.jpg", "backgrounds/creek-bottom-flare.jpg"] },
+    { "id": "7B", "file": "shots/32-hollow-in-straw.jpg", "beat": 7, "title": "The hollow", "status": "todo", "subject": "Insert looking down into a broken crate: old matted straw with a small hollow pressed into it, the curled shape of something no longer there. Red flare light. The hollow is only a dent in straw — no figure, no body, nothing recognizable.", "refs": ["sheets/crate.jpg"] },
+    { "id": "7C", "file": "shots/33-inert-in-creek.jpg", "beat": 7, "title": "INERT", "status": "todo", "subject": "Insert: a broken crate board half-sunk in a shallow creek, a blank stencil panel on it, water flowing around it, red reflections on the surface. The stencil panel is blank; the word is added in post.", "refs": ["sheets/crate.jpg", "backgrounds/creek-bottom-flare.jpg"] },
+    { "id": "7D", "file": "shots/34-rows-of-marks.jpg", "beat": 7, "title": "The wall", "status": "todo", "subject": "Close shot: a hand holding a road flare low against the inside wall of a wooden crate. The red light rakes across neat rows of thousands of tiny scratch marks covering every inch of the wood. One far corner stays in deep shadow.", "refs": ["sheets/scratched-wall.jpg", "sheets/crate.jpg", "sheets/small-props.jpg"] },
+    { "id": "7E", "file": "shots/35-newest-stroke.jpg", "beat": 7, "title": "The fresh stroke", "status": "todo", "subject": "Extreme close-up: one tiny scratch mark with a diagonal stroke cut through it, the stroke bright pale fresh-cut wood against old gray pine, glowing in red light.", "refs": ["sheets/scratched-wall.jpg"] },
+    { "id": "7F", "file": "shots/36-far-corner.jpg", "beat": 7, "title": "The far corner", "status": "todo", "subject": "Close shot: the far inside corner of the crate, mostly in deep shadow, a few uncrossed marks just catching the red edge of the flare light, the rest of the wall falling into black.", "refs": ["sheets/scratched-wall.jpg"] },
+
+    { "id": "8A", "file": "shots/37-far-off.jpg", "beat": 8, "title": "The woods", "status": "todo", "subject": "Wide shot: the dark woods beyond a creek at night, layers of black trunks fading into mist. Empty, nothing visible — no figure, no eyeshine, no shape among the trees.", "refs": ["backgrounds/wooded-bank.jpg"] },
+    { "id": "8B", "file": "shots/38-only-airman-hears.jpg", "beat": 8, "title": "He hears it", "status": "todo", "subject": "Close-up: the young airman's face lit red from below by a flare, lips moving as he silently counts, eyes searching the dark woods. Two agents out of focus behind him, staring into the crate.", "refs": ["sheets/airman.jpg", "sheets/agents.jpg"] },
+    { "id": "8C", "file": "shots/39-flare-sputters-out.jpg", "beat": 8, "title": "Burnout", "status": "todo", "subject": "Close-up: a road flare sputtering out in a man's hand, the red light collapsing, the frame falling to black. The hand is in shadow — no face.", "refs": ["sheets/small-props.jpg"] }
+  ],
+  "post": {
+    "lettering": ["WRIGHT FIELD 1944 — INERT", "AGRICULTURAL EQUIPMENT", "WEIGH STATION — ALL TRUCKS MUST ENTER"],
+    "note": "Every plate is painted with blank stencil panels and blank signs. The lettering is set in a stencil face and tracked in over the finished picture. Image tools garble type, and a garbled stencil on the crate reads as damage to the one prop the whole film turns on."
+  }
+}
