@@ -36,6 +36,17 @@ sign is where the WEIGH STATION stencil goes, and the old panel's grey smudges r
 To promote any other alternate, copy it over the plate's name in `backgrounds/` or `shots/` and re-run the two
 commands below; nothing else needs editing.
 
+**Rim leak.** Two plates (8A `shots/37-far-off.jpg`, the wooded bank) came back with the paper/vignette pale
+edge that a watercolour look sometimes paints in, which reads as a frame inside a night scene. `node
+tools/trim-plate-borders.mjs` measures each plate's rim against a band inside it and crops the pale ones by a
+small inset, rescaling back to the same size, so framing and aspect don't move. It keeps the untouched original
+in `alt/`. Run it after new plates land; the clean plates are not touched.
+
+**Promoted takes.** `alt/38-only-airman-hears--flat-red.jpg` is the first 8B: a flat red wash that lost his
+shadow structure. The plate now is the relit take (red from one side, cold moonlight from the other).
+`alt/weigh-station--weathered.jpg`, `alt/wooded-bank--untrimmed.jpg` and `alt/37-far-off--untrimmed.jpg` are
+the superseded files, kept for comparison.
+
 Rebuild after adding plates:
 
 ```
