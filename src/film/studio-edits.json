@@ -1329,52 +1329,40 @@
    "slack": 2,
    "endHold": 2.5,
    "captions": {
-    "119-single-file": "Four masked men enter the Hive, single file.",
+    "119-single-file-v1": "Four masked men enter the Hive, single file.",
     "120-the-hive-is-watching": "Doors close softly as they pass. The Hive is watching.",
-    "121-the-shutter": "Kaneko sounds the alarm and pulls the shutter down.",
-    "124-the-repairman": "The radio repairman hears boots in the corridor.",
+    "86-02-three-strikes": "Kaneko strikes the iron pipe three times: the alarm the Hive has kept for fifty years.",
+    "86-03-shutter-down-light-out": "Kaneko pulls the shutter down and puts out the light.",
+    "124-the-repairman-v1": "The radio repairman hears boots in the corridor.",
     "125-the-main-switch": "He pulls the main switch.",
+    "88-01-every-bulb-out": "In the black, Vera's hand finds the wall. Jack follows the sound of her.",
     "126-dark": "Every bulb in the Hive goes out.",
     "127-faces-vanish": "Faces at the windows vanish from the beams.",
     "128-by-touch": "Vera climbs the black stairwell by touch.",
-    "129-she-lets-him": "She finds Jack's hand and pulls him up after her.",
+    "129-she-lets-him-v1": "She finds Jack's hand and pulls him up after her.",
     "319-the-unlit-lighter": "Her thumb on the lighter's wheel. She doesn't light it.",
+    "89-03-the-beam-falls-away": "Below them, boots. A flashlight beam crawls up the wall and falls away.",
     "130-the-roof": "A door opens before Vera can knock.",
-    "131-she-jumps": "Room after room, the Hive opens a way through.",
+    "90-02-family-kitchen-by-candle": "A kitchen lit by one candle. The children hold the next door wide.",
+    "90-03-dentist-finger-to-lips": "The dentist, a finger to his lips.",
+    "90-04-violin-girl": "The girl with the violin sits up and lets them pass.",
+    "90-05-through-the-wardrobe": "A passage through the inside of someone's wardrobe.",
     "378-the-barbers-shop": "The barber turns his chair to the wall.",
     "379-the-laundry": "Wet sheets part and close behind them.",
-    "380-the-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
+    "90-08-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
     "381-the-plank": "A plank across the gap, hauled in after them.",
-    "382-the-pipe-gallery": "The pipes ring softly: one rap means clear.",
+    "382-the-pipe-gallery-playframe": "The pipes ring softly: one rap means clear.",
     "132-the-gap": "Nobody speaks. Every door closes behind them.",
     "132-the-rails-sing": "Overhead the rails begin to sing.",
-    "133-inches-apart": "A train roars over them. Her hand is in his on the rail.",
+    "91-03-hand-in-his-on-the-rail": "A train roars over them. Her hand is in his on the rail.",
     "134-the-walkway-is-empty": "When the train has passed, the ladder is empty.",
     "135-below-the-viaduct": "They step off the last rung into an empty street. Sirens."
    },
    "cues": {
-    "119-single-file": [
-     {
-      "file": "pipe-alarm",
-      "volume": 0.3
-     }
-    ],
     "120-the-hive-is-watching": [
      {
       "file": "doors-close-softly",
       "volume": 0.6
-     }
-    ],
-    "121-the-shutter": [
-     {
-      "file": "shutter-crash",
-      "volume": 0.9
-     }
-    ],
-    "124-the-repairman": [
-     {
-      "file": "boots-single-file",
-      "volume": 0.4
      }
     ],
     "125-the-main-switch": [
@@ -1395,12 +1383,6 @@
       "volume": 0.3
      }
     ],
-    "382-the-pipe-gallery": [
-     {
-      "file": "pipe-alarm",
-      "volume": 0.12
-     }
-    ],
     "132-the-gap": [
      {
       "file": "doors-close-softly",
@@ -1411,12 +1393,6 @@
      {
       "file": "train",
       "volume": 0.8
-     }
-    ],
-    "133-inches-apart": [
-     {
-      "file": "fire-ladder-rungs",
-      "volume": 0.6
      }
     ],
     "135-below-the-viaduct": [
@@ -1447,6 +1423,36 @@
      {
       "file": "jack-running",
       "volume": 0.8
+     }
+    ],
+    "119-single-file-v1": [
+     {
+      "file": "pipe-alarm",
+      "volume": 0.3
+     }
+    ],
+    "86-03-shutter-down-light-out": [
+     {
+      "file": "shutter-crash",
+      "volume": 0.9
+     }
+    ],
+    "124-the-repairman-v1": [
+     {
+      "file": "boots-single-file",
+      "volume": 0.4
+     }
+    ],
+    "91-03-hand-in-his-on-the-rail": [
+     {
+      "file": "fire-ladder-rungs",
+      "volume": 0.6
+     }
+    ],
+    "382-the-pipe-gallery-playframe": [
+     {
+      "file": "pipe-alarm",
+      "volume": 0.12
      }
     ]
    }
@@ -4201,6 +4207,26 @@
     "mode": "shake",
     "shakeAmount": 0.25,
     "shakeDuration": 0.7
+   }
+  },
+  "129-she-lets-him-v1": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "90-02-family-kitchen-by-candle": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "91-03-hand-in-his-on-the-rail": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "382-the-pipe-gallery-playframe": {
+   "cinematic": {
+    "mode": "zoom-hold"
    }
   }
  },

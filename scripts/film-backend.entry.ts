@@ -367,5 +367,10 @@ check(service.every((s) => s.hideHud && s.dialogueBeats?.every((b) => b.silent))
 // the delays alone add up to about 170 s of a run that plays about 190 s (18 October 2026)
 const playedSeconds = (nodes: typeof service) => songSeconds(nodes) + nodes.length * 0.58;
 check(playedSeconds(service) > 180 && playedSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${playedSeconds(service).toFixed(0)} s)`);
+// the raid on the Hive (85 to 92, "Coins Measure-Time") plays the director's picks (19 October 2026): 11 pictures of the thehiveescape
+// set and 5 earlier versions (hive_raid_takes/) among the film's own, nothing left out
+const raidPics = [...new Set(runOf("raid").map((s) => s.background ?? ""))];
+eq([raidPics.filter((b) => b.includes("/thehiveescape/")).length, raidPics.filter((b) => b.includes("/hive_raid_takes/")).length], [11, 5], "the raid plays the director's picks: 11 new pictures and 5 earlier versions");
+check(!raidPics.some((b) => /\/(119-single-file|121-the-shutter|124-the-repairman|129-she-lets-him|131-she-jumps|133-inches-apart|380-the-shrine-hatch|382-the-pipe-gallery)\.jpg$/.test(b)), "and none of the eight pictures they replace");
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);

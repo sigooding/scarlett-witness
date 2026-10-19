@@ -9,6 +9,28 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The raid on the Hive: the director's picks (19 October 2026)
+
+Scenes 85–92 (the raid run, "Coins Measure-Time") were picked position by position from every version of each picture: the
+film's own, the `thehiveescape/` set, earlier takes (archive, git history, PlayFrame's older copies) and the `reshoot-1080`
+remakes. Nothing was left out. **31 shots, about 3.1 s per silent shot** (was 22 captioned shots).
+- **New pictures (11):**
+  - **In place of the film's:** 86-03 for 121 (the shutter), 90-02 for 131 (the kitchen by candle), 90-08 for 380 (the shrine
+    hatch), 91-03 for 133 (her hand in his on the rail).
+  - **Added where the film had none:** 86-02 (three strikes), 86-04 (go now), 88-01 (every bulb out), 89-03 (the beam falls
+    away), 90-03 (the dentist), 90-04 (the violin girl), 90-05 (the wardrobe).
+- **Earlier versions (5)**, installed full size in `hive_raid_takes/`:
+  - archived takes: 119 v1 (single file), 124 v1 (the repairman), 129 v1 (she lets him);
+  - PlayFrame's own copies: 123 (fifty years) and 382 (the pipe gallery), which the film had since replaced.
+- The rest stay as they were, the plank (381) as redrawn on 16 October among them.
+- **Captions, sounds, camera:**
+  - Each replacement takes over its picture's caption and sound cue. The shutter and kitchen captions now say what the new
+    pictures show, and the added pictures have captions of their own.
+  - The zoom-hold camera move carries over to 129, 131's, 133's and 382's replacements. The lights stay with the pictures they
+    were placed on.
+- The change is in scenes 85–92 of `src/film/story.json` and the "raid" soundtrack in `src/film/studio-edits.json`; a backend
+  check pins the counts. Nobody has watched it with the song.
+
 ## Jack and Ishida in the car: the director's picks (19 October 2026)
 
 Scene 61 (INT. ISHIDA'S CAR - NIGHT) was picked picture by picture against the `jack_ishida_new/` set (11 shots, right-hand
