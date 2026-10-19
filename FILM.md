@@ -9,29 +9,44 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
-## Vera's night run plays the vera_run_new set (18 October 2026)
+## Vera's night run plays the director's picks (19 October 2026)
 
-Scenes 72 (from the song's cue) to 76 play the new `vera_run_new/` set, made from the brief on branch `film-vera-run-brief`
-(`vera_run_new/BRIEF.md` there): one Vera, one dress, one route, the crossing from scenes 27 and 62.
-- **The tool:** `tools/vera-run-cut.mjs` puts each picture in front of the screenplay beat it covers, so the voice takes stay
-  where they were. It rewrites the "bad-guy" soundtrack's captions and sound cues for these scenes, and gives the running
-  shots the shake the old run had. Run it, then `FILM_SRC=/nonexistent node tools/build-film-story.mjs`.
-- **What plays:** 40 of the 54 pictures are in. Bad Guy now carries 50 pictures, about 4.75 s per silent picture (was 9.75 s).
-- **Still to come:**
-  - `74-12`, so "She was waiting for me" plays on 74-11 for now;
-  - `75-02` to `75-06`, so the shipped still frames play;
-  - all eight of `76`, so the shipped pictures of her apartment play, and the walkway and the empty umbrella stand are left out.
-  - Each slots in when it is uploaded and the tool is run again.
-- **Builder fix:** a node that continues a scene after a music cue now opens on its own first picture, or on the one showing
-  when it began, not on the scene's last picture. That also fixes `nw_s20_b`, which opened on 371 before 192, and
+Scenes 72 (from the song's cue) to 76 play what the director picked, picture by picture. Each of the 54 pictures of the
+`vera_run_new/` set (made 18 October from the brief on branch `film-vera-run-brief`, `vera_run_new/BRIEF.md` there: one Vera,
+one dress, one route, the crossing from scenes 27 and 62) was shown beside the picture the film played at that beat and that
+picture's earlier takes, and the director chose one.
+- **What plays:** 27 new pictures, 14 of the shipped ones and 8 earlier takes. Bad Guy carries 50 shots (the run and Jack's
+  office), about 4.9 s per silent shot.
+  - **Shipped pictures kept**, with the captions and sounds they had: `69-vera-runs`, `547-the-call-still-lit`,
+    `549-the-crossing-chimes` (the crossing chime), `72-the-lost-heel` (the shoe splash), `74-twenty-metres-apart`, `501-one-shoe`,
+    `502-why-didnt-you-tell-me`, `503-she-holds-on`, `73-two-small-figures`, `504-nobody-looks-down` (the train),
+    `314-the-empty-crossing`, `82-on-the-floor`, `315-the-number-pressed`, `84-cries-without-a-sound`.
+  - **Earlier takes**, in `vera_run_takes/`, one file per beat named `<beat>--<the take>.jpg` so each carries its own caption:
+    69 v2 as she starts to run; PlayFrame's 70 (the version the film replaced on 13 October) on "Rain plasters her hair" and
+    again on "Slipping. Stumbling."; 71 v2 at the vending machine; 74 v2 as she cries; 75 v2 for both blows; 76 v1 as she
+    covers her face; 79 v1 for the Hive shut. Installed with `tools/install-film-picture.mjs` (all 1920×1080, so byte copies;
+    the archive is untouched). They shake like the new picture of their beat; none has a depth map or lights, which stay with
+    the pictures they were made from.
+  - **No picture of its own:** the beat of `74-02` (Jack out of the dark). 74-01 holds, as an empty street held there before.
+  - **502** comes up on "Why didn't you tell me?", as it always did, one line before the new set's beat for it.
+  - The 27 new pictures not picked stay on disk.
+- **The tool:** `tools/vera-run-cut.mjs` holds the picks (`PICKS`) and the kept shipped pictures' steps, captions and cues
+  (`ORIGINALS`). It puts each picture in front of the screenplay beat it covers, so the voice takes stay where they were, and
+  rewrites the "bad-guy" soundtrack's captions and sound cues for these scenes. Run it, then
+  `FILM_SRC=/nonexistent node tools/build-film-story.mjs`.
+- **Notes on what plays:** the director picked `72-02` (the phone lowers) with the note "phone facing wrong way"; `72-01`'s
+  umbrella reads more white than pale blue. The new set's other slips from the brief (73-11 and 73-12 running right to left,
+  74-11's bigger overpass, 74-16 mirrored) were not picked.
+- **Media walker fix:** the credits montage's camera looks (`credits.montageLooks`) carry depth maps, and `visitStoryMediaFields`
+  did not visit them. `80-the-machine-waits` is now only in the credits montage, so its map went unvisited (a Studio export
+  would have left it behind). The walker visits them now; a backend check guards it.
+- **Builder fix** (18 October): a node that continues a scene after a music cue now opens on its own first picture, or on the
+  one showing when it began, not on the scene's last picture. That also fixes `nw_s20_b`, which opened on 371 before 192, and
   `nw_s65_b`, which opened on 277 (Vera leaving) before she had dressed.
-- **Pictures that slip from the brief:**
-  - **73-11 and 73-12:** she runs right to left.
-  - **74-11:** it is under a bigger overpass than the rest of the street.
-  - **74-16:** it is mirrored (the vending machines on the right) and has two pale umbrellas lying on the road.
-  - **72-01:** the umbrella reads more white than pale blue.
-- **Test fix:** the service's timing check now counts each node's fade-in. It had failed since the cut grew to 34 pictures:
-  the delays alone add up to 170 s of a run that plays about 190 s.
+- **Test fix** (18 October): the service's timing check now counts each node's fade-in. It had failed since the cut grew to 34
+  pictures: the delays alone add up to 170 s of a run that plays about 190 s.
+- This is the film only: PlayFrame's boards for 72 to 76 and the visual novel still have the shipped pictures. Nobody has
+  watched the new run with the song.
 
 ## Mara's service plays the 34-shot cut (17 October 2026)
 

@@ -93,6 +93,8 @@ export function visitStoryMediaFields(story: Story, visit: (field: StoryMediaFie
     });
     cinematic(sc.cinematic, "scene");
     frames(sc.credits?.montage, "credits montage image");
+    // A montage still's camera look (keyed by the still) can carry its own depth map, plate and cut-outs.
+    Object.values(sc.credits?.montageLooks ?? {}).forEach((look) => cinematic(look, "credits montage look"));
     sc.hotspots?.forEach((h) => {
       const label = `hotspot "${h.label || h.id}"`;
       field(h, "image", `${label} image`);

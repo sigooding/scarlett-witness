@@ -106,6 +106,11 @@ visitStoryMediaFields(deepClone(FILM), ({ value }) => seen.add(value));
 const unseen = [...referenced].filter((v) => !seen.has(v));
 eq(unseen, [], `the media walker visits all ${referenced.size} files the film references (missed: ${unseen.slice(0, 4).join(", ")}${unseen.length > 4 ? "…" : ""})`);
 check(referenced.size > 1000, "and the film really does reference more than a thousand files");
+// the credits montage's camera looks carry depth maps of their own (80-the-machine-waits has been in the montage only since the
+// director's picks for Vera's run, 19 October 2026, so nothing else reaches its map)
+const montageDepth = FILM.scenes.flatMap((s) => Object.values(s.credits?.montageLooks ?? {}))
+  .flatMap((c) => [c.depthMap, c.depthPlate, ...(c.depthCutouts ?? []).map((k) => k.image)]).filter((v): v is string => !!v);
+check(montageDepth.length > 0 && montageDepth.every((v) => seen.has(v)), `the credits montage's depth maps are media fields (${montageDepth.length} files)`);
 const sfx = [...referenced].filter((v) => v.startsWith("/film/sfx/"));
 check(sfx.length > 100 && sfx.every((v) => seen.has(v)), `beat sound effects and recorded ambience loops are media fields (${sfx.length} files)`);
 const onDisk = [...referenced].filter((v) => existsSync(join(ROOT, "public", v)));
@@ -305,9 +310,14 @@ eq(badGuy.filter((s) => !s.hideHud).map((s) => s.id), [], "every node of the run
 const heels = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/heels-running-wet.mp3");
 const car = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3");
 check(heels >= 0 && car > heels && /\/73-10-a-car-passes\.jpg$/.test(badGuy[car]?.background ?? ""), "the car-pass effect plays after the heels, on the picture of the car passing (73-10)");
-// scenes 72 to 76 play the vera_run_new set (tools/vera-run-cut.mjs); its pictures still to come fall back to the shipped ones
+// scenes 72 to 76 play the director's picks (19 October 2026, PICKS in tools/vera-run-cut.mjs): 27 of the vera_run_new set, 14 of the
+// shipped pictures and 8 earlier takes; the beat of 74-02 keeps no picture of its own, and 502 comes up on its own line again
 const runPics = [...new Set(badGuy.map((s) => s.background ?? ""))];
-check(runPics.filter((b) => b.includes("/vera_run_new/")).length >= 40, `Bad Guy's run plays the vera_run_new set (${runPics.filter((b) => b.includes("/vera_run_new/")).length} of its pictures)`);
+const runFrom = (folder: string) => runPics.filter((b) => b.includes(`/${folder}/`)).length;
+eq([runFrom("vera_run_new"), runFrom("vera_run_takes")], [27, 8], "Bad Guy's run plays the director's picks: 27 new pictures and 8 earlier takes");
+check(!runPics.some((b) => /74-02-jack-out-of-the-dark/.test(b)), "74-02 is left out; 74-01 holds while Jack walks out of the dark");
+const why = badGuy.find((s) => s.dialogueBeats?.[0]?.text?.startsWith("Why didn't you tell me?"));
+check(/\/502-why-didnt-you-tell-me\.jpg$/.test(why?.background ?? ""), "\"Why didn't you tell me?\" plays on 502, as it did before the new set");
 check(/\/72-01-the-piano-plays-on\.jpg$/.test(badGuy[0]?.background ?? ""), "the song opens on Vera frozen at the bar (72-01), not on the scene's last picture");
 const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).filter((b) => b.silent).map((b) => b.afterBeatDelaySeconds ?? 0);
 // a picture's time on screen is all its nodes together: a caption before a line on the same picture is not a shot of its own
