@@ -372,5 +372,9 @@ check(playedSeconds(service) > 180 && playedSeconds(service) < 199.15, `the run 
 const raidPics = [...new Set(runOf("raid").map((s) => s.background ?? ""))];
 eq([raidPics.filter((b) => b.includes("/thehiveescape/")).length, raidPics.filter((b) => b.includes("/hive_raid_takes/")).length], [11, 5], "the raid plays the director's picks: 11 new pictures and 5 earlier versions");
 check(!raidPics.some((b) => /\/(119-single-file|121-the-shutter|124-the-repairman|129-she-lets-him|131-she-jumps|133-inches-apart|380-the-shrine-hatch|382-the-pipe-gallery)\.jpg$/.test(b)), "and none of the eight pictures they replace");
+// scene 2 plays the director's picks (19 October 2026): seven of its eleven pictures from s2_picks/ (three archived takes, four of
+// s2_new2 under their own names so the s2 plates' lights and depth never land on them)
+const s2Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s2(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
+eq(s2Pics.filter((b) => b.includes("/s2_picks/")).length, 7, "scene 2 plays the director's picks: seven pictures from s2_picks/");
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);

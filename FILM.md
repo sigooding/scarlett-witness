@@ -9,6 +9,24 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Scene 2, the small bar: the director's picks (19 October 2026)
+
+Scene 2 was picked shot by shot from every version of each picture: the film's own `s2/`, the two reshoots `s2_new/` and
+`s2_new2/`, the archived takes and older versions from PlayFrame's history.
+- **Kept as they were (4):** 19 (the bar), 20 (the journalist), 22 (not his business), 308 (the clip under the shelf).
+- **Archived takes (3):** 21 v1 (Mara bursts in), 25 v2 (two pairs of shoes), 27 v1 (the notebook). 21 v1 and 27 v1 were
+  1912×800, so the install tool cropped them to 16:9 at their centre (Mara at the door and the hand on the notebook stay in
+  frame) and enlarged them to 1920×1080.
+- **From `s2_new2` (4):** 23 (behind the counter), 24 (from the floor), 26 (the variety show), 28 (the blue glow). They are
+  copied under their own names because `pictureLook` goes by file name, and the `s2/` pictures of the same names carry lights and
+  a depth map placed for those plates.
+- All seven are in `s2_picks/`; nothing in `s2/`, `s2_new2/` or the archive changed. `s2_new2`'s 29 (Mara gasps) is not used.
+- **Mixed sets:** `s2_new2` is another bar layout with the old scene 1 Mara, and it stages the scene in its own order. 23–28 now
+  come from it while 19–22 do not.
+- **Director's note on 19:** "journalist should be sat here". Not done: the film's 19 is the empty bar. An older version in
+  PlayFrame's history shows him at the counter.
+- The change is in scene 2 of `src/film/story.json`; a backend check pins it. Nobody has watched it.
+
 ## The raid on the Hive: the director's picks (19 October 2026)
 
 Scenes 85–92 (the raid run, "Coins Measure-Time") were picked position by position from every version of each picture: the

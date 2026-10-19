@@ -2259,12 +2259,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Mara bursts in, the key in her fist.",
      "silent": true,
-     "background": "/film/img/s2/21-mara-bursts-in.jpg",
+     "background": "/film/img/s2_picks/21-mara-bursts-in-v1.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "dollyDirection": "left",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
@@ -2307,11 +2307,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Before she can answer, the door opens behind her. Rain noise.",
      "silent": true,
-     "background": "/film/img/s2/25-two-pairs-of-shoes.jpg",
+     "background": "/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
+      "mode": "dolly",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
@@ -2336,12 +2336,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Mara is behind the counter before she knows she's moved.",
      "silent": true,
-     "background": "/film/img/s2/23-behind-the-counter.jpg",
+     "background": "/film/img/s2_picks/23-behind-the-counter-s2new2.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 17,
-      "dollyDirection": "left",
+      "mode": "static",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 14,
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
@@ -2356,12 +2356,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_journalist",
      "text": "Where is he?",
      "audioUrl": "/film/voice/s2/25-journalist-where-is-he.mp3",
-     "background": "/film/img/s2/24-from-the-floor.jpg",
+     "background": "/film/img/s2_picks/24-from-the-floor-s2new2.jpg",
      "cinematic": {
-      "mode": "static",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
-      "dollyDirection": "right",
+      "mode": "dolly",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 16,
+      "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
@@ -2376,31 +2376,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Two shots. On the high shelf, the television audience laughs.",
      "silent": true,
-     "background": "/film/img/s2/26-the-variety-show.jpg",
+     "background": "/film/img/s2_picks/26-the-variety-show-s2new2.jpg",
      "cinematic": {
-      "mode": "static",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 21,
-      "dollyDirection": "left",
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "lights": [
-       {
-        "x": 50,
-        "y": 11,
-        "color": "#a9c8ff",
-        "size": 10,
-        "intensity": 0.45,
-        "pulseSeconds": 0.7,
-        "pulseAmount": 0.6
-       }
-      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
-     "backgroundTransition": "zoom",
-     "backgroundTransitionSpeed": 0.3,
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9,
      "sfxUrl": "/film/sfx/shot2-fall.mp3"
     },
     {
@@ -2440,12 +2429,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "He takes one step toward the counter. A voice in his earpiece: one word. He turns and goes.",
      "silent": true,
-     "background": "/film/img/s2/27-the-notebook.jpg",
+     "background": "/film/img/s2_picks/27-the-notebook-v1.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "50% 60%",
-      "zoomDuration": 20,
-      "dollyDirection": "left",
+      "mode": "static",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 22,
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
@@ -2462,35 +2451,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The door swings shut. The television laughs again.",
      "silent": true,
-     "background": "/film/img/s2/28-the-blue-glow.jpg",
+     "background": "/film/img/s2_picks/28-the-blue-glow-s2new2.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 22,
-      "dollyDirection": "left",
+      "mode": "static",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 17,
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "lights": [
-       {
-        "x": 59,
-        "y": 10,
-        "color": "#a9c8ff",
-        "size": 12,
-        "intensity": 0.45,
-        "pulseSeconds": 0.7,
-        "pulseAmount": 0.6
-       },
-       {
-        "x": 16,
-        "y": 47,
-        "color": "#ffb347",
-        "size": 20,
-        "intensity": 0.22,
-        "pulseSeconds": 5,
-        "pulseAmount": 0.15
-       }
-      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -26335,5 +26304,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "d6597b4441ec"
+ "builtinRevision": "c142c8ce40ce"
 } as unknown as Story;
