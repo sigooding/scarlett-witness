@@ -273,7 +273,7 @@ and caption clicks keep their behaviour.
 ### 7.1 Export and import
 
 - Studio → **Export** on `jack-morrow-witness` produced a **44,190,899-byte**
-  `.reel.json` (`studio-export.png`).
+  `.reel.json` (the dialog reads `43155 KB`; `studio-export.png`).
 - It embeds **129 assets** (38 images, 91 audio) and carries **136 `asset:`
   references**; every embedded blob is sha1-identical to the file it replaces,
   and there are **0 non-media differences** from the built-in story. The export
