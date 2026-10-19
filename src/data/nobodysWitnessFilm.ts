@@ -17896,7 +17896,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_bad-guy_13",
-   "title": "The night after the call: Slipping. Stumbling.",
+   "title": "The night after the call: She keeps going, slipping, stumbling.",
    "background": "/film/img/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17925,7 +17925,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b12",
      "characterId": "nw_narrator",
-     "text": "Slipping. Stumbling.",
+     "text": "She keeps going, slipping, stumbling.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.32,
@@ -18976,7 +18976,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_bad-guy_40",
-   "title": "The night after the call: Vera covers her face with her hands.",
+   "title": "The night after the call: In the water, someone under a pale blue ",
    "background": "/film/img/vera_run_takes/74-18-she-covers-her-face--76-the-reflection-v1.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19003,7 +19003,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b32",
      "characterId": "nw_narrator",
-     "text": "Vera covers her face with her hands.",
+     "text": "In the water, someone under a pale blue umbrella. Mara, or no one.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.32,
@@ -21994,7 +21994,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_raid_04",
-   "title": "The raid on the Hive: Kaneko pulls the shutter down and puts o",
+   "title": "The raid on the Hive: Shutter down, light out. Kaneko points: ",
    "background": "/film/img/thehiveescape/s86/86-03-shutter-down-light-out.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22021,7 +22021,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b4",
      "characterId": "nw_narrator",
-     "text": "Kaneko pulls the shutter down and puts out the light.",
+     "text": "Shutter down, light out. Kaneko points: up, through the back.",
      "silent": true,
      "sfxUrl": "/film/sfx/shutter-crash.mp3",
      "sfxVolume": 0.9,
@@ -22344,7 +22344,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_raid_13",
-   "title": "The raid on the Hive: Every bulb in the Hive goes out.",
+   "title": "The raid on the Hive: The masked men stop. Flashlights snap on",
    "background": "/film/img/s88/126-dark.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22371,7 +22371,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b8",
      "characterId": "nw_narrator",
-     "text": "Every bulb in the Hive goes out.",
+     "text": "The masked men stop. Flashlights snap on.",
      "silent": true,
      "sfxUrl": "/film/sfx/flashlights-snap-on.mp3",
      "sfxVolume": 0.8,
@@ -24602,7 +24602,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_service_20",
-   "title": "Mara's service: Vera goes to the table. Jack goes with h",
+   "title": "Mara's service: Vera and her mother bow their heads at t",
    "background": "/film/img/s97a/565-they-bow.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24629,7 +24629,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b20",
      "characterId": "nw_narrator",
-     "text": "Vera goes to the table. Jack goes with her. They bow.",
+     "text": "Vera and her mother bow their heads at the table.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.83,
@@ -24935,7 +24935,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_service_29",
-   "title": "Mara's service: Later. Vera opens the blue umbrella.",
+   "title": "Mara's service: Later. Out in the lane, the blue umbrell",
    "background": "/film/img/service_new/587-the-blue-umbrella-opens.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24962,7 +24962,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b29",
      "characterId": "nw_narrator",
-     "text": "Later. Vera opens the blue umbrella.",
+     "text": "Later. Out in the lane, the blue umbrella opens.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.83,
@@ -24972,7 +24972,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_service_30",
-   "title": "Mara's service: They come out into the lane. A train goe",
+   "title": "Mara's service: The mourners go up the lane together. A ",
    "background": "/film/img/s97a/569-after-the-service.jpg",
    "cinematic": {
     "mode": "static",
@@ -24999,7 +24999,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b30",
      "characterId": "nw_narrator",
-     "text": "They come out into the lane. A train goes over. Her mother stays behind with the photograph.",
+     "text": "The mourners go up the lane together. A train goes over.",
      "silent": true,
      "sfxUrl": "/film/sfx/train.mp3",
      "sfxVolume": 0.4,
@@ -25011,7 +25011,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_song_service_31",
-   "title": "Mara's service: A while longer.",
+   "title": "Mara's service: Her mother stays behind with the photogr",
    "background": "/film/img/s97a/573-her-mother-stays.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25038,7 +25038,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_song_b31",
      "characterId": "nw_narrator",
-     "text": "A while longer.",
+     "text": "Her mother stays behind with the photograph a while longer.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.83,
@@ -26304,5 +26304,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "c142c8ce40ce"
+ "builtinRevision": "49082524c2f4"
 } as unknown as Story;

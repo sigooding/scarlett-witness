@@ -9,6 +9,13 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## What doesn't match in the five picked scenes (19 October 2026)
+
+`docs/picks-review-2026-10-19.md` lists every continuity slip found after the picks below (the wrong Jack in two of Vera's
+takes, shoes, the car changing sides, the split frame at Okada's door, lights left on in the raid, the men back outside in
+scene 2…), each written as a retake brief for an image generator: the new file to make, the references to attach, the prompt
+and how to wire it in. Eight captions that no longer said what their pictures show were rewritten; the table is at its top.
+
 ## Scene 2, the small bar: the director's picks (19 October 2026)
 
 Scene 2 was picked shot by shot from every version of each picture: the film's own `s2/`, the two reshoots `s2_new/` and

@@ -202,6 +202,11 @@ const ORIGINALS = {
 // an earlier take shakes like the new picture of its beat, or, where that one holds still, like the running shot it was a take of
 // (its depth map and lights stay with the picture they were made from)
 const TAKE_SHAKE = { "73-08-she-slips--70-not-elegantly-badly-playframe": 0.25 };
+// an earlier take's caption, where the beat's words don't fit what the take shows (19 October 2026 review)
+const TAKE_CAPTION = {
+  "73-08-she-slips--70-not-elegantly-badly-playframe": "She keeps going, slipping, stumbling.",
+  "74-18-she-covers-her-face--76-the-reflection-v1": "In the water, someone under a pale blue umbrella. Mara, or no one.",
+};
 
 const base = f => f.replace(/^.*\//, "").replace(/\.[a-z0-9]+$/i, "");
 const has = file => existsSync(resolve(IMG, "vera_run_new", file + ".jpg"));
@@ -283,7 +288,8 @@ for (const pic of allPics) {
 }
 // an earlier take carries the caption and sound of the beat it plays on
 for (const [name, pic] of takes) {
-  if (pic.caption && pic.caption.length) seg.captions[name] = pic.caption; else delete seg.captions[name];
+  const caption = TAKE_CAPTION[name] ?? pic.caption;
+  if (caption && caption.length) seg.captions[name] = caption; else delete seg.captions[name];
   if (CUES[pic.file]) seg.cues[name] = CUES[pic.file]; else delete seg.cues[name];
   const amount = pic.shake ?? TAKE_SHAKE[name];
   if (amount) shake(name, amount);
