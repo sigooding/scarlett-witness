@@ -9,6 +9,29 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Mara's service plays the director's picks (19 October 2026)
+
+Scene 97A plays what the director picked, shot by shot, from every version of each shot: the service_new cut, the fourteen
+stills of `art/mara-service/` as the film first installed them (`s97a/`), the director's uploads in `service/`, the set's
+left-out takes and an extra never in the cut. Nothing was left out and one shot was added: **35 shots, about 5.4 s each** under
+*What Made You, You*. `tools/service-cut.mjs` holds the cut (its header has the picks).
+- **The director's own pictures (12):**
+  - **From `s97a/` (10):** 557, 561, 562, 563, 564, 565, 566, 567, 568, 569. The 565 there is the picture as corrected on
+    13 October (Vera, her mother, a standing man), not the first install made from `art/mara-service/07`.
+  - **From `service/` (2):** 570 and 573, installed full size (enlarged to 1920×1080) as `s97a/570-before-he-kneels.jpg` and
+    `s97a/573-her-mother-stays.jpg`.
+- **576** plays `extras/mom-02` (left out on 17 October for its other room).
+- **`extras/mom-03`** (her mother leaving, in her coat) is added after 573, so she goes only after she has stayed a while
+  longer. Caption "Then she goes too, in her black coat."
+- **Known differences between the pictures:**
+  - 567 is one of the two stills with a split frame glued in.
+  - 561 and 565 are near the same wide.
+  - 570, 573 and mom-02 are in another room than the rest, and 573 has Vera in a cream sweater.
+  - mom-03 is a warmer interior with a lane outside.
+- Captions, the train over 569 and the song's timing are as before; no picture of the service has a depth map or a look of its
+  own, so none carries over between same-named files.
+- This is the film only: PlayFrame's board for 97A still lists 556–569 on the `s97a` pictures. Nobody has watched it with the song.
+
 ## Vera's night run plays the director's picks (19 October 2026)
 
 Scenes 72 (from the song's cue) to 76 play what the director picked, picture by picture. Each of the 54 pictures of the

@@ -349,11 +349,14 @@ check(closingCredits?.musicLoop === false && FILM.scenes.find((s) => s.id === "n
 
 console.log("What Made You, You plays through Mara's service, one still at a time");
 const service = runOf("service");
-// 17 October 2026: the service plays tools/service-cut.mjs's cut of the service_new set, one node per picture, as many of its 34 shots as are on disk
+// 17 October 2026: the service plays tools/service-cut.mjs's cut, one node per picture; since the director's picks (19 October 2026)
+// twelve of its 35 shots are the director's own pictures (s97a/) and the rest come from the service_new set and its extras
 const servicePics = service.map((s) => s.background);
+const servicePic = (name: string) => servicePics.findIndex((p) => p?.endsWith(`/${name}.jpg`));
 eq(new Set(servicePics).size, service.length, "the service's run is one node per picture");
-check(service.length >= 15 && servicePics.every((p) => /^\/film\/img\/service_new\//.test(p ?? "")), `the service plays the service_new cut (${service.length} of its 34 shots)`);
-check(servicePics.indexOf("/film/img/service_new/557-the-umbrellas.jpg") < servicePics.indexOf("/film/img/service_new/556-the-lane-from-above.jpg") && servicePics.indexOf("/film/img/service_new/568-kaneko-and-okada.jpg") > servicePics.indexOf("/film/img/service_new/569-after-the-service.jpg"), "the blue umbrella comes up the lane (557) before it reaches the door (556), and Kaneko and Okada sit in the emptied room (568) after the others have gone (569)");
+check(service.length === 35 && servicePics.every((p) => /^\/film\/img\/(service_new|s97a)\//.test(p ?? "")), `the service plays the director's picks (${service.length} shots)`);
+eq(servicePics.filter((p) => p?.includes("/s97a/")).length, 12, "twelve of them are the director's own pictures");
+check(servicePic("557-the-umbrellas") < servicePic("556-the-lane-from-above") && servicePic("568-kaneko-and-okada") > servicePic("569-after-the-service") && servicePic("mom-03-what-she-wears-home") > servicePic("573-her-mother-stays"), "the blue umbrella comes up the lane (557) before it reaches the door (556), her mother goes (mom-03) only after she has stayed a while longer (573), and Kaneko and Okada sit in the emptied room (568) after the others have gone (569)");
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/what-made-you-you.mp3").map((s) => s.id), [service[0].id], "the song starts once, on the run's first node");
 check(service[0].musicLoop === false, "and plays once");
 eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothing of 97A is left to click through: the whole scene plays to the song");
