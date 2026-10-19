@@ -9,6 +9,22 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Jack and Ishida in the car: the director's picks (19 October 2026)
+
+Scene 61 (INT. ISHIDA'S CAR - NIGHT) was picked picture by picture against the `jack_ishida_new/` set (11 shots, right-hand
+drive, one screen geography; its README has the reasoning). The director took two of them:
+- **61-01 (under the expressway)** opens the scene in place of `s61/228-nine-oclock`, which had Jack behind the wheel and the
+  two men looking at each other. 228's lights (`pictureLook`) belonged to that picture and no longer play.
+- **61-02 (neither looks)** comes up on "Ishida behind the wheel. Jack in the passenger seat. Neither looks at the other."
+- 481 to 484 stay, and the other nine new pictures are not used. Note: the kept pictures are left-hand drive and the new
+  two are right-hand drive, so the car changes sides after the opening.
+- **Director's note on 483 (eyes on the rain):** "needs character consistency" (Jack's hair is long and dark there, grey and
+  swept back elsewhere). Not retaken yet.
+- The change is two steps in scene 61 of `src/film/story.json`.
+- Also: the Vera-run cut had split the paragraph the heels effect looked for, so that effect's `find` (studio-edits `sfx`) is
+  now "In heels, in the red dress". It plays nothing in the run either way (the run's sounds are its `cues`); it only stops a
+  build warning.
+
 ## Mara's service plays the director's picks (19 October 2026)
 
 Scene 97A plays what the director picked, shot by shot, from every version of each shot: the service_new cut, the fourteen

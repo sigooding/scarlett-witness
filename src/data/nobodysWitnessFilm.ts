@@ -14926,7 +14926,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s61",
    "title": "61 — Nine o'clock",
-   "background": "/film/img/s61/228-nine-oclock.jpg",
+   "background": "/film/img/jack_ishida_new/61-01-under-the-expressway.jpg",
    "prose": "INT. ISHIDA'S CAR - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "motes",
@@ -14939,44 +14939,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Parked under an elevated expressway. Rain drumming on the roof. The dashboard glow.",
      "silent": true,
-     "background": "/film/img/s61/228-nine-oclock.jpg",
+     "background": "/film/img/jack_ishida_new/61-01-under-the-expressway.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "42% 38%",
       "zoomDuration": 21,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "lights": [
-       {
-        "x": 36,
-        "y": 64,
-        "color": "#7fe0c8",
-        "size": 10,
-        "intensity": 0.35,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.05
-       },
-       {
-        "x": 49,
-        "y": 78,
-        "color": "#7fe0c8",
-        "size": 8,
-        "intensity": 0.3,
-        "pulseSeconds": 8,
-        "pulseAmount": 0.05
-       },
-       {
-        "x": 50,
-        "y": 37,
-        "color": "#ffa94d",
-        "size": 8,
-        "intensity": 0.3,
-        "pulseSeconds": 6,
-        "pulseAmount": 0.1
-       }
-      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -14987,7 +14958,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b999",
      "characterId": "nw_narrator",
      "text": "Ishida behind the wheel. Jack in the passenger seat. Neither looks at the other.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/jack_ishida_new/61-02-neither-looks.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 22,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1000",
@@ -26200,5 +26185,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "a31cf10cf2f4"
+ "builtinRevision": "af0636155074"
 } as unknown as Story;
