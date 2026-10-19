@@ -119,6 +119,37 @@ test("deleting a just-edited beat is one separate, reversible undo step", async 
   await expect(line).toBeHidden();
 });
 
+test("placing a beat light by clicking its preview does not yank focus or scroll to the image path", async ({ page }) => {
+  // Regression: the beat's background Field is a <label> wrapping the whole
+  // camera/lighting editor, so a click on the click-to-place preview was
+  // forwarded to the label's first control (the image-path box) — the cursor
+  // landed in that box and the inspector jumped to show it.
+  await studio(page); await selectScene(page, "fg_cold");
+  await page.getByRole("tab", { name: "Beats", exact: true }).click();
+  await page.getByRole("button", { name: /^💬 Beat 1/ }).click();
+  await page.getByRole("button", { name: /Background & camera/ }).click();
+  const panel = page.locator("#studio-editor-panel");
+  const pathInput = page.getByPlaceholder(/leave blank for scene default/);
+  await pathInput.fill("/assets/family-guy/living-room.webp");
+  await page.getByRole("button", { name: /💡 Lighting/ }).click();
+  await page.getByRole("button", { name: "＋ Add light", exact: true }).click();
+  const preview = page.locator('div[title="Click to move this light"]');
+  await preview.scrollIntoViewIfNeeded();
+  const box = (await preview.boundingBox())!;
+  const before = await panel.evaluate((el) => el.scrollTop);
+  await page.mouse.click(box.x + box.width * 0.25, box.y + box.height * 0.6);
+  // The click both places the light (default 50,30 -> about 25,60) and must
+  // stay local: no focus in the path box, no scroll jump to reveal it.
+  await expect.poll(async () =>
+    (await readDraft(page))?.scenes.find((s: { id: string }) => s.id === "fg_cold")?.dialogueBeats[0]?.cinematic?.lights?.[0]?.x,
+  ).toBeGreaterThanOrEqual(20);
+  const light = (await readDraft(page)).scenes.find((s: { id: string }) => s.id === "fg_cold").dialogueBeats[0].cinematic.lights[0];
+  expect(light.x).toBeLessThanOrEqual(30);
+  expect(light.y).toBeGreaterThanOrEqual(55);
+  await expect(pathInput).not.toBeFocused();
+  expect(Math.abs((await panel.evaluate((el) => el.scrollTop)) - before)).toBeLessThanOrEqual(8);
+});
+
 test("timeout wire delete / undo never changes the successful destination", async ({ page }) => {
   await studio(page); await selectScene(page, "fg_countdown");
   const id = "e-fg_countdown-c-fg_blue_button-timeout";

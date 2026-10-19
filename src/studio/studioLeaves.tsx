@@ -17,6 +17,36 @@ import { assetBackground } from "../assetPath";
 export const inputCls =
   "w-full border border-noir-600 bg-noir-950 px-2 py-1 text-xs text-paper focus:border-neon outline-none";
 
+/**
+ * Keep clicks inside a Field's body from being forwarded by its <label>.
+ *
+ * A <label> passes any click that lands on non-interactive content inside it
+ * on to its first labelable control: the browser fires a synthetic click at
+ * that control, focuses it and scrolls it into view. That is harmless when a
+ * Field wraps one input, but big Fields wrap whole panels — a beat's
+ * “Replacement background image” field contains the entire camera/lighting
+ * editor, so every click on a click-to-place preview (placing a light glow,
+ * a camera focal point…) was yanked up to the background-path text box: the
+ * cursor landed in that box and the inspector jumped to show it, hundreds of
+ * pixels from the picture being edited.
+ *
+ * Cancelling the click before it reaches the label stops the forwarding.
+ * Clicks on real controls keep working (the browser never forwards those),
+ * clicks inside a nested <label> (upload buttons, checkbox rows) stay owned
+ * by that label, and clicking the caption still focuses the field's first
+ * control. Only “dead” content — previews, panels, help text — loses a
+ * behaviour that was never wanted there.
+ */
+const keepFieldClicksLocal = (e: React.MouseEvent<HTMLDivElement>) => {
+  let node = e.target as HTMLElement | null;
+  while (node && node !== e.currentTarget) {
+    if (node.tagName === "LABEL") return;
+    if (/^(A|BUTTON|INPUT|SELECT|TEXTAREA|SUMMARY|VIDEO|AUDIO)$/.test(node.tagName) || node.isContentEditable) return;
+    node = node.parentElement;
+  }
+  e.preventDefault();
+};
+
 /** A labelled inspector field. The workhorse — used ~570x. */
 export function Field({
   label,
@@ -38,7 +68,9 @@ export function Field({
           </span>
         ) : null}
       </span>
-      <div className="mt-0.5 normal-case tracking-normal">{children}</div>
+      <div className="mt-0.5 normal-case tracking-normal" onClickCapture={keepFieldClicksLocal}>
+        {children}
+      </div>
     </label>
   );
 }
