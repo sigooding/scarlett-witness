@@ -1,5 +1,5 @@
 {
- "about": "Pictures that play with the depth-map camera, and the boxes around the people cut out of them. tools/make-depth-layers.py reads the boxes, writes the layers to public/film/depth/<scene folder>/<picture>/ and writes each cut-out's depth back here; src/film/studio-edits.json (pictureLook) points the film at them.",
+ "about": "Pictures that play with the depth-map camera. For shots with people, cutouts records the people to separate and depthSource is an optional source map. Empty-location (depth-only) entries need no cutouts or plate: they can name a depthMap directly for --wire, or be regenerated from Depth Anything with only --depth-model. The tool writes generated paths back here; src/film/studio-edits.json (pictureLook) points the film at them.",
  "peopleInShot": {
   "73-two-small-figures": "Vera and Jack, small",
   "74-twenty-metres-apart": "Vera and Jack",
@@ -340,6 +340,66 @@
    ],
    "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
    "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg"
+  },
+  "412-pressed-against-the-railway": {
+   "picture": "public/film/img/s10/412-pressed-against-the-railway.jpg",
+   "depthMap": "/film/depth/s10/412-pressed-against-the-railway/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty elevated-railway alley; pavement foreground and building/track planes recede."
+  },
+  "367-the-phone-rings": {
+   "picture": "public/film/img/s59/367-the-phone-rings.jpg",
+   "depthMap": "/film/depth/s59/367-the-phone-rings/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty tatami room; phone and low table foreground, room and window behind."
+  },
+  "402-the-windows-wake": {
+   "picture": "public/film/img/s71/402-the-windows-wake.jpg",
+   "depthMap": "/film/depth/s71/402-the-windows-wake/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty city-building exterior; facades and railway occupy distinct planes."
+  },
+  "549-the-crossing-chimes": {
+   "picture": "public/film/img/s73/549-the-crossing-chimes.jpg",
+   "depthMap": "/film/depth/s73/549-the-crossing-chimes/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty wet crossing; road foreground, signal pole, street and buildings in the distance."
+  },
+  "530-exposed-to-the-sky": {
+   "picture": "public/film/img/s99a/530-exposed-to-the-sky.jpg",
+   "depthMap": "/film/depth/s99a/530-exposed-to-the-sky/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty demolished building cross-section; exposed rooms, walls and rubble."
+  },
+  "531-six-old-stools": {
+   "picture": "public/film/img/s99a/531-six-old-stools.jpg",
+   "depthMap": "/film/depth/s99a/531-six-old-stools/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty demolition site with the surviving counter and stools in the foreground."
+  },
+  "574-the-viaduct-at-dusk": {
+   "picture": "public/film/img/service_new/574-the-viaduct-at-dusk.jpg",
+   "depthMap": "/film/depth/service_new/574-the-viaduct-at-dusk/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty wet alley under the elevated railway; street foreground and viaduct recede."
+  },
+  "588-it-rains-all-night": {
+   "picture": "public/film/img/service_new/588-it-rains-all-night.jpg",
+   "depthMap": "/film/depth/service_new/588-it-rains-all-night/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty rain-soaked alley; near steps and pavement lead to the distant street."
+  },
+  "460-parked-crooked": {
+   "picture": "public/film/img/s37/460-parked-crooked.jpg",
+   "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty rural yard with pickup, gate, muddy ground and a farm track."
+  },
+  "452-the-loop": {
+   "picture": "public/film/img/s26/452-the-loop.jpg",
+   "depthMap": "/film/depth/s26/452-the-loop/depth.png",
+   "smooth": 2.0,
+   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Elevated city-and-railway view; rooftops, train and distant buildings in separate planes."
   }
  }
 }
