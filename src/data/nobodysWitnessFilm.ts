@@ -3369,12 +3369,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_vera",
      "text": "I speak Japanese.",
      "audioUrl": "/film/voice/s6/55-vera-coolly-i-speak-japanese.mp3",
-     "background": "/film/img/s6/55-i-speak-japanese.jpg",
+     "background": "/film/img/s6_picks/55-i-speak-japanese-v1.jpg",
      "cinematic": {
       "mode": "zoom-hold",
-      "focalPoint": "60% 42%",
-      "zoomDuration": 19,
-      "dollyDirection": "left",
+      "focalPoint": "42% 38%",
+      "zoomDuration": 15,
+      "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
@@ -26304,5 +26304,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "49082524c2f4"
+ "builtinRevision": "784eb7498783"
 } as unknown as Story;

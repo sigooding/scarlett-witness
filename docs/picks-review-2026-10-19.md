@@ -359,3 +359,31 @@ update the scene 2 count in `scripts/film-backend.entry.ts` if it changes.
 ### T3. Small: the journalist's coat and stool
 - The screenplay has "a man in a raincoat on the far stool"; 20 shows him in a charcoal suit nearest the camera. If 19 is redone
   with the raincoat, redo 20 to match (`s2_picks/20-the-journalist-r1.jpg`, same attachments).
+
+---
+
+## The interview room (scene 6), picked 20 October 2026
+
+The director kept the film's own picture for 20 of the 21 shots and took the archived first take for **55** ("I speak
+Japanese"). It was a 1912×800 frame, so the install tool cropped it to 16:9 at its centre and enlarged it to 1920×1080
+(`s6_picks/55-i-speak-japanese-v1.jpg`). 325 was left undecided and stays as it is.
+
+**Style line** (the room's lock is `interviewLook` in PlayFrame's `scripts/neonoire/interview-look.mjs`; this follows it):
+*Photorealistic contemporary Tokyo neo-noir film still, 16:9, full bleed. A small worn grey-green police interview room under
+one steady green-white fluorescent fixture, restrained 35mm grain. No legible text, signage, logos or watermarks.*
+
+**Wiring:** save in `s6_picks/`, change the step's `src` in scene 6 of `src/film/story.json`, rebuild, and add the file to
+the scene 6 check in `scripts/film-backend.entry.ts`.
+
+### I1. Vera's hair is dark in 408 (the director's note)
+- **Plays:** ISHIDA: "What I know is that two men were killed in Kanda, and that it is a matter between criminal groups…"
+- **Wrong:** an over-the-shoulder single on Ishida; the back of Vera's head in the left foreground is **dark brown**. Vera is
+  ash-blonde in every other shot of the room.
+- **Make:** `s6_picks/408-a-matter-between-criminal-groups-r1.jpg`
+- **Attach:** `sheets/vera.jpg`, `sheets/vera-face.jpg`, `sheets/ishida.jpg`, `s6/56-three-days-ago.jpg` (the room and
+  blocking master), `s6/408-a-matter-between-criminal-groups.jpg` (composition).
+- **Prompt:** *Keep this composition exactly: over Vera's shoulder onto Ishida (Japanese, fifties, short salt-and-pepper
+  hair, charcoal suit, light grey open-collar shirt, no tie), speaking to her across the grey laminate table, the frosted rainy
+  window behind him on the right. Change only Vera, soft in the left foreground, seen from behind: dry ash-blonde
+  shoulder-length hair, the collar of her charcoal wool coat over a cream high-neck knit.* + style line.
+- **Check:** the hair is ash-blonde, the same as 55 and 61; Ishida's face is unchanged.
