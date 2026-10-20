@@ -13,7 +13,7 @@
 // The director's picks (19 October 2026, PICKS below): each of the 54 was chosen against the picture the film played at that beat and
 // that picture's earlier takes, so the run plays 27 of the new pictures, 14 of the shipped ones (ORIGINALS, with the captions and
 // sounds they had) and 8 earlier takes (vera_run_takes/, one file per beat so each has its own caption).
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -145,14 +145,14 @@ export const PICKS = {
   "73-16-one-shoe": "original:72-the-lost-heel",
   "74-01-no-one-else-is-here": "new", "74-02-jack-out-of-the-dark": "hold", "74-03-his-hands": "new",
   "74-04-twenty-metres-apart": "original:74-twenty-metres-apart",
-  "74-05-crying-almost-silently": "take:74-05-crying-almost-silently--74-twenty-metres-apart-v2", "74-06-dont": "new",
+  "74-05-crying-almost-silently": "original:74-twenty-metres-apart", "74-06-dont": "new",
   "74-07-one-shoe-one-bare-foot": "original:501-one-shoe", "74-08-you-knew": "new", "74-09-his-silence": "new",
-  "74-10-one-desperate-blow": "take:74-10-one-desperate-blow--75-one-desperate-blow-v2",
-  "74-11-her-hands-fall": "take:74-10-one-desperate-blow--75-one-desperate-blow-v2",
+  "74-10-one-desperate-blow": "original:75-one-desperate-blow",
+  "74-11-her-hands-fall": "original:75-one-desperate-blow",
   "74-12-she-was-waiting-for-me": "original:502-why-didnt-you-tell-me", "74-13-she-folds": "new",
   "74-14-she-holds-on": "original:503-she-holds-on", "74-15-she-pushes-him-away": "new",
   "74-16-two-small-figures": "original:73-two-small-figures", "74-17-the-reflection": "new",
-  "74-18-she-covers-her-face": "take:74-18-she-covers-her-face--76-the-reflection-v1",
+  "74-18-she-covers-her-face": "new",
   "74-19-nobody-looks-down": "original:504-nobody-looks-down",
   "75-01-the-red-shoe": "new", "75-02-the-empty-lounge": "new", "75-03-the-hive-shut": "take:75-03-the-hive-shut--79-the-hive-shut-v1",
   "75-04-the-machines-wait": "new", "75-05-static-in-a-window": "new", "75-06-green-for-no-one": "original:314-the-empty-crossing",
@@ -174,8 +174,12 @@ const ORIGINALS = {
   "72-the-lost-heel": keep("/img/s73/72-the-lost-heel.jpg", 74, "The lost heel", 0,
     "One heel skids. Her ankle turns. The shoe comes off and stays behind in a puddle. She doesn't stop. She runs on in one shoe.",
     "One heel skids. The shoe stays behind in a puddle. She runs on.", [{ file: "shoe-splash", volume: 0.8 }]),
+  // it also holds through "She is crying, almost silently." (the take picked there on 19 October had the wrong Jack), so it carries both lines
   "74-twenty-metres-apart": keep("/img/s74/74-twenty-metres-apart.jpg", 75, "Twenty metres apart", 0, "Vera slows. Stops. Twenty metres apart.",
-    "Vera slows. Stops. Twenty metres apart."),
+    ["Vera slows. Stops. Twenty metres apart.", "She is crying, almost silently."]),
+  // the same composition as the take picked for 74-10 on 19 October, with the right Jack (20 October 2026)
+  "75-one-desperate-blow": keep("/img/s74/75-one-desperate-blow.jpg", 76, "One desperate blow", 0,
+    "She hits him. Not a big cinematic slap. One desperate blow against his chest with her fist.", "She hits him. One desperate blow against his chest."),
   "501-one-shoe": keep("/img/s74/501-one-shoe.jpg", 501, "One shoe", 0, "She walks toward him. Slowly. One shoe, one bare foot on the wet road.",
     "She walks toward him. One shoe, one bare foot on the wet road."),
   "502-why-didnt-you-tell-me": keep("/img/s74/502-why-didnt-you-tell-me.jpg", 502, "Why didn't you tell me", 0, "Why didn't you tell me?", "",
@@ -205,7 +209,6 @@ const TAKE_SHAKE = { "73-08-she-slips--70-not-elegantly-badly-playframe": 0.25 }
 // an earlier take's caption, where the beat's words don't fit what the take shows (19 October 2026 review)
 const TAKE_CAPTION = {
   "73-08-she-slips--70-not-elegantly-badly-playframe": "She keeps going, slipping, stumbling.",
-  "74-18-she-covers-her-face--76-the-reflection-v1": "In the water, someone under a pale blue umbrella. Mara, or no one.",
 };
 
 const base = f => f.replace(/^.*\//, "").replace(/\.[a-z0-9]+$/i, "");
@@ -293,6 +296,13 @@ for (const [name, pic] of takes) {
   if (CUES[pic.file]) seg.cues[name] = CUES[pic.file]; else delete seg.cues[name];
   const amount = pic.shake ?? TAKE_SHAKE[name];
   if (amount) shake(name, amount);
+}
+// earlier takes no longer picked lose the caption, sound and shake they carried
+for (const f of readdirSync(resolve(IMG, "vera_run_takes"))) {
+  const name = base(f);
+  if (takes.has(name)) continue;
+  delete seg.captions[name]; delete seg.cues[name];
+  if (shakeOnly(edits.pictureLook[name])) delete edits.pictureLook[name];
 }
 writeFileSync(editsFile, JSON.stringify(edits, null, 1) + "\n");
 

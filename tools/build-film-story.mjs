@@ -391,13 +391,20 @@ if (existsSync(editsFile)) {
     if (beat.sfxUrl) console.warn(`studio-edits: ${e.scene} "${e.find}" already had ${beat.sfxUrl}`);
     Object.assign(beat, { sfxUrl: P(`/sfx/${e.file}.mp3`), sfxVolume: e.volume ?? 0.7 });
   }
-  // pictures: [{ scene, find, file }] — a picture made here (not in PlayFrame) on the beat whose text contains `find`
+  // pictures: [{ scene, find, file, pending?, brief? }] — a picture made here (not in PlayFrame) on the beat whose text contains `find`.
+  // A picture not on disk is never put up (the beat keeps the picture before it); a `pending` one is a slot waiting for its file, with the
+  // `brief` it is to be made from, and comes up by itself once the file is installed and the film rebuilt.
+  const waiting = [];
   for (const e of file.pictures ?? []) {
     const beat = scenes.filter(x => x.id === e.scene || x.id.startsWith(`${e.scene}_`)).flatMap(x => x.dialogueBeats).find(b => b.text?.includes(e.find));
     if (!beat) { console.warn(`studio-edits: no beat in ${e.scene} containing "${e.find}"`); continue; }
-    if (!existsSync(resolve(root, "public", P(e.file).slice(1)))) console.warn(`studio-edits: picture ${e.file} is not in public/film`);
+    if (!existsSync(resolve(root, "public", P(e.file).slice(1)))) {
+      if (e.pending) waiting.push(e.file); else console.warn(`studio-edits: picture ${e.file} is not in public/film`);
+      continue;
+    }
     Object.assign(beat, bgFields(P(e.file)));
   }
+  if (waiting.length) console.log(`studio-edits: ${waiting.length} picture slot(s) waiting for their files: ${waiting.join(", ")}`);
   if (file.startSceneId) startSceneId = file.startSceneId;
   // dialogueBox: the story-wide look of the reading panel (Studio → In-game theme: fonts, size, HUD colour scheme)
   if (file.dialogueBox) dialogueBox = file.dialogueBox;

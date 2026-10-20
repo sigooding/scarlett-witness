@@ -18,7 +18,17 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 - "He takes it." is out of scene 61;
 - Daniel's diary in 79 no longer mentions Vera (the take is cut before "Tell Vera", as a new file).
 
-Retake briefs for the plaza model (and its style sheet), the photo on Harada's desk, Mrs. Sakai's empty room, Vera leaving the lounge and the wrong Jack are in the same file. Scene 80 (does Jack hit Ishida?) waits for the director's word.
+Later the same day:
+- **Scene 74:** the wrong Jack (74-05, 74-10/74-11) and the umbrella reflection (74-18) were replaced by pictures already made. The
+  run now plays 28 new pictures, 15 shipped and 5 earlier takes.
+- **Scene 80:** after "I have never killed anyone…", Jack hits him (*"He does."*, with `punches-chair.mp3`). Ishida waves the
+  young detectives back and still asks for Sakai's thing.
+- **Picture slots:** the four new pictures of scene 80 are slots that wait for their files, in `studio-edits.json` → `pictures`
+  with `"pending": true` and a `brief`. The builder never puts up a picture that is not on disk, and lists the slots still
+  waiting.
+
+Retake briefs for the plaza model (and its style sheet), the photo on Harada's desk, Mrs. Sakai's empty room, Vera leaving the
+lounge, Jack's hands (74-03) and scene 80's pictures are in the same file.
 
 ## The envelope at dawn (scene 78): the director's picks (20 October 2026)
 

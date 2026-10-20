@@ -1306,6 +1306,12 @@
    "find": "over her own breath",
    "file": "vera-running-heels",
    "volume": 0.8
+  },
+  {
+   "scene": "nw_s80",
+   "find": "Jack hits him. Ishida doesn't lift his hands.",
+   "file": "punches-chair",
+   "volume": 0.8
   }
  ],
  "dialogueBox": {
@@ -1502,7 +1508,10 @@
     "547-the-call-still-lit": "The call is still lit in her fist: ISHIDA.",
     "549-the-crossing-chimes": "At the crossing, the old melody chimes for her.",
     "72-the-lost-heel": "One heel skids. The shoe stays behind in a puddle. She runs on.",
-    "74-twenty-metres-apart": "Vera slows. Stops. Twenty metres apart.",
+    "74-twenty-metres-apart": [
+     "Vera slows. Stops. Twenty metres apart.",
+     "She is crying, almost silently."
+    ],
     "501-one-shoe": "She walks toward him. One shoe, one bare foot on the wet road.",
     "503-she-holds-on": "Her hands grab the front of his coat. She holds on.",
     "73-two-small-figures": "Two small figures on a huge, empty, shining street.",
@@ -1512,10 +1521,9 @@
     "73-06-her-face--70-not-elegantly-badly-playframe": "Rain plasters her hair to her face.",
     "73-08-she-slips--70-not-elegantly-badly-playframe": "She keeps going, slipping, stumbling.",
     "73-11-the-vending-machine--71-the-machine-glows-v2": "She runs past a vending machine. It glows, indifferent.",
-    "74-05-crying-almost-silently--74-twenty-metres-apart-v2": "She is crying, almost silently.",
-    "74-10-one-desperate-blow--75-one-desperate-blow-v2": "She hits him. One desperate blow against his chest.",
-    "74-18-she-covers-her-face--76-the-reflection-v1": "In the water, someone under a pale blue umbrella. Mara, or no one.",
-    "75-03-the-hive-shut--79-the-hive-shut-v1": "The Hive at night. The noodle shop shutter is down."
+    "75-03-the-hive-shut--79-the-hive-shut-v1": "The Hive at night. The noodle shop shutter is down.",
+    "75-one-desperate-blow": "She hits him. One desperate blow against his chest.",
+    "74-18-she-covers-her-face": "Vera covers her face with her hands."
    },
    "cues": {
     "314-the-empty-crossing": [
@@ -4580,6 +4588,34 @@
    "scene": "nw_s50",
    "find": "He drives on. The wipers beat.",
    "file": "/img/s50/the-pickup-drives-on.jpg"
+  },
+  {
+   "scene": "nw_s80",
+   "find": "Jack hits him. Ishida doesn't lift his hands.",
+   "file": "/img/s80/jack-hits-him.jpg",
+   "pending": true,
+   "brief": "Close, low across Ishida's desk: Jack's fist landing on Ishida's jaw, Ishida's hands down at his sides, papers lifting off the desk. Attach s80/94-the-long-room.jpg (the room, the clock, the two detectives at the far end), s80/97-where-to-find-them.jpg (Ishida at his desk), sheets/jack-face.jpg, sheets/ishida-face.jpg and sheets/ishida.jpg (charcoal jacket, light grey shirt, no tie), s80/96-hands-close.jpg (Jack's knuckles). Photorealistic contemporary Tokyo neo-noir film still, 16:9, flat fluorescent office light, grey daylight through the blinds, restrained 35mm grain; violence shown in impact and aftermath, no gore; no legible text, signage, logos or watermarks. See docs/director-notes-2026-10-20.md, scene 80."
+  },
+  {
+   "scene": "nw_s80",
+   "find": "At the far end of the room, the two young detectives are on their feet.",
+   "file": "/img/s80/the-chair-goes-over.jpg",
+   "pending": true,
+   "brief": "Wider: Ishida on the floor between the desks, his chair on its side, papers scattered; Jack standing over him; at the far end of the long room the two young detectives on their feet, frozen. Attach s80/94-the-long-room.jpg (the room, the clock, the two detectives at the far end), s80/97-where-to-find-them.jpg (Ishida at his desk), sheets/jack-face.jpg, sheets/ishida-face.jpg and sheets/ishida.jpg (charcoal jacket, light grey shirt, no tie), s80/96-hands-close.jpg (Jack's knuckles). Photorealistic contemporary Tokyo neo-noir film still, 16:9, flat fluorescent office light, grey daylight through the blinds, restrained 35mm grain; violence shown in impact and aftermath, no gore; no legible text, signage, logos or watermarks. See docs/director-notes-2026-10-20.md, scene 80."
+  },
+  {
+   "scene": "nw_s80",
+   "find": "From the floor, Ishida lifts one hand.",
+   "file": "/img/s80/not-to-jack.jpg",
+   "pending": true,
+   "brief": "Low, from behind Ishida on the floor: his raised hand, palm out, toward the two young detectives at the far end of the room, who stop where they are. Attach s80/94-the-long-room.jpg (the room, the clock, the two detectives at the far end), s80/97-where-to-find-them.jpg (Ishida at his desk), sheets/jack-face.jpg, sheets/ishida-face.jpg and sheets/ishida.jpg (charcoal jacket, light grey shirt, no tie), s80/96-hands-close.jpg (Jack's knuckles). Photorealistic contemporary Tokyo neo-noir film still, 16:9, flat fluorescent office light, grey daylight through the blinds, restrained 35mm grain; violence shown in impact and aftermath, no gore; no legible text, signage, logos or watermarks. See docs/director-notes-2026-10-20.md, scene 80."
+  },
+  {
+   "scene": "nw_s80",
+   "find": "Ishida wipes his mouth with the back of his hand.",
+   "file": "/img/s80/the-blood-on-his-hand.jpg",
+   "pending": true,
+   "brief": "Close: Ishida on the floor, a split lip, looking at the blood on the back of his hand, then up at Jack (out of frame above). Attach s80/94-the-long-room.jpg (the room, the clock, the two detectives at the far end), s80/97-where-to-find-them.jpg (Ishida at his desk), sheets/jack-face.jpg, sheets/ishida-face.jpg and sheets/ishida.jpg (charcoal jacket, light grey shirt, no tie), s80/96-hands-close.jpg (Jack's knuckles). Photorealistic contemporary Tokyo neo-noir film still, 16:9, flat fluorescent office light, grey daylight through the blinds, restrained 35mm grain; violence shown in impact and aftermath, no gore; no legible text, signage, logos or watermarks. See docs/director-notes-2026-10-20.md, scene 80."
   }
  ]
 }

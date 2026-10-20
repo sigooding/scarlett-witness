@@ -1,10 +1,11 @@
 # The director's notes of 20 October 2026: what was done, what is still to do
 
-The director watched the film and sent eleven notes. Five were sound or text changes and are **done** in this repository
-(rebuilt, checks passing). The picture problems are written as **retake briefs** for an image generator, in the same form as
-`docs/picks-review-2026-10-19.md` (whose "How to run any brief" rules apply: a new filename, never over a file; attach the
-references; end with the style line; install with `tools/install-film-picture.mjs`). One note changes the story and **needs the
-director's word** before anything is made.
+The director watched the film and sent eleven notes, then four more marked on a contact sheet of scene 74. The sound and text
+changes are **done** in this repository (rebuilt, checks passing), and so are the scene 74 pictures that had a ready replacement.
+The remaining picture problems are written as **retake briefs** for an image generator, in the same form as
+`docs/picks-review-2026-10-19.md`. That doc's "How to run any brief" rules apply: a new filename, never over a file; attach the
+references; end with the style line; install with `tools/install-film-picture.mjs`. Scene 80's change was written on the
+director's go-ahead ("you recommend"); its pictures are still to make.
 
 | # | Note | Where | Status |
 |---|---|---|---|
@@ -17,8 +18,10 @@ director's word** before anything is made.
 | 7 | The journalist's photo is not on Harada's desk | 53A (468); also 82 (107) | Retake briefs |
 | 8 | The empty room is too literal | 59 (365, 367) | Retake briefs |
 | 9 | The lobby: the phone is the wrong way round; she leaves the bar calmly | 72 (72-01 to 72-05) | Retake briefs |
-| 10 | In Vera's run Jack sometimes turns Japanese | 74 (74-05, 74-10, possibly 74-15) | Reminder + briefs |
-| 11 | "I have never killed anyone…": Jack hits him | 80 | Needs the director's word |
+| 10 | In Vera's run Jack sometimes turns Japanese (marked 2 and 3 on the contact sheet) | 74 (74-05, 74-10) | Done: shipped pictures with the right Jack |
+| 11 | "I have never killed anyone…": Jack hits him | 80 | Text and sound done; four picture slots waiting for their files |
+| 12 | His hands are too dirty (marked 1) | 74 (74-03) | Retake brief |
+| 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
 
 ---
 
@@ -170,34 +173,107 @@ Part 9 item with the text-sync for saved workspaces, before the next import.
 - **Wire:** `PICKS` in `tools/vera-run-cut.mjs`, `"take:<beat>--r1"`; style line and rules as in the picks review's Vera
   section.
 
-### 10. Jack turns Japanese in Vera's run (reminder)
-- **74-05 and 74-10** (the earlier takes the director picked): Jack is a younger man with short black hair in a short jacket.
-  This is **V1** in `docs/picks-review-2026-10-19.md`, which has the brief and a no-generation option (pick the new set's
-  pictures).
-- **74-15** (she pushes him away, new set): seen in profile, he has all-black hair and no grey at the sides; he can read as
-  someone else. Borderline. If it is redone: `vera_run_takes/74-15-she-pushes-him-away--r1.jpg`, attaching
-  `vera_run_new/style-sheets/jack-that-night.jpg` and `sheets/jack-face.jpg`, with *"Jack, late 50s, Western, lined stubbled
-  face, swept-back dark hair greying at the sides"*.
-- The rest of 74 and 77 (74-06, 74-09, 74-13, 503, 85, 87…) match his sheet.
+### 10 and 13. Scene 74: the wrong Jack and the umbrella reflection (done, no new pictures)
+The director marked them on a contact sheet. All three takes are replaced by pictures already made, changed in `PICKS` in
+`tools/vera-run-cut.mjs` (the takes stay on disk):
+- **74-05 ("She is crying, almost silently"):** the take was the wide of 74-04 again with a different, Japanese-looking Jack.
+  The shipped wide (`s74/74-twenty-metres-apart`, the right Jack) now holds through both lines: one picture, two captions.
+- **74-10 and 74-11 ("She hits him…", "Her hands just fall"):** the take had the same wrong Jack. The shipped
+  `s74/75-one-desperate-blow` is the same composition (her hand at his chest by the shutter) with the right Jack, and plays on
+  both beats, with its own depth look.
+- **74-18 ("Vera covers her face with her hands"):** the take showed, right under her feet, a reflection of someone with the
+  pale blue umbrella, so it read as her own reflection holding an umbrella she left in the lounge. The new set's 74-18, Vera
+  covering her face (the screenplay's beat), plays instead.
+  - The screenplay's figure under a pale blue umbrella "who could be Mara, or could be no one" is still in 74-17, small and away
+    from her in the reflection.
+- **74-15** (she pushes him away), flagged as borderline earlier, was not marked by the director and stays.
+- **The run now:** 28 new pictures, 15 shipped and 5 earlier takes (was 27, 14 and 8).
+
+### 12. His hands are too dirty (74-03)
+- **Plays:** "His hands are dark. He has not washed them." The hands are caked, as if dipped. The jack-that-night sheet has the
+  same look, so it should not be attached for the hands.
+- **The scene:** it is Mara's blood, hours old, with the rain on it. Dark in the creases of the knuckles and around the nails,
+  thinned by rain, not caked.
+- **Make:** `vera_run_new/74-03-his-hands-r1.jpg`, as an edit of `vera_run_new/74-03-his-hands.jpg`.
+- **Attach:** the picture itself, and `s80/96-hands-close.jpg` for the amount of blood, which is right there.
+- **Prompt:** *Keep this picture exactly: the same framing, coat, rain and light. Change only his hands: much cleaner, wet with
+  rain, with dark dried blood left only in the creases of the knuckles and around the fingernails, as if he had not washed them
+  and the rain had thinned it. No caked mud, no gloves of blood.* + the Vera section's style line.
+- **Wire:** install it, then `PICKS["74-03-his-hands"]`. It is a new-set picture, so either save it as a take
+  (`vera_run_takes/74-03-his-hands--r1.jpg`, `"take:74-03-his-hands--r1"`) or point the plan's picture at the new file.
 
 ---
 
-## Needs the director's word
+## Scene 80: Jack hits Ishida
 
-### 11. Scene 80: does Jack hit Ishida?
-- **The scene as written:** after "Twenty years ago. Daniel. Was that you?", Ishida answers "I have never killed anyone in my
-  life. I only ever told people where to find them." Then "Jack looks at him for a long time. Ishida almost seems to want him
-  to." / "He doesn't." / Ishida: "Where is it? Sakai's thing." Jack walks away, and Ishida, watching him go, looks afraid for the
-  first time.
-- **The pictures** (94–99) agree with that. No picture shows Jack hitting him.
-- **The note:** "skip line, Jack hits him constantly". This reads as a change to the story: drop "He doesn't." (and perhaps
-  "Ishida almost seems to want him to."), and have Jack hit him, again and again.
-- **Two questions to settle first:**
-  1. Does Ishida's line stay, with the blows after it, or is he cut off mid-line?
-  2. What happens to the beats after it: Ishida's "Where is it? Sakai's thing." and his fear as Jack goes? Both read
-     differently once Jack has beaten him in a room full of detectives.
-- **Nothing is changed** until that is settled. Once it is, it needs:
-  - the text in `src/film/story.json` (and PlayFrame);
-  - new pictures of the blows: brief them on `s80/96-hands-close.jpg` and `s80/97-where-to-find-them.jpg` (the room) with
-    `sheets/jack-face.jpg` and `sheets/ishida-face.jpg`, and note that Jack's knuckles already carry dried blood (94, 96);
-  - a sound effect or two (punches; ElevenLabs).
+The director asked for a recommendation, with one condition: Ishida still asks for Sakai's thing, because he needs it.
+
+### What was decided, and why
+- **Ishida finishes his line.** "I have never killed anyone in my life. I only ever told people where to find them." is the
+  confession that sets Jack off, so it plays whole and the blows answer it.
+- **"He doesn't." becomes "He does."** The line before it, "Ishida almost seems to want him to.", now pays off.
+- **No one steps in.** At the shift change there are only two young detectives, at the far end. They get to their feet, but
+  Ishida waves them back from the floor. He wants this, and he does not want it on the record.
+- **He still asks for the tape, in the same calm take.** Asked with blood on his hand, the question shows what matters to him.
+  He still looks afraid as Jack goes: Jack knows now and has nothing left to lose.
+
+### The scene now (`src/film/story.json`, scene 80)
+> **ISHIDA:** I have never killed anyone in my life. I only ever told people where to find them.
+> Jack looks at him for a long time. Ishida almost seems to want him to.
+> He does.
+> Jack hits him. Ishida doesn't lift his hands. Jack hits him again, and again. The chair goes over. Papers slide off the desk.
+> At the far end of the room, the two young detectives are on their feet.
+> From the floor, Ishida lifts one hand. Not to Jack. To them. They stay where they are.
+> Jack stands over him, breathing hard. His knuckles are bleeding again.
+> Ishida wipes his mouth with the back of his hand. Looks at the blood on it. Then up at Jack.
+> **ISHIDA:** Where is it? Sakai's thing.
+> Jack turns and walks away down the long room, past the desks, past the clock.
+> Ishida watches him go. For the first time, he looks afraid.
+
+### The blows
+- **The effect:** `public/film/sfx/punches-chair.mp3` plays on "Jack hits him." (2.6 s): three blows 0.75 s apart, then the
+  chair and papers going over.
+- **How it was made:** none of four ElevenLabs takes (about 67 credits) had three separate blows, so it is spliced from take 1's
+  opening hit and take 2's two blows and clatter, levelled to −3 dB peak.
+- **The takes:** all four are in `public/film/sfx/alternates/punches-chair--v1…v4.mp3`, from flow `dQaLxAPwSGZ9sZWcNmuM`
+  (generations `CgSAb3b4bthF70sw2Yz8`, `hdTM6CdvXIyWpUOLiRxE`, `pCcUKvruC4Rmn2TcY6yh`, `S5T3EEKaxOpAhvzdYLMk`).
+- **Nobody has listened.**
+
+### Still to make: the pictures (their slots are in the film already)
+Each new picture has a **slot**: an entry with `"pending": true` and its brief in `studio-edits.json` → `pictures`, on the beat it
+belongs to. Install the file under that name, rebuild, and it comes up by itself; until then the beat keeps the picture before it
+(the build lists the slots still waiting). For now the new beats play over 97 (Ishida looking up at Jack), and 98 and 99 show
+Ishida unhurt at his desk.
+- **Attach for all:**
+  - `s80/94-the-long-room.jpg` (the room, the clock, the two detectives at the far end);
+  - `s80/97-where-to-find-them.jpg` (Ishida at his desk);
+  - `sheets/jack-face.jpg` and `sheets/ishida-face.jpg` (`ishida.jpg` for his charcoal jacket, grey shirt, no tie);
+  - `s80/96-hands-close.jpg` (Jack's knuckles).
+- **New pictures** (film-only, named like `s25/the-rice-goes-cold.jpg`, so they take no PlayFrame shot number), each with the
+  beat its slot puts it on:
+  - `s80/jack-hits-him.jpg`, on "Jack hits him. Ishida doesn't lift his hands. …", where the blows are heard: a close, low
+    angle across Ishida's desk. Jack's fist landing on Ishida's jaw, Ishida's hands down at his sides, papers lifting off the
+    desk.
+  - `s80/the-chair-goes-over.jpg`, on "At the far end of the room, the two young detectives are on their feet.": wider.
+    Ishida on the floor between the desks, the chair on its side, papers scattered. Jack standing over him. At the far end the
+    two young detectives on their feet, frozen.
+  - `s80/not-to-jack.jpg`, on "From the floor, Ishida lifts one hand. …": low, from behind Ishida on the floor. His raised
+    hand, palm out, toward the detectives at the far end, who stop. It holds through "Jack stands over him, breathing hard."
+  - `s80/the-blood-on-his-hand.jpg`, on "Ishida wipes his mouth with the back of his hand. …": close. Ishida looks at the blood
+    on the back of his hand, a split lip, then up. It holds through "Where is it? Sakai's thing."
+- **Retakes of what follows,** with the same hurt Ishida (split lip, collar pulled open, hair out of place, the chair on its
+  side behind him):
+  - `s80/98-past-the-clock-r1.jpg`
+  - `s80/99-afraid-r1.jpg`
+- **Later the same night (93, 94):** Ishida leaves the station and gets into Kurose's car; he should still carry the split lip.
+  `kurose_new/` and `s93`/`s94` show him unmarked.
+- **Install:** `FFMPEG=/usr/bin/ffmpeg node tools/install-film-picture.mjs <generated> public/film/img/s80/<name>.jpg`, then
+  `FILM_SRC=/nonexistent node tools/build-film-story.mjs`. The retakes of 98 and 99 are swapped in at their steps in scene 80 of
+  `src/film/story.json`.
+- **Style line:** *Photorealistic contemporary Tokyo neo-noir film still, 16:9, flat fluorescent office light, grey daylight
+  through the blinds, restrained 35mm grain. Violence shown in impact and aftermath, no gore. No legible text, signage, logos or
+  watermarks.*
+
+### Also outside this repository
+PlayFrame's screenplay still has "He doesn't." The same change belongs there (a bible Part 9 item), with the rest listed under
+4 and 5.
