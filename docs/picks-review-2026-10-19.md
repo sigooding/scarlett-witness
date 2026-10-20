@@ -387,3 +387,37 @@ the scene 6 check in `scripts/film-backend.entry.ts`.
   window behind him on the right. Change only Vera, soft in the left foreground, seen from behind: dry ash-blonde
   shoulder-length hair, the collar of her charcoal wool coat over a cream high-neck knit.* + style line.
 - **Check:** the hair is ash-blonde, the same as 55 and 61; Ishida's face is unchanged.
+
+---
+
+## The envelope at dawn (scene 78), picked 20 October 2026
+
+The director kept the film's own picture for all four shots (88, 316, 89, 90), so nothing in the film changed. The other
+versions were the picture PlayFrame still uses for 88 and the archived first takes of 316, 89 and 90.
+
+**Style line:** *Photorealistic contemporary Tokyo neo-noir film still, 16:9, at grey dawn in light rain. Cold slate and
+teal-blue-green, one weak amber walkway lamp, wet concrete, restrained 35mm grain. No legible text, signage, logos or
+watermarks.*
+
+**Wiring:** save in `s78/` under the new name (never over a file), change the step's `src` in scene 78 of
+`src/film/story.json`, rebuild.
+
+### W1. The envelope is left at the wrong door (316, the director's note)
+- **Plays:** "He sets the envelope on the mat, squares it to the door, and goes."
+- **Wrong:** the mat is at a door partway along the walkway, with the walkway running on past it. Vera's is the **end
+  apartment**: in 88 her door is the last one on the left, with the walkway ending at it and the railing on the right.
+- **Make:** `s78/316-squared-to-the-door-r1.jpg`
+- **Attach:** `s78/88-the-walkway.jpg` (the door and the walkway's end), `s78/89-no-name.jpg` (the envelope and the mat),
+  `vera_run_new/style-sheets/loc-veras-apartment.jpg`, `thehiveescape/style-sheets/jack.jpg` (his coat),
+  `s78/316-squared-to-the-door.jpg` (composition).
+- **Prompt:** *Low, close to the floor at the end of the open-air third-floor walkway: Vera's front door, the last door on the
+  walkway, in the left foreground, the walkway's end wall just beyond it. On her coir doormat, a large brown kraft envelope
+  tied with string, squared to the door. At the right edge, Jack's long charcoal-black wool overcoat and bare hand as he turns
+  to go, walking away back along the walkway: the other doors recede behind him, the rusted railing and the rail lines beyond
+  on the right. Grey dawn, rain dripping from the walkway roof.* + style line.
+- **Check:** her door is the last one; nothing past it but the end wall.
+
+### W2. Small: the envelope changes in 88
+- 88 (Vera at her open door) shows a small **white** envelope on the mat; 316 and 89 show the large **brown** envelope tied with
+  string, and 90 has her opening it. If 88 is retaken, attach `s78/89-no-name.jpg` and ask for the brown envelope
+  (`s78/88-the-walkway-r1.jpg`).

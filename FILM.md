@@ -9,6 +9,13 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The envelope at dawn (scene 78): the director's picks (20 October 2026)
+
+Scene 78's four shots were picked against their other versions (PlayFrame's 88, the archived first takes of 316, 89 and 90).
+The director kept the film's own picture for all four. **Director's note on 316:** "wrong apartment should be end apartment at
+door". The retake brief, and a note that 88's envelope is white where 316 and 89 show the brown one, are in
+`docs/picks-review-2026-10-19.md`.
+
 ## The interview room (scene 6): the director's picks (20 October 2026)
 
 Scene 6 was picked shot by shot against every earlier take of its 21 pictures (the archive and both repositories' git history;
