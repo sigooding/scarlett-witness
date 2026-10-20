@@ -393,6 +393,8 @@ const s80 = allBeats.filter(({ scene }) => scene === "nw_s80").map(({ b }) => b.
 const at80 = (t: string) => s80.findIndex((x) => x.startsWith(t));
 check(!s80.includes("He doesn't.") && at80("I have never killed anyone") >= 0 && at80("He does.") > at80("I have never killed anyone") && at80("Where is it? Sakai's thing.") > at80("He does.") && at80("Ishida watches him go.") > at80("Where is it?"), "scene 80: Ishida finishes his line, Jack hits him, and Ishida still asks for Sakai's thing before Jack walks away");
 check(allBeats.some(({ scene, b }) => scene === "nw_s80" && (b.text ?? "").startsWith("Jack hits him.") && b.sfxUrl === "/film/sfx/punches-chair.mp3"), "the blows and the chair going over are heard");
+// scene 83 (the director, 20 October 2026: "vera missing a coat"): "It's just a face." plays the archived take with her navy coat
+check(allBeats.some(({ scene, b }) => scene.startsWith("nw_s83") && b.background === "/film/img/s83_picks/111-just-a-face-v2.jpg") && !allBeats.some(({ b }) => b.background === "/film/img/s83/111-just-a-face.jpg"), "scene 83: Vera keeps her coat on at \"It's just a face.\" (the archived take v2)");
 // picture slots (studio-edits "pictures" with `pending`): each waits on its beat for its file, with a brief, and a missing file is never put up
 const slots = (edits.pictures ?? []).filter((p: { pending?: boolean }) => p.pending);
 eq(slots.filter((p: { scene: string }) => p.scene === "nw_s80").length, 4, "scene 80 has four picture slots for the blows and after (jack-hits-him, the-chair-goes-over, not-to-jack, the-blood-on-his-hand)");

@@ -1,6 +1,7 @@
 # The director's notes of 20 October 2026: what was done, what is still to do
 
-The director watched the film and sent eleven notes, then four more marked on a contact sheet of scene 74. The sound and text
+The director watched the film and sent eleven notes, then four more marked on a contact sheet of scene 74, and one on scene 83.
+**No pictures are being generated for now (not enough credits): every picture item stays as a brief until there are.** The sound and text
 changes are **done** in this repository (rebuilt, checks passing), and so are the scene 74 pictures that had a ready replacement.
 The remaining picture problems are written as **retake briefs** for an image generator, in the same form as
 `docs/picks-review-2026-10-19.md`. That doc's "How to run any brief" rules apply: a new filename, never over a file; attach the
@@ -22,6 +23,7 @@ director's go-ahead ("you recommend"); its pictures are still to make.
 | 11 | "I have never killed anyone…": Jack hits him | 80 | Text and sound done; four picture slots waiting for their files |
 | 12 | His hands are too dirty (marked 1) | 74 (74-03) | Retake brief |
 | 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
+| 14 | Kurose's office, "It's just a face.": Vera has no coat, and holds a notebook, not the photocopies | 83 (111, 112) | 111 done (archived take); 112 retake brief |
 
 ---
 
@@ -203,6 +205,26 @@ The director marked them on a contact sheet. All three takes are replaced by pic
   (`vera_run_takes/74-03-his-hands--r1.jpg`, `"take:74-03-his-hands--r1"`) or point the plan's picture at the new file.
 
 ---
+
+### 14. Kurose's office: the coat and the photocopies (83)
+- **The page:** "She wears a plain dark coat. A plain folder is on her lap, her hands flat on its cover: photocopies of every
+  page of her father's notebook." In 82A Harada hands her the copies in a buff folder: "The copies. Not the original." Later in
+  83: "Vera stands. She holds up a page of the photocopy."
+- **111 ("It's just a face."), done:** she sat there in a grey sweater with no coat; every other shot of the scene has her navy
+  coat. Both archived takes of 111 have the coat on. Take v2 (navy coat over the grey sweater and white collar, Kurose's shoulder
+  in the foreground) matches the scene and now plays, installed as `s83_picks/111-just-a-face-v2.jpg`. `s83/111` stays on disk.
+- **112 ("My father kept notes. He wrote your name on every page."), to make:**
+  - **Wrong:** she holds up the dark green bound notebook, the original her father wrote in, which stayed with Harada. The
+    archived take v1 has a bound booklet too.
+  - **Make:** `s83_picks/112-every-page-r1.jpg`
+  - **Attach:** `s83/112-every-page.jpg` (composition), `s82a/302-the-copies.jpg` (the buff folder of copies), `sheets/vera.jpg`
+    and `sheets/vera-face.jpg`, `sheets/kurose.jpg`.
+  - **Prompt:** *Keep this picture exactly: Kurose's fortieth-floor office, Vera standing by the chair in her navy coat, Kurose
+    seated at his desk looking up at her. Change only what she holds: one loose photocopied sheet, white A4 with grey copied
+    handwriting, held up toward him at chest height, not threatening; the buff card folder of copies in her other hand. No
+    bound notebook.* + the plaza model section's style line.
+  - **Wire:** change the step's `src` in scene 83 of `src/film/story.json`.
+  - **Check:** a loose sheet, not a book; her coat on.
 
 ## Scene 80: Jack hits Ishida
 

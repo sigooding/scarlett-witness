@@ -21395,11 +21395,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_vera",
      "text": "It's just a face.",
      "audioUrl": "/film/voice/s83/113-vera-firmly-it-s-just-a-face.mp3",
-     "background": "/film/img/s83/111-just-a-face.jpg",
+     "background": "/film/img/s83_picks/111-just-a-face-v2.jpg",
      "cinematic": {
       "mode": "zoom-hold",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 15,
+      "focalPoint": "50% 60%",
+      "zoomDuration": 14,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
@@ -26454,5 +26454,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "51730ecc44c9"
+ "builtinRevision": "c84933f15280"
 } as unknown as Story;

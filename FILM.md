@@ -27,8 +27,12 @@ Later the same day:
   with `"pending": true` and a `brief`. The builder never puts up a picture that is not on disk, and lists the slots still
   waiting.
 
+- **Scene 83:** "It's just a face." plays the archived take of 111 with Vera's navy coat on (`s83_picks/111-just-a-face-v2.jpg`).
+  The director had noted her missing coat.
+
 Retake briefs for the plaza model (and its style sheet), the photo on Harada's desk, Mrs. Sakai's empty room, Vera leaving the
-lounge, Jack's hands (74-03) and scene 80's pictures are in the same file.
+lounge, Jack's hands (74-03), the notebook Vera holds up in 83 (112: it should be a photocopied page) and scene 80's pictures are
+in the same file. None is being generated for now.
 
 ## The envelope at dawn (scene 78): the director's picks (20 October 2026)
 
