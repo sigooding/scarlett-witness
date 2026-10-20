@@ -9,6 +9,147 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The envelope at dawn (scene 78): the director's picks (20 October 2026)
+
+Scene 78's four shots were picked against their other versions (PlayFrame's 88, the archived first takes of 316, 89 and 90).
+The director kept the film's own picture for all four. **Director's note on 316:** "wrong apartment should be end apartment at
+door". The retake brief, and a note that 88's envelope is white where 316 and 89 show the brown one, are in
+`docs/picks-review-2026-10-19.md`.
+
+## The interview room (scene 6): the director's picks (20 October 2026)
+
+Scene 6 was picked shot by shot against every earlier take of its 21 pictures (the archive and both repositories' git history;
+the room has no reshoot set). The director kept the film's own picture everywhere but **55** ("I speak Japanese"), which now
+plays the archived first take, cropped from 1912×800 to 16:9 at its centre and enlarged: `s6_picks/55-i-speak-japanese-v1.jpg`.
+The camera move on it is the builder's own, as for any picture with no `pictureLook`. **Director's note on 408:** "vera wrong
+colour hair" (the back of her head is dark brown there); the retake brief is in `docs/picks-review-2026-10-19.md`. A backend
+check pins the pick. Nobody has watched it.
+
+## What doesn't match in the five picked scenes (19 October 2026)
+
+`docs/picks-review-2026-10-19.md` lists every continuity slip found after the picks below (the wrong Jack in two of Vera's
+takes, shoes, the car changing sides, the split frame at Okada's door, lights left on in the raid, the men back outside in
+scene 2…), each written as a retake brief for an image generator: the new file to make, the references to attach, the prompt
+and how to wire it in. Eight captions that no longer said what their pictures show were rewritten; the table is at its top.
+
+## Scene 2, the small bar: the director's picks (19 October 2026)
+
+Scene 2 was picked shot by shot from every version of each picture: the film's own `s2/`, the two reshoots `s2_new/` and
+`s2_new2/`, the archived takes and older versions from PlayFrame's history.
+- **Kept as they were (4):** 19 (the bar), 20 (the journalist), 22 (not his business), 308 (the clip under the shelf).
+- **Archived takes (3):** 21 v1 (Mara bursts in), 25 v2 (two pairs of shoes), 27 v1 (the notebook). 21 v1 and 27 v1 were
+  1912×800, so the install tool cropped them to 16:9 at their centre (Mara at the door and the hand on the notebook stay in
+  frame) and enlarged them to 1920×1080.
+- **From `s2_new2` (4):** 23 (behind the counter), 24 (from the floor), 26 (the variety show), 28 (the blue glow). They are
+  copied under their own names because `pictureLook` goes by file name, and the `s2/` pictures of the same names carry lights and
+  a depth map placed for those plates.
+- All seven are in `s2_picks/`; nothing in `s2/`, `s2_new2/` or the archive changed. `s2_new2`'s 29 (Mara gasps) is not used.
+- **Mixed sets:** `s2_new2` is another bar layout with the old scene 1 Mara, and it stages the scene in its own order. 23–28 now
+  come from it while 19–22 do not.
+- **Director's note on 19:** "journalist should be sat here". Not done: the film's 19 is the empty bar. An older version in
+  PlayFrame's history shows him at the counter.
+- The change is in scene 2 of `src/film/story.json`; a backend check pins it. Nobody has watched it.
+
+## The raid on the Hive: the director's picks (19 October 2026)
+
+Scenes 85–92 (the raid run, "Coins Measure-Time") were picked position by position from every version of each picture: the
+film's own, the `thehiveescape/` set, earlier takes (archive, git history, PlayFrame's older copies) and the `reshoot-1080`
+remakes. Nothing was left out. **31 shots, about 3.1 s per silent shot** (was 22 captioned shots).
+- **New pictures (11):**
+  - **In place of the film's:** 86-03 for 121 (the shutter), 90-02 for 131 (the kitchen by candle), 90-08 for 380 (the shrine
+    hatch), 91-03 for 133 (her hand in his on the rail).
+  - **Added where the film had none:** 86-02 (three strikes), 86-04 (go now), 88-01 (every bulb out), 89-03 (the beam falls
+    away), 90-03 (the dentist), 90-04 (the violin girl), 90-05 (the wardrobe).
+- **Earlier versions (5)**, installed full size in `hive_raid_takes/`:
+  - archived takes: 119 v1 (single file), 124 v1 (the repairman), 129 v1 (she lets him);
+  - PlayFrame's own copies: 123 (fifty years) and 382 (the pipe gallery), which the film had since replaced.
+- The rest stay as they were, the plank (381) as redrawn on 16 October among them.
+- **Captions, sounds, camera:**
+  - Each replacement takes over its picture's caption and sound cue. The shutter and kitchen captions now say what the new
+    pictures show, and the added pictures have captions of their own.
+  - The zoom-hold camera move carries over to 129, 131's, 133's and 382's replacements. The lights stay with the pictures they
+    were placed on.
+- The change is in scenes 85–92 of `src/film/story.json` and the "raid" soundtrack in `src/film/studio-edits.json`; a backend
+  check pins the counts. Nobody has watched it with the song.
+
+## Jack and Ishida in the car: the director's picks (19 October 2026)
+
+Scene 61 (INT. ISHIDA'S CAR - NIGHT) was picked picture by picture against the `jack_ishida_new/` set (11 shots, right-hand
+drive, one screen geography; its README has the reasoning). The director took two of them:
+- **61-01 (under the expressway)** opens the scene in place of `s61/228-nine-oclock`, which had Jack behind the wheel and the
+  two men looking at each other. 228's lights (`pictureLook`) belonged to that picture and no longer play.
+- **61-02 (neither looks)** comes up on "Ishida behind the wheel. Jack in the passenger seat. Neither looks at the other."
+- 481 to 484 stay, and the other nine new pictures are not used. Note: the kept pictures are left-hand drive and the new
+  two are right-hand drive, so the car changes sides after the opening.
+- **Director's note on 483 (eyes on the rain):** "needs character consistency" (Jack's hair is long and dark there, grey and
+  swept back elsewhere). Not retaken yet.
+- The change is two steps in scene 61 of `src/film/story.json`.
+- Also: the Vera-run cut had split the paragraph the heels effect looked for, so that effect's `find` (studio-edits `sfx`) is
+  now "In heels, in the red dress". It plays nothing in the run either way (the run's sounds are its `cues`); it only stops a
+  build warning.
+
+## Mara's service plays the director's picks (19 October 2026)
+
+Scene 97A plays what the director picked, shot by shot, from every version of each shot: the service_new cut, the fourteen
+stills of `art/mara-service/` as the film first installed them (`s97a/`), the director's uploads in `service/`, the set's
+left-out takes and an extra never in the cut. Nothing was left out and one shot was added: **35 shots, about 5.4 s each** under
+*What Made You, You*. `tools/service-cut.mjs` holds the cut (its header has the picks).
+- **The director's own pictures (12):**
+  - **From `s97a/` (10):** 557, 561, 562, 563, 564, 565, 566, 567, 568, 569. The 565 there is the picture as corrected on
+    13 October (Vera, her mother, a standing man), not the first install made from `art/mara-service/07`.
+  - **From `service/` (2):** 570 and 573, installed full size (enlarged to 1920×1080) as `s97a/570-before-he-kneels.jpg` and
+    `s97a/573-her-mother-stays.jpg`.
+- **576** plays `extras/mom-02` (left out on 17 October for its other room).
+- **`extras/mom-03`** (her mother leaving, in her coat) is added after 573, so she goes only after she has stayed a while
+  longer. Caption "Then she goes too, in her black coat."
+- **Known differences between the pictures:**
+  - 567 is one of the two stills with a split frame glued in.
+  - 561 and 565 are near the same wide.
+  - 570, 573 and mom-02 are in another room than the rest, and 573 has Vera in a cream sweater.
+  - mom-03 is a warmer interior with a lane outside.
+- Captions, the train over 569 and the song's timing are as before; no picture of the service has a depth map or a look of its
+  own, so none carries over between same-named files.
+- This is the film only: PlayFrame's board for 97A still lists 556–569 on the `s97a` pictures. Nobody has watched it with the song.
+
+## Vera's night run plays the director's picks (19 October 2026)
+
+Scenes 72 (from the song's cue) to 76 play what the director picked, picture by picture. Each of the 54 pictures of the
+`vera_run_new/` set (made 18 October from the brief on branch `film-vera-run-brief`, `vera_run_new/BRIEF.md` there: one Vera,
+one dress, one route, the crossing from scenes 27 and 62) was shown beside the picture the film played at that beat and that
+picture's earlier takes, and the director chose one.
+- **What plays:** 27 new pictures, 14 of the shipped ones and 8 earlier takes. Bad Guy carries 50 shots (the run and Jack's
+  office), about 4.9 s per silent shot.
+  - **Shipped pictures kept**, with the captions and sounds they had: `69-vera-runs`, `547-the-call-still-lit`,
+    `549-the-crossing-chimes` (the crossing chime), `72-the-lost-heel` (the shoe splash), `74-twenty-metres-apart`, `501-one-shoe`,
+    `502-why-didnt-you-tell-me`, `503-she-holds-on`, `73-two-small-figures`, `504-nobody-looks-down` (the train),
+    `314-the-empty-crossing`, `82-on-the-floor`, `315-the-number-pressed`, `84-cries-without-a-sound`.
+  - **Earlier takes**, in `vera_run_takes/`, one file per beat named `<beat>--<the take>.jpg` so each carries its own caption:
+    69 v2 as she starts to run; PlayFrame's 70 (the version the film replaced on 13 October) on "Rain plasters her hair" and
+    again on "Slipping. Stumbling."; 71 v2 at the vending machine; 74 v2 as she cries; 75 v2 for both blows; 76 v1 as she
+    covers her face; 79 v1 for the Hive shut. Installed with `tools/install-film-picture.mjs` (all 1920×1080, so byte copies;
+    the archive is untouched). They shake like the new picture of their beat; none has a depth map or lights, which stay with
+    the pictures they were made from.
+  - **No picture of its own:** the beat of `74-02` (Jack out of the dark). 74-01 holds, as an empty street held there before.
+  - **502** comes up on "Why didn't you tell me?", as it always did, one line before the new set's beat for it.
+  - The 27 new pictures not picked stay on disk.
+- **The tool:** `tools/vera-run-cut.mjs` holds the picks (`PICKS`) and the kept shipped pictures' steps, captions and cues
+  (`ORIGINALS`). It puts each picture in front of the screenplay beat it covers, so the voice takes stay where they were, and
+  rewrites the "bad-guy" soundtrack's captions and sound cues for these scenes. Run it, then
+  `FILM_SRC=/nonexistent node tools/build-film-story.mjs`.
+- **Notes on what plays:** the director picked `72-02` (the phone lowers) with the note "phone facing wrong way"; `72-01`'s
+  umbrella reads more white than pale blue. The new set's other slips from the brief (73-11 and 73-12 running right to left,
+  74-11's bigger overpass, 74-16 mirrored) were not picked.
+- **Media walker fix:** the credits montage's camera looks (`credits.montageLooks`) carry depth maps, and `visitStoryMediaFields`
+  did not visit them. `80-the-machine-waits` is now only in the credits montage, so its map went unvisited (a Studio export
+  would have left it behind). The walker visits them now; a backend check guards it.
+- **Builder fix** (18 October): a node that continues a scene after a music cue now opens on its own first picture, or on the
+  one showing when it began, not on the scene's last picture. That also fixes `nw_s20_b`, which opened on 371 before 192, and
+  `nw_s65_b`, which opened on 277 (Vera leaving) before she had dressed.
+- **Test fix** (18 October): the service's timing check now counts each node's fade-in. It had failed since the cut grew to 34
+  pictures: the delays alone add up to 170 s of a run that plays about 190 s.
+- This is the film only: PlayFrame's boards for 72 to 76 and the visual novel still have the shipped pictures. Nobody has
+  watched the new run with the song.
+
 ## Mara's service plays the 34-shot cut (17 October 2026)
 
 The director asked for more shots in the service so each still holds less of "What Made You, You". Scene 97A plays the

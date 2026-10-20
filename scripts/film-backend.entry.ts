@@ -106,6 +106,11 @@ visitStoryMediaFields(deepClone(FILM), ({ value }) => seen.add(value));
 const unseen = [...referenced].filter((v) => !seen.has(v));
 eq(unseen, [], `the media walker visits all ${referenced.size} files the film references (missed: ${unseen.slice(0, 4).join(", ")}${unseen.length > 4 ? "…" : ""})`);
 check(referenced.size > 1000, "and the film really does reference more than a thousand files");
+// the credits montage's camera looks carry depth maps of their own (80-the-machine-waits has been in the montage only since the
+// director's picks for Vera's run, 19 October 2026, so nothing else reaches its map)
+const montageDepth = FILM.scenes.flatMap((s) => Object.values(s.credits?.montageLooks ?? {}))
+  .flatMap((c) => [c.depthMap, c.depthPlate, ...(c.depthCutouts ?? []).map((k) => k.image)]).filter((v): v is string => !!v);
+check(montageDepth.length > 0 && montageDepth.every((v) => seen.has(v)), `the credits montage's depth maps are media fields (${montageDepth.length} files)`);
 const sfx = [...referenced].filter((v) => v.startsWith("/film/sfx/"));
 check(sfx.length > 100 && sfx.every((v) => seen.has(v)), `beat sound effects and recorded ambience loops are media fields (${sfx.length} files)`);
 const onDisk = [...referenced].filter((v) => existsSync(join(ROOT, "public", v)));
@@ -300,11 +305,25 @@ eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp
 eq(["nw_s78", "nw_s79"].map((id) => FILM.scenes.find((s) => s.id === id)?.musicMode), ["none", undefined], "scene 78 is music-off again and scene 79 plays on the silence");
 eq(FILM.scenes.filter((s) => /^nw_s7[3-6]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 76 play inside the Bad Guy run (nothing of them is left to click through)");
 eq(badGuy.filter((s) => !s.hideHud).map((s) => s.id), [], "every node of the run is a cutscene node (no HUD; the builder takes the bars off every node last)");
-// the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels, on the same picture
+// the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels; since the vera_run_new
+// set (18 October 2026) it has its own picture, 73-10, where the old run carried both sounds on one picture cut in two
 const heels = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/heels-running-wet.mp3");
-check(heels >= 0 && badGuy[heels + 1]?.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3" && badGuy[heels + 1]?.background === badGuy[heels]?.background, "the car-pass effect plays right after the heels, on the same picture (a shot can be cut into several parts, each with its own sound)");
+const car = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3");
+check(heels >= 0 && car > heels && /\/73-10-a-car-passes\.jpg$/.test(badGuy[car]?.background ?? ""), "the car-pass effect plays after the heels, on the picture of the car passing (73-10)");
+// scenes 72 to 76 play the director's picks (19 October 2026, PICKS in tools/vera-run-cut.mjs): 27 of the vera_run_new set, 14 of the
+// shipped pictures and 8 earlier takes; the beat of 74-02 keeps no picture of its own, and 502 comes up on its own line again
+const runPics = [...new Set(badGuy.map((s) => s.background ?? ""))];
+const runFrom = (folder: string) => runPics.filter((b) => b.includes(`/${folder}/`)).length;
+eq([runFrom("vera_run_new"), runFrom("vera_run_takes")], [27, 8], "Bad Guy's run plays the director's picks: 27 new pictures and 8 earlier takes");
+check(!runPics.some((b) => /74-02-jack-out-of-the-dark/.test(b)), "74-02 is left out; 74-01 holds while Jack walks out of the dark");
+const why = badGuy.find((s) => s.dialogueBeats?.[0]?.text?.startsWith("Why didn't you tell me?"));
+check(/\/502-why-didnt-you-tell-me\.jpg$/.test(why?.background ?? ""), "\"Why didn't you tell me?\" plays on 502, as it did before the new set");
+check(/\/72-01-the-piano-plays-on\.jpg$/.test(badGuy[0]?.background ?? ""), "the song opens on Vera frozen at the bar (72-01), not on the scene's last picture");
 const heldFor = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).filter((b) => b.silent).map((b) => b.afterBeatDelaySeconds ?? 0);
-check(Math.min(...heldFor(badGuy)) >= 2.5, "no silent shot of the run is shorter than 2.5 s");
+// a picture's time on screen is all its nodes together: a caption before a line on the same picture is not a shot of its own
+const shotsOf = (nodes: typeof badGuy) => nodes.reduce<(typeof badGuy)[]>((g, s) => (g.length && g.at(-1)![0].background === s.background ? g.at(-1)!.push(s) : g.push([s]), g), []);
+const silentShots = shotsOf(badGuy).filter((g) => g.every((s) => (s.dialogueBeats ?? []).every((b) => b.silent)));
+check(Math.min(...silentShots.map((g) => heldFor(g).reduce((n, d) => n + d, 0))) >= 2.5, "no silent picture of the run is on screen for less than 2.5 s");
 const songSeconds = (nodes: typeof badGuy) => nodes.flatMap((s) => s.dialogueBeats ?? []).reduce((n, b) => n + (b.afterBeatDelaySeconds ?? 0), 0);
 check(songSeconds(badGuy) > 150 && songSeconds(badGuy) < 268.27, `Bad Guy's run is timed to fit its 268 s (${songSeconds(badGuy).toFixed(0)} s of delays plus the voices' own lengths)`);
 // "Baby Fool" plays once through the newsroom and the notebook photocopying, then fades out before Kurose.
@@ -330,17 +349,35 @@ check(closingCredits?.musicLoop === false && FILM.scenes.find((s) => s.id === "n
 
 console.log("What Made You, You plays through Mara's service, one still at a time");
 const service = runOf("service");
-// 17 October 2026: the service plays tools/service-cut.mjs's cut of the service_new set, one node per picture, as many of its 34 shots as are on disk
+// 17 October 2026: the service plays tools/service-cut.mjs's cut, one node per picture; since the director's picks (19 October 2026)
+// twelve of its 35 shots are the director's own pictures (s97a/) and the rest come from the service_new set and its extras
 const servicePics = service.map((s) => s.background);
+const servicePic = (name: string) => servicePics.findIndex((p) => p?.endsWith(`/${name}.jpg`));
 eq(new Set(servicePics).size, service.length, "the service's run is one node per picture");
-check(service.length >= 15 && servicePics.every((p) => /^\/film\/img\/service_new\//.test(p ?? "")), `the service plays the service_new cut (${service.length} of its 34 shots)`);
-check(servicePics.indexOf("/film/img/service_new/557-the-umbrellas.jpg") < servicePics.indexOf("/film/img/service_new/556-the-lane-from-above.jpg") && servicePics.indexOf("/film/img/service_new/568-kaneko-and-okada.jpg") > servicePics.indexOf("/film/img/service_new/569-after-the-service.jpg"), "the blue umbrella comes up the lane (557) before it reaches the door (556), and Kaneko and Okada sit in the emptied room (568) after the others have gone (569)");
+check(service.length === 35 && servicePics.every((p) => /^\/film\/img\/(service_new|s97a)\//.test(p ?? "")), `the service plays the director's picks (${service.length} shots)`);
+eq(servicePics.filter((p) => p?.includes("/s97a/")).length, 12, "twelve of them are the director's own pictures");
+check(servicePic("557-the-umbrellas") < servicePic("556-the-lane-from-above") && servicePic("568-kaneko-and-okada") > servicePic("569-after-the-service") && servicePic("mom-03-what-she-wears-home") > servicePic("573-her-mother-stays"), "the blue umbrella comes up the lane (557) before it reaches the door (556), her mother goes (mom-03) only after she has stayed a while longer (573), and Kaneko and Okada sit in the emptied room (568) after the others have gone (569)");
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/what-made-you-you.mp3").map((s) => s.id), [service[0].id], "the song starts once, on the run's first node");
 check(service[0].musicLoop === false, "and plays once");
 eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothing of 97A is left to click through: the whole scene plays to the song");
 eq(service.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s98", "the run hands on to the rooftop");
 eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, "none", "which fades the song out");
 check(service.every((s) => s.hideHud && s.dialogueBeats?.every((b) => b.silent)), "every node is a silent cutscene node: nobody speaks at the service");
-check(songSeconds(service) > 170 && songSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${songSeconds(service).toFixed(0)} s)`);
+// each node also takes its fade-in and the engine's lag (0.3 + 0.1 + 0.18 s), which the builder takes off its delay: with 34 pictures
+// the delays alone add up to about 170 s of a run that plays about 190 s (18 October 2026)
+const playedSeconds = (nodes: typeof service) => songSeconds(nodes) + nodes.length * 0.58;
+check(playedSeconds(service) > 180 && playedSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${playedSeconds(service).toFixed(0)} s)`);
+// the raid on the Hive (85 to 92, "Coins Measure-Time") plays the director's picks (19 October 2026): 11 pictures of the thehiveescape
+// set and 5 earlier versions (hive_raid_takes/) among the film's own, nothing left out
+const raidPics = [...new Set(runOf("raid").map((s) => s.background ?? ""))];
+eq([raidPics.filter((b) => b.includes("/thehiveescape/")).length, raidPics.filter((b) => b.includes("/hive_raid_takes/")).length], [11, 5], "the raid plays the director's picks: 11 new pictures and 5 earlier versions");
+check(!raidPics.some((b) => /\/(119-single-file|121-the-shutter|124-the-repairman|129-she-lets-him|131-she-jumps|133-inches-apart|380-the-shrine-hatch|382-the-pipe-gallery)\.jpg$/.test(b)), "and none of the eight pictures they replace");
+// scene 2 plays the director's picks (19 October 2026): seven of its eleven pictures from s2_picks/ (three archived takes, four of
+// s2_new2 under their own names so the s2 plates' lights and depth never land on them)
+const s2Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s2(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
+eq(s2Pics.filter((b) => b.includes("/s2_picks/")).length, 7, "scene 2 plays the director's picks: seven pictures from s2_picks/");
+// scene 6 (the interview room) plays the director's picks (20 October 2026): its own pictures but for 55, the archived first take
+const s6Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s6(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
+check(s6Pics.includes("/film/img/s6_picks/55-i-speak-japanese-v1.jpg") && !s6Pics.includes("/film/img/s6/55-i-speak-japanese.jpg"), "scene 6 plays the director's pick for 55: the archived first take");
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);

@@ -1141,7 +1141,7 @@
   },
   {
    "scene": "nw_s73",
-   "find": "Not elegantly. Badly. In heels",
+   "find": "In heels, in the red dress",
    "file": "heels-running-wet",
    "volume": 0.7
   },
@@ -1329,52 +1329,40 @@
    "slack": 2,
    "endHold": 2.5,
    "captions": {
-    "119-single-file": "Four masked men enter the Hive, single file.",
+    "119-single-file-v1": "Four masked men enter the Hive, single file.",
     "120-the-hive-is-watching": "Doors close softly as they pass. The Hive is watching.",
-    "121-the-shutter": "Kaneko sounds the alarm and pulls the shutter down.",
-    "124-the-repairman": "The radio repairman hears boots in the corridor.",
+    "86-02-three-strikes": "Kaneko strikes the iron pipe three times: the alarm the Hive has kept for fifty years.",
+    "86-03-shutter-down-light-out": "Shutter down, light out. Kaneko points: up, through the back.",
+    "124-the-repairman-v1": "The radio repairman hears boots in the corridor.",
     "125-the-main-switch": "He pulls the main switch.",
-    "126-dark": "Every bulb in the Hive goes out.",
+    "88-01-every-bulb-out": "In the black, Vera's hand finds the wall. Jack follows the sound of her.",
+    "126-dark": "The masked men stop. Flashlights snap on.",
     "127-faces-vanish": "Faces at the windows vanish from the beams.",
     "128-by-touch": "Vera climbs the black stairwell by touch.",
-    "129-she-lets-him": "She finds Jack's hand and pulls him up after her.",
+    "129-she-lets-him-v1": "She finds Jack's hand and pulls him up after her.",
     "319-the-unlit-lighter": "Her thumb on the lighter's wheel. She doesn't light it.",
+    "89-03-the-beam-falls-away": "Below them, boots. A flashlight beam crawls up the wall and falls away.",
     "130-the-roof": "A door opens before Vera can knock.",
-    "131-she-jumps": "Room after room, the Hive opens a way through.",
+    "90-02-family-kitchen-by-candle": "A kitchen lit by one candle. The children hold the next door wide.",
+    "90-03-dentist-finger-to-lips": "The dentist, a finger to his lips.",
+    "90-04-violin-girl": "The girl with the violin sits up and lets them pass.",
+    "90-05-through-the-wardrobe": "A passage through the inside of someone's wardrobe.",
     "378-the-barbers-shop": "The barber turns his chair to the wall.",
     "379-the-laundry": "Wet sheets part and close behind them.",
-    "380-the-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
+    "90-08-shrine-hatch": "A grandmother lifts the altar cloth: a low hatch.",
     "381-the-plank": "A plank across the gap, hauled in after them.",
-    "382-the-pipe-gallery": "The pipes ring softly: one rap means clear.",
+    "382-the-pipe-gallery-playframe": "The pipes ring softly: one rap means clear.",
     "132-the-gap": "Nobody speaks. Every door closes behind them.",
     "132-the-rails-sing": "Overhead the rails begin to sing.",
-    "133-inches-apart": "A train roars over them. Her hand is in his on the rail.",
+    "91-03-hand-in-his-on-the-rail": "A train roars over them. Her hand is in his on the rail.",
     "134-the-walkway-is-empty": "When the train has passed, the ladder is empty.",
     "135-below-the-viaduct": "They step off the last rung into an empty street. Sirens."
    },
    "cues": {
-    "119-single-file": [
-     {
-      "file": "pipe-alarm",
-      "volume": 0.3
-     }
-    ],
     "120-the-hive-is-watching": [
      {
       "file": "doors-close-softly",
       "volume": 0.6
-     }
-    ],
-    "121-the-shutter": [
-     {
-      "file": "shutter-crash",
-      "volume": 0.9
-     }
-    ],
-    "124-the-repairman": [
-     {
-      "file": "boots-single-file",
-      "volume": 0.4
      }
     ],
     "125-the-main-switch": [
@@ -1395,12 +1383,6 @@
       "volume": 0.3
      }
     ],
-    "382-the-pipe-gallery": [
-     {
-      "file": "pipe-alarm",
-      "volume": 0.12
-     }
-    ],
     "132-the-gap": [
      {
       "file": "doors-close-softly",
@@ -1411,12 +1393,6 @@
      {
       "file": "train",
       "volume": 0.8
-     }
-    ],
-    "133-inches-apart": [
-     {
-      "file": "fire-ladder-rungs",
-      "volume": 0.6
      }
     ],
     "135-below-the-viaduct": [
@@ -1448,6 +1424,36 @@
       "file": "jack-running",
       "volume": 0.8
      }
+    ],
+    "119-single-file-v1": [
+     {
+      "file": "pipe-alarm",
+      "volume": 0.3
+     }
+    ],
+    "86-03-shutter-down-light-out": [
+     {
+      "file": "shutter-crash",
+      "volume": 0.9
+     }
+    ],
+    "124-the-repairman-v1": [
+     {
+      "file": "boots-single-file",
+      "volume": 0.4
+     }
+    ],
+    "91-03-hand-in-his-on-the-rail": [
+     {
+      "file": "fire-ladder-rungs",
+      "volume": 0.6
+     }
+    ],
+    "382-the-pipe-gallery-playframe": [
+     {
+      "file": "pipe-alarm",
+      "volume": 0.12
+     }
     ]
    }
   },
@@ -1465,41 +1471,81 @@
    "slack": 2,
    "endHold": 2.5,
    "captions": {
-    "69-vera-runs": "Vera comes out of the hotel into the rain and starts to run.",
-    "547-the-call-still-lit": "The call is still lit in her fist: ISHIDA.",
-    "387-the-street-too-long": "The railway glows at the end of the street. She runs at it.",
-    "70-not-elegantly-badly": [
-     "Not elegantly. Badly. In heels, in the red dress, no coat.",
-     "A car passes, its tyres hissing. She cannot hear the song over her own breath."
-    ],
-    "548-the-machine-glows": "She runs past a vending machine. It glows, indifferent.",
-    "549-the-crossing-chimes": "At the crossing, the old melody chimes for her.",
-    "388-through-the-crossing": "She runs through it on red.",
-    "72-the-lost-heel": "One heel skids. The shoe stays behind in a puddle. She runs on.",
-    "500-no-one-else-is-here": "In a city of fourteen million people, no one else is here.",
-    "503-she-holds-on": "Her hands grab the front of his coat. She holds on.",
-    "73-two-small-figures": "Two small figures on a huge, empty, shining street.",
-    "76-the-reflection": "In the black water, her reflection. For a second, the street is different.",
-    "504-nobody-looks-down": "Above them, an elevated train passes.",
-    "77-the-red-shoe": "A single red shoe in a puddle on an empty street.",
-    "78-the-empty-lounge": "The hotel lounge, empty. The blue umbrella still leans on the stool.",
-    "79-the-hive-shut": "The Hive at night. The noodle shop shutter is down.",
-    "80-the-machine-waits": "The vending machine hums, lit, waiting for no one.",
-    "81-static-in-a-window": "A small television in a shop window, showing only static.",
     "314-the-empty-crossing": "The signal turns green for no one. The old melody chimes.",
     "82-on-the-floor": "Vera sits on the floor, still in the ruined red dress.",
-    "83-the-lighter": "The old steel lighter. She opens it. Closes it. Opens it.",
-    "84-cries-without-a-sound": "She holds it against her chest and cries without a sound."
+    "84-cries-without-a-sound": "She holds it against her chest and cries without a sound.",
+    "72-01-the-piano-plays-on": "Vera doesn't move. The piano plays on.",
+    "72-02-the-phone-lowers": "The phone slowly lowers from her ear.",
+    "72-03-the-lighter-into-the-bag": "The clock ticks. She puts his lighter in her bag.",
+    "72-04-walking-very-carefully": "Not running yet. Walking very carefully.",
+    "72-05-the-umbrella-stays": "The blue umbrella stays where she left it.",
+    "73-05-toward-the-tracks": "The railway glows at the end of the street. She runs at it.",
+    "73-07-heels-on-wet-pavement": "Not elegantly. Badly. In heels, in the red dress.",
+    "73-09-she-cannot-breathe": "Stopping for half a second because she can't breathe.",
+    "73-10-a-car-passes": "A car passes, its tyres hissing.",
+    "73-13-on-red": "She runs through it on red.",
+    "74-01-no-one-else-is-here": "In a city of fourteen million people, no one else is here.",
+    "74-03-his-hands": "His hands are dark. He has not washed them.",
+    "74-06-dont": "Jack takes one step toward her.",
+    "74-09-his-silence": "Jack doesn't answer. That silence is the answer.",
+    "74-13-she-folds": "And that is when Vera finally breaks. Her knees hit the wet pavement.",
+    "74-15-she-pushes-him-away": "Then she realises whose coat it is. She pushes him away.",
+    "74-17-the-reflection": "In the black water, her reflection. For a second, the street is different.",
+    "75-01-the-red-shoe": "A single red shoe in a puddle on an empty street.",
+    "75-02-the-empty-lounge": "The hotel lounge, empty. The blue umbrella still leans on the stool.",
+    "75-04-the-machines-wait": "The vending machines hum, lit, waiting for no one.",
+    "75-05-static-in-a-window": "A small television in a shop window, showing only static.",
+    "76-01-the-walkway": "Home.",
+    "76-02-the-empty-umbrella-stand": "The umbrella stand by the door is empty.",
+    "76-07-the-lighter": "The old steel lighter. She opens it. Closes it. Opens it.",
+    "69-vera-runs": "Vera comes out of the hotel into the rain,",
+    "547-the-call-still-lit": "The call is still lit in her fist: ISHIDA.",
+    "549-the-crossing-chimes": "At the crossing, the old melody chimes for her.",
+    "72-the-lost-heel": "One heel skids. The shoe stays behind in a puddle. She runs on.",
+    "74-twenty-metres-apart": "Vera slows. Stops. Twenty metres apart.",
+    "501-one-shoe": "She walks toward him. One shoe, one bare foot on the wet road.",
+    "503-she-holds-on": "Her hands grab the front of his coat. She holds on.",
+    "73-two-small-figures": "Two small figures on a huge, empty, shining street.",
+    "504-nobody-looks-down": "Above them, an elevated train passes.",
+    "315-the-number-pressed": "The phone lights her face. A contact: MOM.",
+    "73-03-she-runs--69-vera-runs-v2": "and starts to run.",
+    "73-06-her-face--70-not-elegantly-badly-playframe": "Rain plasters her hair to her face.",
+    "73-08-she-slips--70-not-elegantly-badly-playframe": "She keeps going, slipping, stumbling.",
+    "73-11-the-vending-machine--71-the-machine-glows-v2": "She runs past a vending machine. It glows, indifferent.",
+    "74-05-crying-almost-silently--74-twenty-metres-apart-v2": "She is crying, almost silently.",
+    "74-10-one-desperate-blow--75-one-desperate-blow-v2": "She hits him. One desperate blow against his chest.",
+    "74-18-she-covers-her-face--76-the-reflection-v1": "In the water, someone under a pale blue umbrella. Mara, or no one.",
+    "75-03-the-hive-shut--79-the-hive-shut-v1": "The Hive at night. The noodle shop shutter is down."
    },
    "cues": {
-    "70-not-elegantly-badly": [
+    "314-the-empty-crossing": [
+     {
+      "file": "crossing",
+      "volume": 0.5
+     }
+    ],
+    "73-07-heels-on-wet-pavement": [
      {
       "file": "heels-running-wet",
       "volume": 0.7
-     },
+     }
+    ],
+    "73-10-a-car-passes": [
      {
       "file": "car-pass",
       "volume": 0.8
+     }
+    ],
+    "75-05-static-in-a-window": [
+     {
+      "file": "tv-static",
+      "volume": 0.02
+     }
+    ],
+    "76-07-the-lighter": [
+     {
+      "file": "lighter-flick",
+      "volume": 0.5
      }
     ],
     "549-the-crossing-chimes": [
@@ -1517,24 +1563,6 @@
     "504-nobody-looks-down": [
      {
       "file": "train",
-      "volume": 0.5
-     }
-    ],
-    "81-static-in-a-window": [
-     {
-      "file": "tv-static",
-      "volume": 0.02
-     }
-    ],
-    "314-the-empty-crossing": [
-     {
-      "file": "crossing",
-      "volume": 0.5
-     }
-    ],
-    "83-the-lighter": [
-     {
-      "file": "lighter-flick",
       "volume": 0.5
      }
     ]
@@ -1573,18 +1601,19 @@
     "562-kanekos-parcel": "Rice balls wrapped in newspaper, as she gave them to Mara for the car.",
     "563-the-saved-drawing": "Jack straightens the photograph. Beside it, Mara's drawing of the arches in the rain.",
     "564-the-room-from-above": "The incense goes straight up.",
-    "565-they-bow": "Vera goes to the table. Jack goes with her. They bow.",
+    "565-they-bow": "Vera and her mother bow their heads at the table.",
     "566-her-mothers-hand": "Her mother's hand finds Vera's.",
-    "576-mother-and-daughter": "Vera lets her.",
+    "mom-02-mother-and-daughter": "Vera lets her.",
     "577-the-window": "Rain on the window. The light going.",
     "567-okada-at-the-door": "Okada from the bar, late, at the door. He doesn't come in.",
     "571-okadas-umbrella": "At last he stands his umbrella in the rack, beside the blue one.",
     "585-kaneko-goes-to-him": "Kaneko goes to him.",
     "572-the-circle-is-whole": "Okada kneels with the others, and the circle is whole.",
     "584-the-tea-gone-cold": "The tea has gone cold.",
-    "587-the-blue-umbrella-opens": "Later. Vera opens the blue umbrella.",
-    "569-after-the-service": "They come out into the lane. A train goes over. Her mother stays behind with the photograph.",
-    "573-her-mother-stays": "A while longer.",
+    "587-the-blue-umbrella-opens": "Later. Out in the lane, the blue umbrella opens.",
+    "569-after-the-service": "The mourners go up the lane together. A train goes over.",
+    "573-her-mother-stays": "Her mother stays behind with the photograph a while longer.",
+    "mom-03-what-she-wears-home": "Then she goes too, in her black coat.",
     "568-kaneko-and-okada": "Kaneko and Okada sit together by the lamp.",
     "586-his-hand-on-hers": "His hand rests on hers, once.",
     "588-it-rains-all-night": "It rains all night."
@@ -4127,6 +4156,75 @@
    }
   },
   "129-she-lets-him": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "73-05-toward-the-tracks": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.15,
+    "shakeDuration": 0.7
+   }
+  },
+  "73-07-heels-on-wet-pavement": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
+   }
+  },
+  "73-10-a-car-passes": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
+   }
+  },
+  "73-13-on-red": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
+   }
+  },
+  "73-03-she-runs--69-vera-runs-v2": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
+   }
+  },
+  "73-06-her-face--70-not-elegantly-badly-playframe": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.2,
+    "shakeDuration": 0.7
+   }
+  },
+  "73-08-she-slips--70-not-elegantly-badly-playframe": {
+   "cinematic": {
+    "mode": "shake",
+    "shakeAmount": 0.25,
+    "shakeDuration": 0.7
+   }
+  },
+  "129-she-lets-him-v1": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "90-02-family-kitchen-by-candle": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "91-03-hand-in-his-on-the-rail": {
+   "cinematic": {
+    "mode": "zoom-hold"
+   }
+  },
+  "382-the-pipe-gallery-playframe": {
    "cinematic": {
     "mode": "zoom-hold"
    }
