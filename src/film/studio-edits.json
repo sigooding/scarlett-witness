@@ -4228,6 +4228,111 @@
    "cinematic": {
     "mode": "zoom-hold"
    }
+  },
+  "412-pressed-against-the-railway": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s10/412-pressed-against-the-railway/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.38,
+    "depthSeconds": 18,
+    "focalPoint": "50% 55%"
+   }
+  },
+  "367-the-phone-rings": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s59/367-the-phone-rings/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.32,
+    "depthSeconds": 14,
+    "focalPoint": "50% 65%"
+   }
+  },
+  "402-the-windows-wake": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s71/402-the-windows-wake/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.36,
+    "depthSeconds": 18,
+    "depthDirection": "right",
+    "depthFocus": 0.5
+   }
+  },
+  "549-the-crossing-chimes": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s73/549-the-crossing-chimes/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.38,
+    "depthSeconds": 16,
+    "focalPoint": "50% 58%"
+   }
+  },
+  "530-exposed-to-the-sky": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s99a/530-exposed-to-the-sky/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.32,
+    "depthSeconds": 18,
+    "focalPoint": "48% 48%"
+   }
+  },
+  "531-six-old-stools": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s99a/531-six-old-stools/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.34,
+    "depthSeconds": 18,
+    "depthDirection": "left",
+    "depthFocus": 0.55
+   }
+  },
+  "574-the-viaduct-at-dusk": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/service_new/574-the-viaduct-at-dusk/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 18,
+    "depthDirection": "right",
+    "depthFocus": 0.55
+   }
+  },
+  "588-it-rains-all-night": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/service_new/588-it-rains-all-night/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.36,
+    "depthSeconds": 16,
+    "focalPoint": "50% 56%"
+   }
+  },
+  "460-parked-crooked": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.34,
+    "depthSeconds": 16,
+    "depthDirection": "left",
+    "depthFocus": 0.58
+   }
+  },
+  "452-the-loop": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s26/452-the-loop/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.32,
+    "depthSeconds": 18,
+    "depthDirection": "right",
+    "depthFocus": 0.52
+   }
   }
  },
  "cutscenes": [

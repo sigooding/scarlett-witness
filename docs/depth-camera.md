@@ -48,7 +48,7 @@ your eye confirms them.
 
 ## 3. Choose the move
 
-**In the Studio, adding a depth map to a picture fills in the suggested move** wherever nothing is set yet: `truck`, amount 0.4, 14 s, over `pan` (distance 2, the same 14 s), and the push's focal point 50% 55% in case the move is changed to a push (changed from `push` on 12 October 2026 at the director's request: "default depth maps to truck"). A `dolly` camera is switched to `pan`, since dolly cannot carry a depth layer. Change any of it afterwards; nothing already set is overwritten.
+**In the Studio, adding a depth map to a picture fills in the suggested move** wherever nothing is set yet: `truck`, amount 0.4, 14 s, over `pan` (distance 2, the same 14 s), and the push's focal point 50% 55% in case the move is changed to a push (changed from `push` on 12 October 2026 at the director's request: "default depth maps to truck"). A `dolly` camera is switched to `pan`, since dolly cannot carry a depth layer. Change any of it afterwards; nothing already set is overwritten. **Current film rule:** `tools/build-film-story.mjs` normalizes every `pan` to `static` (15 October 2026, no slow pans), so new depth-map entries use `mode: "static"`; their `depthMotion` still plays on the held frame.
 
 In `pictureLook` (or the Studio's 🧊 panel), for the picture:
 
@@ -115,15 +115,18 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
 
        python3 tools/make-depth-layers.py --wire 200-the-number-114
 
-   (or add `--wire` to the run in step 3). It writes the made map, the plate and the cut-outs into the entry and keeps the
-   move:
+   (or add `--wire` to the run in step 3). For a people shot, it writes the made map, plate and cut-outs into the entry and
+   keeps the move:
 
        "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
        "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg",
        "depthCutouts": [{ "image": "/film/depth/s25/200-the-number-114/cutout-1.png", "depth": 0.922 }, ...]
 
    `depthMap` is the made `depth.png`, never `source-depth.png` (that one still has the people in it). The engine moves the
-   plate through the depth map and each cut-out as one solid layer at its depth (up to four per picture).
+   plate through the depth map and each cut-out as one solid layer at its depth (up to four per picture). For a depth-only
+   picture there is no plate or cut-out: save its map at `public/film/depth/<scene>/<picture>/depth.png`, put that path in
+   the manifest entry's `depthMap`, then `--wire` writes only `depthMap`. To generate or regenerate a depth-only map with
+   Depth Anything, `--depth-model <model> --wire <picture name>` is enough; no segmentation or inpainting model is needed.
 
 ## 5. Build and check
 

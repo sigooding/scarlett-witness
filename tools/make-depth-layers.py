@@ -2,7 +2,8 @@
 """Depth layers for the depth-map camera (cinematic.depthMap / depthPlate / depthCutouts, src/game/DepthParallax.tsx).
 The whole process, start to finish, is in docs/depth-camera.md.
 
-For every picture in docs/film-depth-layers.json ("pictures") this writes public/film/depth/<scene folder>/<picture>/:
+For each picture in docs/film-depth-layers.json ("pictures") this writes public/film/depth/<scene folder>/<picture>/.
+Pictures with people and "cutouts" get:
   depth.png     the background's depth, grayscale, white = near, black = far, with the people taken out (filled from around
                 them). Made by Depth Anything and smoothed hard (960x540), or, when the picture names a "depthSource" (a map
                 someone made, e.g. with Google's image tools), that map with only the people filled, at its own size.
@@ -10,15 +11,17 @@ For every picture in docs/film-depth-layers.json ("pictures") this writes public
   cutout-N.png  each person, or group that touches, as a transparent PNG the size of the picture (BiRefNet), moved by the
                 engine as one solid layer so nobody stretches. Its depth is the source map's median under the person when
                 there is a source, else the smoothed background's depth just under their feet (so the feet stay planted).
-and writes each cut-out's depth and every file's path back into the JSON, ready for src/film/studio-edits.json (pictureLook).
+Pictures with no people and no "cutouts" are depth-only: they get just an exact-picture-size grayscale depth.png, and need
+only Depth Anything (unless they have a "depthSource"). The script writes the map path and each cut-out's depth back into
+the JSON, ready for src/film/studio-edits.json (pictureLook).
 
-    python3 tools/make-depth-layers.py --seg-model M --inpaint-model M [--depth-model M] [--wire] [picture names]
+    python3 tools/make-depth-layers.py [--depth-model M] [--seg-model M --inpaint-model M] [--wire] [picture names]
     python3 tools/make-depth-layers.py --wire [picture names]
     python3 tools/make-depth-layers.py --find-people --people-model M <picture name or image path>...
 
---wire writes each picture's depthMap, depthPlate and depthCutouts into its "pictureLook" entry in src/film/studio-edits.json,
-keeping the move already there (mode, depthMotion, depthAmount...); a picture with no entry yet is skipped with a note. Without
-the models it only wires what was made before.
+--wire writes the available depthMap, depthPlate and depthCutouts into its "pictureLook" entry in src/film/studio-edits.json,
+keeping the move already there (mode, depthMotion, depthAmount...); a picture with no entry yet is skipped with a note. With
+no image models it only wires maps/layers already made.
 
 --find-people suggests a box round each person (U2-Net human segmentation over three overlapping squares, so a small
 figure far off is still found) and draws them on <name>-people.jpg in --preview-dir: look at it, keep the boxes that are
@@ -190,9 +193,12 @@ def background_depth(depth, hole, smooth, size):
     copy; 0 keeps the map as it is), at `size`. A depth map carries a person's nearness a little past their outline (the
     model's blur, or a hand-made map's soft edge), so the hole is widened before the fill; left in, that halo becomes a
     bump the background bends around."""
-    d16 = (depth * 65535).round().astype(np.uint16)
-    wide = cv2.dilate(hole.astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (45, 45)))
-    filled = cv2.inpaint(d16, wide, 15, cv2.INPAINT_TELEA).astype(np.float32) / 65535
+    if hole.any():
+        d16 = (depth * 65535).round().astype(np.uint16)
+        wide = cv2.dilate(hole.astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (45, 45)))
+        filled = cv2.inpaint(d16, wide, 15, cv2.INPAINT_TELEA).astype(np.float32) / 65535
+    else:
+        filled = depth.astype(np.float32, copy=False)
     if smooth > 0:
         small = cv2.GaussianBlur(cv2.resize(filled, (480, 270), interpolation=cv2.INTER_AREA), (0, 0), smooth)
         return cv2.resize(small, size, interpolation=cv2.INTER_CUBIC).clip(0, 1)
@@ -231,30 +237,39 @@ def save_config(config):
 
 
 def wire(names, config):
-    """Puts each picture's map, plate and cut-outs in its pictureLook entry, where its depthMap was (or at the end)."""
+    """Puts each picture's map, and any plate/cut-outs, in its pictureLook entry."""
     with open(EDITS, encoding="utf-8") as f:
         edits = json.load(f)
     look = edits.get("pictureLook", {})
     for name in names:
         pic = config["pictures"][name]
         entry = look.get(name, {}).get("cinematic")
-        if entry is None or not pic.get("depthPlate"):
-            print(name, "not wired:", "no layers made yet" if entry is not None else
-                  "give it a pictureLook entry with its move first (docs/depth-camera.md, step 3)")
+        if entry is None:
+            print(name, "not wired: give it a pictureLook entry with its move first (docs/depth-camera.md, step 3)")
             continue
-        layers = {"depthMap": pic["depthMap"], "depthPlate": pic["depthPlate"],
-                  "depthCutouts": [{"image": c["image"], "depth": c["depth"]} for c in pic["cutouts"]]}
+        if not pic.get("depthMap"):
+            print(name, "not wired: no depth map made yet")
+            continue
+        layers = {"depthMap": pic["depthMap"]}
+        if pic.get("depthPlate"):
+            layers["depthPlate"] = pic["depthPlate"]
+            layers["depthCutouts"] = [
+                {"image": c["image"], "depth": c["depth"]} for c in pic.get("cutouts", [])
+            ]
         out = {}
         for k, v in entry.items():
             if k == "depthMap":
                 out.update(layers)
-            elif k not in layers:
+            elif k not in ("depthPlate", "depthCutouts"):
                 out[k] = v
         out.update({k: v for k, v in layers.items() if k not in out})
         look[name]["cinematic"] = out
-        print(name, "wired:", len(layers["depthCutouts"]), "cut-outs")
+        if "depthPlate" in layers:
+            print(name, "wired:", len(layers["depthCutouts"]), "cut-outs")
+        else:
+            print(name, "wired: depth-only map")
     with open(EDITS, "w", encoding="utf-8") as f:
-        f.write(json.dumps(edits, indent=2, ensure_ascii=False) + "\n")
+        f.write(json.dumps(edits, indent=1, ensure_ascii=False) + "\n")
 
 
 def find_mode(args, config):
@@ -295,15 +310,17 @@ def main():
             raise SystemExit("--find-people needs --people-model and at least one picture")
         return find_mode(args, config)
     todo = [(n, p) for n, p in config["pictures"].items() if not args.names or n in args.names]
-    if args.wire and not args.seg_model and not args.inpaint_model:
+    if args.wire and not args.seg_model and not args.inpaint_model and not args.depth_model:
         return wire([n for n, _ in todo], config)
-    if not args.seg_model or not args.inpaint_model:
-        raise SystemExit("--seg-model and --inpaint-model are needed")
     need_depth = any(not p.get("depthSource") for _, p in todo)
+    need_cutouts = any(p.get("cutouts") for _, p in todo)
     if need_depth and not args.depth_model:
         raise SystemExit("--depth-model is needed for pictures with no depthSource")
+    if need_cutouts and (not args.seg_model or not args.inpaint_model):
+        raise SystemExit("--seg-model and --inpaint-model are needed for pictures with cutouts")
     depth_s = session(args.depth_model) if need_depth else None
-    seg_s, fill_s = session(args.seg_model), session(args.inpaint_model)
+    seg_s = session(args.seg_model) if need_cutouts else None
+    fill_s = session(args.inpaint_model) if need_cutouts else None
     for name, pic in todo:
         rgb = cv2.cvtColor(cv2.imread(os.path.join(ROOT, pic["picture"])), cv2.COLOR_BGR2RGB)
         H, W = rgb.shape[:2]
@@ -313,25 +330,32 @@ def main():
         os.makedirs(out, exist_ok=True)
         source = read_depth(os.path.join(ROOT, pic["depthSource"]), (W, H)) if pic.get("depthSource") else None
         depth = source if source is not None else depth_of(depth_s, rgb)
-        mattes = own([matte_in(seg_s, rgb, c["box"], c.get("exclude", ())) for c in pic["cutouts"]], depth)
+        cutouts = pic.get("cutouts", [])
+        mattes = own([matte_in(seg_s, rgb, c["box"], c.get("exclude", ())) for c in cutouts], depth) if cutouts else []
         # The hole reaches a few pixels past each matte: the picture's own edge pixels carry the old background's colour.
         hole = np.zeros((H, W), np.uint8)
         for m in mattes:
             hole |= (m > 0.02).astype(np.uint8)
-        hole = cv2.dilate(hole, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (13, 13)))
+        if mattes:
+            hole = cv2.dilate(hole, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (13, 13)))
         smooth = pic.get("smooth", 0 if source is not None else SMOOTH)
-        bg = background_depth(depth, hole, smooth, (W, H) if source is not None else DEPTH_SIZE)
-        plate = fill(fill_s, rgb, hole)
+        output_size = (W, H) if source is not None or not cutouts else DEPTH_SIZE
+        bg = background_depth(depth, hole, smooth, output_size)
         cv2.imwrite(os.path.join(out, "depth.png"), (bg * 255).round().astype(np.uint8))
-        cv2.imwrite(os.path.join(out, "plate.jpg"), cv2.cvtColor(plate, cv2.COLOR_RGB2BGR), [cv2.IMWRITE_JPEG_QUALITY, 92])
-        pic["depthMap"], pic["depthPlate"] = f"/{rel}/depth.png", f"/{rel}/plate.jpg"
-        for k, (c, m) in enumerate(zip(pic["cutouts"], mattes), start=1):
-            alpha = (m * 255).round().astype(np.uint8)
-            rgba = np.dstack([rgb * (alpha > 0)[..., None], alpha]).astype(np.uint8)
-            cv2.imwrite(os.path.join(out, f"cutout-{k}.png"), cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGRA), [cv2.IMWRITE_PNG_COMPRESSION, 9])
-            c["image"] = f"/{rel}/cutout-{k}.png"
-            c["depth"] = round(matte_depth(m, source) if source is not None else feet_depth(m, bg), 3)
-        print(name, "->", rel, [(c["name"], c["depth"]) for c in pic["cutouts"]])
+        pic["depthMap"] = f"/{rel}/depth.png"
+        if cutouts:
+            plate = fill(fill_s, rgb, hole)
+            cv2.imwrite(os.path.join(out, "plate.jpg"), cv2.cvtColor(plate, cv2.COLOR_RGB2BGR), [cv2.IMWRITE_JPEG_QUALITY, 92])
+            pic["depthPlate"] = f"/{rel}/plate.jpg"
+            for k, (c, m) in enumerate(zip(cutouts, mattes), start=1):
+                alpha = (m * 255).round().astype(np.uint8)
+                rgba = np.dstack([rgb * (alpha > 0)[..., None], alpha]).astype(np.uint8)
+                cv2.imwrite(os.path.join(out, f"cutout-{k}.png"), cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGRA), [cv2.IMWRITE_PNG_COMPRESSION, 9])
+                c["image"] = f"/{rel}/cutout-{k}.png"
+                c["depth"] = round(matte_depth(m, source) if source is not None else feet_depth(m, bg), 3)
+        else:
+            pic.pop("depthPlate", None)
+        print(name, "->", rel, [(c["name"], c["depth"]) for c in cutouts])
     save_config(config)
     if args.wire:
         wire([n for n, _ in todo], config)
