@@ -13129,7 +13129,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Inside, the payphone is still ringing.",
      "silent": true,
-     "sfxUrl": "/film/sfx/phone.mp3",
+     "sfxUrl": "/film/sfx/phone-distant.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.52,
@@ -14996,7 +14996,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1001",
      "characterId": "nw_narrator",
-     "text": "Jack studies the side of his face. It is the answer he needs. He takes it.",
+     "text": "Jack studies the side of his face. It is the answer he needs.",
      "silent": true,
      "background": "/film/img/s61/481-the-side-of-his-face.jpg",
      "cinematic": {
@@ -15592,7 +15592,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "He walks straight through, between the rows, out through the fire door at the back and into an alley of dripping air conditioners.",
      "silent": true,
-     "sfxUrl": "/film/sfx/fire-door-bang.mp3",
+     "sfxUrl": "/film/sfx/fire-door-push-bar.mp3",
      "sfxVolume": 0.7
     },
     {
@@ -19770,9 +19770,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1
     }
-   ],
-   "musicMode": "none",
-   "musicFadeSeconds": 3
+   ]
   },
   {
    "id": "nw_s78",
@@ -20137,8 +20135,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1314",
      "characterId": "nw_daniel",
-     "text": "They followed me home again tonight. The girls were asleep. I stood at the door a long time. If something happens to me, it will not be what they say. Tell Vera. When she is old enough. Tell her it will not be what they say.",
-     "audioUrl": "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again.mp3",
+     "text": "They followed me home again tonight. The girls were asleep. I stood at the door a long time. If something happens to me, it will not be what they say.",
+     "audioUrl": "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again--no-vera.mp3",
      "expression": "v.o."
     },
     {
@@ -26354,5 +26352,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "d5e94cae88e9"
+ "builtinRevision": "7bdf01d567bb"
 } as unknown as Story;

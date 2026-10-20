@@ -299,7 +299,7 @@ check(badGuy.length > 20, `Bad Guy's run has ${badGuy.length} timed nodes`);
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/bad-guy.mp3").map((s) => s.id), [badGuy[0].id], "Bad Guy is started once, on its run's first node (it never restarts)");
 check(badGuy[0].musicLoop === false, "and plays once");
 eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s77_after", "the run hands on to the rest of Jack's office (the clean envelope, the pen), an ordinary click-through node");
-eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, "none", "which fades the song out");
+eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, undefined, "which lets the song play on to its own end (20 October 2026: \"don't end bad guy song at jack just play till end\")");
 eq(runOf("midnight").map((s) => s.id), [], "the midnight song's run is gone");
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp3").map((s) => s.id), [], "and nothing in the film starts the midnight song");
 eq(["nw_s78", "nw_s79"].map((id) => FILM.scenes.find((s) => s.id === id)?.musicMode), ["none", undefined], "scene 78 is music-off again and scene 79 plays on the silence");
@@ -379,5 +379,12 @@ eq(s2Pics.filter((b) => b.includes("/s2_picks/")).length, 7, "scene 2 plays the 
 // scene 6 (the interview room) plays the director's picks (20 October 2026): its own pictures but for 55, the archived first take
 const s6Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s6(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
 check(s6Pics.includes("/film/img/s6_picks/55-i-speak-japanese-v1.jpg") && !s6Pics.includes("/film/img/s6/55-i-speak-japanese.jpg"), "scene 6 plays the director's pick for 55: the archived first take");
+// the director's notes of 20 October 2026 (docs/director-notes-2026-10-20.md)
+const allBeats = FILM.scenes.flatMap((s) => (s.dialogueBeats ?? []).map((b) => ({ scene: s.id, b })));
+check(!allBeats.some(({ scene, b }) => scene.startsWith("nw_s61") && /He takes it\./.test(b.text ?? "")), "scene 61 no longer says \"He takes it.\"");
+const diary = allBeats.find(({ b }) => (b.text ?? "").startsWith("They followed me home again tonight."));
+check(!!diary && !/Vera/.test(diary.b.text ?? "") && diary.b.audioUrl === "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again--no-vera.mp3" && existsSync(join(ROOT, "public", diary.b.audioUrl)), "Daniel's diary in 79 does not mention Vera, and plays the take cut before \"Tell Vera\"");
+check(allBeats.some(({ b }) => /out through the fire door at the back/.test(b.text ?? "") && b.sfxUrl === "/film/sfx/fire-door-push-bar.mp3"), "the fire door in 63A is the push-bar door, not the bang that sounded like a shot");
+check(allBeats.some(({ b }) => b.text === "Inside, the payphone is still ringing." && b.sfxUrl === "/film/sfx/phone-distant.mp3"), "the payphone heard from the inn's back yard sounds distant");
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);

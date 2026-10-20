@@ -1064,7 +1064,7 @@
   {
    "scene": "nw_s63a",
    "find": "out through the fire door at the back",
-   "file": "fire-door-bang",
+   "file": "fire-door-push-bar",
    "volume": 0.7
   },
   {
@@ -1567,7 +1567,8 @@
      }
     ]
    },
-   "note": "The song is 268.27 s; the run is planned to 265 s because its voiced shots run a few seconds past the plan (measured 12 October 2026: the run ends 263.3 s into the song). The rest of Jack's office (the clean envelope, the pen) follows as an ordinary click-through node that fades the song out; the scenes after it are music-off (the midnight song was taken out again on 13 October 2026)."
+   "note": "The song is 268.27 s; the run is planned to 265 s because its voiced shots run a few seconds past the plan (measured 12 October 2026: the run ends 263.3 s into the song). The rest of Jack's office (the clean envelope, the pen) follows as an ordinary click-through node; since 20 October 2026 (the director: \"don't end Bad Guy at Jack, just play till the end\") the song runs on under it until it ends by itself (songRunsOn) instead of being faded there; the scenes after it are music-off (the midnight song was taken out again on 13 October 2026).",
+   "songRunsOn": true
   },
   {
    "id": "service",
@@ -4529,7 +4530,7 @@
     {
      "pic": "215-no-need-to-chase",
      "text": "Inside, the payphone is still ringing.",
-     "sfx": "phone",
+     "sfx": "phone-distant",
      "seconds": 2.8
     }
    ],

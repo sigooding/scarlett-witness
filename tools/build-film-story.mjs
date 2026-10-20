@@ -487,7 +487,8 @@ for (const seg of edits.soundtracks ?? []) {
     const nextId = k + 1 < chain.length ? chain[k + 1].id : after.id;
     Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: nextId });
   });
-  if (after.musicMode === undefined) Object.assign(after, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
+  // songRunsOn: the song is not faded where the run ends; it plays on under what follows until it ends by itself (or the next music cue takes over)
+  if (after.musicMode === undefined && !seg.songRunsOn) Object.assign(after, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
   const removed = new Set(block.map(s => s.id));
   scenes.splice(a, b - a + 1, ...chain, ...(rest ? [after] : []));
   for (const s of scenes) {
@@ -495,7 +496,7 @@ for (const seg of edits.soundtracks ?? []) {
     for (const bt of s.dialogueBeats ?? []) if (removed.has(bt.afterBeatTargetSceneId)) bt.afterBeatTargetSceneId = chain[0].id;
     if (removed.has(s.autoAdvanceTargetSceneId)) s.autoAdvanceTargetSceneId = chain[0].id;
   }
-  console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${after.id} fades it out`);
+  console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${seg.songRunsOn ? `it runs on under ${after.id} to its end` : `${after.id} fades it out`}`);
 }
 
 // Cutscenes (src/film/studio-edits.json "cutscenes", 11 October 2026: the director asked for the inn raid to play as fast action): a run of
