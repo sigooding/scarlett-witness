@@ -26,6 +26,7 @@ scene headings as **descriptions**. Beside the MP4: the same captions as an `.sr
    | `--size 1280x720` or `1920x1080` | picture size |
    | `--fps 24` | frame rate |
    | `--no-subs`, `--no-desc` | leave out the subtitles or the descriptions |
+   | `--no-marks` | leave out the mark in the top-right corner. It is on by default: **SC 84 · BEAT 12** and the picture's file name (`518-thats-mine.jpg`), so a problem can be reported by where it is. The beat counts every line, description and picture caption from the start of the screenplay scene, across its continuations and a song's timed shots. The scene comes from each node's `animaticMark`, set by the film builder. The export dialog has the same switch: "Scene, beat and picture in the corner". |
    | `--pace 1` | reading holds: 0.8 brisker, 1.25 slower |
    | `--out <folder>` | default `exports/animatics/whole-film/`, or `exports/animatics/<from>-<to>/` (git ignores `exports/`) |
    | `--url <server>` | use a dev server that is already running instead of starting one |

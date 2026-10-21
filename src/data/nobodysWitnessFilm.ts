@@ -1389,6 +1389,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_prologue",
    "title": "Prologue — The Hive, remembered",
+   "animaticMark": "Prologue",
    "background": "/film/img/s1/377-the-hive-remembered.jpg",
    "particles": "rain",
    "hideHud": true,
@@ -1454,6 +1455,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s1",
    "title": "1 — The backstreet",
+   "animaticMark": "1",
    "background": "/film/img/s1/01-backstreet.jpg",
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3",
@@ -2168,6 +2170,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s2",
    "title": "2 — The small bar",
+   "animaticMark": "2",
    "background": "/film/img/s2/19-the-bar.jpg",
    "prose": "INT. SMALL BAR, KANDA - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3+file:/film/sfx/tv-murmur.mp3",
@@ -2491,6 +2494,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s3",
    "title": "3 — Three days later",
+   "animaticMark": "3",
    "background": "/film/img/s3/29-apartment-block.jpg",
    "prose": "EXT. VERA'S APARTMENT BUILDING - DUSK",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
@@ -2632,6 +2636,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s4",
    "title": "4 — Vera's apartment",
+   "animaticMark": "4",
    "background": "/film/img/s4/33-the-apartment.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -3011,6 +3016,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s5",
    "title": "5 — The front counter",
+   "animaticMark": "5",
    "background": "/film/img/s5/43-the-front-counter.jpg",
    "prose": "INT. POLICE STATION, FRONT COUNTER - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
@@ -3271,6 +3277,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s6",
    "title": "6 — The interview room",
+   "animaticMark": "6",
    "background": "/film/img/s6/51-the-interview-room.jpg",
    "prose": "INT. POLICE STATION, INTERVIEW ROOM - MOMENTS LATER",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
@@ -4006,6 +4013,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s7",
    "title": "7 — The detectives' room",
+   "animaticMark": "7",
    "background": "/film/img/s7/63-the-detectives-room.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3+file:/film/sfx/police-radio-low.mp3",
@@ -4158,6 +4166,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s8",
    "title": "8 — We're closed",
+   "animaticMark": "8",
    "background": "/film/img/s8/160-were-closed.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -4339,6 +4348,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s9",
    "title": "9 — Behind the counter",
+   "animaticMark": "9",
    "background": "/film/img/s9/162-miss.jpg",
    "prose": "EXT. KANDA STREET - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
@@ -4527,6 +4537,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s10",
    "title": "10 — Depends who's calling",
+   "animaticMark": "10",
    "background": "/film/img/s10/412-pressed-against-the-railway.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
@@ -5052,6 +5063,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s11",
    "title": "11 — Two men laughing",
+   "animaticMark": "11",
    "background": "/film/img/s11/243-the-box.jpg",
    "prose": "INT. JACK'S OFFICE - LATER",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
@@ -5376,6 +5388,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s12",
    "title": "12 — The strap",
+   "animaticMark": "12",
    "background": "/film/img/s12/420-not-searching-looking.jpg",
    "prose": "EXT. BACKSTREET, KANDA - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-vending.mp3+file:/film/sfx/vending-hum.mp3",
@@ -5671,6 +5684,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s14",
    "title": "14 — Someone who meant to come back",
+   "animaticMark": "14",
    "background": "/film/img/s14/182-someone-who-meant-to-come-back.jpg",
    "prose": "INT. MARA'S APARTMENT - DAY",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
@@ -6016,6 +6030,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s14a",
    "title": "14 — Forty metres",
+   "animaticMark": "14A",
    "background": "/film/img/s14a/334-the-mirror.jpg",
    "prose": "INT./EXT. JACK'S CAR, KANDA - NIGHT",
    "ambientAudio": "rain",
@@ -6816,6 +6831,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s15",
    "title": "15 — Forgotten by the city",
+   "animaticMark": "15",
    "background": "/film/img/s15/184-a-gap-in-someones-teeth.jpg",
    "prose": "EXT. THE HIVE - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3",
@@ -6939,6 +6955,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s16",
    "title": "16 — Everybody sees him",
+   "animaticMark": "16",
    "background": "/film/img/s16/433-barely-shoulder-wide.jpg",
    "prose": "INT. THE HIVE, PASSAGES - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
@@ -7130,6 +7147,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s17",
    "title": "17 — You got old",
+   "animaticMark": "17",
    "background": "/film/img/s17/187-you-got-old.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -7376,6 +7394,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s18",
    "title": "18 — After the last train",
+   "animaticMark": "18",
    "background": "/film/img/s18/435-the-last-page.jpg",
    "prose": "INT. JACK'S OFFICE - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
@@ -7530,6 +7549,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_m18",
    "title": "Montage — to the Hive, after the last train",
+   "animaticMark": "18 montage",
    "nodeType": "credits",
    "background": "/film/img/montage18/01.jpg",
    "prose": "",
@@ -7571,6 +7591,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s19",
    "title": "19 — Past midnight",
+   "animaticMark": "19",
    "background": "/film/img/s19/190-she-stands-aside.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -7630,6 +7651,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s20",
    "title": "20 — Prove it",
+   "animaticMark": "20",
    "background": "/film/img/s20/309-the-voicemail.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -7738,6 +7760,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s20_b",
    "title": "20 — Prove it (cont.)",
+   "animaticMark": "20",
    "background": "/film/img/s20/192-the-red-bird-clip.jpg",
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -8025,6 +8048,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s20_c",
    "title": "20 — Prove it (cont.)",
+   "animaticMark": "20",
    "background": "/film/img/s20/346-the-bulb-hums.jpg",
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -8096,6 +8120,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s21",
    "title": "21 — Footsteps on the stairs",
+   "animaticMark": "21",
    "background": "/film/img/s21/193-footsteps-on-the-stairs.jpg",
    "prose": "INT. JACK'S OFFICE - DAY",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
@@ -8244,6 +8269,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s22",
    "title": "22 — Somewhere like this",
+   "animaticMark": "22",
    "background": "/film/img/s22/195-somewhere-like-this.jpg",
    "prose": "INT. ALL-NIGHT NOODLE COUNTER, UNDER THE TRACKS - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-noodle-counter.mp3",
@@ -8613,6 +8639,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s23",
    "title": "23 — You never call",
+   "animaticMark": "23",
    "background": "/film/img/s23/197-you-never-call.jpg",
    "prose": "EXT. YAKITORI STALL, UNDER THE TRACKS - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-yakitori-grill.mp3+file:/film/sfx/walla-izakaya.mp3",
@@ -9015,6 +9042,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s25",
    "title": "25 — The number 114",
+   "animaticMark": "25",
    "background": "/film/img/s25/200-the-number-114.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -9415,6 +9443,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s25a",
    "title": "25 — Breakfast",
+   "animaticMark": "25A",
    "background": "/film/img/s25a/287-breakfast.jpg",
    "prose": "INT. TINY BREAKFAST COUNTER, NEAR THE STATION - MORNING",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-breakfast-counter.mp3",
@@ -9722,6 +9751,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s26",
    "title": "26 — The second hand",
+   "animaticMark": "26",
    "background": "/film/img/s26/452-the-loop.jpg",
    "prose": "INT. YAMANOTE LINE TRAIN - DAY",
    "ambientAudio": "file:/film/sfx/loop-train-yamanote.mp3",
@@ -10035,6 +10065,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s27",
    "title": "27 — The old song",
+   "animaticMark": "27",
    "background": "/film/img/s27/202-the-old-song.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
@@ -10132,6 +10163,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s27a",
    "title": "27 — She was here",
+   "animaticMark": "27A",
    "background": "/film/img/s27a/290-daylight-again.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
@@ -10417,6 +10449,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s28",
    "title": "28 — The sea wall steps",
+   "animaticMark": "28",
    "background": "/film/img/s28/203-the-sea-wall-steps.jpg",
    "prose": "EXT. FISHING TOWN, BOSO COAST - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-harbour.mp3",
@@ -10469,6 +10502,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s29",
    "title": "29 — The tea she does not want to pour",
+   "animaticMark": "29",
    "background": "/film/img/s29/204-the-tea-she-does-not-want-to-pour.jpg",
    "prose": "INT. MRS. SAKAI'S HOUSE - DAY",
    "ambientAudio": "",
@@ -10735,6 +10769,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s30",
    "title": "30 — A light ahead",
+   "animaticMark": "30",
    "background": "/film/img/s30/205-a-light-ahead.jpg",
    "prose": "EXT. COUNTRY HIGHWAY - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -10824,6 +10859,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s31",
    "title": "31 — The only car",
+   "animaticMark": "31",
    "background": "/film/img/s31/169-the-only-car.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -10904,6 +10940,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s32",
    "title": "32 — Just one night",
+   "animaticMark": "32",
    "background": "/film/img/s32/170-just-one-night.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11018,6 +11055,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s33",
    "title": "33 — The window swollen shut",
+   "animaticMark": "33",
    "background": "/film/img/s33/458-the-back-door-sticks.jpg",
    "prose": "INT. ROADSIDE INN, CORRIDOR AND BATH - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -11108,6 +11146,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s34",
    "title": "34 — Twenty years of Januaries",
+   "animaticMark": "34",
    "background": "/film/img/s34/172-twenty-years-of-januaries.jpg",
    "prose": "INT. ROADSIDE INN, JACK'S ROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/rain-tin-roof.mp3+file:/film/sfx/loop-inn-night.mp3",
@@ -11191,6 +11230,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s35",
    "title": "35 — The pink payphone",
+   "animaticMark": "35",
    "background": "/film/img/s35/207-the-pink-payphone.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -11238,6 +11278,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s36",
    "title": "36 — Come back safe anyway",
+   "animaticMark": "36",
    "background": "/film/img/s36/208-come-back-safe-anyway.jpg",
    "prose": "INT. VERA'S APARTMENT - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -11416,6 +11457,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s37",
    "title": "37 — The keys are always in it",
+   "animaticMark": "37",
    "background": "/film/img/s37/209-the-keys-are-always-in-it.jpg",
    "prose": "INT. ROADSIDE INN, KITCHEN DOORWAY - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
@@ -11538,6 +11580,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s38",
    "title": "38 — Four black sedans",
+   "animaticMark": "38",
    "background": "/film/img/s38/173-four-black-sedans.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
@@ -11600,6 +11643,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_01",
    "title": "The raid on the inn: Jack's eyes open. Tyres on gravel.",
+   "animaticMark": "39",
    "background": "/film/img/s39/174-he-has-heard-the-gravel.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -11644,6 +11688,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_02",
    "title": "The raid on the inn: Four black cars. Eight masked men.",
+   "animaticMark": "39",
    "background": "/film/img/s39/175-the-curtain-gap.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -11729,6 +11774,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_03",
    "title": "The raid on the inn: They split up without a word.",
+   "animaticMark": "39",
    "background": "/film/img/s39/175-the-curtain-gap.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -11816,6 +11862,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_04",
    "title": "The raid on the inn: He takes the receipts. Nothing else.",
+   "animaticMark": "39",
    "background": "/film/img/s39/461-takes-nothing-else.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -11855,6 +11902,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_05",
    "title": "The raid on the inn: Two masked men walk in. The first is the",
+   "animaticMark": "40",
    "background": "/film/img/s40/176-were-closed.jpg",
    "cinematic": {
     "mode": "shake",
@@ -11894,6 +11942,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_06",
    "title": "The raid on the inn: We're closed —",
+   "animaticMark": "40",
    "background": "/film/img/s40/176-were-closed.jpg",
    "cinematic": {
     "mode": "shake",
@@ -11933,6 +11982,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_07",
    "title": "The raid on the inn: A burst into the ceiling. Plaster rains ",
+   "animaticMark": "40",
    "background": "/film/img/s40/177-behind-the-counter.jpg",
    "cinematic": {
     "mode": "shake",
@@ -11974,6 +12024,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_08",
    "title": "The raid on the inn: The souvenir case shatters.",
+   "animaticMark": "40",
    "background": "/film/img/s40/178-staff-side.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12015,6 +12066,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_09",
    "title": "The raid on the inn: Boots on the stairs. Jack goes the other",
+   "animaticMark": "41",
    "background": "/film/img/s41/177-boots-below.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12056,6 +12108,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_10",
    "title": "The raid on the inn: Gunfire down the corridor. The screens b",
+   "animaticMark": "41",
    "background": "/film/img/s41/178-the-screens.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12097,6 +12150,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_11",
    "title": "The raid on the inn: Through the bathroom door.",
+   "animaticMark": "41",
    "background": "/film/img/s41/179-same-wood.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12136,6 +12190,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_12",
    "title": "The raid on the inn: Once. Twice. The third time, the window ",
+   "animaticMark": "42",
    "background": "/film/img/s42/210-the-third-time.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12177,6 +12232,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_13",
    "title": "The raid on the inn: Down the wet tin. He catches the gutter.",
+   "animaticMark": "43",
    "background": "/film/img/s43/211-wet-tin.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12218,6 +12274,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_14",
    "title": "The raid on the inn: Mrs. Noda, crouched in the kitchen. Into",
+   "animaticMark": "44",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12255,6 +12312,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_15",
    "title": "The raid on the inn: Stay. Whatever you hear.",
+   "animaticMark": "44",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12292,6 +12350,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_16",
    "title": "The raid on the inn: My husband —",
+   "animaticMark": "44",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12329,6 +12388,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_17",
    "title": "The raid on the inn: I'll get him.",
+   "animaticMark": "44",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12366,6 +12426,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_18",
    "title": "The raid on the inn: One gunman in the lobby. Mr. Noda behind",
+   "animaticMark": "45",
    "background": "/film/img/s45/462-a-finger-to-his-lips.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12403,6 +12464,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_19",
    "title": "The raid on the inn: Jack kills the lights.",
+   "animaticMark": "45",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12463,6 +12525,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_20",
    "title": "The raid on the inn: The gunman fires blind into the dark.",
+   "animaticMark": "45",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12523,6 +12586,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_21",
    "title": "The raid on the inn: Thank you very much.",
+   "animaticMark": "45",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12584,6 +12648,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_22",
    "title": "The raid on the inn: In that half-second, Jack has him.",
+   "animaticMark": "45",
    "background": "/film/img/s45/180-the-shoulder.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12623,6 +12688,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_23",
    "title": "The raid on the inn: The pink payphone starts to ring.",
+   "animaticMark": "45",
    "background": "/film/img/s45/179-it-rings.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12662,6 +12728,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_24",
    "title": "The raid on the inn: The old couple, together in the dark.",
+   "animaticMark": "46",
    "background": "/film/img/s46/213-clutch-each-other.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12699,6 +12766,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_25",
    "title": "The raid on the inn: I'm sorry.",
+   "animaticMark": "46",
    "background": "/film/img/s46/213-clutch-each-other.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -12736,6 +12804,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_26",
    "title": "The raid on the inn: Gunfire chases him through the mud.",
+   "animaticMark": "47",
    "background": "/film/img/s47/222-mud-and-impacts.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12777,6 +12846,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_27",
    "title": "The raid on the inn: Rounds punch through the truck.",
+   "animaticMark": "47",
    "background": "/film/img/s47/222-mud-and-impacts.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12818,6 +12888,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_28",
    "title": "The raid on the inn: The keys are in it. The engine coughs. D",
+   "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12859,6 +12930,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_29",
    "title": "The raid on the inn: A round through the windscreen.",
+   "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12900,6 +12972,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_30",
    "title": "The raid on the inn: Come on. Come on.",
+   "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12939,6 +13012,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_31",
    "title": "The raid on the inn: It catches. Roars.",
+   "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
    "cinematic": {
     "mode": "shake",
@@ -12980,6 +13054,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_32",
    "title": "The raid on the inn: Through the farm gate.",
+   "animaticMark": "49",
    "background": "/film/img/s49/463-through-the-farm-gate.jpg",
    "cinematic": {
     "mode": "shake",
@@ -13021,6 +13096,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_33",
    "title": "The raid on the inn: They don't chase him. They don't need to",
+   "animaticMark": "49",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
    "cinematic": {
     "mode": "shake",
@@ -13060,6 +13136,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_34",
    "title": "The raid on the inn: He's gone. He has what she gave him.",
+   "animaticMark": "49",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
    "cinematic": {
     "mode": "shake",
@@ -13099,6 +13176,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_cut_inn-raid_35",
    "title": "The raid on the inn: Inside, the payphone is still ringing.",
+   "animaticMark": "49",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
    "cinematic": {
     "mode": "shake",
@@ -13140,6 +13218,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s50",
    "title": "50 — Hand starts to shake",
+   "animaticMark": "50",
    "background": "/film/img/s50/216-hand-starts-to-shake.jpg",
    "prose": "INT. PICKUP TRUCK - MOVING - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-pickup-truck.mp3",
@@ -13273,6 +13352,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s51",
    "title": "51 — The model, corrected",
+   "animaticMark": "51",
    "background": "/film/img/s51/310-the-model-at-dawn.jpg",
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAWN",
    "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
@@ -13357,6 +13437,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s52",
    "title": "52 — She pulls him in",
+   "animaticMark": "52",
    "background": "/film/img/s52/541-a-knock-at-the-door.jpg",
    "prose": "INT. VERA'S APARTMENT - DAWN",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -13435,6 +13516,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s53",
    "title": "53 — Pink water",
+   "animaticMark": "53",
    "background": "/film/img/s53/219-pink-water.jpg",
    "prose": "INT. VERA'S APARTMENT, BATHROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
@@ -13753,6 +13835,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_m53",
    "title": "Montage — the night after Pink water",
+   "animaticMark": "53 montage",
    "nodeType": "credits",
    "background": "/film/img/montage53/01.jpg",
    "prose": "",
@@ -13794,6 +13877,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s53a",
    "title": "53 — There was no car",
+   "animaticMark": "53A",
    "background": "/film/img/s53a/297-the-glass-office.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
@@ -14001,6 +14085,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s54",
    "title": "54 — Everything is still there",
+   "animaticMark": "54",
    "background": "/film/img/s54/470-wedged-into-the-corner.jpg",
    "prose": "EXT. OLD TOBACCO KIOSK - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
@@ -14103,6 +14188,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s55",
    "title": "55 — They match",
+   "animaticMark": "55",
    "background": "/film/img/s55/472-he-glances-up.jpg",
    "prose": "INT. THE HIVE, PASSAGES - DAY",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/radios-repairman.mp3",
@@ -14230,6 +14316,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s56",
    "title": "56 — The third stool",
+   "animaticMark": "56",
    "background": "/film/img/s56/223-the-third-stool.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -14363,6 +14450,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s57",
    "title": "57 — Three feet away",
+   "animaticMark": "57",
    "background": "/film/img/s57/224-three-feet-away.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -14439,6 +14527,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s58",
    "title": "58 — Bring her",
+   "animaticMark": "58",
    "background": "/film/img/s58/225-bring-her.jpg",
    "prose": "INT. KANEKO'S NOODLE COUNTER - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -14557,6 +14646,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s59",
    "title": "59 — It rings. Nobody answers.",
+   "animaticMark": "59",
    "background": "/film/img/s59/364-the-kotatsu.jpg",
    "prose": "EXT. THE HIVE - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/rain-tin-roof.mp3",
@@ -14781,6 +14871,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s60",
    "title": "60 — I want my sister",
+   "animaticMark": "60",
    "background": "/film/img/s60/479-a-new-drawing.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -14939,6 +15030,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s61",
    "title": "61 — Nine o'clock",
+   "animaticMark": "61",
    "background": "/film/img/jack_ishida_new/61-01-under-the-expressway.jpg",
    "prose": "INT. ISHIDA'S CAR - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-car-idle-rain.mp3",
@@ -15158,6 +15250,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s62",
    "title": "62 — Like a date",
+   "animaticMark": "62",
    "background": "/film/img/s62/485-the-signal-is-red.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
@@ -15335,6 +15428,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s63",
    "title": "63 — No questions",
+   "animaticMark": "63",
    "background": "/film/img/s63/230-no-questions.jpg",
    "prose": "INT. KATO RENTAL LOCKERS, UENO - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-viaduct.mp3",
@@ -15484,6 +15578,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s63a",
    "title": "63 — Not another day",
+   "animaticMark": "63A",
    "background": "/film/img/s63a/293-the-sedan-waits.jpg",
    "prose": "EXT. UENO, UNDER THE RAILWAY ARCHES - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -15681,6 +15776,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s64",
    "title": "64 — Behind the counter",
+   "animaticMark": "64",
    "background": "/film/img/s64/231-behind-the-counter.jpg",
    "prose": "INT. SMALL BAR, KANDA - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
@@ -15787,6 +15883,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s65",
    "title": "65 — The wine-red dress",
+   "animaticMark": "65",
    "background": "/film/img/s65/487-the-top-of-the-wardrobe.jpg",
    "prose": "INT. VERA'S APARTMENT - EVENING",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -15891,6 +15988,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s65_b",
    "title": "65 — The wine-red dress (cont.)",
+   "animaticMark": "65",
    "background": "/film/img/s65/232-the-wine-red-dress.jpg",
    "prose": "",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -16018,6 +16116,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s66",
    "title": "66 — Waiting for someone",
+   "animaticMark": "66",
    "background": "/film/img/s66/491-to-almost-no-one.jpg",
    "prose": "INT. HOTEL LOUNGE - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
@@ -16189,6 +16288,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s67",
    "title": "67 — A different clock",
+   "animaticMark": "67",
    "background": "/film/img/s67/234-a-different-clock.jpg",
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -16265,6 +16365,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s68",
    "title": "68 — Rice balls for the car",
+   "animaticMark": "68",
    "background": "/film/img/s68/493-folded-in-four.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -16389,6 +16490,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s69",
    "title": "69 — Vera would love this",
+   "animaticMark": "69",
    "background": "/film/img/s69/495-other-lives.jpg",
    "prose": "INT. THE HIVE, PASSAGES - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -16565,6 +16667,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s70",
    "title": "70 — Position",
+   "animaticMark": "70",
    "background": "/film/img/s70/389-out-of-the-back-door.jpg",
    "prose": "EXT. SERVICE ROAD BEHIND THE HIVE - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-viaduct.mp3",
@@ -16880,6 +16983,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s71",
    "title": "71 — Everyone's awake",
+   "animaticMark": "71",
    "background": "/film/img/s71/399-the-bolt.jpg",
    "prose": "INT. THE HIVE, PASSAGE - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -17252,6 +17356,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s72",
    "title": "72 — The call",
+   "animaticMark": "72",
    "background": "/film/img/s72/497-eleven-fifty-two.jpg",
    "prose": "INT. HOTEL LOUNGE - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-hotel-lounge.mp3",
@@ -17461,6 +17566,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_01",
    "title": "The night after the call: Vera doesn't move. The piano plays on.",
+   "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-01-the-piano-plays-on.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -17503,6 +17609,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_02",
    "title": "The night after the call: She was with Mr. Jack. He had been hidin",
+   "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-01-the-piano-plays-on.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -17541,6 +17648,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_03",
    "title": "The night after the call: The phone slowly lowers from her ear.",
+   "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-02-the-phone-lowers.jpg",
    "cinematic": {
     "mode": "static",
@@ -17578,6 +17686,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_04",
    "title": "The night after the call: The clock ticks. She puts his lighter in",
+   "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-03-the-lighter-into-the-bag.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -17615,6 +17724,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_05",
    "title": "The night after the call: Not running yet. Walking very carefully.",
+   "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-04-walking-very-carefully.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -17652,6 +17762,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_06",
    "title": "The night after the call: The blue umbrella stays where she left i",
+   "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-05-the-umbrella-stays.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -17689,6 +17800,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_07",
    "title": "The night after the call: Vera comes out of the hotel into the rai",
+   "animaticMark": "73",
    "background": "/film/img/s73/69-vera-runs.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17728,6 +17840,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_08",
    "title": "The night after the call: and starts to run.",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_takes/73-03-she-runs--69-vera-runs-v2.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17767,6 +17880,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_09",
    "title": "The night after the call: The call is still lit in her fist: ISHID",
+   "animaticMark": "73",
    "background": "/film/img/s73/547-the-call-still-lit.jpg",
    "cinematic": {
     "mode": "static",
@@ -17804,6 +17918,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_10",
    "title": "The night after the call: The railway glows at the end of the stre",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-05-toward-the-tracks.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17843,6 +17958,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_11",
    "title": "The night after the call: Rain plasters her hair to her face.",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17882,6 +17998,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_12",
    "title": "The night after the call: Not elegantly. Badly. In heels, in the r",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-07-heels-on-wet-pavement.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17923,6 +18040,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_13",
    "title": "The night after the call: She keeps going, slipping, stumbling.",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe.jpg",
    "cinematic": {
     "mode": "shake",
@@ -17962,6 +18080,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_14",
    "title": "The night after the call: Stopping for half a second because she c",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -17999,6 +18118,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_15",
    "title": "The night after the call: A car passes, its tyres hissing.",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-10-a-car-passes.jpg",
    "cinematic": {
     "mode": "shake",
@@ -18040,6 +18160,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_16",
    "title": "The night after the call: She runs past a vending machine. It glow",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18077,6 +18198,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_17",
    "title": "The night after the call: At the crossing, the old melody chimes f",
+   "animaticMark": "73",
    "background": "/film/img/s73/549-the-crossing-chimes.jpg",
    "cinematic": {
     "mode": "static",
@@ -18120,6 +18242,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_18",
    "title": "The night after the call: She runs through it on red.",
+   "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-13-on-red.jpg",
    "cinematic": {
     "mode": "shake",
@@ -18159,6 +18282,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_19",
    "title": "The night after the call: One heel skids. The shoe stays behind in",
+   "animaticMark": "73",
    "background": "/film/img/s73/72-the-lost-heel.jpg",
    "cinematic": {
     "mode": "shake",
@@ -18200,6 +18324,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_20",
    "title": "The night after the call: In a city of fourteen million people, no",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-01-no-one-else-is-here.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18237,6 +18362,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_21",
    "title": "The night after the call: His hands are dark. He has not washed th",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-03-his-hands.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -18274,6 +18400,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_22",
    "title": "The night after the call: Vera slows. Stops. Twenty metres apart.",
+   "animaticMark": "74",
    "background": "/film/img/s74/74-twenty-metres-apart.jpg",
    "cinematic": {
     "mode": "static",
@@ -18347,6 +18474,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_23",
    "title": "The night after the call: She is crying, almost silently.",
+   "animaticMark": "74",
    "background": "/film/img/s74/74-twenty-metres-apart.jpg",
    "cinematic": {
     "mode": "static",
@@ -18420,6 +18548,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_24",
    "title": "The night after the call: Jack takes one step toward her.",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-06-dont.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18457,6 +18586,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_25",
    "title": "The night after the call: Don't.",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-06-dont.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18494,6 +18624,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_26",
    "title": "The night after the call: She walks toward him. One shoe, one bare",
+   "animaticMark": "74",
    "background": "/film/img/s74/501-one-shoe.jpg",
    "cinematic": {
     "mode": "static",
@@ -18531,6 +18662,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_27",
    "title": "The night after the call: You knew.",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-08-you-knew.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18568,6 +18700,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_28",
    "title": "The night after the call: Jack doesn't answer. That silence is the",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-09-his-silence.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18605,6 +18738,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_29",
    "title": "The night after the call: She hits him. One desperate blow against",
+   "animaticMark": "74",
    "background": "/film/img/s74/75-one-desperate-blow.jpg",
    "cinematic": {
     "mode": "static",
@@ -18653,6 +18787,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_30",
    "title": "The night after the call: You knew where she was.",
+   "animaticMark": "74",
    "background": "/film/img/s74/75-one-desperate-blow.jpg",
    "cinematic": {
     "mode": "static",
@@ -18701,6 +18836,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_31",
    "title": "The night after the call: Why didn't you tell me?",
+   "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18738,6 +18874,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_32",
    "title": "The night after the call: She was waiting for me.",
+   "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18775,6 +18912,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_33",
    "title": "The night after the call: And I was waiting for you.",
+   "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18812,6 +18950,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_34",
    "title": "The night after the call: And you were with her.",
+   "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18849,6 +18988,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_35",
    "title": "The night after the call: And that is when Vera finally breaks. He",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-13-she-folds.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18886,6 +19026,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_36",
    "title": "The night after the call: Her hands grab the front of his coat. Sh",
+   "animaticMark": "74",
    "background": "/film/img/s74/503-she-holds-on.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18923,6 +19064,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_37",
    "title": "The night after the call: Then she realises whose coat it is. She ",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-15-she-pushes-him-away.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -18960,6 +19102,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_38",
    "title": "The night after the call: Two small figures on a huge, empty, shin",
+   "animaticMark": "74",
    "background": "/film/img/s74/73-two-small-figures.jpg",
    "cinematic": {
     "mode": "static",
@@ -19028,6 +19171,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_39",
    "title": "The night after the call: In the black water, her reflection. For ",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-17-the-reflection.jpg",
    "cinematic": {
     "mode": "static",
@@ -19065,6 +19209,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_40",
    "title": "The night after the call: Vera covers her face with her hands.",
+   "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-18-she-covers-her-face.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19102,6 +19247,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_41",
    "title": "The night after the call: Above them, an elevated train passes.",
+   "animaticMark": "74",
    "background": "/film/img/s74/504-nobody-looks-down.jpg",
    "cinematic": {
     "mode": "static",
@@ -19141,6 +19287,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_42",
    "title": "The night after the call: A single red shoe in a puddle on an empt",
+   "animaticMark": "75",
    "background": "/film/img/vera_run_new/75-01-the-red-shoe.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19178,6 +19325,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_43",
    "title": "The night after the call: The hotel lounge, empty. The blue umbrel",
+   "animaticMark": "75",
    "background": "/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
    "cinematic": {
     "mode": "static",
@@ -19215,6 +19363,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_44",
    "title": "The night after the call: The Hive at night. The noodle shop shutt",
+   "animaticMark": "75",
    "background": "/film/img/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19252,6 +19401,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_45",
    "title": "The night after the call: The vending machines hum, lit, waiting f",
+   "animaticMark": "75",
    "background": "/film/img/vera_run_new/75-04-the-machines-wait.jpg",
    "cinematic": {
     "mode": "static",
@@ -19289,6 +19439,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_46",
    "title": "The night after the call: A small television in a shop window, sho",
+   "animaticMark": "75",
    "background": "/film/img/vera_run_new/75-05-static-in-a-window.jpg",
    "cinematic": {
     "mode": "static",
@@ -19328,6 +19479,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_47",
    "title": "The night after the call: The signal turns green for no one. The o",
+   "animaticMark": "75",
    "background": "/film/img/s75/314-the-empty-crossing.jpg",
    "cinematic": {
     "mode": "static",
@@ -19382,6 +19534,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_48",
    "title": "The night after the call: Home.",
+   "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-01-the-walkway.jpg",
    "cinematic": {
     "mode": "static",
@@ -19419,6 +19572,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_49",
    "title": "The night after the call: The umbrella stand by the door is empty.",
+   "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-02-the-empty-umbrella-stand.jpg",
    "cinematic": {
     "mode": "static",
@@ -19456,6 +19610,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_50",
    "title": "The night after the call: Vera sits on the floor, still in the rui",
+   "animaticMark": "76",
    "background": "/film/img/s76/82-on-the-floor.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19493,6 +19648,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_51",
    "title": "The night after the call: The phone lights her face. A contact: MO",
+   "animaticMark": "76",
    "background": "/film/img/s76/315-the-number-pressed.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19541,6 +19697,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_52",
    "title": "The night after the call: Vera? Honey?",
+   "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-05-vera-honey.jpg",
    "cinematic": {
     "mode": "static",
@@ -19579,6 +19736,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_53",
    "title": "The night after the call: Vera?",
+   "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-06-the-screen-goes-dark.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19617,6 +19775,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_54",
    "title": "The night after the call: The old steel lighter. She opens it. Clo",
+   "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-07-the-lighter.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19656,6 +19815,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_55",
    "title": "The night after the call: She holds it against her chest and cries",
+   "animaticMark": "76",
    "background": "/film/img/s76/84-cries-without-a-sound.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -19693,6 +19853,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_bad-guy_56",
    "title": "The night after the call: You're the first person I've trusted sin",
+   "animaticMark": "77",
    "background": "/film/img/s77/85-the-desk-lamp.jpg",
    "cinematic": {
     "mode": "static",
@@ -19749,6 +19910,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    ]
   },
   {
+   "animaticMark": "77",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
    "hideHud": true,
@@ -19833,6 +19995,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s78",
    "title": "78 — No name",
+   "animaticMark": "78",
    "background": "/film/img/s78/88-the-walkway.jpg",
    "prose": "EXT. VERA'S APARTMENT BUILDING, CORRIDOR - DAWN",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
@@ -19956,6 +20119,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s79",
    "title": "79 — Her father's handwriting",
+   "animaticMark": "79",
    "background": "/film/img/s79/91-grey-light.jpg",
    "prose": "INT. VERA'S APARTMENT - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/amb-room-tone.mp3+file:/film/sfx/loop-window-rain.mp3",
@@ -20247,6 +20411,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s80",
    "title": "80 — Where to find them",
+   "animaticMark": "80",
    "background": "/film/img/s80/94-the-long-room.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - DAY",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
@@ -20553,6 +20718,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s81",
    "title": "81 — Without a toast",
+   "animaticMark": "81",
    "background": "/film/img/s81/100-the-bar-in-daylight.jpg",
    "prose": "INT. SMALL BAR, KANDA - DAY",
    "ambientAudio": "file:/film/sfx/amb-bar.mp3",
@@ -20669,6 +20835,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s82",
    "title": "82 — Start with my part",
+   "animaticMark": "82",
    "background": "/film/img/s82/new-empty-newsroom.png",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
@@ -21044,6 +21211,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s82a",
    "title": "82 — The notebook photocopied",
+   "animaticMark": "82A",
    "background": "/film/img/s82a/300-at-the-edge-of-the-newsroom.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM, CORRIDOR - LATER",
    "ambientAudio": "file:/film/sfx/loop-newsroom.mp3",
@@ -21266,6 +21434,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s83",
    "title": "83 — It's just a face",
+   "animaticMark": "83",
    "background": "/film/img/s83/109-the-fortieth-floor.jpg",
    "prose": "INT. CHAIRMAN'S OFFICE, KUROSE DEVELOPMENT - DAY",
    "ambientAudio": "file:/film/sfx/amb-office.mp3+file:/film/sfx/loop-highrise-office.mp3",
@@ -21576,6 +21745,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s84",
    "title": "84 — Three feet away",
+   "animaticMark": "84",
    "background": "/film/img/s84/115-the-storeroom.jpg",
    "prose": "INT. THE HIVE, NOODLE SHOP STOREROOM - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -22055,6 +22225,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_01",
    "title": "The raid on the Hive: Four masked men enter the Hive, single f",
+   "animaticMark": "85",
    "background": "/film/img/hive_raid_takes/119-single-file-v1.jpg",
    "cinematic": {
     "mode": "static",
@@ -22099,6 +22270,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_02",
    "title": "The raid on the Hive: Doors close softly as they pass. The Hiv",
+   "animaticMark": "85",
    "background": "/film/img/s85/120-the-hive-is-watching.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22138,6 +22310,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_03",
    "title": "The raid on the Hive: Kaneko strikes the iron pipe three times",
+   "animaticMark": "86",
    "background": "/film/img/thehiveescape/s86/86-02-three-strikes.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -22175,6 +22348,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_04",
    "title": "The raid on the Hive: Shutter down, light out. Kaneko points: ",
+   "animaticMark": "86",
    "background": "/film/img/thehiveescape/s86/86-03-shutter-down-light-out.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22214,6 +22388,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_05",
    "title": "The raid on the Hive: Up. Through the back. The stairs by the ",
+   "animaticMark": "86",
    "background": "/film/img/s86/122-through-the-back.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -22251,6 +22426,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_06",
    "title": "The raid on the Hive: They don't know me.",
+   "animaticMark": "86",
    "background": "/film/img/s86/122-through-the-back.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -22288,6 +22464,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_07",
    "title": "The raid on the Hive: Come with us.",
+   "animaticMark": "86",
    "background": "/film/img/s86/122-through-the-back.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -22325,6 +22502,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_08",
    "title": "The raid on the Hive: I have lived here fifty years. They can ",
+   "animaticMark": "86",
    "background": "/film/img/hive_raid_takes/123-fifty-years-playframe.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22362,6 +22540,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_09",
    "title": "The raid on the Hive: Go now. They will help you.",
+   "animaticMark": "86",
    "background": "/film/img/thehiveescape/s86/86-04-go-now-they-will-help-you.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22399,6 +22578,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_10",
    "title": "The raid on the Hive: The radio repairman hears boots in the c",
+   "animaticMark": "87",
    "background": "/film/img/hive_raid_takes/124-the-repairman-v1.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22438,6 +22618,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_11",
    "title": "The raid on the Hive: He pulls the main switch.",
+   "animaticMark": "87",
    "background": "/film/img/s87/125-the-main-switch.jpg",
    "cinematic": {
     "mode": "static",
@@ -22488,6 +22669,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_12",
    "title": "The raid on the Hive: In the black, Vera's hand finds the wall",
+   "animaticMark": "88",
    "background": "/film/img/thehiveescape/s88/88-01-every-bulb-out.jpg",
    "cinematic": {
     "mode": "static",
@@ -22525,6 +22707,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_13",
    "title": "The raid on the Hive: The masked men stop. Flashlights snap on",
+   "animaticMark": "88",
    "background": "/film/img/s88/126-dark.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22564,6 +22747,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_14",
    "title": "The raid on the Hive: Faces at the windows vanish from the bea",
+   "animaticMark": "88",
    "background": "/film/img/s88/127-faces-vanish.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22622,6 +22806,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_15",
    "title": "The raid on the Hive: Vera climbs the black stairwell by touch",
+   "animaticMark": "89",
    "background": "/film/img/s89/128-by-touch.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22661,6 +22846,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_16",
    "title": "The raid on the Hive: She finds Jack's hand and pulls him up a",
+   "animaticMark": "89",
    "background": "/film/img/hive_raid_takes/129-she-lets-him-v1.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22698,6 +22884,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_17",
    "title": "The raid on the Hive: Her thumb on the lighter's wheel. She do",
+   "animaticMark": "89",
    "background": "/film/img/s89/319-the-unlit-lighter.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -22737,6 +22924,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_18",
    "title": "The raid on the Hive: Below them, boots. A flashlight beam cra",
+   "animaticMark": "89",
    "background": "/film/img/thehiveescape/s89/89-03-the-beam-falls-away.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -22774,6 +22962,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_19",
    "title": "The raid on the Hive: A door opens before Vera can knock.",
+   "animaticMark": "90",
    "background": "/film/img/s90/130-the-roof.jpg",
    "cinematic": {
     "mode": "static",
@@ -22831,6 +23020,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_20",
    "title": "The raid on the Hive: A kitchen lit by one candle. The childre",
+   "animaticMark": "90",
    "background": "/film/img/thehiveescape/s90/90-02-family-kitchen-by-candle.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22868,6 +23058,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_21",
    "title": "The raid on the Hive: The dentist, a finger to his lips.",
+   "animaticMark": "90",
    "background": "/film/img/thehiveescape/s90/90-03-dentist-finger-to-lips.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22905,6 +23096,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_22",
    "title": "The raid on the Hive: The girl with the violin sits up and let",
+   "animaticMark": "90",
    "background": "/film/img/thehiveescape/s90/90-04-violin-girl.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -22942,6 +23134,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_23",
    "title": "The raid on the Hive: A passage through the inside of someone'",
+   "animaticMark": "90",
    "background": "/film/img/thehiveescape/s90/90-05-through-the-wardrobe.jpg",
    "cinematic": {
     "mode": "static",
@@ -22979,6 +23172,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_24",
    "title": "The raid on the Hive: The barber turns his chair to the wall.",
+   "animaticMark": "90",
    "background": "/film/img/s90/378-the-barbers-shop.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -23029,6 +23223,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_25",
    "title": "The raid on the Hive: Wet sheets part and close behind them.",
+   "animaticMark": "90",
    "background": "/film/img/s90/379-the-laundry.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -23094,6 +23289,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_26",
    "title": "The raid on the Hive: A grandmother lifts the altar cloth: a l",
+   "animaticMark": "90",
    "background": "/film/img/thehiveescape/s90/90-08-shrine-hatch.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -23131,6 +23327,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_27",
    "title": "The raid on the Hive: A plank across the gap, hauled in after ",
+   "animaticMark": "90",
    "background": "/film/img/s90/381-the-plank.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -23170,6 +23367,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_28",
    "title": "The raid on the Hive: The pipes ring softly: one rap means cle",
+   "animaticMark": "90",
    "background": "/film/img/hive_raid_takes/382-the-pipe-gallery-playframe.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -23209,6 +23407,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_29",
    "title": "The raid on the Hive: Nobody speaks. Every door closes behind ",
+   "animaticMark": "90",
    "background": "/film/img/s90/132-the-gap.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -23248,6 +23447,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_30",
    "title": "The raid on the Hive: Overhead the rails begin to sing.",
+   "animaticMark": "91",
    "background": "/film/img/s91/132-the-rails-sing.jpg",
    "cinematic": {
     "mode": "static",
@@ -23287,6 +23487,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_31",
    "title": "The raid on the Hive: A train roars over them. Her hand is in ",
+   "animaticMark": "91",
    "background": "/film/img/thehiveescape/s91/91-03-hand-in-his-on-the-rail.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -23326,6 +23527,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_32",
    "title": "The raid on the Hive: When the train has passed, the ladder is",
+   "animaticMark": "91",
    "background": "/film/img/s91/134-the-walkway-is-empty.jpg",
    "cinematic": {
     "mode": "static",
@@ -23369,6 +23571,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_33",
    "title": "The raid on the Hive: They step off the last rung into an empt",
+   "animaticMark": "92",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -23437,6 +23640,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_34",
    "title": "The raid on the Hive: Is Kaneko —",
+   "animaticMark": "92",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -23503,6 +23707,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_raid_35",
    "title": "The raid on the Hive: The Hive looks after its own.",
+   "animaticMark": "92",
    "background": "/film/img/s92/135-below-the-viaduct.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -23567,6 +23772,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    ]
   },
   {
+   "animaticMark": "92",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
    "hideHud": true,
@@ -23623,6 +23829,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s93",
    "title": "93 — He knows this car",
+   "animaticMark": "93",
    "background": "/film/img/s93/137-he-knows-this-car.jpg",
    "prose": "EXT. POLICE STATION - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
@@ -23695,6 +23902,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s94",
    "title": "94 — The lit window",
+   "animaticMark": "94",
    "background": "/film/img/s94/139-only-tea.jpg",
    "prose": "EXT. POLICE STATION / INT. BLACK SEDAN - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-car-idle-rain.mp3",
@@ -23876,6 +24084,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s95",
    "title": "95 — Taillights",
+   "animaticMark": "95",
    "background": "/film/img/s95/142-taillights.jpg",
    "prose": "EXT. TOKYO STREET - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-wet-street.mp3",
@@ -23948,6 +24157,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s96",
    "title": "96 — A minute fast",
+   "animaticMark": "96",
    "background": "/film/img/s96/143-the-box.jpg",
    "prose": "INT. POLICE STATION, DETECTIVES' ROOM - MORNING",
    "ambientAudio": "file:/film/sfx/loop-police-station.mp3",
@@ -24075,6 +24285,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_01",
    "title": "Mara's service: Rain. The last of the light.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/574-the-viaduct-at-dusk.jpg",
    "cinematic": {
     "mode": "static",
@@ -24123,6 +24334,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_02",
    "title": "Mara's service: Mourners under black umbrellas crowd the",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/557-the-umbrellas.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24160,6 +24372,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_03",
    "title": "Mara's service: Vera and her mother under Mara's blue um",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/575-vera-and-her-mother-arrive.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24197,6 +24410,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_04",
    "title": "Mara's service: The mourners make way at the door.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/556-the-lane-from-above.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24234,6 +24448,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_05",
    "title": "Mara's service: Vera closes Mara's blue umbrella and sta",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/558-vera-closes-the-blue-umbrella.jpg",
    "cinematic": {
     "mode": "static",
@@ -24271,6 +24486,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_06",
    "title": "Mara's service: Shoes in a row below the step. Stockinge",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/559-shoes-at-the-step.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24308,6 +24524,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_07",
    "title": "Mara's service: Jack is the last one in. He looks back a",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/560-jack-at-the-door.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24345,6 +24562,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_08",
    "title": "Mara's service: He stands over the photograph a long mom",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/570-before-he-kneels.jpg",
    "cinematic": {
     "mode": "static",
@@ -24382,6 +24600,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_09",
    "title": "Mara's service: Kaneko lights the incense.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/580-the-incense.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24419,6 +24638,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_10",
    "title": "Mara's service: Mara's photograph. Chrysanthemums, incen",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/578-maras-photograph.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24456,6 +24676,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_11",
    "title": "Mara's service: A few of her drawings, dried flat.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/579-her-drawings.jpg",
    "cinematic": {
     "mode": "static",
@@ -24493,6 +24714,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_12",
    "title": "Mara's service: Kaneko's room. Nobody speaks.",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/561-the-small-service.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24530,6 +24752,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_13",
    "title": "Mara's service: Vera.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/581-veras-face.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24567,6 +24790,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_14",
    "title": "Mara's service: Her mother.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/extras/mom-01-her-face-at-the-table.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24604,6 +24828,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_15",
    "title": "Mara's service: Jack watches Vera.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/582-jacks-face.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24641,6 +24866,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_16",
    "title": "Mara's service: Three neighbours from the Hive.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/583-the-neighbours.jpg",
    "cinematic": {
     "mode": "static",
@@ -24678,6 +24904,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_17",
    "title": "Mara's service: Rice balls wrapped in newspaper, as she ",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/562-kanekos-parcel.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24715,6 +24942,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_18",
    "title": "Mara's service: Jack straightens the photograph. Beside ",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/563-the-saved-drawing.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24752,6 +24980,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_19",
    "title": "Mara's service: The incense goes straight up.",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/564-the-room-from-above.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24789,6 +25018,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_20",
    "title": "Mara's service: Vera and her mother bow their heads at t",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/565-they-bow.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24826,6 +25056,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_21",
    "title": "Mara's service: Her mother's hand finds Vera's.",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/566-her-mothers-hand.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24863,6 +25094,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_22",
    "title": "Mara's service: Vera lets her.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/extras/mom-02-mother-and-daughter.jpg",
    "cinematic": {
     "mode": "static",
@@ -24900,6 +25132,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_23",
    "title": "Mara's service: Rain on the window. The light going.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/577-the-window.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -24937,6 +25170,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_24",
    "title": "Mara's service: Okada from the bar, late, at the door. H",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/567-okada-at-the-door.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -24974,6 +25208,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_25",
    "title": "Mara's service: At last he stands his umbrella in the ra",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/571-okadas-umbrella.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25011,6 +25246,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_26",
    "title": "Mara's service: Kaneko goes to him.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/585-kaneko-goes-to-him.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25048,6 +25284,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_27",
    "title": "Mara's service: Okada kneels with the others, and the ci",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/572-the-circle-is-whole.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -25085,6 +25322,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_28",
    "title": "Mara's service: The tea has gone cold.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/584-the-tea-gone-cold.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25122,6 +25360,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_29",
    "title": "Mara's service: Later. Out in the lane, the blue umbrell",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/587-the-blue-umbrella-opens.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25159,6 +25398,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_30",
    "title": "Mara's service: The mourners go up the lane together. A ",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/569-after-the-service.jpg",
    "cinematic": {
     "mode": "static",
@@ -25198,6 +25438,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_31",
    "title": "Mara's service: Her mother stays behind with the photogr",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/573-her-mother-stays.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25235,6 +25476,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_32",
    "title": "Mara's service: Then she goes too, in her black coat.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/extras/mom-03-what-she-wears-home.jpg",
    "cinematic": {
     "mode": "dolly",
@@ -25272,6 +25514,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_33",
    "title": "Mara's service: Kaneko and Okada sit together by the lam",
+   "animaticMark": "97A",
    "background": "/film/img/s97a/568-kaneko-and-okada.jpg",
    "cinematic": {
     "mode": "zoom-hold",
@@ -25309,6 +25552,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_34",
    "title": "Mara's service: His hand rests on hers, once.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/586-his-hand-on-hers.jpg",
    "cinematic": {
     "mode": "static",
@@ -25346,6 +25590,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_song_service_35",
    "title": "Mara's service: It rains all night.",
+   "animaticMark": "97A",
    "background": "/film/img/service_new/588-it-rains-all-night.jpg",
    "cinematic": {
     "mode": "static",
@@ -25387,6 +25632,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s98",
    "title": "98 — The rain has stopped",
+   "animaticMark": "98",
    "background": "/film/img/s98/153-the-rain-has-stopped.jpg",
    "prose": "EXT. ROOFTOP OF JACK'S BUILDING - DAY",
    "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-rooftop-wind.mp3",
@@ -25873,6 +26119,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s99a",
    "title": "99 — The Hive coming down, then the plaza",
+   "animaticMark": "99A",
    "background": "/film/img/s99/156-cut-open.jpg",
    "prose": "EXT. THE HIVE / THE PLAZA, WHERE THE HIVE WAS - DAY",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3",
@@ -26095,6 +26342,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   {
    "id": "nw_s100",
    "title": "100 — The city goes on",
+   "animaticMark": "100",
    "background": "/film/img/s100/320-the-news-nobody-watches.jpg",
    "prose": "INT. KANEKO'S NEW COUNTER - NIGHT",
    "ambientAudio": "file:/film/sfx/amb-hive.mp3+file:/film/sfx/loop-noodle-counter.mp3",
@@ -26516,5 +26764,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "4001352ab4ed"
+ "builtinRevision": "b909ec1e6d91"
 } as unknown as Story;

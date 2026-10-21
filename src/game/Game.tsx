@@ -161,7 +161,7 @@ import { adjustedConsequences, choiceRepeats, gambleFlag, getPerks, rollGamble, 
 import { canRewindDecision, emptyRewind, popRewind, pushRewind, rewindLabel, sealRewind, type RewindStack } from "./rewind";
 import { simFromRuntime, strandedNow, STRANDED_GRACE_MS } from "./stranded";
 import { deepLinkFromUrl, describeDeepLink, resolveDeepLink } from "./deepLink";
-import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
+import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, AnimaticMark, animaticMarkFor, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
 
 /* SEEDED RUNS — ?seed=1234 on the URL pins every gameplay draw (minigame
  * shuffles, ride spawns) to one deterministic stream, applied once at
@@ -4449,6 +4449,15 @@ function CasePlayer({
   useEffect(() => {
     if (ANIMATIC) noteCaption(animaticCaption, scene?.id, currentBeat?.id);
   });
+  // The scene, beat and picture in the corner (animatic marks), so a problem in an exported MP4 can be reported by where it is.
+  const animaticMarkInfo = ANIMATIC?.marks && scene
+    ? animaticMarkFor(
+        story.scenes,
+        scene,
+        inBeats ? beatIdx : 0,
+        (inBeats ? visibleBeats.slice(0, beatIdx + 1) : []).reverse().find((b) => b.background && !b.background.startsWith("video:"))?.background ?? scene.background
+      )
+    : null;
   // In a browser the animatic ends on a black card once it leaves the chosen scenes (or reaches the ending), with the
   // sound stopped; the exporter stops filming before that frame.
   const [animaticOver, setAnimaticOver] = useState(false);
@@ -6668,6 +6677,7 @@ function CasePlayer({
       )}
       {/* Animatic mode: the captions sit where a film's subtitles go, over the bottom bar */}
       {ANIMATIC && !animaticOver && <AnimaticCaptions caption={animaticCaption} />}
+      {ANIMATIC && !animaticOver && <AnimaticMark info={animaticMarkInfo} />}
       {animaticOver && <AnimaticEnd />}
 
       {/* Pulsing heat/risk vignette — danger reads on screen before the trapdoor fires */}

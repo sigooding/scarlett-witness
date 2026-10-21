@@ -52,7 +52,7 @@ const REGISTRY: Record<string, Record<string, RegExp | null>> = {
     id: null, title: /title:/, background: /background/, prose: /prose/, dialogueBeats: /dialogueBeats/, hotspots: /hotspots/, choices: /choices/,
     noTypewriter: /noTypewriter/, autoNarrate: /autoNarrate/, transition: /transition/, transitionSpeed: /transitionSpeed/,
     ambientAudio: /AmbientLayers/, hideHud: /hideHud/, particles: /Particle Effects/, particleConfig: /aria-label=\{`Particle \$\{label/,
-    cinematic: /CinematicControls/, musicMode: /musicMode/, musicFadeSeconds: /musicFadeSeconds/, animaticReadPace: /Animatic reading pace/,
+    cinematic: /CinematicControls/, musicMode: /musicMode/, musicFadeSeconds: /musicFadeSeconds/, animaticReadPace: /Animatic reading pace/, animaticMark: /Animatic scene mark/,
     musicUrl: /musicUrl/, musicLevel: /musicLevel/, musicLoop: /Loop this track/, nodeType: /nodeType/, credits: /credits/,
     autoAdvanceTargetSceneId: /autoAdvanceTargetSceneId/, autoAdvanceDelaySeconds: /autoAdvanceDelaySeconds/, autoAdvanceHideTimer: /autoAdvanceHideTimer/,
     isEnding: /isEnding/, endingData: /endingData/,
@@ -403,6 +403,12 @@ const at84 = (t: string) => s84.findIndex((b) => (b.text ?? "").startsWith(t));
 const jackSays = (i: number) => i >= 0 && s84[i].characterId === "nw_jack" && (s84[i].audioUrl ? existsSync(join(ROOT, "public", s84[i].audioUrl!)) : s84[i].silent === true);
 check(!s84.some((b) => b.text === "Three feet away.") && jackSays(at84("Right behind the curtain.")), "scene 84: Jack says \"Right behind the curtain.\" (silent until its take is recorded)");
 check(at84("I trusted him. I'm so sorry.") === at84("I told him. Where she'd be, and when.") + 1 && jackSays(at84("I trusted him.")) && at84("I told you about the detective.") > at84("I trusted him."), "scene 84: the confession ends \"That's mine. I trusted him. I'm so sorry.\" before Vera answers");
+// animatic marks (the director, 21 October 2026): every node of the screenplay, a song's timed shots and the inn raid's cutscene
+// included, knows its scene, so an exported MP4 can show the scene, beat and picture in its corner
+const unmarked = FILM.scenes.filter((s) => /^nw_(s\d|song_|cut_|prologue)/.test(s.id) && !s.animaticMark).map((s) => s.id);
+eq(unmarked, [], "every scene node carries its screenplay scene for the animatic's mark");
+check(FILM.scenes.find((s) => s.id === "nw_song_raid_01")?.animaticMark === "85" && FILM.scenes.find((s) => s.id === "nw_song_service_01")?.animaticMark === "97A", "a song's timed shots carry the scene they come from (the raid opens in 85, Mara's service reads 97A)");
+check(/marks: marks \? "1" : "0"/.test(read("tools/export-animatic.mjs")) && /no-marks/.test(read("tools/vite-animatic-export.mjs")) && /setMarks/.test(read("src/AnimaticExport.tsx")), "the exporter, its dev-server job and the export dialog pass the marks switch");
 // picture slots (studio-edits "pictures" with `pending`): each waits on its beat for its file, with a brief, and a missing file is never put up
 const slots = (edits.pictures ?? []).filter((p: { pending?: boolean }) => p.pending);
 eq(slots.filter((p: { scene: string }) => p.scene === "nw_s80").length, 4, "scene 80 has four picture slots for the blows and after (jack-hits-him, the-chair-goes-over, not-to-jack, the-blood-on-his-hand)");

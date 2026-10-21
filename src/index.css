@@ -2952,6 +2952,22 @@ body,
   color: #efe7d6;
   text-shadow: 0 0.06em 0.14em #000;
 }
+.animatic-mark {
+  position: absolute;
+  top: 1.6vh;
+  right: 1.6vh;
+  z-index: 71;
+  padding: 0.35vh 0.9vh;
+  border-radius: 0.4vh;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.75vh;
+  line-height: 1.35;
+  text-align: right;
+  color: #ffd27a;
+  pointer-events: none;
+}
+.animatic-mark-pic { font-size: 1.45vh; color: rgba(240, 232, 214, 0.85); }
 .animatic-heading {
   position: absolute;
   top: 5%;
