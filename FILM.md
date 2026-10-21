@@ -32,7 +32,12 @@ Later the same day:
 
 Retake briefs for the plaza model (and its style sheet), the photo on Harada's desk, Mrs. Sakai's empty room, Vera leaving the
 lounge, Jack's hands (74-03), the notebook Vera holds up in 83 (112: it should be a photocopied page) and scene 80's pictures are
-in the same file. None is being generated for now.
+in the same file. None is being generated for now. **`docs/image-brief-2026-10-20.md`** gathers them, and the picks review's,
+into one ordered brief to hand to an image generator. It puts every retake in `public/film/img/retakes_2026_10_20/` and the
+plaza model in its glass case. Swap the pictures in when they come back; scene 80's come up by themselves.
+
+Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
+siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
 
 ## The envelope at dawn (scene 78): the director's picks (20 October 2026)
 

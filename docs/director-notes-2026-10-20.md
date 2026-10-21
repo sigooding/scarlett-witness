@@ -1,12 +1,17 @@
 # The director's notes of 20 October 2026: what was done, what is still to do
 
-The director watched the film and sent eleven notes, then four more marked on a contact sheet of scene 74, and one on scene 83.
+The director watched the film and sent eleven notes, then four more marked on a contact sheet of scene 74, one on scene 83 and
+one on Kaneko's pipe.
 **No pictures are being generated for now (not enough credits): every picture item stays as a brief until there are.** The sound and text
 changes are **done** in this repository (rebuilt, checks passing), and so are the scene 74 pictures that had a ready replacement.
 The remaining picture problems are written as **retake briefs** for an image generator, in the same form as
 `docs/picks-review-2026-10-19.md`. That doc's "How to run any brief" rules apply: a new filename, never over a file; attach the
 references; end with the style line; install with `tools/install-film-picture.mjs`. Scene 80's change was written on the
 director's go-ahead ("you recommend"); its pictures are still to make.
+
+**For the image generator:** `docs/image-brief-2026-10-20.md` collects every picture still to make from these notes and from the
+picks review, in priority order, ready to hand over. Every retake there lands in `public/film/img/retakes_2026_10_20/` and the
+scene 80 pictures at their slot paths in `s80/`; where its file names differ from the ones below, use the brief's.
 
 | # | Note | Where | Status |
 |---|---|---|---|
@@ -24,6 +29,7 @@ director's go-ahead ("you recommend"); its pictures are still to make.
 | 12 | His hands are too dirty (marked 1) | 74 (74-03) | Retake brief |
 | 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
 | 14 | Kurose's office, "It's just a face.": Vera has no coat, and holds a notebook, not the photocopies | 83 (111, 112) | 111 done (archived take); 112 retake brief |
+| 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Waiting for credits |
 
 ---
 
@@ -111,6 +117,9 @@ Part 9 item with the text-sync for saved workspaces, before the next import.
     is in view.
   - **Or the other way:** if the director prefers the glass case of 83, the sheet shows the case and 310/311 are redone into
     it. Choose one.
+- **Decided (21 October): the glass case.** It is in six of scene 83's pictures and only 310 and 311 would need redoing, so it
+  costs two retakes instead of five or more. The image brief (item 1) takes that route: the sheet shows the model in its case,
+  and 310 and 311 are redone into it. The long-table route above stays written in case the director prefers it.
 - **Style line:** *Photorealistic contemporary Tokyo neo-noir film still, 16:9. Grey daylight through a fortieth-floor window,
   cool slate tones, one warm desk lamp, restrained 35mm grain. No legible text, signage, logos or watermarks.*
 
@@ -299,3 +308,29 @@ Ishida unhurt at his desk.
 ### Also outside this repository
 PlayFrame's screenplay still has "He doesn't." The same change belongs there (a bible Part 9 item), with the rest listed under
 4 and 5.
+
+## 15. Kaneko's pipe: waiting for credits
+- **Where:** the raid run (85–92). On 86-02, "Kaneko strikes the iron pipe three times: the alarm the Hive has kept for fifty
+  years.", nothing is heard. The run's only pipe sound is `pipe-alarm.mp3` far under the masked men coming in (119, volume 0.3)
+  and in the pipe gallery (382, 0.12).
+- **Tried on 20 October, nothing kept:**
+  - Round 1 (an old woman striking a thick iron water pipe three times with a heavy spanner): three takes came back 1 s long,
+    because the quick generator cannot set a length, and one 7 s. The director: none violent enough.
+  - Round 2 opened its prompt with "Violent emergency alarm", and the director heard a siren. Two of its four takes failed: the
+    account ran out of credits (8 left).
+  - All six takes are kept, unused, in `public/film/sfx/alternates/pipe-spanner--v1…v6.mp3` (v1–v3 1 s, v4 7 s, v5 and v6 4 s).
+    They come from flow `F4TAqTKoPe00fq3fLMNA`. Round one's generations are `LUI6oVuZHzoYw9wwSrnt`, `lz4kP8FRc7xCx5dQ27ou`,
+    `lDQrcZPzpPXg5wMuxWKb` and `MKuem3T7JZWSnhLL9T2c` (the 7 s take); round two's are `G7S9tcADoTgzeiOUTguW` and
+    `JEzexa03He0SGnfqZSC6`.
+- **Next time:**
+  - Use a flow node so the length can be set: `duration_seconds` 4, `prompt_influence` about 0.7.
+  - Prompt: *A heavy steel spanner smashed hard against a thick cast-iron water pipe in a concrete stairwell, three violent
+    metallic impacts a second apart, each a hard dry clang with a short ring that dies in the pipe. No alarm, no siren, no
+    music.*
+  - Keep "alarm" and "siren" out of the prompt: the model takes them literally.
+  - Wire the pick as a cue on 86-02 in `studio-edits.json` → `soundtracks` → `raid` → `cues`:
+    `"86-02-three-strikes": [{ "file": "<the pick>", "volume": 0.9 }]`. About 30 to 70 credits a round.
+- **Free stopgap, if the director wants something there before then:** the three strikes at the start of `pipe-alarm.mp3`
+  (0.45 to 2.85 s), cut to a new file and put on the same cue. They are the pipe the film already uses, but not as hard as the
+  note asks.
+
