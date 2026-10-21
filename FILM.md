@@ -9,6 +9,25 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Shot 164, "Depends who's calling": the office rebuilt (21 October 2026)
+
+Scene 10's **164** ("A knock on the frosted glass. Vera comes in, wet, the blue umbrella dripping.") was thrown out and
+made again. The director's notes on the way: the first pass put **the door in the wrong place**, and the second had
+**the desk at the wrong orientation to the shots around it**. The frame is now built against the scene's own pictures —
+`s10/415-four-days.jpg` for the desk's position and orientation, `s11/243-the-box.jpg` for the grey steel cupboard
+under the blinded window, `s10/417-at-the-door.jpg` for where the frosted-glass door sits — with Jack turned in his
+chair toward the door, his face readable.
+
+* `public/film/img/s10/164-depends-whos-calling.jpg` is the new frame, 1920×1080 (generated 1672×941, centre-cropped
+  to 16:9 and enlarged, never shrunk).
+* The frame it replaces is `public/film/img/archive/s10/164-depends-whos-calling--v2.jpg`; the older take was already
+  `archive/s10/164-depends-whos-calling--v1.jpg`. The retake as generated is
+  `public/film/img/retakes_2026_10_21/164-depends-whos-calling-r1.jpg`.
+* Story data and asset URLs are unchanged, so no builder run was needed. 164 has no depth map; its `pictureLook`
+  still puts a warm lamp glow at 42%/52% and the television's cool flicker at 78%/24% — move those two if the new
+  frame has the lamp or the set elsewhere.
+* Local replacement in this checkout — sync it into PlayFrame before the next `node tools/build-film-story.mjs`.
+
 ## The news reader on Vera's television (shot 386, 21 October 2026)
 
 Scene 4, **386 "At the window"** ("The old television murmurs to itself.") is the beat the NEWS REPORTER's line
