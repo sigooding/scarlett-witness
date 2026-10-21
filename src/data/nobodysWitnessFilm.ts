@@ -2012,6 +2012,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/330-the-red-clip/depth.png",
+      "depthPlate": "/film/depth/s1/330-the-red-clip/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/330-the-red-clip/cutout-1.png",
+        "depth": 0.529
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2025,13 +2036,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/09-old-man-stops.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "60% 42%",
       "zoomDuration": 19,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/09-old-man-stops/depth.png",
+      "depthPlate": "/film/depth/s1/09-old-man-stops/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/09-old-man-stops/cutout-1.png",
+        "depth": 0.094
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2045,13 +2067,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/331-he-refuses.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 17,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/331-he-refuses/depth.png",
+      "depthPlate": "/film/depth/s1/331-he-refuses/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/331-he-refuses/cutout-1.png",
+        "depth": 0.338
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2082,6 +2115,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "ghostIntensity": 0.4,
        "pulseAmount": 0.15
       },
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
+      "depthPlate": "/film/depth/s1/332-the-sedan-blocks-the-lane/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/332-the-sedan-blocks-the-lane/cutout-1.png",
+        "depth": 0.415
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2111,7 +2155,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/333-the-white-light.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 21,
       "dollyDirection": "left",
@@ -2128,6 +2172,29 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "ghostIntensity": 0.3,
        "pulseAmount": 0.15
       },
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/333-the-white-light/depth.png",
+      "depthPlate": "/film/depth/s1/333-the-white-light/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/333-the-white-light/cutout-1.png",
+        "depth": 0.69
+       },
+       {
+        "image": "/film/depth/s1/333-the-white-light/cutout-2.png",
+        "depth": 0.317
+       },
+       {
+        "image": "/film/depth/s1/333-the-white-light/cutout-3.png",
+        "depth": 0.36
+       },
+       {
+        "image": "/film/depth/s1/333-the-white-light/cutout-4.png",
+        "depth": 0.667
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2160,6 +2227,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/11-sakai-mid-fall/depth.png",
+      "depthPlate": "/film/depth/s1/11-sakai-mid-fall/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/11-sakai-mid-fall/cutout-1.png",
+        "depth": 0.856
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2181,6 +2259,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/10-the-shot/depth.png",
+      "depthPlate": "/film/depth/s1/10-the-shot/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/10-the-shot/cutout-1.png",
+        "depth": 0.649
+       },
+       {
+        "image": "/film/depth/s1/10-the-shot/cutout-2.png",
+        "depth": 0.422
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2200,13 +2293,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/12-masked-man-radio.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 60%",
       "zoomDuration": 20,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/12-masked-man-radio/depth.png",
+      "depthPlate": "/film/depth/s1/12-masked-man-radio/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/12-masked-man-radio/cutout-1.png",
+        "depth": 0.876
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2226,13 +2330,36 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/13-taillights-gone.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 21,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/13-taillights-gone/depth.png",
+      "depthPlate": "/film/depth/s1/13-taillights-gone/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/13-taillights-gone/cutout-1.png",
+        "depth": 0.252
+       },
+       {
+        "image": "/film/depth/s1/13-taillights-gone/cutout-2.png",
+        "depth": 0.639
+       },
+       {
+        "image": "/film/depth/s1/13-taillights-gone/cutout-3.png",
+        "depth": 0.613
+       },
+       {
+        "image": "/film/depth/s1/13-taillights-gone/cutout-4.png",
+        "depth": 0.43
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2263,6 +2390,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
+      "depthPlate": "/film/depth/s1/14-she-kneels/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/14-she-kneels/cutout-1.png",
+        "depth": 0.622
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -27038,5 +27176,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "e1ec644a5b93"
+ "builtinRevision": "bb1eb25ae868"
 } as unknown as Story;

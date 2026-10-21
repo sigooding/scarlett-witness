@@ -44,7 +44,17 @@
   "329-the-lane-the-watch": "automatic: 1 found",
   "06-barbershop-doorway": "automatic: 2 found",
   "383-the-empty-lane": "automatic: 2 found",
-  "07-old-man": "automatic: 1 found"
+  "07-old-man": "automatic: 1 found",
+  "330-the-red-clip": "automatic: 1 found",
+  "09-old-man-stops": "automatic: 1 found",
+  "331-he-refuses": "automatic: 1 found",
+  "332-the-sedan-blocks-the-lane": "automatic: 1 found",
+  "333-the-white-light": "automatic: 4 found",
+  "11-sakai-mid-fall": "automatic: 1 found",
+  "10-the-shot": "automatic: 2 found",
+  "12-masked-man-radio": "automatic: 1 found",
+  "13-taillights-gone": "automatic: 4 found",
+  "14-she-kneels": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -563,6 +573,188 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s1/07-old-man/depth.png",
    "depthPlate": "/film/depth/s1/07-old-man/plate.jpg"
+  },
+  "330-the-red-clip": {
+   "picture": "public/film/img/s1/330-the-red-clip.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [914, 87, 481, 993],
+     "image": "/film/depth/s1/330-the-red-clip/cutout-1.png",
+     "depth": 0.529
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/330-the-red-clip/depth.png",
+   "depthPlate": "/film/depth/s1/330-the-red-clip/plate.jpg"
+  },
+  "09-old-man-stops": {
+   "picture": "public/film/img/s1/09-old-man-stops.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [293, 0, 1293, 1080],
+     "image": "/film/depth/s1/09-old-man-stops/cutout-1.png",
+     "depth": 0.094
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/09-old-man-stops/depth.png",
+   "depthPlate": "/film/depth/s1/09-old-man-stops/plate.jpg"
+  },
+  "331-he-refuses": {
+   "picture": "public/film/img/s1/331-he-refuses.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [881, 370, 176, 471],
+     "image": "/film/depth/s1/331-he-refuses/cutout-1.png",
+     "depth": 0.338
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/331-he-refuses/depth.png",
+   "depthPlate": "/film/depth/s1/331-he-refuses/plate.jpg"
+  },
+  "332-the-sedan-blocks-the-lane": {
+   "picture": "public/film/img/s1/332-the-sedan-blocks-the-lane.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [902, 473, 113, 362],
+     "image": "/film/depth/s1/332-the-sedan-blocks-the-lane/cutout-1.png",
+     "depth": 0.415
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
+   "depthPlate": "/film/depth/s1/332-the-sedan-blocks-the-lane/plate.jpg"
+  },
+  "333-the-white-light": {
+   "picture": "public/film/img/s1/333-the-white-light.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [461, 454, 172, 528],
+     "image": "/film/depth/s1/333-the-white-light/cutout-1.png",
+     "depth": 0.69
+    },
+    {
+     "name": "person 2",
+     "box": [676, 487, 100, 296],
+     "image": "/film/depth/s1/333-the-white-light/cutout-2.png",
+     "depth": 0.317
+    },
+    {
+     "name": "person 3",
+     "box": [782, 497, 100, 294],
+     "image": "/film/depth/s1/333-the-white-light/cutout-3.png",
+     "depth": 0.36
+    },
+    {
+     "name": "person 4",
+     "box": [1361, 457, 180, 453],
+     "image": "/film/depth/s1/333-the-white-light/cutout-4.png",
+     "depth": 0.667
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/333-the-white-light/depth.png",
+   "depthPlate": "/film/depth/s1/333-the-white-light/plate.jpg"
+  },
+  "11-sakai-mid-fall": {
+   "picture": "public/film/img/s1/11-sakai-mid-fall.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [537, 265, 758, 768],
+     "image": "/film/depth/s1/11-sakai-mid-fall/cutout-1.png",
+     "depth": 0.856
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/11-sakai-mid-fall/depth.png",
+   "depthPlate": "/film/depth/s1/11-sakai-mid-fall/plate.jpg"
+  },
+  "10-the-shot": {
+   "picture": "public/film/img/s1/10-the-shot.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [714, 234, 188, 545],
+     "image": "/film/depth/s1/10-the-shot/cutout-1.png",
+     "depth": 0.649
+    },
+    {
+     "name": "person 2",
+     "box": [1038, 261, 194, 593],
+     "image": "/film/depth/s1/10-the-shot/cutout-2.png",
+     "depth": 0.422
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/10-the-shot/depth.png",
+   "depthPlate": "/film/depth/s1/10-the-shot/plate.jpg"
+  },
+  "12-masked-man-radio": {
+   "picture": "public/film/img/s1/12-masked-man-radio.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [738, 40, 408, 1011],
+     "image": "/film/depth/s1/12-masked-man-radio/cutout-1.png",
+     "depth": 0.876
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/12-masked-man-radio/depth.png",
+   "depthPlate": "/film/depth/s1/12-masked-man-radio/plate.jpg"
+  },
+  "13-taillights-gone": {
+   "picture": "public/film/img/s1/13-taillights-gone.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [752, 534, 456, 166],
+     "image": "/film/depth/s1/13-taillights-gone/cutout-1.png",
+     "depth": 0.252
+    },
+    {
+     "name": "person 2",
+     "box": [894, 818, 202, 83],
+     "image": "/film/depth/s1/13-taillights-gone/cutout-2.png",
+     "depth": 0.639
+    },
+    {
+     "name": "person 3",
+     "box": [1369, 638, 98, 241],
+     "image": "/film/depth/s1/13-taillights-gone/cutout-3.png",
+     "depth": 0.613
+    },
+    {
+     "name": "person 4",
+     "box": [1386, 462, 50, 193],
+     "image": "/film/depth/s1/13-taillights-gone/cutout-4.png",
+     "depth": 0.43
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/13-taillights-gone/depth.png",
+   "depthPlate": "/film/depth/s1/13-taillights-gone/plate.jpg"
+  },
+  "14-she-kneels": {
+   "picture": "public/film/img/s1/14-she-kneels.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [808, 105, 1474, 1355],
+     "image": "/film/depth/s1/14-she-kneels/cutout-1.png",
+     "depth": 0.622
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
+   "depthPlate": "/film/depth/s1/14-she-kneels/plate.jpg"
   }
  }
 }
