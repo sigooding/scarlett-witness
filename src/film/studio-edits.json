@@ -1481,9 +1481,7 @@
     "82-on-the-floor": "Vera sits on the floor, still in the ruined red dress.",
     "84-cries-without-a-sound": "She holds it against her chest and cries without a sound.",
     "72-01-the-piano-plays-on": "Vera doesn't move. The piano plays on.",
-    "72-02-the-phone-lowers": "The phone slowly lowers from her ear.",
     "72-03-the-lighter-into-the-bag": "The clock ticks. She puts his lighter in her bag.",
-    "72-04-walking-very-carefully": "Not running yet. Walking very carefully.",
     "72-05-the-umbrella-stays": "The blue umbrella stays where she left it.",
     "73-05-toward-the-tracks": "The railway glows at the end of the street. She runs at it.",
     "73-07-heels-on-wet-pavement": "Not elegantly. Badly. In heels, in the red dress.",
@@ -1491,7 +1489,6 @@
     "73-10-a-car-passes": "A car passes, its tyres hissing.",
     "73-13-on-red": "She runs through it on red.",
     "74-01-no-one-else-is-here": "In a city of fourteen million people, no one else is here.",
-    "74-03-his-hands": "His hands are dark. He has not washed them.",
     "74-06-dont": "Jack takes one step toward her.",
     "74-09-his-silence": "Jack doesn't answer. That silence is the answer.",
     "74-13-she-folds": "And that is when Vera finally breaks. Her knees hit the wet pavement.",
@@ -1523,7 +1520,10 @@
     "73-11-the-vending-machine--71-the-machine-glows-v2": "She runs past a vending machine. It glows, indifferent.",
     "75-03-the-hive-shut--79-the-hive-shut-v1": "The Hive at night. The noodle shop shutter is down.",
     "75-one-desperate-blow": "She hits him. One desperate blow against his chest.",
-    "74-18-she-covers-her-face": "Vera covers her face with her hands."
+    "74-18-she-covers-her-face": "Vera covers her face with her hands.",
+    "72-02-the-phone-lowers--r1": "The phone slowly lowers from her ear.",
+    "72-04-walking-very-carefully--r1": "Not running yet. Walking very carefully.",
+    "74-03-his-hands--r1": "His hands are dark. He has not washed them."
    },
    "cues": {
     "314-the-empty-crossing": [

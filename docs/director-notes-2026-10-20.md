@@ -32,6 +32,8 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Waiting for credits |
 | 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Words changed; take waiting for credits |
 | 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Words added; take waiting for credits |
+| 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 to redo |
+| 19 | (21 October) Pictures too low resolution; no picture may ever be downscaled | the 26 below | Listed; rule written |
 
 ---
 
@@ -360,4 +362,45 @@ PlayFrame's screenplay still has "He doesn't." The same change belongs there (a 
     - Replace each line's `takePending` with `"voice":[{"src":"/voice/s84/<file>","dur":<seconds>}]` and rebuild.
 - **Outside this repository:** PlayFrame's screenplay and voice manifest still have "Three feet away." and the shorter
   confession. Make the same change there, with the rest listed under 4 and 5.
+
+## 18. The brief's pictures, picked (21 October)
+The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` against the film's own.
+- **In the film now (13):**
+  - 310 and 311 (the model, in its glass case) and the plaza model sheet;
+  - 74-03, 72-02 and 72-04, installed as earlier takes of the run: byte copies in `vera_run_takes/<beat>--r1.jpg`, `PICKS` in
+    `tools/vera-run-cut.mjs`;
+  - 98 and 99, 107, 365, 112, 408, 483 and 19, by their `src` in `src/film/story.json`, pointing into
+    `retakes_2026_10_20/`.
+- **The film's own kept:** 72-01 (the piano plays on).
+- **To redo**, with the director's notes:
+  - **316** ("still not the end one like in the next images"): her door must be the last one, as in 88 and 89 that follow it.
+    Attach 88 and 89 and say: the door at the very end of the walkway, the end wall just beyond it, nothing past it.
+  - **367** ("needs redo again"): Mrs. Sakai's furnished room with nobody in it, as 365-r1 now shows it. Attach 365-r1 for the
+    room.
+  - **468** ("needs redo again"): the journalist's photo on Harada's own desk in her glass office. Attach 107-r1, which the
+    director accepted, so the photograph matches.
+
+## 19. Pictures too low resolution, and no downscaling ever
+- **The rule (the director, 17 and 21 October):** no film picture is ever made smaller than it came (see `CLAUDE.md`). An image
+  generator's output is installed at the size it came out at. **Ask for the largest size the generator offers** (2730×1536 or
+  2752×1536 where it can), never resize before installing, and install with `tools/install-film-picture.mjs`. It crops to
+  16:9 and only ever enlarges, below 1920×1080.
+- **26 pictures the film plays are below 1920×1080 on disk.** Most are 1365×768 or 1376×768, exactly half the generator's
+  2730×1536 or 2752×1536. They were halved somewhere before they reached the film. If the full-size originals can be found (the
+  generator's download, an earlier upload), install those over the halves with the install tool, which archives the old file.
+  Otherwise they are retake candidates. The player stretches them to the screen, so they look soft.
+  - 1365×768: `s17/360-more-than-the-bowl-costs`, `s20/346-the-bulb-hums`, `s54/220-everything-is-still-there`, `s70/393-run`,
+    `s90/381-the-plank`, `s93/137-he-knows-this-car`, `s93/138-the-door-opens`, `s94/139-only-tea`, `s97a/565-they-bow`.
+  - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`, `s82/new-jack-walks-in-4.png`,
+    `s94/368-the-door-closes`, `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
+    `service_new/560-jack-at-the-door`, `service_new/extras/mom-01-her-face-at-the-table`, `mom-02-mother-and-daughter`,
+    `mom-03-what-she-wears-home`.
+  - 1408×768: `montage/m4-railway-rain`.
+  - 1672×941: `s73/72-the-lost-heel`, `s82/new-jack-walks-in-3`, `s90/132-the-gap`.
+  - 1536×1024: `s78/88-the-walkway`.
+  - 1920×1072 (eight lines short): `s82/new-jack-walks-in-1`.
+- **Exactly 1920×1080 does not mean full detail.** The 17 retakes of 20 October were enlarged to 1920×1080 from the
+  generator's smaller output, and many older pictures may have been too. A sharpness measurement could not tell those from
+  native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
+  (scene, beat and file name in the animatic's corner).
 

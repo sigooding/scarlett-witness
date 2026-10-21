@@ -132,8 +132,8 @@ const CUES = {
 // picture, so the one before stays on screen (the shipped film had none of its own there either); "take:<name>" an earlier take,
 // installed in vera_run_takes/ as <beat>--<the take it is>.jpg.
 export const PICKS = {
-  "72-01-the-piano-plays-on": "new", "72-02-the-phone-lowers": "new", "72-03-the-lighter-into-the-bag": "new",
-  "72-04-walking-very-carefully": "new", "72-05-the-umbrella-stays": "new",
+  "72-01-the-piano-plays-on": "new", "72-02-the-phone-lowers": "take:72-02-the-phone-lowers--r1", "72-03-the-lighter-into-the-bag": "new",
+  "72-04-walking-very-carefully": "take:72-04-walking-very-carefully--r1", "72-05-the-umbrella-stays": "new",
   "73-01-the-lobby": "original:69-vera-runs", "73-02-into-the-rain": "original:69-vera-runs",
   "73-03-she-runs": "take:73-03-she-runs--69-vera-runs-v2",
   "73-04-the-call-still-lit": "original:547-the-call-still-lit", "73-05-toward-the-tracks": "new",
@@ -143,7 +143,7 @@ export const PICKS = {
   "73-12-the-crossing-chimes": "original:549-the-crossing-chimes", "73-13-on-red": "new",
   "73-14-the-heel-skids": "original:72-the-lost-heel", "73-15-the-shoe-stays-behind": "original:72-the-lost-heel",
   "73-16-one-shoe": "original:72-the-lost-heel",
-  "74-01-no-one-else-is-here": "new", "74-02-jack-out-of-the-dark": "hold", "74-03-his-hands": "new",
+  "74-01-no-one-else-is-here": "new", "74-02-jack-out-of-the-dark": "hold", "74-03-his-hands": "take:74-03-his-hands--r1",
   "74-04-twenty-metres-apart": "original:74-twenty-metres-apart",
   "74-05-crying-almost-silently": "original:74-twenty-metres-apart", "74-06-dont": "new",
   "74-07-one-shoe-one-bare-foot": "original:501-one-shoe", "74-08-you-knew": "new", "74-09-his-silence": "new",
