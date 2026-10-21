@@ -2428,13 +2428,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/15-the-grip.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/15-the-grip/depth.png",
+      "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/15-the-grip/cutout-1.png",
+        "depth": 0.058
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2466,13 +2477,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/16-the-key.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "65% 50%",
       "zoomDuration": 16,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/16-the-key/depth.png",
+      "depthPlate": "/film/depth/s1/16-the-key/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/16-the-key/cutout-1.png",
+        "depth": 0.328
+       },
+       {
+        "image": "/film/depth/s1/16-the-key/cutout-2.png",
+        "depth": 0.455
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2513,6 +2539,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.12
        }
       ],
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/17-she-runs/depth.png",
+      "depthPlate": "/film/depth/s1/17-she-runs/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/17-she-runs/cutout-1.png",
+        "depth": 0.336
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2526,13 +2563,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/18-the-flashlight.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 21,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/18-the-flashlight/depth.png",
+      "depthPlate": "/film/depth/s1/18-the-flashlight/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/18-the-flashlight/cutout-1.png",
+        "depth": 0.658
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2576,13 +2624,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2/20-the-journalist.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "65% 50%",
       "zoomDuration": 22,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
+      "depthPlate": "/film/depth/s2/20-the-journalist/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
+        "depth": 0.705
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2602,13 +2661,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2/20-the-journalist.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "65% 50%",
       "zoomDuration": 22,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
+      "depthPlate": "/film/depth/s2/20-the-journalist/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
+        "depth": 0.705
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2637,6 +2707,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/21-mara-bursts-in-v1/depth.png",
+      "depthPlate": "/film/depth/s2_picks/21-mara-bursts-in-v1/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/21-mara-bursts-in-v1/cutout-1.png",
+        "depth": 0.554
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2658,13 +2739,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2/22-not-his-business.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "65% 50%",
       "zoomDuration": 19,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2/22-not-his-business/depth.png",
+      "depthPlate": "/film/depth/s2/22-not-his-business/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2/22-not-his-business/cutout-1.png",
+        "depth": 0.426
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2691,6 +2783,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/23-behind-the-counter-s2new2/depth.png",
+      "depthPlate": "/film/depth/s2_picks/23-behind-the-counter-s2new2/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-1.png",
+        "depth": 0.358
+       },
+       {
+        "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-2.png",
+        "depth": 0.213
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2713,13 +2820,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/depth.png",
+      "depthPlate": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-1.png",
+        "depth": 0.308
+       },
+       {
+        "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-2.png",
+        "depth": 0.434
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2733,13 +2855,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2_picks/24-from-the-floor-s2new2.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "60% 42%",
       "zoomDuration": 16,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
+      "depthPlate": "/film/depth/s2_picks/24-from-the-floor-s2new2/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-1.png",
+        "depth": 0.055
+       },
+       {
+        "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-2.png",
+        "depth": 0.11
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -27176,5 +27313,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "bb1eb25ae868"
+ "builtinRevision": "9ec8895c3f44"
 } as unknown as Story;

@@ -6,7 +6,7 @@ with the people painted out, and the depth map). Look at the flagged ones first;
 from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth fields from its `pictureLook` in
 `src/film/studio-edits.json`, then rebuild. Each gets the suggested move: truck, 0.4, over 14 s.
 
-**20 made, 16 flagged, 1 left alone.**
+**30 made, 26 flagged, 1 left alone.**
 
 | Picture | Cut-outs | Flags |
 |---|---|---|
@@ -21,6 +21,16 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [12-masked-man-radio](12-masked-man-radio.jpg) | 1 | 2 person-like shape(s) still found in the plate |
 | [13-taillights-gone](13-taillights-gone.jpg) | 4 | cut-out 2 runs to its box edge (may be clipped); cut-out 3 runs to its box edge (may be clipped) |
 | [14-she-kneels](14-she-kneels.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [15-the-grip](15-the-grip.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [16-the-key](16-the-key.jpg) | 2 | cut-out 1 nearly empty; cut-out 2 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate |
+| [17-she-runs](17-she-runs.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [18-the-flashlight](18-the-flashlight.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [20-the-journalist](20-the-journalist.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [21-mara-bursts-in-v1](21-mara-bursts-in-v1.jpg) | 1 | cut-out 1 runs to its box edge (may be clipped) |
+| [22-not-his-business](22-not-his-business.jpg) | 1 | 2 person-like shape(s) still found in the plate |
+| [23-behind-the-counter-s2new2](23-behind-the-counter-s2new2.jpg) | 2 | cut-out 2 runs to its box edge (may be clipped) |
+| [24-from-the-floor-s2new2](24-from-the-floor-s2new2.jpg) | 2 | 1 person-like shape(s) still found in the plate |
+| [25-two-pairs-of-shoes-v2](25-two-pairs-of-shoes-v2.jpg) | 2 | 1 person-like shape(s) still found in the plate |
 | [328-the-scrap](328-the-scrap.jpg) | 1 | 2 person-like shape(s) still found in the plate |
 | [330-the-red-clip](330-the-red-clip.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [332-the-sedan-blocks-the-lane](332-the-sedan-blocks-the-lane.jpg) | 1 | 1 person-like shape(s) still found in the plate |

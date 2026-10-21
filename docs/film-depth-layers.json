@@ -54,7 +54,17 @@
   "10-the-shot": "automatic: 2 found",
   "12-masked-man-radio": "automatic: 1 found",
   "13-taillights-gone": "automatic: 4 found",
-  "14-she-kneels": "automatic: 1 found"
+  "14-she-kneels": "automatic: 1 found",
+  "15-the-grip": "automatic: 1 found",
+  "16-the-key": "automatic: 2 found",
+  "17-she-runs": "automatic: 1 found",
+  "18-the-flashlight": "automatic: 1 found",
+  "20-the-journalist": "automatic: 1 found",
+  "21-mara-bursts-in-v1": "automatic: 1 found",
+  "22-not-his-business": "automatic: 1 found",
+  "23-behind-the-counter-s2new2": "automatic: 2 found",
+  "25-two-pairs-of-shoes-v2": "automatic: 2 found",
+  "24-from-the-floor-s2new2": "automatic: 2 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -755,6 +765,170 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
    "depthPlate": "/film/depth/s1/14-she-kneels/plate.jpg"
+  },
+  "15-the-grip": {
+   "picture": "public/film/img/s1/15-the-grip.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [0, 0, 1920, 1080],
+     "image": "/film/depth/s1/15-the-grip/cutout-1.png",
+     "depth": 0.058
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/15-the-grip/depth.png",
+   "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg"
+  },
+  "16-the-key": {
+   "picture": "public/film/img/s1/16-the-key.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [332, 189, 1283, 639],
+     "image": "/film/depth/s1/16-the-key/cutout-1.png",
+     "depth": 0.328
+    },
+    {
+     "name": "person 2",
+     "box": [1615, 417, 305, 492],
+     "image": "/film/depth/s1/16-the-key/cutout-2.png",
+     "depth": 0.455
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/16-the-key/depth.png",
+   "depthPlate": "/film/depth/s1/16-the-key/plate.jpg"
+  },
+  "17-she-runs": {
+   "picture": "public/film/img/s1/17-she-runs.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1085, 231, 276, 540],
+     "image": "/film/depth/s1/17-she-runs/cutout-1.png",
+     "depth": 0.336
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/17-she-runs/depth.png",
+   "depthPlate": "/film/depth/s1/17-she-runs/plate.jpg"
+  },
+  "18-the-flashlight": {
+   "picture": "public/film/img/s1/18-the-flashlight.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [851, 558, 545, 299],
+     "image": "/film/depth/s1/18-the-flashlight/cutout-1.png",
+     "depth": 0.658
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/18-the-flashlight/depth.png",
+   "depthPlate": "/film/depth/s1/18-the-flashlight/plate.jpg"
+  },
+  "20-the-journalist": {
+   "picture": "public/film/img/s2/20-the-journalist.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [508, 123, 825, 957],
+     "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
+     "depth": 0.705
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
+   "depthPlate": "/film/depth/s2/20-the-journalist/plate.jpg"
+  },
+  "21-mara-bursts-in-v1": {
+   "picture": "public/film/img/s2_picks/21-mara-bursts-in-v1.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [649, 306, 129, 632],
+     "image": "/film/depth/s2_picks/21-mara-bursts-in-v1/cutout-1.png",
+     "depth": 0.554
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/21-mara-bursts-in-v1/depth.png",
+   "depthPlate": "/film/depth/s2_picks/21-mara-bursts-in-v1/plate.jpg"
+  },
+  "22-not-his-business": {
+   "picture": "public/film/img/s2/22-not-his-business.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [149, 26, 1177, 1054],
+     "image": "/film/depth/s2/22-not-his-business/cutout-1.png",
+     "depth": 0.426
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2/22-not-his-business/depth.png",
+   "depthPlate": "/film/depth/s2/22-not-his-business/plate.jpg"
+  },
+  "23-behind-the-counter-s2new2": {
+   "picture": "public/film/img/s2_picks/23-behind-the-counter-s2new2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [348, 265, 545, 815],
+     "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-1.png",
+     "depth": 0.358
+    },
+    {
+     "name": "person 2",
+     "box": [868, 279, 312, 482],
+     "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-2.png",
+     "depth": 0.213
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/23-behind-the-counter-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/23-behind-the-counter-s2new2/plate.jpg"
+  },
+  "25-two-pairs-of-shoes-v2": {
+   "picture": "public/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [315, 0, 769, 709],
+     "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-1.png",
+     "depth": 0.308
+    },
+    {
+     "name": "person 2",
+     "box": [1157, 0, 696, 766],
+     "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-2.png",
+     "depth": 0.434
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/plate.jpg"
+  },
+  "24-from-the-floor-s2new2": {
+   "picture": "public/film/img/s2_picks/24-from-the-floor-s2new2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [532, 215, 388, 792],
+     "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-1.png",
+     "depth": 0.055
+    },
+    {
+     "name": "person 2",
+     "box": [977, 263, 206, 604],
+     "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-2.png",
+     "depth": 0.11
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/24-from-the-floor-s2new2/plate.jpg"
   }
  }
 }

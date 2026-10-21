@@ -1816,6 +1816,17 @@
       "pulseSeconds": 2.2,
       "pulseAmount": 0.12
      }
+    ],
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/17-she-runs/depth.png",
+    "depthPlate": "/film/depth/s1/17-she-runs/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/17-she-runs/cutout-1.png",
+      "depth": 0.336
+     }
     ]
    }
   },
@@ -4705,6 +4716,166 @@
      {
       "image": "/film/depth/s1/14-she-kneels/cutout-1.png",
       "depth": 0.622
+     }
+    ]
+   }
+  },
+  "15-the-grip": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/15-the-grip/depth.png",
+    "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/15-the-grip/cutout-1.png",
+      "depth": 0.058
+     }
+    ]
+   }
+  },
+  "16-the-key": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/16-the-key/depth.png",
+    "depthPlate": "/film/depth/s1/16-the-key/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/16-the-key/cutout-1.png",
+      "depth": 0.328
+     },
+     {
+      "image": "/film/depth/s1/16-the-key/cutout-2.png",
+      "depth": 0.455
+     }
+    ]
+   }
+  },
+  "18-the-flashlight": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/18-the-flashlight/depth.png",
+    "depthPlate": "/film/depth/s1/18-the-flashlight/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/18-the-flashlight/cutout-1.png",
+      "depth": 0.658
+     }
+    ]
+   }
+  },
+  "20-the-journalist": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
+    "depthPlate": "/film/depth/s2/20-the-journalist/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
+      "depth": 0.705
+     }
+    ]
+   }
+  },
+  "21-mara-bursts-in-v1": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s2_picks/21-mara-bursts-in-v1/depth.png",
+    "depthPlate": "/film/depth/s2_picks/21-mara-bursts-in-v1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s2_picks/21-mara-bursts-in-v1/cutout-1.png",
+      "depth": 0.554
+     }
+    ]
+   }
+  },
+  "22-not-his-business": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s2/22-not-his-business/depth.png",
+    "depthPlate": "/film/depth/s2/22-not-his-business/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s2/22-not-his-business/cutout-1.png",
+      "depth": 0.426
+     }
+    ]
+   }
+  },
+  "23-behind-the-counter-s2new2": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s2_picks/23-behind-the-counter-s2new2/depth.png",
+    "depthPlate": "/film/depth/s2_picks/23-behind-the-counter-s2new2/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-1.png",
+      "depth": 0.358
+     },
+     {
+      "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-2.png",
+      "depth": 0.213
+     }
+    ]
+   }
+  },
+  "25-two-pairs-of-shoes-v2": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/depth.png",
+    "depthPlate": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-1.png",
+      "depth": 0.308
+     },
+     {
+      "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-2.png",
+      "depth": 0.434
+     }
+    ]
+   }
+  },
+  "24-from-the-floor-s2new2": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
+    "depthPlate": "/film/depth/s2_picks/24-from-the-floor-s2new2/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-1.png",
+      "depth": 0.055
+     },
+     {
+      "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-2.png",
+      "depth": 0.11
      }
     ]
    }
