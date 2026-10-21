@@ -34,7 +34,17 @@
   "374-the-dead-television": "Vera",
   "379-the-laundry": "Jack, Vera and two women",
   "387-the-street-too-long": "Vera, far off",
-  "73-05-toward-the-tracks": "Vera, running away"
+  "73-05-toward-the-tracks": "Vera, running away",
+  "01-backstreet": "automatic: 1 found",
+  "02-vending": "automatic: 1 found",
+  "03-mara-walks": "automatic: 1 found",
+  "04-mara-phone": "automatic: 1 found",
+  "05-phone-off": "automatic: 1 found",
+  "328-the-scrap": "automatic: 1 found",
+  "329-the-lane-the-watch": "automatic: 1 found",
+  "06-barbershop-doorway": "automatic: 2 found",
+  "383-the-empty-lane": "automatic: 2 found",
+  "07-old-man": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -401,6 +411,158 @@
    "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
    "smooth": 2.0,
    "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still \u2014 check it before it ships. No people visible."
+  },
+  "01-backstreet": {
+   "picture": "public/film/img/s1/01-backstreet.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [292, 456, 43, 218],
+     "image": "/film/depth/s1/01-backstreet/cutout-1.png",
+     "depth": 0.665
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+   "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg"
+  },
+  "02-vending": {
+   "picture": "public/film/img/s1/02-vending.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1287, 145, 62, 97],
+     "image": "/film/depth/s1/02-vending/cutout-1.png",
+     "depth": 0.141
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/02-vending/depth.png",
+   "depthPlate": "/film/depth/s1/02-vending/plate.jpg"
+  },
+  "03-mara-walks": {
+   "picture": "public/film/img/s1/03-mara-walks.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [866, 237, 257, 808],
+     "image": "/film/depth/s1/03-mara-walks/cutout-1.png",
+     "depth": 0.885
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/03-mara-walks/depth.png",
+   "depthPlate": "/film/depth/s1/03-mara-walks/plate.jpg"
+  },
+  "04-mara-phone": {
+   "picture": "public/film/img/s1/04-mara-phone.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [391, 0, 1370, 1080],
+     "image": "/film/depth/s1/04-mara-phone/cutout-1.png",
+     "depth": 0.171
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/04-mara-phone/depth.png",
+   "depthPlate": "/film/depth/s1/04-mara-phone/plate.jpg"
+  },
+  "05-phone-off": {
+   "picture": "public/film/img/s1/05-phone-off.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [146, 88, 1262, 992],
+     "image": "/film/depth/s1/05-phone-off/cutout-1.png",
+     "depth": 0.34
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/05-phone-off/depth.png",
+   "depthPlate": "/film/depth/s1/05-phone-off/plate.jpg"
+  },
+  "328-the-scrap": {
+   "picture": "public/film/img/s1/328-the-scrap.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [0, 280, 1920, 800],
+     "image": "/film/depth/s1/328-the-scrap/cutout-1.png",
+     "depth": 0.201
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/328-the-scrap/depth.png",
+   "depthPlate": "/film/depth/s1/328-the-scrap/plate.jpg"
+  },
+  "329-the-lane-the-watch": {
+   "picture": "public/film/img/s1/329-the-lane-the-watch.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [0, 0, 1555, 1080],
+     "image": "/film/depth/s1/329-the-lane-the-watch/cutout-1.png",
+     "depth": 0.209
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
+   "depthPlate": "/film/depth/s1/329-the-lane-the-watch/plate.jpg"
+  },
+  "06-barbershop-doorway": {
+   "picture": "public/film/img/s1/06-barbershop-doorway.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [531, 442, 52, 259],
+     "image": "/film/depth/s1/06-barbershop-doorway/cutout-1.png",
+     "depth": 0.639
+    },
+    {
+     "name": "person 2",
+     "box": [1191, 501, 75, 306],
+     "image": "/film/depth/s1/06-barbershop-doorway/cutout-2.png",
+     "depth": 0.654
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/06-barbershop-doorway/depth.png",
+   "depthPlate": "/film/depth/s1/06-barbershop-doorway/plate.jpg"
+  },
+  "383-the-empty-lane": {
+   "picture": "public/film/img/s1/383-the-empty-lane.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1372, 655, 93, 222],
+     "image": "/film/depth/s1/383-the-empty-lane/cutout-1.png",
+     "depth": 0.598
+    },
+    {
+     "name": "person 2",
+     "box": [1381, 458, 50, 191],
+     "image": "/film/depth/s1/383-the-empty-lane/cutout-2.png",
+     "depth": 0.407
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+   "depthPlate": "/film/depth/s1/383-the-empty-lane/plate.jpg"
+  },
+  "07-old-man": {
+   "picture": "public/film/img/s1/07-old-man.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [862, 282, 241, 652],
+     "image": "/film/depth/s1/07-old-man/cutout-1.png",
+     "depth": 0.711
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s1/07-old-man/depth.png",
+   "depthPlate": "/film/depth/s1/07-old-man/plate.jpg"
   }
  }
 }

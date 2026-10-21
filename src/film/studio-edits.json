@@ -2023,7 +2023,18 @@
     "mode": "pan",
     "focalPoint": "30% 50%",
     "panDistance": 2,
-    "zoomDuration": 16
+    "zoomDuration": 16,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/02-vending/depth.png",
+    "depthPlate": "/film/depth/s1/02-vending/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/02-vending/cutout-1.png",
+      "depth": 0.141
+     }
+    ]
    }
   },
   "329-the-lane-the-watch": {
@@ -2050,7 +2061,18 @@
     ],
     "mode": "pan",
     "panDistance": 2,
-    "zoomDuration": 18
+    "zoomDuration": 18,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
+    "depthPlate": "/film/depth/s1/329-the-lane-the-watch/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/329-the-lane-the-watch/cutout-1.png",
+      "depth": 0.209
+     }
+    ]
    }
   },
   "383-the-empty-lane": {
@@ -2078,7 +2100,22 @@
     "mode": "pan",
     "focalPoint": "50% 52%",
     "panDistance": 2,
-    "zoomDuration": 18
+    "zoomDuration": 18,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+    "depthPlate": "/film/depth/s1/383-the-empty-lane/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/383-the-empty-lane/cutout-1.png",
+      "depth": 0.598
+     },
+     {
+      "image": "/film/depth/s1/383-the-empty-lane/cutout-2.png",
+      "depth": 0.407
+     }
+    ]
    }
   },
   "19-the-bar": {
@@ -3952,7 +3989,18 @@
     "mode": "pan",
     "focalPoint": "50% 52%",
     "panDistance": 2,
-    "zoomDuration": 16
+    "zoomDuration": 16,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+    "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/01-backstreet/cutout-1.png",
+      "depth": 0.665
+     }
+    ]
    }
   },
   "32-laundry-in-the-rain": {
@@ -4385,6 +4433,106 @@
     "depthAmount": 0.35,
     "depthSeconds": 16,
     "focalPoint": "50% 50%"
+   }
+  },
+  "03-mara-walks": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/03-mara-walks/depth.png",
+    "depthPlate": "/film/depth/s1/03-mara-walks/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/03-mara-walks/cutout-1.png",
+      "depth": 0.885
+     }
+    ]
+   }
+  },
+  "04-mara-phone": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/04-mara-phone/depth.png",
+    "depthPlate": "/film/depth/s1/04-mara-phone/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/04-mara-phone/cutout-1.png",
+      "depth": 0.171
+     }
+    ]
+   }
+  },
+  "05-phone-off": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/05-phone-off/depth.png",
+    "depthPlate": "/film/depth/s1/05-phone-off/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/05-phone-off/cutout-1.png",
+      "depth": 0.34
+     }
+    ]
+   }
+  },
+  "328-the-scrap": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/328-the-scrap/depth.png",
+    "depthPlate": "/film/depth/s1/328-the-scrap/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/328-the-scrap/cutout-1.png",
+      "depth": 0.201
+     }
+    ]
+   }
+  },
+  "06-barbershop-doorway": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/06-barbershop-doorway/depth.png",
+    "depthPlate": "/film/depth/s1/06-barbershop-doorway/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/06-barbershop-doorway/cutout-1.png",
+      "depth": 0.639
+     },
+     {
+      "image": "/film/depth/s1/06-barbershop-doorway/cutout-2.png",
+      "depth": 0.654
+     }
+    ]
+   }
+  },
+  "07-old-man": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s1/07-old-man/depth.png",
+    "depthPlate": "/film/depth/s1/07-old-man/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s1/07-old-man/cutout-1.png",
+      "depth": 0.711
+     }
+    ]
    }
   }
  },

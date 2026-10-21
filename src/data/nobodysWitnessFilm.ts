@@ -1390,6 +1390,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
+     "/film/img/s1/01-backstreet.jpg": {
+      "mode": "static",
+      "focalPoint": "50% 52%",
+      "zoomDuration": 16,
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+      "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/01-backstreet/cutout-1.png",
+        "depth": 0.665
+       }
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
      "/film/img/s3/30-the-elevated-line.jpg": {
       "mode": "static",
       "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
@@ -1399,6 +1418,49 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthDirection": "left",
       "depthFocus": 0.5,
       "zoomDuration": 18,
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
+     "/film/img/s1/383-the-empty-lane.jpg": {
+      "lights": [
+       {
+        "x": 22,
+        "y": 48,
+        "color": "#e3f1ff",
+        "size": 14,
+        "intensity": 0.35,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 40,
+        "y": 16,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ],
+      "mode": "static",
+      "focalPoint": "50% 52%",
+      "zoomDuration": 18,
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+      "depthPlate": "/film/depth/s1/383-the-empty-lane/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/383-the-empty-lane/cutout-1.png",
+        "depth": 0.598
+       },
+       {
+        "image": "/film/depth/s1/383-the-empty-lane/cutout-2.png",
+        "depth": 0.407
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
@@ -1531,6 +1593,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+      "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/01-backstreet/cutout-1.png",
+        "depth": 0.665
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1571,6 +1644,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.1
        }
       ],
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/02-vending/depth.png",
+      "depthPlate": "/film/depth/s1/02-vending/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/02-vending/cutout-1.png",
+        "depth": 0.141
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1584,13 +1668,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/03-mara-walks.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/03-mara-walks/depth.png",
+      "depthPlate": "/film/depth/s1/03-mara-walks/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/03-mara-walks/cutout-1.png",
+        "depth": 0.885
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1611,6 +1706,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/04-mara-phone/depth.png",
+      "depthPlate": "/film/depth/s1/04-mara-phone/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/04-mara-phone/cutout-1.png",
+        "depth": 0.171
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1632,13 +1738,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/05-phone-off.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/05-phone-off/depth.png",
+      "depthPlate": "/film/depth/s1/05-phone-off/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/05-phone-off/cutout-1.png",
+        "depth": 0.34
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1659,6 +1776,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/328-the-scrap/depth.png",
+      "depthPlate": "/film/depth/s1/328-the-scrap/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/328-the-scrap/cutout-1.png",
+        "depth": 0.201
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1699,6 +1827,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.1
        }
       ],
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
+      "depthPlate": "/film/depth/s1/329-the-lane-the-watch/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/329-the-lane-the-watch/cutout-1.png",
+        "depth": 0.209
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1719,6 +1858,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/06-barbershop-doorway/depth.png",
+      "depthPlate": "/film/depth/s1/06-barbershop-doorway/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/06-barbershop-doorway/cutout-1.png",
+        "depth": 0.639
+       },
+       {
+        "image": "/film/depth/s1/06-barbershop-doorway/cutout-2.png",
+        "depth": 0.654
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1771,6 +1925,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.1
        }
       ],
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+      "depthPlate": "/film/depth/s1/383-the-empty-lane/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/383-the-empty-lane/cutout-1.png",
+        "depth": 0.598
+       },
+       {
+        "image": "/film/depth/s1/383-the-empty-lane/cutout-2.png",
+        "depth": 0.407
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1793,13 +1962,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/07-old-man.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "static",
       "focalPoint": "60% 42%",
       "zoomDuration": 16,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/07-old-man/depth.png",
+      "depthPlate": "/film/depth/s1/07-old-man/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/07-old-man/cutout-1.png",
+        "depth": 0.711
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -26778,6 +26958,25 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "titleEntrance": "fade-up",
     "gateWeave": "subtle",
     "montageLooks": {
+     "/film/img/s1/01-backstreet.jpg": {
+      "mode": "static",
+      "focalPoint": "50% 52%",
+      "zoomDuration": 16,
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+      "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s1/01-backstreet/cutout-1.png",
+        "depth": 0.665
+       }
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
      "/film/img/s26/452-the-loop.jpg": {
       "mode": "static",
       "depthMap": "/film/depth/s26/452-the-loop/depth.png",
@@ -26839,5 +27038,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "c336e0213518"
+ "builtinRevision": "e1ec644a5b93"
 } as unknown as Story;
