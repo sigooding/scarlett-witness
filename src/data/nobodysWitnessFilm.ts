@@ -2891,13 +2891,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s2_picks/26-the-variety-show-s2new2.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 20,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/26-the-variety-show-s2new2/depth.png",
+      "depthPlate": "/film/depth/s2_picks/26-the-variety-show-s2new2/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/26-the-variety-show-s2new2/cutout-1.png",
+        "depth": 0.187
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2918,6 +2929,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2/308-clip-under-the-shelf/depth.png",
+      "depthPlate": "/film/depth/s2/308-clip-under-the-shelf/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2/308-clip-under-the-shelf/cutout-1.png",
+        "depth": 0.465
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2950,6 +2972,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/27-the-notebook-v1/depth.png",
+      "depthPlate": "/film/depth/s2_picks/27-the-notebook-v1/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
+        "depth": 0.715
+       },
+       {
+        "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
+        "depth": 0.461
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2972,6 +3009,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s2_picks/28-the-blue-glow-s2new2/depth.png",
+      "depthPlate": "/film/depth/s2_picks/28-the-blue-glow-s2new2/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s2_picks/28-the-blue-glow-s2new2/cutout-1.png",
+        "depth": 0.269
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -17885,13 +17933,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s72/497-eleven-fifty-two.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "35% 50%",
       "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s72/497-eleven-fifty-two/depth.png",
+      "depthPlate": "/film/depth/s72/497-eleven-fifty-two/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s72/497-eleven-fifty-two/cutout-1.png",
+        "depth": 0.434
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -17932,6 +17991,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.15
        }
       ],
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s72/69-the-wait/depth.png",
+      "depthPlate": "/film/depth/s72/69-the-wait/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s72/69-the-wait/cutout-1.png",
+        "depth": 0.068
+       },
+       {
+        "image": "/film/depth/s72/69-the-wait/cutout-2.png",
+        "depth": 0.261
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -17957,13 +18031,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s72/498-open-shut.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 17,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s72/498-open-shut/depth.png",
+      "depthPlate": "/film/depth/s72/498-open-shut/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s72/498-open-shut/cutout-1.png",
+        "depth": 0.417
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -18005,13 +18090,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s72/499-the-screen.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 17,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s72/499-the-screen/depth.png",
+      "depthPlate": "/film/depth/s72/499-the-screen/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s72/499-the-screen/cutout-1.png",
+        "depth": 0.37
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -18082,13 +18178,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-01-the-piano-plays-on.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "35% 50%",
     "zoomDuration": 18,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/72-01-the-piano-plays-on/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/72-01-the-piano-plays-on/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-1.png",
+      "depth": 0.062
+     },
+     {
+      "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-2.png",
+      "depth": 0.27
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18125,13 +18236,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-01-the-piano-plays-on.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "35% 50%",
     "zoomDuration": 18,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/72-01-the-piano-plays-on/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/72-01-the-piano-plays-on/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-1.png",
+      "depth": 0.062
+     },
+     {
+      "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-2.png",
+      "depth": 0.27
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18164,13 +18290,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "72",
    "background": "/film/img/vera_run_takes/72-02-the-phone-lowers--r1.jpg",
    "cinematic": {
-    "mode": "dolly",
+    "mode": "static",
     "focalPoint": "35% 50%",
     "zoomDuration": 21,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/cutout-1.png",
+      "depth": 0.163
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27313,5 +27450,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "9ec8895c3f44"
+ "builtinRevision": "f450564df5ee"
 } as unknown as Story;

@@ -64,7 +64,17 @@
   "22-not-his-business": "automatic: 1 found",
   "23-behind-the-counter-s2new2": "automatic: 2 found",
   "25-two-pairs-of-shoes-v2": "automatic: 2 found",
-  "24-from-the-floor-s2new2": "automatic: 2 found"
+  "24-from-the-floor-s2new2": "automatic: 2 found",
+  "26-the-variety-show-s2new2": "automatic: 1 found",
+  "308-clip-under-the-shelf": "automatic: 1 found",
+  "27-the-notebook-v1": "automatic: 2 found",
+  "28-the-blue-glow-s2new2": "automatic: 1 found",
+  "497-eleven-fifty-two": "automatic: 1 found",
+  "69-the-wait": "automatic: 2 found",
+  "498-open-shut": "automatic: 1 found",
+  "499-the-screen": "automatic: 1 found",
+  "72-01-the-piano-plays-on": "automatic: 2 found",
+  "72-02-the-phone-lowers--r1": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -929,6 +939,164 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
    "depthPlate": "/film/depth/s2_picks/24-from-the-floor-s2new2/plate.jpg"
+  },
+  "26-the-variety-show-s2new2": {
+   "picture": "public/film/img/s2_picks/26-the-variety-show-s2new2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [732, 32, 1171, 919],
+     "image": "/film/depth/s2_picks/26-the-variety-show-s2new2/cutout-1.png",
+     "depth": 0.187
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/26-the-variety-show-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/26-the-variety-show-s2new2/plate.jpg"
+  },
+  "308-clip-under-the-shelf": {
+   "picture": "public/film/img/s2/308-clip-under-the-shelf.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1290, 331, 530, 507],
+     "image": "/film/depth/s2/308-clip-under-the-shelf/cutout-1.png",
+     "depth": 0.465
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2/308-clip-under-the-shelf/depth.png",
+   "depthPlate": "/film/depth/s2/308-clip-under-the-shelf/plate.jpg"
+  },
+  "27-the-notebook-v1": {
+   "picture": "public/film/img/s2_picks/27-the-notebook-v1.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [389, 577, 448, 253],
+     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
+     "depth": 0.715
+    },
+    {
+     "name": "person 2",
+     "box": [815, 108, 464, 568],
+     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
+     "depth": 0.461
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/27-the-notebook-v1/depth.png",
+   "depthPlate": "/film/depth/s2_picks/27-the-notebook-v1/plate.jpg"
+  },
+  "28-the-blue-glow-s2new2": {
+   "picture": "public/film/img/s2_picks/28-the-blue-glow-s2new2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [856, 745, 299, 335],
+     "image": "/film/depth/s2_picks/28-the-blue-glow-s2new2/cutout-1.png",
+     "depth": 0.269
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s2_picks/28-the-blue-glow-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/28-the-blue-glow-s2new2/plate.jpg"
+  },
+  "497-eleven-fifty-two": {
+   "picture": "public/film/img/s72/497-eleven-fifty-two.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [506, 34, 399, 447],
+     "image": "/film/depth/s72/497-eleven-fifty-two/cutout-1.png",
+     "depth": 0.434
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s72/497-eleven-fifty-two/depth.png",
+   "depthPlate": "/film/depth/s72/497-eleven-fifty-two/plate.jpg"
+  },
+  "69-the-wait": {
+   "picture": "public/film/img/s72/69-the-wait.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [374, 288, 238, 356],
+     "image": "/film/depth/s72/69-the-wait/cutout-1.png",
+     "depth": 0.068
+    },
+    {
+     "name": "person 2",
+     "box": [1013, 111, 411, 930],
+     "image": "/film/depth/s72/69-the-wait/cutout-2.png",
+     "depth": 0.261
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s72/69-the-wait/depth.png",
+   "depthPlate": "/film/depth/s72/69-the-wait/plate.jpg"
+  },
+  "498-open-shut": {
+   "picture": "public/film/img/s72/498-open-shut.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [0, 0, 1153, 1080],
+     "image": "/film/depth/s72/498-open-shut/cutout-1.png",
+     "depth": 0.417
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s72/498-open-shut/depth.png",
+   "depthPlate": "/film/depth/s72/498-open-shut/plate.jpg"
+  },
+  "499-the-screen": {
+   "picture": "public/film/img/s72/499-the-screen.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [450, 0, 1027, 1080],
+     "image": "/film/depth/s72/499-the-screen/cutout-1.png",
+     "depth": 0.37
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s72/499-the-screen/depth.png",
+   "depthPlate": "/film/depth/s72/499-the-screen/plate.jpg"
+  },
+  "72-01-the-piano-plays-on": {
+   "picture": "public/film/img/vera_run_new/72-01-the-piano-plays-on.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [366, 278, 244, 367],
+     "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-1.png",
+     "depth": 0.062
+    },
+    {
+     "name": "person 2",
+     "box": [1013, 104, 410, 945],
+     "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-2.png",
+     "depth": 0.27
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/72-01-the-piano-plays-on/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/72-01-the-piano-plays-on/plate.jpg"
+  },
+  "72-02-the-phone-lowers--r1": {
+   "picture": "public/film/img/vera_run_takes/72-02-the-phone-lowers--r1.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [539, 0, 1156, 1080],
+     "image": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/cutout-1.png",
+     "depth": 0.163
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/plate.jpg"
   }
  }
 }

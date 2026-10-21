@@ -6,7 +6,7 @@ with the people painted out, and the depth map). Look at the flagged ones first;
 from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth fields from its `pictureLook` in
 `src/film/studio-edits.json`, then rebuild. Each gets the suggested move: truck, 0.4, over 14 s.
 
-**30 made, 26 flagged, 1 left alone.**
+**40 made, 36 flagged, 1 left alone.**
 
 | Picture | Cut-outs | Flags |
 |---|---|---|
@@ -31,11 +31,21 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [23-behind-the-counter-s2new2](23-behind-the-counter-s2new2.jpg) | 2 | cut-out 2 runs to its box edge (may be clipped) |
 | [24-from-the-floor-s2new2](24-from-the-floor-s2new2.jpg) | 2 | 1 person-like shape(s) still found in the plate |
 | [25-two-pairs-of-shoes-v2](25-two-pairs-of-shoes-v2.jpg) | 2 | 1 person-like shape(s) still found in the plate |
+| [26-the-variety-show-s2new2](26-the-variety-show-s2new2.jpg) | 1 | cut-out 1 runs to its box edge (may be clipped) |
+| [27-the-notebook-v1](27-the-notebook-v1.jpg) | 2 | cut-out 1 runs to its box edge (may be clipped) |
+| [28-the-blue-glow-s2new2](28-the-blue-glow-s2new2.jpg) | 1 | cut-out 1 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate |
+| [308-clip-under-the-shelf](308-clip-under-the-shelf.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [328-the-scrap](328-the-scrap.jpg) | 1 | 2 person-like shape(s) still found in the plate |
 | [330-the-red-clip](330-the-red-clip.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [332-the-sedan-blocks-the-lane](332-the-sedan-blocks-the-lane.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [333-the-white-light](333-the-white-light.jpg) | 4 | cut-out 4 runs to its box edge (may be clipped) |
 | [383-the-empty-lane](383-the-empty-lane.jpg) | 2 | cut-out 1 runs to its box edge (may be clipped) |
+| [497-eleven-fifty-two](497-eleven-fifty-two.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [498-open-shut](498-open-shut.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [499-the-screen](499-the-screen.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [69-the-wait](69-the-wait.jpg) | 2 | 1 person-like shape(s) still found in the plate |
+| [72-01-the-piano-plays-on](72-01-the-piano-plays-on.jpg) | 2 | 1 person-like shape(s) still found in the plate |
+| [72-02-the-phone-lowers--r1](72-02-the-phone-lowers--r1.jpg) | 1 | 2 person-like shape(s) still found in the plate |
 | [02-vending](02-vending.jpg) | 1 |  |
 | [09-old-man-stops](09-old-man-stops.jpg) | 1 |  |
 | [329-the-lane-the-watch](329-the-lane-the-watch.jpg) | 1 |  |
