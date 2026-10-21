@@ -9,6 +9,22 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The news reader on Vera's television (shot 386, 21 October 2026)
+
+Scene 4, **386 "At the window"** ("The old television murmurs to itself.") is the beat the NEWS REPORTER's line
+plays over, so the set now matches the words: the old boxy CRT in the corner shows **a Japanese male news
+reader in his forties, dark suit and tie, behind a news desk, reading the evening news**, a small
+Japanese-language caption bar along the bottom of the screen. Nothing else in the frame changed — the
+difference against the previous picture is confined to the television (bottom right).
+
+* `public/film/img/s4/386-at-the-window.jpg` is the new frame, 1920×1080.
+* Previous take kept at `public/film/img/archive/s4/386-at-the-window-pre-reporter.jpg`;
+  the retake as generated is `public/film/img/retakes_2026_10_21/386-at-the-window-r1.jpg`.
+* Story data and asset URLs are unchanged (the generated `src/data/nobodysWitnessFilm.ts` already points at
+  this path, so no builder run was needed). 386 carries no depth map and no `pictureLook`.
+* Local replacement in this checkout — sync it into PlayFrame through its importer before the next
+  `node tools/build-film-story.mjs`, which recopies `public/img` from that source.
+
 ## Scenes 1–2 and the opening titles: the director's animatic notes (21 October 2026)
 
 From the animatic export of scenes 1–2 (beat numbers are the export's joined marks). All done; nobody has watched the new export yet:
