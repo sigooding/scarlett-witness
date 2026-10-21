@@ -379,6 +379,18 @@
    "depthMap": "/film/depth/s26/452-the-loop/depth.png",
    "smooth": 2.0,
    "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Elevated city-and-railway view; rooftops, train and distant buildings in separate planes."
+  },
+  "73-05-toward-the-tracks": {
+   "picture": "public/film/img/vera_run_new/73-05-toward-the-tracks.jpg",
+   "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+   "smooth": 2.0,
+   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
+  },
+  "75-02-the-empty-lounge": {
+   "picture": "public/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
+   "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
+   "smooth": 2.0,
+   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
   }
  }
 }

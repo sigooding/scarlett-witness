@@ -9,6 +9,38 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Shots 445, 90-05 and 139; and two new depth maps (21 October 2026)
+
+* **445 "Exactly where it was" (scene 25)** — the page Jack sets down now carries **the same drawing as
+  `s84/520-excuse-me.jpg`**: the counter seen from the floor, the crate of bottles, the two pairs of shoes,
+  the stool going over, the outflung hand, 1:07 in the corner, and EXCUSE ME in block capitals. 1536×1024.
+  Previous take: `archive/s25/445-exactly-where-it-was--v1.jpg`.
+* **90-05 "Through the wardrobe" (scene 90)** — Vera had lost her face between takes. Remade against the
+  film's own approved Vera (`s10/164-depends-whos-calling.jpg`, `s4/386-at-the-window.jpg` and the escape's
+  style sheet): the same woman, shoulder-length dark-blonde hair, dark olive-charcoal coat over the cream
+  knit, edging sideways between the hanging coats. 2848×1600. Previous take:
+  `archive/thehiveescape/s90/90-05-through-the-wardrobe--v1.jpg`.
+* **139 "Only tea" (scene 94)** — the shot is now **over Ishida's shoulder, looking away from the police
+  station** (which is behind the camera): the sedan at the far kerb, its near rear door open, **Kurose on the
+  far side of the back seat**, and **a driver at the wheel**, right-hand drive. 2752×1536. Previous take:
+  `archive/s94/139-only-tea--v2.jpg`.
+
+**Two new depth maps.** `73-05-toward-the-tracks` (1920×1080) and `75-02-the-empty-lounge` (2730×1536) now
+play with the depth-map camera, on a truck move at 0.35 over 16 s. They were drawn at random (seed 20261021)
+from the 99 pictures the film plays that are at least 1920 wide, have nobody in shot and had no map yet; the
+third in the draw, `212-stay-whatever-you-hear`, was left out because its caption is a spoken line and there
+is probably somebody in the frame.
+
+The maps were made with **Depth Anything v1 ViT-S (ONNX)** — no torch, no HuggingFace, which this machine
+cannot reach — by a new **`tools/make-depth-map-onnx.py`**: it writes the map at the picture's exact size,
+grayscale, white = near, smoothed as the other depth-only maps are, registers it in
+`docs/film-depth-layers.json` and, with `--wire`, adds the map and the move to the picture's `pictureLook`
+entry in `src/film/studio-edits.json`. It only offers pictures with nobody in them: a map on its own
+stretches a person as the camera moves, and those want cut-outs and a plate first.
+`node tools/build-film-story.mjs` was re-run, and `npm run test:film-depth` (and the 171 film-backend checks)
+pass. **The two maps have not been eyeballed against their stills** — that is the next thing to do, and the
+note in the registry says so.
+
 ## Picture pass: 243, 336, 346 and 352 (21 October 2026)
 
 * **243 "The box" (scene 11)** — rebuilt, this time as an **edit of the film's own `s10/413-open-and-shut.jpg`**, so the

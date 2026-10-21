@@ -4185,7 +4185,14 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.15,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "panDistance": 2,
+    "zoomDuration": 18,
+    "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.35,
+    "depthSeconds": 16,
+    "focalPoint": "50% 50%"
    }
   },
   "73-07-heels-on-wet-pavement": {
@@ -4353,6 +4360,18 @@
     "depthSeconds": 18,
     "depthDirection": "right",
     "depthFocus": 0.52
+   }
+  },
+  "75-02-the-empty-lounge": {
+   "cinematic": {
+    "mode": "pan",
+    "panDistance": 2,
+    "zoomDuration": 18,
+    "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.35,
+    "depthSeconds": 16,
+    "focalPoint": "50% 50%"
    }
   }
  },
