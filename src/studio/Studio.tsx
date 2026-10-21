@@ -7339,6 +7339,36 @@ function StudioInner({
                     onChange={(e) => updateScene(scene.id, { animaticMark: e.target.value.trim() || undefined })}
                   />
                 </Field>
+                <Field label="Music sync — when the film plays itself, cuts to a new picture wait for the next beat of this scene's music">
+                  <div className="flex gap-2">
+                    <input
+                      type="number"
+                      min={20}
+                      max={300}
+                      step={0.01}
+                      aria-label="Music sync tempo (BPM)"
+                      placeholder="BPM"
+                      className="w-1/2 border border-paper/20 bg-ink/60 px-2 py-1 font-type text-xs text-paper"
+                      value={scene.musicSync?.bpm ?? ""}
+                      onChange={(e) => {
+                        const bpm = parseFloat(e.target.value);
+                        updateScene(scene.id, { musicSync: bpm > 0 ? { bpm, firstBeat: scene.musicSync?.firstBeat ?? 0 } : undefined });
+                      }}
+                    />
+                    <input
+                      type="number"
+                      min={0}
+                      step={0.005}
+                      aria-label="Music sync first beat (seconds)"
+                      placeholder="first beat (s)"
+                      disabled={!scene.musicSync}
+                      className="w-1/2 border border-paper/20 bg-ink/60 px-2 py-1 font-type text-xs text-paper"
+                      value={scene.musicSync?.firstBeat ?? ""}
+                      onChange={(e) => scene.musicSync && updateScene(scene.id, { musicSync: { ...scene.musicSync, firstBeat: Math.max(0, parseFloat(e.target.value) || 0) } })}
+                    />
+                  </div>
+                  <p className="mt-1 font-type text-[9px] text-paper/40">Tempo in beats a minute and the first beat's time in the track. Empty the tempo to turn it off. Lines on the same picture keep their own timing.</p>
+                </Field>
                 <p className="font-type text-[10px] text-paper/40">Music loops until the next scene. Recorded narration plays once. If no narration MP3 is set, the selected Web Speech narrator is used.</p>
               </div>
             )}

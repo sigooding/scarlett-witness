@@ -72,6 +72,7 @@ import {
   wrongVerbLine,
   uid,
   writeSave,
+  isVideoOnlyScene,
 } from "../logic";
 import {
   exportSaveFile,
@@ -161,7 +162,7 @@ import { adjustedConsequences, choiceRepeats, gambleFlag, getPerks, rollGamble, 
 import { canRewindDecision, emptyRewind, popRewind, pushRewind, rewindLabel, sealRewind, type RewindStack } from "./rewind";
 import { simFromRuntime, strandedNow, STRANDED_GRACE_MS } from "./stranded";
 import { deepLinkFromUrl, describeDeepLink, resolveDeepLink } from "./deepLink";
-import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, AnimaticMark, animaticMarkFor, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
+import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, AnimaticMark, animaticMarkFor, captionFor, untilNextMusicBeat, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
 
 /* SEEDED RUNS — ?seed=1234 on the URL pins every gameplay draw (minigame
  * shuffles, ride spawns) to one deterministic stream, applied once at
@@ -3502,7 +3503,8 @@ function CasePlayer({
       // straight into the beats (or choices). Credits/cutscene intros keep
       // their deliberate Begin/Continue flow even when terse.
       const emptyProse =
-        scene.nodeType !== "credits" && scene.nodeType !== "cutscene" && (!(scene.prose ?? "").trim() || scene.nodeType === "stage");
+        isVideoOnlyScene(scene) ||
+        (scene.nodeType !== "credits" && scene.nodeType !== "cutscene" && (!(scene.prose ?? "").trim() || scene.nodeType === "stage"));
       // If noTypewriter is enabled (for MP3 voice sync), show prose instantly
       // instead of animating it letter-by-letter. Credits nodes are the
       // exception: their animated intro controls when the Begin button appears.
@@ -4017,7 +4019,7 @@ function CasePlayer({
     if (scene.isEnding) return;
     // A credits roll is never a place to resume to: the opening titles would send a reload straight past the first scenes,
     // and the end credits would reopen a finished film on its roll. The slot keeps the last scene before it.
-    if (scene.nodeType === "credits") return;
+    if (scene.nodeType === "credits" || isVideoOnlyScene(scene)) return;
     const t = window.setTimeout(() => writeCheckpoint({ flash: true, mirror: true }), 400);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -4216,7 +4218,7 @@ function CasePlayer({
     // Video cutscenes are blocked by autoplay policy more often than audio —
     // retry the video too on any gesture.
     const v = bgVideoRef.current;
-    if (v && soundOnRef.current && v.paused) {
+    if (v && soundOnRef.current && v.paused && !v.ended) {
       v.muted = false;
       v.play().then(() => setSoundBlocked(false)).catch(() => setSoundBlocked(true));
     }
@@ -4400,6 +4402,14 @@ function CasePlayer({
   const autoOn = hasAuthoredRoute ? autoContinue : autoAdvance;
   const toggleAuto = () => (hasAuthoredRoute ? setAutoContinue((v) => !v) : setAutoAdvance((v) => !v));
   const currentBeat = inBeats ? visibleBeats[beatIdx] : null;
+  // Whether the next line brings a different picture (a cut): a scene's `musicSync` lands only these on the music's beat.
+  const nextBeatIsCut = useMemo(() => {
+    if (!inBeats) return false;
+    const next = visibleBeats[beatIdx + 1]?.background;
+    if (!next || next.startsWith("video:")) return false;
+    const shown = visibleBeats.slice(0, beatIdx + 1).reverse().find((b) => b.background && !b.background.startsWith("video:"))?.background ?? scene?.background;
+    return next !== shown;
+  }, [inBeats, visibleBeats, beatIdx, scene?.background]);
   /* The insert shot to actually display on the current beat. A beat's own
    * replacement image PERSISTS by default: it stays up through later beats
    * (the characters keep talking over it) until another beat sets a new
@@ -4712,7 +4722,7 @@ function CasePlayer({
    * arrival checkpoint is the escape the stranded panel offers, so refreshing
    * it with the spent world would poison the one recovery that always works. */
   useEffect(() => {
-    if (!scene || scene.nodeType === "credits" || scene.isEnding || strandedVerdict.stranded) return;
+    if (!scene || scene.nodeType === "credits" || isVideoOnlyScene(scene) || scene.isEnding || strandedVerdict.stranded) return;
     const since = Date.now() - lastCheckpointAtRef.current;
     const wait = Math.max(CHECKPOINT_QUIET_MS, CHECKPOINT_MIN_GAP_MS - since);
     const t = window.setTimeout(() => writeCheckpoint({}), wait);
@@ -4794,6 +4804,18 @@ function CasePlayer({
       // after the text lands, then wait for the voice to actually finish
       // before the next line starts (capped so a stuck clip can't stall us).
       const startedAt = Date.now();
+      // A scene with `musicSync` lands its cuts on the music: when the next line brings a new picture, the change waits
+      // for the next beat of the song (lines on the same picture keep their own timing).
+      const cutWait = () => {
+        const sync = scene?.musicSync, el = sceneAudioRef.current;
+        if (!sync || !nextBeatIsCut || !el || el.paused) return 0;
+        return untilNextMusicBeat(el.currentTime, el.duration, sync);
+      };
+      let onBeat = 0;
+      const advance = () => {
+        setBeatDone(false);
+        setBeatIdx((i) => i + 1);
+      };
       // An animatic holds a silent line for its reading time and a spoken one until a moment after its voice ends.
       const spoken = !!currentBeat?.audioUrl;
       const hold = ANIMATIC ? (spoken ? 0 : readingSeconds(currentBeatText, ANIMATIC.pace, scene?.animaticReadPace ?? 1) * 1000) : 1150;
@@ -4807,11 +4829,15 @@ function CasePlayer({
         const settled = voiceDone && (!ANIMATIC || !spoken || now - quietSince >= AFTER_VOICE_SECONDS * 1000);
         if ((settled && elapsed >= hold) || elapsed > 45000) {
           window.clearInterval(iv);
-          setBeatDone(false);
-          setBeatIdx((i) => i + 1);
+          const wait = elapsed > 45000 ? 0 : cutWait();
+          if (wait > 0) onBeat = window.setTimeout(advance, Math.round(wait * 1000));
+          else advance();
         }
       }, ANIMATIC ? 100 : 250); // an animatic checks more often, so its lines do not wait on the poll
-      return () => window.clearInterval(iv);
+      return () => {
+        window.clearInterval(iv);
+        window.clearTimeout(onBeat);
+      };
     }
     // Choices are up — hands off until the player picks.
   }, [
@@ -4827,7 +4853,7 @@ function CasePlayer({
     proseAcknowledged,
     proseDone,
     inBeats,
-    beatDone, currentBeat, currentBeatText, routingBeat, beatRouteValid,
+    beatDone, currentBeat, currentBeatText, routingBeat, beatRouteValid, nextBeatIsCut,
   ]);
 
   const speakLine = useCallback(
@@ -6451,12 +6477,15 @@ function CasePlayer({
               <video
                 key={`${sceneId}-${entrySeq}`}
                 ref={bgVideoRef}
-                src={resolvedBackground.slice(6)}
-                loop
+                loop={!isVideoOnlyScene(scene)}
                 playsInline
                 className="absolute inset-0 h-full w-full object-cover"
                 style={spriteGradeStyle(bgCinematic)}
-              />
+              >
+                {/* Browsers without H.264 (some Chromium builds, the animatic exporter's among them) fall through to a .webm beside the .mp4. */}
+                <source src={resolvedBackground.slice(6)} />
+                {/\.mp4(\?.*)?$/i.test(resolvedBackground) && <source src={resolvedBackground.slice(6).replace(/\.mp4/i, ".webm")} type="video/webm" />}
+              </video>
               <LightGlow cinematic={bgCinematic} />
               <LensFlareLayer cinematic={bgCinematic} />
               <CinematicOverlays cinematic={bgCinematic} />
@@ -7434,7 +7463,7 @@ function CasePlayer({
           its own captions; the title and the credits keep it, their text IS the shot. */}
       <div
         data-animatic-hide={scene.nodeType === "credits" ? undefined : ""}
-        className={`absolute inset-x-0 bottom-0 z-[47] flex justify-center p-4 pl-4 sm:pl-24 ${
+        className={`absolute inset-x-0 bottom-0 z-[47] flex justify-center p-4 pl-4 sm:pl-24 ${isVideoOnlyScene(scene) ? "hidden " : ""}${
           scene.nodeType === "credits"
             ? // A montage is the point of the shot, so it stays visible: only the
               // plain (image-less) credits node gets the black scrim.

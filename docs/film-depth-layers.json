@@ -33,7 +33,8 @@
   "354-the-altar-photograph": "Mrs. Sakai",
   "374-the-dead-television": "Vera",
   "379-the-laundry": "Jack, Vera and two women",
-  "387-the-street-too-long": "Vera, far off"
+  "387-the-street-too-long": "Vera, far off",
+  "73-05-toward-the-tracks": "Vera, running away"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -382,15 +383,24 @@
   },
   "73-05-toward-the-tracks": {
    "picture": "public/film/img/vera_run_new/73-05-toward-the-tracks.jpg",
-   "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
    "smooth": 2.0,
-   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [855, 400, 190, 520],
+     "image": "/film/depth/vera_run_new/73-05-toward-the-tracks/cutout-1.png",
+     "depth": 0.715
+    }
+   ],
+   "note": "Vera running away toward the tracks, small at mid-frame. Cut out (BiRefNet) with the street painted in behind her (LaMa), so the truck move does not stretch her. Until 22 October it had a depth-only map made on the belief that nobody was in shot.",
+   "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-05-toward-the-tracks/plate.jpg"
   },
   "75-02-the-empty-lounge": {
    "picture": "public/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
    "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
    "smooth": 2.0,
-   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
+   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still \u2014 check it before it ships. No people visible."
   }
  }
 }

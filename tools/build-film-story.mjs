@@ -410,9 +410,31 @@ if (existsSync(editsFile)) {
     Object.assign(beat, bgFields(P(e.file)));
   }
   if (waiting.length) console.log(`studio-edits: ${waiting.length} picture slot(s) waiting for their files: ${waiting.join(", ")}`);
+  // musicSync: [{ scenes, bpm, firstBeat }] — when the film plays itself, a cut to a new picture in these scenes (and their continuations)
+  // waits for the next beat of the scene's music (src/game/animatic.tsx untilNextMusicBeat). Lines on the same picture keep their timing.
+  for (const m of file.musicSync ?? []) {
+    const hit = scenes.filter(x => m.scenes.some(id => x.id === id || x.id.startsWith(`${id}_`)));
+    if (!hit.length) console.warn(`studio-edits: musicSync finds no scene in ${m.scenes.join(", ")}`);
+    for (const x of hit) x.musicSync = { bpm: m.bpm, firstBeat: m.firstBeat };
+  }
   if (file.startSceneId) startSceneId = file.startSceneId;
   // dialogueBox: the story-wide look of the reading panel (Studio → In-game theme: fonts, size, HUD colour scheme)
   if (file.dialogueBox) dialogueBox = file.dialogueBox;
+}
+
+// The Scarlet Reel logo (22 October 2026, the director: "the logo film animation before the whole film"): the uploaded 10 s clip plays
+// first, full screen with no HUD, then hands over to wherever the film starts. Its picture is a silent copy (with a .webm beside it for
+// browsers without H.264) and its sound plays as the node's music, so the animatic exporter, which rebuilds sound from <audio> only,
+// keeps it. The upload itself is public/film/video/scarlet-reel-logo-original.mp4.
+if (existsSync(resolve(root, "public/film/video/scarlet-reel-logo.mp4"))) {
+  scenes.unshift({
+    id: "nw_logo", title: "Scarlet Reel logo", nodeType: "cutscene", hideHud: true, background: "video:/film/video/scarlet-reel-logo.mp4", prose: "",
+    musicMode: "track", musicUrl: P("/audio/scarlet-reel-logo.mp3"), musicLevel: 1, musicLoop: false, musicFadeSeconds: 0,
+    ambientAudio: "", transition: "cut", transitionSpeed: 0.2, noTypewriter: true, autoNarrate: false,
+    autoAdvanceTargetSceneId: startSceneId, autoAdvanceDelaySeconds: 9.9, autoAdvanceHideTimer: true,
+    dialogueBeats: [], hotspots: [], choices: [],
+  });
+  startSceneId = "nw_logo";
 }
 
 // Soundtrack segments (src/film/studio-edits.json "soundtracks"): a run of scenes that plays hands-off for the length of a song, as a cutscene (the

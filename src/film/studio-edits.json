@@ -1472,6 +1472,12 @@
       "file": "pipe-alarm",
       "volume": 0.12
      }
+    ],
+    "86-02-three-strikes": [
+     {
+      "file": "pipe-three-strikes",
+      "volume": 0.9
+     }
     ]
    }
   },
@@ -4189,6 +4195,13 @@
     "panDistance": 2,
     "zoomDuration": 18,
     "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-05-toward-the-tracks/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-05-toward-the-tracks/cutout-1.png",
+      "depth": 0.715
+     }
+    ],
     "depthMotion": "truck",
     "depthAmount": 0.35,
     "depthSeconds": 16,
@@ -4647,6 +4660,18 @@
    "file": "/img/s80/the-blood-on-his-hand.jpg",
    "pending": true,
    "brief": "Close: Ishida on the floor, a split lip, looking at the blood on the back of his hand, then up at Jack (out of frame above). Attach s80/94-the-long-room.jpg (the room, the clock, the two detectives at the far end), s80/97-where-to-find-them.jpg (Ishida at his desk), sheets/jack-face.jpg, sheets/ishida-face.jpg and sheets/ishida.jpg (charcoal jacket, light grey shirt, no tie), s80/96-hands-close.jpg (Jack's knuckles). Photorealistic contemporary Tokyo neo-noir film still, 16:9, flat fluorescent office light, grey daylight through the blinds, restrained 35mm grain; violence shown in impact and aftermath, no gore; no legible text, signage, logos or watermarks. See docs/director-notes-2026-10-20.md, scene 80."
+  }
+ ],
+ "musicSync": [
+  {
+   "scenes": [
+    "nw_s1",
+    "nw_s2"
+   ],
+   "track": "/film/audio/glimmering-haze.mp3",
+   "bpm": 89.27,
+   "firstBeat": 0.645,
+   "note": "21 October 2026, the director: the cuts in scenes 1 and 2 change with the beat of the song, but not every beat (that felt mechanical), so only cuts to a new picture wait for the beat. Tempo and first beat measured from the file's onsets (spectral flux, best fit over the whole 60.4 s loop); the grid fits well for the first 45 s and the last 15 s have no steady beat."
   }
  ]
 }

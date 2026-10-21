@@ -62,6 +62,12 @@ stretches a person as the camera moves, and those want cut-outs and a plate firs
 pass. **The two maps have not been eyeballed against their stills** — that is the next thing to do, and the
 note in the registry says so.
 
+**Correction (22 October 2026): 73-05 is not empty.** Vera is in it, running away down the middle of the street, and a
+depth map alone would stretch her on the truck move. She is now a cut-out (BiRefNet) with the street painted in behind
+her (LaMa), made by `tools/make-depth-layers.py` with the models listed in its header, and 73-05 is in `peopleInShot`.
+Frames of the move (`tools/depth-frames.mjs`) show her moving as one piece. The shot is on screen about 5 s of its
+16 s move. 75-02 (the empty lounge) is empty and keeps its map.
+
 ## Picture pass: 243, 336, 346 and 352 (21 October 2026)
 
 * **243 "The box" (scene 11)** — rebuilt, this time as an **edit of the film's own `s10/413-open-and-shut.jpg`**, so the
@@ -170,6 +176,38 @@ build lists them); notes 16 and 17 have what to record.
 
 Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
 siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
+
+## The Scarlet Reel logo opens the film (22 October 2026)
+
+The director's 10 s "Created with SCARLET ReeL" clip now plays before the whole film, then hands over to scene 1.
+- **The node:** `nw_logo`, made by `tools/build-film-story.mjs` before wherever the film starts (it becomes `startSceneId`), a
+  cutscene with the clip as its background and nothing else; it moves on after 9.9 s.
+- **The files:** the upload is kept as `public/film/video/scarlet-reel-logo-original.mp4` (moved from the repo's top level,
+  unchanged). The node plays a silent copy (`scarlet-reel-logo.mp4`, stream-copied) with a VP9 `.webm` beside it for
+  browsers without H.264 (the exporter's Chromium among them), and the clip's sound as its music
+  (`public/film/audio/scarlet-reel-logo.mp3`), because the animatic exporter rebuilds sound only from `<audio>` elements.
+  Picture and sound start together (measured about 40 ms apart), and an export carries both.
+- **The engine (`isVideoOnlyScene` in `src/logic.ts`):** a cutscene whose background is a video, with no words, lines or
+  choices, that moves on by itself shows only its clip: no panel or Continue button, no checkpoint (so a reload does not
+  replay it), and the clip plays once and holds its last frame instead of looping. A scene background video now also falls
+  back to a `.webm` beside its `.mp4`, as beat videos already did.
+- **What changed for tests and exports:** the film's play order starts `nw_logo`, `nw_s1`; a whole-film export starts on
+  the logo; `--from nw_s1` skips it.
+
+## Scenes 1 and 2: the cuts land on the music's beat (22 October 2026)
+
+The director asked for the pictures in scenes 1 and 2 to change with the beat of the song under them
+(`glimmering-haze.mp3`), but not on every beat: that would feel mechanical. So when the film plays itself (an animatic,
+or the player's Auto) **only a cut to a new picture waits for the next beat** of the song; lines and descriptions on the
+same picture keep their own timing, and clicking through is unchanged. The wait is never more than one beat (0.67 s).
+
+- **Where:** `studio-edits.json` → `musicSync` (`scenes`, `bpm`, `firstBeat`) puts a `musicSync` field on those scenes;
+  the player (`nextBeatIsCut` and `untilNextMusicBeat` in `src/game/animatic.tsx`) reads the music element's own position,
+  which the animatic exporter keeps on its clock, so an export lands the cuts on the beat too. The Studio's scene panel has
+  a "Music sync" field (tempo and first beat) for any scene.
+- **The song's beat:** 89.27 beats a minute, first beat at 0.645 s, measured from the file's onsets. The grid fits the first
+  45 s of the 60.4 s loop well; the last 15 s have no steady beat, so a cut there lands wherever the beat grid says, which
+  sounds no different from before. The grid restarts each time the song loops.
 
 ## The envelope at dawn (scene 78): the director's picks (20 October 2026)
 
