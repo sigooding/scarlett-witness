@@ -20413,19 +20413,61 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Jack hits him. Ishida doesn't lift his hands. Jack hits him again, and again. The chair goes over. Papers slide off the desk.",
      "silent": true,
      "sfxUrl": "/film/sfx/punches-chair.mp3",
-     "sfxVolume": 0.8
+     "sfxVolume": 0.8,
+     "background": "/film/img/s80/jack-hits-him.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 22,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1336",
      "characterId": "nw_narrator",
      "text": "At the far end of the room, the two young detectives are on their feet.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s80/the-chair-goes-over.jpg",
+     "cinematic": {
+      "mode": "dolly",
+      "focalPoint": "50% 60%",
+      "zoomDuration": 20,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1337",
      "characterId": "nw_narrator",
      "text": "From the floor, Ishida lifts one hand. Not to Jack. To them. They stay where they are.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s80/not-to-jack.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 22,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1338",
@@ -20437,7 +20479,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1339",
      "characterId": "nw_narrator",
      "text": "Ishida wipes his mouth with the back of his hand. Looks at the blood on it. Then up at Jack.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s80/the-blood-on-his-hand.jpg",
+     "cinematic": {
+      "mode": "dolly",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 18,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1340",
@@ -26460,5 +26516,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "5cc84b40f7fd"
+ "builtinRevision": "4001352ab4ed"
 } as unknown as Story;
