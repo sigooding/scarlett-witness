@@ -1,9 +1,9 @@
 # Retakes of 20 October 2026
 
-Made from `docs/image-brief-2026-10-20.md`, Priority 1, in the brief's order. All 21 pictures are new files:
-nothing existing was overwritten or deleted, and nothing under `src/`, `tools/`, `scripts/` or `docs/` was touched.
-Every file is a 16:9 JPEG at 1920x1080, installed with a centred crop to an exact 16:9 and a Lanczos enlargement
-(no picture was shrunk).
+Made from `docs/image-brief-2026-10-20.md`, Priority 1, in the brief's order. The original Priority 1 retakes are listed below;
+subsequent Hive-model regenerations and alternatives are documented in the dedicated section. No files under `src/`, `tools/`,
+`scripts/` or `docs/` were touched. Image dimensions vary by generation; check each file before film installation and never
+shrink an image. Install approved film pictures with `tools/install-film-picture.mjs`.
 
 Two notes on how they were made:
 
@@ -40,6 +40,17 @@ Two notes on how they were made:
 | `retakes_2026_10_20/408-a-matter-between-criminal-groups-r1.jpg` | 8a | Only Vera changed: ash-blonde shoulder-length hair from behind, charcoal coat collar over a cream high-neck knit. |
 | `retakes_2026_10_20/483-eyes-on-the-rain-r1.jpg` | 9a | Right-hand drive with the wheel in front of Ishida only, Ishida screen-left, Jack screen-right turned toward him; the LOOK, CAR, LOCATION, ISHIDA and JACK blocks from `jack_ishida_new/style-sheets/continuity.md` were pasted word for word as the brief asks. |
 | `retakes_2026_10_20/19-the-bar-r1.jpg` | 10a | Made even though the brief marks it skippable ("a version with him seated exists in PlayFrame's history"). Drop this file if the director takes that one. |
+
+## Hive model: regenerated alternatives
+
+After review, the Hive was regenerated to follow its canonical exterior stylesheet (`public/film/img/sheets/hive-exterior-day.jpg`) and to sit in the gap between the model's two tall towers. Both selected alternatives are retained alongside the first generated outputs; they have not been wired into the film. The `--alt1` files are 2752×1536. The `--alt2` style-sheet option is 1360×768 and is for reference only (do not install below the film's 1920×1080 minimum).
+
+- `retakes_2026_10_20/style-sheets/kurose-plaza-model--alt1.jpg`
+- `retakes_2026_10_20/style-sheets/kurose-plaza-model--alt2.jpg`
+- `retakes_2026_10_20/310-the-model-at-dawn-r1--alt1.jpg`
+- `retakes_2026_10_20/311-the-hand-on-the-model-r1--alt1.jpg`
+
+The base-name files `style-sheets/kurose-plaza-model.jpg`, `310-the-model-at-dawn-r1.jpg` and `311-the-hand-on-the-model-r1.jpg` were also regenerated. The director should pick the final set, check the Hive placement and model continuity, and install only the approved full-resolution images with `tools/install-film-picture.mjs`.
 
 ## Not done
 
