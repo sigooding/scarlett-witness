@@ -9,6 +9,27 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Shots 230, 293, 294 and 295: Kato Rental Lockers and the Ueno arches (21 October 2026)
+
+* **230 "No questions" (scene 63)** — Jack opens upper locker **114** and holds the taped kraft padded envelope and
+  worn black notebook instead of the earlier draft's cardboard box; the faded `MONTHLY. YEARLY. / NO QUESTIONS.`
+  sign above the door is unobstructed behind his head. 2848×1600. Previous take:
+  `archive/s63/230-no-questions--v1.jpg`.
+* **293 "The sedan waits" (scene 63A)** — Jack walks across the wet pavement toward the open wooden doorway in the
+  brick arch on the left; behind him down the rain-slicked street, the black sedan now has its headlights switched on
+  and a dark interior showing the silhouettes of a driver and front passenger. 1672×941. Previous take:
+  `archive/s63a/293-the-sedan-waits--v2.jpg`.
+* **294 "Through the parlour" (scene 63A)** — overhead lighting dimmed under the brick vault and both flanking banks
+  rebuilt as brightly lit Japanese pachinko machines casting colourful machine glow across the players and the aisle.
+  1672×941. Previous take: `archive/s63a/294-through-the-parlour--v2.jpg`.
+* **295 "They give up" (scene 63A)** — reframed over Jack's shoulder as he peeks cautiously around the recessed back
+  doorway down the wet alley toward the street, where the two men in dark coats stand beside the black car shrugging
+  toward the driver that they have lost him. 1672×941. Previous take: `archive/s63a/295-they-give-up--v2.jpg`.
+
+Nothing was resized — each picture is installed byte for byte at the size the generator produced, and the generated
+sources are kept in `public/film/img/retakes_2026_10_21/`. Story paths are unchanged so no rebuild was needed; sync
+all four back into PlayFrame before the next `node tools/build-film-story.mjs` run.
+
 ## Shots 445, 90-05 and 139; and two new depth maps (21 October 2026)
 
 * **445 "Exactly where it was" (scene 25)** — the page Jack sets down now carries **the same drawing as
