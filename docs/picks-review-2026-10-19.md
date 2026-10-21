@@ -59,6 +59,9 @@ becomes `"take:<beat>--r1"`. It keeps the beat's caption and sound (or set one i
 `node tools/vera-run-cut.mjs` and rebuild.
 
 ### V1. The wrong Jack in 74-05 and 74-10 (most visible)
+- **Update 20 October 2026: resolved without new pictures.** The director marked both; 74-05 now holds the shipped wide
+  (`s74/74-twenty-metres-apart`) and 74-10/74-11 play the shipped `s74/75-one-desperate-blow`, the same compositions with the
+  right Jack (`docs/director-notes-2026-10-20.md`, items 10 and 13). The brief below stands only if a retake is still wanted.
 - **Plays:** 74 "She is crying, almost silently." and "She hits him. One desperate blow against his chest." (74-10 also holds
   through "her hands fall").
 - **Wrong:** both takes (`…74-twenty-metres-apart-v2`, `…75-one-desperate-blow-v2`) show a younger man with short black hair
@@ -156,6 +159,8 @@ becomes `"take:<beat>--r1"`. It keeps the beat's caption and sound (or set one i
   dress already darkening with rain.* + style line.
 
 ### V7. No picture of her covering her face (74-18)
+- **Update 20 October 2026: resolved.** The director marked the reflection take (it read as Vera holding the umbrella she left
+  behind); the new set's 74-18, Vera covering her face, plays there now.
 - The beat "Vera covers her face with her hands." now plays the reflection take with a new caption. If the beat should be
   seen: **make** `vera_run_takes/74-18-she-covers-her-face--r1.jpg`; attach `sheets/vera-face.jpg`,
   `vera_run_new/style-sheets/vera-red-dress.jpg` (state C), `vera_run_new/style-sheets/loc-the-route.jpg` (panel e).

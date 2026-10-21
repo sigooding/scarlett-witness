@@ -9,6 +9,36 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The director's notes of 20 October 2026
+
+`docs/director-notes-2026-10-20.md` is the list. Done in the film:
+- the payphone heard from the inn's back yard is distant (`phone-distant.mp3`);
+- the fire door in 63A is a push-bar door, no longer a bang that sounds like a shot (`fire-door-push-bar.mp3`, a new ElevenLabs take);
+- *Bad Guy* plays to its own end (`songRunsOn` on the soundtrack);
+- "He takes it." is out of scene 61;
+- Daniel's diary in 79 no longer mentions Vera (the take is cut before "Tell Vera", as a new file).
+
+Later the same day:
+- **Scene 74:** the wrong Jack (74-05, 74-10/74-11) and the umbrella reflection (74-18) were replaced by pictures already made. The
+  run now plays 28 new pictures, 15 shipped and 5 earlier takes.
+- **Scene 80:** after "I have never killed anyone…", Jack hits him (*"He does."*, with `punches-chair.mp3`). Ishida waves the
+  young detectives back and still asks for Sakai's thing.
+- **Picture slots:** the four new pictures of scene 80 are slots that wait for their files, in `studio-edits.json` → `pictures`
+  with `"pending": true` and a `brief`. The builder never puts up a picture that is not on disk, and lists the slots still
+  waiting.
+
+- **Scene 83:** "It's just a face." plays the archived take of 111 with Vera's navy coat on (`s83_picks/111-just-a-face-v2.jpg`).
+  The director had noted her missing coat.
+
+Retake briefs for the plaza model (and its style sheet), the photo on Harada's desk, Mrs. Sakai's empty room, Vera leaving the
+lounge, Jack's hands (74-03), the notebook Vera holds up in 83 (112: it should be a photocopied page) and scene 80's pictures are
+in the same file. None is being generated for now. **`docs/image-brief-2026-10-20.md`** gathers them, and the picks review's,
+into one ordered brief to hand to an image generator. It puts every retake in `public/film/img/retakes_2026_10_20/` and the
+plaza model in its glass case. Swap the pictures in when they come back; scene 80's come up by themselves.
+
+Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
+siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
+
 ## The envelope at dawn (scene 78): the director's picks (20 October 2026)
 
 Scene 78's four shots were picked against their other versions (PlayFrame's 88, the archived first takes of 316, 89 and 90).
@@ -453,13 +483,13 @@ The engine loops a scene's music until another cue changes or silences it; that 
 * **Timing.** Every node runs about 0.18 s longer than its delay says (`lag`, measured in headless Chromium), which the builder subtracts. Measured from the song's first request to "She nods.": 115.9 s, then the fade (the song is 120.67 s, so it never loops). A few seconds either way does not matter.
 * **Vera's line** in the kitchen scene (86) is "They don't know me." (was "I know them."), a new take; the change is in PlayFrame's screenplay and `docs/neonoire/voice/manifest.json` first.
 
-Fields: `from`, `to` (node ids, parts included), `stopBefore` (the text of the first beat that is left to the ordinary scene), `musicUrl`, `seconds`, `fadeIn`, `fadeOut`, `slack`, `endHold`, `captionSeconds`, `lag`, `captions`, `cues`. `node tools/build-film-story.mjs` applies it after the Studio edits; the original scenes stay in `src/film/story.json`. Deep link: `?story=nobodys-witness-film&scene=nw_song_raid_01`.
+Fields: `from`, `to` (node ids, parts included), `stopBefore` (the text of the first beat that is left to the ordinary scene), `musicUrl`, `seconds`, `fadeIn`, `fadeOut`, `slack`, `endHold`, `captionSeconds`, `lag`, `captions`, `cues`, `songRunsOn` (the scene after the run does not fade the song; it plays on until it ends by itself). `node tools/build-film-story.mjs` applies it after the Studio edits; the original scenes stay in `src/film/story.json`. Deep link: `?story=nobodys-witness-film&scene=nw_song_raid_01`.
 
 ### Bad Guy carries the night; "Baby Fool" carries the newsroom (12–13 October 2026)
 
 *"the whole scene needs to be timed to the playing song up until end of jack sitting in office"* (12 October). One more `"soundtracks"` entry:
 
-* **`bad-guy`**, "Bad Guy" (`public/film/audio/bad-guy.mp3`, 4:28.27), from `nw_s72_b` (the continuation node that starts the song in the hotel lounge, "Vera doesn't move. The piano plays on.") through scenes 73 to 77, `stopBefore: "He opens the drawer."`: the run ends when Jack has sat down at his desk with the notebook and Vera's voice in his head. 34 timed nodes over 29 shots (22 captioned, 7 with 11 recorded lines). The rest of Jack's office (the clean envelope, the pen that writes nothing) follows as an ordinary click-through node, `nw_s77_after`, which fades the song out; scenes 78 and 79 are click-through and **music-off** (a second run, "Midnight in the Rain" through the notebook scene, was added the same day and **removed on 13 October**: *"remove the midnight song"*). It is planned to 265 s of the song's 268 s because the voiced shots run a few seconds past the plan; measured in headless Chromium, the run ends 263.3 s into the song.
+* **`bad-guy`**, "Bad Guy" (`public/film/audio/bad-guy.mp3`, 4:28.27), from `nw_s72_b` (the continuation node that starts the song in the hotel lounge, "Vera doesn't move. The piano plays on.") through scenes 73 to 77, `stopBefore: "He opens the drawer."`: the run ends when Jack has sat down at his desk with the notebook and Vera's voice in his head. 34 timed nodes over 29 shots (22 captioned, 7 with 11 recorded lines). The rest of Jack's office (the clean envelope, the pen that writes nothing) follows as an ordinary click-through node, `nw_s77_after`; since 20 October 2026 (the director: *"don't end bad guy song at jack just play till end"*, `songRunsOn: true`) the song plays on under it to its own end instead of being faded there; scenes 78 and 79 are click-through and **music-off** (a second run, "Midnight in the Rain" through the notebook scene, was added the same day and **removed on 13 October**: *"remove the midnight song"*). It is planned to 265 s of the song's 268 s because the voiced shots run a few seconds past the plan; measured in headless Chromium, the run ends 263.3 s into the song.
 
 It runs hands-off like the raid: every shot is its own node with a one-line caption (`captions`), the recorded lines keep their takes and subtitles, and effects are `cues` per picture (the heels, the car passing, the crossing melody, the shoe splash, the train, the lighter, the drawer, the envelope on the mat). The narration under the pictures is left out. **A shot's `captions` entry may be a list**: the shot is then cut into that many parts on the same picture (a straight cut between them, the shot's time shared), each with its own caption and its own entry in the picture's `cues` list. Picture 70 is two parts: "Not elegantly. Badly. In heels…" with the heels, then "A car passes, its tyres hissing…" with `car-pass` (13 October 2026, the director: *"when she was running before there was sfx of car driving past"*; the first version of the run kept one effect a shot and dropped it). Still not carried by the run: the lounge's clock and glass (scene 72, "The clock ticks. Somewhere a glass is set down.", under the pianist), which fell inside a voiced shot. **The silent shots hold about 10 s each**, because the song is long and the pictures few (scene 73 has eight pictures for a minute of song); more pictures in scene 73 (PlayFrame's queued frames, `docs/neonoire/passes/vera-run-queued-2026-10-12.md` there) shorten those holds. Builder change: a node a run leaves behind (`…_after`) no longer reopens the picture the earlier run ended on when its first beat has a picture of its own. Deep link: `?story=nobodys-witness-film&scene=nw_song_bad-guy_01`. `scripts/film-backend.entry.ts` check 16 holds it.
 
@@ -543,7 +573,7 @@ Asked: *"add special effects where needed in the game ... make sure they are app
 | `ringback-tone` | 59 |
 | `locker-open` | 63 |
 | `pachinko-parlour` | 63A |
-| `fire-door-bang` | 63A |
+| `fire-door-push-bar` (was `fire-door-bang` until 20 October 2026: it sounded like a gunshot) | 63A |
 | `sleeve-murmur` | 63A, 70, 84 |
 | `cash-drawer` | 64, 81 |
 | `pour-drink` | 64, 81 |

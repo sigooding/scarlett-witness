@@ -299,7 +299,7 @@ check(badGuy.length > 20, `Bad Guy's run has ${badGuy.length} timed nodes`);
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/bad-guy.mp3").map((s) => s.id), [badGuy[0].id], "Bad Guy is started once, on its run's first node (it never restarts)");
 check(badGuy[0].musicLoop === false, "and plays once");
 eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s77_after", "the run hands on to the rest of Jack's office (the clean envelope, the pen), an ordinary click-through node");
-eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, "none", "which fades the song out");
+eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, undefined, "which lets the song play on to its own end (20 October 2026: \"don't end bad guy song at jack just play till end\")");
 eq(runOf("midnight").map((s) => s.id), [], "the midnight song's run is gone");
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp3").map((s) => s.id), [], "and nothing in the film starts the midnight song");
 eq(["nw_s78", "nw_s79"].map((id) => FILM.scenes.find((s) => s.id === id)?.musicMode), ["none", undefined], "scene 78 is music-off again and scene 79 plays on the silence");
@@ -310,11 +310,13 @@ eq(badGuy.filter((s) => !s.hideHud).map((s) => s.id), [], "every node of the run
 const heels = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/heels-running-wet.mp3");
 const car = badGuy.findIndex((s) => s.dialogueBeats?.[0]?.sfxUrl === "/film/sfx/car-pass.mp3");
 check(heels >= 0 && car > heels && /\/73-10-a-car-passes\.jpg$/.test(badGuy[car]?.background ?? ""), "the car-pass effect plays after the heels, on the picture of the car passing (73-10)");
-// scenes 72 to 76 play the director's picks (19 October 2026, PICKS in tools/vera-run-cut.mjs): 27 of the vera_run_new set, 14 of the
-// shipped pictures and 8 earlier takes; the beat of 74-02 keeps no picture of its own, and 502 comes up on its own line again
+// scenes 72 to 76 play the director's picks (19 October 2026, PICKS in tools/vera-run-cut.mjs), as corrected on 20 October (the takes at
+// 74-05 and 74-10 had a different Jack, the one at 74-18 her reflection with the umbrella she had left behind): 28 of the vera_run_new
+// set, 15 of the shipped pictures and 5 earlier takes; the beat of 74-02 keeps no picture of its own, and 502 comes up on its own line again
 const runPics = [...new Set(badGuy.map((s) => s.background ?? ""))];
 const runFrom = (folder: string) => runPics.filter((b) => b.includes(`/${folder}/`)).length;
-eq([runFrom("vera_run_new"), runFrom("vera_run_takes")], [27, 8], "Bad Guy's run plays the director's picks: 27 new pictures and 8 earlier takes");
+eq([runFrom("vera_run_new"), runFrom("vera_run_takes")], [28, 5], "Bad Guy's run plays the director's picks: 28 new pictures and 5 earlier takes");
+check(!runPics.some((b) => /74-05-crying-almost-silently--|74-10-one-desperate-blow--|74-18-she-covers-her-face--/.test(b)) && runPics.includes("/film/img/s74/75-one-desperate-blow.jpg") && runPics.includes("/film/img/vera_run_new/74-18-she-covers-her-face.jpg"), "no take with the wrong Jack or the umbrella reflection: the shipped blow (75) and Vera covering her face (74-18) play instead");
 check(!runPics.some((b) => /74-02-jack-out-of-the-dark/.test(b)), "74-02 is left out; 74-01 holds while Jack walks out of the dark");
 const why = badGuy.find((s) => s.dialogueBeats?.[0]?.text?.startsWith("Why didn't you tell me?"));
 check(/\/502-why-didnt-you-tell-me\.jpg$/.test(why?.background ?? ""), "\"Why didn't you tell me?\" plays on 502, as it did before the new set");
@@ -379,5 +381,24 @@ eq(s2Pics.filter((b) => b.includes("/s2_picks/")).length, 7, "scene 2 plays the 
 // scene 6 (the interview room) plays the director's picks (20 October 2026): its own pictures but for 55, the archived first take
 const s6Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s6(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
 check(s6Pics.includes("/film/img/s6_picks/55-i-speak-japanese-v1.jpg") && !s6Pics.includes("/film/img/s6/55-i-speak-japanese.jpg"), "scene 6 plays the director's pick for 55: the archived first take");
+// the director's notes of 20 October 2026 (docs/director-notes-2026-10-20.md)
+const allBeats = FILM.scenes.flatMap((s) => (s.dialogueBeats ?? []).map((b) => ({ scene: s.id, b })));
+check(!allBeats.some(({ scene, b }) => scene.startsWith("nw_s61") && /He takes it\./.test(b.text ?? "")), "scene 61 no longer says \"He takes it.\"");
+const diary = allBeats.find(({ b }) => (b.text ?? "").startsWith("They followed me home again tonight."));
+check(!!diary && !/Vera/.test(diary.b.text ?? "") && diary.b.audioUrl === "/film/voice/s79/94-daniel-quietly-they-followed-me-home-again--no-vera.mp3" && existsSync(join(ROOT, "public", diary.b.audioUrl)), "Daniel's diary in 79 does not mention Vera, and plays the take cut before \"Tell Vera\"");
+check(allBeats.some(({ b }) => /out through the fire door at the back/.test(b.text ?? "") && b.sfxUrl === "/film/sfx/fire-door-push-bar.mp3"), "the fire door in 63A is the push-bar door, not the bang that sounded like a shot");
+check(allBeats.some(({ b }) => b.text === "Inside, the payphone is still ringing." && b.sfxUrl === "/film/sfx/phone-distant.mp3"), "the payphone heard from the inn's back yard sounds distant");
+// scene 80 (the director, 20 October 2026): Ishida finishes his line, then Jack hits him; he still asks for Sakai's thing (he needs it)
+const s80 = allBeats.filter(({ scene }) => scene === "nw_s80").map(({ b }) => b.text ?? "");
+const at80 = (t: string) => s80.findIndex((x) => x.startsWith(t));
+check(!s80.includes("He doesn't.") && at80("I have never killed anyone") >= 0 && at80("He does.") > at80("I have never killed anyone") && at80("Where is it? Sakai's thing.") > at80("He does.") && at80("Ishida watches him go.") > at80("Where is it?"), "scene 80: Ishida finishes his line, Jack hits him, and Ishida still asks for Sakai's thing before Jack walks away");
+check(allBeats.some(({ scene, b }) => scene === "nw_s80" && (b.text ?? "").startsWith("Jack hits him.") && b.sfxUrl === "/film/sfx/punches-chair.mp3"), "the blows and the chair going over are heard");
+// scene 83 (the director, 20 October 2026: "vera missing a coat"): "It's just a face." plays the archived take with her navy coat
+check(allBeats.some(({ scene, b }) => scene.startsWith("nw_s83") && b.background === "/film/img/s83_picks/111-just-a-face-v2.jpg") && !allBeats.some(({ b }) => b.background === "/film/img/s83/111-just-a-face.jpg"), "scene 83: Vera keeps her coat on at \"It's just a face.\" (the archived take v2)");
+// picture slots (studio-edits "pictures" with `pending`): each waits on its beat for its file, with a brief, and a missing file is never put up
+const slots = (edits.pictures ?? []).filter((p: { pending?: boolean }) => p.pending);
+eq(slots.filter((p: { scene: string }) => p.scene === "nw_s80").length, 4, "scene 80 has four picture slots for the blows and after (jack-hits-him, the-chair-goes-over, not-to-jack, the-blood-on-his-hand)");
+check(slots.every((p: { brief?: string }) => (p.brief ?? "").length > 40), "every picture slot carries the brief it is to be made from");
+check(slots.every((p: { file: string }) => existsSync(join(ROOT, "public/film", p.file.slice(1))) || !allBeats.some(({ b }) => b.background === `/film${p.file}`)), "a slot whose file is not on disk puts up no picture");
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
 console.log(`\nfilm backend: ${checks} checks passed`);

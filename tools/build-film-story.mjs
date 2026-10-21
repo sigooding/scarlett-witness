@@ -391,13 +391,20 @@ if (existsSync(editsFile)) {
     if (beat.sfxUrl) console.warn(`studio-edits: ${e.scene} "${e.find}" already had ${beat.sfxUrl}`);
     Object.assign(beat, { sfxUrl: P(`/sfx/${e.file}.mp3`), sfxVolume: e.volume ?? 0.7 });
   }
-  // pictures: [{ scene, find, file }] — a picture made here (not in PlayFrame) on the beat whose text contains `find`
+  // pictures: [{ scene, find, file, pending?, brief? }] — a picture made here (not in PlayFrame) on the beat whose text contains `find`.
+  // A picture not on disk is never put up (the beat keeps the picture before it); a `pending` one is a slot waiting for its file, with the
+  // `brief` it is to be made from, and comes up by itself once the file is installed and the film rebuilt.
+  const waiting = [];
   for (const e of file.pictures ?? []) {
     const beat = scenes.filter(x => x.id === e.scene || x.id.startsWith(`${e.scene}_`)).flatMap(x => x.dialogueBeats).find(b => b.text?.includes(e.find));
     if (!beat) { console.warn(`studio-edits: no beat in ${e.scene} containing "${e.find}"`); continue; }
-    if (!existsSync(resolve(root, "public", P(e.file).slice(1)))) console.warn(`studio-edits: picture ${e.file} is not in public/film`);
+    if (!existsSync(resolve(root, "public", P(e.file).slice(1)))) {
+      if (e.pending) waiting.push(e.file); else console.warn(`studio-edits: picture ${e.file} is not in public/film`);
+      continue;
+    }
     Object.assign(beat, bgFields(P(e.file)));
   }
+  if (waiting.length) console.log(`studio-edits: ${waiting.length} picture slot(s) waiting for their files: ${waiting.join(", ")}`);
   if (file.startSceneId) startSceneId = file.startSceneId;
   // dialogueBox: the story-wide look of the reading panel (Studio → In-game theme: fonts, size, HUD colour scheme)
   if (file.dialogueBox) dialogueBox = file.dialogueBox;
@@ -487,7 +494,8 @@ for (const seg of edits.soundtracks ?? []) {
     const nextId = k + 1 < chain.length ? chain[k + 1].id : after.id;
     Object.assign(nd.dialogueBeats[0], { afterBeatTargetSceneId: nextId });
   });
-  if (after.musicMode === undefined) Object.assign(after, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
+  // songRunsOn: the song is not faded where the run ends; it plays on under what follows until it ends by itself (or the next music cue takes over)
+  if (after.musicMode === undefined && !seg.songRunsOn) Object.assign(after, { musicMode: "none", musicFadeSeconds: seg.fadeOut ?? 3 });
   const removed = new Set(block.map(s => s.id));
   scenes.splice(a, b - a + 1, ...chain, ...(rest ? [after] : []));
   for (const s of scenes) {
@@ -495,7 +503,7 @@ for (const seg of edits.soundtracks ?? []) {
     for (const bt of s.dialogueBeats ?? []) if (removed.has(bt.afterBeatTargetSceneId)) bt.afterBeatTargetSceneId = chain[0].id;
     if (removed.has(s.autoAdvanceTargetSceneId)) s.autoAdvanceTargetSceneId = chain[0].id;
   }
-  console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${after.id} fades it out`);
+  console.log(`soundtrack ${seg.id}: ${block.length} scenes (${seg.from} to ${seg.to}) → ${chain.length} timed nodes over ${shots.length} shots (${silent.length} captioned, ${voiced.length} with ${shots.reduce((n, s) => n + s.lines.length, 0)} lines), ${each.toFixed(2)} s a silent shot, ${total.toFixed(1)} s of the song's ${seg.seconds} s${rest ? `; the rest of ${rest.node.id} follows the song` : ""}; ${seg.songRunsOn ? `it runs on under ${after.id} to its end` : `${after.id} fades it out`}`);
 }
 
 // Cutscenes (src/film/studio-edits.json "cutscenes", 11 October 2026: the director asked for the inn raid to play as fast action): a run of
