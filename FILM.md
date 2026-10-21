@@ -62,6 +62,12 @@ stretches a person as the camera moves, and those want cut-outs and a plate firs
 pass. **The two maps have not been eyeballed against their stills** — that is the next thing to do, and the
 note in the registry says so.
 
+**Correction (22 October 2026): 73-05 is not empty.** Vera is in it, running away down the middle of the street, and a
+depth map alone would stretch her on the truck move. She is now a cut-out (BiRefNet) with the street painted in behind
+her (LaMa), made by `tools/make-depth-layers.py` with the models listed in its header, and 73-05 is in `peopleInShot`.
+Frames of the move (`tools/depth-frames.mjs`) show her moving as one piece. The shot is on screen about 5 s of its
+16 s move. 75-02 (the empty lounge) is empty and keeps its map.
+
 ## Picture pass: 243, 336, 346 and 352 (21 October 2026)
 
 * **243 "The box" (scene 11)** — rebuilt, this time as an **edit of the film's own `s10/413-open-and-shut.jpg`**, so the

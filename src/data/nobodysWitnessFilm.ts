@@ -17954,6 +17954,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "shakeDuration": 0.7,
     "panDistance": 2,
     "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-05-toward-the-tracks/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-05-toward-the-tracks/cutout-1.png",
+      "depth": 0.715
+     }
+    ],
     "depthMotion": "truck",
     "depthAmount": 0.35,
     "depthSeconds": 16,
@@ -26794,5 +26801,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "b6339c95886c"
+ "builtinRevision": "db93aca7f913"
 } as unknown as Story;

@@ -4189,6 +4189,13 @@
     "panDistance": 2,
     "zoomDuration": 18,
     "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-05-toward-the-tracks/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-05-toward-the-tracks/cutout-1.png",
+      "depth": 0.715
+     }
+    ],
     "depthMotion": "truck",
     "depthAmount": 0.35,
     "depthSeconds": 16,
