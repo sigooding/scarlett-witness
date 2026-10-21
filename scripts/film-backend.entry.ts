@@ -378,6 +378,22 @@ check(!raidPics.some((b) => /\/(119-single-file|121-the-shutter|124-the-repairma
 // s2_new2 under their own names so the s2 plates' lights and depth never land on them)
 const s2Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s2(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
 eq(s2Pics.filter((b) => b.includes("/s2_picks/")).length, 7, "scene 2 plays the director's picks: seven pictures from s2_picks/");
+// scenes 1–2, the director's animatic notes of 21 October 2026: a mid-fall beat with the suppressed shot, the door-shut moved to the car, new lines waiting for takes
+const s1Beats = FILM.scenes.filter((s) => /^nw_s1(_|$)/.test(s.id)).flatMap((s) => s.dialogueBeats ?? []);
+const midFall = s1Beats.find((b) => b.background === "/film/img/s1/11-sakai-mid-fall.jpg");
+check(!!midFall && midFall.sfxUrl === "/film/sfx/suppressed-shot.mp3" && existsSync(join(ROOT, "public/film/img/s1/11-sakai-mid-fall.jpg")), "scene 1: Sakai mid-fall (11) is a beat of its own and carries the suppressed shot");
+check(s1Beats.find((b) => (b.text ?? "").startsWith("The old man folds"))?.sfxUrl === undefined, "scene 1: no door-like thud on the old man folding");
+check(s1Beats.find((b) => (b.text ?? "").startsWith("They walk back to the sedan"))?.sfxUrl === "/film/sfx/car-door-heavy.mp3", "scene 1: the car door shuts as the men walk back to the sedan");
+const ambulance = s1Beats.find((b) => b.text === "Hold on, I'll call an ambulance.");
+check(!!ambulance && ambulance.characterId === "nw_mara" && ambulance.silent === true && !ambulance.audioUrl, "scene 1: Mara says \"Hold on, I'll call an ambulance.\" (silent until its take is recorded)");
+const s2Beats = FILM.scenes.filter((s) => /^nw_s2(_|$)/.test(s.id)).flatMap((s) => s.dialogueBeats ?? []);
+const s2PicBeats = s2Beats.filter((b) => b.background);
+check(s2PicBeats.length > 1 && s2PicBeats[0].background === s2PicBeats[1].background && s2PicBeats[0].background === "/film/img/s2/20-the-journalist.jpg", "scene 2 opens on the journalist's picture for its first two picture beats");
+const okaySakai = s2Beats.find((b) => b.text === "Are you okay? Where's Sakai?");
+check(!!okaySakai && okaySakai.characterId === "nw_journalist" && okaySakai.silent === true && !okaySakai.audioUrl, "scene 2: the journalist asks \"Are you okay? Where's Sakai?\" (silent until its take is recorded)");
+check(!s2Beats.some((b) => b.text === "Where is he?"), "scene 2: \"Where is he?\" is out");
+check(s2Beats.find((b) => (b.text ?? "").startsWith("Before she can answer"))?.background === "/film/img/s2_picks/23-behind-the-counter-s2new2.jpg" && s2Beats.find((b) => (b.text ?? "").startsWith("Mara is behind the counter"))?.background === "/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg", "scene 2: the men-outside picture plays on the door opening, and the stepping-in picture on Mara behind the counter");
+eq(byId.get("nw_title")?.credits?.montage?.length, 12, "the opening titles' montage runs twelve stills");
 // scene 6 (the interview room) plays the director's picks (20 October 2026): its own pictures but for 55, the archived first take
 const s6Pics = [...new Set(FILM.scenes.filter((s) => /^nw_s6(_|$)/.test(s.id)).flatMap((s) => [s.background, ...(s.dialogueBeats ?? []).map((b) => b.background)]).filter((b): b is string => !!b))];
 check(s6Pics.includes("/film/img/s6_picks/55-i-speak-japanese-v1.jpg") && !s6Pics.includes("/film/img/s6/55-i-speak-japanese.jpg"), "scene 6 plays the director's pick for 55: the archived first take");

@@ -9,6 +9,16 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Scenes 1–2 and the opening titles: the director's animatic notes (21 October 2026)
+
+From the animatic export of scenes 1–2 (beat numbers are the export's joined marks). All done; nobody has watched the new export yet:
+- **Scene 1, new beat at SC 1 · BEAT 22:** `s1/11-sakai-mid-fall.jpg` (made for this; Sakai matched to `09-old-man-stops`, `07-old-man` and `14-she-kneels` — grey flat cap, beige raincoat, mid-fall, both masked men pointing suppressed pistols at him). It takes "A suppressed SHOT." and the `suppressed-shot` sound; `10-the-shot` now plays on "Flat and ordinary, like a door closing. The old man folds onto the street."
+- **Scene 1, sound:** the thud the director heard as a door shutting is off the fold; a car door shuts instead on "They walk back to the sedan" (SC 1 · BEAT 26, `car-door-heavy`), before the car pulls away. The old `fall-street` step is out of `story.json`.
+- **Scene 1, Mara at SC 1 · BEAT 30:** "Hold on, I'll call an ambulance." (the note's "I'll can" read as "I'll call"). No take yet: `takePending` in `story.json`, shown silent like scene 84's lines.
+- **Scene 2:** the first two picture beats both play `s2/20-the-journalist.jpg`; the picture files of the door-opening and behind-the-counter beats are swapped, so the men-outside frame (`23-behind-the-counter-s2new2`) plays as the door opens and the stepping-in frame (`25-two-pairs-of-shoes-v2`) plays on "Mara is behind the counter…" — by then the men are coming inside. `24-from-the-floor` (the men inside) now plays on "Two shots."
+- **Scene 2, dialogue:** after "He knows her name." the journalist says "Are you okay? Where's Sakai?" (new line, `takePending`, shown silent; "Miss Voss?" stays before it), and his later "Where is he?" is out — picture, words and take. Note: Mara's scene 25 recall still quotes the old words ("the man said, 'Where is he?'"); it wants rewording when its take is next touched.
+- **Opening titles:** the montage is twelve stills, not six (the three `montage/` plates m1–m3, the backstreet, the elevated line and the empty lane added between the old six). It still loops inside the 110 s titles.
+
 ## The director's notes of 20 October 2026
 
 `docs/director-notes-2026-10-20.md` is the list. Done in the film:

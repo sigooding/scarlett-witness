@@ -30,11 +30,17 @@
     "cardMotion": "fade",
     "montage": [
      "/film/img/s1/377-the-hive-remembered.jpg",
+     "/film/img/montage/m1-neon-backstreet.jpg",
      "/film/img/montage/m4-railway-rain.jpg",
+     "/film/img/montage/m2-the-hive.jpg",
      "/film/img/s75/80-the-machine-waits.jpg",
+     "/film/img/montage/m3-umbrella-bridge.jpg",
      "/film/img/s75/314-the-empty-crossing.jpg",
+     "/film/img/s1/01-backstreet.jpg",
      "/film/img/s31/169-the-only-car.jpg",
-     "/film/img/s14a/334-the-mirror.jpg"
+     "/film/img/s3/30-the-elevated-line.jpg",
+     "/film/img/s14a/334-the-mirror.jpg",
+     "/film/img/s1/383-the-empty-lane.jpg"
     ],
     "montageSeconds": 6.5,
     "montageTransition": "dissolve",
@@ -664,6 +670,12 @@
    "find": "Her bag slides off her shoulder",
    "file": "bag-spill",
    "volume": 0.7
+  },
+  {
+   "scene": "nw_s1",
+   "find": "They walk back to the sedan",
+   "file": "car-door-heavy",
+   "volume": 0.8
   },
   {
    "scene": "nw_s2",
