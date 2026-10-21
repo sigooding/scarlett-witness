@@ -597,6 +597,10 @@ export interface DialogueBeat {
   text: string;
   expression?: string;
   conditionRule?: Gating;
+  /** Animatic only, set at runtime by `animaticStory`: this beat's number in the authored scene ("12", or
+   *  "12–13" when the animatic shows it joined with the next line), so the mark in an exported animatic names
+   *  the same beat the Studio lists. Never authored or saved. */
+  animaticBeat?: string;
 
   /** Optional replacement background image (url / gradient: / asset:) shown
    * for this beat. By default a replacement image PERSISTS through later
