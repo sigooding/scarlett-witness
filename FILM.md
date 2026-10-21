@@ -9,6 +9,34 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Picture pass: 243, 336, 346 and 352 (21 October 2026)
+
+* **243 "The box" (scene 11)** — rebuilt, this time as an **edit of the film's own `s10/413-open-and-shut.jpg`**, so the
+  room, the desk and the camera are the shot before it in the same office. Jack has left the chair and stands **behind the
+  end of the desk**, bent, lifting the cardboard box out of the grey steel cupboard under the window: dust on the lid,
+  files packed tight behind the empty space. The television shows static. 2816×1584. Previous takes:
+  `archive/s11/243-the-box--v1.jpg`, `--v2.jpg`, and the frame it replaces, `--v3.jpg`.
+* **336 "The lighter" (scene 14A)** — the hatchback now sits **parked along the kerb, parallel with the road and angled a
+  few degrees nose-in**, so it reads as a car standing correctly to the street, the wet road running past it and away down
+  the street. Jack at the wound-down window with the old steel lighter open and unlit; Vera, both hands on the wheel.
+  1920×1072. Previous take: `archive/s14a/336-the-lighter--v2.jpg`.
+* **346 "The bulb hums" (scene 20)** — remade against the storeroom's own pictures (`344`, `345`, `371`): Mara on the
+  futon with the sketchbook, Jack low on a flour sack, one bare bulb, nothing else. **Its depth rig is gone** —
+  `public/film/depth/s20/346-the-bulb-hums/` deleted and the entry removed from `docs/film-depth-layers.json` (both
+  `pictures` and `peopleInShot`); the rig was cut from older art and no longer matched the frame (see the review of
+  13 October). The shot now plays as a still, like any picture without a map. 1672×941. Previous take:
+  `archive/s20/346-the-bulb-hums--v1.jpg`.
+* **352 "The address" (scene 23)** — the napkin was scribble. Remade: it lies flat in the lantern light with a short line
+  of **neat, evenly spaced longhand**, a carefully written address, and Ishida slides it across the table with two
+  fingers, nothing in his face. 1360×768. Previous take: `archive/s23/352-the-address--v1.jpg`.
+
+**Sizes.** Nothing was resized — each file is installed at the size it came out at: 243 2816×1584, 336 1920×1072,
+164 and 346 1672×941, 352 1360×768. Three are now below the 1920×1080 the rest of the film uses; regenerate any that
+look soft on screen.
+
+No builder run was needed — every path is unchanged and `src/data/nobodysWitnessFilm.ts` already points at them.
+All five are local replacements in this checkout; sync them into PlayFrame before the next `build-film-story.mjs`.
+
 ## Shot 164, "Depends who's calling": the office rebuilt (21 October 2026)
 
 Scene 10's **164** ("A knock on the frosted glass. Vera comes in, wet, the blue umbrella dripping.") was thrown out and

@@ -30,7 +30,6 @@
   "297-the-glass-office": "the office staff",
   "337-engine-off": "Jack and Vera in the car",
   "340-the-shuttered-door": "a figure with an umbrella",
-  "346-the-bulb-hums": "Vera and Jack",
   "354-the-altar-photograph": "Mrs. Sakai",
   "374-the-dead-television": "Vera",
   "379-the-laundry": "Jack, Vera and two women",
@@ -253,26 +252,6 @@
    ],
    "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
    "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg"
-  },
-  "346-the-bulb-hums": {
-   "picture": "public/film/img/s20/346-the-bulb-hums.jpg",
-   "depthSource": "public/film/depth/s20/346-the-bulb-hums/source-depth.png",
-   "cutouts": [
-    {
-     "name": "vera",
-     "box": [226, 577, 423, 411],
-     "image": "/film/depth/s20/346-the-bulb-hums/cutout-1.png",
-     "depth": 0.784
-    },
-    {
-     "name": "jack",
-     "box": [1303, 474, 438, 599],
-     "image": "/film/depth/s20/346-the-bulb-hums/cutout-2.png",
-     "depth": 0.51
-    }
-   ],
-   "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
-   "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg"
   },
   "354-the-altar-photograph": {
    "picture": "public/film/img/s29/354-the-altar-photograph.jpg",
