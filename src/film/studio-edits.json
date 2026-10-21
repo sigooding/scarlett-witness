@@ -2067,7 +2067,18 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.3,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s73/72-the-lost-heel/depth.png",
+    "depthPlate": "/film/depth/s73/72-the-lost-heel/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s73/72-the-lost-heel/cutout-1.png",
+      "depth": 0.971
+     }
+    ]
    }
   },
   "02-vending": {
@@ -4366,14 +4377,36 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/73-10-a-car-passes/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-10-a-car-passes/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-10-a-car-passes/cutout-1.png",
+      "depth": 0.707
+     }
+    ]
    }
   },
   "73-13-on-red": {
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/73-13-on-red/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-13-on-red/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-13-on-red/cutout-1.png",
+      "depth": 0.779
+     }
+    ]
    }
   },
   "73-03-she-runs--69-vera-runs-v2": {
@@ -5183,6 +5216,106 @@
      {
       "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
       "depth": 0.392
+     }
+    ]
+   }
+  },
+  "73-11-the-vending-machine--71-the-machine-glows-v2": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/cutout-1.png",
+      "depth": 0.949
+     }
+    ]
+   }
+  },
+  "74-03-his-hands--r1": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/74-03-his-hands--r1/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/74-03-his-hands--r1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/74-03-his-hands--r1/cutout-1.png",
+      "depth": 0.119
+     }
+    ]
+   }
+  },
+  "74-06-dont": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-06-dont/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-06-dont/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-06-dont/cutout-1.png",
+      "depth": 0.568
+     },
+     {
+      "image": "/film/depth/vera_run_new/74-06-dont/cutout-2.png",
+      "depth": 0.575
+     }
+    ]
+   }
+  },
+  "501-one-shoe": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/501-one-shoe/depth.png",
+    "depthPlate": "/film/depth/s74/501-one-shoe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/501-one-shoe/cutout-1.png",
+      "depth": 0.592
+     }
+    ]
+   }
+  },
+  "74-08-you-knew": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-08-you-knew/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-08-you-knew/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-08-you-knew/cutout-1.png",
+      "depth": 0.265
+     }
+    ]
+   }
+  },
+  "74-09-his-silence": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-09-his-silence/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-09-his-silence/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-09-his-silence/cutout-1.png",
+      "depth": 0.197
      }
     ]
    }

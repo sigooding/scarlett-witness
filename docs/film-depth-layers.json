@@ -84,7 +84,16 @@
   "73-06-her-face--70-not-elegantly-badly-playframe": "automatic: 1 found",
   "73-07-heels-on-wet-pavement": "automatic: 1 found",
   "73-08-she-slips--70-not-elegantly-badly-playframe": "automatic: 1 found",
-  "73-09-she-cannot-breathe": "automatic: 1 found"
+  "73-09-she-cannot-breathe": "automatic: 1 found",
+  "73-10-a-car-passes": "automatic: 1 found",
+  "73-11-the-vending-machine--71-the-machine-glows-v2": "automatic: 1 found",
+  "73-13-on-red": "automatic: 1 found",
+  "72-the-lost-heel": "automatic: 1 found",
+  "74-03-his-hands--r1": "automatic: 1 found",
+  "74-06-dont": "automatic: 2 found",
+  "501-one-shoe": "automatic: 1 found",
+  "74-08-you-knew": "automatic: 1 found",
+  "74-09-his-silence": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -1253,6 +1262,138 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
    "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg"
+  },
+  "73-10-a-car-passes": {
+   "picture": "public/film/img/vera_run_new/73-10-a-car-passes.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1309, 147, 507, 1237],
+     "image": "/film/depth/vera_run_new/73-10-a-car-passes/cutout-1.png",
+     "depth": 0.707
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/73-10-a-car-passes/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-10-a-car-passes/plate.jpg"
+  },
+  "73-11-the-vending-machine--71-the-machine-glows-v2": {
+   "picture": "public/film/img/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1052, 150, 493, 930],
+     "image": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/cutout-1.png",
+     "depth": 0.949
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/plate.jpg"
+  },
+  "73-13-on-red": {
+   "picture": "public/film/img/vera_run_new/73-13-on-red.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [477, 148, 378, 834],
+     "image": "/film/depth/vera_run_new/73-13-on-red/cutout-1.png",
+     "depth": 0.779
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/73-13-on-red/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-13-on-red/plate.jpg"
+  },
+  "72-the-lost-heel": {
+   "picture": "public/film/img/s73/72-the-lost-heel.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [668, 17, 479, 924],
+     "image": "/film/depth/s73/72-the-lost-heel/cutout-1.png",
+     "depth": 0.971
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s73/72-the-lost-heel/depth.png",
+   "depthPlate": "/film/depth/s73/72-the-lost-heel/plate.jpg"
+  },
+  "74-03-his-hands--r1": {
+   "picture": "public/film/img/vera_run_takes/74-03-his-hands--r1.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [330, 0, 1402, 1080],
+     "image": "/film/depth/vera_run_takes/74-03-his-hands--r1/cutout-1.png",
+     "depth": 0.119
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/74-03-his-hands--r1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/74-03-his-hands--r1/plate.jpg"
+  },
+  "74-06-dont": {
+   "picture": "public/film/img/vera_run_new/74-06-dont.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [493, 157, 276, 730],
+     "image": "/film/depth/vera_run_new/74-06-dont/cutout-1.png",
+     "depth": 0.568
+    },
+    {
+     "name": "person 2",
+     "box": [1299, 136, 267, 752],
+     "image": "/film/depth/vera_run_new/74-06-dont/cutout-2.png",
+     "depth": 0.575
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-06-dont/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-06-dont/plate.jpg"
+  },
+  "501-one-shoe": {
+   "picture": "public/film/img/s74/501-one-shoe.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [656, 0, 600, 916],
+     "image": "/film/depth/s74/501-one-shoe/cutout-1.png",
+     "depth": 0.592
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s74/501-one-shoe/depth.png",
+   "depthPlate": "/film/depth/s74/501-one-shoe/plate.jpg"
+  },
+  "74-08-you-knew": {
+   "picture": "public/film/img/vera_run_new/74-08-you-knew.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [656, 0, 1231, 1080],
+     "image": "/film/depth/vera_run_new/74-08-you-knew/cutout-1.png",
+     "depth": 0.265
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-08-you-knew/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-08-you-knew/plate.jpg"
+  },
+  "74-09-his-silence": {
+   "picture": "public/film/img/vera_run_new/74-09-his-silence.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [184, 33, 949, 1047],
+     "image": "/film/depth/vera_run_new/74-09-his-silence/cutout-1.png",
+     "depth": 0.197
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-09-his-silence/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-09-his-silence/plate.jpg"
   }
  }
 }

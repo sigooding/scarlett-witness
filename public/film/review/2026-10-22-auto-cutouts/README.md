@@ -6,7 +6,7 @@ with the people painted out, and the depth map). Look at the flagged ones first;
 from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth fields from its `pictureLook` in
 `src/film/studio-edits.json`, then rebuild. Each gets the suggested move: truck, 0.4, over 14 s.
 
-**50 made, 42 flagged, 1 left alone.**
+**59 made, 45 flagged, 2 left alone.**
 
 | Picture | Cut-outs | Flags |
 |---|---|---|
@@ -50,17 +50,27 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [72-03-the-lighter-into-the-bag](72-03-the-lighter-into-the-bag.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [72-04-walking-very-carefully--r1](72-04-walking-very-carefully--r1.jpg) | 1 | 3 person-like shape(s) still found in the plate |
 | [72-05-the-umbrella-stays](72-05-the-umbrella-stays.jpg) | 2 | cut-out 2 runs to its box edge (may be clipped) |
+| [72-the-lost-heel](72-the-lost-heel.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [73-07-heels-on-wet-pavement](73-07-heels-on-wet-pavement.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [73-09-she-cannot-breathe](73-09-she-cannot-breathe.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [73-10-a-car-passes](73-10-a-car-passes.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [74-08-you-knew](74-08-you-knew.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [02-vending](02-vending.jpg) | 1 |  |
 | [09-old-man-stops](09-old-man-stops.jpg) | 1 |  |
 | [329-the-lane-the-watch](329-the-lane-the-watch.jpg) | 1 |  |
 | [331-he-refuses](331-he-refuses.jpg) | 1 |  |
+| [501-one-shoe](501-one-shoe.jpg) | 1 |  |
 | [69-vera-runs](69-vera-runs.jpg) | 1 |  |
 | [73-03-she-runs--69-vera-runs-v2](73-03-she-runs--69-vera-runs-v2.jpg) | 1 |  |
 | [73-06-her-face--70-not-elegantly-badly-playframe](73-06-her-face--70-not-elegantly-badly-playframe.jpg) | 1 |  |
 | [73-08-she-slips--70-not-elegantly-badly-playframe](73-08-she-slips--70-not-elegantly-badly-playframe.jpg) | 1 |  |
+| [73-11-the-vending-machine--71-the-machine-glows-v2](73-11-the-vending-machine--71-the-machine-glows-v2.jpg) | 1 |  |
+| [73-13-on-red](73-13-on-red.jpg) | 1 |  |
+| [74-03-his-hands--r1](74-03-his-hands--r1.jpg) | 1 |  |
+| [74-06-dont](74-06-dont.jpg) | 2 |  |
+| [74-09-his-silence](74-09-his-silence.jpg) | 1 |  |
 
 ## Left alone
 
 - `70-the-call`: its camera is a dolly-zoom (chosen; the engine skips depth there)
+- `74-01-no-one-else-is-here`: nobody found: left as it was, since a missed person would stretch on a depth map alone
