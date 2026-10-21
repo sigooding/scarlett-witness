@@ -36,6 +36,10 @@ in the same file. None is being generated for now. **`docs/image-brief-2026-10-2
 into one ordered brief to hand to an image generator. It puts every retake in `public/film/img/retakes_2026_10_20/` and the
 plaza model in its glass case. Swap the pictures in when they come back; scene 80's come up by themselves.
 
+**Scene 84 (21 October):** Jack's "Three feet away." is now "Right behind the curtain.", and his confession goes on "I trusted him.
+I'm so sorry." The takes wait for credits. Until then both lines carry `takePending` in `story.json` and are shown silent (the
+build lists them); notes 16 and 17 have what to record.
+
 Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
 siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
 

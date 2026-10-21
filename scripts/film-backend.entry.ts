@@ -395,6 +395,14 @@ check(!s80.includes("He doesn't.") && at80("I have never killed anyone") >= 0 &&
 check(allBeats.some(({ scene, b }) => scene === "nw_s80" && (b.text ?? "").startsWith("Jack hits him.") && b.sfxUrl === "/film/sfx/punches-chair.mp3"), "the blows and the chair going over are heard");
 // scene 83 (the director, 20 October 2026: "vera missing a coat"): "It's just a face." plays the archived take with her navy coat
 check(allBeats.some(({ scene, b }) => scene.startsWith("nw_s83") && b.background === "/film/img/s83_picks/111-just-a-face-v2.jpg") && !allBeats.some(({ b }) => b.background === "/film/img/s83/111-just-a-face.jpg"), "scene 83: Vera keeps her coat on at \"It's just a face.\" (the archived take v2)");
+// scene 84 (the director, 21 October 2026): Jack says "Right behind the curtain." (not "Three feet away."), and his confession goes on
+// "I trusted him. I'm so sorry."; until their takes are recorded (`takePending` in story.json) both are shown silent, never read by the
+// browser's voice
+const s84 = allBeats.filter(({ scene }) => /^nw_s84(_|$)/.test(scene)).map(({ b }) => b);
+const at84 = (t: string) => s84.findIndex((b) => (b.text ?? "").startsWith(t));
+const jackSays = (i: number) => i >= 0 && s84[i].characterId === "nw_jack" && (s84[i].audioUrl ? existsSync(join(ROOT, "public", s84[i].audioUrl!)) : s84[i].silent === true);
+check(!s84.some((b) => b.text === "Three feet away.") && jackSays(at84("Right behind the curtain.")), "scene 84: Jack says \"Right behind the curtain.\" (silent until its take is recorded)");
+check(at84("I trusted him. I'm so sorry.") === at84("I told him. Where she'd be, and when.") + 1 && jackSays(at84("I trusted him.")) && at84("I told you about the detective.") > at84("I trusted him."), "scene 84: the confession ends \"That's mine. I trusted him. I'm so sorry.\" before Vera answers");
 // picture slots (studio-edits "pictures" with `pending`): each waits on its beat for its file, with a brief, and a missing file is never put up
 const slots = (edits.pictures ?? []).filter((p: { pending?: boolean }) => p.pending);
 eq(slots.filter((p: { scene: string }) => p.scene === "nw_s80").length, 4, "scene 80 has four picture slots for the blows and after (jack-hits-him, the-chair-goes-over, not-to-jack, the-blood-on-his-hand)");

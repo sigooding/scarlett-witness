@@ -30,6 +30,8 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
 | 14 | Kurose's office, "It's just a face.": Vera has no coat, and holds a notebook, not the photocopies | 83 (111, 112) | 111 done (archived take); 112 retake brief |
 | 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Waiting for credits |
+| 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Words changed; take waiting for credits |
+| 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Words added; take waiting for credits |
 
 ---
 
@@ -333,4 +335,29 @@ PlayFrame's screenplay still has "He doesn't." The same change belongs there (a 
 - **Free stopgap, if the director wants something there before then:** the three strikes at the start of `pipe-alarm.mp3`
   (0.45 to 2.85 s), cut to a new file and put on the same cue. They are the pipe the film already uses, but not as hard as the
   note asks.
+
+## 16 and 17. Jack and Vera at Kaneko's (84), 21 October
+- **The words, changed in `src/film/story.json`:**
+  - Jack's answer to "She was here. The day I came." is now **"Right behind the curtain."** It was "Three feet away.". The
+    scene titles of 57 and 84 and the narration of 57 ("On the other side of the curtain, three feet away.") are unchanged.
+  - The confession now reads **"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine. I
+    trusted him. I'm so sorry."** Its recorded take is kept for the first part, so the pause after "I told him." stays as
+    recorded. The new sentences are a line of their own after it, so they get their own take.
+- **The takes are waiting for credits.** Until then both lines are shown silent: Jack's words on screen, no voice. They are never
+  read by the browser's voice and never played over the old words. In the hands-off animatic they show as plain captions, without
+  Jack's name. Each line carries `takePending` (the direction and words to record) in place of `voice`, and the build lists the
+  lines still waiting.
+  - **Record:**
+    - Voice: Jack's saved voice, "Narrator Lead" (`MZhx7pKflsc0sAwciDEy`), with `eleven_v4`, as all his takes.
+    - Prompts: `[flatly] Right behind the curtain.` (as "Three feet away." was read) and `[sadly] I trusted him. I'm so sorry.`
+    - Avoid `[quietly]` on Jack: it reads as a whisper.
+    - Priced on 21 October: about 136 and 144 credits for four takes each, half that for two.
+  - **Install:**
+    - Keep every take, picked and unpicked, in `public/film/voice/s84/` under new names, for example
+      `118-jack-flatly-right-behind-the-curtain.mp3` and `119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3`. ElevenLabs does
+      not keep audio.
+    - Level the picks to Jack's other lines in the scene: about −21 dB average, −2 to −4 dB peak.
+    - Replace each line's `takePending` with `"voice":[{"src":"/voice/s84/<file>","dur":<seconds>}]` and rebuild.
+- **Outside this repository:** PlayFrame's screenplay and voice manifest still have "Three feet away." and the shorter
+  confession. Make the same change there, with the rest listed under 4 and 5.
 

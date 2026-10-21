@@ -118,6 +118,9 @@ const chunkText = (text, max = 140) => {
 };
 const beat = (who, fields) => { const b = { id: `nw_b${++beatNo}`, characterId: charOf(who), ...fields }; if (carry) { b.sfxUrl = carry; carry = null; } return b; };
 const scenes = [];
+// A line whose words changed after it was recorded carries `takePending` (the direction and words to record) instead of `voice`: it is
+// shown silent, never read by the browser's voice, until its take is installed and `voice` replaces `takePending`.
+const takesWaiting = [];
 const first = film.scenes[0];
 
 // the prologue: Kaneko, over the Hive at night
@@ -254,10 +257,11 @@ film.scenes.forEach((sc, si) => {
           ? chunkText(seg.text).map((text, k) => ({ text, pic: k ? null : seg.pic }))
           : [{ text: "", pic: seg.pic, captionOnly: true }]);
       }
+      if (st.t === "line" && st.takePending && !st.voice?.length) takesWaiting.push(`${sc.n} ${st.who}: ${st.takePending}`);
       parts.forEach((p, pi) => {
         if (p.captionOnly) { beats.push(captionBeat(p.pic)); return; }
         const f = { text: p.text };
-        if (p.audioUrl) f.audioUrl = p.audioUrl; else if (st.t === "text") f.silent = true;
+        if (p.audioUrl) f.audioUrl = p.audioUrl; else if (st.t === "text" || st.takePending) f.silent = true;
         if (st.t === "line" && st.note && pi === 0) f.expression = st.note;
         const clip = st.t === "line" && p.audioUrl && CLIPS[p.audioUrl.replace(/^\/film/, "")];
         if (clip) {
@@ -276,6 +280,7 @@ film.scenes.forEach((sc, si) => {
   for (const pic of pend.splice(0)) if (!pic.restore && !pic.bg.startsWith("gradient:")) beats.push(captionBeat(pic));
   close();
 });
+if (takesWaiting.length) console.log(`${takesWaiting.length} line(s) waiting for their takes, shown silent: ${takesWaiting.join(" | ")}`);
 // link everything in a line, finishing on the credits ending
 const cast = [...characters.values()].filter(c => c.id !== "nw_narrator").map(c => c.name);
 const stills = film.scenes.flatMap(sc => sc.steps.filter(st => st.t === "bg").map(st => st.src));
