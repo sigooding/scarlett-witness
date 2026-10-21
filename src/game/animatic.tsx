@@ -63,26 +63,45 @@ const PLAIN_BEAT_KEYS = new Set(["id", "characterId", "text", "silent"]);
 const silentLine = (b: DialogueBeat) => !b.audioUrl && !!b.silent && !!b.text && b.text !== "·";
 
 /** Short action lines that follow each other on the same picture are shown as one description (up to JOIN_CHARS):
- *  a line joins the one before it only when it carries nothing of its own (no picture, voice, effect or condition). */
-export function joinActionLines(beats: DialogueBeat[]): DialogueBeat[] {
+ *  a line joins the one before it only when it carries nothing of its own (no picture, voice, effect or condition).
+ *  Every beat keeps the number it has in the authored scene (`animaticBeat`, counted from `firstNo`): a joined
+ *  caption is stamped with the range it covers ("12–13"), so the mark in the corner names the same beats the
+ *  Studio lists. Until 21 October 2026 the mark counted the joined lines instead, so its numbers drifted from
+ *  the scene's own beat list wherever lines had joined (scene 1: 43 authored beats, 37 captions). */
+export function joinActionLines(beats: DialogueBeat[], firstNo = 1): DialogueBeat[] {
   const out: DialogueBeat[] = [];
-  for (const b of beats) {
+  const spans: [number, number][] = [];
+  beats.forEach((b, i) => {
+    const no = firstNo + i;
     const prev = out[out.length - 1];
-    const plain = Object.keys(b).every((k) => PLAIN_BEAT_KEYS.has(k));
+    const plain = Object.keys(b).every((k) => PLAIN_BEAT_KEYS.has(k) || k === "animaticBeat");
     if (prev && silentLine(prev) && silentLine(b) && plain && prev.characterId === b.characterId && `${prev.text} ${b.text}`.length <= JOIN_CHARS) {
-      out[out.length - 1] = { ...prev, text: `${prev.text} ${b.text}` };
-    } else out.push(b);
-  }
+      spans[spans.length - 1][1] = no;
+      const [from, to] = spans[spans.length - 1];
+      out[out.length - 1] = { ...prev, text: `${prev.text} ${b.text}`, animaticBeat: from === to ? `${from}` : `${from}–${to}` };
+    } else {
+      out.push({ ...b, animaticBeat: `${no}` });
+      spans.push([no, no]);
+    }
+  });
   return out;
 }
 
 /** Every ordinary scene shows its words at once, with its short action lines joined; the title and the credits keep
- *  their own design and timing. */
+ *  their own design and timing. Beat numbers run from the start of the screenplay scene across the nodes it was
+ *  cut into (the same count `animaticMarkFor` used), but over the authored beats, before any joining. */
 export function animaticStory<T extends { scenes: SceneNode[] }>(story: T): T {
+  const next = new Map<string, number>();
   return {
     ...story,
-    scenes: story.scenes.map((sc) =>
-      sc.nodeType === "credits" ? sc : { ...sc, noTypewriter: true, dialogueBeats: sc.dialogueBeats ? joinActionLines(sc.dialogueBeats) : sc.dialogueBeats }),
+    scenes: story.scenes.map((sc) => {
+      if (sc.nodeType === "credits") return sc;
+      const mark = sc.animaticMark;
+      const start = mark ? (next.get(mark) ?? 0) + 1 : 1;
+      const beats = sc.dialogueBeats ? joinActionLines(sc.dialogueBeats, start) : sc.dialogueBeats;
+      if (mark && sc.dialogueBeats) next.set(mark, (next.get(mark) ?? 0) + sc.dialogueBeats.length);
+      return { ...sc, noTypewriter: true, dialogueBeats: beats };
+    }),
   };
 }
 
@@ -234,14 +253,19 @@ export function AnimaticCaptions({ caption }: { caption: Caption | null }) {
 
 export interface AnimaticMarkInfo {
   scene: string;
-  beat: number;
+  /** The authored beat number ("12"), the range a joined caption covers ("12–13"), or "–" while the scene
+   *  heading is up (the heading is not a beat; it used to show as BEAT 1, the first line's number). */
+  beat: number | string;
   picture: string;
 }
 
 /** Where the film is: the node's screenplay scene (`animaticMark`, set by the film builder), the beat counted from the start of
  *  that scene across the nodes it was cut into (continuations, a song's timed shots), and the file name of the picture on
- *  screen. Null for nodes with no scene (the titles, the credits). */
-export function animaticMarkFor(scenes: SceneNode[], scene: SceneNode | null | undefined, beatIdx: number, picture: string | undefined): AnimaticMarkInfo | null {
+ *  screen. Null for nodes with no scene (the titles, the credits). `label` is the current beat's authored number
+ *  (`animaticBeat`, stamped by `animaticStory` before any lines were joined); when it is given it wins over the
+ *  counted `beatIdx`, which numbers the joined captions and so drifts from the scene's own beat list. A negative
+ *  `beatIdx` (the heading is on screen) shows "–", not the first beat's number. */
+export function animaticMarkFor(scenes: SceneNode[], scene: SceneNode | null | undefined, beatIdx: number, picture: string | undefined, label?: string): AnimaticMarkInfo | null {
   const mark = scene?.animaticMark;
   if (!scene || !mark) return null;
   let before = 0;
@@ -250,7 +274,7 @@ export function animaticMarkFor(scenes: SceneNode[], scene: SceneNode | null | u
     if (s.animaticMark === mark) before += s.dialogueBeats?.length ?? 0;
   }
   const file = (picture ?? "").replace(/^video:/, "").split("/").pop() ?? "";
-  return { scene: mark, beat: before + Math.max(0, beatIdx) + 1, picture: file.startsWith("gradient:") ? "" : file };
+  return { scene: mark, beat: label ?? (beatIdx < 0 ? "–" : before + Math.max(0, beatIdx) + 1), picture: file.startsWith("gradient:") ? "" : file };
 }
 
 /** The mark, small in the top-right corner, out of the way of the captions and the scene heading. */

@@ -19,6 +19,8 @@ From the animatic export of scenes 1–2 (beat numbers are the export's joined m
 - **Scene 2, dialogue:** after "He knows her name." the journalist says "Are you okay? Where's Sakai?" (new line, `takePending`, shown silent; "Miss Voss?" stays before it), and his later "Where is he?" is out — picture, words and take. Note: Mara's scene 25 recall still quotes the old words ("the man said, 'Where is he?'"); it wants rewording when its take is next touched.
 - **Opening titles:** the montage is twelve stills, not six (the three `montage/` plates m1–m3, the backstreet, the elevated line and the empty lane added between the old six). It still loops inside the 110 s titles.
 
+**Why the marks did not match, fixed the same day:** the animatic joins short action lines into one caption before it plays, and the corner mark counted those joined captions, while the Studio (and the builder) number the authored beats — so the two lists drift apart wherever lines join (scene 1: 43 authored beats, 37 captions; the ambulance line is beat 36 in the scene but showed as BEAT 30). The mark now shows the authored number, and a range (**BEAT 12–13**) where one caption covers two beats; the scene heading no longer borrows BEAT 1 (it reads **BEAT –**). Numbers on the next export will therefore differ from the last one's wherever lines join — that is the fix, not a new drift. `npm run test:film-backend` pins it.
+
 ## The director's notes of 20 October 2026
 
 `docs/director-notes-2026-10-20.md` is the list. Done in the film:

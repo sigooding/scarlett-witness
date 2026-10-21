@@ -4454,8 +4454,9 @@ function CasePlayer({
     ? animaticMarkFor(
         story.scenes,
         scene,
-        inBeats ? beatIdx : 0,
-        (inBeats ? visibleBeats.slice(0, beatIdx + 1) : []).reverse().find((b) => b.background && !b.background.startsWith("video:"))?.background ?? scene.background
+        inBeats ? beatIdx : -1,
+        (inBeats ? visibleBeats.slice(0, beatIdx + 1) : []).reverse().find((b) => b.background && !b.background.startsWith("video:"))?.background ?? scene.background,
+        currentBeat?.animaticBeat
       )
     : null;
   // In a browser the animatic ends on a black card once it leaves the chosen scenes (or reaches the ending), with the

@@ -23,6 +23,7 @@ import { visitStoryMediaFields } from "../src/data/storyMedia";
 import { collectStoryAssetIds, resolveMediaValue } from "../src/data/mediaLibrary";
 import { parseAmbient, joinAmbient } from "../src/studio/ambientParts";
 import { countExportFiles, LARGE_EXPORT_FILES } from "../src/studio/exportBundle";
+import { animaticMarkFor, animaticStory } from "../src/game/animatic";
 import { scanBuiltinImages, labelFor } from "../tools/builtin-images.mjs";
 import { scanBuiltinAudio, sectionFor } from "../tools/builtin-audio.mjs";
 
@@ -431,4 +432,18 @@ eq(slots.filter((p: { scene: string }) => p.scene === "nw_s80").length, 4, "scen
 check(slots.every((p: { brief?: string }) => (p.brief ?? "").length > 40), "every picture slot carries the brief it is to be made from");
 check(slots.every((p: { file: string }) => existsSync(join(ROOT, "public/film", p.file.slice(1))) || !allBeats.some(({ b }) => b.background === `/film${p.file}`)), "a slot whose file is not on disk puts up no picture");
 check(existsSync(join(ROOT, "public/film/audio/what-made-you-you.mp3")), "the song is on disk");
+// animatic marks name the authored beats (21 October 2026): the animatic joins short action lines into one caption, and the mark
+// used to count those captions, so its numbers drifted from the Studio's beat list for the same scene (the ambulance line showed as
+// beat 30 in the export and is beat 36 of scene 1). Now each caption is stamped before joining with the authored number(s) it covers.
+const anim = animaticStory(FILM);
+const animS1 = anim.scenes.find((s) => s.id === "nw_s1")!;
+const rawS1 = FILM.scenes.find((s) => s.id === "nw_s1")!;
+check(animS1.dialogueBeats!.length < rawS1.dialogueBeats!.length, "scene 1's action lines still join into fewer captions in the animatic");
+check(animS1.dialogueBeats!.every((b) => !!b.animaticBeat), "every animatic caption of scene 1 is stamped with its authored beat number");
+eq(animS1.dialogueBeats!.find((b) => b.text === "Hold on, I'll call an ambulance.")?.animaticBeat, "36", "the ambulance caption is stamped 36, its number in the scene (it showed as beat 30 when the mark counted joined captions)");
+eq(Number(animS1.dialogueBeats!.at(-1)!.animaticBeat!.split("–").at(-1)), rawS1.dialogueBeats!.length, "scene 1's last caption ends on the scene's last authored beat");
+check(animS1.dialogueBeats!.some((b) => /^\d+–\d+$/.test(b.animaticBeat ?? "")), "a caption that joins two lines is stamped with the range it covers");
+eq(animaticMarkFor(anim.scenes, animS1, 0, undefined, animS1.dialogueBeats![0].animaticBeat)?.beat, "1", "the mark shows the stamped number, not the joined count");
+eq(animaticMarkFor(anim.scenes, animS1, -1, undefined, undefined)?.beat, "–", "the scene heading shows no beat number (it used to borrow beat 1's)");
+check(!FILM.scenes.some((s) => (s.dialogueBeats ?? []).some((b) => b.animaticBeat)), "the stamp is runtime-only: the shipped film's beats carry no animaticBeat field");
 console.log(`\nfilm backend: ${checks} checks passed`);
