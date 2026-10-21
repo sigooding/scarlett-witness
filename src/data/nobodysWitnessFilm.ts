@@ -2205,7 +2205,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicUrl": "/film/audio/glimmering-haze.mp3",
    "musicLevel": 0.3,
    "musicFadeSeconds": 2,
-   "musicLoop": true
+   "musicLoop": true,
+   "musicSync": {
+    "bpm": 89.27,
+    "firstBeat": 0.645
+   }
   },
   {
    "id": "nw_s2",
@@ -2511,7 +2515,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicUrl": "/film/audio/glimmering-haze.mp3",
    "musicLevel": 0.3,
    "musicLoop": true,
-   "musicFadeSeconds": 2
+   "musicFadeSeconds": 2,
+   "musicSync": {
+    "bpm": 89.27,
+    "firstBeat": 0.645
+   }
   },
   {
    "id": "nw_s3",
@@ -26801,5 +26809,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "db93aca7f913"
+ "builtinRevision": "66dde0a2bbf8"
 } as unknown as Story;

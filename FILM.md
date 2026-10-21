@@ -177,6 +177,21 @@ build lists them); notes 16 and 17 have what to record.
 Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
 siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
 
+## Scenes 1 and 2: the cuts land on the music's beat (22 October 2026)
+
+The director asked for the pictures in scenes 1 and 2 to change with the beat of the song under them
+(`glimmering-haze.mp3`), but not on every beat: that would feel mechanical. So when the film plays itself (an animatic,
+or the player's Auto) **only a cut to a new picture waits for the next beat** of the song; lines and descriptions on the
+same picture keep their own timing, and clicking through is unchanged. The wait is never more than one beat (0.67 s).
+
+- **Where:** `studio-edits.json` → `musicSync` (`scenes`, `bpm`, `firstBeat`) puts a `musicSync` field on those scenes;
+  the player (`nextBeatIsCut` and `untilNextMusicBeat` in `src/game/animatic.tsx`) reads the music element's own position,
+  which the animatic exporter keeps on its clock, so an export lands the cuts on the beat too. The Studio's scene panel has
+  a "Music sync" field (tempo and first beat) for any scene.
+- **The song's beat:** 89.27 beats a minute, first beat at 0.645 s, measured from the file's onsets. The grid fits the first
+  45 s of the 60.4 s loop well; the last 15 s have no steady beat, so a cut there lands wherever the beat grid says, which
+  sounds no different from before. The grid restarts each time the song loops.
+
 ## The envelope at dawn (scene 78): the director's picks (20 October 2026)
 
 Scene 78's four shots were picked against their other versions (PlayFrame's 88, the archived first takes of 316, 89 and 90).

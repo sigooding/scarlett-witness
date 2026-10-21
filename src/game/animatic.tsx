@@ -115,6 +115,19 @@ export function readingSeconds(text: string, pace = 1, scenePace = 1): number {
   return Math.min(7, Math.max(1.5, 0.3 + chars / 20)) * scenePace * pace;
 }
 
+/** Seconds from `position` (in a track `duration` long, looping) to its next beat, for a scene's `musicSync`; 0 when a
+ *  beat is under 40 ms away. The grid starts at `firstBeat` and restarts with the track, so a loop that is not a whole
+ *  number of beats long does not drift. */
+export function untilNextMusicBeat(position: number, duration: number, sync: { bpm: number; firstBeat: number }): number {
+  const period = 60 / sync.bpm;
+  if (!(period > 0) || !Number.isFinite(position)) return 0;
+  const k = Math.max(0, Math.ceil((position - sync.firstBeat - 0.04) / period));
+  let wait = sync.firstBeat + k * period - position;
+  // past the track's last beat the next one is the first beat after the loop restarts
+  if (Number.isFinite(duration) && duration > 0 && position + wait > duration) wait = duration - position + sync.firstBeat;
+  return wait < 0.04 ? 0 : wait;
+}
+
 /** The pause after a recorded line before the next line comes up. */
 export const AFTER_VOICE_SECONDS = 0.45;
 /** How long a scene heading (or a scene's opening description) stays up before the scene's first line. */

@@ -410,6 +410,13 @@ if (existsSync(editsFile)) {
     Object.assign(beat, bgFields(P(e.file)));
   }
   if (waiting.length) console.log(`studio-edits: ${waiting.length} picture slot(s) waiting for their files: ${waiting.join(", ")}`);
+  // musicSync: [{ scenes, bpm, firstBeat }] — when the film plays itself, a cut to a new picture in these scenes (and their continuations)
+  // waits for the next beat of the scene's music (src/game/animatic.tsx untilNextMusicBeat). Lines on the same picture keep their timing.
+  for (const m of file.musicSync ?? []) {
+    const hit = scenes.filter(x => m.scenes.some(id => x.id === id || x.id.startsWith(`${id}_`)));
+    if (!hit.length) console.warn(`studio-edits: musicSync finds no scene in ${m.scenes.join(", ")}`);
+    for (const x of hit) x.musicSync = { bpm: m.bpm, firstBeat: m.firstBeat };
+  }
   if (file.startSceneId) startSceneId = file.startSceneId;
   // dialogueBox: the story-wide look of the reading panel (Studio → In-game theme: fonts, size, HUD colour scheme)
   if (file.dialogueBox) dialogueBox = file.dialogueBox;

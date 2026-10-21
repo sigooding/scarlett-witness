@@ -1849,6 +1849,11 @@ export interface SceneNode {
   /** Animatic only: the screenplay scene this node plays ("84", "97A"), shown in the corner with the beat number and the picture
    *  when the animatic's marks are on, so a problem can be reported by where it is. Set by the film builder. */
   animaticMark?: string;
+  /** When the film plays itself (an animatic, or the player's Auto), a cut to a new picture waits for the next beat of
+   *  this scene's music, so the pictures change on the song's beat. Only cuts: lines and descriptions on the same
+   *  picture keep their own timing (syncing every change felt mechanical). `bpm` is the track's tempo, `firstBeat` the
+   *  time of its first beat in the file, in seconds; a looping track restarts the grid each time round. */
+  musicSync?: { bpm: number; firstBeat: number };
   /** Marks this scene as the END OF A PART. On leaving it, the game shows the
    * route flowchart for the part just played before continuing. The string is
    * the part's display name (e.g. "Part 3 — Two Hundred and Eleven Thousand").

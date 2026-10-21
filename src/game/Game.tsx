@@ -161,7 +161,7 @@ import { adjustedConsequences, choiceRepeats, gambleFlag, getPerks, rollGamble, 
 import { canRewindDecision, emptyRewind, popRewind, pushRewind, rewindLabel, sealRewind, type RewindStack } from "./rewind";
 import { simFromRuntime, strandedNow, STRANDED_GRACE_MS } from "./stranded";
 import { deepLinkFromUrl, describeDeepLink, resolveDeepLink } from "./deepLink";
-import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, AnimaticMark, animaticMarkFor, captionFor, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
+import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, AnimaticMark, animaticMarkFor, captionFor, untilNextMusicBeat, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
 
 /* SEEDED RUNS — ?seed=1234 on the URL pins every gameplay draw (minigame
  * shuffles, ride spawns) to one deterministic stream, applied once at
@@ -4400,6 +4400,14 @@ function CasePlayer({
   const autoOn = hasAuthoredRoute ? autoContinue : autoAdvance;
   const toggleAuto = () => (hasAuthoredRoute ? setAutoContinue((v) => !v) : setAutoAdvance((v) => !v));
   const currentBeat = inBeats ? visibleBeats[beatIdx] : null;
+  // Whether the next line brings a different picture (a cut): a scene's `musicSync` lands only these on the music's beat.
+  const nextBeatIsCut = useMemo(() => {
+    if (!inBeats) return false;
+    const next = visibleBeats[beatIdx + 1]?.background;
+    if (!next || next.startsWith("video:")) return false;
+    const shown = visibleBeats.slice(0, beatIdx + 1).reverse().find((b) => b.background && !b.background.startsWith("video:"))?.background ?? scene?.background;
+    return next !== shown;
+  }, [inBeats, visibleBeats, beatIdx, scene?.background]);
   /* The insert shot to actually display on the current beat. A beat's own
    * replacement image PERSISTS by default: it stays up through later beats
    * (the characters keep talking over it) until another beat sets a new
@@ -4794,6 +4802,18 @@ function CasePlayer({
       // after the text lands, then wait for the voice to actually finish
       // before the next line starts (capped so a stuck clip can't stall us).
       const startedAt = Date.now();
+      // A scene with `musicSync` lands its cuts on the music: when the next line brings a new picture, the change waits
+      // for the next beat of the song (lines on the same picture keep their own timing).
+      const cutWait = () => {
+        const sync = scene?.musicSync, el = sceneAudioRef.current;
+        if (!sync || !nextBeatIsCut || !el || el.paused) return 0;
+        return untilNextMusicBeat(el.currentTime, el.duration, sync);
+      };
+      let onBeat = 0;
+      const advance = () => {
+        setBeatDone(false);
+        setBeatIdx((i) => i + 1);
+      };
       // An animatic holds a silent line for its reading time and a spoken one until a moment after its voice ends.
       const spoken = !!currentBeat?.audioUrl;
       const hold = ANIMATIC ? (spoken ? 0 : readingSeconds(currentBeatText, ANIMATIC.pace, scene?.animaticReadPace ?? 1) * 1000) : 1150;
@@ -4807,11 +4827,15 @@ function CasePlayer({
         const settled = voiceDone && (!ANIMATIC || !spoken || now - quietSince >= AFTER_VOICE_SECONDS * 1000);
         if ((settled && elapsed >= hold) || elapsed > 45000) {
           window.clearInterval(iv);
-          setBeatDone(false);
-          setBeatIdx((i) => i + 1);
+          const wait = elapsed > 45000 ? 0 : cutWait();
+          if (wait > 0) onBeat = window.setTimeout(advance, Math.round(wait * 1000));
+          else advance();
         }
       }, ANIMATIC ? 100 : 250); // an animatic checks more often, so its lines do not wait on the poll
-      return () => window.clearInterval(iv);
+      return () => {
+        window.clearInterval(iv);
+        window.clearTimeout(onBeat);
+      };
     }
     // Choices are up — hands off until the player picks.
   }, [
@@ -4827,7 +4851,7 @@ function CasePlayer({
     proseAcknowledged,
     proseDone,
     inBeats,
-    beatDone, currentBeat, currentBeatText, routingBeat, beatRouteValid,
+    beatDone, currentBeat, currentBeatText, routingBeat, beatRouteValid, nextBeatIsCut,
   ]);
 
   const speakLine = useCallback(

@@ -23,7 +23,7 @@ import { visitStoryMediaFields } from "../src/data/storyMedia";
 import { collectStoryAssetIds, resolveMediaValue } from "../src/data/mediaLibrary";
 import { parseAmbient, joinAmbient } from "../src/studio/ambientParts";
 import { countExportFiles, LARGE_EXPORT_FILES } from "../src/studio/exportBundle";
-import { animaticMarkFor, animaticStory } from "../src/game/animatic";
+import { animaticMarkFor, animaticStory, untilNextMusicBeat } from "../src/game/animatic";
 import { scanBuiltinImages, labelFor } from "../tools/builtin-images.mjs";
 import { scanBuiltinAudio, sectionFor } from "../tools/builtin-audio.mjs";
 
@@ -53,7 +53,7 @@ const REGISTRY: Record<string, Record<string, RegExp | null>> = {
     id: null, title: /title:/, background: /background/, prose: /prose/, dialogueBeats: /dialogueBeats/, hotspots: /hotspots/, choices: /choices/,
     noTypewriter: /noTypewriter/, autoNarrate: /autoNarrate/, transition: /transition/, transitionSpeed: /transitionSpeed/,
     ambientAudio: /AmbientLayers/, hideHud: /hideHud/, particles: /Particle Effects/, particleConfig: /aria-label=\{`Particle \$\{label/,
-    cinematic: /CinematicControls/, musicMode: /musicMode/, musicFadeSeconds: /musicFadeSeconds/, animaticReadPace: /Animatic reading pace/, animaticMark: /Animatic scene mark/,
+    cinematic: /CinematicControls/, musicMode: /musicMode/, musicFadeSeconds: /musicFadeSeconds/, animaticReadPace: /Animatic reading pace/, animaticMark: /Animatic scene mark/, musicSync: /Music sync/,
     musicUrl: /musicUrl/, musicLevel: /musicLevel/, musicLoop: /Loop this track/, nodeType: /nodeType/, credits: /credits/,
     autoAdvanceTargetSceneId: /autoAdvanceTargetSceneId/, autoAdvanceDelaySeconds: /autoAdvanceDelaySeconds/, autoAdvanceHideTimer: /autoAdvanceHideTimer/,
     isEnding: /isEnding/, endingData: /endingData/,
@@ -426,6 +426,13 @@ const unmarked = FILM.scenes.filter((s) => /^nw_(s\d|song_|cut_|prologue)/.test(
 eq(unmarked, [], "every scene node carries its screenplay scene for the animatic's mark");
 check(FILM.scenes.find((s) => s.id === "nw_song_raid_01")?.animaticMark === "85" && FILM.scenes.find((s) => s.id === "nw_song_service_01")?.animaticMark === "97A", "a song's timed shots carry the scene they come from (the raid opens in 85, Mara's service reads 97A)");
 check(/marks: marks \? "1" : "0"/.test(read("tools/export-animatic.mjs")) && /no-marks/.test(read("tools/vite-animatic-export.mjs")) && /setMarks/.test(read("src/AnimaticExport.tsx")), "the exporter, its dev-server job and the export dialog pass the marks switch");
+// music sync (the director, 21 October 2026): in scenes 1 and 2 the cuts land on the beat of the song, not every line
+const synced = FILM.scenes.filter((s) => s.musicSync).map((s) => s.id);
+eq(synced, ["nw_s1", "nw_s2"], "scenes 1 and 2 (and only they) land their cuts on the music's beat");
+const gh = { bpm: 89.27, firstBeat: 0.645 }, per = 60 / gh.bpm;
+check(Math.abs(untilNextMusicBeat(0, 60.432, gh) - 0.645) < 1e-9 && untilNextMusicBeat(0.645, 60.432, gh) === 0 && Math.abs(untilNextMusicBeat(0.645 + per / 2, 60.432, gh) - per / 2) < 1e-9, "the wait is to the next beat, and none on a beat");
+check(Math.abs(untilNextMusicBeat(60.3, 60.432, gh) - (60.432 - 60.3 + 0.645)) < 1e-9, "past the last beat the wait runs to the first beat after the loop restarts");
+check(/nextBeatIsCut/.test(read("src/game/Game.tsx")) && /untilNextMusicBeat\(el\.currentTime/.test(read("src/game/Game.tsx")), "the player waits for the beat only before a cut, from the music's own position");
 // picture slots (studio-edits "pictures" with `pending`): each waits on its beat for its file, with a brief, and a missing file is never put up
 const slots = (edits.pictures ?? []).filter((p: { pending?: boolean }) => p.pending);
 eq(slots.filter((p: { scene: string }) => p.scene === "nw_s80").length, 4, "scene 80 has four picture slots for the blows and after (jack-hits-him, the-chair-goes-over, not-to-jack, the-blood-on-his-hand)");
