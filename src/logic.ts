@@ -637,6 +637,21 @@ export function clearSave(storyId: string, slot: number, episodeId?: string): vo
   }
 }
 
+/** A video-only cutscene: a clip with no words, no lines and no choices that moves on by itself (the film's Scarlet Reel logo).
+ *  It shows nothing but the clip: no panel or Continue button, no checkpoint, and the clip plays once and holds its last frame
+ *  instead of looping, so it never restarts before the scene moves on. */
+export function isVideoOnlyScene(scene: SceneNode | null | undefined): boolean {
+  return (
+    !!scene &&
+    scene.nodeType === "cutscene" &&
+    !!scene.autoAdvanceTargetSceneId &&
+    (scene.background ?? "").startsWith("video:") &&
+    !(scene.prose ?? "").trim() &&
+    !(scene.dialogueBeats?.length) &&
+    !(scene.choices?.length)
+  );
+}
+
 /** The most recent save across every episode of a story — powers the
  * newsstand's "▶ Resume" button, which must find your latest chapter. */
 export function latestSave(story: Story): { save: GameSave; slot: number; episodeId?: string } | null {
@@ -646,7 +661,8 @@ export function latestSave(story: Story): { save: GameSave; slot: number; episod
   let best: { save: GameSave; slot: number; episodeId?: string } | null = null;
   // A checkpoint written on a credits roll by an older build is not a place to resume to (the opening titles would send a
   // reload past the first scenes); a manual slot is the player's own choice and stays.
-  const credits = new Set((story.scenes ?? []).filter((s) => s.nodeType === "credits").map((s) => s.id));
+  // The same goes for a video-only cutscene (the film's Scarlet Reel logo): a reload should not replay it.
+  const credits = new Set((story.scenes ?? []).filter((s) => s.nodeType === "credits" || isVideoOnlyScene(s)).map((s) => s.id));
   episodeIds.forEach((episodeId) => {
     // Include the auto checkpoint (slot 0) alongside the manual slots.
     for (let slot = AUTO_SLOT; slot <= SAVE_SLOTS; slot++) {

@@ -422,6 +422,21 @@ if (existsSync(editsFile)) {
   if (file.dialogueBox) dialogueBox = file.dialogueBox;
 }
 
+// The Scarlet Reel logo (22 October 2026, the director: "the logo film animation before the whole film"): the uploaded 10 s clip plays
+// first, full screen with no HUD, then hands over to wherever the film starts. Its picture is a silent copy (with a .webm beside it for
+// browsers without H.264) and its sound plays as the node's music, so the animatic exporter, which rebuilds sound from <audio> only,
+// keeps it. The upload itself is public/film/video/scarlet-reel-logo-original.mp4.
+if (existsSync(resolve(root, "public/film/video/scarlet-reel-logo.mp4"))) {
+  scenes.unshift({
+    id: "nw_logo", title: "Scarlet Reel logo", nodeType: "cutscene", hideHud: true, background: "video:/film/video/scarlet-reel-logo.mp4", prose: "",
+    musicMode: "track", musicUrl: P("/audio/scarlet-reel-logo.mp3"), musicLevel: 1, musicLoop: false, musicFadeSeconds: 0,
+    ambientAudio: "", transition: "cut", transitionSpeed: 0.2, noTypewriter: true, autoNarrate: false,
+    autoAdvanceTargetSceneId: startSceneId, autoAdvanceDelaySeconds: 9.9, autoAdvanceHideTimer: true,
+    dialogueBeats: [], hotspots: [], choices: [],
+  });
+  startSceneId = "nw_logo";
+}
+
 // Soundtrack segments (src/film/studio-edits.json "soundtracks"): a run of scenes that plays hands-off for the length of a song, as a cutscene (the
 // letterbox bars are on). The song starts on the run's first node and keeps playing across the nodes after it; the node after the run fades it out. Every
 // shot of the run is a node of its own that moves on by itself: a silent shot shows a short caption saying what it shows (`captions`, by picture) and

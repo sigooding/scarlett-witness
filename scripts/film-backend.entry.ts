@@ -255,7 +255,16 @@ const byId = new Map(FILM.scenes.map((s) => [s.id, s]));
 const nextOf = (id: string) => { const sc = byId.get(id)!; const beats = sc.dialogueBeats ?? []; return beats[beats.length - 1]?.afterBeatTargetSceneId || sc.autoAdvanceTargetSceneId || sc.choices?.[0]?.targetSceneId; };
 const order: string[] = [];
 for (let id: string | undefined = FILM.startSceneId; id && byId.has(id) && !order.includes(id); id = nextOf(id)) order.push(id);
-eq(order.slice(0, 5), ["nw_s1", "nw_s2", "nw_title", "nw_prologue", "nw_s3"], "the film starts on scene 1, then scene 2, the opening titles, the prologue and scene 3");
+eq(order.slice(0, 6), ["nw_logo", "nw_s1", "nw_s2", "nw_title", "nw_prologue", "nw_s3"], "the film starts on the Scarlet Reel logo, then scene 1, scene 2, the opening titles, the prologue and scene 3");
+// the Scarlet Reel logo (the director, 22 October 2026): the uploaded clip, silent, with its sound as the node's music so an
+// animatic export keeps it, a .webm beside it for browsers without H.264, and it moves on by itself
+{
+  const logo = byId.get("nw_logo")!;
+  check(logo.nodeType === "cutscene" && logo.background === "video:/film/video/scarlet-reel-logo.mp4" && !(logo.prose ?? "").trim() && !(logo.dialogueBeats ?? []).length, "the logo is a video-only cutscene");
+  check(logo.musicUrl === "/film/audio/scarlet-reel-logo.mp3" && logo.musicLoop === false && logo.autoAdvanceTargetSceneId === "nw_s1" && (logo.autoAdvanceDelaySeconds ?? 0) >= 9.5 && (logo.autoAdvanceDelaySeconds ?? 0) <= 10.5, "its sound plays once as its music and it hands over to scene 1 after its 10 s");
+  check(["video/scarlet-reel-logo.mp4", "video/scarlet-reel-logo.webm", "audio/scarlet-reel-logo.mp3", "video/scarlet-reel-logo-original.mp4"].every((f) => existsSync(join(ROOT, "public/film", f))), "the clip, its .webm, its sound and the original upload are on disk");
+  check(/isVideoOnlyScene\(scene\) \|\|/.test(read("src/game/Game.tsx")) && /loop=\{!isVideoOnlyScene\(scene\)\}/.test(read("src/game/Game.tsx")) && /video\/webm/.test(read("src/game/Game.tsx")), "a video-only scene shows only its clip, plays it once, and falls back to the .webm");
+}
 check(order.length > 100, `and plays on through the whole film (${order.length} nodes in play order)`);
 check(typeof FILM.builtinRevision === "string" && FILM.builtinRevision.length >= 8, "each build of the film is stamped, so a saved Studio copy from an older build can be told from it");
 const appSrc = read("src/App.tsx");
@@ -271,6 +280,11 @@ check(/\.\.\.\(whole \? \[\] : \["--from"/.test(exportServer), "a whole-film exp
   writeSave(0, { ...(base as object), sceneId: "nw_s2", savedAt: 1 } as never);
   writeSave(0, { ...(base as object), sceneId: "nw_title", savedAt: 2 } as never); // an older build's checkpoint on the opening titles
   eq(latestSave(FILM), null, "an automatic checkpoint on the opening titles is not offered for resume");
+  mem.clear();
+  writeSave(0, { ...(base as object), sceneId: "nw_logo", savedAt: 4 } as never); // a checkpoint on the Scarlet Reel logo
+  eq(latestSave(FILM), null, "an automatic checkpoint on the logo is not offered for resume either (a reload would replay it)");
+  mem.clear();
+  writeSave(0, { ...(base as object), sceneId: "nw_s2", savedAt: 1 } as never);
   writeSave(1, { ...(base as object), sceneId: "nw_title", savedAt: 3 } as never);
   eq(latestSave(FILM)?.slot, 1, "a manual save on a credits roll is the player's own choice and stays");
   mem.clear();

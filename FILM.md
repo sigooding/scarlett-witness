@@ -177,6 +177,23 @@ build lists them); notes 16 and 17 have what to record.
 Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
 siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
 
+## The Scarlet Reel logo opens the film (22 October 2026)
+
+The director's 10 s "Created with SCARLET ReeL" clip now plays before the whole film, then hands over to scene 1.
+- **The node:** `nw_logo`, made by `tools/build-film-story.mjs` before wherever the film starts (it becomes `startSceneId`), a
+  cutscene with the clip as its background and nothing else; it moves on after 9.9 s.
+- **The files:** the upload is kept as `public/film/video/scarlet-reel-logo-original.mp4` (moved from the repo's top level,
+  unchanged). The node plays a silent copy (`scarlet-reel-logo.mp4`, stream-copied) with a VP9 `.webm` beside it for
+  browsers without H.264 (the exporter's Chromium among them), and the clip's sound as its music
+  (`public/film/audio/scarlet-reel-logo.mp3`), because the animatic exporter rebuilds sound only from `<audio>` elements.
+  Picture and sound start together (measured about 40 ms apart), and an export carries both.
+- **The engine (`isVideoOnlyScene` in `src/logic.ts`):** a cutscene whose background is a video, with no words, lines or
+  choices, that moves on by itself shows only its clip: no panel or Continue button, no checkpoint (so a reload does not
+  replay it), and the clip plays once and holds its last frame instead of looping. A scene background video now also falls
+  back to a `.webm` beside its `.mp4`, as beat videos already did.
+- **What changed for tests and exports:** the film's play order starts `nw_logo`, `nw_s1`; a whole-film export starts on
+  the logo; `--from nw_s1` skips it.
+
 ## Scenes 1 and 2: the cuts land on the music's beat (22 October 2026)
 
 The director asked for the pictures in scenes 1 and 2 to change with the beat of the song under them
