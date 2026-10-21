@@ -9,6 +9,101 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Shots 445, 90-05 and 139; and two new depth maps (21 October 2026)
+
+* **445 "Exactly where it was" (scene 25)** — the page Jack sets down now carries **the same drawing as
+  `s84/520-excuse-me.jpg`**: the counter seen from the floor, the crate of bottles, the two pairs of shoes,
+  the stool going over, the outflung hand, 1:07 in the corner, and EXCUSE ME in block capitals. 1536×1024.
+  Previous take: `archive/s25/445-exactly-where-it-was--v1.jpg`.
+* **90-05 "Through the wardrobe" (scene 90)** — Vera had lost her face between takes. Remade against the
+  film's own approved Vera (`s10/164-depends-whos-calling.jpg`, `s4/386-at-the-window.jpg` and the escape's
+  style sheet): the same woman, shoulder-length dark-blonde hair, dark olive-charcoal coat over the cream
+  knit, edging sideways between the hanging coats. 2848×1600. Previous take:
+  `archive/thehiveescape/s90/90-05-through-the-wardrobe--v1.jpg`.
+* **139 "Only tea" (scene 94)** — the shot is now **over Ishida's shoulder, looking away from the police
+  station** (which is behind the camera): the sedan at the far kerb, its near rear door open, **Kurose on the
+  far side of the back seat**, and **a driver at the wheel**, right-hand drive. 2752×1536. Previous take:
+  `archive/s94/139-only-tea--v2.jpg`.
+
+**Two new depth maps.** `73-05-toward-the-tracks` (1920×1080) and `75-02-the-empty-lounge` (2730×1536) now
+play with the depth-map camera, on a truck move at 0.35 over 16 s. They were drawn at random (seed 20261021)
+from the 99 pictures the film plays that are at least 1920 wide, have nobody in shot and had no map yet; the
+third in the draw, `212-stay-whatever-you-hear`, was left out because its caption is a spoken line and there
+is probably somebody in the frame.
+
+The maps were made with **Depth Anything v1 ViT-S (ONNX)** — no torch, no HuggingFace, which this machine
+cannot reach — by a new **`tools/make-depth-map-onnx.py`**: it writes the map at the picture's exact size,
+grayscale, white = near, smoothed as the other depth-only maps are, registers it in
+`docs/film-depth-layers.json` and, with `--wire`, adds the map and the move to the picture's `pictureLook`
+entry in `src/film/studio-edits.json`. It only offers pictures with nobody in them: a map on its own
+stretches a person as the camera moves, and those want cut-outs and a plate first.
+`node tools/build-film-story.mjs` was re-run, and `npm run test:film-depth` (and the 171 film-backend checks)
+pass. **The two maps have not been eyeballed against their stills** — that is the next thing to do, and the
+note in the registry says so.
+
+## Picture pass: 243, 336, 346 and 352 (21 October 2026)
+
+* **243 "The box" (scene 11)** — rebuilt, this time as an **edit of the film's own `s10/413-open-and-shut.jpg`**, so the
+  room, the desk and the camera are the shot before it in the same office. Jack has left the chair and stands **behind the
+  end of the desk**, bent, lifting the cardboard box out of the grey steel cupboard under the window: dust on the lid,
+  files packed tight behind the empty space. The television shows static. 2816×1584. Previous takes:
+  `archive/s11/243-the-box--v1.jpg`, `--v2.jpg`, and the frame it replaces, `--v3.jpg`.
+* **336 "The lighter" (scene 14A)** — the hatchback now sits **parked along the kerb, parallel with the road and angled a
+  few degrees nose-in**, so it reads as a car standing correctly to the street, the wet road running past it and away down
+  the street. Jack at the wound-down window with the old steel lighter open and unlit; Vera, both hands on the wheel.
+  1920×1072. Previous take: `archive/s14a/336-the-lighter--v2.jpg`.
+* **346 "The bulb hums" (scene 20)** — remade against the storeroom's own pictures (`344`, `345`, `371`): Mara on the
+  futon with the sketchbook, Jack low on a flour sack, one bare bulb, nothing else. **Its depth rig is gone** —
+  `public/film/depth/s20/346-the-bulb-hums/` deleted and the entry removed from `docs/film-depth-layers.json` (both
+  `pictures` and `peopleInShot`); the rig was cut from older art and no longer matched the frame (see the review of
+  13 October). The shot now plays as a still, like any picture without a map. 1672×941. Previous take:
+  `archive/s20/346-the-bulb-hums--v1.jpg`.
+* **352 "The address" (scene 23)** — the napkin was scribble. Remade: it lies flat in the lantern light with a short line
+  of **neat, evenly spaced longhand**, a carefully written address, and Ishida slides it across the table with two
+  fingers, nothing in his face. 1360×768. Previous take: `archive/s23/352-the-address--v1.jpg`.
+
+**Sizes.** Nothing was resized — each file is installed at the size it came out at: 243 2816×1584, 336 1920×1072,
+164 and 346 1672×941, 352 1360×768. Three are now below the 1920×1080 the rest of the film uses; regenerate any that
+look soft on screen.
+
+No builder run was needed — every path is unchanged and `src/data/nobodysWitnessFilm.ts` already points at them.
+All five are local replacements in this checkout; sync them into PlayFrame before the next `build-film-story.mjs`.
+
+## Shot 164, "Depends who's calling": the office rebuilt (21 October 2026)
+
+Scene 10's **164** ("A knock on the frosted glass. Vera comes in, wet, the blue umbrella dripping.") was thrown out and
+made again. The director's notes on the way: the first pass put **the door in the wrong place**, and the second had
+**the desk at the wrong orientation to the shots around it**. The frame is now built against the scene's own pictures —
+`s10/415-four-days.jpg` for the desk's position and orientation, `s11/243-the-box.jpg` for the grey steel cupboard
+under the blinded window, `s10/417-at-the-door.jpg` for where the frosted-glass door sits — with Jack turned in his
+chair toward the door, his face readable.
+
+* `public/film/img/s10/164-depends-whos-calling.jpg` is the new frame, 1920×1080 (generated 1672×941, centre-cropped
+  to 16:9 and enlarged, never shrunk).
+* The frame it replaces is `public/film/img/archive/s10/164-depends-whos-calling--v2.jpg`; the older take was already
+  `archive/s10/164-depends-whos-calling--v1.jpg`. The retake as generated is
+  `public/film/img/retakes_2026_10_21/164-depends-whos-calling-r1.jpg`.
+* Story data and asset URLs are unchanged, so no builder run was needed. 164 has no depth map; its `pictureLook`
+  still puts a warm lamp glow at 42%/52% and the television's cool flicker at 78%/24% — move those two if the new
+  frame has the lamp or the set elsewhere.
+* Local replacement in this checkout — sync it into PlayFrame before the next `node tools/build-film-story.mjs`.
+
+## The news reader on Vera's television (shot 386, 21 October 2026)
+
+Scene 4, **386 "At the window"** ("The old television murmurs to itself.") is the beat the NEWS REPORTER's line
+plays over, so the set now matches the words: the old boxy CRT in the corner shows **a Japanese male news
+reader in his forties, dark suit and tie, behind a news desk, reading the evening news**, a small
+Japanese-language caption bar along the bottom of the screen. Nothing else in the frame changed — the
+difference against the previous picture is confined to the television (bottom right).
+
+* `public/film/img/s4/386-at-the-window.jpg` is the new frame, 1920×1080.
+* Previous take kept at `public/film/img/archive/s4/386-at-the-window-pre-reporter.jpg`;
+  the retake as generated is `public/film/img/retakes_2026_10_21/386-at-the-window-r1.jpg`.
+* Story data and asset URLs are unchanged (the generated `src/data/nobodysWitnessFilm.ts` already points at
+  this path, so no builder run was needed). 386 carries no depth map and no `pictureLook`.
+* Local replacement in this checkout — sync it into PlayFrame through its importer before the next
+  `node tools/build-film-story.mjs`, which recopies `public/img` from that source.
+
 ## Scenes 1–2 and the opening titles: the director's animatic notes (21 October 2026)
 
 From the animatic export of scenes 1–2 (beat numbers are the export's joined marks). All done; nobody has watched the new export yet:

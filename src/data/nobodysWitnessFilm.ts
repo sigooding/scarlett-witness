@@ -17944,14 +17944,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/vera_run_new/73-05-toward-the-tracks.jpg",
    "cinematic": {
     "mode": "shake",
-    "focalPoint": "50% 60%",
-    "zoomDuration": 17,
+    "focalPoint": "50% 50%",
+    "zoomDuration": 18,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.15,
     "shakeDuration": 0.7,
+    "panDistance": 2,
+    "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.35,
+    "depthSeconds": 16,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19351,12 +19356,16 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "background": "/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
    "cinematic": {
     "mode": "static",
-    "focalPoint": "65% 50%",
-    "zoomDuration": 22,
+    "focalPoint": "50% 50%",
+    "zoomDuration": 18,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.35,
+    "depthSeconds": 16,
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -26785,5 +26794,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "0d548af15bb3"
+ "builtinRevision": "b6339c95886c"
 } as unknown as Story;

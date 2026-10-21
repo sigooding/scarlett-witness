@@ -30,7 +30,6 @@
   "297-the-glass-office": "the office staff",
   "337-engine-off": "Jack and Vera in the car",
   "340-the-shuttered-door": "a figure with an umbrella",
-  "346-the-bulb-hums": "Vera and Jack",
   "354-the-altar-photograph": "Mrs. Sakai",
   "374-the-dead-television": "Vera",
   "379-the-laundry": "Jack, Vera and two women",
@@ -254,26 +253,6 @@
    "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
    "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg"
   },
-  "346-the-bulb-hums": {
-   "picture": "public/film/img/s20/346-the-bulb-hums.jpg",
-   "depthSource": "public/film/depth/s20/346-the-bulb-hums/source-depth.png",
-   "cutouts": [
-    {
-     "name": "vera",
-     "box": [226, 577, 423, 411],
-     "image": "/film/depth/s20/346-the-bulb-hums/cutout-1.png",
-     "depth": 0.784
-    },
-    {
-     "name": "jack",
-     "box": [1303, 474, 438, 599],
-     "image": "/film/depth/s20/346-the-bulb-hums/cutout-2.png",
-     "depth": 0.51
-    }
-   ],
-   "depthMap": "/film/depth/s20/346-the-bulb-hums/depth.png",
-   "depthPlate": "/film/depth/s20/346-the-bulb-hums/plate.jpg"
-  },
   "354-the-altar-photograph": {
    "picture": "public/film/img/s29/354-the-altar-photograph.jpg",
    "depthSource": "public/film/depth/s29/354-the-altar-photograph/source-depth.png",
@@ -400,6 +379,18 @@
    "depthMap": "/film/depth/s26/452-the-loop/depth.png",
    "smooth": 2.0,
    "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Elevated city-and-railway view; rooftops, train and distant buildings in separate planes."
+  },
+  "73-05-toward-the-tracks": {
+   "picture": "public/film/img/vera_run_new/73-05-toward-the-tracks.jpg",
+   "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+   "smooth": 2.0,
+   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
+  },
+  "75-02-the-empty-lounge": {
+   "picture": "public/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
+   "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
+   "smooth": 2.0,
+   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
   }
  }
 }
