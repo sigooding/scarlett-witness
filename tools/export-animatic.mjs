@@ -6,7 +6,7 @@
 //   npm run export:animatic                                  # the whole film, titles to credits
 //   npm run export:animatic -- --from nw_s65 --to nw_s66     # some scenes
 //   options: --out <dir> (default exports/animatics/whole-film, or <from>-<to>)  --size 1280x720 | 1920x1080  --fps 24
-//            --no-subs  --no-desc  --pace 1 (0.8 brisker, 1.25 slower)  --url <a running dev server>
+//            --no-subs  --no-desc  --no-marks (no scene/beat/picture label in the corner)  --pace 1 (0.8 brisker, 1.25 slower)  --url <a running dev server>
 //            --gpu (use the graphics card instead of software rendering)  --progress-json (one JSON line per update)
 //            --debug (also writes debug.json: every caption, scene change, sound and ambience event the page logged)
 //            --keep-parts (keep picture.mp4 and sound.wav, which are otherwise deleted once animatic.mp4 is made)
@@ -45,7 +45,7 @@ const to = opt("to", null);
 const [W, H] = (opt("size", "1280x720").match(/^(\d+)x(\d+)$/) ?? [0, 1280, 720]).slice(1).map(Number);
 const fps = Math.max(1, Math.min(60, Number(opt("fps", "24")) || 24));
 const pace = Number(opt("pace", "1")) || 1;
-const subs = !has("no-subs"), desc = !has("no-desc");
+const subs = !has("no-subs"), desc = !has("no-desc"), marks = !has("no-marks");
 const whole = from === order[0] && !to;
 const outDir = resolve(opt("out", join(ROOT, "exports/animatics", whole ? "whole-film" : `${from}-${to ?? "end"}`)));
 const json = has("progress-json");
@@ -437,7 +437,7 @@ if (parts > 1 && !child) {
   const plan = planParts(est.ids, est.secondsOf, safeStarts(film, order), parts, to);
   say(`in ${plan.length} parts at once: ${plan.map((p) => `${p.from} to ${p.to ?? "the end"} (about ${Math.round(p.seconds / 60)} min)`).join(", ")}`);
   const forward = ["--size", `${W}x${H}`, "--fps", String(fps), "--pace", String(pace), "--url", server.url, "--encoder", encoder,
-    ...(subs ? [] : ["--no-subs"]), ...(desc ? [] : ["--no-desc"]), ...(gpu ? ["--gpu"] : [])];
+    ...(subs ? [] : ["--no-subs"]), ...(desc ? [] : ["--no-desc"]), ...(marks ? [] : ["--no-marks"]), ...(gpu ? ["--gpu"] : [])];
   let joined;
   try {
     joined = await runParts({
@@ -481,7 +481,7 @@ page.on("requestfinished", settle);
 page.on("requestfailed", settle);
 await page.addInitScript(pageSetup, durations);
 await page.clock.install();
-const q = new URLSearchParams({ story: FILM_ID, scene: from, animatic: "1", subs: subs ? "1" : "0", desc: desc ? "1" : "0", pace: String(pace) });
+const q = new URLSearchParams({ story: FILM_ID, scene: from, animatic: "1", subs: subs ? "1" : "0", desc: desc ? "1" : "0", marks: marks ? "1" : "0", pace: String(pace) });
 if (to) q.set("to", to);
 await page.goto(`${server.url}/?${q}`, { waitUntil: "load" });
 await page.evaluate(() => document.fonts.ready);
@@ -681,7 +681,7 @@ function finish({ seconds, chapters, captions, picture, sound, fadeOut, extra })
   // the picture and the sound on their own are as large as the film again (the whole film: gigabytes)
   if (!has("keep-parts") && !has("debug")) for (const f of [picture, sound, chaptersFile]) rmSync(f, { force: true });
   const report = {
-    from, to, whole, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, pace,
+    from, to, whole, fps, size: `${W}x${H}`, subtitles: subs, descriptions: desc, marks, pace,
     seconds, estimate, chapters, captions: captions.length, ...extra, files: ["animatic.mp4", "captions.srt"],
   };
   writeFileSync(join(outDir, "report.json"), JSON.stringify(report, null, 2));

@@ -7329,6 +7329,16 @@ function StudioInner({
                   />
                   <p className="mt-1 font-type text-[9px] text-paper/40">Below 1 = quicker (a long narration that held one picture too long), above 1 = slower. Only the exported animatic uses it.</p>
                 </Field>
+                <Field label="Animatic scene mark — the scene shown in the corner of an exported animatic, with the beat and picture">
+                  <input
+                    type="text"
+                    aria-label="Animatic scene mark"
+                    placeholder="e.g. 84 or 97A"
+                    className="w-full border border-paper/20 bg-ink/60 px-2 py-1 font-type text-xs text-paper"
+                    value={scene.animaticMark ?? ""}
+                    onChange={(e) => updateScene(scene.id, { animaticMark: e.target.value.trim() || undefined })}
+                  />
+                </Field>
                 <p className="font-type text-[10px] text-paper/40">Music loops until the next scene. Recorded narration plays once. If no narration MP3 is set, the selected Web Speech narrator is used.</p>
               </div>
             )}

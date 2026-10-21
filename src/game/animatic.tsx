@@ -3,7 +3,7 @@
  * (tools/export-animatic.mjs, also behind "🎞 Export animatic" on the home screen) or to watch and screen-record in a
  * browser:
  *
- *   ?story=nobodys-witness-film&scene=nw_s65&animatic=1&to=nw_s66&subs=1&desc=1&pace=1
+ *   ?story=nobodys-witness-film&scene=nw_s65&animatic=1&to=nw_s66&subs=1&desc=1&marks=1&pace=1
  *
  * In this mode the game shows every line at once (no typewriter) and moves on by itself: a silent line holds for its
  * reading time, a spoken one until its voice has finished. The reading panel and the controls are hidden; the game
@@ -23,6 +23,9 @@ export interface AnimaticOptions {
   subtitles: boolean;
   /** Burn the narration and the scene headings in as descriptions. */
   descriptions: boolean;
+  /** Show where the film is in the top-right corner: the screenplay scene, the beat within it and the picture's file, so a
+   *  problem seen in the MP4 can be reported by where it is. */
+  marks: boolean;
   /** Multiplies every reading hold: 1 is normal, 0.8 brisker, 1.25 slower. */
   pace: number;
 }
@@ -46,6 +49,7 @@ export function animaticFromUrl(search?: string): AnimaticOptions | null {
     to: params.get("to") || null,
     subtitles: flag("subs", true),
     descriptions: flag("desc", true),
+    marks: flag("marks", true),
     pace: Number.isFinite(pace) && pace >= 0.5 && pace <= 2 ? pace : 1,
   };
 }
@@ -228,6 +232,38 @@ export function AnimaticCaptions({ caption }: { caption: Caption | null }) {
   );
 }
 
+export interface AnimaticMarkInfo {
+  scene: string;
+  beat: number;
+  picture: string;
+}
+
+/** Where the film is: the node's screenplay scene (`animaticMark`, set by the film builder), the beat counted from the start of
+ *  that scene across the nodes it was cut into (continuations, a song's timed shots), and the file name of the picture on
+ *  screen. Null for nodes with no scene (the titles, the credits). */
+export function animaticMarkFor(scenes: SceneNode[], scene: SceneNode | null | undefined, beatIdx: number, picture: string | undefined): AnimaticMarkInfo | null {
+  const mark = scene?.animaticMark;
+  if (!scene || !mark) return null;
+  let before = 0;
+  for (const s of scenes) {
+    if (s.id === scene.id) break;
+    if (s.animaticMark === mark) before += s.dialogueBeats?.length ?? 0;
+  }
+  const file = (picture ?? "").replace(/^video:/, "").split("/").pop() ?? "";
+  return { scene: mark, beat: before + Math.max(0, beatIdx) + 1, picture: file.startsWith("gradient:") ? "" : file };
+}
+
+/** The mark, small in the top-right corner, out of the way of the captions and the scene heading. */
+export function AnimaticMark({ info }: { info: AnimaticMarkInfo | null }) {
+  if (!info) return null;
+  return (
+    <div className="animatic-mark" data-animatic-mark>
+      <span>SC {info.scene}</span> · <span>BEAT {info.beat}</span>
+      {info.picture && <div className="animatic-mark-pic">{info.picture}</div>}
+    </div>
+  );
+}
+
 /** Whether this browser will run the depth camera, and what it draws with (the graphics chip, or a software renderer
  *  when hardware acceleration is off), for the start card. */
 function depthCheck(): { on: boolean; why: string; renderer: string } {
@@ -264,6 +300,7 @@ export function AnimaticStart({ title, onStart }: { title: string; onStart: () =
     o?.to ? `to ${o.to.replace(/^nw_s?/, "scene ")}` : "to the end",
     o?.subtitles ? "subtitles" : "no subtitles",
     o?.descriptions ? "descriptions" : "no descriptions",
+    o?.marks ? "scene and beat marks" : "no marks",
   ];
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-black px-6 text-center">

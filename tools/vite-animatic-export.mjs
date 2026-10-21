@@ -51,9 +51,10 @@ export function animaticExportPlugin() {
           mkdirSync(out, { recursive: true });
           const args = ["tools/export-animatic.mjs", ...(whole ? [] : ["--from", b.from, ...(b.to ? ["--to", b.to] : [])]), "--size", size, "--fps", String(fps), "--pace", String(pace),
             "--out", out, "--url", `http://${req.headers.host}`, "--progress-json", ...(b.subtitles === false ? ["--no-subs"] : []), ...(b.descriptions === false ? ["--no-desc"] : []),
+            ...(b.marks === false ? ["--no-marks"] : []),
             ...(b.gpu ? ["--gpu"] : []), ...(parts > 1 ? ["--parts", String(parts)] : [])];
           const child = spawn(process.execPath, args, { cwd: root, env: process.env });
-          const job = { id, child, out, status: "running", options: { from: whole ? "" : b.from, to: b.to ?? null, whole, size, fps, pace, gpu: !!b.gpu, parts, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
+          const job = { id, child, out, status: "running", options: { from: whole ? "" : b.from, to: b.to ?? null, whole, size, fps, pace, gpu: !!b.gpu, parts, subtitles: b.subtitles !== false, descriptions: b.descriptions !== false, marks: b.marks !== false }, progress: null, report: null, error: null, startedAt: Date.now(), tail: "" };
           jobs.set(id, job);
           let buf = "";
           child.stdout.on("data", (d) => {

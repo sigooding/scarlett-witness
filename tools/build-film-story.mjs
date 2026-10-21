@@ -141,7 +141,7 @@ scenes.push({
   dialogueBeats: [], hotspots: [], choices: [],
 });
 scenes.push({
-  id: "nw_prologue", title: "Prologue — The Hive, remembered", background: P("/img/s1/377-the-hive-remembered.jpg"),
+  id: "nw_prologue", title: "Prologue — The Hive, remembered", animaticMark: "Prologue", background: P("/img/s1/377-the-hive-remembered.jpg"),
   particles: "rain", hideHud: true, letterbox: true, transition: "fade", transitionSpeed: 2.2,
   // Its backdrop takes the picture's look (studio-edits "pictureLook") like any beat's picture, its depth move with it.
   cinematic: { mode: "zoom-hold", focalPoint: "50% 52%", zoomDuration: 60, colorGrade: "neon-noir", ...(lookFor("/img/s1/377-the-hive-remembered.jpg")?.cinematic ?? {}) },
@@ -214,7 +214,7 @@ film.scenes.forEach((sc, si) => {
   let music = null;   // scene-level music for the node being built
   const close = () => {
     scenes.push({
-      id: `nw_s${sc.id}${part ? `_${"abcdefgh"[part]}` : ""}`.toLowerCase(), title: `${sc.n} — ${sc.title}${part ? " (cont.)" : ""}`,
+      id: `nw_s${sc.id}${part ? `_${"abcdefgh"[part]}` : ""}`.toLowerCase(), title: `${sc.n} — ${sc.title}${part ? " (cont.)" : ""}`, animaticMark: String(sc.id).toUpperCase(),
       // a continuation node opens on its own first picture, or on the one showing when it began; not the scene's last picture
       // (18 October 2026: with pictures after the song's cue in scene 72, the run opened on the scene's last still)
       background: (part ? (beats[0]?.background && !beats[0].background.startsWith("video:") ? beats[0].background : partBg ?? lastBg) : bg0) ?? "gradient:linear-gradient(#000,#000)", prose: part ? "" : `${sc.heading}`, ...lookOf(sc),
@@ -314,7 +314,7 @@ for (const m of edits.montages ?? []) {
   if (at < 0) { console.warn(`montage ${m.id}: no scene ${m.after}`); continue; }
   const host = scenes[at];
   const montage = {
-    id: m.id, title: m.title, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
+    id: m.id, title: m.title, animaticMark: `${host.animaticMark} montage`, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
     credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: m.images.map(P), montageSeconds: m.seconds ?? 5, montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
     musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: m.musicFadeSeconds ?? 2, transition: "fade", transitionSpeed: 1.2,
     dialogueBeats: [], hotspots: [], choices: [],
@@ -324,7 +324,7 @@ for (const m of edits.montages ?? []) {
     const rest = host.dialogueBeats.splice(m.afterBeat);
     const lastBg = [...host.dialogueBeats].reverse().find(b => b.background)?.background ?? host.background;
     const { id: _id, title: _t, dialogueBeats: _b, ...look } = host;
-    fresh.push({ ...look, id: `${host.id}_b`, title: `${host.title} (cont.)`, background: lastBg, prose: "", transition: "cut", transitionSpeed: 0.2, musicMode: "none", musicFadeSeconds: 3, dialogueBeats: rest });
+    fresh.push({ ...look, id: `${host.id}_b`, title: `${host.title} (cont.)`, animaticMark: host.animaticMark, background: lastBg, prose: "", transition: "cut", transitionSpeed: 0.2, musicMode: "none", musicFadeSeconds: 3, dialogueBeats: rest });
   }
   scenes.splice(at + 1, 0, ...fresh);
 }
@@ -434,7 +434,7 @@ for (const seg of edits.soundtracks ?? []) {
   // the shots in order, with the voiced lines that fall on each; the run stops before `stopBefore`
   const shots = [];
   let cur = null, rest = null;
-  const open = (bg, node) => { cur = bg; shots.push({ bg, look: looks(node), lines: [] }); };
+  const open = (bg, node) => { cur = bg; shots.push({ bg, look: looks(node), mark: node.animaticMark, lines: [] }); };
   scan: for (const node of block) {
     // the node a song run leaves behind (`…_after`) carries the picture the run ended on; when the next run starts on it, its first beat's own picture opens the shot
     if (node.background !== cur && !(node.id.endsWith("_after") && node.dialogueBeats?.[0]?.background)) open(node.background, node);
@@ -468,7 +468,7 @@ for (const seg of edits.soundtracks ?? []) {
   const cueAt = (s, k) => { const c = seg.cues?.[base(s.bg)]?.[k]; return c ? { sfxUrl: P(`/sfx/${c.file}.mp3`), sfxVolume: c.volume ?? 0.8 } : {}; };
   const cueOf = s => cueAt(s, 0);
   const node = (s, beat, ...more) => ({
-    id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, background: s.bg, cinematic: { ...camera(s.bg), ...(lookFor(s.bg)?.cinematic ?? {}) }, prose: "", ...s.look, hideHud: true, letterbox: true,
+    id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, animaticMark: s.mark, background: s.bg, cinematic: { ...camera(s.bg), ...(lookFor(s.bg)?.cinematic ?? {}) }, prose: "", ...s.look, hideHud: true, letterbox: true,
     transition: "fade", transitionSpeed: TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat], ...Object.assign({}, ...more),
   });
   const captionBeat = (s, seconds, cue, text = caption(s), tran = TRAN) => ({ id: `nw_song_b${++beatNo2}`, characterId: charOf(null), text: text ?? "·", silent: true, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - tran - 0.1 - LAG)) });
@@ -493,7 +493,7 @@ for (const seg of edits.soundtracks ?? []) {
   let after = next;
   if (rest) {
     const { id: _i, title: _t, dialogueBeats: _b, prose: _p, background: _g, transition: _tr, transitionSpeed: _ts, cinematic: _ci, ...look } = rest.node;
-    after = { ...look, id: `${rest.node.id}_after`, title: `${rest.node.title} (after the song)`, background: rest.bg, prose: "", transition: "cut", transitionSpeed: 0.2, dialogueBeats: rest.node.dialogueBeats.slice(rest.from) };
+    after = { ...look, id: `${rest.node.id}_after`, title: `${rest.node.title} (after the song)`, animaticMark: rest.node.animaticMark, background: rest.bg, prose: "", transition: "cut", transitionSpeed: 0.2, dialogueBeats: rest.node.dialogueBeats.slice(rest.from) };
   }
   chain.forEach((nd, k) => {
     const nextId = k + 1 < chain.length ? chain[k + 1].id : after.id;
@@ -576,7 +576,7 @@ for (const seg of edits.cutscenes ?? []) {
       total += seconds;
     }
     chain.push({
-      id: `nw_cut_${seg.id}_${String(chain.length + 1).padStart(2, "0")}`, title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`,
+      id: `nw_cut_${seg.id}_${String(chain.length + 1).padStart(2, "0")}`, title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, animaticMark: pic.node.animaticMark,
       background: pic.bg, cinematic: { ...camera(pic.bg), ...(lookFor(pic.bg)?.cinematic ?? {}) }, prose: "", ...look, hideHud: true,
       transition: same ? "cut" : "fade", transitionSpeed: same ? 0.05 : TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat],
     });

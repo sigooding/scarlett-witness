@@ -68,6 +68,7 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
   const [to, setTo] = useState(firstScene);
   const [subtitles, setSubtitles] = useState(true);
   const [descriptions, setDescriptions] = useState(true);
+  const [marks, setMarks] = useState(true);
   const [size, setSize] = useState("1280x720");
   const [fps, setFps] = useState(24);
   const [pace, setPace] = useState(1);
@@ -114,10 +115,10 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
   const rangeOk = whole || (idx(from) >= 0 && idx(to) >= idx(from));
   const start0 = whole ? scenes[0]?.id ?? from : from;
   const toLast = whole ? null : entry(to)?.last ?? to;
-  const search = new URLSearchParams({ story: story.id, scene: start0, animatic: "1", subs: subtitles ? "1" : "0", desc: descriptions ? "1" : "0", pace: String(pace) });
+  const search = new URLSearchParams({ story: story.id, scene: start0, animatic: "1", subs: subtitles ? "1" : "0", desc: descriptions ? "1" : "0", marks: marks ? "1" : "0", pace: String(pace) });
   if (toLast) search.set("to", toLast);
   const previewUrl = `${window.location.pathname}?${search}`;
-  const flags = `${gpu ? " --gpu" : ""}${parts > 1 ? ` --parts ${parts}` : ""}${size !== "1280x720" ? ` --size ${size}` : ""}${fps !== 24 ? ` --fps ${fps}` : ""}${pace !== 1 ? ` --pace ${pace}` : ""}${subtitles ? "" : " --no-subs"}${descriptions ? "" : " --no-desc"}`;
+  const flags = `${gpu ? " --gpu" : ""}${parts > 1 ? ` --parts ${parts}` : ""}${size !== "1280x720" ? ` --size ${size}` : ""}${fps !== 24 ? ` --fps ${fps}` : ""}${pace !== 1 ? ` --pace ${pace}` : ""}${subtitles ? "" : " --no-subs"}${descriptions ? "" : " --no-desc"}${marks ? "" : " --no-marks"}`;
   const command = `npm run export:animatic${whole ? (flags ? ` --${flags}` : "") : ` -- --from ${from} --to ${toLast}${flags}`}`;
 
   const start = () => {
@@ -125,7 +126,7 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
     fetch("/__animatic/jobs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ from: start0, to: toLast, whole, size, fps, pace, subtitles, descriptions, gpu, parts }),
+      body: JSON.stringify({ from: start0, to: toLast, whole, size, fps, pace, subtitles, descriptions, marks, gpu, parts }),
     })
       .then(async (r) => {
         const j = await r.json();
@@ -192,6 +193,9 @@ export function AnimaticExportDialog({ story, onClose }: { story: Story; onClose
           </label>
           <label className="flex items-center gap-2 font-type text-sm text-paper/80">
             <input type="checkbox" checked={descriptions} disabled={busy} onChange={(e) => setDescriptions(e.target.checked)} /> Descriptions (narration, scene headings)
+          </label>
+          <label className="flex items-center gap-2 font-type text-sm text-paper/80">
+            <input type="checkbox" checked={marks} disabled={busy} onChange={(e) => setMarks(e.target.checked)} /> Scene, beat and picture in the corner (for reporting problems)
           </label>
           <label className="block">
             <span className={label}>Size · frame rate</span>

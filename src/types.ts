@@ -1842,6 +1842,9 @@ export interface SceneNode {
   /** Animatic only: multiplies the reading time of this scene's silent lines (0.75 = a quarter quicker). Set by the film
    * builder from studio-edits "readPace" so narration does not hold one picture for half a minute. */
   animaticReadPace?: number;
+  /** Animatic only: the screenplay scene this node plays ("84", "97A"), shown in the corner with the beat number and the picture
+   *  when the animatic's marks are on, so a problem can be reported by where it is. Set by the film builder. */
+  animaticMark?: string;
   /** Marks this scene as the END OF A PART. On leaving it, the game shows the
    * route flowchart for the part just played before continuing. The string is
    * the part's display name (e.g. "Part 3 — Two Hundred and Eleven Thousand").
