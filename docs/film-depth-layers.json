@@ -74,7 +74,17 @@
   "498-open-shut": "automatic: 1 found",
   "499-the-screen": "automatic: 1 found",
   "72-01-the-piano-plays-on": "automatic: 2 found",
-  "72-02-the-phone-lowers--r1": "automatic: 1 found"
+  "72-02-the-phone-lowers--r1": "automatic: 1 found",
+  "72-03-the-lighter-into-the-bag": "automatic: 1 found",
+  "72-04-walking-very-carefully--r1": "automatic: 1 found",
+  "72-05-the-umbrella-stays": "automatic: 2 found",
+  "69-vera-runs": "automatic: 1 found",
+  "73-03-she-runs--69-vera-runs-v2": "automatic: 1 found",
+  "547-the-call-still-lit": "automatic: 1 found",
+  "73-06-her-face--70-not-elegantly-badly-playframe": "automatic: 1 found",
+  "73-07-heels-on-wet-pavement": "automatic: 1 found",
+  "73-08-she-slips--70-not-elegantly-badly-playframe": "automatic: 1 found",
+  "73-09-she-cannot-breathe": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -1097,6 +1107,152 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/depth.png",
    "depthPlate": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/plate.jpg"
+  },
+  "72-03-the-lighter-into-the-bag": {
+   "picture": "public/film/img/vera_run_new/72-03-the-lighter-into-the-bag.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [696, 0, 1224, 1080],
+     "image": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/cutout-1.png",
+     "depth": 0.415
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/plate.jpg"
+  },
+  "72-04-walking-very-carefully--r1": {
+   "picture": "public/film/img/vera_run_takes/72-04-walking-very-carefully--r1.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [814, 23, 497, 1057],
+     "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
+     "depth": 0.385
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/plate.jpg"
+  },
+  "72-05-the-umbrella-stays": {
+   "picture": "public/film/img/vera_run_new/72-05-the-umbrella-stays.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [822, 1078, 240, 426],
+     "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-1.png",
+     "depth": 0.328
+    },
+    {
+     "name": "person 2",
+     "box": [2007, 437, 260, 648],
+     "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-2.png",
+     "depth": 0.572
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/72-05-the-umbrella-stays/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/72-05-the-umbrella-stays/plate.jpg"
+  },
+  "69-vera-runs": {
+   "picture": "public/film/img/s73/69-vera-runs.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [321, 0, 652, 1080],
+     "image": "/film/depth/s73/69-vera-runs/cutout-1.png",
+     "depth": 0.556
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s73/69-vera-runs/depth.png",
+   "depthPlate": "/film/depth/s73/69-vera-runs/plate.jpg"
+  },
+  "73-03-she-runs--69-vera-runs-v2": {
+   "picture": "public/film/img/vera_run_takes/73-03-she-runs--69-vera-runs-v2.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [761, 230, 360, 766],
+     "image": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/cutout-1.png",
+     "depth": 0.759
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/plate.jpg"
+  },
+  "547-the-call-still-lit": {
+   "picture": "public/film/img/s73/547-the-call-still-lit.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [0, 62, 1442, 1018],
+     "image": "/film/depth/s73/547-the-call-still-lit/cutout-1.png",
+     "depth": 0.845
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s73/547-the-call-still-lit/depth.png",
+   "depthPlate": "/film/depth/s73/547-the-call-still-lit/plate.jpg"
+  },
+  "73-06-her-face--70-not-elegantly-badly-playframe": {
+   "picture": "public/film/img/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [641, 0, 908, 1080],
+     "image": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/cutout-1.png",
+     "depth": 0.583
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/plate.jpg"
+  },
+  "73-07-heels-on-wet-pavement": {
+   "picture": "public/film/img/vera_run_new/73-07-heels-on-wet-pavement.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [351, 0, 1322, 1003],
+     "image": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/cutout-1.png",
+     "depth": 0.642
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/plate.jpg"
+  },
+  "73-08-she-slips--70-not-elegantly-badly-playframe": {
+   "picture": "public/film/img/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [641, 0, 908, 1080],
+     "image": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/cutout-1.png",
+     "depth": 0.583
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/plate.jpg"
+  },
+  "73-09-she-cannot-breathe": {
+   "picture": "public/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [201, 3, 1047, 1149],
+     "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
+     "depth": 0.392
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg"
   }
  }
 }

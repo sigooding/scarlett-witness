@@ -2016,7 +2016,18 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s73/69-vera-runs/depth.png",
+    "depthPlate": "/film/depth/s73/69-vera-runs/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s73/69-vera-runs/cutout-1.png",
+      "depth": 0.556
+     }
+    ]
    }
   },
   "387-the-street-too-long": {
@@ -4337,7 +4348,18 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/cutout-1.png",
+      "depth": 0.642
+     }
+    ]
    }
   },
   "73-10-a-car-passes": {
@@ -4358,21 +4380,54 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/cutout-1.png",
+      "depth": 0.759
+     }
+    ]
    }
   },
   "73-06-her-face--70-not-elegantly-badly-playframe": {
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.2,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/cutout-1.png",
+      "depth": 0.583
+     }
+    ]
    }
   },
   "73-08-she-slips--70-not-elegantly-badly-playframe": {
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.25,
-    "shakeDuration": 0.7
+    "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/cutout-1.png",
+      "depth": 0.583
+     }
+    ]
    }
   },
   "129-she-lets-him-v1": {
@@ -5044,6 +5099,90 @@
      {
       "image": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/cutout-1.png",
       "depth": 0.163
+     }
+    ]
+   }
+  },
+  "72-03-the-lighter-into-the-bag": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/cutout-1.png",
+      "depth": 0.415
+     }
+    ]
+   }
+  },
+  "72-04-walking-very-carefully--r1": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
+      "depth": 0.385
+     }
+    ]
+   }
+  },
+  "72-05-the-umbrella-stays": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/72-05-the-umbrella-stays/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/72-05-the-umbrella-stays/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-1.png",
+      "depth": 0.328
+     },
+     {
+      "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-2.png",
+      "depth": 0.572
+     }
+    ]
+   }
+  },
+  "547-the-call-still-lit": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s73/547-the-call-still-lit/depth.png",
+    "depthPlate": "/film/depth/s73/547-the-call-still-lit/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s73/547-the-call-still-lit/cutout-1.png",
+      "depth": 0.845
+     }
+    ]
+   }
+  },
+  "73-09-she-cannot-breathe": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
+      "depth": 0.392
      }
     ]
    }

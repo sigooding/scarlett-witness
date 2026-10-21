@@ -6,7 +6,7 @@ with the people painted out, and the depth map). Look at the flagged ones first;
 from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth fields from its `pictureLook` in
 `src/film/studio-edits.json`, then rebuild. Each gets the suggested move: truck, 0.4, over 14 s.
 
-**40 made, 36 flagged, 1 left alone.**
+**50 made, 42 flagged, 1 left alone.**
 
 | Picture | Cut-outs | Flags |
 |---|---|---|
@@ -43,13 +43,23 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [497-eleven-fifty-two](497-eleven-fifty-two.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [498-open-shut](498-open-shut.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [499-the-screen](499-the-screen.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [547-the-call-still-lit](547-the-call-still-lit.jpg) | 1 | cut-out 1 runs to its box edge (may be clipped); 2 person-like shape(s) still found in the plate |
 | [69-the-wait](69-the-wait.jpg) | 2 | 1 person-like shape(s) still found in the plate |
 | [72-01-the-piano-plays-on](72-01-the-piano-plays-on.jpg) | 2 | 1 person-like shape(s) still found in the plate |
 | [72-02-the-phone-lowers--r1](72-02-the-phone-lowers--r1.jpg) | 1 | 2 person-like shape(s) still found in the plate |
+| [72-03-the-lighter-into-the-bag](72-03-the-lighter-into-the-bag.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [72-04-walking-very-carefully--r1](72-04-walking-very-carefully--r1.jpg) | 1 | 3 person-like shape(s) still found in the plate |
+| [72-05-the-umbrella-stays](72-05-the-umbrella-stays.jpg) | 2 | cut-out 2 runs to its box edge (may be clipped) |
+| [73-07-heels-on-wet-pavement](73-07-heels-on-wet-pavement.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [73-09-she-cannot-breathe](73-09-she-cannot-breathe.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [02-vending](02-vending.jpg) | 1 |  |
 | [09-old-man-stops](09-old-man-stops.jpg) | 1 |  |
 | [329-the-lane-the-watch](329-the-lane-the-watch.jpg) | 1 |  |
 | [331-he-refuses](331-he-refuses.jpg) | 1 |  |
+| [69-vera-runs](69-vera-runs.jpg) | 1 |  |
+| [73-03-she-runs--69-vera-runs-v2](73-03-she-runs--69-vera-runs-v2.jpg) | 1 |  |
+| [73-06-her-face--70-not-elegantly-badly-playframe](73-06-her-face--70-not-elegantly-badly-playframe.jpg) | 1 |  |
+| [73-08-she-slips--70-not-elegantly-badly-playframe](73-08-she-slips--70-not-elegantly-badly-playframe.jpg) | 1 |  |
 
 ## Left alone
 

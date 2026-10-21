@@ -18339,13 +18339,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-03-the-lighter-into-the-bag.jpg",
    "cinematic": {
-    "mode": "dolly",
+    "mode": "static",
     "focalPoint": "35% 50%",
     "zoomDuration": 18,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/cutout-1.png",
+      "depth": 0.415
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18377,13 +18388,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "72",
    "background": "/film/img/vera_run_takes/72-04-walking-very-carefully--r1.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 16,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
+      "depth": 0.385
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18415,13 +18437,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "72",
    "background": "/film/img/vera_run_new/72-05-the-umbrella-stays.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "35% 50%",
     "zoomDuration": 21,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/72-05-the-umbrella-stays/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/72-05-the-umbrella-stays/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-1.png",
+      "depth": 0.328
+     },
+     {
+      "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-2.png",
+      "depth": 0.572
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18462,6 +18499,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.2,
     "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s73/69-vera-runs/depth.png",
+    "depthPlate": "/film/depth/s73/69-vera-runs/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s73/69-vera-runs/cutout-1.png",
+      "depth": 0.556
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18502,6 +18550,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.2,
     "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/cutout-1.png",
+      "depth": 0.759
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18540,6 +18599,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s73/547-the-call-still-lit/depth.png",
+    "depthPlate": "/film/depth/s73/547-the-call-still-lit/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s73/547-the-call-still-lit/cutout-1.png",
+      "depth": 0.845
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18632,6 +18702,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.2,
     "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/cutout-1.png",
+      "depth": 0.583
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18672,6 +18753,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.2,
     "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/cutout-1.png",
+      "depth": 0.642
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18714,6 +18806,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.25,
     "shakeDuration": 0.7,
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/cutout-1.png",
+      "depth": 0.583
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -18745,13 +18848,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "50% 60%",
     "zoomDuration": 17,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
+      "depth": 0.392
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27450,5 +27564,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "f450564df5ee"
+ "builtinRevision": "975412eccacc"
 } as unknown as Story;
