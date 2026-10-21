@@ -426,6 +426,8 @@ const unmarked = FILM.scenes.filter((s) => /^nw_(s\d|song_|cut_|prologue)/.test(
 eq(unmarked, [], "every scene node carries its screenplay scene for the animatic's mark");
 check(FILM.scenes.find((s) => s.id === "nw_song_raid_01")?.animaticMark === "85" && FILM.scenes.find((s) => s.id === "nw_song_service_01")?.animaticMark === "97A", "a song's timed shots carry the scene they come from (the raid opens in 85, Mara's service reads 97A)");
 check(/marks: marks \? "1" : "0"/.test(read("tools/export-animatic.mjs")) && /no-marks/.test(read("tools/vite-animatic-export.mjs")) && /setMarks/.test(read("src/AnimaticExport.tsx")), "the exporter, its dev-server job and the export dialog pass the marks switch");
+// Kaneko's three strikes on the pipe (86-02) play the director's uploaded pipe sounds, cut and faded (note 15)
+check(FILM.scenes.some((s) => (s.dialogueBeats ?? []).some((b) => b.sfxUrl === "/film/sfx/pipe-three-strikes.mp3") && s.background?.includes("86-02-three-strikes")), "Kaneko's three strikes on the pipe are heard (86-02)");
 // music sync (the director, 21 October 2026): in scenes 1 and 2 the cuts land on the beat of the song, not every line
 const synced = FILM.scenes.filter((s) => s.musicSync).map((s) => s.id);
 eq(synced, ["nw_s1", "nw_s2"], "scenes 1 and 2 (and only they) land their cuts on the music's beat");

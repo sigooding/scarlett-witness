@@ -1472,6 +1472,12 @@
       "file": "pipe-alarm",
       "volume": 0.12
      }
+    ],
+    "86-02-three-strikes": [
+     {
+      "file": "pipe-three-strikes",
+      "volume": 0.9
+     }
     ]
    }
   },

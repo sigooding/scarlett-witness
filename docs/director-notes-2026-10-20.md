@@ -29,7 +29,7 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 12 | His hands are too dirty (marked 1) | 74 (74-03) | Retake brief |
 | 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
 | 14 | Kurose's office, "It's just a face.": Vera has no coat, and holds a notebook, not the photocopies | 83 (111, 112) | 111 done (archived take); 112 retake brief |
-| 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Waiting for credits |
+| 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Done 22 October, from the director's uploads |
 | 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Words changed; take waiting for credits |
 | 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Words added; take waiting for credits |
 | 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 to redo |
@@ -313,7 +313,18 @@ Ishida unhurt at his desk.
 PlayFrame's screenplay still has "He doesn't." The same change belongs there (a bible Part 9 item), with the rest listed under
 4 and 5.
 
-## 15. Kaneko's pipe: waiting for credits
+## 15. Kaneko's pipe: done from the director's uploads (22 October)
+- The director uploaded two sounds to `uploads/` ("one metal pipe strike.mp3", 41 s; "metal pipe vibrating after hits
+  (needs a fade).mp3", 22 s). Neither is a single hit: the strike rings loud for about 4 s before its next hit, the
+  vibration hums for about 7 s. The uploads are untouched; three files were cut from them, levelled to −3 dB peak:
+  - `public/film/sfx/pipe-three-strikes.mp3` (6.5 s): the strike's first 0.75 s twice, then a third that rings out with the
+    vibration under it, faded to silence. It plays on 86-02 (raid soundtrack cue, volume 0.9) and rings on under the shutter
+    coming down.
+  - `pipe-strike-faded.mp3` (4.1 s) and `pipe-vibrating-faded.mp3` (7.4 s): each upload up to its next hit, faded off, kept
+    for other uses.
+- Nobody has listened. The ElevenLabs attempts below stay as they were.
+
+### Before the uploads: waiting for credits
 - **Where:** the raid run (85–92). On 86-02, "Kaneko strikes the iron pipe three times: the alarm the Hive has kept for fifty
   years.", nothing is heard. The run's only pipe sound is `pipe-alarm.mp3` far under the masked men coming in (119, volume 0.3)
   and in the pipe gallery (382, 0.12).

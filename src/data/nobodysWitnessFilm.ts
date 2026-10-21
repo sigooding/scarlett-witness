@@ -22385,6 +22385,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "Kaneko strikes the iron pipe three times: the alarm the Hive has kept for fifty years.",
      "silent": true,
+     "sfxUrl": "/film/sfx/pipe-three-strikes.mp3",
+     "sfxVolume": 0.9,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.53,
      "afterBeatTargetSceneId": "nw_song_raid_04"
@@ -26809,5 +26811,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "66dde0a2bbf8"
+ "builtinRevision": "0c85baf0da60"
 } as unknown as Story;
