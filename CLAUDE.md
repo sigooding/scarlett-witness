@@ -9,7 +9,9 @@ retake into `public/film/img/` with `FFMPEG=... node tools/install-film-picture.
 It only crops to an exact 16:9 and, below 1920×1080, enlarges to 1920×1080; a bigger picture keeps its full size (a
 16:9 JPEG is copied byte for byte), and the picture it replaces is archived first as
 `public/film/img/archive/<scene>/<name>--v<N>.jpg`. 1920×1080 is the smallest a picture may be, not a size to shrink to.
-Do not run resizing or optimising tools over `public/film/img/`. The depth camera only needs a map, plate and cut-outs to
+Do not run resizing or optimising tools over `public/film/img/`. When a picture is generated, ask for the generator's largest
+size and install that file as it came; never save or upload a reduced copy. 26 pictures that are half the generator's size
+(1365×768 and the like) are listed in `docs/director-notes-2026-10-20.md`, item 19. The depth camera only needs a map, plate and cut-outs to
 share the picture's aspect, so a larger picture works with it. (The animatic export still renders at 1080p, and the
 Hangar/Rapture reels' `tools/build-playframe-reel.mjs` writes its own smaller copies under `public/reels/`; neither touches
 the film's pictures.)

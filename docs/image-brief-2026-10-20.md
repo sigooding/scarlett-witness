@@ -18,7 +18,9 @@ scene 80 pictures, which come up by themselves (see 3).
 3. **Never overwrite or delete a file.** Every filename here is new. If one exists already, stop and report it. If you make more
    than one version of a picture, save the best at the exact path and the others beside it as `<name>--alt1.jpg`,
    `<name>--alt2.jpg`.
-4. **Format:** JPEG, 16:9, at least 1920×1080. Bigger is better; never smaller, never downscaled. If you can run node, install
+4. **Format:** JPEG, 16:9, at least 1920×1080. Bigger is better; never smaller, never downscaled. **Ask the generator for its
+   largest size** (2730×1536 or larger where it offers it) and keep the file at the size it came out at: do not resize it
+   before installing, and never save a half-size copy. An enlarged small picture looks soft in the film. If you can run node, install
    each file with `FFMPEG=/usr/bin/ffmpeg node tools/install-film-picture.mjs <your file> public/film/img/<exact path>`, which
    crops to 16:9 and enlarges below 1920×1080 but never shrinks.
 5. **References:** attach the ones listed for each picture, faces first. Match faces, ages, hair and clothes exactly. Never
