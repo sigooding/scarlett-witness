@@ -5579,6 +5579,22 @@
      }
     ]
    }
+  },
+  "84-cries-without-a-sound": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s76/84-cries-without-a-sound/depth.png",
+    "depthPlate": "/film/depth/s76/84-cries-without-a-sound/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s76/84-cries-without-a-sound/cutout-1.png",
+      "depth": 0.766
+     }
+    ]
+   }
   }
  },
  "cutscenes": [

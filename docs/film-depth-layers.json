@@ -109,7 +109,8 @@
   "315-the-number-pressed": "automatic: 1 found",
   "76-05-vera-honey": "automatic: 1 found",
   "76-06-the-screen-goes-dark": "automatic: 1 found",
-  "76-07-the-lighter": "automatic: 1 found"
+  "76-07-the-lighter": "automatic: 1 found",
+  "84-cries-without-a-sound": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -1646,6 +1647,20 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
    "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg"
+  },
+  "84-cries-without-a-sound": {
+   "picture": "public/film/img/s76/84-cries-without-a-sound.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [460, 10, 1157, 1070],
+     "image": "/film/depth/s76/84-cries-without-a-sound/cutout-1.png",
+     "depth": 0.766
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s76/84-cries-without-a-sound/depth.png",
+   "depthPlate": "/film/depth/s76/84-cries-without-a-sound/plate.jpg"
   }
  }
 }

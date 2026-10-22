@@ -20933,13 +20933,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "76",
    "background": "/film/img/s76/84-cries-without-a-sound.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "60% 42%",
     "zoomDuration": 19,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s76/84-cries-without-a-sound/depth.png",
+    "depthPlate": "/film/depth/s76/84-cries-without-a-sound/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s76/84-cries-without-a-sound/cutout-1.png",
+      "depth": 0.766
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27916,5 +27927,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "08047a2836cb"
+ "builtinRevision": "28236970f908"
 } as unknown as Story;

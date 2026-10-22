@@ -6,7 +6,7 @@ with the people painted out, and the depth map). Look at the flagged ones first;
 from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth fields from its `pictureLook` in
 `src/film/studio-edits.json`, then rebuild. Each gets the suggested move: truck, 0.4, over 14 s.
 
-**7 made, 4 flagged, 4 left alone.**
+**8 made, 5 flagged, 4 left alone.**
 
 | Picture | Cut-outs | Flags |
 |---|---|---|
@@ -14,6 +14,7 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [76-06-the-screen-goes-dark](76-06-the-screen-goes-dark.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [76-07-the-lighter](76-07-the-lighter.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [82-on-the-floor](82-on-the-floor.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [84-cries-without-a-sound](84-cries-without-a-sound.jpg) | 1 | 3 person-like shape(s) still found in the plate |
 | [315-the-number-pressed](315-the-number-pressed.jpg) | 1 |  |
 | [76-01-the-walkway](76-01-the-walkway.jpg) | 1 |  |
 | [76-05-vera-honey](76-05-vera-honey.jpg) | 1 |  |
