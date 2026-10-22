@@ -19733,13 +19733,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 22,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+    "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+      "depth": 0.231
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19771,13 +19782,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 22,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+    "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+      "depth": 0.231
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19809,13 +19831,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 22,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+    "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+      "depth": 0.231
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19847,13 +19880,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 22,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+    "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+      "depth": 0.231
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19885,13 +19929,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-13-she-folds.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 19,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-13-she-folds/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-13-she-folds/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-13-she-folds/cutout-1.png",
+      "depth": 0.565
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19923,13 +19978,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/s74/503-she-holds-on.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "60% 42%",
     "zoomDuration": 22,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/503-she-holds-on/depth.png",
+    "depthPlate": "/film/depth/s74/503-she-holds-on/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/503-she-holds-on/cutout-1.png",
+      "depth": 0.996
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -19961,13 +20027,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-15-she-pushes-him-away.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "50% 45%",
     "zoomDuration": 14,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-15-she-pushes-him-away/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-15-she-pushes-him-away/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-15-she-pushes-him-away/cutout-1.png",
+      "depth": 0.863
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20075,6 +20152,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-17-the-reflection/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-17-the-reflection/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
+      "depth": 0.097
+     },
+     {
+      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
+      "depth": 0.416
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20106,13 +20198,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "74",
    "background": "/film/img/vera_run_new/74-18-she-covers-her-face.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "35% 50%",
     "zoomDuration": 21,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-18-she-covers-her-face/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-18-she-covers-her-face/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-18-she-covers-her-face/cutout-1.png",
+      "depth": 0.568
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20151,6 +20254,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/504-nobody-looks-down/depth.png",
+    "depthPlate": "/film/depth/s74/504-nobody-looks-down/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/504-nobody-looks-down/cutout-1.png",
+      "depth": 0.358
+     },
+     {
+      "image": "/film/depth/s74/504-nobody-looks-down/cutout-2.png",
+      "depth": 0.364
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20184,13 +20302,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "75",
    "background": "/film/img/vera_run_new/75-01-the-red-shoe.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "65% 50%",
     "zoomDuration": 19,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/75-01-the-red-shoe/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/75-01-the-red-shoe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/75-01-the-red-shoe/cutout-1.png",
+      "depth": 0.608
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20264,13 +20393,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "75",
    "background": "/film/img/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "50% 45%",
     "zoomDuration": 17,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/cutout-1.png",
+      "depth": 0.319
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27682,5 +27822,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "1cd251c8f568"
+ "builtinRevision": "0c62f56af8f8"
 } as unknown as Story;

@@ -5319,6 +5319,158 @@
      }
     ]
    }
+  },
+  "502-why-didnt-you-tell-me": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+    "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+      "depth": 0.231
+     }
+    ]
+   }
+  },
+  "74-13-she-folds": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-13-she-folds/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-13-she-folds/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-13-she-folds/cutout-1.png",
+      "depth": 0.565
+     }
+    ]
+   }
+  },
+  "503-she-holds-on": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/503-she-holds-on/depth.png",
+    "depthPlate": "/film/depth/s74/503-she-holds-on/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/503-she-holds-on/cutout-1.png",
+      "depth": 0.996
+     }
+    ]
+   }
+  },
+  "74-15-she-pushes-him-away": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-15-she-pushes-him-away/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-15-she-pushes-him-away/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-15-she-pushes-him-away/cutout-1.png",
+      "depth": 0.863
+     }
+    ]
+   }
+  },
+  "74-17-the-reflection": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-17-the-reflection/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-17-the-reflection/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
+      "depth": 0.097
+     },
+     {
+      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
+      "depth": 0.416
+     }
+    ]
+   }
+  },
+  "74-18-she-covers-her-face": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/74-18-she-covers-her-face/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/74-18-she-covers-her-face/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/74-18-she-covers-her-face/cutout-1.png",
+      "depth": 0.568
+     }
+    ]
+   }
+  },
+  "504-nobody-looks-down": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s74/504-nobody-looks-down/depth.png",
+    "depthPlate": "/film/depth/s74/504-nobody-looks-down/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s74/504-nobody-looks-down/cutout-1.png",
+      "depth": 0.358
+     },
+     {
+      "image": "/film/depth/s74/504-nobody-looks-down/cutout-2.png",
+      "depth": 0.364
+     }
+    ]
+   }
+  },
+  "75-01-the-red-shoe": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/75-01-the-red-shoe/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/75-01-the-red-shoe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/75-01-the-red-shoe/cutout-1.png",
+      "depth": 0.608
+     }
+    ]
+   }
+  },
+  "75-03-the-hive-shut--79-the-hive-shut-v1": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/depth.png",
+    "depthPlate": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/cutout-1.png",
+      "depth": 0.319
+     }
+    ]
+   }
   }
  },
  "cutscenes": [

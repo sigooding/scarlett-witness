@@ -6,7 +6,7 @@ with the people painted out, and the depth map). Look at the flagged ones first;
 from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth fields from its `pictureLook` in
 `src/film/studio-edits.json`, then rebuild. Each gets the suggested move: truck, 0.4, over 14 s.
 
-**59 made, 45 flagged, 2 left alone.**
+**68 made, 47 flagged, 3 left alone.**
 
 | Picture | Cut-outs | Flags |
 |---|---|---|
@@ -43,6 +43,7 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [497-eleven-fifty-two](497-eleven-fifty-two.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [498-open-shut](498-open-shut.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [499-the-screen](499-the-screen.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [502-why-didnt-you-tell-me](502-why-didnt-you-tell-me.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [547-the-call-still-lit](547-the-call-still-lit.jpg) | 1 | cut-out 1 runs to its box edge (may be clipped); 2 person-like shape(s) still found in the plate |
 | [69-the-wait](69-the-wait.jpg) | 2 | 1 person-like shape(s) still found in the plate |
 | [72-01-the-piano-plays-on](72-01-the-piano-plays-on.jpg) | 2 | 1 person-like shape(s) still found in the plate |
@@ -55,11 +56,14 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [73-09-she-cannot-breathe](73-09-she-cannot-breathe.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [73-10-a-car-passes](73-10-a-car-passes.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [74-08-you-knew](74-08-you-knew.jpg) | 1 | 1 person-like shape(s) still found in the plate |
+| [74-15-she-pushes-him-away](74-15-she-pushes-him-away.jpg) | 1 | 1 person-like shape(s) still found in the plate |
 | [02-vending](02-vending.jpg) | 1 |  |
 | [09-old-man-stops](09-old-man-stops.jpg) | 1 |  |
 | [329-the-lane-the-watch](329-the-lane-the-watch.jpg) | 1 |  |
 | [331-he-refuses](331-he-refuses.jpg) | 1 |  |
 | [501-one-shoe](501-one-shoe.jpg) | 1 |  |
+| [503-she-holds-on](503-she-holds-on.jpg) | 1 |  |
+| [504-nobody-looks-down](504-nobody-looks-down.jpg) | 2 |  |
 | [69-vera-runs](69-vera-runs.jpg) | 1 |  |
 | [73-03-she-runs--69-vera-runs-v2](73-03-she-runs--69-vera-runs-v2.jpg) | 1 |  |
 | [73-06-her-face--70-not-elegantly-badly-playframe](73-06-her-face--70-not-elegantly-badly-playframe.jpg) | 1 |  |
@@ -69,8 +73,14 @@ from `docs/film-depth-layers.json` (`pictures` and `peopleInShot`) and the depth
 | [74-03-his-hands--r1](74-03-his-hands--r1.jpg) | 1 |  |
 | [74-06-dont](74-06-dont.jpg) | 2 |  |
 | [74-09-his-silence](74-09-his-silence.jpg) | 1 |  |
+| [74-13-she-folds](74-13-she-folds.jpg) | 1 |  |
+| [74-17-the-reflection](74-17-the-reflection.jpg) | 2 |  |
+| [74-18-she-covers-her-face](74-18-she-covers-her-face.jpg) | 1 |  |
+| [75-01-the-red-shoe](75-01-the-red-shoe.jpg) | 1 |  |
+| [75-03-the-hive-shut--79-the-hive-shut-v1](75-03-the-hive-shut--79-the-hive-shut-v1.jpg) | 1 |  |
 
 ## Left alone
 
 - `70-the-call`: its camera is a dolly-zoom (chosen; the engine skips depth there)
 - `74-01-no-one-else-is-here`: nobody found: left as it was, since a missed person would stretch on a depth map alone
+- `75-04-the-machines-wait`: nobody found: left as it was, since a missed person would stretch on a depth map alone

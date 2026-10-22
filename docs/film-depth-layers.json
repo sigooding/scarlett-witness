@@ -93,7 +93,16 @@
   "74-06-dont": "automatic: 2 found",
   "501-one-shoe": "automatic: 1 found",
   "74-08-you-knew": "automatic: 1 found",
-  "74-09-his-silence": "automatic: 1 found"
+  "74-09-his-silence": "automatic: 1 found",
+  "502-why-didnt-you-tell-me": "automatic: 1 found",
+  "74-13-she-folds": "automatic: 1 found",
+  "503-she-holds-on": "automatic: 1 found",
+  "74-15-she-pushes-him-away": "automatic: 1 found",
+  "74-17-the-reflection": "automatic: 2 found",
+  "74-18-she-covers-her-face": "automatic: 1 found",
+  "504-nobody-looks-down": "automatic: 2 found",
+  "75-01-the-red-shoe": "automatic: 1 found",
+  "75-03-the-hive-shut--79-the-hive-shut-v1": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -1394,6 +1403,144 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/vera_run_new/74-09-his-silence/depth.png",
    "depthPlate": "/film/depth/vera_run_new/74-09-his-silence/plate.jpg"
+  },
+  "502-why-didnt-you-tell-me": {
+   "picture": "public/film/img/s74/502-why-didnt-you-tell-me.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [298, 0, 957, 1080],
+     "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+     "depth": 0.231
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+   "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg"
+  },
+  "74-13-she-folds": {
+   "picture": "public/film/img/vera_run_new/74-13-she-folds.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [647, 185, 947, 712],
+     "image": "/film/depth/vera_run_new/74-13-she-folds/cutout-1.png",
+     "depth": 0.565
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-13-she-folds/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-13-she-folds/plate.jpg"
+  },
+  "503-she-holds-on": {
+   "picture": "public/film/img/s74/503-she-holds-on.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [433, 0, 1253, 1080],
+     "image": "/film/depth/s74/503-she-holds-on/cutout-1.png",
+     "depth": 0.996
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s74/503-she-holds-on/depth.png",
+   "depthPlate": "/film/depth/s74/503-she-holds-on/plate.jpg"
+  },
+  "74-15-she-pushes-him-away": {
+   "picture": "public/film/img/vera_run_new/74-15-she-pushes-him-away.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [459, 129, 1134, 908],
+     "image": "/film/depth/vera_run_new/74-15-she-pushes-him-away/cutout-1.png",
+     "depth": 0.863
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-15-she-pushes-him-away/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-15-she-pushes-him-away/plate.jpg"
+  },
+  "74-17-the-reflection": {
+   "picture": "public/film/img/vera_run_new/74-17-the-reflection.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [582, 156, 133, 171],
+     "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
+     "depth": 0.097
+    },
+    {
+     "name": "person 2",
+     "box": [1403, 361, 79, 261],
+     "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
+     "depth": 0.416
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-17-the-reflection/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-17-the-reflection/plate.jpg"
+  },
+  "74-18-she-covers-her-face": {
+   "picture": "public/film/img/vera_run_new/74-18-she-covers-her-face.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [621, 0, 684, 1080],
+     "image": "/film/depth/vera_run_new/74-18-she-covers-her-face/cutout-1.png",
+     "depth": 0.568
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/74-18-she-covers-her-face/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-18-she-covers-her-face/plate.jpg"
+  },
+  "504-nobody-looks-down": {
+   "picture": "public/film/img/s74/504-nobody-looks-down.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [439, 774, 171, 171],
+     "image": "/film/depth/s74/504-nobody-looks-down/cutout-1.png",
+     "depth": 0.358
+    },
+    {
+     "name": "person 2",
+     "box": [704, 734, 149, 216],
+     "image": "/film/depth/s74/504-nobody-looks-down/cutout-2.png",
+     "depth": 0.364
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s74/504-nobody-looks-down/depth.png",
+   "depthPlate": "/film/depth/s74/504-nobody-looks-down/plate.jpg"
+  },
+  "75-01-the-red-shoe": {
+   "picture": "public/film/img/vera_run_new/75-01-the-red-shoe.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [791, 571, 409, 127],
+     "image": "/film/depth/vera_run_new/75-01-the-red-shoe/cutout-1.png",
+     "depth": 0.608
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/75-01-the-red-shoe/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/75-01-the-red-shoe/plate.jpg"
+  },
+  "75-03-the-hive-shut--79-the-hive-shut-v1": {
+   "picture": "public/film/img/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [1270, 538, 543, 245],
+     "image": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/cutout-1.png",
+     "depth": 0.319
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/plate.jpg"
   }
  }
 }
