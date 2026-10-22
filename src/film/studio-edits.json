@@ -3581,6 +3581,18 @@
       "pulseSeconds": 4,
       "pulseAmount": 0.2
      }
+    ],
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s76/315-the-number-pressed/depth.png",
+    "depthPlate": "/film/depth/s76/315-the-number-pressed/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s76/315-the-number-pressed/cutout-1.png",
+      "depth": 0.275
+     }
     ]
    }
   },
@@ -5468,6 +5480,102 @@
      {
       "image": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/cutout-1.png",
       "depth": 0.319
+     }
+    ]
+   }
+  },
+  "76-01-the-walkway": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-01-the-walkway/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-01-the-walkway/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
+      "depth": 0.454
+     }
+    ]
+   }
+  },
+  "76-02-the-empty-umbrella-stand": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/cutout-1.png",
+      "depth": 0.227
+     }
+    ]
+   }
+  },
+  "82-on-the-floor": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s76/82-on-the-floor/depth.png",
+    "depthPlate": "/film/depth/s76/82-on-the-floor/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
+      "depth": 0.829
+     }
+    ]
+   }
+  },
+  "76-05-vera-honey": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-05-vera-honey/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-05-vera-honey/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-05-vera-honey/cutout-1.png",
+      "depth": 0.049
+     }
+    ]
+   }
+  },
+  "76-06-the-screen-goes-dark": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/cutout-1.png",
+      "depth": 0.039
+     }
+    ]
+   }
+  },
+  "76-07-the-lighter": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
+      "depth": 0.657
      }
     ]
    }

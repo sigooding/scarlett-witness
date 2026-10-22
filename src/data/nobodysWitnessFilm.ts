@@ -20582,6 +20582,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-01-the-walkway/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-01-the-walkway/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
+      "depth": 0.454
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20620,6 +20631,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/cutout-1.png",
+      "depth": 0.227
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20651,13 +20673,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "76",
    "background": "/film/img/s76/82-on-the-floor.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "42% 38%",
     "zoomDuration": 21,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s76/82-on-the-floor/depth.png",
+    "depthPlate": "/film/depth/s76/82-on-the-floor/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
+      "depth": 0.829
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20689,7 +20722,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "76",
    "background": "/film/img/s76/315-the-number-pressed.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "60% 42%",
     "zoomDuration": 19,
     "dollyDirection": "left",
@@ -20705,6 +20738,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "intensity": 0.25,
       "pulseSeconds": 4,
       "pulseAmount": 0.2
+     }
+    ],
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/s76/315-the-number-pressed/depth.png",
+    "depthPlate": "/film/depth/s76/315-the-number-pressed/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s76/315-the-number-pressed/cutout-1.png",
+      "depth": 0.275
      }
     ],
     "filmGrade": false,
@@ -20745,6 +20789,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-05-vera-honey/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-05-vera-honey/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-05-vera-honey/cutout-1.png",
+      "depth": 0.049
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20777,13 +20832,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-06-the-screen-goes-dark.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "50% 60%",
     "zoomDuration": 14,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/cutout-1.png",
+      "depth": 0.039
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -20816,13 +20882,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "76",
    "background": "/film/img/vera_run_new/76-07-the-lighter.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "60% 42%",
     "zoomDuration": 22,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 14,
+    "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
+      "depth": 0.657
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27784,6 +27861,23 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "filmGrade": false,
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
+     },
+     "/film/img/s76/82-on-the-floor.jpg": {
+      "mode": "static",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 14,
+      "depthMap": "/film/depth/s76/82-on-the-floor/depth.png",
+      "depthPlate": "/film/depth/s76/82-on-the-floor/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
+        "depth": 0.829
+       }
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
      }
     }
    },
@@ -27822,5 +27916,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "0c62f56af8f8"
+ "builtinRevision": "08047a2836cb"
 } as unknown as Story;

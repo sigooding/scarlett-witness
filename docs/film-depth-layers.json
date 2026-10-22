@@ -102,7 +102,14 @@
   "74-18-she-covers-her-face": "automatic: 1 found",
   "504-nobody-looks-down": "automatic: 2 found",
   "75-01-the-red-shoe": "automatic: 1 found",
-  "75-03-the-hive-shut--79-the-hive-shut-v1": "automatic: 1 found"
+  "75-03-the-hive-shut--79-the-hive-shut-v1": "automatic: 1 found",
+  "76-01-the-walkway": "automatic: 1 found",
+  "76-02-the-empty-umbrella-stand": "automatic: 1 found",
+  "82-on-the-floor": "automatic: 1 found",
+  "315-the-number-pressed": "automatic: 1 found",
+  "76-05-vera-honey": "automatic: 1 found",
+  "76-06-the-screen-goes-dark": "automatic: 1 found",
+  "76-07-the-lighter": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -1541,6 +1548,104 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/depth.png",
    "depthPlate": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/plate.jpg"
+  },
+  "76-01-the-walkway": {
+   "picture": "public/film/img/vera_run_new/76-01-the-walkway.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [789, 147, 264, 897],
+     "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
+     "depth": 0.454
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/76-01-the-walkway/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-01-the-walkway/plate.jpg"
+  },
+  "76-02-the-empty-umbrella-stand": {
+   "picture": "public/film/img/vera_run_new/76-02-the-empty-umbrella-stand.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [831, 203, 222, 749],
+     "image": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/cutout-1.png",
+     "depth": 0.227
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/plate.jpg"
+  },
+  "82-on-the-floor": {
+   "picture": "public/film/img/s76/82-on-the-floor.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [485, 359, 960, 677],
+     "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
+     "depth": 0.829
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s76/82-on-the-floor/depth.png",
+   "depthPlate": "/film/depth/s76/82-on-the-floor/plate.jpg"
+  },
+  "315-the-number-pressed": {
+   "picture": "public/film/img/s76/315-the-number-pressed.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [507, 16, 894, 1064],
+     "image": "/film/depth/s76/315-the-number-pressed/cutout-1.png",
+     "depth": 0.275
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/s76/315-the-number-pressed/depth.png",
+   "depthPlate": "/film/depth/s76/315-the-number-pressed/plate.jpg"
+  },
+  "76-05-vera-honey": {
+   "picture": "public/film/img/vera_run_new/76-05-vera-honey.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [65, 0, 1171, 1080],
+     "image": "/film/depth/vera_run_new/76-05-vera-honey/cutout-1.png",
+     "depth": 0.049
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/76-05-vera-honey/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-05-vera-honey/plate.jpg"
+  },
+  "76-06-the-screen-goes-dark": {
+   "picture": "public/film/img/vera_run_new/76-06-the-screen-goes-dark.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [67, 0, 1468, 1152],
+     "image": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/cutout-1.png",
+     "depth": 0.039
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/plate.jpg"
+  },
+  "76-07-the-lighter": {
+   "picture": "public/film/img/vera_run_new/76-07-the-lighter.jpg",
+   "cutouts": [
+    {
+     "name": "person 1",
+     "box": [762, 143, 2082, 1457],
+     "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
+     "depth": 0.657
+    }
+   ],
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg"
   }
  }
 }
