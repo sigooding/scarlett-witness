@@ -1,0 +1,3083 @@
+[
+ {
+  "name": "100-02-his-silhouette-in-the-doorway (no cut-outs)",
+  "scene": "experiment",
+  "picture": "/film/img/final_scene_new/100-02-his-silhouette-in-the-doorway.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/experiments/100-02-depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.6,
+   "depthSeconds": 14,
+   "depthFocus": 0.55,
+   "depthDirection": "right"
+  },
+  "people": "Jack, standing in the doorway",
+  "cutoutCount": 0,
+  "review": null,
+  "experiment": "A plain depth map with the person still in it — what the repo's rule (docs/depth-camera.md §1) says not to ship. Watch his coat and face against the door frame as it slides."
+ },
+ {
+  "name": "m2-the-hive",
+  "scene": "montage",
+  "picture": "/film/img/montage/m2-the-hive.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/montage/m2-the-hive/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.44,
+   "depthSeconds": 5,
+   "depthFocus": 0.55,
+   "depthDirection": "right"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "01-backstreet",
+  "scene": "s1",
+  "picture": "/film/img/s1/01-backstreet.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/01-backstreet/depth.png",
+   "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/01-backstreet/cutout-1.png",
+     "depth": 0.665
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5,
+   "focalPoint": "50% 52%"
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "cut-out 1 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "02-vending",
+  "scene": "s1",
+  "picture": "/film/img/s1/02-vending.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/02-vending/depth.png",
+   "depthPlate": "/film/depth/s1/02-vending/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/02-vending/cutout-1.png",
+     "depth": 0.141
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5,
+   "focalPoint": "30% 50%"
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "03-mara-walks",
+  "scene": "s1",
+  "picture": "/film/img/s1/03-mara-walks.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/03-mara-walks/depth.png",
+   "depthPlate": "/film/depth/s1/03-mara-walks/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/03-mara-walks/cutout-1.png",
+     "depth": 0.885
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "2 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "04-mara-phone",
+  "scene": "s1",
+  "picture": "/film/img/s1/04-mara-phone.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/04-mara-phone/depth.png",
+   "depthPlate": "/film/depth/s1/04-mara-phone/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/04-mara-phone/cutout-1.png",
+     "depth": 0.171
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "05-phone-off",
+  "scene": "s1",
+  "picture": "/film/img/s1/05-phone-off.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/05-phone-off/depth.png",
+   "depthPlate": "/film/depth/s1/05-phone-off/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/05-phone-off/cutout-1.png",
+     "depth": 0.34
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "06-barbershop-doorway",
+  "scene": "s1",
+  "picture": "/film/img/s1/06-barbershop-doorway.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/06-barbershop-doorway/depth.png",
+   "depthPlate": "/film/depth/s1/06-barbershop-doorway/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/06-barbershop-doorway/cutout-1.png",
+     "depth": 0.639
+    },
+    {
+     "image": "/film/depth/s1/06-barbershop-doorway/cutout-2.png",
+     "depth": 0.654
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "07-old-man",
+  "scene": "s1",
+  "picture": "/film/img/s1/07-old-man.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/07-old-man/depth.png",
+   "depthPlate": "/film/depth/s1/07-old-man/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/07-old-man/cutout-1.png",
+     "depth": 0.711
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "09-old-man-stops",
+  "scene": "s1",
+  "picture": "/film/img/s1/09-old-man-stops.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/09-old-man-stops/depth.png",
+   "depthPlate": "/film/depth/s1/09-old-man-stops/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/09-old-man-stops/cutout-1.png",
+     "depth": 0.094
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "10-the-shot",
+  "scene": "s1",
+  "picture": "/film/img/s1/10-the-shot.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/10-the-shot/depth.png",
+   "depthPlate": "/film/depth/s1/10-the-shot/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/10-the-shot/cutout-1.png",
+     "depth": 0.649
+    },
+    {
+     "image": "/film/depth/s1/10-the-shot/cutout-2.png",
+     "depth": 0.422
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "cut-out 1 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "11-sakai-mid-fall",
+  "scene": "s1",
+  "picture": "/film/img/s1/11-sakai-mid-fall.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/11-sakai-mid-fall/depth.png",
+   "depthPlate": "/film/depth/s1/11-sakai-mid-fall/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/11-sakai-mid-fall/cutout-1.png",
+     "depth": 0.856
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "12-masked-man-radio",
+  "scene": "s1",
+  "picture": "/film/img/s1/12-masked-man-radio.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/12-masked-man-radio/depth.png",
+   "depthPlate": "/film/depth/s1/12-masked-man-radio/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/12-masked-man-radio/cutout-1.png",
+     "depth": 0.876
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "2 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "13-taillights-gone",
+  "scene": "s1",
+  "picture": "/film/img/s1/13-taillights-gone.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/13-taillights-gone/depth.png",
+   "depthPlate": "/film/depth/s1/13-taillights-gone/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/13-taillights-gone/cutout-1.png",
+     "depth": 0.252
+    },
+    {
+     "image": "/film/depth/s1/13-taillights-gone/cutout-2.png",
+     "depth": 0.639
+    },
+    {
+     "image": "/film/depth/s1/13-taillights-gone/cutout-3.png",
+     "depth": 0.613
+    },
+    {
+     "image": "/film/depth/s1/13-taillights-gone/cutout-4.png",
+     "depth": 0.43
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 4 found",
+  "cutoutCount": 4,
+  "review": {
+   "cutouts": "4",
+   "flags": "cut-out 2 runs to its box edge (may be clipped); cut-out 3 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "14-she-kneels",
+  "scene": "s1",
+  "picture": "/film/img/s1/14-she-kneels.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
+   "depthPlate": "/film/depth/s1/14-she-kneels/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/14-she-kneels/cutout-1.png",
+     "depth": 0.622
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "15-the-grip",
+  "scene": "s1",
+  "picture": "/film/img/s1/15-the-grip.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/15-the-grip/depth.png",
+   "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/15-the-grip/cutout-1.png",
+     "depth": 0.058
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "16-the-key",
+  "scene": "s1",
+  "picture": "/film/img/s1/16-the-key.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/16-the-key/depth.png",
+   "depthPlate": "/film/depth/s1/16-the-key/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/16-the-key/cutout-1.png",
+     "depth": 0.328
+    },
+    {
+     "image": "/film/depth/s1/16-the-key/cutout-2.png",
+     "depth": 0.455
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "cut-out 1 nearly empty; cut-out 2 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "17-she-runs",
+  "scene": "s1",
+  "picture": "/film/img/s1/17-she-runs.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/17-she-runs/depth.png",
+   "depthPlate": "/film/depth/s1/17-she-runs/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/17-she-runs/cutout-1.png",
+     "depth": 0.336
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "18-the-flashlight",
+  "scene": "s1",
+  "picture": "/film/img/s1/18-the-flashlight.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/18-the-flashlight/depth.png",
+   "depthPlate": "/film/depth/s1/18-the-flashlight/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/18-the-flashlight/cutout-1.png",
+     "depth": 0.658
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "328-the-scrap",
+  "scene": "s1",
+  "picture": "/film/img/s1/328-the-scrap.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/328-the-scrap/depth.png",
+   "depthPlate": "/film/depth/s1/328-the-scrap/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/328-the-scrap/cutout-1.png",
+     "depth": 0.201
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "2 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "329-the-lane-the-watch",
+  "scene": "s1",
+  "picture": "/film/img/s1/329-the-lane-the-watch.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
+   "depthPlate": "/film/depth/s1/329-the-lane-the-watch/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/329-the-lane-the-watch/cutout-1.png",
+     "depth": 0.209
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "330-the-red-clip",
+  "scene": "s1",
+  "picture": "/film/img/s1/330-the-red-clip.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/330-the-red-clip/depth.png",
+   "depthPlate": "/film/depth/s1/330-the-red-clip/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/330-the-red-clip/cutout-1.png",
+     "depth": 0.529
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "331-he-refuses",
+  "scene": "s1",
+  "picture": "/film/img/s1/331-he-refuses.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/331-he-refuses/depth.png",
+   "depthPlate": "/film/depth/s1/331-he-refuses/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/331-he-refuses/cutout-1.png",
+     "depth": 0.338
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "332-the-sedan-blocks-the-lane",
+  "scene": "s1",
+  "picture": "/film/img/s1/332-the-sedan-blocks-the-lane.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/332-the-sedan-blocks-the-lane/depth.png",
+   "depthPlate": "/film/depth/s1/332-the-sedan-blocks-the-lane/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/332-the-sedan-blocks-the-lane/cutout-1.png",
+     "depth": 0.415
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "333-the-white-light",
+  "scene": "s1",
+  "picture": "/film/img/s1/333-the-white-light.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/333-the-white-light/depth.png",
+   "depthPlate": "/film/depth/s1/333-the-white-light/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/333-the-white-light/cutout-1.png",
+     "depth": 0.69
+    },
+    {
+     "image": "/film/depth/s1/333-the-white-light/cutout-2.png",
+     "depth": 0.317
+    },
+    {
+     "image": "/film/depth/s1/333-the-white-light/cutout-3.png",
+     "depth": 0.36
+    },
+    {
+     "image": "/film/depth/s1/333-the-white-light/cutout-4.png",
+     "depth": 0.667
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 4 found",
+  "cutoutCount": 4,
+  "review": {
+   "cutouts": "4",
+   "flags": "cut-out 4 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "377-the-hive-remembered",
+  "scene": "s1",
+  "picture": "/film/img/s1/377-the-hive-remembered.jpg",
+  "cinematic": {
+   "depthMap": "/film/depth/s1/377-the-hive-remembered/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 7,
+   "focalPoint": "50% 55%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "383-the-empty-lane",
+  "scene": "s1",
+  "picture": "/film/img/s1/383-the-empty-lane.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
+   "depthPlate": "/film/depth/s1/383-the-empty-lane/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s1/383-the-empty-lane/cutout-1.png",
+     "depth": 0.598
+    },
+    {
+     "image": "/film/depth/s1/383-the-empty-lane/cutout-2.png",
+     "depth": 0.407
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5,
+   "focalPoint": "50% 52%"
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "cut-out 1 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "19-the-bar",
+  "scene": "s2",
+  "picture": "/film/img/s2/19-the-bar.jpg",
+  "cinematic": {
+   "depthMap": "/film/depth/s2/19-the-bar/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 5,
+   "focalPoint": "50% 50%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "20-the-journalist",
+  "scene": "s2",
+  "picture": "/film/img/s2/20-the-journalist.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
+   "depthPlate": "/film/depth/s2/20-the-journalist/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
+     "depth": 0.705
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "22-not-his-business",
+  "scene": "s2",
+  "picture": "/film/img/s2/22-not-his-business.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2/22-not-his-business/depth.png",
+   "depthPlate": "/film/depth/s2/22-not-his-business/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2/22-not-his-business/cutout-1.png",
+     "depth": 0.426
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "2 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "308-clip-under-the-shelf",
+  "scene": "s2",
+  "picture": "/film/img/s2/308-clip-under-the-shelf.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2/308-clip-under-the-shelf/depth.png",
+   "depthPlate": "/film/depth/s2/308-clip-under-the-shelf/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2/308-clip-under-the-shelf/cutout-1.png",
+     "depth": 0.465
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "21-mara-bursts-in-v1",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/21-mara-bursts-in-v1.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/21-mara-bursts-in-v1/depth.png",
+   "depthPlate": "/film/depth/s2_picks/21-mara-bursts-in-v1/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/21-mara-bursts-in-v1/cutout-1.png",
+     "depth": 0.554
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "cut-out 1 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "23-behind-the-counter-s2new2",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/23-behind-the-counter-s2new2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/23-behind-the-counter-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/23-behind-the-counter-s2new2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-1.png",
+     "depth": 0.358
+    },
+    {
+     "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-2.png",
+     "depth": 0.213
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "cut-out 2 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "24-from-the-floor-s2new2",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/24-from-the-floor-s2new2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/24-from-the-floor-s2new2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-1.png",
+     "depth": 0.055
+    },
+    {
+     "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-2.png",
+     "depth": 0.11
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "25-two-pairs-of-shoes-v2",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-1.png",
+     "depth": 0.308
+    },
+    {
+     "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-2.png",
+     "depth": 0.434
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "26-the-variety-show-s2new2",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/26-the-variety-show-s2new2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/26-the-variety-show-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/26-the-variety-show-s2new2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/26-the-variety-show-s2new2/cutout-1.png",
+     "depth": 0.187
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "cut-out 1 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "27-the-notebook-v1",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/27-the-notebook-v1.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/27-the-notebook-v1/depth.png",
+   "depthPlate": "/film/depth/s2_picks/27-the-notebook-v1/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
+     "depth": 0.715
+    },
+    {
+     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
+     "depth": 0.461
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "cut-out 1 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "28-the-blue-glow-s2new2",
+  "scene": "s2_picks",
+  "picture": "/film/img/s2_picks/28-the-blue-glow-s2new2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s2_picks/28-the-blue-glow-s2new2/depth.png",
+   "depthPlate": "/film/depth/s2_picks/28-the-blue-glow-s2new2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s2_picks/28-the-blue-glow-s2new2/cutout-1.png",
+     "depth": 0.269
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "cut-out 1 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "29-apartment-block",
+  "scene": "s3",
+  "picture": "/film/img/s3/29-apartment-block.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s3/29-apartment-block/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.29,
+   "depthSeconds": 8,
+   "depthFocus": 0.48,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "30-the-elevated-line",
+  "scene": "s3",
+  "picture": "/film/img/s3/30-the-elevated-line.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.56,
+   "depthSeconds": 6,
+   "depthFocus": 0.5,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "31-the-lit-window",
+  "scene": "s3",
+  "picture": "/film/img/s3/31-the-lit-window.jpg",
+  "cinematic": {
+   "depthMap": "/film/depth/s3/31-the-lit-window/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.56,
+   "depthSeconds": 5,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "32-laundry-in-the-rain",
+  "scene": "s3",
+  "picture": "/film/img/s3/32-laundry-in-the-rain.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s3/32-laundry-in-the-rain/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.29,
+   "depthSeconds": 5,
+   "focalPoint": "49% 48%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "43-the-front-counter",
+  "scene": "s5",
+  "picture": "/film/img/s5/43-the-front-counter.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s5/43-the-front-counter/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.22,
+   "depthSeconds": 7,
+   "focalPoint": "50% 48%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "63-the-detectives-room",
+  "scene": "s7",
+  "picture": "/film/img/s7/63-the-detectives-room.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s7/63-the-detectives-room/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 6,
+   "focalPoint": "50% 50%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "68-the-clock",
+  "scene": "s7",
+  "picture": "/film/img/s7/68-the-clock.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s7/68-the-clock/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.4,
+   "depthSeconds": 5,
+   "focalPoint": "62% 45%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "240-the-far-end",
+  "scene": "s8",
+  "picture": "/film/img/s8/240-the-far-end.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s8/240-the-far-end/depth.png",
+   "depthPlate": "/film/depth/s8/240-the-far-end/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s8/240-the-far-end/cutout-1.png",
+     "depth": 0.49
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.54,
+   "depthSeconds": 5,
+   "depthDirection": "left"
+  },
+  "people": "the barman",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "412-pressed-against-the-railway",
+  "scene": "s10",
+  "picture": "/film/img/s10/412-pressed-against-the-railway.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s10/412-pressed-against-the-railway/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.38,
+   "depthSeconds": 6,
+   "focalPoint": "50% 55%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "422-everywhere-a-small-thing-could-fall",
+  "scene": "s12",
+  "picture": "/film/img/s12/422-everywhere-a-small-thing-could-fall.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.4,
+   "depthSeconds": 6,
+   "focalPoint": "50% 58%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "335-the-lane-mouth",
+  "scene": "s14a",
+  "picture": "/film/img/s14a/335-the-lane-mouth.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s14a/335-the-lane-mouth/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.45,
+   "depthSeconds": 6,
+   "focalPoint": "50% 60%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "340-the-shuttered-door",
+  "scene": "s14a",
+  "picture": "/film/img/s14a/340-the-shuttered-door.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s14a/340-the-shuttered-door/depth.png",
+   "depthPlate": "/film/depth/s14a/340-the-shuttered-door/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s14a/340-the-shuttered-door/cutout-1.png",
+     "depth": 0.412
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.47,
+   "depthSeconds": 5,
+   "focalPoint": "50% 55%"
+  },
+  "people": "a figure with an umbrella",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "432-the-hive",
+  "scene": "s15",
+  "picture": "/film/img/s15/432-the-hive.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s15/432-the-hive/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.42,
+   "depthSeconds": 6,
+   "focalPoint": "50% 56%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "249-the-chair",
+  "scene": "s16",
+  "picture": "/film/img/s16/249-the-chair.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s16/249-the-chair/depth.png",
+   "depthPlate": "/film/depth/s16/249-the-chair/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s16/249-the-chair/cutout-1.png",
+     "depth": 0.514
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.54,
+   "depthSeconds": 5,
+   "depthDirection": "right"
+  },
+  "people": "Jack",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "195-somewhere-like-this",
+  "scene": "s22",
+  "picture": "/film/img/s22/195-somewhere-like-this.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s22/195-somewhere-like-this/depth.png",
+   "depthPlate": "/film/depth/s22/195-somewhere-like-this/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s22/195-somewhere-like-this/cutout-1.png",
+     "depth": 0.98
+    },
+    {
+     "image": "/film/depth/s22/195-somewhere-like-this/cutout-2.png",
+     "depth": 0.353
+    },
+    {
+     "image": "/film/depth/s22/195-somewhere-like-this/cutout-3.png",
+     "depth": 0.871
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.54,
+   "depthSeconds": 5,
+   "depthDirection": "left"
+  },
+  "people": "Vera, Jack and the cook",
+  "cutoutCount": 3,
+  "review": null
+ },
+ {
+  "name": "198-the-lanterns-sway",
+  "scene": "s23",
+  "picture": "/film/img/s23/198-the-lanterns-sway.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s23/198-the-lanterns-sway/depth.png",
+   "depthPlate": "/film/depth/s23/198-the-lanterns-sway/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s23/198-the-lanterns-sway/cutout-1.png",
+     "depth": 0.788
+    },
+    {
+     "image": "/film/depth/s23/198-the-lanterns-sway/cutout-2.png",
+     "depth": 0.745
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.25,
+   "depthSeconds": 8,
+   "depthFocus": 0.48,
+   "depthDirection": "left"
+  },
+  "people": "the diners",
+  "cutoutCount": 2,
+  "review": null
+ },
+ {
+  "name": "200-the-number-114",
+  "scene": "s25",
+  "picture": "/film/img/s25/200-the-number-114.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s25/200-the-number-114/depth.png",
+   "depthPlate": "/film/depth/s25/200-the-number-114/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s25/200-the-number-114/cutout-1.png",
+     "depth": 0.922
+    },
+    {
+     "image": "/film/depth/s25/200-the-number-114/cutout-2.png",
+     "depth": 0.565
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.45,
+   "depthSeconds": 5,
+   "focalPoint": "50% 55%"
+  },
+  "people": "Jack and Vera",
+  "cutoutCount": 2,
+  "review": null
+ },
+ {
+  "name": "452-the-loop",
+  "scene": "s26",
+  "picture": "/film/img/s26/452-the-loop.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s26/452-the-loop/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.32,
+   "depthSeconds": 6,
+   "depthFocus": 0.52,
+   "depthDirection": "right"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "374-the-dead-television",
+  "scene": "s27a",
+  "picture": "/film/img/s27a/374-the-dead-television.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
+   "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
+     "depth": 0.42
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.45,
+   "depthSeconds": 5,
+   "focalPoint": "60% 45%"
+  },
+  "people": "Vera",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "354-the-altar-photograph",
+  "scene": "s29",
+  "picture": "/film/img/s29/354-the-altar-photograph.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
+   "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
+     "depth": 0.718
+    }
+   ],
+   "depthMotion": "drift",
+   "depthAmount": 0.54,
+   "depthSeconds": 6
+  },
+  "people": "Mrs. Sakai",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "205-a-light-ahead",
+  "scene": "s30",
+  "picture": "/film/img/s30/205-a-light-ahead.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s30/205-a-light-ahead/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 6,
+   "focalPoint": "55% 55%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "460-parked-crooked",
+  "scene": "s37",
+  "picture": "/film/img/s37/460-parked-crooked.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.34,
+   "depthSeconds": 5,
+   "depthFocus": 0.58,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "173-four-black-sedans",
+  "scene": "s38",
+  "picture": "/film/img/s38/173-four-black-sedans.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s38/173-four-black-sedans/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.56,
+   "depthSeconds": 6,
+   "depthFocus": 0.7,
+   "depthDirection": "right"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "179-same-wood",
+  "scene": "s41",
+  "picture": "/film/img/s41/179-same-wood.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+   "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+     "depth": 0.365
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.5,
+   "depthSeconds": 4,
+   "depthFocus": 0.365,
+   "depthDirection": "right"
+  },
+  "people": "a man down the corridor",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "364-the-kotatsu",
+  "scene": "s59",
+  "picture": "/film/img/s59/364-the-kotatsu.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 5,
+   "focalPoint": "50% 58%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "367-the-phone-rings",
+  "scene": "s59",
+  "picture": "/film/img/s59/367-the-phone-rings.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s59/367-the-phone-rings/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.32,
+   "depthSeconds": 5,
+   "focalPoint": "50% 65%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "278-the-clock-reads-ten",
+  "scene": "s66",
+  "picture": "/film/img/s66/278-the-clock-reads-ten.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s66/278-the-clock-reads-ten/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.32,
+   "depthSeconds": 5,
+   "focalPoint": "50% 45%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "234-a-different-clock",
+  "scene": "s67",
+  "picture": "/film/img/s67/234-a-different-clock.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s67/234-a-different-clock/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 5,
+   "focalPoint": "50% 60%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "313-drawings-in-the-water",
+  "scene": "s71",
+  "picture": "/film/img/s71/313-drawings-in-the-water.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s71/313-drawings-in-the-water/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.56,
+   "depthSeconds": 6,
+   "depthFocus": 0.6,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "402-the-windows-wake",
+  "scene": "s71",
+  "picture": "/film/img/s71/402-the-windows-wake.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s71/402-the-windows-wake/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.36,
+   "depthSeconds": 6,
+   "depthFocus": 0.5,
+   "depthDirection": "right"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "497-eleven-fifty-two",
+  "scene": "s72",
+  "picture": "/film/img/s72/497-eleven-fifty-two.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s72/497-eleven-fifty-two/depth.png",
+   "depthPlate": "/film/depth/s72/497-eleven-fifty-two/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s72/497-eleven-fifty-two/cutout-1.png",
+     "depth": 0.434
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "498-open-shut",
+  "scene": "s72",
+  "picture": "/film/img/s72/498-open-shut.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s72/498-open-shut/depth.png",
+   "depthPlate": "/film/depth/s72/498-open-shut/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s72/498-open-shut/cutout-1.png",
+     "depth": 0.417
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "499-the-screen",
+  "scene": "s72",
+  "picture": "/film/img/s72/499-the-screen.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s72/499-the-screen/depth.png",
+   "depthPlate": "/film/depth/s72/499-the-screen/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s72/499-the-screen/cutout-1.png",
+     "depth": 0.37
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "69-the-wait",
+  "scene": "s72",
+  "picture": "/film/img/s72/69-the-wait.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s72/69-the-wait/depth.png",
+   "depthPlate": "/film/depth/s72/69-the-wait/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s72/69-the-wait/cutout-1.png",
+     "depth": 0.068
+    },
+    {
+     "image": "/film/depth/s72/69-the-wait/cutout-2.png",
+     "depth": 0.261
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "387-the-street-too-long",
+  "scene": "s73",
+  "picture": "/film/img/s73/387-the-street-too-long.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s73/387-the-street-too-long/depth.png",
+   "depthPlate": "/film/depth/s73/387-the-street-too-long/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
+     "depth": 0.541
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.54,
+   "depthSeconds": 6,
+   "focalPoint": "50% 55%"
+  },
+  "people": "Vera, far off",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "547-the-call-still-lit",
+  "scene": "s73",
+  "picture": "/film/img/s73/547-the-call-still-lit.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s73/547-the-call-still-lit/depth.png",
+   "depthPlate": "/film/depth/s73/547-the-call-still-lit/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s73/547-the-call-still-lit/cutout-1.png",
+     "depth": 0.845
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "cut-out 1 runs to its box edge (may be clipped); 2 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "549-the-crossing-chimes",
+  "scene": "s73",
+  "picture": "/film/img/s73/549-the-crossing-chimes.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s73/549-the-crossing-chimes/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.38,
+   "depthSeconds": 5,
+   "focalPoint": "50% 58%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "69-vera-runs",
+  "scene": "s73",
+  "picture": "/film/img/s73/69-vera-runs.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s73/69-vera-runs/depth.png",
+   "depthPlate": "/film/depth/s73/69-vera-runs/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s73/69-vera-runs/cutout-1.png",
+     "depth": 0.556
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "72-the-lost-heel",
+  "scene": "s73",
+  "picture": "/film/img/s73/72-the-lost-heel.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s73/72-the-lost-heel/depth.png",
+   "depthPlate": "/film/depth/s73/72-the-lost-heel/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s73/72-the-lost-heel/cutout-1.png",
+     "depth": 0.971
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "501-one-shoe",
+  "scene": "s74",
+  "picture": "/film/img/s74/501-one-shoe.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/501-one-shoe/depth.png",
+   "depthPlate": "/film/depth/s74/501-one-shoe/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/501-one-shoe/cutout-1.png",
+     "depth": 0.592
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "502-why-didnt-you-tell-me",
+  "scene": "s74",
+  "picture": "/film/img/s74/502-why-didnt-you-tell-me.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/502-why-didnt-you-tell-me/depth.png",
+   "depthPlate": "/film/depth/s74/502-why-didnt-you-tell-me/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
+     "depth": 0.231
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "503-she-holds-on",
+  "scene": "s74",
+  "picture": "/film/img/s74/503-she-holds-on.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/503-she-holds-on/depth.png",
+   "depthPlate": "/film/depth/s74/503-she-holds-on/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/503-she-holds-on/cutout-1.png",
+     "depth": 0.996
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "504-nobody-looks-down",
+  "scene": "s74",
+  "picture": "/film/img/s74/504-nobody-looks-down.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/504-nobody-looks-down/depth.png",
+   "depthPlate": "/film/depth/s74/504-nobody-looks-down/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/504-nobody-looks-down/cutout-1.png",
+     "depth": 0.358
+    },
+    {
+     "image": "/film/depth/s74/504-nobody-looks-down/cutout-2.png",
+     "depth": 0.364
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": ""
+  }
+ },
+ {
+  "name": "73-two-small-figures",
+  "scene": "s74",
+  "picture": "/film/img/s74/73-two-small-figures.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/73-two-small-figures/depth.png",
+   "depthPlate": "/film/depth/s74/73-two-small-figures/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/73-two-small-figures/cutout-1.png",
+     "depth": 0.102
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.8,
+   "depthSeconds": 6,
+   "focalPoint": "70% 45%"
+  },
+  "people": "Vera and Jack, small",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "74-twenty-metres-apart",
+  "scene": "s74",
+  "picture": "/film/img/s74/74-twenty-metres-apart.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/74-twenty-metres-apart/depth.png",
+   "depthPlate": "/film/depth/s74/74-twenty-metres-apart/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
+     "depth": 0.703
+    },
+    {
+     "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
+     "depth": 0.727
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.72,
+   "depthSeconds": 5,
+   "depthDirection": "right"
+  },
+  "people": "Vera and Jack",
+  "cutoutCount": 2,
+  "review": null
+ },
+ {
+  "name": "75-one-desperate-blow",
+  "scene": "s74",
+  "picture": "/film/img/s74/75-one-desperate-blow.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s74/75-one-desperate-blow/depth.png",
+   "depthPlate": "/film/depth/s74/75-one-desperate-blow/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s74/75-one-desperate-blow/cutout-1.png",
+     "depth": 0.792
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.72,
+   "depthSeconds": 5,
+   "focalPoint": "62% 42%"
+  },
+  "people": "Vera and Jack",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "314-the-empty-crossing",
+  "scene": "s75",
+  "picture": "/film/img/s75/314-the-empty-crossing.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.45,
+   "depthSeconds": 6,
+   "focalPoint": "50% 54%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "78-the-empty-lounge",
+  "scene": "s75",
+  "picture": "/film/img/s75/78-the-empty-lounge.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s75/78-the-empty-lounge/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.48,
+   "depthSeconds": 6,
+   "depthFocus": 0.5,
+   "depthDirection": "right"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "79-the-hive-shut",
+  "scene": "s75",
+  "picture": "/film/img/s75/79-the-hive-shut.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s75/79-the-hive-shut/depth.png",
+   "depthMotion": "drift",
+   "depthAmount": 0.22,
+   "depthSeconds": 9,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "80-the-machine-waits",
+  "scene": "s75",
+  "picture": "/film/img/s75/80-the-machine-waits.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s75/80-the-machine-waits/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.32,
+   "depthSeconds": 5,
+   "focalPoint": "34% 52%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "81-static-in-a-window",
+  "scene": "s75",
+  "picture": "/film/img/s75/81-static-in-a-window.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s75/81-static-in-a-window/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.26,
+   "depthSeconds": 5,
+   "focalPoint": "52% 48%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "315-the-number-pressed",
+  "scene": "s76",
+  "picture": "/film/img/s76/315-the-number-pressed.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s76/315-the-number-pressed/depth.png",
+   "depthPlate": "/film/depth/s76/315-the-number-pressed/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s76/315-the-number-pressed/cutout-1.png",
+     "depth": 0.275
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "82-on-the-floor",
+  "scene": "s76",
+  "picture": "/film/img/s76/82-on-the-floor.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s76/82-on-the-floor/depth.png",
+   "depthPlate": "/film/depth/s76/82-on-the-floor/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
+     "depth": 0.829
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "84-cries-without-a-sound",
+  "scene": "s76",
+  "picture": "/film/img/s76/84-cries-without-a-sound.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s76/84-cries-without-a-sound/depth.png",
+   "depthPlate": "/film/depth/s76/84-cries-without-a-sound/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s76/84-cries-without-a-sound/cutout-1.png",
+     "depth": 0.766
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "3 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "104-the-newsroom",
+  "scene": "s82",
+  "picture": "/film/img/s82/104-the-newsroom.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s82/104-the-newsroom/depth.png",
+   "depthPlate": "/film/depth/s82/104-the-newsroom/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s82/104-the-newsroom/cutout-1.png",
+     "depth": 0.6
+    },
+    {
+     "image": "/film/depth/s82/104-the-newsroom/cutout-2.png",
+     "depth": 0.42
+    },
+    {
+     "image": "/film/depth/s82/104-the-newsroom/cutout-3.png",
+     "depth": 0.278
+    },
+    {
+     "image": "/film/depth/s82/104-the-newsroom/cutout-4.png",
+     "depth": 0.631
+    }
+   ],
+   "depthMotion": "push",
+   "depthAmount": 0.25,
+   "depthSeconds": 7,
+   "focalPoint": "50% 50%"
+  },
+  "people": "the newsroom staff",
+  "cutoutCount": 4,
+  "review": null
+ },
+ {
+  "name": "379-the-laundry",
+  "scene": "s90",
+  "picture": "/film/img/s90/379-the-laundry.jpg",
+  "cinematic": {
+   "mode": "zoom-hold",
+   "depthMap": "/film/depth/s90/379-the-laundry/depth.png",
+   "depthPlate": "/film/depth/s90/379-the-laundry/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s90/379-the-laundry/cutout-1.png",
+     "depth": 0.702
+    },
+    {
+     "image": "/film/depth/s90/379-the-laundry/cutout-2.png",
+     "depth": 0.729
+    }
+   ],
+   "depthMotion": "drift",
+   "depthAmount": 0.16,
+   "depthSeconds": 26
+  },
+  "people": "Jack, Vera and two women",
+  "cutoutCount": 2,
+  "review": null
+ },
+ {
+  "name": "134-the-walkway-is-empty",
+  "scene": "s91",
+  "picture": "/film/img/s91/134-the-walkway-is-empty.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.56,
+   "depthSeconds": 6,
+   "depthFocus": 0.55,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "142-taillights",
+  "scene": "s95",
+  "picture": "/film/img/s95/142-taillights.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s95/142-taillights/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.48,
+   "depthSeconds": 5,
+   "focalPoint": "50% 62%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "144-empty",
+  "scene": "s96",
+  "picture": "/film/img/s96/144-empty.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s96/144-empty/depth.png",
+   "depthPlate": "/film/depth/s96/144-empty/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s96/144-empty/cutout-1.png",
+     "depth": 0.435
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.54,
+   "depthSeconds": 5,
+   "depthFocus": 0.6,
+   "depthDirection": "right"
+  },
+  "people": "a hand at the drawer",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "305-the-plaza",
+  "scene": "s99a",
+  "picture": "/film/img/s99a/305-the-plaza.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s99a/305-the-plaza/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.32,
+   "depthSeconds": 6,
+   "focalPoint": "50% 55%",
+   "colorGrade": "nolan-imax"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "307-the-gardener",
+  "scene": "s99a",
+  "picture": "/film/img/s99a/307-the-gardener.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s99a/307-the-gardener/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.35,
+   "depthSeconds": 8,
+   "focalPoint": "52% 50%",
+   "colorGrade": "nolan-imax"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "530-exposed-to-the-sky",
+  "scene": "s99a",
+  "picture": "/film/img/s99a/530-exposed-to-the-sky.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s99a/530-exposed-to-the-sky/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.32,
+   "depthSeconds": 6,
+   "focalPoint": "48% 48%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "531-six-old-stools",
+  "scene": "s99a",
+  "picture": "/film/img/s99a/531-six-old-stools.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/s99a/531-six-old-stools/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.34,
+   "depthSeconds": 6,
+   "depthFocus": 0.55,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "574-the-viaduct-at-dusk",
+  "scene": "service_new",
+  "picture": "/film/img/service_new/574-the-viaduct-at-dusk.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/service_new/574-the-viaduct-at-dusk/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 6,
+   "depthFocus": 0.55,
+   "depthDirection": "right"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "577-the-window",
+  "scene": "service_new",
+  "picture": "/film/img/service_new/577-the-window.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/service_new/577-the-window/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.36,
+   "depthSeconds": 5,
+   "depthFocus": 0.5,
+   "depthDirection": "left"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "588-it-rains-all-night",
+  "scene": "service_new",
+  "picture": "/film/img/service_new/588-it-rains-all-night.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/service_new/588-it-rains-all-night/depth.png",
+   "depthMotion": "push",
+   "depthAmount": 0.36,
+   "depthSeconds": 5,
+   "focalPoint": "50% 56%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "72-01-the-piano-plays-on",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/72-01-the-piano-plays-on.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/72-01-the-piano-plays-on/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/72-01-the-piano-plays-on/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-1.png",
+     "depth": 0.062
+    },
+    {
+     "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-2.png",
+     "depth": 0.27
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "72-03-the-lighter-into-the-bag",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/72-03-the-lighter-into-the-bag.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/cutout-1.png",
+     "depth": 0.415
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "72-05-the-umbrella-stays",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/72-05-the-umbrella-stays.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/72-05-the-umbrella-stays/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/72-05-the-umbrella-stays/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-1.png",
+     "depth": 0.328
+    },
+    {
+     "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-2.png",
+     "depth": 0.572
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": "cut-out 2 runs to its box edge (may be clipped)"
+  }
+ },
+ {
+  "name": "73-05-toward-the-tracks",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/73-05-toward-the-tracks.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/73-05-toward-the-tracks/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-05-toward-the-tracks/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/73-05-toward-the-tracks/cutout-1.png",
+     "depth": 0.715
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.35,
+   "depthSeconds": 5,
+   "focalPoint": "50% 50%"
+  },
+  "people": "Vera, running away",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
+  "name": "73-07-heels-on-wet-pavement",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/73-07-heels-on-wet-pavement.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/cutout-1.png",
+     "depth": 0.642
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "73-09-she-cannot-breathe",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
+     "depth": 0.392
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "73-10-a-car-passes",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/73-10-a-car-passes.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/73-10-a-car-passes/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-10-a-car-passes/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/73-10-a-car-passes/cutout-1.png",
+     "depth": 0.707
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "73-13-on-red",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/73-13-on-red.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/73-13-on-red/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-13-on-red/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/73-13-on-red/cutout-1.png",
+     "depth": 0.779
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "74-06-dont",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-06-dont.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-06-dont/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-06-dont/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-06-dont/cutout-1.png",
+     "depth": 0.568
+    },
+    {
+     "image": "/film/depth/vera_run_new/74-06-dont/cutout-2.png",
+     "depth": 0.575
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": ""
+  }
+ },
+ {
+  "name": "74-08-you-knew",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-08-you-knew.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-08-you-knew/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-08-you-knew/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-08-you-knew/cutout-1.png",
+     "depth": 0.265
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "74-09-his-silence",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-09-his-silence.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-09-his-silence/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-09-his-silence/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-09-his-silence/cutout-1.png",
+     "depth": 0.197
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "74-13-she-folds",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-13-she-folds.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-13-she-folds/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-13-she-folds/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-13-she-folds/cutout-1.png",
+     "depth": 0.565
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "74-15-she-pushes-him-away",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-15-she-pushes-him-away.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-15-she-pushes-him-away/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-15-she-pushes-him-away/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-15-she-pushes-him-away/cutout-1.png",
+     "depth": 0.863
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "74-17-the-reflection",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-17-the-reflection.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-17-the-reflection/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-17-the-reflection/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
+     "depth": 0.097
+    },
+    {
+     "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
+     "depth": 0.416
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 2 found",
+  "cutoutCount": 2,
+  "review": {
+   "cutouts": "2",
+   "flags": ""
+  }
+ },
+ {
+  "name": "74-18-she-covers-her-face",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/74-18-she-covers-her-face.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/74-18-she-covers-her-face/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/74-18-she-covers-her-face/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/74-18-she-covers-her-face/cutout-1.png",
+     "depth": 0.568
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "75-01-the-red-shoe",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/75-01-the-red-shoe.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/75-01-the-red-shoe/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/75-01-the-red-shoe/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/75-01-the-red-shoe/cutout-1.png",
+     "depth": 0.608
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "75-02-the-empty-lounge",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.35,
+   "depthSeconds": 5,
+   "focalPoint": "50% 50%"
+  },
+  "people": null,
+  "cutoutCount": 0,
+  "review": null
+ },
+ {
+  "name": "76-01-the-walkway",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/76-01-the-walkway.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/76-01-the-walkway/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-01-the-walkway/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
+     "depth": 0.454
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "76-02-the-empty-umbrella-stand",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/76-02-the-empty-umbrella-stand.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/cutout-1.png",
+     "depth": 0.227
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "76-05-vera-honey",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/76-05-vera-honey.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/76-05-vera-honey/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-05-vera-honey/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/76-05-vera-honey/cutout-1.png",
+     "depth": 0.049
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "76-06-the-screen-goes-dark",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/76-06-the-screen-goes-dark.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/cutout-1.png",
+     "depth": 0.039
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "76-07-the-lighter",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/76-07-the-lighter.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
+     "depth": 0.657
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "1 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "72-02-the-phone-lowers--r1",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/72-02-the-phone-lowers--r1.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/cutout-1.png",
+     "depth": 0.163
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "2 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "72-04-walking-very-carefully--r1",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/72-04-walking-very-carefully--r1.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
+     "depth": 0.385
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": "3 person-like shape(s) still found in the plate"
+  }
+ },
+ {
+  "name": "73-03-she-runs--69-vera-runs-v2",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/73-03-she-runs--69-vera-runs-v2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/cutout-1.png",
+     "depth": 0.759
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "73-06-her-face--70-not-elegantly-badly-playframe",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/cutout-1.png",
+     "depth": 0.583
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "73-08-she-slips--70-not-elegantly-badly-playframe",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/cutout-1.png",
+     "depth": 0.583
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "73-11-the-vending-machine--71-the-machine-glows-v2",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/cutout-1.png",
+     "depth": 0.949
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "74-03-his-hands--r1",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/74-03-his-hands--r1.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/74-03-his-hands--r1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/74-03-his-hands--r1/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/74-03-his-hands--r1/cutout-1.png",
+     "depth": 0.119
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ },
+ {
+  "name": "75-03-the-hive-shut--79-the-hive-shut-v1",
+  "scene": "vera_run_takes",
+  "picture": "/film/img/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/depth.png",
+   "depthPlate": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/cutout-1.png",
+     "depth": 0.319
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "automatic: 1 found",
+  "cutoutCount": 1,
+  "review": {
+   "cutouts": "1",
+   "flags": ""
+  }
+ }
+]

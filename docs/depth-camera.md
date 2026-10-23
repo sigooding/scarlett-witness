@@ -268,3 +268,51 @@ montage and never seen. Now `tools/build-film-story.mjs` gives each montage stil
 draws the depth camera on the still on screen and the one dissolving out (the same layer through the dissolve, so the
 move never restarts), its move fitted to the hold (`depthSeconds` at most the hold plus 2 s); stills without a map keep
 the slow zoom. The titles have 4 such stills (377, the railway, 80, 314) and the end credits 4 (01, 63, 200, 74).
+
+## Four depth-only shots added 23 October 2026
+
+Four empty-location pictures were given the depth-map camera, made with image tools from the picture itself (the
+method §2 permits alongside Depth Anything; the Depth Anything weights come from `release-assets.githubusercontent.com`,
+which the sandbox could not reach — the same block as 10 October). Each map was checked against its plate on a contact
+sheet before wiring: `public/film/review/2026-10-23-depth-maps/contact-sheet.jpg`. None of them has a person in it, so
+none is in `peopleInShot`.
+
+| Picture | Scene | Move | Amount | Seconds | `depth.png` |
+|---|---|---|---|---|---|
+| `432-the-hive` | s15 | push, focal 50% 56% | 0.42 | 18 | `public/film/depth/s15/432-the-hive/depth.png` |
+| `422-everywhere-a-small-thing-could-fall` | s12 | push, focal 50% 58% | 0.40 | 18 | `public/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png` |
+| `577-the-window` | service_new (97A) | truck, focus 0.5 | 0.36 | 16 | `public/film/depth/service_new/577-the-window/depth.png` |
+| `m2-the-hive` | montage (opening titles) | truck, focus 0.55 | 0.44 | 16 | `public/film/depth/montage/m2-the-hive/depth.png` |
+
+They are wired in `src/film/studio-edits.json` (`pictureLook`) with `mode: "static"` (the current film rule), and
+`node tools/build-film-story.mjs` regenerated `src/data/nobodysWitnessFilm.ts`. `npm run test:film-depth` passes.
+`m2-the-hive` is in the opening titles' montage, so the build gives it to `credits.montageLooks` and `CreditsMontage`
+draws the move on it. Like the 10 October stopgaps these should be re-checked with `tools/review-depth-maps.py` once
+the models are reachable, and watched with `tools/depth-frames.mjs` (`nw_s15`, `nw_s12`, `nw_s97a`) before shipping.
+
+## Watching a shot before calling it done (23 October 2026)
+
+`docs/depth-camera.md` §5 says to record frames with `tools/depth-frames.mjs`, which needs a running dev server and a
+browser. For a quick look at many shots at once there is `preview-depth/` (its own README): `npm run dev` in it plays
+the real `<DepthParallaxLayer>` — same shader, plate, map and cut-outs — on each shot's own move from
+`studio-edits.json`, with the map inset beside it and the 22 October automatic review flags shown on the shots that
+have them. It reads the repo and writes nothing into it (only its own `src/shots.json`). Use it to find the bad ones;
+use `tools/depth-frames.mjs` on a shot that looks wrong.
+
+## Three pictures changed, 23 October 2026
+
+* **`51-the-interview-room` — depth removed** (the director: *"remove depth from interview room it screws up"*). The
+  map is deleted from `pictureLook` (the entry had nothing but depth fields, so it is gone) and the shot plays as the
+  still again. `public/film/depth/s6/51-the-interview-room/depth.png` is left on disk, unwired, in case a better map is
+  ever made; it is not in `docs/film-depth-layers.json`, so `npm run test:film-depth` does not count it.
+* **`367-the-phone-rings` — map redone** (the director: *"everything in the room has disappeared and it's just the
+  phone"*). The picture was fine; the map was soft and near-uniform, so the push had nothing to move. The new map
+  separates the phone and table (white) from the room, curtains and window (dark), and the entry's `smooth` is 0 so the
+  map keeps its detail. Same push, 0.32, 5 s, focal 50% 65%.
+* **`249-the-chair` — picture recreated, everything else kept as it was.** The old plate was a low-detail image; a
+  higher-resolution recreation of the same composition was installed with
+  `FFMPEG=... node tools/install-film-picture.mjs` (1365×768 → 1920×1080; the old file is
+  `public/film/img/archive/s16/249-the-chair--v2.jpg`). The cut-out, plate and truck are kept: the cut-out's alpha is
+  unchanged, only its colour pixels now come from the new picture (the old ones differed by ~4/255 on average), and the
+  plate keeps its painted-in background with the new picture refreshed inside and just around the hole. The cut-out,
+  plate and depth map still sit where the new picture's Jack, door and alley are.

@@ -119,13 +119,23 @@
    "cutouts": [
     {
      "name": "vera",
-     "box": [370, 290, 190, 650],
+     "box": [
+      370,
+      290,
+      190,
+      650
+     ],
      "image": "/film/depth/s74/74-twenty-metres-apart/cutout-1.png",
      "depth": 0.703
     },
     {
      "name": "jack",
-     "box": [1510, 270, 250, 690],
+     "box": [
+      1510,
+      270,
+      250,
+      690
+     ],
      "image": "/film/depth/s74/74-twenty-metres-apart/cutout-2.png",
      "depth": 0.727
     }
@@ -138,7 +148,12 @@
    "cutouts": [
     {
      "name": "vera and jack",
-     "box": [950, 220, 540, 790],
+     "box": [
+      950,
+      220,
+      540,
+      790
+     ],
      "image": "/film/depth/s74/75-one-desperate-blow/cutout-1.png",
      "depth": 0.792
     }
@@ -151,7 +166,12 @@
    "cutouts": [
     {
      "name": "vera and jack",
-     "box": [1500, 330, 280, 150],
+     "box": [
+      1500,
+      330,
+      280,
+      150
+     ],
      "image": "/film/depth/s74/73-two-small-figures/cutout-1.png",
      "depth": 0.102
     }
@@ -165,25 +185,45 @@
    "cutouts": [
     {
      "name": "the man on the left",
-     "box": [513, 523, 168, 233],
+     "box": [
+      513,
+      523,
+      168,
+      233
+     ],
      "image": "/film/depth/s82/104-the-newsroom/cutout-1.png",
      "depth": 0.6
     },
     {
      "name": "the man at the middle desk",
-     "box": [925, 484, 260, 363],
+     "box": [
+      925,
+      484,
+      260,
+      363
+     ],
      "image": "/film/depth/s82/104-the-newsroom/cutout-2.png",
      "depth": 0.42
     },
     {
      "name": "the woman behind the middle desk",
-     "box": [912, 486, 130, 146],
+     "box": [
+      912,
+      486,
+      130,
+      146
+     ],
      "image": "/film/depth/s82/104-the-newsroom/cutout-3.png",
      "depth": 0.278
     },
     {
      "name": "the man on the right",
-     "box": [1363, 527, 159, 233],
+     "box": [
+      1363,
+      527,
+      159,
+      233
+     ],
      "image": "/film/depth/s82/104-the-newsroom/cutout-4.png",
      "depth": 0.631
     }
@@ -197,9 +237,19 @@
    "cutouts": [
     {
      "name": "the hand at the drawer",
-     "box": [1260, 360, 660, 450],
+     "box": [
+      1260,
+      360,
+      660,
+      450
+     ],
      "exclude": [
-      [1270, 455, 330, 140]
+      [
+       1270,
+       455,
+       330,
+       140
+      ]
      ],
      "image": "/film/depth/s96/144-empty/cutout-1.png",
      "depth": 0.435
@@ -214,7 +264,12 @@
    "cutouts": [
     {
      "name": "the man down the corridor",
-     "box": [885, 410, 165, 477],
+     "box": [
+      885,
+      410,
+      165,
+      477
+     ],
      "image": "/film/depth/s41/179-same-wood/cutout-1.png",
      "depth": 0.365
     }
@@ -228,19 +283,34 @@
    "cutouts": [
     {
      "name": "vera",
-     "box": [459, 460, 460, 620],
+     "box": [
+      459,
+      460,
+      460,
+      620
+     ],
      "image": "/film/depth/s22/195-somewhere-like-this/cutout-1.png",
      "depth": 0.98
     },
     {
      "name": "the cook",
-     "box": [1017, 500, 221, 269],
+     "box": [
+      1017,
+      500,
+      221,
+      269
+     ],
      "image": "/film/depth/s22/195-somewhere-like-this/cutout-2.png",
      "depth": 0.353
     },
     {
      "name": "jack",
-     "box": [1124, 428, 483, 652],
+     "box": [
+      1124,
+      428,
+      483,
+      652
+     ],
      "image": "/film/depth/s22/195-somewhere-like-this/cutout-3.png",
      "depth": 0.871
     }
@@ -254,13 +324,23 @@
    "cutouts": [
     {
      "name": "the man on the left",
-     "box": [396, 425, 555, 655],
+     "box": [
+      396,
+      425,
+      555,
+      655
+     ],
      "image": "/film/depth/s23/198-the-lanterns-sway/cutout-1.png",
      "depth": 0.788
     },
     {
      "name": "jack",
-     "box": [1081, 397, 533, 683],
+     "box": [
+      1081,
+      397,
+      533,
+      683
+     ],
      "image": "/film/depth/s23/198-the-lanterns-sway/cutout-2.png",
      "depth": 0.745
     }
@@ -274,13 +354,23 @@
    "cutouts": [
     {
      "name": "jack",
-     "box": [234, 395, 484, 658],
+     "box": [
+      234,
+      395,
+      484,
+      658
+     ],
      "image": "/film/depth/s25/200-the-number-114/cutout-1.png",
      "depth": 0.922
     },
     {
      "name": "vera",
-     "box": [793, 496, 367, 385],
+     "box": [
+      793,
+      496,
+      367,
+      385
+     ],
      "image": "/film/depth/s25/200-the-number-114/cutout-2.png",
      "depth": 0.565
     }
@@ -294,7 +384,12 @@
    "cutouts": [
     {
      "name": "the barman",
-     "box": [1054, 219, 261, 541],
+     "box": [
+      1054,
+      219,
+      261,
+      541
+     ],
      "image": "/film/depth/s8/240-the-far-end/cutout-1.png",
      "depth": 0.49
     }
@@ -308,7 +403,12 @@
    "cutouts": [
     {
      "name": "jack",
-     "box": [1251, 152, 314, 928],
+     "box": [
+      1251,
+      152,
+      314,
+      928
+     ],
      "image": "/film/depth/s16/249-the-chair/cutout-1.png",
      "depth": 0.514
     }
@@ -322,7 +422,12 @@
    "cutouts": [
     {
      "name": "the figure with the umbrella",
-     "box": [1090, 440, 190, 330],
+     "box": [
+      1090,
+      440,
+      190,
+      330
+     ],
      "image": "/film/depth/s14a/340-the-shuttered-door/cutout-1.png",
      "depth": 0.412
     }
@@ -336,7 +441,12 @@
    "cutouts": [
     {
      "name": "mrs sakai",
-     "box": [304, 215, 382, 813],
+     "box": [
+      304,
+      215,
+      382,
+      813
+     ],
      "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
      "depth": 0.718
     }
@@ -350,10 +460,25 @@
    "cutouts": [
     {
      "name": "vera",
-     "box": [560, 400, 420, 680],
+     "box": [
+      560,
+      400,
+      420,
+      680
+     ],
      "exclude": [
-      [440, 770, 315, 310],
-      [440, 885, 395, 195]
+      [
+       440,
+       770,
+       315,
+       310
+      ],
+      [
+       440,
+       885,
+       395,
+       195
+      ]
      ],
      "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
      "depth": 0.42
@@ -368,13 +493,23 @@
    "cutouts": [
     {
      "name": "the woman on the left",
-     "box": [0, 220, 490, 860],
+     "box": [
+      0,
+      220,
+      490,
+      860
+     ],
      "image": "/film/depth/s90/379-the-laundry/cutout-1.png",
      "depth": 0.702
     },
     {
      "name": "jack and vera",
-     "box": [470, 20, 1110, 1060],
+     "box": [
+      470,
+      20,
+      1110,
+      1060
+     ],
      "image": "/film/depth/s90/379-the-laundry/cutout-2.png",
      "depth": 0.729
     }
@@ -389,7 +524,12 @@
    "cutouts": [
     {
      "name": "vera",
-     "box": [851, 583, 88, 209],
+     "box": [
+      851,
+      583,
+      88,
+      209
+     ],
      "image": "/film/depth/s73/387-the-street-too-long/cutout-1.png",
      "depth": 0.541
     }
@@ -406,8 +546,8 @@
   "367-the-phone-rings": {
    "picture": "public/film/img/s59/367-the-phone-rings.jpg",
    "depthMap": "/film/depth/s59/367-the-phone-rings/depth.png",
-   "smooth": 2.0,
-   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty tatami room; phone and low table foreground, room and window behind."
+   "smooth": 0,
+   "note": "Redone 23 October 2026 (the director: \"everything in the room had disappeared and it's just the phone\"): the first map was soft and near-uniform, so the truck had nothing to move. This one separates the phone and table (white) from the room, the curtains and the window (dark), so the whole room now reads in depth. Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible."
   },
   "402-the-windows-wake": {
    "picture": "public/film/img/s71/402-the-windows-wake.jpg",
@@ -463,7 +603,12 @@
    "cutouts": [
     {
      "name": "vera",
-     "box": [855, 400, 190, 520],
+     "box": [
+      855,
+      400,
+      190,
+      520
+     ],
      "image": "/film/depth/vera_run_new/73-05-toward-the-tracks/cutout-1.png",
      "depth": 0.715
     }
@@ -476,14 +621,19 @@
    "picture": "public/film/img/vera_run_new/75-02-the-empty-lounge.jpg",
    "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
    "smooth": 2.0,
-   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still \u2014 check it before it ships. No people visible."
+   "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still — check it before it ships. No people visible."
   },
   "01-backstreet": {
    "picture": "public/film/img/s1/01-backstreet.jpg",
    "cutouts": [
     {
      "name": "person 1",
-     "box": [292, 456, 43, 218],
+     "box": [
+      292,
+      456,
+      43,
+      218
+     ],
      "image": "/film/depth/s1/01-backstreet/cutout-1.png",
      "depth": 0.665
     }
@@ -497,7 +647,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1287, 145, 62, 97],
+     "box": [
+      1287,
+      145,
+      62,
+      97
+     ],
      "image": "/film/depth/s1/02-vending/cutout-1.png",
      "depth": 0.141
     }
@@ -511,7 +666,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [866, 237, 257, 808],
+     "box": [
+      866,
+      237,
+      257,
+      808
+     ],
      "image": "/film/depth/s1/03-mara-walks/cutout-1.png",
      "depth": 0.885
     }
@@ -525,7 +685,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [391, 0, 1370, 1080],
+     "box": [
+      391,
+      0,
+      1370,
+      1080
+     ],
      "image": "/film/depth/s1/04-mara-phone/cutout-1.png",
      "depth": 0.171
     }
@@ -539,7 +704,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [146, 88, 1262, 992],
+     "box": [
+      146,
+      88,
+      1262,
+      992
+     ],
      "image": "/film/depth/s1/05-phone-off/cutout-1.png",
      "depth": 0.34
     }
@@ -553,7 +723,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [0, 280, 1920, 800],
+     "box": [
+      0,
+      280,
+      1920,
+      800
+     ],
      "image": "/film/depth/s1/328-the-scrap/cutout-1.png",
      "depth": 0.201
     }
@@ -567,7 +742,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [0, 0, 1555, 1080],
+     "box": [
+      0,
+      0,
+      1555,
+      1080
+     ],
      "image": "/film/depth/s1/329-the-lane-the-watch/cutout-1.png",
      "depth": 0.209
     }
@@ -581,13 +761,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [531, 442, 52, 259],
+     "box": [
+      531,
+      442,
+      52,
+      259
+     ],
      "image": "/film/depth/s1/06-barbershop-doorway/cutout-1.png",
      "depth": 0.639
     },
     {
      "name": "person 2",
-     "box": [1191, 501, 75, 306],
+     "box": [
+      1191,
+      501,
+      75,
+      306
+     ],
      "image": "/film/depth/s1/06-barbershop-doorway/cutout-2.png",
      "depth": 0.654
     }
@@ -601,13 +791,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1372, 655, 93, 222],
+     "box": [
+      1372,
+      655,
+      93,
+      222
+     ],
      "image": "/film/depth/s1/383-the-empty-lane/cutout-1.png",
      "depth": 0.598
     },
     {
      "name": "person 2",
-     "box": [1381, 458, 50, 191],
+     "box": [
+      1381,
+      458,
+      50,
+      191
+     ],
      "image": "/film/depth/s1/383-the-empty-lane/cutout-2.png",
      "depth": 0.407
     }
@@ -621,7 +821,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [862, 282, 241, 652],
+     "box": [
+      862,
+      282,
+      241,
+      652
+     ],
      "image": "/film/depth/s1/07-old-man/cutout-1.png",
      "depth": 0.711
     }
@@ -635,7 +840,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [914, 87, 481, 993],
+     "box": [
+      914,
+      87,
+      481,
+      993
+     ],
      "image": "/film/depth/s1/330-the-red-clip/cutout-1.png",
      "depth": 0.529
     }
@@ -649,7 +859,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [293, 0, 1293, 1080],
+     "box": [
+      293,
+      0,
+      1293,
+      1080
+     ],
      "image": "/film/depth/s1/09-old-man-stops/cutout-1.png",
      "depth": 0.094
     }
@@ -663,7 +878,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [881, 370, 176, 471],
+     "box": [
+      881,
+      370,
+      176,
+      471
+     ],
      "image": "/film/depth/s1/331-he-refuses/cutout-1.png",
      "depth": 0.338
     }
@@ -677,7 +897,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [902, 473, 113, 362],
+     "box": [
+      902,
+      473,
+      113,
+      362
+     ],
      "image": "/film/depth/s1/332-the-sedan-blocks-the-lane/cutout-1.png",
      "depth": 0.415
     }
@@ -691,25 +916,45 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [461, 454, 172, 528],
+     "box": [
+      461,
+      454,
+      172,
+      528
+     ],
      "image": "/film/depth/s1/333-the-white-light/cutout-1.png",
      "depth": 0.69
     },
     {
      "name": "person 2",
-     "box": [676, 487, 100, 296],
+     "box": [
+      676,
+      487,
+      100,
+      296
+     ],
      "image": "/film/depth/s1/333-the-white-light/cutout-2.png",
      "depth": 0.317
     },
     {
      "name": "person 3",
-     "box": [782, 497, 100, 294],
+     "box": [
+      782,
+      497,
+      100,
+      294
+     ],
      "image": "/film/depth/s1/333-the-white-light/cutout-3.png",
      "depth": 0.36
     },
     {
      "name": "person 4",
-     "box": [1361, 457, 180, 453],
+     "box": [
+      1361,
+      457,
+      180,
+      453
+     ],
      "image": "/film/depth/s1/333-the-white-light/cutout-4.png",
      "depth": 0.667
     }
@@ -723,7 +968,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [537, 265, 758, 768],
+     "box": [
+      537,
+      265,
+      758,
+      768
+     ],
      "image": "/film/depth/s1/11-sakai-mid-fall/cutout-1.png",
      "depth": 0.856
     }
@@ -737,13 +987,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [714, 234, 188, 545],
+     "box": [
+      714,
+      234,
+      188,
+      545
+     ],
      "image": "/film/depth/s1/10-the-shot/cutout-1.png",
      "depth": 0.649
     },
     {
      "name": "person 2",
-     "box": [1038, 261, 194, 593],
+     "box": [
+      1038,
+      261,
+      194,
+      593
+     ],
      "image": "/film/depth/s1/10-the-shot/cutout-2.png",
      "depth": 0.422
     }
@@ -757,7 +1017,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [738, 40, 408, 1011],
+     "box": [
+      738,
+      40,
+      408,
+      1011
+     ],
      "image": "/film/depth/s1/12-masked-man-radio/cutout-1.png",
      "depth": 0.876
     }
@@ -771,25 +1036,45 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [752, 534, 456, 166],
+     "box": [
+      752,
+      534,
+      456,
+      166
+     ],
      "image": "/film/depth/s1/13-taillights-gone/cutout-1.png",
      "depth": 0.252
     },
     {
      "name": "person 2",
-     "box": [894, 818, 202, 83],
+     "box": [
+      894,
+      818,
+      202,
+      83
+     ],
      "image": "/film/depth/s1/13-taillights-gone/cutout-2.png",
      "depth": 0.639
     },
     {
      "name": "person 3",
-     "box": [1369, 638, 98, 241],
+     "box": [
+      1369,
+      638,
+      98,
+      241
+     ],
      "image": "/film/depth/s1/13-taillights-gone/cutout-3.png",
      "depth": 0.613
     },
     {
      "name": "person 4",
-     "box": [1386, 462, 50, 193],
+     "box": [
+      1386,
+      462,
+      50,
+      193
+     ],
      "image": "/film/depth/s1/13-taillights-gone/cutout-4.png",
      "depth": 0.43
     }
@@ -803,7 +1088,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [808, 105, 1474, 1355],
+     "box": [
+      808,
+      105,
+      1474,
+      1355
+     ],
      "image": "/film/depth/s1/14-she-kneels/cutout-1.png",
      "depth": 0.622
     }
@@ -817,7 +1107,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [0, 0, 1920, 1080],
+     "box": [
+      0,
+      0,
+      1920,
+      1080
+     ],
      "image": "/film/depth/s1/15-the-grip/cutout-1.png",
      "depth": 0.058
     }
@@ -831,13 +1126,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [332, 189, 1283, 639],
+     "box": [
+      332,
+      189,
+      1283,
+      639
+     ],
      "image": "/film/depth/s1/16-the-key/cutout-1.png",
      "depth": 0.328
     },
     {
      "name": "person 2",
-     "box": [1615, 417, 305, 492],
+     "box": [
+      1615,
+      417,
+      305,
+      492
+     ],
      "image": "/film/depth/s1/16-the-key/cutout-2.png",
      "depth": 0.455
     }
@@ -851,7 +1156,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1085, 231, 276, 540],
+     "box": [
+      1085,
+      231,
+      276,
+      540
+     ],
      "image": "/film/depth/s1/17-she-runs/cutout-1.png",
      "depth": 0.336
     }
@@ -865,7 +1175,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [851, 558, 545, 299],
+     "box": [
+      851,
+      558,
+      545,
+      299
+     ],
      "image": "/film/depth/s1/18-the-flashlight/cutout-1.png",
      "depth": 0.658
     }
@@ -879,7 +1194,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [508, 123, 825, 957],
+     "box": [
+      508,
+      123,
+      825,
+      957
+     ],
      "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
      "depth": 0.705
     }
@@ -893,7 +1213,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [649, 306, 129, 632],
+     "box": [
+      649,
+      306,
+      129,
+      632
+     ],
      "image": "/film/depth/s2_picks/21-mara-bursts-in-v1/cutout-1.png",
      "depth": 0.554
     }
@@ -907,7 +1232,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [149, 26, 1177, 1054],
+     "box": [
+      149,
+      26,
+      1177,
+      1054
+     ],
      "image": "/film/depth/s2/22-not-his-business/cutout-1.png",
      "depth": 0.426
     }
@@ -921,13 +1251,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [348, 265, 545, 815],
+     "box": [
+      348,
+      265,
+      545,
+      815
+     ],
      "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-1.png",
      "depth": 0.358
     },
     {
      "name": "person 2",
-     "box": [868, 279, 312, 482],
+     "box": [
+      868,
+      279,
+      312,
+      482
+     ],
      "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-2.png",
      "depth": 0.213
     }
@@ -941,13 +1281,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [315, 0, 769, 709],
+     "box": [
+      315,
+      0,
+      769,
+      709
+     ],
      "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-1.png",
      "depth": 0.308
     },
     {
      "name": "person 2",
-     "box": [1157, 0, 696, 766],
+     "box": [
+      1157,
+      0,
+      696,
+      766
+     ],
      "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-2.png",
      "depth": 0.434
     }
@@ -961,13 +1311,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [532, 215, 388, 792],
+     "box": [
+      532,
+      215,
+      388,
+      792
+     ],
      "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-1.png",
      "depth": 0.055
     },
     {
      "name": "person 2",
-     "box": [977, 263, 206, 604],
+     "box": [
+      977,
+      263,
+      206,
+      604
+     ],
      "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-2.png",
      "depth": 0.11
     }
@@ -981,7 +1341,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [732, 32, 1171, 919],
+     "box": [
+      732,
+      32,
+      1171,
+      919
+     ],
      "image": "/film/depth/s2_picks/26-the-variety-show-s2new2/cutout-1.png",
      "depth": 0.187
     }
@@ -995,7 +1360,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1290, 331, 530, 507],
+     "box": [
+      1290,
+      331,
+      530,
+      507
+     ],
      "image": "/film/depth/s2/308-clip-under-the-shelf/cutout-1.png",
      "depth": 0.465
     }
@@ -1009,13 +1379,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [389, 577, 448, 253],
+     "box": [
+      389,
+      577,
+      448,
+      253
+     ],
      "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
      "depth": 0.715
     },
     {
      "name": "person 2",
-     "box": [815, 108, 464, 568],
+     "box": [
+      815,
+      108,
+      464,
+      568
+     ],
      "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
      "depth": 0.461
     }
@@ -1029,7 +1409,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [856, 745, 299, 335],
+     "box": [
+      856,
+      745,
+      299,
+      335
+     ],
      "image": "/film/depth/s2_picks/28-the-blue-glow-s2new2/cutout-1.png",
      "depth": 0.269
     }
@@ -1043,7 +1428,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [506, 34, 399, 447],
+     "box": [
+      506,
+      34,
+      399,
+      447
+     ],
      "image": "/film/depth/s72/497-eleven-fifty-two/cutout-1.png",
      "depth": 0.434
     }
@@ -1057,13 +1447,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [374, 288, 238, 356],
+     "box": [
+      374,
+      288,
+      238,
+      356
+     ],
      "image": "/film/depth/s72/69-the-wait/cutout-1.png",
      "depth": 0.068
     },
     {
      "name": "person 2",
-     "box": [1013, 111, 411, 930],
+     "box": [
+      1013,
+      111,
+      411,
+      930
+     ],
      "image": "/film/depth/s72/69-the-wait/cutout-2.png",
      "depth": 0.261
     }
@@ -1077,7 +1477,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [0, 0, 1153, 1080],
+     "box": [
+      0,
+      0,
+      1153,
+      1080
+     ],
      "image": "/film/depth/s72/498-open-shut/cutout-1.png",
      "depth": 0.417
     }
@@ -1091,7 +1496,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [450, 0, 1027, 1080],
+     "box": [
+      450,
+      0,
+      1027,
+      1080
+     ],
      "image": "/film/depth/s72/499-the-screen/cutout-1.png",
      "depth": 0.37
     }
@@ -1105,13 +1515,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [366, 278, 244, 367],
+     "box": [
+      366,
+      278,
+      244,
+      367
+     ],
      "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-1.png",
      "depth": 0.062
     },
     {
      "name": "person 2",
-     "box": [1013, 104, 410, 945],
+     "box": [
+      1013,
+      104,
+      410,
+      945
+     ],
      "image": "/film/depth/vera_run_new/72-01-the-piano-plays-on/cutout-2.png",
      "depth": 0.27
     }
@@ -1125,7 +1545,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [539, 0, 1156, 1080],
+     "box": [
+      539,
+      0,
+      1156,
+      1080
+     ],
      "image": "/film/depth/vera_run_takes/72-02-the-phone-lowers--r1/cutout-1.png",
      "depth": 0.163
     }
@@ -1139,7 +1564,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [696, 0, 1224, 1080],
+     "box": [
+      696,
+      0,
+      1224,
+      1080
+     ],
      "image": "/film/depth/vera_run_new/72-03-the-lighter-into-the-bag/cutout-1.png",
      "depth": 0.415
     }
@@ -1153,7 +1583,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [814, 23, 497, 1057],
+     "box": [
+      814,
+      23,
+      497,
+      1057
+     ],
      "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
      "depth": 0.385
     }
@@ -1167,13 +1602,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [822, 1078, 240, 426],
+     "box": [
+      822,
+      1078,
+      240,
+      426
+     ],
      "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-1.png",
      "depth": 0.328
     },
     {
      "name": "person 2",
-     "box": [2007, 437, 260, 648],
+     "box": [
+      2007,
+      437,
+      260,
+      648
+     ],
      "image": "/film/depth/vera_run_new/72-05-the-umbrella-stays/cutout-2.png",
      "depth": 0.572
     }
@@ -1187,7 +1632,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [321, 0, 652, 1080],
+     "box": [
+      321,
+      0,
+      652,
+      1080
+     ],
      "image": "/film/depth/s73/69-vera-runs/cutout-1.png",
      "depth": 0.556
     }
@@ -1201,7 +1651,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [761, 230, 360, 766],
+     "box": [
+      761,
+      230,
+      360,
+      766
+     ],
      "image": "/film/depth/vera_run_takes/73-03-she-runs--69-vera-runs-v2/cutout-1.png",
      "depth": 0.759
     }
@@ -1215,7 +1670,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [0, 62, 1442, 1018],
+     "box": [
+      0,
+      62,
+      1442,
+      1018
+     ],
      "image": "/film/depth/s73/547-the-call-still-lit/cutout-1.png",
      "depth": 0.845
     }
@@ -1229,7 +1689,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [641, 0, 908, 1080],
+     "box": [
+      641,
+      0,
+      908,
+      1080
+     ],
      "image": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/cutout-1.png",
      "depth": 0.583
     }
@@ -1243,7 +1708,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [351, 0, 1322, 1003],
+     "box": [
+      351,
+      0,
+      1322,
+      1003
+     ],
      "image": "/film/depth/vera_run_new/73-07-heels-on-wet-pavement/cutout-1.png",
      "depth": 0.642
     }
@@ -1257,7 +1727,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [641, 0, 908, 1080],
+     "box": [
+      641,
+      0,
+      908,
+      1080
+     ],
      "image": "/film/depth/vera_run_takes/73-08-she-slips--70-not-elegantly-badly-playframe/cutout-1.png",
      "depth": 0.583
     }
@@ -1271,7 +1746,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [201, 3, 1047, 1149],
+     "box": [
+      201,
+      3,
+      1047,
+      1149
+     ],
      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
      "depth": 0.392
     }
@@ -1285,7 +1765,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1309, 147, 507, 1237],
+     "box": [
+      1309,
+      147,
+      507,
+      1237
+     ],
      "image": "/film/depth/vera_run_new/73-10-a-car-passes/cutout-1.png",
      "depth": 0.707
     }
@@ -1299,7 +1784,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1052, 150, 493, 930],
+     "box": [
+      1052,
+      150,
+      493,
+      930
+     ],
      "image": "/film/depth/vera_run_takes/73-11-the-vending-machine--71-the-machine-glows-v2/cutout-1.png",
      "depth": 0.949
     }
@@ -1313,7 +1803,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [477, 148, 378, 834],
+     "box": [
+      477,
+      148,
+      378,
+      834
+     ],
      "image": "/film/depth/vera_run_new/73-13-on-red/cutout-1.png",
      "depth": 0.779
     }
@@ -1327,7 +1822,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [668, 17, 479, 924],
+     "box": [
+      668,
+      17,
+      479,
+      924
+     ],
      "image": "/film/depth/s73/72-the-lost-heel/cutout-1.png",
      "depth": 0.971
     }
@@ -1341,7 +1841,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [330, 0, 1402, 1080],
+     "box": [
+      330,
+      0,
+      1402,
+      1080
+     ],
      "image": "/film/depth/vera_run_takes/74-03-his-hands--r1/cutout-1.png",
      "depth": 0.119
     }
@@ -1355,13 +1860,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [493, 157, 276, 730],
+     "box": [
+      493,
+      157,
+      276,
+      730
+     ],
      "image": "/film/depth/vera_run_new/74-06-dont/cutout-1.png",
      "depth": 0.568
     },
     {
      "name": "person 2",
-     "box": [1299, 136, 267, 752],
+     "box": [
+      1299,
+      136,
+      267,
+      752
+     ],
      "image": "/film/depth/vera_run_new/74-06-dont/cutout-2.png",
      "depth": 0.575
     }
@@ -1375,7 +1890,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [656, 0, 600, 916],
+     "box": [
+      656,
+      0,
+      600,
+      916
+     ],
      "image": "/film/depth/s74/501-one-shoe/cutout-1.png",
      "depth": 0.592
     }
@@ -1389,7 +1909,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [656, 0, 1231, 1080],
+     "box": [
+      656,
+      0,
+      1231,
+      1080
+     ],
      "image": "/film/depth/vera_run_new/74-08-you-knew/cutout-1.png",
      "depth": 0.265
     }
@@ -1403,7 +1928,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [184, 33, 949, 1047],
+     "box": [
+      184,
+      33,
+      949,
+      1047
+     ],
      "image": "/film/depth/vera_run_new/74-09-his-silence/cutout-1.png",
      "depth": 0.197
     }
@@ -1417,7 +1947,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [298, 0, 957, 1080],
+     "box": [
+      298,
+      0,
+      957,
+      1080
+     ],
      "image": "/film/depth/s74/502-why-didnt-you-tell-me/cutout-1.png",
      "depth": 0.231
     }
@@ -1431,7 +1966,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [647, 185, 947, 712],
+     "box": [
+      647,
+      185,
+      947,
+      712
+     ],
      "image": "/film/depth/vera_run_new/74-13-she-folds/cutout-1.png",
      "depth": 0.565
     }
@@ -1445,7 +1985,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [433, 0, 1253, 1080],
+     "box": [
+      433,
+      0,
+      1253,
+      1080
+     ],
      "image": "/film/depth/s74/503-she-holds-on/cutout-1.png",
      "depth": 0.996
     }
@@ -1459,7 +2004,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [459, 129, 1134, 908],
+     "box": [
+      459,
+      129,
+      1134,
+      908
+     ],
      "image": "/film/depth/vera_run_new/74-15-she-pushes-him-away/cutout-1.png",
      "depth": 0.863
     }
@@ -1473,13 +2023,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [582, 156, 133, 171],
+     "box": [
+      582,
+      156,
+      133,
+      171
+     ],
      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
      "depth": 0.097
     },
     {
      "name": "person 2",
-     "box": [1403, 361, 79, 261],
+     "box": [
+      1403,
+      361,
+      79,
+      261
+     ],
      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
      "depth": 0.416
     }
@@ -1493,7 +2053,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [621, 0, 684, 1080],
+     "box": [
+      621,
+      0,
+      684,
+      1080
+     ],
      "image": "/film/depth/vera_run_new/74-18-she-covers-her-face/cutout-1.png",
      "depth": 0.568
     }
@@ -1507,13 +2072,23 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [439, 774, 171, 171],
+     "box": [
+      439,
+      774,
+      171,
+      171
+     ],
      "image": "/film/depth/s74/504-nobody-looks-down/cutout-1.png",
      "depth": 0.358
     },
     {
      "name": "person 2",
-     "box": [704, 734, 149, 216],
+     "box": [
+      704,
+      734,
+      149,
+      216
+     ],
      "image": "/film/depth/s74/504-nobody-looks-down/cutout-2.png",
      "depth": 0.364
     }
@@ -1527,7 +2102,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [791, 571, 409, 127],
+     "box": [
+      791,
+      571,
+      409,
+      127
+     ],
      "image": "/film/depth/vera_run_new/75-01-the-red-shoe/cutout-1.png",
      "depth": 0.608
     }
@@ -1541,7 +2121,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [1270, 538, 543, 245],
+     "box": [
+      1270,
+      538,
+      543,
+      245
+     ],
      "image": "/film/depth/vera_run_takes/75-03-the-hive-shut--79-the-hive-shut-v1/cutout-1.png",
      "depth": 0.319
     }
@@ -1555,7 +2140,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [789, 147, 264, 897],
+     "box": [
+      789,
+      147,
+      264,
+      897
+     ],
      "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
      "depth": 0.454
     }
@@ -1569,7 +2159,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [831, 203, 222, 749],
+     "box": [
+      831,
+      203,
+      222,
+      749
+     ],
      "image": "/film/depth/vera_run_new/76-02-the-empty-umbrella-stand/cutout-1.png",
      "depth": 0.227
     }
@@ -1583,7 +2178,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [485, 359, 960, 677],
+     "box": [
+      485,
+      359,
+      960,
+      677
+     ],
      "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
      "depth": 0.829
     }
@@ -1597,7 +2197,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [507, 16, 894, 1064],
+     "box": [
+      507,
+      16,
+      894,
+      1064
+     ],
      "image": "/film/depth/s76/315-the-number-pressed/cutout-1.png",
      "depth": 0.275
     }
@@ -1611,7 +2216,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [65, 0, 1171, 1080],
+     "box": [
+      65,
+      0,
+      1171,
+      1080
+     ],
      "image": "/film/depth/vera_run_new/76-05-vera-honey/cutout-1.png",
      "depth": 0.049
     }
@@ -1625,7 +2235,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [67, 0, 1468, 1152],
+     "box": [
+      67,
+      0,
+      1468,
+      1152
+     ],
      "image": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/cutout-1.png",
      "depth": 0.039
     }
@@ -1639,7 +2254,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [762, 143, 2082, 1457],
+     "box": [
+      762,
+      143,
+      2082,
+      1457
+     ],
      "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
      "depth": 0.657
     }
@@ -1653,7 +2273,12 @@
    "cutouts": [
     {
      "name": "person 1",
-     "box": [460, 10, 1157, 1070],
+     "box": [
+      460,
+      10,
+      1157,
+      1070
+     ],
      "image": "/film/depth/s76/84-cries-without-a-sound/cutout-1.png",
      "depth": 0.766
     }
@@ -1661,6 +2286,22 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s76/84-cries-without-a-sound/depth.png",
    "depthPlate": "/film/depth/s76/84-cries-without-a-sound/plate.jpg"
+  },
+  "432-the-hive": {
+   "picture": "public/film/img/s15/432-the-hive.jpg",
+   "depthMap": "/film/depth/s15/432-the-hive/depth.png"
+  },
+  "422-everywhere-a-small-thing-could-fall": {
+   "picture": "public/film/img/s12/422-everywhere-a-small-thing-could-fall.jpg",
+   "depthMap": "/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png"
+  },
+  "577-the-window": {
+   "picture": "public/film/img/service_new/577-the-window.jpg",
+   "depthMap": "/film/depth/service_new/577-the-window/depth.png"
+  },
+  "m2-the-hive": {
+   "picture": "public/film/img/montage/m2-the-hive.jpg",
+   "depthMap": "/film/depth/montage/m2-the-hive/depth.png"
   }
  }
 }

@@ -818,3 +818,47 @@ The director selected nighttime replacements for `s50/216-hand-starts-to-shake.j
 ## Lost heel continuity and session verification (16 October 2026)
 
 `s73/72-the-lost-heel.jpg` now uses the director's selected night reshoot: Vera approaches the camera in the matching red dress, phone in hand, panicked and uneven, one foot bare and the matching black heel left behind. No vending machine remains in this shot. All selected replacements from this session are installed at the film's existing paths; the Kaneko and departing-pickup additions are wired through Studio overrides and the generated film. Installed locked dependencies and verified: film backend **126 checks passed**, film depth **all checks passed**, production build **passed** (existing unresolved `/assets/UI/evidence_board.jpg` warning). These successful checks supersede the earlier dependency-blocked test attempts recorded above.
+
+## Depth moves made visible, no pan, no shake (23 October 2026)
+
+The director, after watching the depth-camera preview: *"the effect is too subtle to notice"*, and asked for the pan to be fixed and shake turned off. Three changes in `src/film/studio-edits.json` → `pictureLook`, then `node tools/build-film-story.mjs`:
+
+* **No stale pan.** 43 entries still said `mode: "pan"` although `tools/build-film-story.mjs` has turned every pan into `static` since 15 October (`noSlowPan`). They are written as `static` now, with `panDistance`/`panDirection` removed, so the source and the film agree. The builder's normalisation stays as a guard.
+* **No shake.** All 30 `mode: "shake"` entries (13 of them depth shots) are `static`; `shakeAmount`/`shakeDuration` are gone. Nothing in `pictureLook` shakes any more.
+* **The depth move finishes inside the hold.** Every `depthSeconds` was divided by three, the same compression the preview was set to when the director approved the effect: 85 shots at 14 s → 5 s, 16 s → 5 s, 18 s → 6 s, and so on (floor 4 s). The engine's ease-out settle (`src/game/DepthParallax.tsx`) then plays nearly the whole move while a shot is on screen instead of a fifth of it. Amounts are unchanged — no map, plate or cut-out was touched, and `docs/depth-camera.md` still holds for their validation. `379-the-laundry` keeps its 26 s / 0.16 drift: that shot's woman is left in the plate on purpose and must not smear.
+
+Verified in the generated film: 135 cinematics carry a `depthMap`, the engine draws the depth layer on **135 of 135**, and `pan: 0`, `shake: 0`. `npm run test:film-depth` (134 entries) and `npm run test:film-backend` (181 checks) pass.
+
+## Mrs Noda made one woman (23 October 2026)
+
+The director: *"fix mrs noda — she is not a consistent character, she changes into someone else."* She was two different
+women across her four scenes. `public/film/img/sheets/mrs-noda.jpg` (the character sheet) is the authority: a Japanese
+woman in her early seventies, straight grey hair in a low bun, dark teal-green collared work shirt, plain beige canvas
+apron, dark trousers. `542-dont-tell-my-husband` already matched it; the rest did not.
+
+Recreated from each picture with the sheet as the identity reference, and installed with
+`FFMPEG=... node tools/install-film-picture.mjs` (old files archived as `--v1` in `public/film/img/archive/`):
+
+| Picture | Scene | Was |
+|---|---|---|
+| `170-just-one-night` | 32 | a different woman, white permed hair, brown cardigan |
+| `171-upstairs-at-the-end` | 32 | the same wrong woman |
+| `458-the-back-door-sticks` | 33 | the same wrong woman |
+| `206-the-window-swollen-shut` | 33 | a woman in a brown cardigan, hair down |
+| `209-the-keys-are-always-in-it` | 37 | a woman in a brown cardigan, hair down |
+| `542-dont-tell-my-husband` | 37 | already on model — **kept** |
+
+Composition, camera, props and every other character in each shot are unchanged. None of the six carried a depth map,
+plate or cut-outs, so no layers had to be remade; `206` is listed in `peopleInShot` but has no depth entry, which
+`npm run test:film-depth` allows. Film data rebuilt; film depth and film backend checks pass.
+
+### The Jack that came back wrong (same day)
+
+The first replacement of `171-upstairs-at-the-end` also changed **Jack**: his long dark hair, swept back and greying at
+the temples, came back as a short, uniformly black head, so the man on the stairs read as a stranger rather than as Jack.
+Audited every regenerated frame against `public/film/img/sheets/jack-face.jpg` and the archived originals — `170`, `206`,
+`458` and `209` all still hold Jack's gaunt face and grey-streaked hair; only `171` was wrong. Remade it with the woman's
+sheet *and* Jack's face sheet passed in together, changing nothing but his head (old file archived as `--v2`).
+
+The rule this leaves: **pass every character's sheet, not just the one being replaced** — an image edit redraws the whole
+frame, and the person you did not mention is the one that drifts.

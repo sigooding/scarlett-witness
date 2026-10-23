@@ -26,6 +26,8 @@ Read `docs/depth-camera.md` before adding or changing any depth map, plate or cu
 
 Check maps with `tools/review-depth-maps.py` and watch the move with `tools/depth-frames.mjs` before calling a shot done.
 
+To survey depth shots in bulk, use `preview-depth/` (its README has a section for agents): `node preview-depth/shots.mjs --list cuts` prints every shot with cut-outs, its real move, its 22 Oct flags and a `?shot=` URL that opens it; `?shot=<name>&play=1` runs one shot's move in a browser. It imports the same `DepthParallaxLayer` the film plays, so what it shows is the engine's move, not an approximation. It is a look only (no grade/grain/dialogue) — still record the shipped frames with `tools/depth-frames.mjs`.
+
 ## The Studio's image library
 
 `tools/builtin-images.mjs` is what every image box in the Studio can offer: `public/img` and `public/assets`, the
