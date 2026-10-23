@@ -828,3 +828,26 @@ The director, after watching the depth-camera preview: *"the effect is too subtl
 * **The depth move finishes inside the hold.** Every `depthSeconds` was divided by three, the same compression the preview was set to when the director approved the effect: 85 shots at 14 s → 5 s, 16 s → 5 s, 18 s → 6 s, and so on (floor 4 s). The engine's ease-out settle (`src/game/DepthParallax.tsx`) then plays nearly the whole move while a shot is on screen instead of a fifth of it. Amounts are unchanged — no map, plate or cut-out was touched, and `docs/depth-camera.md` still holds for their validation. `379-the-laundry` keeps its 26 s / 0.16 drift: that shot's woman is left in the plate on purpose and must not smear.
 
 Verified in the generated film: 135 cinematics carry a `depthMap`, the engine draws the depth layer on **135 of 135**, and `pan: 0`, `shake: 0`. `npm run test:film-depth` (134 entries) and `npm run test:film-backend` (181 checks) pass.
+
+## Mrs Noda made one woman (23 October 2026)
+
+The director: *"fix mrs noda — she is not a consistent character, she changes into someone else."* She was two different
+women across her four scenes. `public/film/img/sheets/mrs-noda.jpg` (the character sheet) is the authority: a Japanese
+woman in her early seventies, straight grey hair in a low bun, dark teal-green collared work shirt, plain beige canvas
+apron, dark trousers. `542-dont-tell-my-husband` already matched it; the rest did not.
+
+Recreated from each picture with the sheet as the identity reference, and installed with
+`FFMPEG=... node tools/install-film-picture.mjs` (old files archived as `--v1` in `public/film/img/archive/`):
+
+| Picture | Scene | Was |
+|---|---|---|
+| `170-just-one-night` | 32 | a different woman, white permed hair, brown cardigan |
+| `171-upstairs-at-the-end` | 32 | the same wrong woman |
+| `458-the-back-door-sticks` | 33 | the same wrong woman |
+| `206-the-window-swollen-shut` | 33 | a woman in a brown cardigan, hair down |
+| `209-the-keys-are-always-in-it` | 37 | a woman in a brown cardigan, hair down |
+| `542-dont-tell-my-husband` | 37 | already on model — **kept** |
+
+Composition, camera, props and every other character in each shot are unchanged. None of the six carried a depth map,
+plate or cut-outs, so no layers had to be remade; `206` is listed in `peopleInShot` but has no depth entry, which
+`npm run test:film-depth` allows. Film data rebuilt; film depth and film backend checks pass.
