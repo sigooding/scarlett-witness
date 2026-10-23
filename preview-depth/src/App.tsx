@@ -29,7 +29,7 @@ function withSpeed(c: CinematicSettings, speed: number): CinematicSettings {
 export function App() {
   const hasExperiments = shots.some((s) => (s as Shot & { experiment?: unknown }).experiment);
   const [filter, setFilter] = useState<Filter>(hasExperiments ? "experiments" : "cuts");
-  const [speed, setSpeed] = useState(3);
+  const [speed, setSpeed] = useState(1);
   const [showMap, setShowMap] = useState(true);
   const [live, setLive] = useState<string[]>([]);
   const [open, setOpen] = useState<Shot | null>(null);
@@ -84,8 +84,8 @@ export function App() {
       <main>
         <p className="hint">
           Click <b>▶</b> on a card to run the real <code>DepthParallaxLayer</code> — the same shader, plate, depth map and
-          cut-outs the film plays — on that shot's own move from <code>studio-edits.json</code>. <b>Speed</b> only shortens{" "}
-          <code>depthSeconds</code> so the settle is quicker; the geometry is untouched. Only {MAX_LIVE} cameras run at once
+          cut-outs the film plays — on that shot's own move from <code>studio-edits.json</code> — at 1× that is exactly what the film plays. <b>Speed</b> only shortens{" "}
+          <code>depthSeconds</code> further; the geometry is untouched. Only {MAX_LIVE} cameras run at once
           (a browser keeps about 16 WebGL contexts; more would blank the cards). Click a card for a bigger look with its
           still, map and plate beside the move.
         </p>

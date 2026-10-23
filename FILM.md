@@ -818,3 +818,13 @@ The director selected nighttime replacements for `s50/216-hand-starts-to-shake.j
 ## Lost heel continuity and session verification (16 October 2026)
 
 `s73/72-the-lost-heel.jpg` now uses the director's selected night reshoot: Vera approaches the camera in the matching red dress, phone in hand, panicked and uneven, one foot bare and the matching black heel left behind. No vending machine remains in this shot. All selected replacements from this session are installed at the film's existing paths; the Kaneko and departing-pickup additions are wired through Studio overrides and the generated film. Installed locked dependencies and verified: film backend **126 checks passed**, film depth **all checks passed**, production build **passed** (existing unresolved `/assets/UI/evidence_board.jpg` warning). These successful checks supersede the earlier dependency-blocked test attempts recorded above.
+
+## Depth moves made visible, no pan, no shake (23 October 2026)
+
+The director, after watching the depth-camera preview: *"the effect is too subtle to notice"*, and asked for the pan to be fixed and shake turned off. Three changes in `src/film/studio-edits.json` → `pictureLook`, then `node tools/build-film-story.mjs`:
+
+* **No stale pan.** 43 entries still said `mode: "pan"` although `tools/build-film-story.mjs` has turned every pan into `static` since 15 October (`noSlowPan`). They are written as `static` now, with `panDistance`/`panDirection` removed, so the source and the film agree. The builder's normalisation stays as a guard.
+* **No shake.** All 30 `mode: "shake"` entries (13 of them depth shots) are `static`; `shakeAmount`/`shakeDuration` are gone. Nothing in `pictureLook` shakes any more.
+* **The depth move finishes inside the hold.** Every `depthSeconds` was divided by three, the same compression the preview was set to when the director approved the effect: 85 shots at 14 s → 5 s, 16 s → 5 s, 18 s → 6 s, and so on (floor 4 s). The engine's ease-out settle (`src/game/DepthParallax.tsx`) then plays nearly the whole move while a shot is on screen instead of a fifth of it. Amounts are unchanged — no map, plate or cut-out was touched, and `docs/depth-camera.md` still holds for their validation. `379-the-laundry` keeps its 26 s / 0.16 drift: that shot's woman is left in the plate on purpose and must not smear.
+
+Verified in the generated film: 135 cinematics carry a `depthMap`, the engine draws the depth layer on **135 of 135**, and `pan: 0`, `shake: 0`. `npm run test:film-depth` (134 entries) and `npm run test:film-backend` (181 checks) pass.
