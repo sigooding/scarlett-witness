@@ -1661,6 +1661,22 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s76/84-cries-without-a-sound/depth.png",
    "depthPlate": "/film/depth/s76/84-cries-without-a-sound/plate.jpg"
+  },
+  "432-the-hive": {
+   "picture": "public/film/img/s15/432-the-hive.jpg",
+   "depthMap": "/film/depth/s15/432-the-hive/depth.png"
+  },
+  "422-everywhere-a-small-thing-could-fall": {
+   "picture": "public/film/img/s12/422-everywhere-a-small-thing-could-fall.jpg",
+   "depthMap": "/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png"
+  },
+  "577-the-window": {
+   "picture": "public/film/img/service_new/577-the-window.jpg",
+   "depthMap": "/film/depth/service_new/577-the-window/depth.png"
+  },
+  "m2-the-hive": {
+   "picture": "public/film/img/montage/m2-the-hive.jpg",
+   "depthMap": "/film/depth/montage/m2-the-hive/depth.png"
   }
  }
 }

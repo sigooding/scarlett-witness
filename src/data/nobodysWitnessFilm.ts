@@ -1335,6 +1335,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
+     "/film/img/montage/m2-the-hive.jpg": {
+      "mode": "static",
+      "depthMap": "/film/depth/montage/m2-the-hive/depth.png",
+      "depthMotion": "truck",
+      "depthAmount": 0.44,
+      "depthSeconds": 16,
+      "depthFocus": 0.55,
+      "depthDirection": "right",
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
      "/film/img/s75/80-the-machine-waits.jpg": {
       "lights": [
        {
@@ -6140,13 +6152,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s12/422-everywhere-a-small-thing-could-fall.jpg",
      "cinematic": {
-      "mode": "dolly",
-      "focalPoint": "35% 50%",
+      "mode": "static",
+      "focalPoint": "50% 58%",
       "zoomDuration": 18,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMap": "/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.4,
+      "depthSeconds": 18,
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -7440,13 +7456,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s15/432-the-hive.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
+      "mode": "static",
+      "focalPoint": "50% 56%",
       "zoomDuration": 14,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMap": "/film/depth/s15/432-the-hive/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.42,
+      "depthSeconds": 18,
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -26263,13 +26283,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "97A",
    "background": "/film/img/service_new/577-the-window.jpg",
    "cinematic": {
-    "mode": "dolly",
+    "mode": "static",
     "focalPoint": "50% 60%",
     "zoomDuration": 20,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMap": "/film/depth/service_new/577-the-window/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.36,
+    "depthSeconds": 16,
+    "depthFocus": 0.5,
+    "depthDirection": "left",
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27927,5 +27953,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "28236970f908"
+ "builtinRevision": "17a57f13c451"
 } as unknown as Story;

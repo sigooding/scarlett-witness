@@ -268,3 +268,24 @@ montage and never seen. Now `tools/build-film-story.mjs` gives each montage stil
 draws the depth camera on the still on screen and the one dissolving out (the same layer through the dissolve, so the
 move never restarts), its move fitted to the hold (`depthSeconds` at most the hold plus 2 s); stills without a map keep
 the slow zoom. The titles have 4 such stills (377, the railway, 80, 314) and the end credits 4 (01, 63, 200, 74).
+
+## Four depth-only shots added 23 October 2026
+
+Four empty-location pictures were given the depth-map camera, made with image tools from the picture itself (the
+method §2 permits alongside Depth Anything; the Depth Anything weights come from `release-assets.githubusercontent.com`,
+which the sandbox could not reach — the same block as 10 October). Each map was checked against its plate on a contact
+sheet before wiring: `public/film/review/2026-10-23-depth-maps/contact-sheet.jpg`. None of them has a person in it, so
+none is in `peopleInShot`.
+
+| Picture | Scene | Move | Amount | Seconds | `depth.png` |
+|---|---|---|---|---|---|
+| `432-the-hive` | s15 | push, focal 50% 56% | 0.42 | 18 | `public/film/depth/s15/432-the-hive/depth.png` |
+| `422-everywhere-a-small-thing-could-fall` | s12 | push, focal 50% 58% | 0.40 | 18 | `public/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png` |
+| `577-the-window` | service_new (97A) | truck, focus 0.5 | 0.36 | 16 | `public/film/depth/service_new/577-the-window/depth.png` |
+| `m2-the-hive` | montage (opening titles) | truck, focus 0.55 | 0.44 | 16 | `public/film/depth/montage/m2-the-hive/depth.png` |
+
+They are wired in `src/film/studio-edits.json` (`pictureLook`) with `mode: "static"` (the current film rule), and
+`node tools/build-film-story.mjs` regenerated `src/data/nobodysWitnessFilm.ts`. `npm run test:film-depth` passes.
+`m2-the-hive` is in the opening titles' montage, so the build gives it to `credits.montageLooks` and `CreditsMontage`
+draws the move on it. Like the 10 October stopgaps these should be re-checked with `tools/review-depth-maps.py` once
+the models are reachable, and watched with `tools/depth-frames.mjs` (`nw_s15`, `nw_s12`, `nw_s97a`) before shipping.

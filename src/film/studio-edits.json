@@ -5595,6 +5595,48 @@
      }
     ]
    }
+  },
+  "432-the-hive": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s15/432-the-hive/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.42,
+    "depthSeconds": 18,
+    "focalPoint": "50% 56%"
+   }
+  },
+  "422-everywhere-a-small-thing-could-fall": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/s12/422-everywhere-a-small-thing-could-fall/depth.png",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 18,
+    "focalPoint": "50% 58%"
+   }
+  },
+  "577-the-window": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/service_new/577-the-window/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.36,
+    "depthSeconds": 16,
+    "depthFocus": 0.5,
+    "depthDirection": "left"
+   }
+  },
+  "m2-the-hive": {
+   "cinematic": {
+    "mode": "static",
+    "depthMap": "/film/depth/montage/m2-the-hive/depth.png",
+    "depthMotion": "truck",
+    "depthAmount": 0.44,
+    "depthSeconds": 16,
+    "depthFocus": 0.55,
+    "depthDirection": "right"
+   }
   }
  },
  "cutscenes": [
