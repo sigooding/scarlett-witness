@@ -37,3 +37,6 @@ zone-maps/
 
 # animatic exports (tools/export-animatic.mjs): rendered videos stay out of git
 exports/
+
+# The depth-camera preview's own build output (preview-depth/, see its README)
+/preview-depth/dist/

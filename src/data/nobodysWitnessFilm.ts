@@ -12743,6 +12743,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "shakeAmount": 0.25,
     "shakeDuration": 0.5,
+    "depthMotion": "truck",
+    "depthAmount": 0.5,
+    "depthSeconds": 12,
+    "depthFocus": 0.365,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+    "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+      "depth": 0.365
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27953,5 +27966,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "17a57f13c451"
+ "builtinRevision": "1e46c5e32a67"
 } as unknown as Story;

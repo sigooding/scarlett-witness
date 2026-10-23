@@ -4275,7 +4275,20 @@
    "cinematic": {
     "mode": "shake",
     "shakeAmount": 0.25,
-    "shakeDuration": 0.5
+    "shakeDuration": 0.5,
+    "depthMotion": "truck",
+    "depthAmount": 0.5,
+    "depthSeconds": 12,
+    "depthFocus": 0.365,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s41/179-same-wood/depth.png",
+    "depthPlate": "/film/depth/s41/179-same-wood/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s41/179-same-wood/cutout-1.png",
+      "depth": 0.365
+     }
+    ]
    }
   },
   "144-empty": {

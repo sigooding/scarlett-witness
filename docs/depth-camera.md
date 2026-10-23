@@ -289,3 +289,12 @@ They are wired in `src/film/studio-edits.json` (`pictureLook`) with `mode: "stat
 `m2-the-hive` is in the opening titles' montage, so the build gives it to `credits.montageLooks` and `CreditsMontage`
 draws the move on it. Like the 10 October stopgaps these should be re-checked with `tools/review-depth-maps.py` once
 the models are reachable, and watched with `tools/depth-frames.mjs` (`nw_s15`, `nw_s12`, `nw_s97a`) before shipping.
+
+## Watching a shot before calling it done (23 October 2026)
+
+`docs/depth-camera.md` §5 says to record frames with `tools/depth-frames.mjs`, which needs a running dev server and a
+browser. For a quick look at many shots at once there is `preview-depth/` (its own README): `npm run dev` in it plays
+the real `<DepthParallaxLayer>` — same shader, plate, map and cut-outs — on each shot's own move from
+`studio-edits.json`, with the map inset beside it and the 22 October automatic review flags shown on the shots that
+have them. It reads the repo and writes nothing into it (only its own `src/shots.json`). Use it to find the bad ones;
+use `tools/depth-frames.mjs` on a shot that looks wrong.
