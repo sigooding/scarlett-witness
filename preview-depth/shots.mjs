@@ -69,4 +69,21 @@ try {
 shots.sort((a, b) => a.scene.localeCompare(b.scene, undefined, { numeric: true }) || a.name.localeCompare(b.name));
 const all = [...experiments, ...shots];
 writeFileSync(join(import.meta.dirname, "src/shots.json"), JSON.stringify(all, null, 1) + "\n");
+
+// --list: one tab-separated line per shot with the URL that opens it, for a script or an agent that has no mouse.
+//   node shots.mjs --list [cuts|people|flagged|experiments|all]   (default: cuts)
+if (process.argv.includes("--list")) {
+  const want = process.argv[process.argv.indexOf("--list") + 1];
+  const pick = {
+    cuts: (s) => s.cutoutCount > 0,
+    people: (s) => !!s.people,
+    flagged: (s) => !!s.review?.flags,
+    experiments: (s) => !!s.experiment,
+    all: () => true,
+  }[want] ?? ((s) => s.cutoutCount > 0);
+  const base = process.env.DEPTH_PREVIEW_URL || "http://localhost:5179";
+  for (const s of all.filter(pick)) {
+    console.log([s.name, s.scene, s.cutoutCount, s.people ?? "-", s.review?.flags ?? "-", `${base}/?shot=${encodeURIComponent(s.name)}&play=1`].join("\t"));
+  }
+}
 console.log(`${shots.length} film depth shots (${shots.filter((s) => s.cutoutCount).length} with cut-outs, ${shots.filter((s) => s.review?.flags).length} flagged on 22 Oct) + ${experiments.length} experiment(s)`);

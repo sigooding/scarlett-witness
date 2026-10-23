@@ -26,13 +26,32 @@ function withSpeed(c: CinematicSettings, speed: number): CinematicSettings {
   return { ...c, depthSeconds: Math.max(2, seconds / speed) };
 }
 
+/** Deep links, so a script (or an agent without a mouse) can open one shot directly:
+ *  `?shot=<name>` opens that shot's big view, `?filter=<id>` picks a filter, `?play=1` starts the move at once. */
+function fromUrl() {
+  if (typeof window === "undefined") return { filter: undefined, shot: undefined, play: false };
+  const q = new URLSearchParams(window.location.search);
+  const filter = q.get("filter");
+  const shot = q.get("shot");
+  const play = ["1", "true", "yes"].includes(q.get("play") ?? "");
+  return {
+    filter: FILTERS.some((f) => f.id === filter) ? (filter as Filter) : undefined,
+    shot: shot ? (shots.find((s) => s.name === shot) ?? undefined) : undefined,
+    play,
+  };
+}
+
 export function App() {
   const hasExperiments = shots.some((s) => (s as Shot & { experiment?: unknown }).experiment);
-  const [filter, setFilter] = useState<Filter>(hasExperiments ? "experiments" : "cuts");
+  const initial = useMemo(fromUrl, []);
+  // A named shot has to be in the current filter's list or its card would not be on the page.
+  const [filter, setFilter] = useState<Filter>(
+    initial.filter ?? (initial.shot ? "all" : hasExperiments ? "experiments" : "cuts"),
+  );
   const [speed, setSpeed] = useState(1);
   const [showMap, setShowMap] = useState(true);
-  const [live, setLive] = useState<string[]>([]);
-  const [open, setOpen] = useState<Shot | null>(null);
+  const [live, setLive] = useState<string[]>(initial.shot && initial.play ? [initial.shot.name] : []);
+  const [open, setOpen] = useState<Shot | null>(initial.shot ?? null);
   const [tick, setTick] = useState(0);
 
   const active = FILTERS.find((f) => f.id === filter) ?? FILTERS[0];

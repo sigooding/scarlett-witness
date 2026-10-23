@@ -39,3 +39,39 @@ Filters: **Cut-out shots** (has `depthCutouts`), **Flagged 22 Oct** (the automat
 This is a look, not the film: the film adds the grade, grain, lens effects and the dialogue layer on top. Record the
 real frames with `node tools/depth-frames.mjs <scene> <picture> /tmp/frames 16 2` before calling a shot done
 (`docs/depth-camera.md` §5).
+
+## If you are an agent (no mouse, maybe no eyes)
+
+This folder is here so a shot with cut-outs can be *watched* instead of guessed at. Everything the app draws comes from
+the repo's own data, so most of it is readable without a browser:
+
+| You want | Do this |
+|---|---|
+| The inventory: every depth shot, its real move, its cut-outs, its 22 Oct flags | `node shots.mjs` then read `src/shots.json` |
+| A shortlist as text, with a URL per shot | `node shots.mjs --list [cuts\|people\|flagged\|experiments\|all]` (default `cuts`) |
+| One shot on screen | open `http://localhost:5179/?shot=<name>&play=1` (URL-encode the name), or `?filter=<id>` |
+| The rendered move as images | Playwright is already a dependency of `tools/depth-frames.mjs`; see the snippet below |
+
+Deep links: `?shot=<name>` opens that shot's big view (still, move, map, plate), `?play=1` starts the move immediately,
+`?filter=experiments|cuts|flagged|people|all` picks the grid. `DEPTH_PREVIEW_URL` overrides the base URL in `--list`.
+
+    npm install          # preview-depth only
+    npm run dev          # 0.0.0.0:5179
+    # then, from a folder that has playwright installed (the repo root does):
+    node -e 'import("playwright").then(async ({chromium}) => {
+      const b = await chromium.launch({args:["--use-gl=angle","--use-angle=swiftshader","--enable-unsafe-swiftshader"]});
+      const p = await b.newPage({viewport:{width:1280,height:720}});
+      await p.goto("http://localhost:5179/?shot=200-the-number-114&play=1");
+      await p.waitForTimeout(4000);
+      await p.screenshot({path:"/tmp/200-big.png"}); await b.close(); });'
+
+Three things to keep in mind:
+
+* **It is a look, not a delivery.** No grade, grain or dialogue layer. Judge geometry and cut-out edges here; record the
+  shipped frames with `tools/depth-frames.mjs` (game dev server, port 5173) before calling a shot done.
+* **Six cameras at most** (`MAX_LIVE`) — a browser keeps about 16 WebGL contexts and silently drops the oldest, so a
+  screenshot of the whole grid past six cards would show blanks. Screenshot one card at a time.
+* **SwiftShader is slow.** Software WebGL needs a few seconds per live card; a still (no `play=1`) is immediate.
+
+The tool is only as current as `shots.json`: it is rebuilt by `npm run dev` / `npm run shots`, so re-run it after
+changing `src/film/studio-edits.json` or `docs/film-depth-layers.json`.

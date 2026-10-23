@@ -851,3 +851,14 @@ Recreated from each picture with the sheet as the identity reference, and instal
 Composition, camera, props and every other character in each shot are unchanged. None of the six carried a depth map,
 plate or cut-outs, so no layers had to be remade; `206` is listed in `peopleInShot` but has no depth entry, which
 `npm run test:film-depth` allows. Film data rebuilt; film depth and film backend checks pass.
+
+### The Jack that came back wrong (same day)
+
+The first replacement of `171-upstairs-at-the-end` also changed **Jack**: his long dark hair, swept back and greying at
+the temples, came back as a short, uniformly black head, so the man on the stairs read as a stranger rather than as Jack.
+Audited every regenerated frame against `public/film/img/sheets/jack-face.jpg` and the archived originals — `170`, `206`,
+`458` and `209` all still hold Jack's gaunt face and grey-streaked hair; only `171` was wrong. Remade it with the woman's
+sheet *and* Jack's face sheet passed in together, changing nothing but his head (old file archived as `--v2`).
+
+The rule this leaves: **pass every character's sheet, not just the one being replaced** — an image edit redraws the whole
+frame, and the person you did not mention is the one that drifts.
