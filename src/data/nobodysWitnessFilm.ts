@@ -3873,11 +3873,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.48,
-      "depthSeconds": 5,
-      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -27904,5 +27899,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "0bb75993f673"
+ "builtinRevision": "306e96e4f65b"
 } as unknown as Story;

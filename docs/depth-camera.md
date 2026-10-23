@@ -298,3 +298,21 @@ the real `<DepthParallaxLayer>` — same shader, plate, map and cut-outs — on 
 `studio-edits.json`, with the map inset beside it and the 22 October automatic review flags shown on the shots that
 have them. It reads the repo and writes nothing into it (only its own `src/shots.json`). Use it to find the bad ones;
 use `tools/depth-frames.mjs` on a shot that looks wrong.
+
+## Three pictures changed, 23 October 2026
+
+* **`51-the-interview-room` — depth removed** (the director: *"remove depth from interview room it screws up"*). The
+  map is deleted from `pictureLook` (the entry had nothing but depth fields, so it is gone) and the shot plays as the
+  still again. `public/film/depth/s6/51-the-interview-room/depth.png` is left on disk, unwired, in case a better map is
+  ever made; it is not in `docs/film-depth-layers.json`, so `npm run test:film-depth` does not count it.
+* **`367-the-phone-rings` — map redone** (the director: *"everything in the room has disappeared and it's just the
+  phone"*). The picture was fine; the map was soft and near-uniform, so the push had nothing to move. The new map
+  separates the phone and table (white) from the room, curtains and window (dark), and the entry's `smooth` is 0 so the
+  map keeps its detail. Same push, 0.32, 5 s, focal 50% 65%.
+* **`249-the-chair` — picture recreated, everything else kept as it was.** The old plate was a low-detail image; a
+  higher-resolution recreation of the same composition was installed with
+  `FFMPEG=... node tools/install-film-picture.mjs` (1365×768 → 1920×1080; the old file is
+  `public/film/img/archive/s16/249-the-chair--v2.jpg`). The cut-out, plate and truck are kept: the cut-out's alpha is
+  unchanged, only its colour pixels now come from the new picture (the old ones differed by ~4/255 on average), and the
+  plate keeps its painted-in background with the new picture refreshed inside and just around the hole. The cut-out,
+  plate and depth map still sit where the new picture's Jack, door and alley are.

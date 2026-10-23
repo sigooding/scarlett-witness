@@ -1754,15 +1754,6 @@
     "focalPoint": "50% 55%"
    }
   },
-  "51-the-interview-room": {
-   "cinematic": {
-    "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
-    "depthMotion": "truck",
-    "depthAmount": 0.48,
-    "depthSeconds": 5,
-    "depthDirection": "right"
-   }
-  },
   "10-the-shot": {
    "cinematic": {
     "mode": "static",

@@ -1055,21 +1055,6 @@
   "review": null
  },
  {
-  "name": "51-the-interview-room",
-  "scene": "s6",
-  "picture": "/film/img/s6/51-the-interview-room.jpg",
-  "cinematic": {
-   "depthMap": "/film/depth/s6/51-the-interview-room/depth.png",
-   "depthMotion": "truck",
-   "depthAmount": 0.48,
-   "depthSeconds": 5,
-   "depthDirection": "right"
-  },
-  "people": null,
-  "cutoutCount": 0,
-  "review": null
- },
- {
   "name": "63-the-detectives-room",
   "scene": "s7",
   "picture": "/film/img/s7/63-the-detectives-room.jpg",
