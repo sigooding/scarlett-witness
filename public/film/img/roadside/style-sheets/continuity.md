@@ -72,8 +72,14 @@ Scene **36 (Vera's apartment)** is deliberately out of scope: it is not the road
   temples and sides. Roadside wardrobe: **long charcoal-black wool overcoat, off-white open-collar
   shirt, dark trousers**. In his room (34) the coat is off, shirt sleeves only, sleeves rolled.
   He carries nothing but Sakai's folded receipts, which go inside the jacket in 39.
-- **Mrs. Noda** (`noda-couple.jpg`): 70s Japanese, short grey permed hair, **beige knitted cardigan
-  over a faded print apron**, slippers. Smokes on the back step.
+- **Mrs. Noda** (face and wardrobe authority: `../../sheets/mrs-noda.jpg`; blocking and location:
+  `noda-couple.jpg`): 70s Japanese, **straight grey hair pulled back into a low bun, dark teal-green
+  collared work shirt under a plain beige canvas apron tied at the waist, dark trousers, plain dark
+  shoes**. Smokes on the back step. The earlier "short grey perm, beige knitted cardigan over a faded
+  print apron, slippers" description in this file was superseded on 23 October 2026 — it produced a
+  second, visibly different woman in scenes 32/33/37 and those frames were remade from the individual
+  sheet. Do not reintroduce the cardigan/permed look; `noda-couple.jpg` still shows it and is a
+  blocking reference only.
 - **Mr. Noda** (`noda-couple.jpg`): 70s Japanese, thin grey hair, **heavy buttoned cardigan,
   slippers**, never leaves his armchair in the lobby corner.
 - **Masked men** (`masked-team.jpg`): **eight** men, four black sedans, two from each car. Black
