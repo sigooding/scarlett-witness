@@ -1,0 +1,20 @@
+[
+ {
+  "name": "100-02-his-silhouette-in-the-doorway (no cut-outs)",
+  "scene": "experiment",
+  "picture": "/film/img/final_scene_new/100-02-his-silhouette-in-the-doorway.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/experiments/100-02-depth.png",
+   "depthMotion": "truck",
+   "depthAmount": 0.6,
+   "depthSeconds": 14,
+   "depthFocus": 0.55,
+   "depthDirection": "right"
+  },
+  "people": "Jack, standing in the doorway",
+  "cutoutCount": 0,
+  "review": null,
+  "experiment": "A plain depth map with the person still in it — what the repo's rule (docs/depth-camera.md §1) says not to ship. Watch his coat and face against the door frame as it slides."
+ }
+]

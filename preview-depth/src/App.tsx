@@ -5,9 +5,10 @@ import shots from "./shots.json";
 
 type Shot = (typeof shots)[number];
 
-type Filter = "cuts" | "flagged" | "people" | "all";
+type Filter = "experiments" | "cuts" | "flagged" | "people" | "all";
 
 const FILTERS: { id: Filter; label: string; test: (s: Shot) => boolean }[] = [
+  { id: "experiments", label: "Experiments", test: (s) => !!(s as Shot & { experiment?: string | true }).experiment },
   { id: "cuts", label: "Cut-out shots", test: (s) => s.cutoutCount > 0 },
   { id: "flagged", label: "Flagged 22 Oct", test: (s) => !!s.review?.flags },
   { id: "people", label: "People in shot", test: (s) => !!s.people },
@@ -26,7 +27,8 @@ function withSpeed(c: CinematicSettings, speed: number): CinematicSettings {
 }
 
 export function App() {
-  const [filter, setFilter] = useState<Filter>("cuts");
+  const hasExperiments = shots.some((s) => (s as Shot & { experiment?: unknown }).experiment);
+  const [filter, setFilter] = useState<Filter>(hasExperiments ? "experiments" : "cuts");
   const [speed, setSpeed] = useState(3);
   const [showMap, setShowMap] = useState(true);
   const [live, setLive] = useState<string[]>([]);
@@ -171,6 +173,7 @@ function Card({ shot, speed, showMap, playing, onPlay, onStop, onOpen }: {
           {!shot.cutoutCount && <span className="tag">map only</span>}
           {shot.people && <span className="tag flag">people: {shot.people}</span>}
           {shot.review?.flags && <span className="tag bad">⚠ {shot.review.flags}</span>}
+          {(shot as Shot & { experiment?: unknown }).experiment && <span className="tag exp">experiment · no cut-outs</span>}
         </div>
       </div>
     </article>
@@ -228,6 +231,11 @@ function Big({ shot, speed, onClose }: { shot: Shot; speed: number; onClose: () 
           <>No cut-outs: the map alone moves this shot.{" "}</>
         )}
         {shot.people && <>Listed in <code>peopleInShot</code>: {shot.people}. </>}
+        {(shot as Shot & { experiment?: string }).experiment && (
+          <p className="expnote">
+            <b>Experiment, not wired into the film.</b> {(shot as Shot & { experiment?: string }).experiment}
+          </p>
+        )}
         {shot.review ? (
           <>
             Review sheet (22 Oct, automatic): {shot.review.cutouts} cut-out(s).{" "}

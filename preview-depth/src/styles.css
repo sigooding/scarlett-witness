@@ -223,3 +223,7 @@ main { padding: 16px 18px 60px; }
 }
 .playbtn:hover { border-color: var(--amber); }
 .card.playing .playbtn { color: var(--teal); border-color: var(--teal); }
+
+.tag.exp { color: #d9a7ff; border-color: #4a3560; }
+.expnote { margin: 0 0 6px; color: #d9a7ff; max-width: 110ch; }
+.card:has(.tag.exp) { border-color: #4a3560; }

@@ -59,6 +59,14 @@ for (const [name, entry] of Object.entries(edits.pictureLook ?? {})) {
     review: flags.get(name) ?? null,
   });
 }
+// Experiments (experiments.json): plain depth maps on shots with people, for comparison only — never wired into the
+// film. They come first, and the app filters them separately.
+let experiments = [];
+try {
+  experiments = JSON.parse(readFileSync(join(import.meta.dirname, "experiments.json"), "utf8")).map((e) => ({ ...e, experiment: e.experiment ?? true }));
+} catch { /* none */ }
+
 shots.sort((a, b) => a.scene.localeCompare(b.scene, undefined, { numeric: true }) || a.name.localeCompare(b.name));
-writeFileSync(join(import.meta.dirname, "src/shots.json"), JSON.stringify(shots, null, 1) + "\n");
-console.log(`${shots.length} depth shots (${shots.filter((s) => s.cutoutCount).length} with cut-outs, ${shots.filter((s) => s.review?.flags).length} flagged on 22 Oct)`);
+const all = [...experiments, ...shots];
+writeFileSync(join(import.meta.dirname, "src/shots.json"), JSON.stringify(all, null, 1) + "\n");
+console.log(`${shots.length} film depth shots (${shots.filter((s) => s.cutoutCount).length} with cut-outs, ${shots.filter((s) => s.review?.flags).length} flagged on 22 Oct) + ${experiments.length} experiment(s)`);
