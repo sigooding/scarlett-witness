@@ -407,7 +407,7 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   2730×1536 or 2752×1536. They were halved somewhere before they reached the film. If the full-size originals can be found (the
   generator's download, an earlier upload), install those over the halves with the install tool, which archives the old file.
   Otherwise they are retake candidates. The player stretches them to the screen, so they look soft.
-  - 1365×768: `s17/360-more-than-the-bowl-costs`, `s20/346-the-bulb-hums`, `s54/220-everything-is-still-there`, `s70/393-run`,
+  - 1365×768: `s17/360-more-than-the-bowl-costs` (remade 1920×1080 on 24 Oct), `s20/346-the-bulb-hums` (remade 2728×1534 on 24 Oct), `s54/220-everything-is-still-there`, `s70/393-run`,
     `s90/381-the-plank`, `s93/137-he-knows-this-car`, `s93/138-the-door-opens`, `s94/139-only-tea`, `s97a/565-they-bow`.
   - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`, `s82/new-jack-walks-in-4.png`,
     `s94/368-the-door-closes`, `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
