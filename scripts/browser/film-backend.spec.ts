@@ -208,7 +208,8 @@ test("a saved copy of the film from an older build is flagged, and the current f
   expect(keys, "the saved copy is no longer the film's draft").not.toContain("scarlet-studio-draft-nobodys-witness-film");
   expect(keys.some((k) => /^scarlet-studio-backup-\d+-scarlet-studio-draft-nobodys-witness-film$/.test(k)), "but it is kept, under a backup name").toBe(true);
   await page.getByRole("button", { name: /^▶ Play Nobody/i }).click();
-  // the Scarlet Reel logo plays first (22 October 2026), then the film opens on scene 1
+  // the Black Cove intro plays first (24 October 2026), then the Scarlet Reel logo (22 October 2026), then the film opens on scene 1
+  await expect(page.locator("[data-scene-id]")).toHaveAttribute("data-scene-id", "nw_intro", { timeout: 20_000 });
   await expect(page.locator("[data-scene-id]")).toHaveAttribute("data-scene-id", "nw_logo", { timeout: 20_000 });
   await expect(page.locator("[data-scene-id]")).toHaveAttribute("data-scene-id", "nw_s1", { timeout: 25_000 });
 
@@ -232,10 +233,10 @@ test("the export dialog lists the shipped film from its start, whatever copy the
   await page.getByRole("button", { name: /Export animatic/ }).click();
   const dialog = page.getByRole("dialog", { name: "Export animatic" });
   await expect(dialog).toBeVisible();
-  // the whole film is the default, and its preview link starts on the film's own first scene: the Scarlet Reel logo (since
-  // 22 October 2026; scene 1 before), not the old copy's opening titles
+  // the whole film is the default, and its preview link starts on the film's own first scene: the Black Cove intro (since
+  // 24 October 2026; the Scarlet Reel logo from 22 October, scene 1 before), not the old copy's opening titles
   const link = await dialog.locator("a[href*='animatic=1']").first().getAttribute("href");
-  expect(link).toContain("scene=nw_logo");
+  expect(link).toContain("scene=nw_intro");
 });
 
 test("the 35mm film grade, where a story uses it, never fades a beat's picture, so the picture under it cannot flicker through", async ({ page }) => {

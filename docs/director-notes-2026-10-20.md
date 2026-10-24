@@ -636,3 +636,10 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   scene 2 (10) and scene 72 (4) was a sideways truck with no direction set, so all of them took the default and slid the same way.
   They now alternate: push-ins toward the person on close shots (the focal point from the cut-out), sideways trucks left and right
   on wider ones, never the same move twice in a row (`pictureLook`; `test:film-backend` checks it).
+
+## 30. The Black Cove intro, and the cinematic Show (24 October)
+- "a video that needs to go before scarlet reel vid": the uploaded Black Cove clip now opens the film, then the Scarlet Reel
+  logo, then scene 1. Files and details: FILM.md, "The Black Cove intro before the logo".
+- "the new song is a cinematic version of the end credit song", "put it somewhere it would fit", "isnt it the early parts with no
+  music", "its sad": it plays under scene 14, Mara's empty apartment, quietly under the dialogue. Easy to move: one Studio edit
+  (`nw_s14` in `src/film/studio-edits.json`).

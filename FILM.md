@@ -9,6 +9,21 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The Black Cove intro before the logo; the cinematic Show under scene 14 (24 October 2026)
+
+* **Black Cove intro.** The director's upload (`a__A_Black_Cove___Feat.mp4`, 8 s, 1920×1080, with sound) plays first, before the
+  Scarlet Reel logo: node `nw_intro`, made like `nw_logo` (`tools/build-film-story.mjs`): a silent copy
+  `public/film/video/black-cove.mp4` (the picture stream copied, not re-encoded) with `black-cove.webm` beside it, its sound
+  `public/film/audio/black-cove.mp3` as the node's music at 0.8 (it was mastered about 2 dB louder than the logo), 7.9 s, then
+  the logo. The upload is kept as `public/film/video/black-cove-original.mp4`. A checkpoint on it is never resumed (it is a
+  video-only scene, like the logo).
+* **The cinematic version of The Show** (`cinematic version of the show.mp3`, 3:50; now `public/film/audio/the-show-cinematic.mp3`).
+  The director: "put it somewhere it would fit", "isnt it the early parts with no music", "its sad". Scenes 5 to 17 run about
+  25 minutes with no music; it plays under **scene 14**, Vera and Jack in Mara's empty apartment ("The room smells of someone who
+  meant to come back"), at 0.35 under the dialogue, once (`musicLoop: false`, the `nw_s14` Studio edit). The scene runs about
+  3 to 3½ minutes, so the end of the song carries into the opening of 14A (rain, wipers) and stops there. The end credits keep
+  The Show itself, so the film's last song is now heard first, in this version, near the start.
+
 ## Mara's drawing in 369 and 445; 25 more effects on their beats (24 October 2026)
 
 * **369 "The drawing" and 445 "Exactly where it was" (scene 25)** now show **the same drawing as `s84/520-excuse-me.jpg`**
