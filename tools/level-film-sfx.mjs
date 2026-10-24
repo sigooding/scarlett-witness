@@ -37,6 +37,8 @@ const measure = file => {
 const run = args => execFileSync(ffmpeg, ["-y", "-v", "error", ...args], { stdio: ["ignore", "ignore", "inherit"] });
 
 for (const [id, e] of Object.entries(list.effects)) {
+  // an effect taken out of the film with its takes (dj-through-wall: it had a saxophone in it, 10 October 2026) is skipped
+  if (!e.takes.some(t => existsSync(resolve(root, t.file)))) continue;
   const takes = e.takes.map(t => ({ ...t, ...measure(resolve(root, t.file)) }));
   const usable = takes.filter(t => t.peak !== null && t.peak > WEAK_PEAK);
   const best = (usable.length ? usable : takes).reduce((a, b) => (b.mean > a.mean ? b : a));

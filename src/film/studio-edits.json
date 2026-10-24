@@ -500,6 +500,12 @@
   ],
   "nw_s55": [
    "radios-repairman"
+  ],
+  "nw_s93": [
+   "loop-car-idle-rain"
+  ],
+  "nw_s29": [
+   "amb-room-tone"
   ]
  },
  "sfx": [
@@ -1324,6 +1330,156 @@
    "find": "Jack hits him. Ishida doesn't lift his hands.",
    "file": "punches-chair",
    "volume": 0.8
+  },
+  {
+   "scene": "nw_s2",
+   "find": "the television audience laughs",
+   "file": "tv-laugh",
+   "volume": 0.09
+  },
+  {
+   "scene": "nw_s4",
+   "find": "The door closes behind her. Through the wall",
+   "file": "doors-close-softly",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s6",
+   "find": "She goes. The door closes behind her.",
+   "file": "doors-close-softly",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s8",
+   "find": "The door opens. Vera, the blue umbrella",
+   "file": "door-open-rain",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s11",
+   "find": "pulls its door open",
+   "file": "metal-cupboard-open",
+   "volume": 0.7
+  },
+  {
+   "scene": "nw_s14a",
+   "find": "kills the engine and lights",
+   "file": "engine-off-tick",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s14a",
+   "find": "Then he gets out and walks back",
+   "file": "car-door-heavy",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s21",
+   "find": "Footsteps on the stairs.",
+   "file": "footsteps-stairs",
+   "volume": 0.7
+  },
+  {
+   "scene": "nw_s25a",
+   "find": "a glass siphon bubbling",
+   "file": "siphon-bubbling",
+   "volume": 0.4
+  },
+  {
+   "scene": "nw_s27a",
+   "find": "He sets the glass down.",
+   "file": "glass-set-down",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s59",
+   "find": "The phone rings in the empty room.",
+   "file": "phone",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s59",
+   "find": "Nobody answers. He hangs up.",
+   "file": "phone-hang-up",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s63",
+   "find": "He turns pages.",
+   "file": "page-turn",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s70",
+   "find": "A shot.",
+   "file": "suppressed-shot",
+   "volume": 0.8
+  },
+  {
+   "scene": "nw_s71",
+   "find": "Lights snap on, one after another",
+   "file": "light-switches-snap",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s79",
+   "find": "turns the pages.",
+   "file": "page-turn",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s79",
+   "find": "She turns the page.",
+   "file": "page-turn",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s83",
+   "find": "presses a button on his desk phone",
+   "file": "intercom-button",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s93",
+   "find": "the rear door opens from inside",
+   "file": "car-doors-open",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s96",
+   "find": "The desk phone rings. He picks it up.",
+   "file": "phone",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s96",
+   "find": "He puts the phone down very slowly.",
+   "file": "phone-hang-up",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s98",
+   "find": "He hears the door behind him.",
+   "file": "rooftop-door",
+   "volume": 0.6
+  },
+  {
+   "scene": "nw_s98",
+   "find": "A train. They watch it pass.",
+   "file": "train",
+   "volume": 0.4
+  },
+  {
+   "scene": "nw_s98",
+   "find": "She walks to the rooftop door.",
+   "file": "rooftop-door",
+   "volume": 0.5
+  },
+  {
+   "scene": "nw_s100",
+   "find": "Kaneko sets a bowl in front of her.",
+   "file": "bowl-set-down",
+   "volume": 0.6
   }
  ],
  "dialogueBox": {
@@ -1590,6 +1746,24 @@
      {
       "file": "train",
       "volume": 0.5
+     }
+    ],
+    "72-03-the-lighter-into-the-bag": [
+     {
+      "file": "lounge-clock-glass",
+      "volume": 0.5
+     }
+    ],
+    "73-03-she-runs--69-vera-runs-v2": [
+     {
+      "file": "vera-running-heels",
+      "volume": 0.7
+     }
+    ],
+    "75-04-the-machines-wait": [
+     {
+      "file": "vending-hum",
+      "volume": 0.4
      }
     ]
    },

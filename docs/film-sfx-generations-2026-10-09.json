@@ -1921,6 +1921,270 @@
     "node": "EIqg7FihRAX8932NaBqs",
     "prompt": "Clearly audible: a sumo wrestling broadcast on a small old television, an arena crowd murmuring and cheering, a commentator talking, tinny speaker"
    }
+  },
+  "engine-off-tick": {
+   "prompt": "An old small car's engine switched off with the key, the engine shudders and stops, then quiet, rain on the roof, the hot engine ticking softly as it cools",
+   "seconds": 5,
+   "loop": false,
+   "node": "nZnwKV0tgMFZ4aVpWEaU",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "5yBh9S4XKO8YhDzc7ulX",
+     "session": "vkVFvwDISXGPvq0bwC3b",
+     "file": "public/film/sfx/alternates/engine-off-tick--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "xqY3QbQKoyWGXkiRbXYo",
+     "session": "yvtIjm0HLANFiShnQlHf",
+     "file": "public/film/sfx/alternates/engine-off-tick--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v2",
+   "file": "public/film/sfx/engine-off-tick.mp3",
+   "level": {
+    "gainDb": 8.7,
+    "sourcePeakDb": -11.7,
+    "sourceMeanDb": -40.2,
+    "peakDb": -3.2,
+    "meanDb": -31.5,
+    "duration": 4.99,
+    "weak": false
+   }
+  },
+  "footsteps-stairs": {
+   "prompt": "A woman's footsteps climbing old concrete stairs in a narrow stairwell, coming closer, heard from inside an office behind a glass door",
+   "seconds": 5,
+   "loop": false,
+   "node": "m8rhM9PdsOae76Jodx65",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "gPuL9apVc9NkhxPPIzEx",
+     "session": "QndNy8E1zzRFhhDqNoiR",
+     "file": "public/film/sfx/alternates/footsteps-stairs--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "CFy5iCr8YpgPWIdf7qQ6",
+     "session": "iPg9zig43NARIlkeFlkB",
+     "file": "public/film/sfx/alternates/footsteps-stairs--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v2",
+   "file": "public/film/sfx/footsteps-stairs.mp3",
+   "level": {
+    "gainDb": 0.8,
+    "sourcePeakDb": -3.8,
+    "sourceMeanDb": -29.2,
+    "peakDb": -3.0,
+    "meanDb": -28.4,
+    "duration": 4.99,
+    "weak": false
+   }
+  },
+  "metal-cupboard-open": {
+   "prompt": "A small grey steel office cupboard door pulled open, a dry metallic clunk and squeak, then a cardboard box slid out over a metal shelf",
+   "seconds": 3,
+   "loop": false,
+   "node": "PlXiHro0GoMWFtXnKDvH",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "ZSVv5Veug6gaN7nVCYbT",
+     "session": "4jixBC9H5UDOkCoJk4qp",
+     "file": "public/film/sfx/alternates/metal-cupboard-open--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "RGT06SFDbfOcpK14TD0g",
+     "session": "5SW9QgZItdKSRQmaD9ni",
+     "file": "public/film/sfx/alternates/metal-cupboard-open--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v2",
+   "file": "public/film/sfx/metal-cupboard-open.mp3",
+   "level": {
+    "gainDb": -3.0,
+    "sourcePeakDb": 0.0,
+    "sourceMeanDb": -16.8,
+    "peakDb": -2.6,
+    "meanDb": -20.0,
+    "duration": 2.97,
+    "weak": false
+   }
+  },
+  "siphon-bubbling": {
+   "prompt": "A glass coffee siphon bubbling gently over a small flame on a cafe counter, soft gurgling and bubbling water, close",
+   "seconds": 6,
+   "loop": false,
+   "node": "IOPFluJsxJDkqdIdzGY9",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "BUwk6u10yEA0mg6rYeuB",
+     "session": "iKsl7BIWl3RlaIomTD1S",
+     "file": "public/film/sfx/alternates/siphon-bubbling--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "JH3i2PZnhiw0JlttD86j",
+     "session": "yrSGHZpC0t1xMQoPT9UO",
+     "file": "public/film/sfx/alternates/siphon-bubbling--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v1",
+   "file": "public/film/sfx/siphon-bubbling.mp3",
+   "level": {
+    "gainDb": -2.6,
+    "sourcePeakDb": -0.4,
+    "sourceMeanDb": -22.1,
+    "peakDb": -3.0,
+    "meanDb": -24.7,
+    "duration": 5.98,
+    "weak": false
+   }
+  },
+  "page-turn": {
+   "prompt": "The pages of an old cloth-covered notebook turned slowly by hand, two or three soft dry paper page turns, quiet room",
+   "seconds": 3,
+   "loop": false,
+   "node": "gH8eRI8Wx00CI2eEiycS",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "jlvSsN8ByIsbjJxLJQSV",
+     "session": "s384Sc9JYODnqz0utqPe",
+     "file": "public/film/sfx/alternates/page-turn--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "MnZQFqkIyR9CeB6AkcNU",
+     "session": "UFFU43HF19lVtmXbcdxq",
+     "file": "public/film/sfx/alternates/page-turn--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v1",
+   "file": "public/film/sfx/page-turn.mp3",
+   "level": {
+    "gainDb": 9.7,
+    "sourcePeakDb": -12.7,
+    "sourceMeanDb": -46.0,
+    "peakDb": -3.0,
+    "meanDb": -36.2,
+    "duration": 2.97,
+    "weak": false
+   }
+  },
+  "light-switches-snap": {
+   "prompt": "Light switches clicking on one after another up through an old apartment block at night, a series of distant and near clicks, doors and windows opening, bulbs buzzing on",
+   "seconds": 5,
+   "loop": false,
+   "node": "MaQhmJtcp91HsxS6RdYz",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "EjpHSJxhLZzb6e4QOnHE",
+     "session": "f5Nc2fkreBpNUJQVuy2A",
+     "file": "public/film/sfx/alternates/light-switches-snap--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "aAocF8VG3SSmbdYFgWAW",
+     "session": "4wf8JEsybCJtxHeEYyse",
+     "file": "public/film/sfx/alternates/light-switches-snap--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v1",
+   "file": "public/film/sfx/light-switches-snap.mp3",
+   "level": {
+    "gainDb": 13.6,
+    "sourcePeakDb": -16.6,
+    "sourceMeanDb": -34.8,
+    "peakDb": -2.9,
+    "meanDb": -21.2,
+    "duration": 4.99,
+    "weak": false
+   }
+  },
+  "intercom-button": {
+   "prompt": "A single button pressed on an office desk phone intercom, a soft click and a short electronic beep, quiet executive office",
+   "seconds": 1.5,
+   "loop": false,
+   "node": "fLJ8gFAoURU5PH4WwRR7",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "CaSaUI5QzOjmkB9G8KU3",
+     "session": "CbOJsBb9ETgeu2IL7kvY",
+     "file": "public/film/sfx/alternates/intercom-button--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "aKD6ggbO87uEOew6bFgU",
+     "session": "1pRy5kdBNrQD7QzoMQTv",
+     "file": "public/film/sfx/alternates/intercom-button--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v2",
+   "file": "public/film/sfx/intercom-button.mp3",
+   "level": {
+    "gainDb": -2.6,
+    "sourcePeakDb": -0.4,
+    "sourceMeanDb": -33.8,
+    "peakDb": -3.0,
+    "meanDb": -36.5,
+    "duration": 1.46,
+    "weak": false
+   }
+  },
+  "rooftop-door": {
+   "prompt": "A heavy steel rooftop access door pushed open, a metal latch clunk and a long low hinge creak, wind outside, the door swinging shut behind with a heavy thud",
+   "seconds": 4,
+   "loop": false,
+   "node": "vOcojfpxt7N5BmrEYj1d",
+   "takes": [
+    {
+     "v": 1,
+     "generation": "1u6MFzqR75k78ZRd3H3L",
+     "session": "Nf8deIsHoXfs9bGEOYq8",
+     "file": "public/film/sfx/alternates/rooftop-door--v1.mp3"
+    },
+    {
+     "v": 2,
+     "generation": "cAD9w53Pb0PlchQMvyG1",
+     "session": "TtzVQQcDf0wSMsHoeWD2",
+     "file": "public/film/sfx/alternates/rooftop-door--v2.mp3"
+    }
+   ],
+   "added": "2026-10-24",
+   "flow": "xQM3hOw6f5yp4jehFRLo",
+   "pick": "v2",
+   "file": "public/film/sfx/rooftop-door.mp3",
+   "level": {
+    "gainDb": -3.0,
+    "sourcePeakDb": 0.0,
+    "sourceMeanDb": -24.1,
+    "peakDb": -2.6,
+    "meanDb": -27.4,
+    "duration": 3.99,
+    "weak": false
+   }
   }
  },
  "voices": {

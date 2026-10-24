@@ -2891,7 +2891,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/tv-laugh.mp3",
+     "sfxVolume": 0.09
     },
     {
      "id": "nw_b62",
@@ -3524,7 +3526,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "afterBeatTargetSceneId": "nw_s5",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/doors-close-softly.mp3",
+     "sfxVolume": 0.6
     }
    ],
    "hotspots": [],
@@ -4472,7 +4476,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b182",
      "characterId": "nw_narrator",
      "text": "She looks at him. She can't tell. She goes. The door closes behind her.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/doors-close-softly.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b183",
@@ -4732,7 +4738,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b195",
      "characterId": "nw_narrator",
      "text": "The door opens. Vera, the blue umbrella in her hand.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/door-open-rain.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b196",
@@ -5637,7 +5645,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/metal-cupboard-open.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b280",
@@ -6649,7 +6659,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/engine-off-tick.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b370",
@@ -6661,7 +6673,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b371",
      "characterId": "nw_narrator",
      "text": "He waits, long enough to be sure. Then he gets out and walks back along the wet road toward the dark car, one hand in his pocket.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/car-door-heavy.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b372",
@@ -8694,7 +8708,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/footsteps-stairs.mp3",
+     "sfxVolume": 0.7
     },
     {
      "id": "nw_b531",
@@ -9997,7 +10013,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b631",
      "characterId": "nw_narrator",
      "text": "A coffee counter no wider than a corridor. Six seats, a glass siphon bubbling over a flame, toast cut as thick as a paperback.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/siphon-bubbling.mp3",
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b632",
@@ -10815,7 +10833,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b695",
      "characterId": "nw_narrator",
      "text": "He sets the glass down.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/glass-set-down.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b696",
@@ -11060,7 +11080,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "29",
    "background": "/film/img/s29/204-the-tea-she-does-not-want-to-pour.jpg",
    "prose": "INT. MRS. SAKAI'S HOUSE - DAY",
-   "ambientAudio": "",
+   "ambientAudio": "file:/film/sfx/amb-room-tone.mp3",
    "particles": "motes",
    "hideHud": true,
    "transition": "fade",
@@ -15365,7 +15385,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/phone.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b974",
@@ -15385,7 +15407,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/phone-hang-up.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b975",
@@ -16182,7 +16206,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1040",
      "characterId": "nw_narrator",
      "text": "He turns pages. The handwriting grows faster, more anxious. And then a page near the end, and a line underlined twice.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/page-turn.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1041",
@@ -17578,7 +17604,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1143",
      "characterId": "nw_narrator",
      "text": "A shot.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/suppressed-shot.mp3",
+     "sfxVolume": 0.8
     },
     {
      "id": "nw_b1144",
@@ -17742,7 +17770,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1151",
      "characterId": "nw_narrator",
      "text": "Lights snap on, one after another, up through the whole building: the thousand windows of the Hive waking.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/light-switches-snap.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1152",
@@ -18465,6 +18495,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The clock ticks. She puts his lighter in her bag.",
      "silent": true,
+     "sfxUrl": "/film/sfx/lounge-clock-glass.mp3",
+     "sfxVolume": 0.5,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.44,
      "afterBeatTargetSceneId": "nw_song_bad-guy_05"
@@ -18665,6 +18697,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "and starts to run.",
      "silent": true,
+     "sfxUrl": "/film/sfx/vera-running-heels.mp3",
+     "sfxVolume": 0.7,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.44,
      "afterBeatTargetSceneId": "nw_song_bad-guy_09"
@@ -20535,6 +20569,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The vending machines hum, lit, waiting for no one.",
      "silent": true,
+     "sfxUrl": "/film/sfx/vending-hum.mp3",
+     "sfxVolume": 0.4,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 4.44,
      "afterBeatTargetSceneId": "nw_song_bad-guy_46"
@@ -21381,7 +21417,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1302",
      "characterId": "nw_narrator",
      "text": "She sets the letter down very carefully, beside the empty cups. Then she opens the notebook and turns the pages.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/page-turn.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1303",
@@ -21494,7 +21532,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/page-turn.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1312",
@@ -22891,7 +22931,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1424",
      "characterId": "nw_narrator",
      "text": "Kurose sits still for a moment. Then he presses a button on his desk phone.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/intercom-button.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1425",
@@ -25016,7 +25058,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "93",
    "background": "/film/img/s93/93-00-down-the-steps.jpg",
    "prose": "EXT. POLICE STATION - NIGHT",
-   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
+   "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-car-idle-rain.mp3",
    "particles": "rain",
    "hideHud": true,
    "transition": "fade",
@@ -25089,7 +25131,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_s94",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 1,
+     "sfxUrl": "/film/sfx/car-doors-open.mp3",
+     "sfxVolume": 0.5
     }
    ],
    "hotspots": [],
@@ -25423,7 +25467,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1554",
      "characterId": "nw_narrator",
      "text": "The desk phone rings. He picks it up.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/phone.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1555",
@@ -25449,7 +25495,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1556",
      "characterId": "nw_narrator",
      "text": "He puts the phone down very slowly. He looks at the empty chair. At the empty drawer.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/phone-hang-up.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1557",
@@ -26889,7 +26937,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1597",
      "characterId": "nw_narrator",
      "text": "Jack stands at the railing. He hears the door behind him.",
-     "silent": true
+     "silent": true,
+     "sfxUrl": "/film/sfx/rooftop-door.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1598",
@@ -27193,7 +27243,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/train.mp3",
+     "sfxVolume": 0.4
     },
     {
      "id": "nw_b1632",
@@ -27269,7 +27321,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/rooftop-door.mp3",
+     "sfxVolume": 0.5
     },
     {
      "id": "nw_b1640",
@@ -27691,7 +27745,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false
      },
      "backgroundTransition": "crossfade",
-     "backgroundTransitionSpeed": 0.9
+     "backgroundTransitionSpeed": 0.9,
+     "sfxUrl": "/film/sfx/bowl-set-down.mp3",
+     "sfxVolume": 0.6
     },
     {
      "id": "nw_b1668",
@@ -28043,5 +28099,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "dc70c09e22f9"
+ "builtinRevision": "dd91668e6337"
 } as unknown as Story;

@@ -9,6 +9,32 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Mara's drawing in 369 and 445; 25 more effects on their beats (24 October 2026)
+
+* **369 "The drawing" and 445 "Exactly where it was" (scene 25)** now show **the same drawing as `s84/520-excuse-me.jpg`**
+  (the director: they "should have the same drawing as in the 520-excuse-me drawing"). The 21 October 445 retake had drawn a
+  different picture. Both are gemini-3-pro-image edits of the old frame with 520 as the reference: the counter seen from the
+  floor, the arm hanging over it, two stools standing and one going over, a man's shoe at each side, EXCUSE ME. The page is
+  flat here (Mara folds the pages in four only in scene 68), and **1:07 is in its corner because scene 25's narration says so;
+  520 has no 1:07.** 2730×1536. Old frames `archive/s25/369-the-drawing--v1.jpg`, `archive/s25/445-exactly-where-it-was--v2.jpg`;
+  the other takes `retakes_2026_10_24/369-the-drawing--alt1.jpg` (faint fold creases) and `445-exactly-where-it-was--alt1.jpg`.
+* **Effects audit.** All 168 beat effects were checked against their beat's words after the many restages: every file exists and
+  every one sits on the beat that calls for it. Three studio-edits effects never reached the film because the bad-guy song
+  replaces their scenes with its own shots (`lounge-clock-glass` in 72, `vera-running-heels` in 73, and nothing for the
+  vending machines in 75). They are now song cues on `72-03`, `73-03` and `75-04`.
+* **New placements (studio-edits `sfx`).** The shot that hits Mara in scene 70 ("A shot.") had no sound: it now plays
+  `suppressed-shot`. Also: the phones ringing in scenes 59 (Mrs. Sakai's empty room) and 96 (Ishida's desk) and their hang-ups, the
+  rooftop door in 98 (twice), the second train in 98, the TV audience laughing in 2, the doors closing in 4 and 6, the bar
+  door opening in 8, Jack's steel cupboard in 11, his engine cut and car door in 14A, footsteps on the stairs in 21, the
+  siphon in 25A, Okada's glass set down in 27A, the notebook's pages in 63 and 79, the Hive's lights snapping on in 71,
+  Kurose's intercom in 83, the sedan's rear door in 93 and Kaneko's bowl in 100. New beds: Mrs. Sakai's house (29) had no
+  ambience at all (room tone now); the idling sedan in 93 (as in 94).
+* **Eight new effects** (ElevenLabs `eleven_text_to_sound_v2`, two takes each, flow `xQM3hOw6f5yp4jehFRLo`): `engine-off-tick`,
+  `footsteps-stairs`, `metal-cupboard-open`, `siphon-bubbling`, `page-turn`, `light-switches-snap`, `intercom-button`,
+  `rooftop-door`. Prompts, takes and levels are in `docs/film-sfx-generations-2026-10-09.json`; picked and leveled by the same
+  rule as `tools/level-film-sfx.mjs` (measured, not heard). About 250 credits. That tool now skips `dj-through-wall`, whose takes
+  were removed with the saxophone; it had stopped on it.
+
 ## Shots 230, 293, 294 and 295: Kato Rental Lockers and the Ueno arches (21 October 2026)
 
 * **230 "No questions" (scene 63)** — Jack opens upper locker **114** and holds the taped kraft padded envelope and

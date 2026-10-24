@@ -611,3 +611,13 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   (`okada`). The old takes stay on disk, unused. The new reads run about 10% longer than the old ones (27A's long answer
   22.3 s against 19.5 s). About 2,330 credits.
 - Outside this repository: PlayFrame's voice manifest still lists the old voice and takes.
+
+## 27. Mara's drawing, and more effects (24 October)
+- "369-the-drawing and 445-exactly-where-it-was should have the same drawing as in the 520-excuse-me drawing": done, both
+  remade with 520's drawing (2730×1536; old frames archived). The page carries 1:07 in its corner because scene 25's narration
+  says "In the corner, small: 1:07"; 520 has none (say if 520 should get it too).
+- "if we have credits left add more sfx and make sure none mis-aligned": every beat effect was checked against its beat's
+  words (none misplaced, none missing a file). Three effects never reached the bad-guy song and are now its cues. 25 new
+  placements and 2 new beds; the one that mattered most is the shot that hits Mara in scene 70, which was silent. Eight new
+  effects generated. Details and the full list: FILM.md, "Mara's drawing in 369 and 445; 25 more effects".
+- Credits: about 9,740 for the four picture takes, about 250 for the effects. Nobody has heard the new effects.
