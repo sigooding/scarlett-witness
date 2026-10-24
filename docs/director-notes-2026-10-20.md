@@ -408,8 +408,8 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   generator's download, an earlier upload), install those over the halves with the install tool, which archives the old file.
   Otherwise they are retake candidates. The player stretches them to the screen, so they look soft.
   - 1365×768: `s17/360-more-than-the-bowl-costs` (remade 1920×1080 on 24 Oct), `s20/346-the-bulb-hums` (remade 2728×1534 on 24 Oct), `s54/220-everything-is-still-there` (remade 2508×1410 on 24 Oct), `s70/393-run` (remade 24 Oct),
-    `s90/381-the-plank` (remade 24 Oct), `s93/137-he-knows-this-car` (remade 24 Oct), `s93/138-the-door-opens`,
-    `s94/139-only-tea`, `s97a/565-they-bow`.
+    `s90/381-the-plank` (remade 24 Oct), `s93/137-he-knows-this-car` (remade 24 Oct), `s93/138-the-door-opens` (remade 24 Oct),
+    `s94/139-only-tea` (remade 24 Oct), `s97a/565-they-bow` (remade 2048×1152 on 24 Oct).
   - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`, `s82/new-jack-walks-in-4.png`,
     `s94/368-the-door-closes`, `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
     `service_new/560-jack-at-the-door`, `service_new/extras/mom-01-her-face-at-the-table`, `mom-02-mother-and-daughter`,
@@ -436,6 +436,14 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     `archive/s70/393-run--v1.jpg`, `archive/s90/381-the-plank--v2.jpg`, `archive/s93/137-he-knows-this-car--v1.jpg`.
     **Caveat:** the takes the director picked came out of the generator at 1360–1536 wide, so the install tool enlarged them
     to 1920×1080 (house size) rather than installing native 2K like the two above; a 2K-native pass would be sharper still.
+  - **Three more the same day, `s93/138-the-door-opens`, `s94/139-only-tea` and `s97a/565-they-bow`.** The station pair are
+    held to `sheets/ishida.jpg` (the detective on the pavement) and `sheets/kurose.jpg` (the man in the car: the first
+    candidate put a face in the doorway, which the new picture leaves to suggestion — a dark-suited arm and shoulder in the
+    amber light); the bow is held to `sheets/vera.jpg`, `service_new/style-sheets/vera-mother.jpg` and the same sequence's
+    overhead `service_new/564-the-room-from-above`, so Vera's fringe, her mother's pinned silver hair and the room's props
+    match. Old files `archive/s93/138-the-door-opens--v2.jpg`, `archive/s94/139-only-tea--v3.jpg`,
+    `archive/s97a/565-they-bow--v1.jpg`. Sizes: 138 now 2730×1536 (native 2K), 565 now 2048×1152 (native), 139 only
+    1377×761 from the generator so the install tool enlarged it to 1920×1080.
 - **Exactly 1920×1080 does not mean full detail.** The 17 retakes of 20 October were enlarged to 1920×1080 from the
   generator's smaller output, and many older pictures may have been too. A sharpness measurement could not tell those from
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
