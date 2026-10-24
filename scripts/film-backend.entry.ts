@@ -350,7 +350,7 @@ eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/baby-fool.mp3").map((s)
 eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "inherit", "the notebook's photocopying (82A) continues the song without restarting");
 eq(FILM.scenes.find((s) => s.id === "nw_s83")?.musicMode, "none", "the Kurose meeting (83) fades the song out");
 eq(newsroom?.background, "/film/img/s82/new-empty-newsroom.png", "the newsroom opens without Jack already seated");
-check(newsroom?.dialogueBeats?.some((b) => b.background === "/film/img/s82/new-jack-walks-in-4.png" && b.text === "He reaches the glass office without slowing."), "Jack's extra determined walk plays before the cassette scene");
+check(newsroom?.dialogueBeats?.some((b) => b.background === "/film/img/s82/new-jack-walks-in-4.jpg" && b.text === "He reaches the glass office without slowing."), "Jack's extra determined walk plays before the cassette scene");
 check(existsSync(join(ROOT, "public/film/audio/baby-fool.mp3")), "the song is on disk");
 
 

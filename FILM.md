@@ -435,7 +435,7 @@ The final song is **The Show**, 217.44 seconds (MP3 metadata). Its scene-100 and
 
 ## Newsroom entrance and song hand-off (16 October 2026)
 
-Scene 82 now opens on `s82/new-empty-newsroom.png`, an empty-office version of the newsroom, rather than showing Jack seated before he arrives. A new walking still, `new-jack-walks-in-4.png`, plays on “He reaches the glass office without slowing.” before the cassette scene. Both are AI-generated from the existing newsroom stills; neither uses the old plate's depth layers. The source shot sequence is in `src/film/story.json`.
+Scene 82 now opens on `s82/new-empty-newsroom.png`, an empty-office version of the newsroom, rather than showing Jack seated before he arrives. A new walking still, `new-jack-walks-in-4.jpg`, plays on “He reaches the glass office without slowing.” before the cassette scene. Both are AI-generated from the existing newsroom stills; neither uses the old plate's depth layers. The source shot sequence is in `src/film/story.json`.
 
 Baby Fool still starts once in 82 (`musicLoop: false`), continues unchanged through **82A, The notebook photocopied**, and fades out over 3 seconds on entry to 83, before the Kurose meeting. The hand-off overrides live in `studio-edits.json`; backend checks guard the two pictures and the music boundary. Mara's newly uploaded lullaby was not located at this point; see the later correction above.
 
