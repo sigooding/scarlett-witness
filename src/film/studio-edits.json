@@ -218,6 +218,13 @@
   },
   "nw_s20_c": {
    "ambientAudio": ""
+  },
+  "nw_s14": {
+   "musicMode": "track",
+   "musicUrl": "/film/audio/the-show-cinematic.mp3",
+   "musicLevel": 0.35,
+   "musicFadeSeconds": 4,
+   "musicLoop": false
   }
  },
  "startSceneId": "nw_s1",

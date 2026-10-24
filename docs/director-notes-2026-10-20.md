@@ -637,6 +637,13 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   They now alternate: push-ins toward the person on close shots (the focal point from the cut-out), sideways trucks left and right
   on wider ones, never the same move twice in a row (`pictureLook`; `test:film-backend` checks it).
 
+## 30. The Black Cove intro, and the cinematic Show (24 October)
+- "a video that needs to go before scarlet reel vid": the uploaded Black Cove clip now opens the film, then the Scarlet Reel
+  logo, then scene 1. Files and details: FILM.md, "The Black Cove intro before the logo".
+- "the new song is a cinematic version of the end credit song", "put it somewhere it would fit", "isnt it the early parts with no
+  music", "its sad": it plays under scene 14, Mara's empty apartment, quietly under the dialogue. Easy to move: one Studio edit
+  (`nw_s14` in `src/film/studio-edits.json`).
+
 ## 31. The evening's notes (24 October)
 - **Scene 14A, "we have a plate number"**: the script had changed after the takes were made. A check of every line in the film
   against the words its take says found exactly two: Jack's "We have a plate number." (the take said "I think it's a plate

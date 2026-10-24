@@ -255,7 +255,15 @@ const byId = new Map(FILM.scenes.map((s) => [s.id, s]));
 const nextOf = (id: string) => { const sc = byId.get(id)!; const beats = sc.dialogueBeats ?? []; return beats[beats.length - 1]?.afterBeatTargetSceneId || sc.autoAdvanceTargetSceneId || sc.choices?.[0]?.targetSceneId; };
 const order: string[] = [];
 for (let id: string | undefined = FILM.startSceneId; id && byId.has(id) && !order.includes(id); id = nextOf(id)) order.push(id);
-eq(order.slice(0, 6), ["nw_logo", "nw_s1", "nw_s2", "nw_title", "nw_prologue", "nw_s3"], "the film starts on the Scarlet Reel logo, then scene 1, scene 2, the opening titles, the prologue and scene 3");
+eq(order.slice(0, 7), ["nw_intro", "nw_logo", "nw_s1", "nw_s2", "nw_title", "nw_prologue", "nw_s3"], "the film starts on the Black Cove intro, then the Scarlet Reel logo, scene 1, scene 2, the opening titles, the prologue and scene 3");
+// the Black Cove intro (the director, 24 October 2026: "a video that needs to go before scarlet reel vid"), made like the logo
+{
+  const intro = byId.get("nw_intro")!;
+  check(intro.nodeType === "cutscene" && intro.background === "video:/film/video/black-cove.mp4" && !(intro.dialogueBeats ?? []).length && intro.musicUrl === "/film/audio/black-cove.mp3" && intro.musicLoop === false && intro.autoAdvanceTargetSceneId === "nw_logo" && (intro.autoAdvanceDelaySeconds ?? 0) >= 7.5 && (intro.autoAdvanceDelaySeconds ?? 0) <= 8.5, "the Black Cove intro is a video-only cutscene with its own sound, handing over to the logo after its 8 s");
+  check(["video/black-cove.mp4", "video/black-cove.webm", "audio/black-cove.mp3", "video/black-cove-original.mp4"].every((f) => existsSync(join(ROOT, "public/film", f))), "the intro's clip, its .webm, its sound and the original upload are on disk");
+}
+// the cinematic version of The Show (the director, 24 October 2026: "the early parts with no music", "its sad") under scene 14
+check(byId.get("nw_s14")!.musicUrl === "/film/audio/the-show-cinematic.mp3" && byId.get("nw_s14")!.musicLoop === false && existsSync(join(ROOT, "public/film/audio/the-show-cinematic.mp3")), "scene 14 (Mara's empty apartment) plays the cinematic version of The Show, once");
 // the Scarlet Reel logo (the director, 22 October 2026): the uploaded clip, silent, with its sound as the node's music so an
 // animatic export keeps it, a .webm beside it for browsers without H.264, and it moves on by itself
 {

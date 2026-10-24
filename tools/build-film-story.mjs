@@ -439,6 +439,19 @@ if (existsSync(resolve(root, "public/film/video/scarlet-reel-logo.mp4"))) {
   });
   startSceneId = "nw_logo";
 }
+// The Black Cove intro (24 October 2026, the director: "a video that needs to go before scarlet reel vid"): the uploaded 8 s clip plays
+// before the logo, made the same way (a silent copy with a .webm beside it, its sound as the node's music, a little quieter: it was
+// mastered about 2 dB louder than the logo's). The upload itself is public/film/video/black-cove-original.mp4.
+if (existsSync(resolve(root, "public/film/video/black-cove.mp4"))) {
+  scenes.unshift({
+    id: "nw_intro", title: "Black Cove", nodeType: "cutscene", hideHud: true, background: "video:/film/video/black-cove.mp4", prose: "",
+    musicMode: "track", musicUrl: P("/audio/black-cove.mp3"), musicLevel: 0.8, musicLoop: false, musicFadeSeconds: 0,
+    ambientAudio: "", transition: "cut", transitionSpeed: 0.2, noTypewriter: true, autoNarrate: false,
+    autoAdvanceTargetSceneId: startSceneId, autoAdvanceDelaySeconds: 7.9, autoAdvanceHideTimer: true,
+    dialogueBeats: [], hotspots: [], choices: [],
+  });
+  startSceneId = "nw_intro";
+}
 
 // Soundtrack segments (src/film/studio-edits.json "soundtracks"): a run of scenes that plays hands-off for the length of a song, as a cutscene (the
 // letterbox bars are on). The song starts on the run's first node and keeps playing across the nodes after it; the node after the run fades it out. Every
