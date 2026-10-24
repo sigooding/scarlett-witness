@@ -9,6 +9,16 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## No black between scenes: the dissolve (24 October 2026)
+
+The director: "Get rid of black transitions, a black then image happens quite a lot." Every scene used to enter with `fade`, which
+covers the screen in black, swaps the scene and lifts the black. There is now a scene transition **`dissolve`** (`src/types.ts`; the
+Studio offers it as "〰 Dissolve"): the overlay shows the *next* scene's picture, frozen, and fades it in over the current one, the
+same way slide and zoom already used the destination's art, so the cut happens under a picture and never under black.
+`tools/build-film-story.mjs` gives it to every scene (0.9 s), to the montages (1.2 s) and to the song cutscenes' shots; parts of
+one scene still `cut`. Only the opening titles, the prologue and the credits fade through black. `test:film-backend` fails if any
+other scene goes back to a fade.
+
 ## Mara's drawing in 369 and 445; 25 more effects on their beats (24 October 2026)
 
 * **369 "The drawing" and 445 "Exactly where it was" (scene 25)** now show **the same drawing as `s84/520-excuse-me.jpg`**

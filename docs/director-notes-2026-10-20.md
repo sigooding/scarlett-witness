@@ -651,3 +651,10 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - **Scene 84**: it opened on 115, Vera and Jack in the storeroom, before she arrives. It now opens on 318 (the dried stack,
   nobody in it); 115 comes in when she looks round the room at the drawings.
 - Outside this repository: PlayFrame's screenplay still has the old scene 22 line, "He doesn't knock" in 78, and the 14A lines.
+
+## 32. No black between scenes (24 October)
+- "Get rid of black transitions, a black then image happens quite a lot": every scene went to black and came back up. Now each
+  scene, and each shot of the song cutscenes and montages, **dissolves**: the next scene's picture comes up over the last one,
+  with no black between them (0.9 s between scenes). Parts of the same scene still cut. Only the opening titles, the prologue
+  and the credits fade through black. Checked in a browser on scene 3 into 4: the lit window melts into Vera's apartment and
+  the screen never goes dark. A new "Dissolve" choice is in the Studio's scene transition list.

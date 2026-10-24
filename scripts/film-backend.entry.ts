@@ -516,4 +516,10 @@ check(animS1.dialogueBeats!.some((b) => /^\d+–\d+$/.test(b.animaticBeat ?? "")
 eq(animaticMarkFor(anim.scenes, animS1, 0, undefined, animS1.dialogueBeats![0].animaticBeat)?.beat, "1", "the mark shows the stamped number, not the joined count");
 eq(animaticMarkFor(anim.scenes, animS1, -1, undefined, undefined)?.beat, "–", "the scene heading shows no beat number (it used to borrow beat 1's)");
 check(!FILM.scenes.some((s) => (s.dialogueBeats ?? []).some((b) => b.animaticBeat)), "the stamp is runtime-only: the shipped film's beats carry no animaticBeat field");
+// no black between scenes (24 October 2026, the director: "Get rid of black transitions, a black then image happens quite a lot"):
+// every scene and song/cutscene shot enters with a dissolve (the next picture over this one) or a cut; only the opening titles,
+// the prologue and the credits still fade through black.
+const throughBlack = FILM.scenes.filter((s) => s.transition !== "dissolve" && s.transition !== "cut" && !/^nw_(title|prologue|credits|intro|end)$/.test(s.id)).map((s) => s.id);
+eq(throughBlack, [], "no scene fades through black on its way in (only the titles, the prologue and the credits do)");
+check(FILM.scenes.filter((s) => s.transition === "dissolve").length > 200, "the scenes dissolve picture into picture");
 console.log(`\nfilm backend: ${checks} checks passed`);

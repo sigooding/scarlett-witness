@@ -76,6 +76,9 @@ const bedFor = sc => {
   if (sc.exterior) return "city-traffic";
   return null;
 };
+// Scenes and the song/cutscene shots enter with a "dissolve" (24 October 2026, the director: "Get rid of black transitions, a black
+// then image happens quite a lot"): the next picture crossfades over the last with no black between. The opening titles, the
+// prologue and the end credits keep their fade through black, as chapter breaks.
 // Director: indoors (INT. and not EXT.) there is no rain, neither the sound nor the falling particles.
 const indoors = sc => /^\s*INT\b/i.test(sc.heading) && !/EXT/i.test(sc.heading);
 const ambientOf = sc => {
@@ -218,7 +221,7 @@ film.scenes.forEach((sc, si) => {
       // a continuation node opens on its own first picture, or on the one showing when it began; not the scene's last picture
       // (18 October 2026: with pictures after the song's cue in scene 72, the run opened on the scene's last still)
       background: (part ? (beats[0]?.background && !beats[0].background.startsWith("video:") ? beats[0].background : partBg ?? lastBg) : bg0) ?? "gradient:linear-gradient(#000,#000)", prose: part ? "" : `${sc.heading}`, ...lookOf(sc),
-      transition: part ? "cut" : "fade", transitionSpeed: part ? 0.2 : 1.1, ...(music ?? {}), dialogueBeats: beats,
+      transition: part ? "cut" : "dissolve", transitionSpeed: part ? 0.2 : 0.9, ...(music ?? {}), dialogueBeats: beats,
     });
     beats = []; part++; music = null; partBg = lastBg;
   };
@@ -316,7 +319,7 @@ for (const m of edits.montages ?? []) {
   const montage = {
     id: m.id, title: m.title, animaticMark: `${host.animaticMark} montage`, nodeType: "credits", background: P(m.images[0]), prose: "", hideHud: true, letterbox: true,
     credits: { title: "", subtitle: "", lines: [], style: "cards", cardSeconds: 1, montage: m.images.map(P), montageSeconds: m.seconds ?? 5, montageTransition: "dissolve", montageLoop: false, gateWeave: "subtle" },
-    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: m.musicFadeSeconds ?? 2, transition: "fade", transitionSpeed: 1.2,
+    musicMode: "track", musicUrl: P(m.musicUrl), musicLevel: m.musicLevel ?? 0.6, musicFadeSeconds: m.musicFadeSeconds ?? 2, transition: "dissolve", transitionSpeed: 1.2,
     dialogueBeats: [], hotspots: [], choices: [],
   };
   const fresh = [montage];
@@ -491,7 +494,7 @@ for (const seg of edits.soundtracks ?? []) {
   const cueOf = s => cueAt(s, 0);
   const node = (s, beat, ...more) => ({
     id: nodeId(), title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, animaticMark: s.mark, background: s.bg, cinematic: { ...camera(s.bg), ...(lookFor(s.bg)?.cinematic ?? {}) }, prose: "", ...s.look, hideHud: true, letterbox: true,
-    transition: "fade", transitionSpeed: TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat], ...Object.assign({}, ...more),
+    transition: "dissolve", transitionSpeed: TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat], ...Object.assign({}, ...more),
   });
   const captionBeat = (s, seconds, cue, text = caption(s), tran = TRAN) => ({ id: `nw_song_b${++beatNo2}`, characterId: charOf(null), text: text ?? "·", silent: true, ...cue, afterBeatMode: "auto", afterBeatDelaySeconds: round(Math.max(0.1, seconds - tran - 0.1 - LAG)) });
   for (const s of shots) {
@@ -600,7 +603,7 @@ for (const seg of edits.cutscenes ?? []) {
     chain.push({
       id: `nw_cut_${seg.id}_${String(chain.length + 1).padStart(2, "0")}`, title: `${seg.title ?? seg.id}: ${(beat.text || "").slice(0, 40)}`, animaticMark: pic.node.animaticMark,
       background: pic.bg, cinematic: { ...camera(pic.bg), ...(lookFor(pic.bg)?.cinematic ?? {}) }, prose: "", ...look, hideHud: true,
-      transition: same ? "cut" : "fade", transitionSpeed: same ? 0.05 : TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat],
+      transition: same ? "cut" : "dissolve", transitionSpeed: same ? 0.05 : TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat],
     });
     prev = sh.pic;
   }
