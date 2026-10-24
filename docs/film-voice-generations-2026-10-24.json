@@ -1,126 +1,704 @@
 {
-  "note": "The five takes recorded 24 October 2026 with eleven_v4: scene 84's three Jack lines (Jack's saved voice \"Narrator Lead\", MZhx7pKflsc0sAwciDEy), Mara's in scene 1 (\"Mara Voss - NEONOIRE\", 2NE3noNVoL0UyxXHLs7w) and the journalist's in scene 2 (\"Journalist (Kondo) - NEONOIRE\", EEYUewEB5w5R0IPnszO5), two takes each, in ElevenLabs flow HVkZ9QY5mo9uj9DYFAkc. The pick is measured, not heard (the take with more energy; the lengths agree, so no repeat). Raw takes are in public/film/voice/<scene>/raw/ (ElevenLabs does not keep audio); the picks are leveled to the speaker's other lines in the scene. About 380 credits in all.",
-  "model_id": "eleven_v4",
-  "lines": [
+ "note": "The five takes recorded 24 October 2026 with eleven_v4: scene 84's three Jack lines (Jack's saved voice \"Narrator Lead\", MZhx7pKflsc0sAwciDEy), Mara's in scene 1 (\"Mara Voss - NEONOIRE\", 2NE3noNVoL0UyxXHLs7w) and the journalist's in scene 2 (\"Journalist (Kondo) - NEONOIRE\", EEYUewEB5w5R0IPnszO5), two takes each, in ElevenLabs flow HVkZ9QY5mo9uj9DYFAkc. The pick is measured, not heard (the take with more energy; the lengths agree, so no repeat). Raw takes are in public/film/voice/<scene>/raw/ (ElevenLabs does not keep audio); the picks are leveled to the speaker's other lines in the scene. About 380 credits in all.",
+ "model_id": "eleven_v4",
+ "lines": [
+  {
+   "step": "scene 84, step 19 (answers \"She was here. The day I came.\"; was \"Three feet away.\")",
+   "prompt": "[flatly] Right behind the curtain.",
+   "installed": "public/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3",
+   "gain_db": -1.6,
+   "takes": [
     {
-      "step": "scene 84, step 19 (answers \"She was here. The day I came.\"; was \"Three feet away.\")",
-      "prompt": "[flatly] Right behind the curtain.",
-      "installed": "public/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3",
-      "gain_db": -1.6,
-      "takes": [
-        {
-          "generation_id": "G1hvTmmySNKA8Nh2fRFf",
-          "file": "public/film/voice/s84/raw/118-jack-flatly-right-behind-the-curtain--take1.mp3",
-          "seconds": 1.8,
-          "mean_db": -19.4,
-          "peak_db": -2.6,
-          "picked": true
-        },
-        {
-          "generation_id": "0vzuEwf6GKetyxUPMoqY",
-          "file": "public/film/voice/s84/raw/118-jack-flatly-right-behind-the-curtain--take2.mp3",
-          "seconds": 1.8,
-          "mean_db": -19.7,
-          "peak_db": -2.8
-        }
-      ],
-      "voice_id": "MZhx7pKflsc0sAwciDEy"
+     "generation_id": "G1hvTmmySNKA8Nh2fRFf",
+     "file": "public/film/voice/s84/raw/118-jack-flatly-right-behind-the-curtain--take1.mp3",
+     "seconds": 1.8,
+     "mean_db": -19.4,
+     "peak_db": -2.6,
+     "picked": true
     },
     {
-      "step": "scene 84, step 27 (after \"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine.\")",
-      "prompt": "[sadly] I trusted him. I'm so sorry.",
-      "installed": "public/film/voice/s84/119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3",
-      "gain_db": 4.4,
-      "takes": [
-        {
-          "generation_id": "IjMRMJ1ziL0opym6x0f0",
-          "file": "public/film/voice/s84/raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take1.mp3",
-          "seconds": 3.4,
-          "mean_db": -25.6,
-          "peak_db": -7.2,
-          "picked": true
-        },
-        {
-          "generation_id": "CoWSv01UfRDFwOufmcNm",
-          "file": "public/film/voice/s84/raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take2.mp3",
-          "seconds": 3.55,
-          "mean_db": -26.3,
-          "peak_db": -6.8
-        }
-      ],
-      "voice_id": "MZhx7pKflsc0sAwciDEy"
-    },
-    {
-      "step": "scene 84, step 44 (answers \"I don't know if I'm as good as he was.\"; was \"I'm not asking you to be.\", the director 24 October)",
-      "prompt": "[gently] No one's asking you to be.",
-      "installed": "public/film/voice/s84/119-jack-gently-no-one-s-asking-you.mp3",
-      "gain_db": -1.2,
-      "takes": [
-        {
-          "generation_id": "rUqgq3nruDMcXWXhNjOK",
-          "file": "public/film/voice/s84/raw/119-jack-gently-no-one-s-asking-you--take1.mp3",
-          "seconds": 2.12,
-          "mean_db": -19.8,
-          "peak_db": -6.4,
-          "picked": true
-        },
-        {
-          "generation_id": "QPnk49ZhS6v10sTQfo1d",
-          "file": "public/film/voice/s84/raw/119-jack-gently-no-one-s-asking-you--take2.mp3",
-          "seconds": 2.12,
-          "mean_db": -20.0,
-          "peak_db": -5.7
-        }
-      ],
-      "voice_id": "MZhx7pKflsc0sAwciDEy"
-    },
-    {
-      "step": "scene 1, step 49 (Mara, kneeling by the old man)",
-      "voice_id": "2NE3noNVoL0UyxXHLs7w",
-      "prompt": "[breathless] Hold on, I'll call an ambulance.",
-      "installed": "public/film/voice/s1/14-mara-breathless-hold-on-i-ll-call.mp3",
-      "gain_db": -1.9,
-      "takes": [
-        {
-          "generation_id": "Ynea0uy2hyFUsVSA2Ajc",
-          "file": "public/film/voice/s1/raw/14-mara-breathless-hold-on-i-ll-call--take1.mp3",
-          "seconds": 2.85,
-          "mean_db": -17.0,
-          "peak_db": -1.6,
-          "picked": true
-        },
-        {
-          "generation_id": "dDFw7rqrKKXPIPBm0WCW",
-          "file": "public/film/voice/s1/raw/14-mara-breathless-hold-on-i-ll-call--take2.mp3",
-          "seconds": 2.77,
-          "mean_db": -17.6,
-          "peak_db": -1.2
-        }
-      ]
-    },
-    {
-      "step": "scene 2, step 9 (the journalist, after \"Miss Voss?\")",
-      "voice_id": "EEYUewEB5w5R0IPnszO5",
-      "prompt": "[concerned] Are you okay? Where's Sakai?",
-      "installed": "public/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3",
-      "gain_db": 0.6,
-      "takes": [
-        {
-          "generation_id": "sZLAuPSMYg5JDfhckWou",
-          "file": "public/film/voice/s2/raw/21-journalist-concerned-are-you-okay-where--take1.mp3",
-          "seconds": 2.51,
-          "mean_db": -20.7,
-          "peak_db": -7.8
-        },
-        {
-          "generation_id": "mykGvZDOD9iqWcqnhZPa",
-          "file": "public/film/voice/s2/raw/21-journalist-concerned-are-you-okay-where--take2.mp3",
-          "seconds": 2.43,
-          "mean_db": -20.3,
-          "peak_db": -5.8,
-          "picked": true
-        }
-      ]
+     "generation_id": "0vzuEwf6GKetyxUPMoqY",
+     "file": "public/film/voice/s84/raw/118-jack-flatly-right-behind-the-curtain--take2.mp3",
+     "seconds": 1.8,
+     "mean_db": -19.7,
+     "peak_db": -2.8
     }
+   ],
+   "voice_id": "MZhx7pKflsc0sAwciDEy"
+  },
+  {
+   "step": "scene 84, step 27 (after \"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine.\")",
+   "prompt": "[sadly] I trusted him. I'm so sorry.",
+   "installed": "public/film/voice/s84/119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3",
+   "gain_db": 4.4,
+   "takes": [
+    {
+     "generation_id": "IjMRMJ1ziL0opym6x0f0",
+     "file": "public/film/voice/s84/raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take1.mp3",
+     "seconds": 3.4,
+     "mean_db": -25.6,
+     "peak_db": -7.2,
+     "picked": true
+    },
+    {
+     "generation_id": "CoWSv01UfRDFwOufmcNm",
+     "file": "public/film/voice/s84/raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take2.mp3",
+     "seconds": 3.55,
+     "mean_db": -26.3,
+     "peak_db": -6.8
+    }
+   ],
+   "voice_id": "MZhx7pKflsc0sAwciDEy"
+  },
+  {
+   "step": "scene 84, step 44 (answers \"I don't know if I'm as good as he was.\"; was \"I'm not asking you to be.\", the director 24 October)",
+   "prompt": "[gently] No one's asking you to be.",
+   "installed": "public/film/voice/s84/119-jack-gently-no-one-s-asking-you.mp3",
+   "gain_db": -1.2,
+   "takes": [
+    {
+     "generation_id": "rUqgq3nruDMcXWXhNjOK",
+     "file": "public/film/voice/s84/raw/119-jack-gently-no-one-s-asking-you--take1.mp3",
+     "seconds": 2.12,
+     "mean_db": -19.8,
+     "peak_db": -6.4,
+     "picked": true
+    },
+    {
+     "generation_id": "QPnk49ZhS6v10sTQfo1d",
+     "file": "public/film/voice/s84/raw/119-jack-gently-no-one-s-asking-you--take2.mp3",
+     "seconds": 2.12,
+     "mean_db": -20.0,
+     "peak_db": -5.7
+    }
+   ],
+   "voice_id": "MZhx7pKflsc0sAwciDEy"
+  },
+  {
+   "step": "scene 1, step 49 (Mara, kneeling by the old man)",
+   "voice_id": "2NE3noNVoL0UyxXHLs7w",
+   "prompt": "[breathless] Hold on, I'll call an ambulance.",
+   "installed": "public/film/voice/s1/14-mara-breathless-hold-on-i-ll-call.mp3",
+   "gain_db": -1.9,
+   "takes": [
+    {
+     "generation_id": "Ynea0uy2hyFUsVSA2Ajc",
+     "file": "public/film/voice/s1/raw/14-mara-breathless-hold-on-i-ll-call--take1.mp3",
+     "seconds": 2.85,
+     "mean_db": -17.0,
+     "peak_db": -1.6,
+     "picked": true
+    },
+    {
+     "generation_id": "dDFw7rqrKKXPIPBm0WCW",
+     "file": "public/film/voice/s1/raw/14-mara-breathless-hold-on-i-ll-call--take2.mp3",
+     "seconds": 2.77,
+     "mean_db": -17.6,
+     "peak_db": -1.2
+    }
+   ]
+  },
+  {
+   "step": "scene 2, step 9 (the journalist, after \"Miss Voss?\")",
+   "voice_id": "EEYUewEB5w5R0IPnszO5",
+   "prompt": "[concerned] Are you okay? Where's Sakai?",
+   "installed": "public/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3",
+   "gain_db": 0.6,
+   "takes": [
+    {
+     "generation_id": "sZLAuPSMYg5JDfhckWou",
+     "file": "public/film/voice/s2/raw/21-journalist-concerned-are-you-okay-where--take1.mp3",
+     "seconds": 2.51,
+     "mean_db": -20.7,
+     "peak_db": -7.8
+    },
+    {
+     "generation_id": "mykGvZDOD9iqWcqnhZPa",
+     "file": "public/film/voice/s2/raw/21-journalist-concerned-are-you-okay-where--take2.mp3",
+     "seconds": 2.43,
+     "mean_db": -20.3,
+     "peak_db": -5.8,
+     "picked": true
+    }
+   ]
+  }
+ ],
+ "okada": {
+  "note": "Okada's 19 lines re-recorded 24 October 2026 in his new voice \"Okada (old) - NEONOIRE\" (2jGSM3CPT3ls23VwBLPJ, eleven_v4), designed after the director found the 29 September voice (\"Okada - NEONOIRE\", MhuU9Z2dyWAG6ZjuuKRg, median pitch 89 Hz) too deep for an old Japanese man. Three rounds of three designs (eleven_ttv_v3); the director picked G from the third round: \"Elderly Japanese man, mid 70s, owner of a tiny bar for forty years. A light, thin, aged voice with a little gravel and breath in it, not deep. Wise and weathered: calm, measured authority, a man who has seen everything and wastes no words. Speaks English at a natural, steady pace, not slow, with a faint Japanese accent. Tired and guilty underneath, but quiet dignity on top.\" (preview median 137 Hz). Two takes each in ElevenLabs flow 9N634BI6o5vBv3spdsGA, same directions as before (plain one-word ones where the old line had none). The pick is measured, not heard (fewer stray silences, then more energy); each pick is leveled to the old take of the same line (limiter at -1 dBFS) and installed beside it as <name>--aged.mp3; the old takes stay on disk, unused. About 2,330 credits.",
+  "voice_id": "2jGSM3CPT3ls23VwBLPJ",
+  "previous_voice_id": "MhuU9Z2dyWAG6ZjuuKRg",
+  "flow": "9N634BI6o5vBv3spdsGA",
+  "lines": [
+   {
+    "step": "scene 8, step 5",
+    "prompt": "[Flatly] We're closed.",
+    "replaces": "public/film/voice/s8/162-okada-flatly-we-re-closed.mp3",
+    "installed": "public/film/voice/s8/162-okada-flatly-we-re-closed--aged.mp3",
+    "gain_db": 1.7,
+    "seconds": 1.41,
+    "takes": [
+     {
+      "generation_id": "3sjur11ltymPkiuQ2yFm",
+      "session": "r3MokdU7QTg3N1YivKDf",
+      "file": "public/film/voice/s8/raw/162-okada-flatly-we-re-closed--okada-old-take1.mp3",
+      "seconds": 1.28,
+      "mean_db": -21.6,
+      "peak_db": -3.7,
+      "silence_s": 0.27,
+      "picked": false
+     },
+     {
+      "generation_id": "UK5uaP2gHVVhaS5iie7Y",
+      "session": "p8pLPz8PpwX4hud0PDeo",
+      "file": "public/film/voice/s8/raw/162-okada-flatly-we-re-closed--okada-old-take2.mp3",
+      "seconds": 1.36,
+      "mean_db": -21.4,
+      "peak_db": -3.4,
+      "silence_s": 0.32,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 8, step 10",
+    "prompt": "[pause] No.",
+    "replaces": "public/film/voice/s8/162-okada-pause-no.mp3",
+    "installed": "public/film/voice/s8/162-okada-pause-no--aged.mp3",
+    "gain_db": 3.5,
+    "seconds": 1.15,
+    "takes": [
+     {
+      "generation_id": "ZDrBXJ2Yh1M8IjFwUO3Z",
+      "session": "SQ0acTBWFRPuJ0uqFvAl",
+      "file": "public/film/voice/s8/raw/162-okada-pause-no--okada-old-take1.mp3",
+      "seconds": 1.12,
+      "mean_db": -21.3,
+      "peak_db": -4.1,
+      "silence_s": 0,
+      "picked": true
+     },
+     {
+      "generation_id": "B5DlsC8BdUv7xuPnFtOi",
+      "session": "Uu24rVXr4mfv7vkkqdVd",
+      "file": "public/film/voice/s8/raw/162-okada-pause-no--okada-old-take2.mp3",
+      "seconds": 1.36,
+      "mean_db": -21.7,
+      "peak_db": -4.7,
+      "silence_s": 0.7,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 8, step 12",
+    "prompt": "[Tired] I looked. No.",
+    "replaces": "public/film/voice/s8/162-okada-i-looked-no.mp3",
+    "installed": "public/film/voice/s8/162-okada-i-looked-no--aged.mp3",
+    "gain_db": 5.9,
+    "seconds": 2.35,
+    "takes": [
+     {
+      "generation_id": "imRK2uLQJyTnOorEBuZ4",
+      "session": "7qPLbO63ENUVA6Jfo4ui",
+      "file": "public/film/voice/s8/raw/162-okada-i-looked-no--okada-old-take1.mp3",
+      "seconds": 2.32,
+      "mean_db": -25.7,
+      "peak_db": -8.7,
+      "silence_s": 0.67,
+      "picked": false
+     },
+     {
+      "generation_id": "9XXOmznaRrpl3T1W4TVb",
+      "session": "2T48yWy8pUtKoekv3zbe",
+      "file": "public/film/voice/s8/raw/162-okada-i-looked-no--okada-old-take2.mp3",
+      "seconds": 2.32,
+      "mean_db": -24.4,
+      "peak_db": -6.5,
+      "silence_s": 0.61,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 9, step 1",
+    "prompt": "[out of breath] Miss.",
+    "replaces": "public/film/voice/s9/164-okada-out-of-breath-miss.mp3",
+    "installed": "public/film/voice/s9/164-okada-out-of-breath-miss--aged.mp3",
+    "gain_db": -2.1,
+    "seconds": 2.27,
+    "takes": [
+     {
+      "generation_id": "kNTnywUfICdROfWX3Zb9",
+      "session": "mTLHpdDotukHr2lJpTE3",
+      "file": "public/film/voice/s9/raw/164-okada-out-of-breath-miss--okada-old-take1.mp3",
+      "seconds": 1.92,
+      "mean_db": -20.3,
+      "peak_db": -3.4,
+      "silence_s": 0.37,
+      "picked": false
+     },
+     {
+      "generation_id": "3IIEomWoVTYLpDqEg1jr",
+      "session": "bKsUeTcZuNelmNilbPxa",
+      "file": "public/film/voice/s9/raw/164-okada-out-of-breath-miss--okada-old-take2.mp3",
+      "seconds": 2.24,
+      "mean_db": -19.9,
+      "peak_db": -2.7,
+      "silence_s": 0.35,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 9, step 10",
+    "prompt": "[Grave] Behind the counter. After.",
+    "replaces": "public/film/voice/s9/165-okada-behind-the-counter-after.mp3",
+    "installed": "public/film/voice/s9/165-okada-behind-the-counter-after--aged.mp3",
+    "gain_db": 5.5,
+    "seconds": 2.77,
+    "takes": [
+     {
+      "generation_id": "yopIw8F5gpvpeSqb6vT2",
+      "session": "wjouEGPqjAQGEq3KYxeR",
+      "file": "public/film/voice/s9/raw/165-okada-behind-the-counter-after--okada-old-take1.mp3",
+      "seconds": 2.72,
+      "mean_db": -22.4,
+      "peak_db": -6.2,
+      "silence_s": 0.64,
+      "picked": true
+     },
+     {
+      "generation_id": "u3CKqjPhyyRPYyAbj2Tx",
+      "session": "Lr8Sw4iCKMXdgIEAUdb1",
+      "file": "public/film/voice/s9/raw/165-okada-behind-the-counter-after--okada-old-take2.mp3",
+      "seconds": 2.96,
+      "mean_db": -22.0,
+      "peak_db": -1.5,
+      "silence_s": 1.0,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 9, step 12",
+    "prompt": "[Bitter] They didn't ask.",
+    "replaces": "public/film/voice/s9/165-okada-they-didn-t-ask.mp3",
+    "installed": "public/film/voice/s9/165-okada-they-didn-t-ask--aged.mp3",
+    "gain_db": 3.0,
+    "seconds": 1.8,
+    "takes": [
+     {
+      "generation_id": "uE5CkjVHrdGSRgne7lTg",
+      "session": "CzPdRfOHUercs1FIRa98",
+      "file": "public/film/voice/s9/raw/165-okada-they-didn-t-ask--okada-old-take1.mp3",
+      "seconds": 1.76,
+      "mean_db": -20.0,
+      "peak_db": -3.1,
+      "silence_s": 0,
+      "picked": true
+     },
+     {
+      "generation_id": "PAZbFsQ8baomqgXnvM2A",
+      "session": "fEW8iNrib1tkxXgyEhuE",
+      "file": "public/film/voice/s9/raw/165-okada-they-didn-t-ask--okada-old-take2.mp3",
+      "seconds": 1.92,
+      "mean_db": -21.6,
+      "peak_db": -2.8,
+      "silence_s": 0.27,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 9, step 15",
+    "prompt": "[Firm] Not the police. Him.",
+    "replaces": "public/film/voice/s9/165-okada-not-the-police-him.mp3",
+    "installed": "public/film/voice/s9/165-okada-not-the-police-him--aged.mp3",
+    "gain_db": -0.1,
+    "seconds": 2.35,
+    "takes": [
+     {
+      "generation_id": "TkhoVO45r073GFG5Fq48",
+      "session": "AwFplLqVaqEF7sPvpY7b",
+      "file": "public/film/voice/s9/raw/165-okada-not-the-police-him--okada-old-take1.mp3",
+      "seconds": 2.24,
+      "mean_db": -17.4,
+      "peak_db": -0.5,
+      "silence_s": 0.61,
+      "picked": false
+     },
+     {
+      "generation_id": "tjorMuIEXhDFoZeaSJyV",
+      "session": "PLty2gedKWXZQ0ERwh6a",
+      "file": "public/film/voice/s9/raw/165-okada-not-the-police-him--okada-old-take2.mp3",
+      "seconds": 2.32,
+      "mean_db": -17.3,
+      "peak_db": -1.8,
+      "silence_s": 0.67,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 9, step 17",
+    "prompt": "He found my daughter once. [pause] When no one else would look.",
+    "replaces": "public/film/voice/s9/165-okada-he-found-my-daughter-once-pause.mp3",
+    "installed": "public/film/voice/s9/165-okada-he-found-my-daughter-once-pause--aged.mp3",
+    "gain_db": 3.0,
+    "seconds": 4.91,
+    "takes": [
+     {
+      "generation_id": "2hCgSRXzphiPqfOOhxjY",
+      "session": "xV1R2h5ZPxezUKvUUCIG",
+      "file": "public/film/voice/s9/raw/165-okada-he-found-my-daughter-once-pause--okada-old-take1.mp3",
+      "seconds": 4.88,
+      "mean_db": -21.4,
+      "peak_db": -2.9,
+      "silence_s": 1.14,
+      "picked": true
+     },
+     {
+      "generation_id": "hLa1Wp0EipU9wImBouvk",
+      "session": "Dtz7K0cHb3I6rhz7Ka3p",
+      "file": "public/film/voice/s9/raw/165-okada-he-found-my-daughter-once-pause--okada-old-take2.mp3",
+      "seconds": 4.88,
+      "mean_db": -21.8,
+      "peak_db": -3.5,
+      "silence_s": 1.07,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 7",
+    "prompt": "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. [pause] He didn't bring her home. She didn't want to come. He told me where she was, and he told",
+    "replaces": "public/film/voice/s27a/290-okada-she-was-fifteen-she-went-to.mp3",
+    "installed": "public/film/voice/s27a/290-okada-she-was-fifteen-she-went-to--aged.mp3",
+    "gain_db": 1.0,
+    "seconds": 23.17,
+    "takes": [
+     {
+      "generation_id": "NYj3n1BU4bqEyKTEHhGh",
+      "session": "3YxaORkolO1iNb0iVlz4",
+      "file": "public/film/voice/s27a/raw/290-okada-she-was-fifteen-she-went-to--okada-old-take1.mp3",
+      "seconds": 22.32,
+      "mean_db": -20.1,
+      "peak_db": -1.0,
+      "silence_s": 7.32,
+      "picked": false
+     },
+     {
+      "generation_id": "J61TV8TgVww7onyjjXcz",
+      "session": "KXDyz297EpKy7AU8tP9J",
+      "file": "public/film/voice/s27a/raw/290-okada-she-was-fifteen-she-went-to--okada-old-take2.mp3",
+      "seconds": 23.12,
+      "mean_db": -19.9,
+      "peak_db": -1.2,
+      "silence_s": 7.25,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 9",
+    "prompt": "She has two children now. [pause] I hated him for a year.",
+    "replaces": "public/film/voice/s27a/290-okada-she-has-two-children-now-pause.mp3",
+    "installed": "public/film/voice/s27a/290-okada-she-has-two-children-now-pause--aged.mp3",
+    "gain_db": 2.9,
+    "seconds": 5.64,
+    "takes": [
+     {
+      "generation_id": "pGvZBPMfsfb7WyYZj1Rk",
+      "session": "UFqYyzxWijiCUnuAPZpy",
+      "file": "public/film/voice/s27a/raw/290-okada-she-has-two-children-now-pause--okada-old-take1.mp3",
+      "seconds": 5.6,
+      "mean_db": -21.5,
+      "peak_db": -2.3,
+      "silence_s": 1.36,
+      "picked": false
+     },
+     {
+      "generation_id": "HUXQpHG6UvxABJ0LzEfy",
+      "session": "yx3h5wgVVYxOMVpYd1P1",
+      "file": "public/film/voice/s27a/raw/290-okada-she-has-two-children-now-pause--okada-old-take2.mp3",
+      "seconds": 5.6,
+      "mean_db": -20.9,
+      "peak_db": -3.5,
+      "silence_s": 1.29,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 12",
+    "prompt": "He finds things. And then he carries them by himself. [pause] I have never seen him put anything down.",
+    "replaces": "public/film/voice/s27a/291-okada-he-finds-things-and-then-he.mp3",
+    "installed": "public/film/voice/s27a/291-okada-he-finds-things-and-then-he--aged.mp3",
+    "gain_db": 2.1,
+    "seconds": 9.09,
+    "takes": [
+     {
+      "generation_id": "HuysNvsiH1tzDB9Mrm1H",
+      "session": "utwMjIK0W8PNiv7EqATK",
+      "file": "public/film/voice/s27a/raw/291-okada-he-finds-things-and-then-he--okada-old-take1.mp3",
+      "seconds": 8.96,
+      "mean_db": -19.2,
+      "peak_db": -1.5,
+      "silence_s": 1.96,
+      "picked": false
+     },
+     {
+      "generation_id": "PYcPLjpStoRsjQ36I8xX",
+      "session": "qDXkT5CebVcUKRklfFTX",
+      "file": "public/film/voice/s27a/raw/291-okada-he-finds-things-and-then-he--okada-old-take2.mp3",
+      "seconds": 9.04,
+      "mean_db": -18.8,
+      "peak_db": -1.3,
+      "silence_s": 1.82,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 14",
+    "prompt": "[Dry] It's a description.",
+    "replaces": "public/film/voice/s27a/291-okada-it-s-a-description.mp3",
+    "installed": "public/film/voice/s27a/291-okada-it-s-a-description--aged.mp3",
+    "gain_db": 4.3,
+    "seconds": 1.72,
+    "takes": [
+     {
+      "generation_id": "NkEBoWGuLn1hIYQCpm23",
+      "session": "m2UbEDpWo5bBBMBwLpdc",
+      "file": "public/film/voice/s27a/raw/291-okada-it-s-a-description--okada-old-take1.mp3",
+      "seconds": 1.68,
+      "mean_db": -23.6,
+      "peak_db": -7.4,
+      "silence_s": 0.25,
+      "picked": true
+     },
+     {
+      "generation_id": "POdDL1JWojSjKx5xxQW2",
+      "session": "AbnKESmtSiZmzREaVRuO",
+      "file": "public/film/voice/s27a/raw/291-okada-it-s-a-description--okada-old-take2.mp3",
+      "seconds": 1.68,
+      "mean_db": -24.1,
+      "peak_db": -6.8,
+      "silence_s": 0.26,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 22",
+    "prompt": "I was in the back. Moving crates. [pause] I heard all of it. I stood there with a crate in my arms and I did not move. That is why I gave you the clip. [pause] He said \"excuse me\" when he came in. Lik",
+    "replaces": "public/film/voice/s27a/292-okada-i-was-in-the-back-moving.mp3",
+    "installed": "public/film/voice/s27a/292-okada-i-was-in-the-back-moving--aged.mp3",
+    "gain_db": 1.6,
+    "seconds": 18.36,
+    "takes": [
+     {
+      "generation_id": "HGb1VaZJw0yUgboiTJiG",
+      "session": "FnTc4R7whdlUGSIuAhjw",
+      "file": "public/film/voice/s27a/raw/292-okada-i-was-in-the-back-moving--okada-old-take1.mp3",
+      "seconds": 18.32,
+      "mean_db": -20.4,
+      "peak_db": -1.8,
+      "silence_s": 4.56,
+      "picked": true
+     },
+     {
+      "generation_id": "lROokj9XkFkF6kN2bo93",
+      "session": "uXp2zXLcA3K1xFV2Dn21",
+      "file": "public/film/voice/s27a/raw/292-okada-i-was-in-the-back-moving--okada-old-take2.mp3",
+      "seconds": 17.84,
+      "mean_db": -20.9,
+      "peak_db": -0.9,
+      "silence_s": 4.42,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 25",
+    "prompt": "[Flatly] People learn.",
+    "replaces": "public/film/voice/s27a/292-okada-people-learn.mp3",
+    "installed": "public/film/voice/s27a/292-okada-people-learn--aged.mp3",
+    "gain_db": 5.5,
+    "seconds": 1.49,
+    "takes": [
+     {
+      "generation_id": "pz0QIqDzXf13RbJ6wDM1",
+      "session": "n1BGuyXUWEAMlFI9957G",
+      "file": "public/film/voice/s27a/raw/292-okada-people-learn--okada-old-take1.mp3",
+      "seconds": 1.44,
+      "mean_db": -21.3,
+      "peak_db": -4.4,
+      "silence_s": 0.3,
+      "picked": true
+     },
+     {
+      "generation_id": "Y5TKGw3uH3GoR5shNR5T",
+      "session": "JAwQXWZR8J2H5lHXeabc",
+      "file": "public/film/voice/s27a/raw/292-okada-people-learn--okada-old-take2.mp3",
+      "seconds": 1.44,
+      "mean_db": -21.3,
+      "peak_db": -4.5,
+      "silence_s": 0.3,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 27A, step 30",
+    "prompt": "He left it the week before. He said he was meeting someone. He said it would be a good week. [pause] I couldn't call them. I couldn't say what I heard.",
+    "replaces": "public/film/voice/s27a/292-okada-he-left-it-the-week-before.mp3",
+    "installed": "public/film/voice/s27a/292-okada-he-left-it-the-week-before--aged.mp3",
+    "gain_db": 1.3,
+    "seconds": 11.73,
+    "takes": [
+     {
+      "generation_id": "VsI2GZTQPhQnPwloxnLj",
+      "session": "qhInPDyXPl3CdBvPYJDD",
+      "file": "public/film/voice/s27a/raw/292-okada-he-left-it-the-week-before--okada-old-take1.mp3",
+      "seconds": 11.68,
+      "mean_db": -19.8,
+      "peak_db": -1.0,
+      "silence_s": 2.97,
+      "picked": true
+     },
+     {
+      "generation_id": "swx7CmMhqoTIGUDFJ2C4",
+      "session": "fj4vuAaMHPRArpm1XwxD",
+      "file": "public/film/voice/s27a/raw/292-okada-he-left-it-the-week-before--okada-old-take2.mp3",
+      "seconds": 11.6,
+      "mean_db": -19.8,
+      "peak_db": -1.0,
+      "silence_s": 2.9,
+      "picked": false
+     }
+    ]
+   },
+   {
+    "step": "scene 64, step 6",
+    "prompt": "[Thoughtful] Behind the counter. Like the girl's clip.",
+    "replaces": "public/film/voice/s64/233-okada-behind-the-counter-like-the-girl.mp3",
+    "installed": "public/film/voice/s64/233-okada-behind-the-counter-like-the-girl--aged.mp3",
+    "gain_db": 4.8,
+    "seconds": 3.4,
+    "takes": [
+     {
+      "generation_id": "8wLJSBdgG9Mywew7hM6Y",
+      "session": "aKH7CGYTnkm9Lk6EOyvt",
+      "file": "public/film/voice/s64/raw/233-okada-behind-the-counter-like-the-girl--okada-old-take1.mp3",
+      "seconds": 3.36,
+      "mean_db": -22.5,
+      "peak_db": -4.3,
+      "silence_s": 0.54,
+      "picked": false
+     },
+     {
+      "generation_id": "HyPh0oTTuHvm6WJaDyEm",
+      "session": "UsZXJVI4gUg5LxMHeoAk",
+      "file": "public/film/voice/s64/raw/233-okada-behind-the-counter-like-the-girl--okada-old-take2.mp3",
+      "seconds": 3.36,
+      "mean_db": -22.1,
+      "peak_db": -3.6,
+      "silence_s": 0.45,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 64, step 7",
+    "prompt": "[curious] The girl?",
+    "replaces": "public/film/voice/s64/233-okada-curious-the-girl.mp3",
+    "installed": "public/film/voice/s64/233-okada-curious-the-girl--aged.mp3",
+    "gain_db": 4.7,
+    "seconds": 1.07,
+    "takes": [
+     {
+      "generation_id": "lmtvFfSn95ulr1qyJjmA",
+      "session": "3YB876ksqFRvTG1lyPnW",
+      "file": "public/film/voice/s64/raw/233-okada-curious-the-girl--okada-old-take1.mp3",
+      "seconds": 1.2,
+      "mean_db": -24.8,
+      "peak_db": -8.3,
+      "silence_s": 0.35,
+      "picked": false
+     },
+     {
+      "generation_id": "czQH0F1d3go3C8LAnrhq",
+      "session": "CINxnnrZTfQJxiHK4iaR",
+      "file": "public/film/voice/s64/raw/233-okada-curious-the-girl--okada-old-take2.mp3",
+      "seconds": 1.04,
+      "mean_db": -25.1,
+      "peak_db": -10.7,
+      "silence_s": 0,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 64, step 10",
+    "prompt": "[bitterly] You said that about my daughter.",
+    "replaces": "public/film/voice/s64/233-okada-that-s-what-people-say-the.mp3",
+    "installed": "public/film/voice/s64/233-okada-that-s-what-people-say-the--aged.mp3",
+    "gain_db": -1.4,
+    "seconds": 2.69,
+    "takes": [
+     {
+      "generation_id": "fArfmAe2XdL6HHQj6hrM",
+      "session": "yQNOZnozKyBrXQfZ6dTN",
+      "file": "public/film/voice/s64/raw/233-okada-that-s-what-people-say-the--okada-old-take1.mp3",
+      "seconds": 2.64,
+      "mean_db": -20.6,
+      "peak_db": -1.5,
+      "silence_s": 0,
+      "picked": false
+     },
+     {
+      "generation_id": "iB3LTENU1gSLEjL0j05h",
+      "session": "tZsqopeAqrm8ZtYYp4Fd",
+      "file": "public/film/voice/s64/raw/233-okada-that-s-what-people-say-the--okada-old-take2.mp3",
+      "seconds": 2.64,
+      "mean_db": -19.4,
+      "peak_db": -0.7,
+      "silence_s": 0,
+      "picked": true
+     }
+    ]
+   },
+   {
+    "step": "scene 81, step 6",
+    "prompt": "[puzzled] The girl?",
+    "replaces": "public/film/voice/s81/104-okada-puzzled-the-girl.mp3",
+    "installed": "public/film/voice/s81/104-okada-puzzled-the-girl--aged.mp3",
+    "gain_db": 5.3,
+    "seconds": 1.23,
+    "takes": [
+     {
+      "generation_id": "Mvd5RPtwKqPetyDgVjsy",
+      "session": "qnh87x0jwRguDPuQt6Cd",
+      "file": "public/film/voice/s81/raw/104-okada-puzzled-the-girl--okada-old-take1.mp3",
+      "seconds": 1.2,
+      "mean_db": -25.1,
+      "peak_db": -9.0,
+      "silence_s": 0,
+      "picked": true
+     },
+     {
+      "generation_id": "lThiVw2HYqXQN3yBc404",
+      "session": "5NDHKtsU1sTyE1UBe80C",
+      "file": "public/film/voice/s81/raw/104-okada-puzzled-the-girl--okada-old-take2.mp3",
+      "seconds": 1.36,
+      "mean_db": -25.3,
+      "peak_db": -6.8,
+      "silence_s": 0,
+      "picked": false
+     }
+    ]
+   }
   ]
+ }
 }

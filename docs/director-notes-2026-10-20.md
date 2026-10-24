@@ -597,3 +597,17 @@ The director went through all 76 in the picker (each playing its real move besid
   other "twenty years" lines are the story's timeline and are unchanged.
 - Okada's voice was never changed: "Okada - NEONOIRE", picked 29 September, no take re-recorded since.
 - Outside this repository: PlayFrame's screenplay still has "Twenty years." in both places.
+
+## 26. Okada's new voice (24 October)
+The director: "i think his voice is too deep for old japanese man so redo." The 29 September voice ("Okada - NEONOIRE",
+`MhuU9Z2dyWAG6ZjuuKRg`) sat at a median of 89 Hz.
+- Three rounds of designs, auditioned on a picker page: the first three (109–123 Hz) were "all too slow"; of the brisker three
+  the director liked D best but asked for "a bit wiser older"; from the third round, G (137 Hz, mid 70s, light, aged, calm
+  authority, faint Japanese accent) was picked and saved as **"Okada (old) - NEONOIRE"** (`2jGSM3CPT3ls23VwBLPJ`). The voice
+  library was full; the director deleted the Barber's saved voice to make room (his takes are already in the film).
+- All 19 of his lines (scenes 8, 9, 27A, 64, 81) are re-recorded in it, eleven_v4, two takes each, the old directions kept.
+  Picks are measured, not heard, leveled to the old take of each line, installed beside it as `<name>--aged.mp3`; raw takes in
+  `public/film/voice/<scene>/raw/*--okada-old-take<N>.mp3`; record in `docs/film-voice-generations-2026-10-24.json`
+  (`okada`). The old takes stay on disk, unused. The new reads run about 10% longer than the old ones (27A's long answer
+  22.3 s against 19.5 s). About 2,330 credits.
+- Outside this repository: PlayFrame's voice manifest still lists the old voice and takes.
