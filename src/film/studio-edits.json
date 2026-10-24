@@ -2513,7 +2513,15 @@
     "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "focalPoint": "68% 42%"
+    "focalPoint": "68% 42%",
+    "depthMap": "/film/depth/s10/166-by-its-edges/depth.png",
+    "depthPlate": "/film/depth/s10/166-by-its-edges/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s10/166-by-its-edges/cutout-1.png",
+      "depth": 0.644
+     }
+    ]
    }
   },
   "167-two-men-laughing": {
@@ -5807,7 +5815,15 @@
     "depthMotion": "truck",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "depthDirection": "left"
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s18/435-the-last-page/depth.png",
+    "depthPlate": "/film/depth/s18/435-the-last-page/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s18/435-the-last-page/cutout-1.png",
+      "depth": 0.74
+     }
+    ]
    }
   },
   "524-the-only-eyewitness": {
@@ -5816,7 +5832,19 @@
     "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "focalPoint": "42% 35%"
+    "focalPoint": "42% 35%",
+    "depthMap": "/film/depth/s98/524-the-only-eyewitness/depth.png",
+    "depthPlate": "/film/depth/s98/524-the-only-eyewitness/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s98/524-the-only-eyewitness/cutout-1.png",
+      "depth": 0.407
+     },
+     {
+      "image": "/film/depth/s98/524-the-only-eyewitness/cutout-2.png",
+      "depth": 0.218
+     }
+    ]
    }
   },
   "160-were-closed": {
@@ -5825,7 +5853,19 @@
     "depthMotion": "truck",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "depthDirection": "right"
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s8/160-were-closed/depth.png",
+    "depthPlate": "/film/depth/s8/160-were-closed/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s8/160-were-closed/cutout-1.png",
+      "depth": 0.262
+     },
+     {
+      "image": "/film/depth/s8/160-were-closed/cutout-2.png",
+      "depth": 0.06
+     }
+    ]
    }
   },
   "369-the-drawing": {
@@ -5834,7 +5874,8 @@
     "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "focalPoint": "45% 52%"
+    "focalPoint": "45% 52%",
+    "depthMap": "/film/depth/s25/369-the-drawing/depth.png"
    }
   },
   "517-neither-moves": {
@@ -5843,7 +5884,19 @@
     "depthMotion": "truck",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "depthDirection": "left"
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s84/517-neither-moves/depth.png",
+    "depthPlate": "/film/depth/s84/517-neither-moves/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s84/517-neither-moves/cutout-1.png",
+      "depth": 0.354
+     },
+     {
+      "image": "/film/depth/s84/517-neither-moves/cutout-2.png",
+      "depth": 0.569
+     }
+    ]
    }
   },
   "208-come-back-safe-anyway": {
@@ -5852,7 +5905,15 @@
     "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 12,
-    "focalPoint": "38% 62%"
+    "focalPoint": "38% 62%",
+    "depthMap": "/film/depth/s36/208-come-back-safe-anyway/depth.png",
+    "depthPlate": "/film/depth/s36/208-come-back-safe-anyway/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s36/208-come-back-safe-anyway/cutout-1.png",
+      "depth": 0.384
+     }
+    ]
    }
   },
   "317-the-envelope-on-the-glass": {

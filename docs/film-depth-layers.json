@@ -1722,22 +1722,32 @@
    "cutouts": [
     {
      "name": "vera",
-     "box": [169, 277, 223, 803]
+     "box": [169, 277, 223, 803],
+     "image": "/film/depth/s84/517-neither-moves/cutout-1.png",
+     "depth": 0.354
     },
     {
      "name": "jack",
-     "box": [1440, 162, 326, 918]
+     "box": [1440, 162, 326, 918],
+     "image": "/film/depth/s84/517-neither-moves/cutout-2.png",
+     "depth": 0.569
     }
-   ]
+   ],
+   "depthMap": "/film/depth/s84/517-neither-moves/depth.png",
+   "depthPlate": "/film/depth/s84/517-neither-moves/plate.jpg"
   },
   "208-come-back-safe-anyway": {
    "picture": "public/film/img/s36/208-come-back-safe-anyway.jpg",
    "cutouts": [
     {
      "name": "vera",
-     "box": [467, 456, 519, 624]
+     "box": [467, 456, 519, 624],
+     "image": "/film/depth/s36/208-come-back-safe-anyway/cutout-1.png",
+     "depth": 0.384
     }
-   ]
+   ],
+   "depthMap": "/film/depth/s36/208-come-back-safe-anyway/depth.png",
+   "depthPlate": "/film/depth/s36/208-come-back-safe-anyway/plate.jpg"
   },
   "320-the-news-nobody-watches": {
    "picture": "public/film/img/s100/320-the-news-nobody-watches.jpg",

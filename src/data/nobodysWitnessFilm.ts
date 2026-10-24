@@ -4768,6 +4768,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthAmount": 0.4,
       "depthSeconds": 12,
       "depthDirection": "right",
+      "depthMap": "/film/depth/s8/160-were-closed/depth.png",
+      "depthPlate": "/film/depth/s8/160-were-closed/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s8/160-were-closed/cutout-1.png",
+        "depth": 0.262
+       },
+       {
+        "image": "/film/depth/s8/160-were-closed/cutout-2.png",
+        "depth": 0.06
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -5472,6 +5484,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 12,
+      "depthMap": "/film/depth/s10/166-by-its-edges/depth.png",
+      "depthPlate": "/film/depth/s10/166-by-its-edges/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s10/166-by-its-edges/cutout-1.png",
+        "depth": 0.644
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -8057,6 +8077,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthAmount": 0.4,
       "depthSeconds": 12,
       "depthDirection": "left",
+      "depthMap": "/film/depth/s18/435-the-last-page/depth.png",
+      "depthPlate": "/film/depth/s18/435-the-last-page/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s18/435-the-last-page/cutout-1.png",
+        "depth": 0.74
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -9922,6 +9950,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 12,
+      "depthMap": "/film/depth/s25/369-the-drawing/depth.png",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -12100,6 +12129,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 12,
+      "depthMap": "/film/depth/s36/208-come-back-safe-anyway/depth.png",
+      "depthPlate": "/film/depth/s36/208-come-back-safe-anyway/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s36/208-come-back-safe-anyway/cutout-1.png",
+        "depth": 0.384
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -23330,6 +23367,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthAmount": 0.4,
       "depthSeconds": 12,
       "depthDirection": "left",
+      "depthMap": "/film/depth/s84/517-neither-moves/depth.png",
+      "depthPlate": "/film/depth/s84/517-neither-moves/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s84/517-neither-moves/cutout-1.png",
+        "depth": 0.354
+       },
+       {
+        "image": "/film/depth/s84/517-neither-moves/cutout-2.png",
+        "depth": 0.569
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -27294,6 +27343,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 12,
+      "depthMap": "/film/depth/s98/524-the-only-eyewitness/depth.png",
+      "depthPlate": "/film/depth/s98/524-the-only-eyewitness/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s98/524-the-only-eyewitness/cutout-1.png",
+        "depth": 0.407
+       },
+       {
+        "image": "/film/depth/s98/524-the-only-eyewitness/cutout-2.png",
+        "depth": 0.218
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -28451,5 +28512,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "49d05cc5c754"
+ "builtinRevision": "03215194ab8a"
 } as unknown as Story;
