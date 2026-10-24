@@ -434,6 +434,9 @@ const at84 = (t: string) => s84.findIndex((b) => (b.text ?? "").startsWith(t));
 const jackSays = (i: number) => i >= 0 && s84[i].characterId === "nw_jack" && (s84[i].audioUrl ? existsSync(join(ROOT, "public", s84[i].audioUrl!)) : s84[i].silent === true);
 check(!s84.some((b) => b.text === "Three feet away.") && jackSays(at84("Right behind the curtain.")), "scene 84: Jack says \"Right behind the curtain.\" (silent until its take is recorded)");
 check(at84("I trusted him. I'm so sorry.") === at84("I told him. Where she'd be, and when.") + 1 && jackSays(at84("I trusted him.")) && at84("I told you about the detective.") > at84("I trusted him."), "scene 84: the confession ends \"That's mine. I trusted him. I'm so sorry.\" before Vera answers");
+// (24 October 2026) both takes are recorded, and Jack's answer to "I don't know if I'm as good as he was." is "No one's asking you to be."
+check(s84.filter((b) => b.characterId === "nw_jack").every((b) => !b.silent && !!b.audioUrl), "scene 84: every Jack line has its take (none left waiting)");
+check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's asking you to be.") === at84("I don't know if I'm as good as he was.") + 1 && jackSays(at84("No one's asking you to be.")), "scene 84: Jack answers \"No one's asking you to be.\", with its take");
 // animatic marks (the director, 21 October 2026): every node of the screenplay, a song's timed shots and the inn raid's cutscene
 // included, knows its scene, so an exported MP4 can show the scene, beat and picture in its corner
 const unmarked = FILM.scenes.filter((s) => /^nw_(s\d|song_|cut_|prologue)/.test(s.id) && !s.animaticMark).map((s) => s.id);

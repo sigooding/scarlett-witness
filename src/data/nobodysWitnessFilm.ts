@@ -23033,7 +23033,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1443",
      "characterId": "nw_jack",
      "text": "Right behind the curtain.",
-     "silent": true
+     "audioUrl": "/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3"
     },
     {
      "id": "nw_b1444",
@@ -23097,7 +23097,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1449",
      "characterId": "nw_jack",
      "text": "I trusted him. I'm so sorry.",
-     "silent": true
+     "audioUrl": "/film/voice/s84/119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3"
     },
     {
      "id": "nw_b1450",
@@ -23228,8 +23228,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1464",
      "characterId": "nw_jack",
-     "text": "I'm not asking you to be.",
-     "audioUrl": "/film/voice/s84/119-jack-gently-i-m-not-asking-you.mp3"
+     "text": "No one's asking you to be.",
+     "audioUrl": "/film/voice/s84/119-jack-gently-no-one-s-asking-you.mp3"
     },
     {
      "id": "nw_b1465",
@@ -27899,5 +27899,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "306e96e4f65b"
+ "builtinRevision": "23e654ed714b"
 } as unknown as Story;

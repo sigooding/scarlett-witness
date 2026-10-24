@@ -1,0 +1,37 @@
+{
+  "note": "Scene 84's three Jack takes, recorded 24 October 2026 with Jack's saved voice \"Narrator Lead\" (MZhx7pKflsc0sAwciDEy) and eleven_v4, two takes each, in ElevenLabs flow HVkZ9QY5mo9uj9DYFAkc. The pick is measured, not heard (the take with more energy; the lengths agree, so no repeat). Raw takes are in public/film/voice/s84/raw/ (ElevenLabs does not keep audio); the picks are leveled to Jack's other lines in the scene (about -21.5 dB average). About 210 credits.",
+  "voice_id": "MZhx7pKflsc0sAwciDEy",
+  "model_id": "eleven_v4",
+  "lines": [
+    {
+      "step": "scene 84, step 19 (answers \"She was here. The day I came.\"; was \"Three feet away.\")",
+      "prompt": "[flatly] Right behind the curtain.",
+      "installed": "public/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3",
+      "gain_db": -1.6,
+      "takes": [
+        { "generation_id": "G1hvTmmySNKA8Nh2fRFf", "file": "raw/118-jack-flatly-right-behind-the-curtain--take1.mp3", "seconds": 1.80, "mean_db": -19.4, "peak_db": -2.6, "picked": true },
+        { "generation_id": "0vzuEwf6GKetyxUPMoqY", "file": "raw/118-jack-flatly-right-behind-the-curtain--take2.mp3", "seconds": 1.80, "mean_db": -19.7, "peak_db": -2.8 }
+      ]
+    },
+    {
+      "step": "scene 84, step 27 (after \"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine.\")",
+      "prompt": "[sadly] I trusted him. I'm so sorry.",
+      "installed": "public/film/voice/s84/119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3",
+      "gain_db": 4.4,
+      "takes": [
+        { "generation_id": "IjMRMJ1ziL0opym6x0f0", "file": "raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take1.mp3", "seconds": 3.40, "mean_db": -25.6, "peak_db": -7.2, "picked": true },
+        { "generation_id": "CoWSv01UfRDFwOufmcNm", "file": "raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take2.mp3", "seconds": 3.55, "mean_db": -26.3, "peak_db": -6.8 }
+      ]
+    },
+    {
+      "step": "scene 84, step 44 (answers \"I don't know if I'm as good as he was.\"; was \"I'm not asking you to be.\", the director 24 October)",
+      "prompt": "[gently] No one's asking you to be.",
+      "installed": "public/film/voice/s84/119-jack-gently-no-one-s-asking-you.mp3",
+      "gain_db": -1.2,
+      "takes": [
+        { "generation_id": "rUqgq3nruDMcXWXhNjOK", "file": "raw/119-jack-gently-no-one-s-asking-you--take1.mp3", "seconds": 2.12, "mean_db": -19.8, "peak_db": -6.4, "picked": true },
+        { "generation_id": "QPnk49ZhS6v10sTQfo1d", "file": "raw/119-jack-gently-no-one-s-asking-you--take2.mp3", "seconds": 2.12, "mean_db": -20.0, "peak_db": -5.7 }
+      ]
+    }
+  ]
+}

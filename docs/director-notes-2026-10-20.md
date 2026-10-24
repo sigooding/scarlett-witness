@@ -30,10 +30,11 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
 | 14 | Kurose's office, "It's just a face.": Vera has no coat, and holds a notebook, not the photocopies | 83 (111, 112) | 111 done (archived take); 112 retake brief |
 | 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Done 22 October, from the director's uploads |
-| 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Words changed; take waiting for credits |
-| 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Words added; take waiting for credits |
+| 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Done; take recorded 24 October |
+| 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Done; take recorded 24 October |
 | 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 to redo |
 | 19 | (21 October) Pictures too low resolution; no picture may ever be downscaled | the 26 below | Listed; rule written |
+| 20 | (24 October) In the storeroom, Jack's answer to "I don't know if I'm as good as he was." should be "No one's asking you to be." (was "I'm not asking you to be.") | 84 | Done; take recorded |
 
 ---
 
@@ -356,7 +357,8 @@ PlayFrame's screenplay still has "He doesn't." The same change belongs there (a 
   - The confession now reads **"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine. I
     trusted him. I'm so sorry."** Its recorded take is kept for the first part, so the pause after "I told him." stays as
     recorded. The new sentences are a line of their own after it, so they get their own take.
-- **The takes are waiting for credits.** Until then both lines are shown silent: Jack's words on screen, no voice. They are never
+- **Recorded 24 October** (with note 20's line; see note 20). What follows is how they waited, and the recipe used.
+- **The takes were waiting for credits.** Until then both lines were shown silent: Jack's words on screen, no voice. They are never
   read by the browser's voice and never played over the old words. In the hands-off animatic they show as plain captions, without
   Jack's name. Each line carries `takePending` (the direction and words to record) in place of `voice`, and the build lists the
   lines still waiting.
@@ -415,3 +417,18 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
   (scene, beat and file name in the animatic's corner).
 
+## 20. "No one's asking you to be." (84), and the takes recorded (24 October)
+- **The words:** Vera, in the storeroom: "I don't know if I'm as good as he was." Jack now answers **"No one's asking you to be."**
+  It was "I'm not asking you to be." The old take stays on disk (`119-jack-gently-i-m-not-asking-you.mp3`), unused.
+- **Three takes recorded,** all Jack's saved voice with `eleven_v4`, two takes each, about 210 credits: this line
+  (`[gently] No one's asking you to be.`) and the two of notes 16 and 17. No scene 84 line waits any more.
+  - Installed: `public/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3`,
+    `119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3`, `119-jack-gently-no-one-s-asking-you.mp3`, leveled to about −21.5 dB
+    average like Jack's other lines in the scene.
+  - Both takes of each, as they came, in `public/film/voice/s84/raw/`; prompts, generation ids and measurements in
+    `docs/film-voice-generations-2026-10-24.json`.
+  - **Picked by measurement, not by ear** (the take with more energy; the two takes of each are the same length, so neither
+    says its line twice). Listen to the three in place; swap in the other take from `raw/` if it reads better.
+- **Still waiting for a take:** scene 1's "Hold on, I'll call an ambulance." (Mara) and scene 2's "Are you okay? Where's Sakai?"
+  (the journalist). Their prompts are in `story.json` (`takePending`).
+- **Outside this repository:** PlayFrame's screenplay still has "I'm not asking you to be." with the rest of notes 16 and 17.
