@@ -30,7 +30,10 @@ people (not a face on a television, not a photograph on a wall), add any it miss
 strongest there, and where both claim it outright, to the nearer of the two (the one in front hides the other), so a person
 standing behind another is not cut out twice. A cut-out may also list "exclude": [[x, y, w, h], ...], parts of its box where
 something the person holds or stands behind was taken with them (a crate of bottles in front, the drawer a hand grips): they
-stay in the plate at their own depth instead of moving with the person.
+stay in the plate at their own depth instead of moving with the person. A cut-out with "people": true also takes in the U2-Net
+human mask inside its box (needs --people-model): BiRefNet keeps the most striking thing in a box, which in a close-up of a hand
+holding a phone or a key is the phone or the key, not the hand (05 and 16, 24 October 2026). "close": N (pixels) bridges gaps up
+to about N wide inside a cut-out, such as a dark watch strap between a hand and a sleeve.
 
 Needs numpy, opencv-python-headless and onnxruntime (pip install). The models run locally:
   depth   Depth Anything V2 Small (Apache-2.0); only for pictures with no "depthSource"
@@ -121,7 +124,7 @@ def find_people(sess, rgb, share=0.15):
     return [box for area, box in sorted(pieces, key=lambda p: p[1][0]) if area >= keep]
 
 
-def matte_in(sess, rgb, box, exclude=()):
+def matte_in(sess, rgb, box, exclude=(), people=None, close=0):
     """The person or group inside box [x, y, w, h] as a soft matte the size of the picture. The box is cut out as a square
     (edges repeated past the frame), segmented at 1024x1024, and only the solid pieces of the result are kept. Boxes in
     `exclude` (whatever was taken with the person but is not them) are left out."""
@@ -148,6 +151,21 @@ def matte_in(sess, rgb, box, exclude=()):
         keep = np.isin(labels, 1 + np.flatnonzero(areas >= areas.max() / 5)).astype(np.uint8)
         near = cv2.dilate(keep, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9, 9)))
         full *= near
+    if people is not None:
+        # the hand or arm that holds the thing BiRefNet chose, kept to the box and to the pieces that touch it
+        inside_people = people * inside
+        for ex, ey, ew, eh in exclude:
+            inside_people[max(0, ey):ey + eh, max(0, ex):ex + ew] = 0
+        n, labels, stats, _ = cv2.connectedComponentsWithStats((inside_people > 0.5).astype(np.uint8))
+        if n > 1:
+            big = 1 + np.flatnonzero(stats[1:, cv2.CC_STAT_AREA] >= stats[1:, cv2.CC_STAT_AREA].max() / 5)
+            inside_people *= cv2.dilate(np.isin(labels, big).astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9, 9)))
+        full = np.maximum(full, inside_people)
+    if close:
+        solid = cv2.morphologyEx((full > 0.5).astype(np.uint8), cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (close, close)))
+        full = np.maximum(full, cv2.GaussianBlur(solid.astype(np.float32), (5, 5), 0) * inside)
+        for ex, ey, ew, eh in exclude:
+            full[max(0, ey):ey + eh, max(0, ex):ex + ew] = 0
     full[full < 0.02] = 0
     return full
 
@@ -298,7 +316,7 @@ def main():
     ap.add_argument("--seg-model", help="BiRefNet, for the cut-outs")
     ap.add_argument("--inpaint-model", help="LaMa, for the plate")
     ap.add_argument("--find-people", action="store_true", help="only suggest boxes round the people in the named pictures")
-    ap.add_argument("--people-model", help="U2-Net human segmentation, for --find-people")
+    ap.add_argument("--people-model", help="U2-Net human segmentation, for --find-people and cut-outs marked \"people\": true")
     ap.add_argument("--preview-dir", help="where --find-people writes its overlays (default: a new temporary folder)")
     ap.add_argument("--wire", action="store_true", help="write the layers into src/film/studio-edits.json (pictureLook)")
     ap.add_argument("names", nargs="*", help="pictures to make (default: every one in the JSON)")
@@ -321,6 +339,10 @@ def main():
     depth_s = session(args.depth_model) if need_depth else None
     seg_s = session(args.seg_model) if need_cutouts else None
     fill_s = session(args.inpaint_model) if need_cutouts else None
+    need_people = any(c.get("people") for _, p in todo for c in p.get("cutouts", []))
+    if need_people and not args.people_model:
+        raise SystemExit("--people-model is needed for cut-outs marked \"people\": true")
+    people_s = session(args.people_model) if need_people else None
     for name, pic in todo:
         rgb = cv2.cvtColor(cv2.imread(os.path.join(ROOT, pic["picture"])), cv2.COLOR_BGR2RGB)
         H, W = rgb.shape[:2]
@@ -331,7 +353,8 @@ def main():
         source = read_depth(os.path.join(ROOT, pic["depthSource"]), (W, H)) if pic.get("depthSource") else None
         depth = source if source is not None else depth_of(depth_s, rgb)
         cutouts = pic.get("cutouts", [])
-        mattes = own([matte_in(seg_s, rgb, c["box"], c.get("exclude", ())) for c in cutouts], depth) if cutouts else []
+        people = people_mask(people_s, rgb) if any(c.get("people") for c in cutouts) else None
+        mattes = own([matte_in(seg_s, rgb, c["box"], c.get("exclude", ()), people if c.get("people") else None, c.get("close", 0)) for c in cutouts], depth) if cutouts else []
         # The hole reaches a few pixels past each matte: the picture's own edge pixels carry the old background's colour.
         hole = np.zeros((H, W), np.uint8)
         for m in mattes:

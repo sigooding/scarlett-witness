@@ -2474,11 +2474,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s1/16-the-key/cutout-1.png",
-        "depth": 0.328
-       },
-       {
-        "image": "/film/depth/s1/16-the-key/cutout-2.png",
-        "depth": 0.455
+        "depth": 0.454
        }
       ],
       "filmGrade": false,
@@ -28051,5 +28047,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "76e29279a5f3"
+ "builtinRevision": "1b79b67cda35"
 } as unknown as Story;

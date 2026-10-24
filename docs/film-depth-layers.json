@@ -522,13 +522,14 @@
    "picture": "public/film/img/s1/05-phone-off.jpg",
    "cutouts": [
     {
-     "name": "person 1",
-     "box": [146, 88, 1262, 992],
+     "name": "her hands and the phone",
+     "box": [0, 40, 1420, 1040],
+     "people": true,
      "image": "/film/depth/s1/05-phone-off/cutout-1.png",
      "depth": 0.34
     }
    ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026), redone 24 October (the director: \"she should be cutout too not just the phone\"): one box round both hands and the phone, with the U2-Net human mask taken in so the hands come with the phone.",
    "depthMap": "/film/depth/s1/05-phone-off/depth.png",
    "depthPlate": "/film/depth/s1/05-phone-off/plate.jpg"
   },
@@ -814,19 +815,18 @@
    "picture": "public/film/img/s1/16-the-key.jpg",
    "cutouts": [
     {
-     "name": "person 1",
-     "box": [332, 189, 1283, 639],
+     "name": "her hand, wrist and sleeve with the key",
+     "box": [300, 170, 1620, 780],
+     "people": true,
      "image": "/film/depth/s1/16-the-key/cutout-1.png",
-     "depth": 0.328
-    },
-    {
-     "name": "person 2",
-     "box": [1615, 417, 305, 492],
-     "image": "/film/depth/s1/16-the-key/cutout-2.png",
-     "depth": 0.455
+     "depth": 0.454,
+     "exclude": [
+      [360, 585, 300, 250]
+     ],
+     "close": 121
     }
    ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026), redone 24 October (the director: \"her hand missing\"): one box round the whole arm, with the U2-Net human mask taken in so the hand comes with the key.",
    "depthMap": "/film/depth/s1/16-the-key/depth.png",
    "depthPlate": "/film/depth/s1/16-the-key/plate.jpg"
   },
