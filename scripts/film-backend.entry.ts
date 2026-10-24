@@ -437,6 +437,9 @@ check(at84("I trusted him. I'm so sorry.") === at84("I told him. Where she'd be,
 // (24 October 2026) both takes are recorded, and Jack's answer to "I don't know if I'm as good as he was." is "No one's asking you to be."
 check(s84.filter((b) => b.characterId === "nw_jack").every((b) => !b.silent && !!b.audioUrl), "scene 84: every Jack line has its take (none left waiting)");
 check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's asking you to be.") === at84("I don't know if I'm as good as he was.") + 1 && jackSays(at84("No one's asking you to be.")), "scene 84: Jack answers \"No one's asking you to be.\", with its take");
+// Okada (the director, 24 October 2026: "too deep for old japanese man"): all his lines are the takes in his new, older voice
+const okadaLines = allBeats.filter(({ b }) => b.characterId === "nw_okada" && !!b.audioUrl).map(({ b }) => b.audioUrl!);
+check(okadaLines.length >= 19 && okadaLines.every((u) => /--aged\.mp3$/.test(u) && existsSync(join(ROOT, "public", u))), "Okada speaks every line in his new, older voice (the --aged takes)");
 // the roadside inn (the director, 24 October 2026): a scene's opening picture showed something that had not happened yet (Jack's
 // car before he arrives, the key before he walks in, Mrs. Noda smoking before he finds her, the sedans before the headlights), so
 // each now opens on a picture of its own first line
