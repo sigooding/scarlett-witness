@@ -700,5 +700,50 @@
     ]
    }
   ]
+ },
+ "young_officer": {
+  "note": "Scene 5's four Young Officer lines re-recorded 24 October 2026 (the director: \"Yes, that name. Yes, the sister is here now\" should be said \"as if Vera can't hear him\", \"a cautious whisper\"). The 29 September voice they were made in (rexcV2ceXKmVM3IFUBVg) is deleted from the workspace, so all four are now in its stand-in \"Young Detective - NEONOIRE\" (QQQk8imC2qHxHZySJvr0, eleven_v4), two takes each, flow fituVMi3xx2vGH7TToRz. Picks measured, not heard: the three ordinary lines leveled to their old takes, the whisper left about 7 dB under them (mean -26.4 dB). Old takes stay on disk, unused. About 530 credits.",
+  "lines": [
+   {
+    "text": "Your sister's age?",
+    "prompt": "Your sister's age?",
+    "installed": "public/film/voice/s5/45-youngofficer-your-sister-s-age--yd.mp3",
+    "picked": "public/film/voice/s5/raw/45-youngofficer-your-sister-s-age--yd-take1.mp3",
+    "takes": [
+     "ntxhZscRYQuslfAkVi0e",
+     "X1gBB7Kpoy4qIaGM9dUk"
+    ]
+   },
+   {
+    "text": "Adults sometimes go away for a few days. Especially foreigners. It's usually —",
+    "prompt": "[Bored, polite] …",
+    "installed": "public/film/voice/s5/45-youngofficer-adults-sometimes-go-away-for-a--yd.mp3",
+    "picked": "public/film/voice/s5/raw/45-youngofficer-adults-sometimes-go-away-for-a--yd-take2.mp3",
+    "takes": [
+     "nN4RFlilvs2vDZVCEdhW",
+     "sydJnY1rVqAXS2Wz5nTl"
+    ]
+   },
+   {
+    "text": "Yes. That name. Yes — the sister is here now.",
+    "prompt": "[A cautious whisper into the phone, turned away so she can't hear] Yes. That name. Yes — the sister is here now.",
+    "installed": "public/film/voice/s5/48-youngofficer-whisper-yes-that-name.mp3",
+    "picked": "public/film/voice/s5/raw/48-youngofficer-whisper-yes-that-name--yd-take1.mp3",
+    "takes": [
+     "PC3FE4tntffNipasDRqX",
+     "T8UZVBrkmZskSpI4jRTi"
+    ]
+   },
+   {
+    "text": "Someone will be right with you.",
+    "prompt": "[politely] Someone will be right with you.",
+    "installed": "public/film/voice/s5/50-youngofficer-politely-someone-will-be-right-with--yd.mp3",
+    "picked": "public/film/voice/s5/raw/50-youngofficer-politely-someone-will-be-right-with--yd-take1.mp3",
+    "takes": [
+     "Pr0jqVdbH63wUiArD5IV",
+     "TuHWK4Zvck1OXwh6LsBp"
+    ]
+   }
+  ]
  }
 }
