@@ -407,7 +407,7 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   2730×1536 or 2752×1536. They were halved somewhere before they reached the film. If the full-size originals can be found (the
   generator's download, an earlier upload), install those over the halves with the install tool, which archives the old file.
   Otherwise they are retake candidates. The player stretches them to the screen, so they look soft.
-  - 1365×768: `s17/360-more-than-the-bowl-costs` (remade 1920×1080 on 24 Oct), `s20/346-the-bulb-hums` (remade 2728×1534 on 24 Oct), `s54/220-everything-is-still-there`, `s70/393-run`,
+  - 1365×768: `s17/360-more-than-the-bowl-costs` (remade 1920×1080 on 24 Oct), `s20/346-the-bulb-hums` (remade 2728×1534 on 24 Oct), `s54/220-everything-is-still-there` (remade 2508×1410 on 24 Oct), `s70/393-run`,
     `s90/381-the-plank`, `s93/137-he-knows-this-car`, `s93/138-the-door-opens`, `s94/139-only-tea`, `s97a/565-they-bow`.
   - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`, `s82/new-jack-walks-in-4.png`,
     `s94/368-the-door-closes`, `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
@@ -417,6 +417,18 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   - 1672×941: `s73/72-the-lost-heel`, `s82/new-jack-walks-in-3`, `s90/132-the-gap`.
   - 1536×1024: `s78/88-the-walkway`.
   - 1920×1072 (eight lines short): `s82/new-jack-walks-in-1`.
+- **Two of them remade at full size, 24 October, on-model.** The first three candidates came back off-model (a younger, smooth
+  hand on Kurose's model, a different blonde in the kiosk, and a pair in the alley who were not Mara and Jack), so each was
+  regenerated with the cast sheets attached as likeness references — `sheets/kurose.jpg`, `sheets/vera.jpg`, `sheets/mara.jpg`
+  and `sheets/jack.jpg`, plus, for the alley, an already-matched frame of the pair (`s20/346-the-bulb-hums`). Two takes each,
+  the director picked one of each; both installed with `tools/install-film-picture.mjs`, the old halves archived.
+  - **`s54/220-everything-is-still-there`** now 2508×1410 (was 1365×768); old file
+    `archive/s54/220-everything-is-still-there--v1.jpg`. Vera in her charcoal coat and cream turtleneck, as scene 83 has her.
+  - **`retakes_2026_10_20/311-the-hand-on-the-model-r1`** now 2730×1536 (was 1360×768); old file
+    `archive/retakes_2026_10_20/311-the-hand-on-the-model-r1--v1.jpg`. The hand is now an old man's, in Kurose's charcoal
+    sleeve (it was a young hand in navy). The same file is `s51/311-the-hand-on-the-model.jpg`'s parent take in `story.json`.
+  - Neither picture has a depth map, so nothing in `film-depth-layers.json` changes.
+  - **`s70/393-run` is still 1365×768.** Three rounds of candidates were rejected at the picker; it stays a retake candidate.
 - **Exactly 1920×1080 does not mean full detail.** The 17 retakes of 20 October were enlarged to 1920×1080 from the
   generator's smaller output, and many older pictures may have been too. A sharpness measurement could not tell those from
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
