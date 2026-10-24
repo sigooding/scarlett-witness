@@ -386,12 +386,14 @@ eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/what-made-you-you.mp3")
 check(service[0].musicLoop === false, "and plays once");
 eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothing of 97A is left to click through: the whole scene plays to the song");
 eq(service.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s98", "the run hands on to the rooftop");
-eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, "none", "which fades the song out");
+// 24 October 2026, the director: "the service audio track should continue to rooftop scene": the rooftop no longer fades the song;
+// it plays on under the rooftop's opening (about 23 s to Vera's first line in the animatic) and ends by itself
+eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, undefined, "the rooftop lets the song play on (it no longer fades it out)");
 check(service.every((s) => s.hideHud && s.dialogueBeats?.every((b) => b.silent)), "every node is a silent cutscene node: nobody speaks at the service");
 // each node also takes its fade-in and the engine's lag (0.3 + 0.1 + 0.18 s), which the builder takes off its delay: with 34 pictures
 // the delays alone add up to about 170 s of a run that plays about 190 s (18 October 2026)
 const playedSeconds = (nodes: typeof service) => songSeconds(nodes) + nodes.length * 0.58;
-check(playedSeconds(service) > 180 && playedSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${playedSeconds(service).toFixed(0)} s)`);
+check(playedSeconds(service) > 160 && playedSeconds(service) < 180, `the run ends about half a minute before the song's 3:19, which carries on over the rooftop (${playedSeconds(service).toFixed(0)} s)`);
 // the raid on the Hive (85 to 92, "Coins Measure-Time") plays the director's picks (19 October 2026): 11 pictures of the thehiveescape
 // set and 5 earlier versions (hive_raid_takes/) among the film's own, nothing left out
 const raidPics = [...new Set(runOf("raid").map((s) => s.background ?? ""))];
@@ -530,4 +532,11 @@ check(!FILM.scenes.some((s) => (s.dialogueBeats ?? []).some((b) => b.animaticBea
 const throughBlack = FILM.scenes.filter((s) => s.transition !== "dissolve" && s.transition !== "cut" && !/^nw_(title|prologue|credits|intro|end)$/.test(s.id)).map((s) => s.id);
 eq(throughBlack, [], "no scene fades through black on its way in (only the titles, the prologue and the credits do)");
 check(FILM.scenes.filter((s) => s.transition === "dissolve").length > 200, "the scenes dissolve picture into picture");
+// the director, 24 October 2026: nothing shakes; the service song carries into the rooftop (checked above); a longer last hold
+const everyCamera = FILM.scenes.flatMap((s) => [s.cinematic, ...(s.dialogueBeats ?? []).map((b) => b.cinematic), ...Object.values(s.credits?.montageLooks ?? {})]);
+check(everyCamera.every((c) => c?.mode !== "shake"), "no camera in the film shakes (\"don't use shake cam settings, turn them off\")");
+check(FILM.scenes.filter((s) => s.credits).every((s) => s.credits!.gateWeave === "off"), "the title, the montages and the credits no longer weave like a projector gate");
+const lastBeat = FILM.scenes.find((s) => s.id === "nw_s100")!.dialogueBeats!.at(-1)!;
+check(lastBeat.background?.endsWith("/159-she-doesnt-turn.jpg") && (lastBeat.afterBeatDelaySeconds ?? 0) >= 5 && lastBeat.afterBeatTargetSceneId === "nw_credits", "the film holds longer on Jack, Vera and Kaneko before the credits");
+eq(lastBeat.text, "The three of them in the steam.", "and its last caption is the picture, not the screenplay's camera direction (\"HOLD on…\")");
 console.log(`\nfilm backend: ${checks} checks passed`);

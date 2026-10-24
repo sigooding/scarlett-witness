@@ -665,3 +665,14 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   with no black between them (0.9 s between scenes). Parts of the same scene still cut. Only the opening titles, the prologue
   and the credits fade through black. Checked in a browser on scene 3 into 4: the lit window melts into Vera's apartment and
   the screen never goes dark. A new "Dissolve" choice is in the Studio's scene transition list.
+
+## 33. No shake, the service song into the rooftop, the last hold (24 October)
+- **No shake anywhere.** The handheld shake was already gone from every shot (23 October); the builder now refuses one on any
+  scene, beat or picture, and the title, the two montages (18, 53) and the credits no longer weave like a projector gate (a
+  small jitter, out of step with the film's no-film-grade look).
+- **"What Made You, You" carries on into the rooftop.** The service ends about half a minute before the song does (each still
+  about 4.7 s instead of 5.4 s) and the rooftop no longer fades it: its last part plays over "Five days later", the washed sky,
+  the trains and Vera coming out to the railing, and it ends by itself around her first line (music already dips under voices).
+- **The last picture holds longer**: Kaneko, Vera eating, Jack beside her, now about 8.5 s before the credits (it was 4.6 s).
+  Its caption was the screenplay's camera direction, "HOLD on the three of them in the steam."; it now reads "The three of
+  them in the steam."

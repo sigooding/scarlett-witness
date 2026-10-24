@@ -1336,7 +1336,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "titleColor": "#e7dfd1",
     "accentColor": "#8aa03b",
     "titleEntrance": "fade-up",
-    "gateWeave": "subtle",
+    "gateWeave": "off",
     "stagger": 0.2,
     "duration": 1.2,
     "scrollDuration": 24,
@@ -8272,7 +8272,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "montageSeconds": 5,
     "montageTransition": "dissolve",
     "montageLoop": false,
-    "gateWeave": "subtle"
+    "gateWeave": "off"
    },
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
@@ -14725,7 +14725,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "montageSeconds": 5,
     "montageTransition": "dissolve",
     "montageLoop": false,
-    "gateWeave": "subtle"
+    "gateWeave": "off"
    },
    "musicMode": "track",
    "musicUrl": "/film/audio/dark-hills-blues.mp3",
@@ -25943,7 +25943,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Rain. The last of the light.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_02"
     }
    ],
@@ -25986,7 +25986,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Mourners under black umbrellas crowd the doorway. The blue one comes last.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_03"
     }
    ]
@@ -26024,7 +26024,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Vera and her mother under Mara's blue umbrella. Jack a step behind.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_04"
     }
    ]
@@ -26062,7 +26062,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The mourners make way at the door.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_05"
     }
    ]
@@ -26100,7 +26100,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Vera closes Mara's blue umbrella and stands it with the black ones.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_06"
     }
    ]
@@ -26138,7 +26138,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Shoes in a row below the step. Stockinged feet on the old wood.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_07"
     }
    ]
@@ -26176,7 +26176,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Jack is the last one in. He looks back at the rain.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_08"
     }
    ]
@@ -26214,7 +26214,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "He stands over the photograph a long moment before he kneels.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_09"
     }
    ]
@@ -26252,7 +26252,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Kaneko lights the incense.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_10"
     }
    ]
@@ -26290,7 +26290,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Mara's photograph. Chrysanthemums, incense, a cup of tea.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_11"
     }
    ]
@@ -26328,7 +26328,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "A few of her drawings, dried flat.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_12"
     }
    ]
@@ -26366,7 +26366,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Kaneko's room. Nobody speaks.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_13"
     }
    ]
@@ -26404,7 +26404,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Vera.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_14"
     }
    ]
@@ -26442,7 +26442,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Her mother.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_15"
     }
    ]
@@ -26480,7 +26480,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Jack watches Vera.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_16"
     }
    ]
@@ -26518,7 +26518,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Three neighbours from the Hive.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_17"
     }
    ]
@@ -26556,7 +26556,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Rice balls wrapped in newspaper, as she gave them to Mara for the car.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_18"
     }
    ]
@@ -26594,7 +26594,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Jack straightens the photograph. Beside it, Mara's drawing of the arches in the rain.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_19"
     }
    ]
@@ -26632,7 +26632,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The incense goes straight up.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_20"
     }
    ]
@@ -26670,7 +26670,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Vera and her mother bow their heads at the table.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_21"
     }
    ]
@@ -26708,7 +26708,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Her mother's hand finds Vera's.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_22"
     }
    ]
@@ -26746,7 +26746,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Vera lets her.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_23"
     }
    ]
@@ -26790,7 +26790,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Rain on the window. The light going.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_24"
     }
    ]
@@ -26828,7 +26828,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Okada from the bar, late, at the door. He doesn't come in.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_25"
     }
    ]
@@ -26866,7 +26866,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "At last he stands his umbrella in the rack, beside the blue one.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_26"
     }
    ]
@@ -26904,7 +26904,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Kaneko goes to him.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_27"
     }
    ]
@@ -26942,7 +26942,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Okada kneels with the others, and the circle is whole.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_28"
     }
    ]
@@ -26980,7 +26980,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "The tea has gone cold.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_29"
     }
    ]
@@ -27018,7 +27018,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Later. Out in the lane, the blue umbrella opens.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_30"
     }
    ]
@@ -27058,7 +27058,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/train.mp3",
      "sfxVolume": 0.4,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_31"
     }
    ]
@@ -27096,7 +27096,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Her mother stays behind with the photograph a while longer.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_32"
     }
    ]
@@ -27134,7 +27134,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Then she goes too, in her black coat.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_33"
     }
    ]
@@ -27172,7 +27172,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "Kaneko and Okada sit together by the lamp.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_34"
     }
    ]
@@ -27210,7 +27210,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "His hand rests on hers, once.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_song_service_35"
     }
    ]
@@ -27252,7 +27252,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "text": "It rains all night.",
      "silent": true,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 4.83,
+     "afterBeatDelaySeconds": 4.11,
      "afterBeatTargetSceneId": "nw_s98"
     }
    ]
@@ -27268,8 +27268,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "hideHud": true,
    "transition": "dissolve",
    "transitionSpeed": 0.9,
-   "musicMode": "none",
-   "musicFadeSeconds": 4,
    "dialogueBeats": [
     {
      "id": "nw_b1593",
@@ -28187,7 +28185,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b1670",
      "characterId": "nw_narrator",
-     "text": "HOLD on the three of them in the steam.",
+     "text": "The three of them in the steam.",
      "silent": true,
      "background": "/film/img/s100/159-she-doesnt-turn.jpg",
      "cinematic": {
@@ -28205,7 +28203,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_credits",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1
+     "afterBeatDelaySeconds": 6
     }
    ],
    "hotspots": [],
@@ -28383,7 +28381,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "titleColor": "#e9e2d0",
     "accentColor": "#e8a24a",
     "titleEntrance": "fade-up",
-    "gateWeave": "subtle",
+    "gateWeave": "off",
     "montageLooks": {
      "/film/img/s7/68-the-clock.jpg": {
       "mode": "static",
@@ -28545,5 +28543,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "0509ca06bd05"
+ "builtinRevision": "ad4961f02ba9"
 } as unknown as Story;

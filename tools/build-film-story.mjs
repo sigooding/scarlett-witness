@@ -661,19 +661,19 @@ const noSlowPan = (c) => { if (!c || c.mode !== "pan") return; c.mode = "static"
 // edits or a picture's look set — the warm photograph beats and the cool ending were graded differently until now.
 const midnightTeal = (c) => { if (c) c.colorGrade = "midnight-teal"; };
 
-// No handheld shake in scenes 1 and 2 (15 October 2026, the director): the suppressed shot, the run and the two bar beats hold
-// still instead — the cut into 10-the-shot (a "zoom" punch) is not a shake and stays. Shake anywhere else (the inn raid, the
-// songs) is untouched.
-const NO_SHAKE_IN = new Set(["nw_s1", "nw_s2"]);
+// No handheld shake anywhere (24 October 2026, the director: "don't use shake cam settings, turn them off"; scenes 1 and 2 lost
+// theirs on 15 October): a shake set on a scene, a beat or a picture's look holds still instead. The cut into 10-the-shot (a "zoom"
+// punch) is not a shake and stays. The title, the montages and the credits no longer weave like a projector gate either.
 const noShake = (c) => { if (!c || c.mode !== "shake") return; c.mode = "static"; delete c.shakeAmount; delete c.shakeRotation; delete c.shakeDuration; };
 
 for (const s of scenes) {
+  if (s.credits) s.credits.gateWeave = "off";
   // Every camera in the film: the scene's own, each beat's, and a credits montage's per-still looks (which drive those stills' depth moves).
   for (const c of [s.cinematic, ...(s.dialogueBeats ?? []).map(b => b.cinematic), ...Object.values(s.credits?.montageLooks ?? {})]) {
     noGradeNoShafts(c);
     noSlowPan(c);
     midnightTeal(c);
-    if (NO_SHAKE_IN.has(s.id)) noShake(c);
+    noShake(c);
   }
 }
 

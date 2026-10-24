@@ -9,6 +9,17 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## No shake, the service song into the rooftop, a longer last hold (24 October 2026)
+
+* **No shake.** `noShake` in `tools/build-film-story.mjs` now applies to every camera in the film (scenes 1 and 2 only, since 15
+  October), and every `credits` block (the title, montages 18 and 53, the credits) gets `gateWeave: "off"`.
+* **The service song runs on.** The `service` soundtrack has `slack: 27` and `songRunsOn: true`, and the `nw_s98` Studio edit
+  removes the rooftop's "music off" (`musicMode`/`musicFadeSeconds` null), so the rooftop inherits the song: the service plays
+  166 s of the song's 196 and the rest (with its own fade, 190–199 s) plays under the rooftop's opening, about 23 s to Vera's
+  first line in the animatic.
+* **The last hold.** `beats.nw_s100.last.afterBeatDelaySeconds` is 6 (every scene's last beat moves on after 1 s): the final
+  picture, 159, holds about 8.5 s. Its caption no longer starts with the screenplay's "HOLD on".
+
 ## No black between scenes: the dissolve (24 October 2026)
 
 The director: "Get rid of black transitions, a black then image happens quite a lot." Every scene used to enter with `fade`, which
