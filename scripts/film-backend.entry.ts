@@ -440,6 +440,9 @@ check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's
 // Okada (the director, 24 October 2026: "too deep for old japanese man"): all his lines are the takes in his new, older voice
 const okadaLines = allBeats.filter(({ b }) => b.characterId === "nw_okada" && !!b.audioUrl).map(({ b }) => b.audioUrl!);
 check(okadaLines.length >= 19 && okadaLines.every((u) => /--aged\.mp3$/.test(u) && existsSync(join(ROOT, "public", u))), "Okada speaks every line in his new, older voice (the --aged takes)");
+// sound effects (24 October 2026): the shot that hits Mara in scene 70 is heard, and every phone that rings on screen rings
+check(allBeats.some(({ scene, b }) => scene === "nw_s70" && b.text === "A shot." && b.sfxUrl === "/film/sfx/suppressed-shot.mp3"), "scene 70: the shot that hits Mara is heard");
+check(["The phone rings in the empty room.", "The desk phone rings. He picks it up."].every((t) => allBeats.some(({ b }) => b.text?.startsWith(t) && b.sfxUrl === "/film/sfx/phone.mp3")), "the phones ringing in scenes 59 and 96 are heard");
 // the roadside inn (the director, 24 October 2026): a scene's opening picture showed something that had not happened yet (Jack's
 // car before he arrives, the key before he walks in, Mrs. Noda smoking before he finds her, the sedans before the headlights), so
 // each now opens on a picture of its own first line
