@@ -410,15 +410,14 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   - 1365×768: `s17/360-more-than-the-bowl-costs` (remade 1920×1080 on 24 Oct), `s20/346-the-bulb-hums` (remade 2728×1534 on 24 Oct), `s54/220-everything-is-still-there` (remade 2508×1410 on 24 Oct), `s70/393-run` (remade 24 Oct),
     `s90/381-the-plank` (remade 24 Oct), `s93/137-he-knows-this-car` (remade 24 Oct), `s93/138-the-door-opens` (remade 24 Oct),
     `s94/139-only-tea` (remade 24 Oct), `s97a/565-they-bow` (remade 2048×1152 on 24 Oct).
-  - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`, `s82/new-jack-walks-in-4.png`,
+  - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`,
     `s94/368-the-door-closes`, `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
     `service_new/560-jack-at-the-door`, `service_new/extras/mom-01-her-face-at-the-table`, `mom-02-mother-and-daughter`,
     `mom-03-what-she-wears-home`.
   - 1408×768: `montage/m4-railway-rain`.
-  - 1672×941: `s73/72-the-lost-heel`, `s82/new-jack-walks-in-3`, `s90/132-the-gap`.
+  - 1672×941: `s73/72-the-lost-heel`, `s90/132-the-gap`.
   - 1536×1024: `s78/88-the-walkway`.
-  - 1920×1072 (eight lines short): `s82/new-jack-walks-in-1`.
-- **Two of them remade at full size, 24 October, on-model.** The first three candidates came back off-model (a younger, smooth
+  - **Two of them remade at full size, 24 October, on-model.** The first three candidates came back off-model (a younger, smooth
   hand on Kurose's model, a different blonde in the kiosk, and a pair in the alley who were not Mara and Jack), so each was
   regenerated with the cast sheets attached as likeness references — `sheets/kurose.jpg`, `sheets/vera.jpg`, `sheets/mara.jpg`
   and `sheets/jack.jpg`, plus, for the alley, an already-matched frame of the pair (`s20/346-the-bulb-hums`). Two takes each,
@@ -444,6 +443,14 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     match. Old files `archive/s93/138-the-door-opens--v2.jpg`, `archive/s94/139-only-tea--v3.jpg`,
     `archive/s97a/565-they-bow--v1.jpg`. Sizes: 138 now 2730×1536 (native 2K), 565 now 2048×1152 (native), 139 only
     1377×761 from the generator so the install tool enlarged it to 1920×1080.
+  - **The newsroom walk, `s82/new-jack-walks-in-1`, `-3` and `-4`, remade 24 October.** Held to the sequence's own full-size
+    frame `s82/new-jack-walks-in-2` (Jack's charcoal blazer, open white shirt, the room's grade) and to `sheets/jack.jpg` and
+    `sheets/harada.jpg` — Harada's silver bob, thin glasses and rolled white sleeves. `-1` now 1920×1080 (was 1920×1072, so
+    eight lines short; enlarged), `-3` 1920×1080 (was 1672×941; enlarged), `-4` 2674×1504 (was 1376×768; native). Old files
+    `archive/s82/new-jack-walks-in-1--v1.jpg`, `-3--v1.jpg`, `-4--v1.png`.
+    **Watch the lettering:** one candidate came back with the door sign garbled (東面新聞 / 緯偉局) and no Jack in frame, and
+    was rejected. `-4` was a PNG; its replacement is a JPEG, so `story.json`, `src/data/nobodysWitnessFilm.ts` and the
+    film-backend check now name `…-4.jpg`, and the old PNG is archived.
 - **Exactly 1920×1080 does not mean full detail.** The 17 retakes of 20 October were enlarged to 1920×1080 from the
   generator's smaller output, and many older pictures may have been too. A sharpness measurement could not tell those from
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark

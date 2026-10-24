@@ -22134,7 +22134,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "He reaches the glass office without slowing.",
      "silent": true,
-     "background": "/film/img/s82/new-jack-walks-in-4.png",
+     "background": "/film/img/s82/new-jack-walks-in-4.jpg",
      "cinematic": {
       "mode": "static",
       "focalPoint": "65% 50%",
