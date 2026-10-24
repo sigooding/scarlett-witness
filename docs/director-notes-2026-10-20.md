@@ -482,11 +482,18 @@ the film yet.**
 - **New, `s44/44-02-my-husband.jpg`:** Mrs. Noda in the pantry, crying out, gripping his coat. It plays on "My husband —" and
   "I'll get him." (shots 16–17 of the raid cutscene in `studio-edits.json`, and the scene's own step in `story.json`).
 - gemini-3-pro-image edits at 2K, installed full size (2730×1536). With note 23, eleven pictures, about 34,000 credits.
-- **The same thing elsewhere in the film:** 40 scenes open on a picture that belongs to a later line. Most are harmless (a time
-  card or a description of the place over its establishing shot). Ones that give something away early, not yet changed:
-  21 (Vera's shape at the frosted glass while Jack hasn't slept), 27 (Jack and Vera laughing under the umbrella before the
-  crossing is set), 63 (Jack opening the locker during the room's description), 63A (the waiting sedan before Jack comes
-  out), 93 (the sedan at the kerb as Ishida comes down the steps).
+- **The same thing elsewhere in the film:** 40 scenes opened on a picture that belongs to a later line. Most are harmless (a
+  time card or a description of the place over its establishing shot). The five that gave something away early were fixed the
+  same day (the director: "ok"), one take each, about 9,100 credits, each an edit of the scene's own picture:
+  - **21** `s21/21-00-he-hasnt-slept.jpg`: Jack alone at his desk in grey morning light, in yesterday's shirt (was Vera
+    already on the stairs);
+  - **27** `s27/27-00-the-signal-turns-green.jpg`: the empty crossing as the signal turns green (was the two of them
+    already crossing);
+  - **63** `s63/63-00-the-locker-room.jpg`: the locker room, every locker shut, the caretaker asleep (was Jack at the open
+    locker);
+  - **63A** `s63a/63a-00-he-comes-out.jpg`: Jack coming out under the arches, no car yet (was the sedan waiting). He carries
+    the flat package under his arm, where the script has it under his buttoned coat;
+  - **93** `s93/93-00-down-the-steps.jpg`: Ishida coming down the station steps, no car yet (was the sedan at the kerb).
 
 ## 23. Scene 59: Vera sees Jack walking back (24 October)
 - The director: outside the Hive Vera should not find Jack on the green phone; she should see him walking back.

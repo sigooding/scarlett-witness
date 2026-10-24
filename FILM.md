@@ -870,4 +870,4 @@ A scene opens on its first picture, which stays up through the heading and every
 showed things before they happened. Scenes 30, 31, 32, 37 and 38 now open on a picture of their own first line, the pink
 payphone (207) has one handset, the raid's Mrs. Noda (212) is frightened and "My husband —" has a picture of its own
 (`s44/44-02-my-husband.jpg`, raid shots 16–17). Scene 59 is restaged so Jack has hung up and is walking back when Vera comes
-out. Director notes, items 22 and 23, with the other scenes that open on a later picture.
+out. Scenes 21, 27, 63, 63A and 93 got the same fix as the inn. Director notes, items 22 and 23.

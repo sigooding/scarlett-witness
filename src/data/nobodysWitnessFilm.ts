@@ -8697,7 +8697,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s21",
    "title": "21 — Footsteps on the stairs",
    "animaticMark": "21",
-   "background": "/film/img/s21/193-footsteps-on-the-stairs.jpg",
+   "background": "/film/img/s21/21-00-he-hasnt-slept.jpg",
    "prose": "INT. JACK'S OFFICE - DAY",
    "ambientAudio": "file:/film/sfx/amb-office.mp3",
    "particles": "motes",
@@ -8709,7 +8709,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b529",
      "characterId": "nw_narrator",
      "text": "Grey light. Rain on the window. Jack hasn't slept. He is in yesterday's shirt.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s21/21-00-he-hasnt-slept.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 16,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b530",
@@ -10642,7 +10656,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s27",
    "title": "27 — The old song",
    "animaticMark": "27",
-   "background": "/film/img/s27/202-the-old-song.jpg",
+   "background": "/film/img/s27/27-00-the-signal-turns-green.jpg",
    "prose": "EXT. PEDESTRIAN CROSSING - DAY",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-crossing-traffic.mp3",
    "particles": "rain",
@@ -10654,7 +10668,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b682",
      "characterId": "nw_narrator",
      "text": "A small intersection.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s27/27-00-the-signal-turns-green.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 60%",
+      "zoomDuration": 14,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b683",
@@ -16074,7 +16102,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s63",
    "title": "63 — No questions",
    "animaticMark": "63",
-   "background": "/film/img/s63/230-no-questions.jpg",
+   "background": "/film/img/s63/63-00-the-locker-room.jpg",
    "prose": "INT. KATO RENTAL LOCKERS, UENO - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-viaduct.mp3",
    "particles": "motes",
@@ -16086,7 +16114,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1032",
      "characterId": "nw_narrator",
      "text": "A narrow room under a railway arch, lined floor to ceiling with battered grey steel lockers, each one numbered in fading paint.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s63/63-00-the-locker-room.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 16,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1033",
@@ -16224,7 +16266,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s63a",
    "title": "63 — Not another day",
    "animaticMark": "63A",
-   "background": "/film/img/s63a/293-the-sedan-waits.jpg",
+   "background": "/film/img/s63a/63a-00-he-comes-out.jpg",
    "prose": "EXT. UENO, UNDER THE RAILWAY ARCHES - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-viaduct.mp3",
    "particles": "rain",
@@ -16236,7 +16278,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1044",
      "characterId": "nw_narrator",
      "text": "A row of brick arches with shops in them: shuttered, lit, shuttered. Rain running down the ironwork.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s63a/63a-00-he-comes-out.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1045",
@@ -25022,7 +25078,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s93",
    "title": "93 — He knows this car",
    "animaticMark": "93",
-   "background": "/film/img/s93/137-he-knows-this-car.jpg",
+   "background": "/film/img/s93/93-00-down-the-steps.jpg",
    "prose": "EXT. POLICE STATION - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3",
    "particles": "rain",
@@ -25034,7 +25090,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b1540",
      "characterId": "nw_narrator",
      "text": "Rain. Ishida comes down the front steps without an umbrella.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s93/93-00-down-the-steps.jpg",
+     "cinematic": {
+      "mode": "static",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 16,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b1541",
@@ -27880,17 +27950,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "/film/img/s1/01-backstreet.jpg",
      "/film/img/s4/36-vera-at-the-table.jpg",
      "/film/img/s7/68-the-clock.jpg",
-     "/film/img/s14a/334-the-mirror.jpg",
-     "/film/img/s20/371-the-coward-line.jpg",
+     "/film/img/s14a/335-the-lane-mouth.jpg",
+     "/film/img/s20/346-the-bulb-hums.jpg",
      "/film/img/s26/537-in-his-palm.jpg",
      "/film/img/s37/460-parked-crooked.jpg",
      "/film/img/s53a/299-the-card-on-the-desk.jpg",
-     "/film/img/s64/232-the-cassette.jpg",
-     "/film/img/s72/498-open-shut.jpg",
-     "/film/img/vera_run_new/76-01-the-walkway.jpg",
-     "/film/img/retakes_2026_10_20/107-her-dead-reporter-r1.jpg",
+     "/film/img/s63a/296-not-another-day.jpg",
+     "/film/img/s72/69-the-wait.jpg",
+     "/film/img/s75/314-the-empty-crossing.jpg",
+     "/film/img/s82/511-twenty-years-ago.jpg",
      "/film/img/thehiveescape/s89/89-03-the-beam-falls-away.jpg",
-     "/film/img/service_new/583-the-neighbours.jpg"
+     "/film/img/service_new/582-jacks-face.jpg"
     ],
     "montageSeconds": 7.5,
     "montageTransition": "dissolve",
@@ -27931,6 +28001,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
+     "/film/img/s14a/335-the-lane-mouth.jpg": {
+      "mode": "static",
+      "zoomDuration": 18,
+      "depthMap": "/film/depth/s14a/335-the-lane-mouth/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.45,
+      "depthSeconds": 6,
+      "focalPoint": "50% 60%",
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
      "/film/img/s37/460-parked-crooked.jpg": {
       "mode": "static",
       "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
@@ -27943,36 +28025,66 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
-     "/film/img/s72/498-open-shut.jpg": {
+     "/film/img/s72/69-the-wait.jpg": {
+      "lights": [
+       {
+        "x": 6.5,
+        "y": 53,
+        "color": "#ffc370",
+        "size": 20,
+        "intensity": 0.45,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.2
+       },
+       {
+        "x": 84,
+        "y": 20,
+        "color": "#ffb347",
+        "size": 18,
+        "intensity": 0.25,
+        "pulseSeconds": 5,
+        "pulseAmount": 0.15
+       }
+      ],
       "mode": "static",
       "depthMotion": "truck",
       "depthAmount": 0.4,
       "depthSeconds": 5,
-      "depthMap": "/film/depth/s72/498-open-shut/depth.png",
-      "depthPlate": "/film/depth/s72/498-open-shut/plate.jpg",
+      "depthMap": "/film/depth/s72/69-the-wait/depth.png",
+      "depthPlate": "/film/depth/s72/69-the-wait/plate.jpg",
       "depthCutouts": [
        {
-        "image": "/film/depth/s72/498-open-shut/cutout-1.png",
-        "depth": 0.417
+        "image": "/film/depth/s72/69-the-wait/cutout-1.png",
+        "depth": 0.068
+       },
+       {
+        "image": "/film/depth/s72/69-the-wait/cutout-2.png",
+        "depth": 0.261
        }
       ],
       "filmGrade": false,
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
-     "/film/img/vera_run_new/76-01-the-walkway.jpg": {
-      "mode": "static",
-      "depthMotion": "truck",
-      "depthAmount": 0.4,
-      "depthSeconds": 5,
-      "depthMap": "/film/depth/vera_run_new/76-01-the-walkway/depth.png",
-      "depthPlate": "/film/depth/vera_run_new/76-01-the-walkway/plate.jpg",
-      "depthCutouts": [
+     "/film/img/s75/314-the-empty-crossing.jpg": {
+      "lights": [
        {
-        "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
-        "depth": 0.454
+        "x": 22,
+        "y": 25,
+        "color": "#3dff9a",
+        "size": 8,
+        "intensity": 0.5,
+        "pulseSeconds": 1.2,
+        "pulseAmount": 0.3
        }
       ],
+      "mode": "static",
+      "depthMap": "/film/depth/s75/314-the-empty-crossing/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.45,
+      "depthSeconds": 6,
+      "focalPoint": "50% 54%",
+      "zoomDuration": 18,
       "filmGrade": false,
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
@@ -28014,5 +28126,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "bf31ca96ab5b"
+ "builtinRevision": "200922b82dd0"
 } as unknown as Story;
