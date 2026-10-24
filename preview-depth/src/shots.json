@@ -35,32 +35,6 @@
   "review": null
  },
  {
-  "name": "01-backstreet",
-  "scene": "s1",
-  "picture": "/film/img/s1/01-backstreet.jpg",
-  "cinematic": {
-   "mode": "static",
-   "depthMap": "/film/depth/s1/01-backstreet/depth.png",
-   "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
-   "depthCutouts": [
-    {
-     "image": "/film/depth/s1/01-backstreet/cutout-1.png",
-     "depth": 0.665
-    }
-   ],
-   "depthMotion": "truck",
-   "depthAmount": 0.4,
-   "depthSeconds": 5,
-   "focalPoint": "50% 52%"
-  },
-  "people": "automatic: 1 found",
-  "cutoutCount": 1,
-  "review": {
-   "cutouts": "1",
-   "flags": "cut-out 1 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate"
-  }
- },
- {
   "name": "02-vending",
   "scene": "s1",
   "picture": "/film/img/s1/02-vending.jpg",
@@ -417,11 +391,7 @@
    "depthCutouts": [
     {
      "image": "/film/depth/s1/16-the-key/cutout-1.png",
-     "depth": 0.328
-    },
-    {
-     "image": "/film/depth/s1/16-the-key/cutout-2.png",
-     "depth": 0.455
+     "depth": 0.454
     }
    ],
    "depthMotion": "truck",
@@ -429,7 +399,7 @@
    "depthSeconds": 5
   },
   "people": "automatic: 2 found",
-  "cutoutCount": 2,
+  "cutoutCount": 1,
   "review": {
    "cutouts": "2",
    "flags": "cut-out 1 nearly empty; cut-out 2 runs to its box edge (may be clipped); 1 person-like shape(s) still found in the plate"
@@ -916,35 +886,6 @@
   "cutoutCount": 1,
   "review": {
    "cutouts": "1",
-   "flags": "cut-out 1 runs to its box edge (may be clipped)"
-  }
- },
- {
-  "name": "27-the-notebook-v1",
-  "scene": "s2_picks",
-  "picture": "/film/img/s2_picks/27-the-notebook-v1.jpg",
-  "cinematic": {
-   "mode": "static",
-   "depthMap": "/film/depth/s2_picks/27-the-notebook-v1/depth.png",
-   "depthPlate": "/film/depth/s2_picks/27-the-notebook-v1/plate.jpg",
-   "depthCutouts": [
-    {
-     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
-     "depth": 0.715
-    },
-    {
-     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
-     "depth": 0.461
-    }
-   ],
-   "depthMotion": "truck",
-   "depthAmount": 0.4,
-   "depthSeconds": 5
-  },
-  "people": "automatic: 2 found",
-  "cutoutCount": 2,
-  "review": {
-   "cutouts": "2",
    "flags": "cut-out 1 runs to its box edge (may be clipped)"
   }
  },
@@ -2842,31 +2783,6 @@
     {
      "image": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/cutout-1.png",
      "depth": 0.039
-    }
-   ],
-   "depthMotion": "truck",
-   "depthAmount": 0.4,
-   "depthSeconds": 5
-  },
-  "people": "automatic: 1 found",
-  "cutoutCount": 1,
-  "review": {
-   "cutouts": "1",
-   "flags": "1 person-like shape(s) still found in the plate"
-  }
- },
- {
-  "name": "76-07-the-lighter",
-  "scene": "vera_run_new",
-  "picture": "/film/img/vera_run_new/76-07-the-lighter.jpg",
-  "cinematic": {
-   "mode": "static",
-   "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
-   "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg",
-   "depthCutouts": [
-    {
-     "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
-     "depth": 0.657
     }
    ],
    "depthMotion": "truck",
