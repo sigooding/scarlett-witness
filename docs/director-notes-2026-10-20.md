@@ -30,10 +30,14 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 13 | The reflection shows her with the blue umbrella she left behind (marked 4) | 74 (74-18) | Done: Vera covering her face |
 | 14 | Kurose's office, "It's just a face.": Vera has no coat, and holds a notebook, not the photocopies | 83 (111, 112) | 111 done (archived take); 112 retake brief |
 | 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Done 22 October, from the director's uploads |
-| 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Words changed; take waiting for credits |
-| 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Words added; take waiting for credits |
-| 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 to redo |
+| 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Done; take recorded 24 October |
+| 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Done; take recorded 24 October |
+| 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 redone 24 October (note 21) |
 | 19 | (21 October) Pictures too low resolution; no picture may ever be downscaled | the 26 below | Listed; rule written |
+| 20 | (24 October) In the storeroom, Jack's answer to "I don't know if I'm as good as he was." should be "No one's asking you to be." (was "I'm not asking you to be.") | 84 | Done; take recorded |
+| 21 | (24 October) Redo 316, 367 and 468 (note 18), and 352 at full size | 78, 59, 53A, 23 | Done; nobody has seen them in the film yet |
+| 22 | (24 October) The inn: opening pictures show what hasn't happened yet; the pink payphone has two handsets; Mrs. Noda too calm in the raid | 30–38, 35, 44 | Done; nobody has seen them in the film yet |
+| 23 | (24 October) Outside the Hive Vera sees Jack on the green phone; she should see him walking back | 59 | Done (film only) |
 
 ---
 
@@ -356,7 +360,8 @@ PlayFrame's screenplay still has "He doesn't." The same change belongs there (a 
   - The confession now reads **"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine. I
     trusted him. I'm so sorry."** Its recorded take is kept for the first part, so the pause after "I told him." stays as
     recorded. The new sentences are a line of their own after it, so they get their own take.
-- **The takes are waiting for credits.** Until then both lines are shown silent: Jack's words on screen, no voice. They are never
+- **Recorded 24 October** (with note 20's line; see note 20). What follows is how they waited, and the recipe used.
+- **The takes were waiting for credits.** Until then both lines were shown silent: Jack's words on screen, no voice. They are never
   read by the browser's voice and never played over the old words. In the hands-off animatic they show as plain captions, without
   Jack's name. Each line carries `takePending` (the direction and words to record) in place of `voice`, and the build lists the
   lines still waiting.
@@ -388,6 +393,7 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     Attach 88 and 89 and say: the door at the very end of the walkway, the end wall just beyond it, nothing past it.
   - **367** ("needs redo again"): Mrs. Sakai's furnished room with nobody in it, as 365-r1 now shows it. Attach 365-r1 for the
     room.
+  - **Redone 24 October; see note 21.**
   - **468** ("needs redo again"): the journalist's photo on Harada's own desk in her glass office. Attach 107-r1, which the
     director accepted, so the photograph matches.
 
@@ -415,3 +421,89 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
   (scene, beat and file name in the animatic's corner).
 
+## 20. "No one's asking you to be." (84), and the takes recorded (24 October)
+- **The words:** Vera, in the storeroom: "I don't know if I'm as good as he was." Jack now answers **"No one's asking you to be."**
+  It was "I'm not asking you to be." The old take stays on disk (`119-jack-gently-i-m-not-asking-you.mp3`), unused.
+- **Three takes recorded,** all Jack's saved voice with `eleven_v4`, two takes each, about 210 credits: this line
+  (`[gently] No one's asking you to be.`) and the two of notes 16 and 17. No scene 84 line waits any more.
+  - Installed: `public/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3`,
+    `119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3`, `119-jack-gently-no-one-s-asking-you.mp3`, leveled to about −21.5 dB
+    average like Jack's other lines in the scene.
+  - Both takes of each, as they came, in `public/film/voice/s84/raw/`; prompts, generation ids and measurements in
+    `docs/film-voice-generations-2026-10-24.json`.
+  - **Picked by measurement, not by ear** (the take with more energy; the two takes of each are the same length, so neither
+    says its line twice). Listen to the three in place; swap in the other take from `raw/` if it reads better.
+- **The last two waiting lines, recorded the same day:** scene 1's "Hold on, I'll call an ambulance." (Mara's voice,
+  `public/film/voice/s1/14-mara-breathless-hold-on-i-ll-call.mp3`) and scene 2's "Are you okay? Where's Sakai?" (the journalist's,
+  `public/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3`), both takes of each in that scene's `raw/`, about 170
+  credits. No line in the film waits for a take now.
+- **Outside this repository:** PlayFrame's screenplay still has "I'm not asking you to be." with the rest of notes 16 and 17.
+
+## 21. 316, 367 and 468 redone, and 352 at full size (24 October)
+Made with `gemini-3-pro-image` as edits of the reference pictures, asked for its **2K** size (2752×1536) and installed as they
+came with `tools/install-film-picture.mjs` (cropped to 2730×1536, nothing shrunk). Two takes each; the other take of each is in
+`public/film/img/retakes_2026_10_24/<name>--alt1.jpg`, and every replaced picture is archived. About 17,000 credits
+(about 1,830 a take, 3,050 for 316's with three references). Picked by eye at contact-sheet size; **nobody has seen them in
+the film yet.**
+- **316 "Squared to the door" (78):** her door is now in the **end wall**, facing straight down the walkway, as 88 and 89
+  have it; the mat and the tied envelope in front of it, Jack walking away from it toward the camera. References: 88, 89 and
+  Jack's sheet. Old picture: `archive/s78/316-squared-to-the-door--v2.jpg`. The other take has him still on the mat.
+- **367 "The phone rings" (59):** Mrs. Sakai's own room, as 365-r1 shows it (the windows and shoji, the television, the
+  altar with the same photograph), nobody in it, the cream telephone ringing on the kotatsu quilt in the foreground.
+  Reference: 365-r1. Old picture: `archive/s59/367-the-phone-rings--v1.jpg`. The other take has the phone on the kotatsu
+  top but a different, older face in the altar photograph. **Its depth map is remade** with Depth Anything from the new
+  picture (the old one was made for the bare room); the move is unchanged (push 0.32 over 5 s).
+- **468 "The photograph on her desk" (53A):** the photograph from 107-r1 (the journalist with glasses, laughing at the
+  office party) in its dark frame on Harada's desk, her glass office and the newsroom behind. Reference: 107-r1. Old picture:
+  `archive/s53a/468-the-photograph-on-her-desk--v1.jpg`.
+- **352 "The address" (23):** the same picture made again at full size (it was 1360×768); the napkin now carries a short
+  handwritten line in Japanese. Old picture: `archive/s23/352-the-address--v2.jpg`. The other take writes the address out
+  in English ("Tokyo, Shinjuku West Alley 3-4"), readable on screen; not used because the script never gives the address.
+
+## 22. The roadside inn (24 October)
+- **Why a picture showed something that had not happened yet:** a scene opens on its first picture, and that picture stays up
+  through the heading and every line before its own. In the inn that put Jack's car in the lot before he arrives (31), the key
+  in his hand before he walks in (32), Mrs. Noda smoking on the step while he is still in the corridor (37) and the four
+  sedans before the headlights (38). Each scene now opens on a picture of its own first line:
+  - **30** `s30/30-00-the-only-thing-moving.jpg`: Jack's car alone on the highway, no inn yet;
+  - **31** `s31/31-00-the-inn-before-he-arrives.jpg`: the inn with an empty lot (169 with the car and Jack taken out);
+  - **32** `s32/32-00-the-faded-lobby.jpg`: the lobby from Jack's side of the counter, Mr. Noda at the baseball, Mrs. Noda
+    behind the counter (170 with Jack taken out); 170 still plays on the key;
+  - **37** `s37/37-00-he-cannot-sleep.jpg`: Jack alone in the dark ground-floor corridor;
+  - **38** the unused roadside set's `roadside/s38/38-01-headlights-on-the-highway.jpg` (no car or person in it to clash).
+  The roadside set's other openers were not used: its car is not Jack's (dark and newer) and its Mrs. Noda wears the cardigan
+  that `continuity.md` retired.
+- **207 "The pink payphone" (35):** Jack held a black handset while the phone's own pink one still hung on its hook. Fixed in
+  place: he holds the pink handset, the hook is empty. Old picture: `archive/s35/207-the-pink-payphone--v1.jpg`.
+- **212 "Stay. Whatever you hear." (44, the raid):** retaken with the raid in it: Mrs. Noda frightened, clutching his sleeve,
+  Jack urgent at the pantry door, a pot knocked over, the back door open to the rain. Old picture:
+  `archive/s44/212-stay-whatever-you-hear--v1.jpg`; the other take (gunmen in the back doorway, which they are not at that
+  moment) in `retakes_2026_10_24/`.
+- **New, `s44/44-02-my-husband.jpg`:** Mrs. Noda in the pantry, crying out, gripping his coat. It plays on "My husband —" and
+  "I'll get him." (shots 16–17 of the raid cutscene in `studio-edits.json`, and the scene's own step in `story.json`).
+- gemini-3-pro-image edits at 2K, installed full size (2730×1536). With note 23, eleven pictures, about 34,000 credits.
+- **The same thing elsewhere in the film:** 40 scenes opened on a picture that belongs to a later line. Most are harmless (a
+  time card or a description of the place over its establishing shot). The five that gave something away early were fixed the
+  same day (the director: "ok"), one take each, about 9,100 credits, each an edit of the scene's own picture:
+  - **21** `s21/21-00-he-hasnt-slept.jpg`: Jack alone at his desk in grey morning light, in yesterday's shirt (was Vera
+    already on the stairs);
+  - **27** `s27/27-00-the-signal-turns-green.jpg`: the empty crossing as the signal turns green (was the two of them
+    already crossing);
+  - **63** `s63/63-00-the-locker-room.jpg`: the locker room, every locker shut, the caretaker asleep (was Jack at the open
+    locker);
+  - **63A** `s63a/63a-00-he-comes-out.jpg`: Jack coming out under the arches, no car yet (was the sedan waiting). He carries
+    the flat package under his arm, where the script has it under his buttoned coat;
+  - **93** `s93/93-00-down-the-steps.jpg`: Ishida coming down the station steps, no car yet (was the sedan at the kerb).
+
+## 23. Scene 59: Vera sees Jack walking back (24 October)
+- The director: outside the Hive Vera should not find Jack on the green phone; she should see him walking back.
+- **The words, changed in `src/film/story.json` only (narration, no recorded line touched):** the call and the intercut stay;
+  then "It rings. Nobody answers. He hangs up. He walks a few steps down the street in the rain, then turns back." comes
+  before Vera, who now "comes out of the Hive's narrow entrance, glowing. She sees him walking back to her."; "Jack keeps the
+  receiver to his ear. It rings." is now "Jack hardly hears her. He looks back at the payphone."; the later "It rings. Nobody
+  answers. He hangs up." is gone.
+- **Pictures:** new opening `s59/59-00-jack-at-the-green-phone.jpg` (Jack alone at the phone; the scene used to open on Mrs.
+  Sakai's kotatsu); 226 retaken in place (Vera at the door, Jack walking back along the street; old one `--v3`); new
+  `s59/477-he-hardly-hears-her.jpg` (beside her, looking back at the phone; the old `477-it-rings.jpg` is no longer used);
+  478 retaken in place without the phone (old one `--v1`).
+- **Outside this repository:** PlayFrame's screenplay still has Jack on the phone when Vera comes out.

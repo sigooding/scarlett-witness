@@ -91,7 +91,7 @@ Frames of the move (`tools/depth-frames.mjs`) show her moving as one piece. The 
 
 **Sizes.** Nothing was resized — each file is installed at the size it came out at: 243 2816×1584, 336 1920×1072,
 164 and 346 1672×941, 352 1360×768. Three are now below the 1920×1080 the rest of the film uses; regenerate any that
-look soft on screen.
+look soft on screen. **352 was made again at full size (2730×1536) on 24 October** (director notes, item 21).
 
 No builder run was needed — every path is unchanged and `src/data/nobodysWitnessFilm.ts` already points at them.
 All five are local replacements in this checkout; sync them into PlayFrame before the next `build-film-story.mjs`.
@@ -136,9 +136,9 @@ difference against the previous picture is confined to the television (bottom ri
 From the animatic export of scenes 1–2 (beat numbers are the export's joined marks). All done; nobody has watched the new export yet:
 - **Scene 1, new beat at SC 1 · BEAT 22:** `s1/11-sakai-mid-fall.jpg` (made for this; Sakai matched to `09-old-man-stops`, `07-old-man` and `14-she-kneels` — grey flat cap, beige raincoat, mid-fall, both masked men pointing suppressed pistols at him). It takes "A suppressed SHOT." and the `suppressed-shot` sound; `10-the-shot` now plays on "Flat and ordinary, like a door closing. The old man folds onto the street."
 - **Scene 1, sound:** the thud the director heard as a door shutting is off the fold; a car door shuts instead on "They walk back to the sedan" (SC 1 · BEAT 26, `car-door-heavy`), before the car pulls away. The old `fall-street` step is out of `story.json`.
-- **Scene 1, Mara at SC 1 · BEAT 30:** "Hold on, I'll call an ambulance." (the note's "I'll can" read as "I'll call"). No take yet: `takePending` in `story.json`, shown silent like scene 84's lines.
+- **Scene 1, Mara at SC 1 · BEAT 30:** "Hold on, I'll call an ambulance." (the note's "I'll can" read as "I'll call"). Take recorded 24 October (Mara's voice, picked by measurement; `docs/film-voice-generations-2026-10-24.json`).
 - **Scene 2:** the first two picture beats both play `s2/20-the-journalist.jpg`; the picture files of the door-opening and behind-the-counter beats are swapped, so the men-outside frame (`23-behind-the-counter-s2new2`) plays as the door opens and the stepping-in frame (`25-two-pairs-of-shoes-v2`) plays on "Mara is behind the counter…" — by then the men are coming inside. `24-from-the-floor` (the men inside) now plays on "Two shots."
-- **Scene 2, dialogue:** after "He knows her name." the journalist says "Are you okay? Where's Sakai?" (new line, `takePending`, shown silent; "Miss Voss?" stays before it), and his later "Where is he?" is out — picture, words and take. Note: Mara's scene 25 recall still quotes the old words ("the man said, 'Where is he?'"); it wants rewording when its take is next touched.
+- **Scene 2, dialogue:** after "He knows her name." the journalist says "Are you okay? Where's Sakai?" (new line, take recorded 24 October in his voice; "Miss Voss?" stays before it), and his later "Where is he?" is out — picture, words and take. Note: Mara's scene 25 recall still quotes the old words ("the man said, 'Where is he?'"); it wants rewording when its take is next touched.
 - **Opening titles:** the montage is twelve stills, not six (the three `montage/` plates m1–m3, the backstreet, the elevated line and the empty lane added between the old six). It still loops inside the 110 s titles.
 
 **Why the marks did not match, fixed the same day:** the animatic joins short action lines into one caption before it plays, and the corner mark counted those joined captions, while the Studio (and the builder) number the authored beats — so the two lists drift apart wherever lines join (scene 1: 43 authored beats, 37 captions; the ambulance line is beat 36 in the scene but showed as BEAT 30). The mark now shows the authored number, and a range (**BEAT 12–13**) where one caption covers two beats; the scene heading no longer borrows BEAT 1 (it reads **BEAT –**). Numbers on the next export will therefore differ from the last one's wherever lines join — that is the fix, not a new drift. `npm run test:film-backend` pins it.
@@ -171,8 +171,9 @@ into one ordered brief to hand to an image generator. It puts every retake in `p
 plaza model in its glass case. Swap the pictures in when they come back; scene 80's come up by themselves.
 
 **Scene 84 (21 October):** Jack's "Three feet away." is now "Right behind the curtain.", and his confession goes on "I trusted him.
-I'm so sorry." The takes wait for credits. Until then both lines carry `takePending` in `story.json` and are shown silent (the
-build lists them); notes 16 and 17 have what to record.
+I'm so sorry." **24 October:** in the storeroom Jack's answer to "I don't know if I'm as good as he was." is now "No one's asking
+you to be." (was "I'm not asking you to be."), and all three takes are recorded (Jack's voice, picked by measurement, not yet heard;
+both takes of each in `public/film/voice/s84/raw/`, ids in `docs/film-voice-generations-2026-10-24.json`; notes 16, 17 and 20).
 
 Kaneko's three strikes on the pipe in the raid (86-02) still have no sound. Six ElevenLabs takes were too soft or read as a
 siren, and the account ran out of credits; the takes and the next prompt are under 15 in the notes.
@@ -862,3 +863,11 @@ sheet *and* Jack's face sheet passed in together, changing nothing but his head 
 
 The rule this leaves: **pass every character's sheet, not just the one being replaced** — an image edit redraws the whole
 frame, and the person you did not mention is the one that drifts.
+
+## The inn's openings and scene 59 (24 October 2026)
+
+A scene opens on its first picture, which stays up through the heading and every line before its own; in the roadside inn that
+showed things before they happened. Scenes 30, 31, 32, 37 and 38 now open on a picture of their own first line, the pink
+payphone (207) has one handset, the raid's Mrs. Noda (212) is frightened and "My husband —" has a picture of its own
+(`s44/44-02-my-husband.jpg`, raid shots 16–17). Scene 59 is restaged so Jack has hung up and is walking back when Vera comes
+out. Scenes 21, 27, 63, 63A and 93 got the same fix as the inn. Director notes, items 22 and 23.
