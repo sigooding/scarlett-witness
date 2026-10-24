@@ -39,6 +39,7 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 22 | (24 October) The inn: opening pictures show what hasn't happened yet; the pink payphone has two handsets; Mrs. Noda too calm in the raid | 30–38, 35, 44 | Done; nobody has seen them in the film yet |
 | 23 | (24 October) Outside the Hive Vera sees Jack on the green phone; she should see him walking back | 59 | Done (film only) |
 | 24 | (24 October) The cut-out picks: 69 kept, 3 out, 4 redone | 1, 2, 72–76 | Done |
+| 25 | (24 October) Mrs. Sakai: "Twenty years." becomes "For years." | 29 (and 34's narration) | Done; new take |
 
 ---
 
@@ -586,3 +587,13 @@ The director went through all 76 in the picker (each playing its real move besid
   - **74-17 "The reflection"** ("redo picture it has blue umbrella"): she left the umbrella at the lounge. The umbrella is
     taken out of the water; old picture `archive/vera_run_new/74-17-the-reflection--v1.jpg`; cut-out remade for Vera only.
 - All three new pictures (and today's others) are 2730×1536. About 5,500 credits.
+
+## 25. Mrs. Sakai: "For years." (24 October)
+- Scene 29: "Every January. Cash, in an envelope. Twenty years." is now "… For years." New take in her saved voice
+  ("Mrs. Sakai - NEONOIRE", `RWRdNUkZ6UAfbVJPXrFG`, eleven_v4, `[sadly]` as before), two takes in `public/film/voice/s29/raw/`,
+  installed `public/film/voice/s29/273-mrssakai-every-january-for-years.mp3` (same level as the old take, about −22 dB). The old take
+  stays on disk, unused. About 210 credits.
+- Scene 34's narration "Twenty years of Januaries." is now "Years of Januaries." to match (the receipts are the same fact). The
+  other "twenty years" lines are the story's timeline and are unchanged.
+- Okada's voice was never changed: "Okada - NEONOIRE", picked 29 September, no take re-recorded since.
+- Outside this repository: PlayFrame's screenplay still has "Twenty years." in both places.
