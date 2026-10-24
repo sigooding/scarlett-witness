@@ -38,6 +38,7 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 21 | (24 October) Redo 316, 367 and 468 (note 18), and 352 at full size | 78, 59, 53A, 23 | Done; nobody has seen them in the film yet |
 | 22 | (24 October) The inn: opening pictures show what hasn't happened yet; the pink payphone has two handsets; Mrs. Noda too calm in the raid | 30–38, 35, 44 | Done; nobody has seen them in the film yet |
 | 23 | (24 October) Outside the Hive Vera sees Jack on the green phone; she should see him walking back | 59 | Done (film only) |
+| 24 | (24 October) The cut-out picks: 69 kept, 3 out, 4 redone | 1, 2, 72–76 | Done |
 
 ---
 
@@ -507,3 +508,23 @@ the film yet.**
   `s59/477-he-hardly-hears-her.jpg` (beside her, looking back at the phone; the old `477-it-rings.jpg` is no longer used);
   478 retaken in place without the phone (old one `--v1`).
 - **Outside this repository:** PlayFrame's screenplay still has Jack on the phone when Vera comes out.
+
+## 24. The automatic cut-outs, picked (24 October)
+The director went through all 76 in the picker (each playing its real move beside its review sheet).
+- **Kept (69):** as they are.
+- **Taken out (3):** `01-backstreet`, `27-the-notebook-v1`, `76-07-the-lighter` play still (`mode: static`); their entries in
+  `docs/film-depth-layers.json` and their layers are gone.
+- **Redone (4):**
+  - **05 "Phone off"** ("she should be cutout too not just the phone") and **16 "The key"** ("her hand missing"): BiRefNet keeps
+    the most striking thing in a box, here the phone and the key. `tools/make-depth-layers.py` now takes `"people": true` on a
+    cut-out (the U2-Net human mask inside its box is joined to it; needs `--people-model`) and `"close": N` (bridges a gap
+    such as a watch strap). 05 is both hands with the phone; 16 is one cut-out, hand, key, wrist and sleeve. Checked at both
+    ends of the move.
+  - **72-04 "Walking very carefully"** ("wheres the rail come from?"): the 20 October retake had invented a brass standing
+    rail; the lounge has none in any other shot. Retaken from the original 72-04: stiff, stricken, a hand on an armchair to
+    steady herself. Installed over `vera_run_takes/72-04-walking-very-carefully--r1.jpg` (the rail one archived as
+    `archive/vera_run_takes/72-04-walking-very-carefully--r1--v1.jpg`, the other take in `retakes_2026_10_24/`). New cut-out;
+    the round plaque behind her head is excluded (a hard edge at the top-left of her hair may show).
+  - **74-17 "The reflection"** ("redo picture it has blue umbrella"): she left the umbrella at the lounge. The umbrella is
+    taken out of the water; old picture `archive/vera_run_new/74-17-the-reflection--v1.jpg`; cut-out remade for Vera only.
+- All three new pictures (and today's others) are 2730×1536. About 5,500 credits.
