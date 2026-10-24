@@ -35,7 +35,6 @@
   "379-the-laundry": "Jack, Vera and two women",
   "387-the-street-too-long": "Vera, far off",
   "73-05-toward-the-tracks": "Vera, running away",
-  "01-backstreet": "automatic: 1 found",
   "02-vending": "automatic: 1 found",
   "03-mara-walks": "automatic: 1 found",
   "04-mara-phone": "automatic: 1 found",
@@ -67,7 +66,6 @@
   "24-from-the-floor-s2new2": "automatic: 2 found",
   "26-the-variety-show-s2new2": "automatic: 1 found",
   "308-clip-under-the-shelf": "automatic: 1 found",
-  "27-the-notebook-v1": "automatic: 2 found",
   "28-the-blue-glow-s2new2": "automatic: 1 found",
   "497-eleven-fifty-two": "automatic: 1 found",
   "69-the-wait": "automatic: 2 found",
@@ -109,7 +107,6 @@
   "315-the-number-pressed": "automatic: 1 found",
   "76-05-vera-honey": "automatic: 1 found",
   "76-06-the-screen-goes-dark": "automatic: 1 found",
-  "76-07-the-lighter": "automatic: 1 found",
   "84-cries-without-a-sound": "automatic: 1 found"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
@@ -478,20 +475,6 @@
    "depthMap": "/film/depth/vera_run_new/75-02-the-empty-lounge/depth.png",
    "smooth": 2.0,
    "note": "Depth Anything v1 ViT-S ONNX map (higher = nearer), written at the picture's exact size. Machine-made and not eyeballed against the still \u2014 check it before it ships. No people visible."
-  },
-  "01-backstreet": {
-   "picture": "public/film/img/s1/01-backstreet.jpg",
-   "cutouts": [
-    {
-     "name": "person 1",
-     "box": [292, 456, 43, 218],
-     "image": "/film/depth/s1/01-backstreet/cutout-1.png",
-     "depth": 0.665
-    }
-   ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
-   "depthMap": "/film/depth/s1/01-backstreet/depth.png",
-   "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg"
   },
   "02-vending": {
    "picture": "public/film/img/s1/02-vending.jpg",
@@ -1004,26 +987,6 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s2/308-clip-under-the-shelf/depth.png",
    "depthPlate": "/film/depth/s2/308-clip-under-the-shelf/plate.jpg"
-  },
-  "27-the-notebook-v1": {
-   "picture": "public/film/img/s2_picks/27-the-notebook-v1.jpg",
-   "cutouts": [
-    {
-     "name": "person 1",
-     "box": [389, 577, 448, 253],
-     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
-     "depth": 0.715
-    },
-    {
-     "name": "person 2",
-     "box": [815, 108, 464, 568],
-     "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
-     "depth": 0.461
-    }
-   ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
-   "depthMap": "/film/depth/s2_picks/27-the-notebook-v1/depth.png",
-   "depthPlate": "/film/depth/s2_picks/27-the-notebook-v1/plate.jpg"
   },
   "28-the-blue-glow-s2new2": {
    "picture": "public/film/img/s2_picks/28-the-blue-glow-s2new2.jpg",
@@ -1634,20 +1597,6 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/depth.png",
    "depthPlate": "/film/depth/vera_run_new/76-06-the-screen-goes-dark/plate.jpg"
-  },
-  "76-07-the-lighter": {
-   "picture": "public/film/img/vera_run_new/76-07-the-lighter.jpg",
-   "cutouts": [
-    {
-     "name": "person 1",
-     "box": [762, 143, 2082, 1457],
-     "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
-     "depth": 0.657
-    }
-   ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
-   "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
-   "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg"
   },
   "84-cries-without-a-sound": {
    "picture": "public/film/img/s76/84-cries-without-a-sound.jpg",

@@ -1402,25 +1402,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
-     "/film/img/s1/01-backstreet.jpg": {
-      "mode": "static",
-      "focalPoint": "50% 52%",
-      "zoomDuration": 16,
-      "depthMotion": "truck",
-      "depthAmount": 0.4,
-      "depthSeconds": 5,
-      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
-      "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s1/01-backstreet/cutout-1.png",
-        "depth": 0.665
-       }
-      ],
-      "filmGrade": false,
-      "volumetricShafts": false,
-      "colorGrade": "midnight-teal"
-     },
      "/film/img/s3/30-the-elevated-line.jpg": {
       "mode": "static",
       "depthMap": "/film/depth/s3/30-the-elevated-line/depth.png",
@@ -1605,17 +1586,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
-      "depthAmount": 0.4,
-      "depthSeconds": 5,
-      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
-      "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s1/01-backstreet/cutout-1.png",
-        "depth": 0.665
-       }
-      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2984,21 +2954,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
-      "depthAmount": 0.4,
-      "depthSeconds": 5,
-      "depthMap": "/film/depth/s2_picks/27-the-notebook-v1/depth.png",
-      "depthPlate": "/film/depth/s2_picks/27-the-notebook-v1/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-1.png",
-        "depth": 0.715
-       },
-       {
-        "image": "/film/depth/s2_picks/27-the-notebook-v1/cutout-2.png",
-        "depth": 0.461
-       }
-      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -21009,17 +20964,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "depthMotion": "truck",
-    "depthAmount": 0.4,
-    "depthSeconds": 5,
-    "depthMap": "/film/depth/vera_run_new/76-07-the-lighter/depth.png",
-    "depthPlate": "/film/depth/vera_run_new/76-07-the-lighter/plate.jpg",
-    "depthCutouts": [
-     {
-      "image": "/film/depth/vera_run_new/76-07-the-lighter/cutout-1.png",
-      "depth": 0.657
-     }
-    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -27970,25 +27914,6 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "titleEntrance": "fade-up",
     "gateWeave": "subtle",
     "montageLooks": {
-     "/film/img/s1/01-backstreet.jpg": {
-      "mode": "static",
-      "focalPoint": "50% 52%",
-      "zoomDuration": 16,
-      "depthMotion": "truck",
-      "depthAmount": 0.4,
-      "depthSeconds": 5,
-      "depthMap": "/film/depth/s1/01-backstreet/depth.png",
-      "depthPlate": "/film/depth/s1/01-backstreet/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s1/01-backstreet/cutout-1.png",
-        "depth": 0.665
-       }
-      ],
-      "filmGrade": false,
-      "volumetricShafts": false,
-      "colorGrade": "midnight-teal"
-     },
      "/film/img/s7/68-the-clock.jpg": {
       "mode": "static",
       "depthMap": "/film/depth/s7/68-the-clock/depth.png",
@@ -28126,5 +28051,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "200922b82dd0"
+ "builtinRevision": "76e29279a5f3"
 } as unknown as Story;
