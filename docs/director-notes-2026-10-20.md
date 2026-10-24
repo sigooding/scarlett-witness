@@ -458,6 +458,23 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     1920×1080, was 1344×768; old file `archive/s70/396-five-metres-three--v1.jpg`. `s94/368-the-door-closes` (Kurose and
     Ishida on the back seat, held to `sheets/kurose.jpg`, `sheets/ishida.jpg` and the tea cup from `s94/139`) — now 1920×1080,
     was 1408×736; old file `archive/s94/368-the-door-closes--v1.jpg`.
+## 24A. Three content fixes at Kaneko's counter (24 October)
+- **`s17/358-the-empty-third-stool`: the man was not Jack.** The face in that picture was a longer-faced man, not
+  `sheets/jack.jpg`; he is now the film's Jack (lean, long dark greying hair swept back, stubbled), same pose and place,
+  held to `sheets/jack.jpg` and the same counter's `s17/434-i-was-already-old`. 2048×1152, native. Old file
+  `archive/s17/358-the-empty-third-stool--v1.jpg`.
+- **`s17/360-more-than-the-bowl-costs`: the business card was missing.** The script has *"He puts down a little more than the
+  bowl costs, and a business card on top of it"* (scene 17, and Kaneko answers *"He always paid too much, too."*), so the card
+  is legitimate and now sits on the note and coins. 1920×1080 (the take came out at 1355×774, so it was enlarged); old file
+  `archive/s17/360-more-than-the-bowl-costs--v2.jpg`.
+- **`s17/188-something-moves`: too much money.** The thick wad of banknotes on the counter was far more than a bowl of noodles;
+  it is now a single folded 1000-yen note and a few coins, the same money as `s17/360`. Kaneko is also held to
+  `sheets/kaneko.jpg` (straight grey hair in a low bun, brown cardigan, faded denim apron). 1920×1080 (enlarged from
+  1344×768); old file `archive/s17/188-something-moves--v2.jpg`.
+- **`service_new/556-the-lane-from-above` left as it was** (the director's call), though `559` and `560` were remade:
+  `559` is 1920×1080 (was 1377×761, `archive/service_new/559-shoes-at-the-step--v1.jpg`) and `560` 2076×1168 native
+  (was 1376×768, `archive/service_new/560-jack-at-the-door--v1.jpg`).
+
 - **Exactly 1920×1080 does not mean full detail.** The 17 retakes of 20 October were enlarged to 1920×1080 from the
   generator's smaller output, and many older pictures may have been too. A sharpness measurement could not tell those from
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
