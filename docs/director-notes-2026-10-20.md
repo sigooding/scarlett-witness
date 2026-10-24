@@ -408,14 +408,14 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   generator's download, an earlier upload), install those over the halves with the install tool, which archives the old file.
   Otherwise they are retake candidates. The player stretches them to the screen, so they look soft.
   - 1365×768: `s17/360-more-than-the-bowl-costs` (remade 1920×1080 on 24 Oct), `s20/346-the-bulb-hums` (remade 2728×1534 on 24 Oct), `s54/220-everything-is-still-there` (remade 2508×1410 on 24 Oct), `s70/393-run` (remade 24 Oct),
-    `s90/381-the-plank` (remade 24 Oct), `s93/137-he-knows-this-car` (remade 24 Oct), `s93/138-the-door-opens` (remade 24 Oct),
-    `s94/139-only-tea` (remade 24 Oct), `s97a/565-they-bow` (remade 2048×1152 on 24 Oct).
-  - 1376×768: `s25/the-rice-goes-cold`, `s70/396-five-metres-three`, `s82/new-empty-newsroom.png`,
-    `s94/368-the-door-closes`, `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
+    `s90/381-the-plank` (remade 24 Oct), `s90/132-the-gap` (remade 24 Oct), `s93/137-he-knows-this-car` (remade 24 Oct), `s93/138-the-door-opens` (remade 24 Oct),
+    `s94/139-only-tea` (remade 24 Oct), `s94/368-the-door-closes` (remade 24 Oct), `s97a/565-they-bow` (remade 2048×1152 on 24 Oct).
+  - 1376×768: `s25/the-rice-goes-cold`, `s82/new-empty-newsroom.png`,
+    `service_new/556-the-lane-from-above`, `service_new/559-shoes-at-the-step`,
     `service_new/560-jack-at-the-door`, `service_new/extras/mom-01-her-face-at-the-table`, `mom-02-mother-and-daughter`,
     `mom-03-what-she-wears-home`.
   - 1408×768: `montage/m4-railway-rain`.
-  - 1672×941: `s73/72-the-lost-heel`, `s90/132-the-gap`.
+  - 1672×941: `s73/72-the-lost-heel`.
   - 1536×1024: `s78/88-the-walkway`.
   - **Two of them remade at full size, 24 October, on-model.** The first three candidates came back off-model (a younger, smooth
   hand on Kurose's model, a different blonde in the kiosk, and a pair in the alley who were not Mara and Jack), so each was
@@ -451,6 +451,13 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     **Watch the lettering:** one candidate came back with the door sign garbled (東面新聞 / 緯偉局) and no Jack in frame, and
     was rejected. `-4` was a PNG; its replacement is a JPEG, so `story.json`, `src/data/nobodysWitnessFilm.ts` and the
     film-backend check now name `…-4.jpg`, and the old PNG is archived.
+  - **Three more, closing the escape and the car, 24 October.** `s90/132-the-gap` (Mara in the grey jumper and navy jacket,
+    Jack in the leather coat, the lantern man and the girl with the violin), held to `hive_raid_takes/382` and the two cast
+    sheets — now 1920×1080, was 1672×941; old file `archive/s90/132-the-gap--v4.jpg`. `s70/396-five-metres-three` (Jack
+    letting her go at the dumpster, Mara splashing for the Hive door, the driver and sedan where 393 has them) — now
+    1920×1080, was 1344×768; old file `archive/s70/396-five-metres-three--v1.jpg`. `s94/368-the-door-closes` (Kurose and
+    Ishida on the back seat, held to `sheets/kurose.jpg`, `sheets/ishida.jpg` and the tea cup from `s94/139`) — now 1920×1080,
+    was 1408×736; old file `archive/s94/368-the-door-closes--v1.jpg`.
 - **Exactly 1920×1080 does not mean full detail.** The 17 retakes of 20 October were enlarged to 1920×1080 from the
   generator's smaller output, and many older pictures may have been too. A sharpness measurement could not tell those from
   native pictures reliably, so they are not listed. A picture that looks soft at full size is worth reporting by its mark
