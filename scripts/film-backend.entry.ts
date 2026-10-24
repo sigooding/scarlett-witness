@@ -452,6 +452,17 @@ for (const id of ["nw_s1", "nw_s2", "nw_s72"]) {
   }
   check(moves.length > 0 && moves.every((m, i) => i === 0 || m !== moves[i - 1]), `${id}: the depth camera never makes the same move twice in a row`);
 }
+// the director's notes of 24 October 2026 (evening)
+{
+  const S = (id: string) => byId.get(id)!;
+  check(["nw_s20", "nw_s20_b", "nw_s20_c"].every((id) => !S(id).ambientAudio), "scene 20: no room sound under Mara's lullaby");
+  check(!/(^|\+)rain(\+|$)/.test(S("nw_s23").ambientAudio ?? "") && S("nw_s23").particles !== "rain", "scene 23: no rain");
+  check(allBeats.some(({ scene, b }) => scene === "nw_s78" && b.text === "Jack at Vera's door. He knocks once." && b.sfxUrl === "/film/sfx/door-knock-wood.mp3") && !allBeats.some(({ b }) => /He doesn't knock/.test(b.text ?? "")), "scene 78: Jack knocks once and walks away");
+  check(S("nw_s84").background === "/film/img/s84/318-the-dried-stack.jpg", "scene 84 opens on the storeroom before Vera arrives");
+  const said = (t: string, url: string) => allBeats.some(({ b }) => b.text === t && b.audioUrl === url);
+  check(said("We have a plate number.", "/film/voice/s14a/342-jack-dryly-we-have-a-plate-number.mp3") && said("Call me if you plan on going somewhere next time.", "/film/voice/s14a/343-jack-evenly-call-me-if-you-plan.mp3"), "scene 14A: Jack's two changed lines have takes that say them");
+  check(allBeats.some(({ b }) => (b.text ?? "").startsWith("I threw it in the bin. A stranger, after twenty years") && b.audioUrl === "/film/voice/s22/197-vera-i-threw-it-in-the-bin-money.mp3"), "scene 22: Vera gives a reason for binning the letter, with its take");
+}
 // scene 5 (the director, 24 October 2026): the young officer's phone call is a cautious whisper Vera isn't meant to hear; his four
 // lines are in one voice (the deleted 29 September voice replaced by its stand-in, "Young Detective - NEONOIRE")
 const s5 = allBeats.filter(({ scene }) => scene === "nw_s5").map(({ b }) => b);

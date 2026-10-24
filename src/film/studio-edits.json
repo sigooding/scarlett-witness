@@ -160,7 +160,8 @@
    "particleConfig": {
     "density": 0.7,
     "opacity": 0.45
-   }
+   },
+   "ambientAudio": "file:/film/sfx/amb-city-traffic.mp3"
   },
   "nw_s66": {
    "musicMode": "track",
@@ -208,6 +209,15 @@
   "nw_s38": {
    "musicMode": "none",
    "musicFadeSeconds": 0.4
+  },
+  "nw_s20": {
+   "ambientAudio": ""
+  },
+  "nw_s20_b": {
+   "ambientAudio": ""
+  },
+  "nw_s20_c": {
+   "ambientAudio": ""
   }
  },
  "startSceneId": "nw_s1",
@@ -1216,6 +1226,12 @@
    "find": "Puts the notebook in the envelope.",
    "file": "envelope-mat",
    "volume": 0.5
+  },
+  {
+   "scene": "nw_s78",
+   "find": "He knocks once.",
+   "file": "door-knock-wood",
+   "volume": 0.7
   },
   {
    "scene": "nw_s78",
@@ -2492,7 +2508,12 @@
   },
   "166-by-its-edges": {
    "cinematic": {
-    "colorGrade": "spielberg-golden"
+    "colorGrade": "spielberg-golden",
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "68% 42%"
    }
   },
   "167-two-men-laughing": {
@@ -2629,6 +2650,23 @@
       "pulseSeconds": 3.5,
       "pulseAmount": 0.3
      }
+    ],
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "31% 47%",
+    "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
+    "depthPlate": "/film/depth/s14a/337-engine-off/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s14a/337-engine-off/cutout-1.png",
+      "depth": 0.72
+     },
+     {
+      "image": "/film/depth/s14a/337-engine-off/cutout-2.png",
+      "depth": 0.772
+     }
     ]
    }
   },
@@ -2737,6 +2775,31 @@
       "intensity": 0.35,
       "pulseSeconds": 4,
       "pulseAmount": 0.25
+     }
+    ],
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "51% 55%",
+    "depthMap": "/film/depth/s16/186-everybody-sees-him/depth.png",
+    "depthPlate": "/film/depth/s16/186-everybody-sees-him/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s16/186-everybody-sees-him/cutout-1.png",
+      "depth": 0.508
+     },
+     {
+      "image": "/film/depth/s16/186-everybody-sees-him/cutout-2.png",
+      "depth": 0.406
+     },
+     {
+      "image": "/film/depth/s16/186-everybody-sees-him/cutout-3.png",
+      "depth": 0.188
+     },
+     {
+      "image": "/film/depth/s16/186-everybody-sees-him/cutout-4.png",
+      "depth": 0.698
      }
     ]
    }
@@ -2909,6 +2972,23 @@
       "intensity": 0.35,
       "pulseSeconds": 0.5,
       "pulseAmount": 1
+     }
+    ],
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s100/320-the-news-nobody-watches/depth.png",
+    "depthPlate": "/film/depth/s100/320-the-news-nobody-watches/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s100/320-the-news-nobody-watches/cutout-1.png",
+      "depth": 0.112
+     },
+     {
+      "image": "/film/depth/s100/320-the-news-nobody-watches/cutout-2.png",
+      "depth": 0.169
      }
     ]
    }
@@ -4127,7 +4207,24 @@
   },
   "153-the-rain-has-stopped": {
    "cinematic": {
-    "colorGrade": "nolan-imax"
+    "colorGrade": "nolan-imax",
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
+    "depthPlate": "/film/depth/s98/153-the-rain-has-stopped/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s98/153-the-rain-has-stopped/cutout-1.png",
+      "depth": 0.497
+     },
+     {
+      "image": "/film/depth/s98/153-the-rain-has-stopped/cutout-2.png",
+      "depth": 0.261
+     }
+    ]
    }
   },
   "154-this-is-yours": {
@@ -5702,6 +5799,350 @@
     "depthSeconds": 5,
     "depthFocus": 0.55,
     "depthDirection": "right"
+   }
+  },
+  "435-the-last-page": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "left"
+   }
+  },
+  "524-the-only-eyewitness": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "42% 35%"
+   }
+  },
+  "160-were-closed": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right"
+   }
+  },
+  "369-the-drawing": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "45% 52%"
+   }
+  },
+  "517-neither-moves": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "left"
+   }
+  },
+  "208-come-back-safe-anyway": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "38% 62%"
+   }
+  },
+  "317-the-envelope-on-the-glass": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s83/317-the-envelope-on-the-glass/depth.png",
+    "depthPlate": "/film/depth/s83/317-the-envelope-on-the-glass/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s83/317-the-envelope-on-the-glass/cutout-1.png",
+      "depth": 0.996
+     },
+     {
+      "image": "/film/depth/s83/317-the-envelope-on-the-glass/cutout-2.png",
+      "depth": 0.512
+     }
+    ]
+   }
+  },
+  "535-the-shiohama-fire": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "62% 37%",
+    "depthMap": "/film/depth/s23/535-the-shiohama-fire/depth.png",
+    "depthPlate": "/film/depth/s23/535-the-shiohama-fire/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s23/535-the-shiohama-fire/cutout-1.png",
+      "depth": 0.46
+     },
+     {
+      "image": "/film/depth/s23/535-the-shiohama-fire/cutout-2.png",
+      "depth": 0.504
+     },
+     {
+      "image": "/film/depth/s23/535-the-shiohama-fire/cutout-3.png",
+      "depth": 0.105
+     }
+    ]
+   }
+  },
+  "440-she-rests-her-head": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s22/440-she-rests-her-head/depth.png",
+    "depthPlate": "/film/depth/s22/440-she-rests-her-head/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s22/440-she-rests-her-head/cutout-1.png",
+      "depth": 0.602
+     },
+     {
+      "image": "/film/depth/s22/440-she-rests-her-head/cutout-2.png",
+      "depth": 0.734
+     },
+     {
+      "image": "/film/depth/s22/440-she-rests-her-head/cutout-3.png",
+      "depth": 0.046
+     }
+    ]
+   }
+  },
+  "511-twenty-years-ago": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "37% 38%",
+    "depthMap": "/film/depth/s82/511-twenty-years-ago/depth.png",
+    "depthPlate": "/film/depth/s82/511-twenty-years-ago/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s82/511-twenty-years-ago/cutout-1.png",
+      "depth": 0.004
+     },
+     {
+      "image": "/film/depth/s82/511-twenty-years-ago/cutout-2.png",
+      "depth": 0.315
+     }
+    ]
+   }
+  },
+  "58-why-kanda": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s6/58-why-kanda/depth.png",
+    "depthPlate": "/film/depth/s6/58-why-kanda/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s6/58-why-kanda/cutout-1.png",
+      "depth": 0.328
+     },
+     {
+      "image": "/film/depth/s6/58-why-kanda/cutout-2.png",
+      "depth": 0.281
+     }
+    ]
+   }
+  },
+  "45-the-young-officer": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s5/45-the-young-officer/depth.png",
+    "depthPlate": "/film/depth/s5/45-the-young-officer/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s5/45-the-young-officer/cutout-1.png",
+      "depth": 0.485
+     },
+     {
+      "image": "/film/depth/s5/45-the-young-officer/cutout-2.png",
+      "depth": 0.451
+     }
+    ]
+   }
+  },
+  "288-you-sound-like-my-sister": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "66% 62%",
+    "depthMap": "/film/depth/s25a/288-you-sound-like-my-sister/depth.png",
+    "depthPlate": "/film/depth/s25a/288-you-sound-like-my-sister/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s25a/288-you-sound-like-my-sister/cutout-1.png",
+      "depth": 0.937
+     }
+    ]
+   }
+  },
+  "232-the-cassette": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "64% 35%",
+    "depthMap": "/film/depth/s64/232-the-cassette/depth.png",
+    "depthPlate": "/film/depth/s64/232-the-cassette/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s64/232-the-cassette/cutout-1.png",
+      "depth": 0.063
+     }
+    ]
+   }
+  },
+  "545-you-dont-smoke": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s26/545-you-dont-smoke/depth.png",
+    "depthPlate": "/film/depth/s26/545-you-dont-smoke/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s26/545-you-dont-smoke/cutout-1.png",
+      "depth": 0.54
+     },
+     {
+      "image": "/film/depth/s26/545-you-dont-smoke/cutout-2.png",
+      "depth": 0.405
+     }
+    ]
+   }
+  },
+  "116-thats-me": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "65% 40%",
+    "depthMap": "/film/depth/s84/116-thats-me/depth.png",
+    "depthPlate": "/film/depth/s84/116-thats-me/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s84/116-thats-me/cutout-1.png",
+      "depth": 0.065
+     }
+    ]
+   }
+  },
+  "227-i-want-my-sister": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s60/227-i-want-my-sister/depth.png",
+    "depthPlate": "/film/depth/s60/227-i-want-my-sister/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s60/227-i-want-my-sister/cutout-1.png",
+      "depth": 0.98
+     },
+     {
+      "image": "/film/depth/s60/227-i-want-my-sister/cutout-2.png",
+      "depth": 1.0
+     }
+    ]
+   }
+  },
+  "521-somebody-has-to-look": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "29% 38%",
+    "depthMap": "/film/depth/s84/521-somebody-has-to-look/depth.png",
+    "depthPlate": "/film/depth/s84/521-somebody-has-to-look/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s84/521-somebody-has-to-look/cutout-1.png",
+      "depth": 0.221
+     },
+     {
+      "image": "/film/depth/s84/521-somebody-has-to-look/cutout-2.png",
+      "depth": 0.23
+     }
+    ]
+   }
+  },
+  "436-he-wrote-to-vera": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "push",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "focalPoint": "49% 40%",
+    "depthMap": "/film/depth/s20/436-he-wrote-to-vera/depth.png",
+    "depthPlate": "/film/depth/s20/436-he-wrote-to-vera/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s20/436-he-wrote-to-vera/cutout-1.png",
+      "depth": 0.769
+     }
+    ]
+   }
+  },
+  "512-he-hasnt-stopped": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s82a/512-he-hasnt-stopped/depth.png",
+    "depthPlate": "/film/depth/s82a/512-he-hasnt-stopped/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-1.png",
+      "depth": 0.458
+     },
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-2.png",
+      "depth": 0.438
+     },
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-3.png",
+      "depth": 0.047
+     }
+    ]
    }
   }
  },

@@ -745,5 +745,43 @@
     ]
    }
   ]
+ },
+ "evening": {
+  "note": "24 October 2026, the director's evening notes: two Jack lines in 14A whose script had changed after they were recorded (the only two lines in the film whose take said other words; checked against the PlayFrame manifest), and Vera's rewritten reason for binning Sakai's letter in scene 22. eleven_v4, two takes each, flow dTSS29tZoQJbC8RKGwOd; picks measured, leveled to the old take of the same line. Old takes stay on disk. About 600 credits.",
+  "lines": [
+   {
+    "text": "We have a plate number.",
+    "was": "I think it's a plate number.",
+    "prompt": "[dryly] We have a plate number.",
+    "voice": "MZhx7pKflsc0sAwciDEy",
+    "installed": "public/film/voice/s14a/342-jack-dryly-we-have-a-plate-number.mp3",
+    "takes": [
+     "rbR2v3MEaOm97pPSBxWr (picked)",
+     "aEik4DVFe0FBJSZopTku"
+    ]
+   },
+   {
+    "text": "Call me if you plan on going somewhere next time.",
+    "was": "Call me when you go somewhere.",
+    "prompt": "[evenly] Call me if you plan on going somewhere next time.",
+    "voice": "MZhx7pKflsc0sAwciDEy",
+    "installed": "public/film/voice/s14a/343-jack-evenly-call-me-if-you-plan.mp3",
+    "takes": [
+     "u429PAzdYVmOURcXmfqP (picked)",
+     "0s23c1GiXfPc0JFctPNx"
+    ]
+   },
+   {
+    "text": "I threw it in the bin. A stranger, after twenty years, saying he can prove it? I thought he wanted money. And if he didn't… then nobody looked. Twenty years, and nobody even looked. I couldn't.",
+    "was": "I threw it in the bin. Because if it's true, then someone did it. And nobody looked. Twenty years, and nobody even looked.",
+    "prompt": "I threw it in the bin. A stranger, after twenty years, saying he can prove it? I thought he wanted money. [pause] And if he didn't... then nobody looked. Twenty years, and nobody even looked. [pause] I couldn't.",
+    "voice": "4Rn2L1CRjYh93G56jNXI",
+    "installed": "public/film/voice/s22/197-vera-i-threw-it-in-the-bin-money.mp3",
+    "takes": [
+     "JaZxi4rpCgcjuyhR3F4w (picked)",
+     "9YdVrsbd0Y0wvGEIrFyl"
+    ]
+   }
+  ]
  }
 }

@@ -636,3 +636,18 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   scene 2 (10) and scene 72 (4) was a sideways truck with no direction set, so all of them took the default and slid the same way.
   They now alternate: push-ins toward the person on close shots (the focal point from the cut-out), sideways trucks left and right
   on wider ones, never the same move twice in a row (`pictureLook`; `test:film-backend` checks it).
+
+## 31. The evening's notes (24 October)
+- **Scene 14A, "we have a plate number"**: the script had changed after the takes were made. A check of every line in the film
+  against the words its take says found exactly two: Jack's "We have a plate number." (the take said "I think it's a plate
+  number.") and "Call me if you plan on going somewhere next time." (it said "Call me when you go somewhere."). Both re-recorded.
+- **Scene 20**: no room sound (`amb-hive`) under Mara's lullaby, in all three parts of the scene.
+- **Scene 23**: the rain sound is gone (there were no falling-rain particles; the smoke stays).
+- **Scene 22, Vera's reason for binning the letter** ("not a real reason"): now "I threw it in the bin. A stranger, after
+  twenty years, saying he can prove it? I thought he wanted money. And if he didn't… then nobody looked. Twenty years, and
+  nobody even looked. I couldn't." New take in her voice. Mara's line in 20 ("She threw it in the bin without even
+  answering.") still agrees.
+- **Scene 78, the notebook**: Jack knocks once, sets the envelope down and walks away (was "He doesn't knock"); a knock is heard.
+- **Scene 84**: it opened on 115, Vera and Jack in the storeroom, before she arrives. It now opens on 318 (the dried stack,
+  nobody in it); 115 comes in when she looks round the room at the drawings.
+- Outside this repository: PlayFrame's screenplay still has the old scene 22 line, "He doesn't knock" in 78, and the 14A lines.

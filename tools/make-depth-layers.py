@@ -68,7 +68,10 @@ SMOOTH = 3.0
 
 
 def session(path):
-    return ort.InferenceSession(path, providers=["CPUExecutionProvider"])
+    # No memory arena: with it, onnxruntime kept every run's buffers and a picture with many cut-outs grew past 14 GB (24 October 2026).
+    opts = ort.SessionOptions()
+    opts.enable_cpu_mem_arena = False
+    return ort.InferenceSession(path, opts, providers=["CPUExecutionProvider"])
 
 
 def imagenet(rgb, size):
@@ -189,20 +192,32 @@ def fill(sess, rgb, hole):
     height), run at 512x512, scaled back and feathered into the picture over two pixels."""
     out = rgb.copy()
     H, W = hole.shape
-    n, labels, stats, _ = cv2.connectedComponentsWithStats(hole.astype(np.uint8))
+    # Pieces of the hole within a dozen pixels of each other are filled as one (a cut-out marked "people" can leave dozens of
+    # specks, and one LaMa run each ran the machine out of memory, 24 October 2026); a piece under 400 pixels on its own is
+    # filled from its edges (cv2.inpaint), not by the model.
+    near = cv2.dilate(hole.astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (25, 25)))
+    n, labels, stats, _ = cv2.connectedComponentsWithStats(near)
+    tiny = np.zeros((H, W), np.uint8)
     for i in range(1, n):
-        x, y, w, h = stats[i, :4]
+        piece = (labels == i) & hole.astype(bool)
+        if piece.sum() < 400:
+            tiny[piece] = 255
+            continue
+        ys, xs = np.nonzero(piece)
+        x, y, w, h = int(xs.min()), int(ys.min()), int(xs.max() - xs.min() + 1), int(ys.max() - ys.min() + 1)
         side = int(min(H, W, max(512, 2 * max(w, h))))
         x0 = int(np.clip(round(x + w / 2 - side / 2), 0, W - side))
         y0 = int(np.clip(round(y + h / 2 - side / 2), 0, H - side))
         crop = out[y0:y0 + side, x0:x0 + side]
-        m = (labels[y0:y0 + side, x0:x0 + side] == i).astype(np.float32)
+        m = piece[y0:y0 + side, x0:x0 + side].astype(np.float32)
         img = cv2.resize(crop, (512, 512), interpolation=cv2.INTER_AREA).astype(np.float32) / 255
         mk = (cv2.resize(m, (512, 512), interpolation=cv2.INTER_LINEAR) > 0.01).astype(np.float32)
         res = sess.run(None, {"image": img.transpose(2, 0, 1)[None], "mask": mk[None, None]})[0][0].transpose(1, 2, 0)
         res = cv2.resize(np.clip(res, 0, 255).astype(np.float32), (side, side), interpolation=cv2.INTER_CUBIC)
         a = np.maximum(cv2.GaussianBlur(m, (0, 0), 2), m)[..., None]
         out[y0:y0 + side, x0:x0 + side] = (res * a + crop.astype(np.float32) * (1 - a)).clip(0, 255).astype(np.uint8)
+    if tiny.any():
+        out = cv2.inpaint(out, tiny, 5, cv2.INPAINT_TELEA)
     return out
 
 
