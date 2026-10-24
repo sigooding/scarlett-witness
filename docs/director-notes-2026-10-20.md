@@ -36,6 +36,8 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 19 | (21 October) Pictures too low resolution; no picture may ever be downscaled | the 26 below | Listed; rule written |
 | 20 | (24 October) In the storeroom, Jack's answer to "I don't know if I'm as good as he was." should be "No one's asking you to be." (was "I'm not asking you to be.") | 84 | Done; take recorded |
 | 21 | (24 October) Redo 316, 367 and 468 (note 18), and 352 at full size | 78, 59, 53A, 23 | Done; nobody has seen them in the film yet |
+| 22 | (24 October) The inn: opening pictures show what hasn't happened yet; the pink payphone has two handsets; Mrs. Noda too calm in the raid | 30–38, 35, 44 | Done; nobody has seen them in the film yet |
+| 23 | (24 October) Outside the Hive Vera sees Jack on the green phone; she should see him walking back | 59 | Done (film only) |
 
 ---
 
@@ -457,3 +459,44 @@ the film yet.**
 - **352 "The address" (23):** the same picture made again at full size (it was 1360×768); the napkin now carries a short
   handwritten line in Japanese. Old picture: `archive/s23/352-the-address--v2.jpg`. The other take writes the address out
   in English ("Tokyo, Shinjuku West Alley 3-4"), readable on screen; not used because the script never gives the address.
+
+## 22. The roadside inn (24 October)
+- **Why a picture showed something that had not happened yet:** a scene opens on its first picture, and that picture stays up
+  through the heading and every line before its own. In the inn that put Jack's car in the lot before he arrives (31), the key
+  in his hand before he walks in (32), Mrs. Noda smoking on the step while he is still in the corridor (37) and the four
+  sedans before the headlights (38). Each scene now opens on a picture of its own first line:
+  - **30** `s30/30-00-the-only-thing-moving.jpg`: Jack's car alone on the highway, no inn yet;
+  - **31** `s31/31-00-the-inn-before-he-arrives.jpg`: the inn with an empty lot (169 with the car and Jack taken out);
+  - **32** `s32/32-00-the-faded-lobby.jpg`: the lobby from Jack's side of the counter, Mr. Noda at the baseball, Mrs. Noda
+    behind the counter (170 with Jack taken out); 170 still plays on the key;
+  - **37** `s37/37-00-he-cannot-sleep.jpg`: Jack alone in the dark ground-floor corridor;
+  - **38** the unused roadside set's `roadside/s38/38-01-headlights-on-the-highway.jpg` (no car or person in it to clash).
+  The roadside set's other openers were not used: its car is not Jack's (dark and newer) and its Mrs. Noda wears the cardigan
+  that `continuity.md` retired.
+- **207 "The pink payphone" (35):** Jack held a black handset while the phone's own pink one still hung on its hook. Fixed in
+  place: he holds the pink handset, the hook is empty. Old picture: `archive/s35/207-the-pink-payphone--v1.jpg`.
+- **212 "Stay. Whatever you hear." (44, the raid):** retaken with the raid in it: Mrs. Noda frightened, clutching his sleeve,
+  Jack urgent at the pantry door, a pot knocked over, the back door open to the rain. Old picture:
+  `archive/s44/212-stay-whatever-you-hear--v1.jpg`; the other take (gunmen in the back doorway, which they are not at that
+  moment) in `retakes_2026_10_24/`.
+- **New, `s44/44-02-my-husband.jpg`:** Mrs. Noda in the pantry, crying out, gripping his coat. It plays on "My husband —" and
+  "I'll get him." (shots 16–17 of the raid cutscene in `studio-edits.json`, and the scene's own step in `story.json`).
+- gemini-3-pro-image edits at 2K, installed full size (2730×1536). With note 23, eleven pictures, about 34,000 credits.
+- **The same thing elsewhere in the film:** 40 scenes open on a picture that belongs to a later line. Most are harmless (a time
+  card or a description of the place over its establishing shot). Ones that give something away early, not yet changed:
+  21 (Vera's shape at the frosted glass while Jack hasn't slept), 27 (Jack and Vera laughing under the umbrella before the
+  crossing is set), 63 (Jack opening the locker during the room's description), 63A (the waiting sedan before Jack comes
+  out), 93 (the sedan at the kerb as Ishida comes down the steps).
+
+## 23. Scene 59: Vera sees Jack walking back (24 October)
+- The director: outside the Hive Vera should not find Jack on the green phone; she should see him walking back.
+- **The words, changed in `src/film/story.json` only (narration, no recorded line touched):** the call and the intercut stay;
+  then "It rings. Nobody answers. He hangs up. He walks a few steps down the street in the rain, then turns back." comes
+  before Vera, who now "comes out of the Hive's narrow entrance, glowing. She sees him walking back to her."; "Jack keeps the
+  receiver to his ear. It rings." is now "Jack hardly hears her. He looks back at the payphone."; the later "It rings. Nobody
+  answers. He hangs up." is gone.
+- **Pictures:** new opening `s59/59-00-jack-at-the-green-phone.jpg` (Jack alone at the phone; the scene used to open on Mrs.
+  Sakai's kotatsu); 226 retaken in place (Vera at the door, Jack walking back along the street; old one `--v3`); new
+  `s59/477-he-hardly-hears-her.jpg` (beside her, looking back at the phone; the old `477-it-rings.jpg` is no longer used);
+  478 retaken in place without the phone (old one `--v1`).
+- **Outside this repository:** PlayFrame's screenplay still has Jack on the phone when Vera comes out.

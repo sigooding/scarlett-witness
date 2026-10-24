@@ -11346,7 +11346,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s30",
    "title": "30 — A light ahead",
    "animaticMark": "30",
-   "background": "/film/img/s30/205-a-light-ahead.jpg",
+   "background": "/film/img/s30/30-00-the-only-thing-moving.jpg",
    "prose": "EXT. COUNTRY HIGHWAY - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
@@ -11358,7 +11358,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b736",
      "characterId": "nw_narrator",
      "text": "Rain. Black fields. Jack's old car, one headlight dimmer than the other, the only thing moving for miles.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s30/30-00-the-only-thing-moving.jpg",
+     "cinematic": {
+      "mode": "static",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 22,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b737",
@@ -11436,7 +11450,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s31",
    "title": "31 — The only car",
    "animaticMark": "31",
-   "background": "/film/img/s31/169-the-only-car.jpg",
+   "background": "/film/img/s31/31-00-the-inn-before-he-arrives.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
@@ -11448,7 +11462,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b738",
      "characterId": "nw_narrator",
      "text": "Two storeys of weathered wood and a tin roof, set back from the highway behind a gravel lot. A beer vending machine glowing by the entrance.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s31/31-00-the-inn-before-he-arrives.jpg",
+     "cinematic": {
+      "mode": "static",
+      "focalPoint": "65% 50%",
+      "zoomDuration": 16,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b739",
@@ -11517,7 +11545,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s32",
    "title": "32 — Just one night",
    "animaticMark": "32",
-   "background": "/film/img/s32/170-just-one-night.jpg",
+   "background": "/film/img/s32/32-00-the-faded-lobby.jpg",
    "prose": "INT. ROADSIDE INN, LOBBY - CONTINUOUS",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
@@ -11529,7 +11557,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b742",
      "characterId": "nw_narrator",
      "text": "A small, warm, faded room. A pink public payphone on the wall. A glass case of souvenir keyrings nobody has bought in decades.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s32/32-00-the-faded-lobby.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 22,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b743",
@@ -12034,7 +12076,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s37",
    "title": "37 — The keys are always in it",
    "animaticMark": "37",
-   "background": "/film/img/s37/209-the-keys-are-always-in-it.jpg",
+   "background": "/film/img/s37/37-00-he-cannot-sleep.jpg",
    "prose": "INT. ROADSIDE INN, KITCHEN DOORWAY - NIGHT",
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
@@ -12046,7 +12088,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b777",
      "characterId": "nw_narrator",
      "text": "Jack can't sleep. He wanders back down the corridor.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s37/37-00-he-cannot-sleep.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "35% 50%",
+      "zoomDuration": 15,
+      "dollyDirection": "left",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b778",
@@ -12157,7 +12213,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s38",
    "title": "38 — Four black sedans",
    "animaticMark": "38",
-   "background": "/film/img/s38/173-four-black-sedans.jpg",
+   "background": "/film/img/roadside/s38/38-01-headlights-on-the-highway.jpg",
    "prose": "EXT. ROADSIDE INN - NIGHT",
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
@@ -12169,7 +12225,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b786",
      "characterId": "nw_narrator",
      "text": "Later. 2 a.m. Rain.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/roadside/s38/38-01-headlights-on-the-highway.jpg",
+     "cinematic": {
+      "mode": "static",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b787",
@@ -12922,12 +12992,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_cut_inn-raid_16",
    "title": "The raid on the inn: My husband —",
    "animaticMark": "44",
-   "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
+   "background": "/film/img/s44/44-02-my-husband.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "60% 42%",
-    "zoomDuration": 16,
-    "dollyDirection": "left",
+    "mode": "static",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
@@ -12938,8 +13008,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "fade",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -12960,12 +13030,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_cut_inn-raid_17",
    "title": "The raid on the inn: I'll get him.",
    "animaticMark": "44",
-   "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
+   "background": "/film/img/s44/44-02-my-husband.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
-    "focalPoint": "60% 42%",
-    "zoomDuration": 16,
-    "dollyDirection": "left",
+    "mode": "static",
+    "focalPoint": "65% 50%",
+    "zoomDuration": 22,
+    "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
@@ -15194,7 +15264,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s59",
    "title": "59 — It rings. Nobody answers.",
    "animaticMark": "59",
-   "background": "/film/img/s59/364-the-kotatsu.jpg",
+   "background": "/film/img/s59/59-00-jack-at-the-green-phone.jpg",
    "prose": "EXT. THE HIVE - CONTINUOUS",
    "ambientAudio": "rain+file:/film/sfx/amb-hive.mp3+file:/film/sfx/rain-tin-roof.mp3",
    "particles": "rain",
@@ -15206,7 +15276,21 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b968",
      "characterId": "nw_narrator",
      "text": "Rain. By the Hive's narrow entrance, under a tin awning, a green public payphone. JACK stands at it with the receiver to his ear.",
-     "silent": true
+     "silent": true,
+     "background": "/film/img/s59/59-00-jack-at-the-green-phone.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 14,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
     },
     {
      "id": "nw_b969",
@@ -15307,7 +15391,27 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b974",
      "characterId": "nw_narrator",
-     "text": "THE HIVE\n\nVera comes out of the Hive's narrow entrance, glowing.",
+     "text": "THE HIVE\n\nIt rings. Nobody answers. He hangs up. He walks a few steps down the street in the rain, then turns back.",
+     "silent": true,
+     "background": "/film/img/s59/59-00-jack-at-the-green-phone.jpg",
+     "cinematic": {
+      "mode": "zoom-hold",
+      "focalPoint": "50% 45%",
+      "zoomDuration": 14,
+      "dollyDirection": "right",
+      "dollyDistance": 3,
+      "dollyDuration": 24,
+      "colorGrade": "midnight-teal",
+      "filmGrade": false,
+      "volumetricShafts": false
+     },
+     "backgroundTransition": "crossfade",
+     "backgroundTransitionSpeed": 0.9
+    },
+    {
+     "id": "nw_b975",
+     "characterId": "nw_narrator",
+     "text": "Vera comes out of the Hive's narrow entrance, glowing. She sees him walking back to her.",
      "silent": true,
      "background": "/film/img/s59/226-at-the-edge-of-a-high-place.jpg",
      "cinematic": {
@@ -15325,22 +15429,22 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b975",
+     "id": "nw_b976",
      "characterId": "nw_vera",
      "text": "Jack! It's still here. The noodle shop from the photo. It's real. The same woman — she remembered Dad. She remembered me.",
      "audioUrl": "/film/voice/s59/228-vera-jack-it-s-still-here-the.mp3"
     },
     {
-     "id": "nw_b976",
+     "id": "nw_b977",
      "characterId": "nw_narrator",
-     "text": "Jack keeps the receiver to his ear. It rings.",
+     "text": "Jack hardly hears her. He looks back at the payphone.",
      "silent": true,
-     "background": "/film/img/s59/477-it-rings.jpg",
+     "background": "/film/img/s59/477-he-hardly-hears-her.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
-      "focalPoint": "50% 45%",
-      "zoomDuration": 20,
-      "dollyDirection": "right",
+      "mode": "dolly",
+      "focalPoint": "60% 42%",
+      "zoomDuration": 22,
+      "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
@@ -15351,19 +15455,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b977",
+     "id": "nw_b978",
      "characterId": "nw_vera",
      "text": "And I went to the newspaper. Harada, the editor. She says Kondo told two people about the one o'clock. Her. And a detective, who promised to keep a car nearby.",
      "audioUrl": "/film/voice/s59/228-vera-and-i-went-to-the-newspaper.mp3"
     },
     {
-     "id": "nw_b978",
+     "id": "nw_b979",
      "characterId": "nw_jack",
      "text": "Later.",
      "audioUrl": "/film/voice/s59/228-jack-later.mp3"
     },
     {
-     "id": "nw_b979",
+     "id": "nw_b980",
      "characterId": "nw_vera",
      "text": "Jack. A detective.",
      "audioUrl": "/film/voice/s59/228-vera-jack-a-detective.mp3",
@@ -15383,16 +15487,10 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9
     },
     {
-     "id": "nw_b980",
+     "id": "nw_b981",
      "characterId": "nw_jack",
      "text": "Later. Please.",
      "audioUrl": "/film/voice/s59/228-jack-later-please.mp3"
-    },
-    {
-     "id": "nw_b981",
-     "characterId": "nw_narrator",
-     "text": "It rings. Nobody answers. He hangs up.",
-     "silent": true
     },
     {
      "id": "nw_b982",
@@ -27780,18 +27878,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "cardMotion": "fade",
     "montage": [
      "/film/img/s1/01-backstreet.jpg",
-     "/film/img/s4/384-the-room-too-big.jpg",
-     "/film/img/s7/66-he-looks-at-it.jpg",
-     "/film/img/s14/362-every-stroke-correct.jpg",
-     "/film/img/s20/436-he-wrote-to-vera.jpg",
-     "/film/img/s26/452-the-loop.jpg",
+     "/film/img/s4/36-vera-at-the-table.jpg",
+     "/film/img/s7/68-the-clock.jpg",
+     "/film/img/s14a/334-the-mirror.jpg",
+     "/film/img/s20/371-the-coward-line.jpg",
+     "/film/img/s26/537-in-his-palm.jpg",
      "/film/img/s37/460-parked-crooked.jpg",
-     "/film/img/s54/220-everything-is-still-there.jpg",
-     "/film/img/s65/232-the-wine-red-dress.jpg",
-     "/film/img/s72/70-the-call.jpg",
-     "/film/img/s76/82-on-the-floor.jpg",
-     "/film/img/s82/108-not-silent.jpg",
-     "/film/img/s90/130-the-roof.jpg",
+     "/film/img/s53a/299-the-card-on-the-desk.jpg",
+     "/film/img/s64/232-the-cassette.jpg",
+     "/film/img/s72/498-open-shut.jpg",
+     "/film/img/vera_run_new/76-01-the-walkway.jpg",
+     "/film/img/retakes_2026_10_20/107-her-dead-reporter-r1.jpg",
+     "/film/img/thehiveescape/s89/89-03-the-beam-falls-away.jpg",
      "/film/img/service_new/583-the-neighbours.jpg"
     ],
     "montageSeconds": 7.5,
@@ -27821,14 +27919,14 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
-     "/film/img/s26/452-the-loop.jpg": {
+     "/film/img/s7/68-the-clock.jpg": {
       "mode": "static",
-      "depthMap": "/film/depth/s26/452-the-loop/depth.png",
-      "depthMotion": "truck",
-      "depthAmount": 0.32,
-      "depthSeconds": 6,
-      "depthDirection": "right",
-      "depthFocus": 0.52,
+      "depthMap": "/film/depth/s7/68-the-clock/depth.png",
+      "depthMotion": "push",
+      "depthAmount": 0.4,
+      "depthSeconds": 5,
+      "focalPoint": "62% 45%",
+      "zoomDuration": 14,
       "filmGrade": false,
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
@@ -27845,17 +27943,34 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
-     "/film/img/s76/82-on-the-floor.jpg": {
+     "/film/img/s72/498-open-shut.jpg": {
       "mode": "static",
       "depthMotion": "truck",
       "depthAmount": 0.4,
       "depthSeconds": 5,
-      "depthMap": "/film/depth/s76/82-on-the-floor/depth.png",
-      "depthPlate": "/film/depth/s76/82-on-the-floor/plate.jpg",
+      "depthMap": "/film/depth/s72/498-open-shut/depth.png",
+      "depthPlate": "/film/depth/s72/498-open-shut/plate.jpg",
       "depthCutouts": [
        {
-        "image": "/film/depth/s76/82-on-the-floor/cutout-1.png",
-        "depth": 0.829
+        "image": "/film/depth/s72/498-open-shut/cutout-1.png",
+        "depth": 0.417
+       }
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
+     "/film/img/vera_run_new/76-01-the-walkway.jpg": {
+      "mode": "static",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 5,
+      "depthMap": "/film/depth/vera_run_new/76-01-the-walkway/depth.png",
+      "depthPlate": "/film/depth/vera_run_new/76-01-the-walkway/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/vera_run_new/76-01-the-walkway/cutout-1.png",
+        "depth": 0.454
        }
       ],
       "filmGrade": false,
@@ -27899,5 +28014,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "130e46cd28c2"
+ "builtinRevision": "bf31ca96ab5b"
 } as unknown as Story;

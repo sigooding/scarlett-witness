@@ -437,6 +437,16 @@ check(at84("I trusted him. I'm so sorry.") === at84("I told him. Where she'd be,
 // (24 October 2026) both takes are recorded, and Jack's answer to "I don't know if I'm as good as he was." is "No one's asking you to be."
 check(s84.filter((b) => b.characterId === "nw_jack").every((b) => !b.silent && !!b.audioUrl), "scene 84: every Jack line has its take (none left waiting)");
 check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's asking you to be.") === at84("I don't know if I'm as good as he was.") + 1 && jackSays(at84("No one's asking you to be.")), "scene 84: Jack answers \"No one's asking you to be.\", with its take");
+// the roadside inn (the director, 24 October 2026): a scene's opening picture showed something that had not happened yet (Jack's
+// car before he arrives, the key before he walks in, Mrs. Noda smoking before he finds her, the sedans before the headlights), so
+// each now opens on a picture of its own first line
+const opensOn = (id: string, pic: string) => FILM.scenes.find((s) => s.id === id)?.background === `/film/img/${pic}` && existsSync(join(ROOT, "public/film/img", pic));
+check(opensOn("nw_s30", "s30/30-00-the-only-thing-moving.jpg") && opensOn("nw_s31", "s31/31-00-the-inn-before-he-arrives.jpg") && opensOn("nw_s32", "s32/32-00-the-faded-lobby.jpg") && opensOn("nw_s37", "s37/37-00-he-cannot-sleep.jpg") && opensOn("nw_s38", "roadside/s38/38-01-headlights-on-the-highway.jpg"), "the inn's scenes 30, 31, 32, 37 and 38 open on their own first line, not a later one");
+check(FILM.scenes.find((s) => s.id === "nw_cut_inn-raid_16")?.background === "/film/img/s44/44-02-my-husband.jpg" && (FILM.scenes.find((s) => s.id === "nw_cut_inn-raid_16")?.dialogueBeats ?? []).some((b) => (b.text ?? "").startsWith("My husband")), "the raid: Mrs. Noda's \"My husband —\" has a frightened picture of its own");
+// scene 59 (the director, 24 October 2026): Vera sees Jack walking back from the green payphone, not still on it
+const s59 = allBeats.filter(({ scene }) => scene === "nw_s59").map(({ b }) => b);
+const at59 = (t: string) => s59.findIndex((b) => (b.text ?? "").includes(t));
+check(FILM.scenes.find((s) => s.id === "nw_s59")?.background === "/film/img/s59/59-00-jack-at-the-green-phone.jpg" && at59("He hangs up.") >= 0 && at59("He hangs up.") < at59("Vera comes out of the Hive") && at59("She sees him walking back") >= 0 && !s59.some((b) => /receiver to his ear\. It rings\./.test(b.text ?? "") || (b.background ?? "").includes("477-it-rings")), "scene 59: Jack hangs up before Vera comes out, and she sees him walking back");
 // animatic marks (the director, 21 October 2026): every node of the screenplay, a song's timed shots and the inn raid's cutscene
 // included, knows its scene, so an exported MP4 can show the scene, beat and picture in its corner
 const unmarked = FILM.scenes.filter((s) => /^nw_(s\d|song_|cut_|prologue)/.test(s.id) && !s.animaticMark).map((s) => s.id);
