@@ -440,6 +440,18 @@ check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's
 // Okada (the director, 24 October 2026: "too deep for old japanese man"): all his lines are the takes in his new, older voice
 const okadaLines = allBeats.filter(({ b }) => b.characterId === "nw_okada" && !!b.audioUrl).map(({ b }) => b.audioUrl!);
 check(okadaLines.length >= 19 && okadaLines.every((u) => /--aged\.mp3$/.test(u) && existsSync(join(ROOT, "public", u))), "Okada speaks every line in his new, older voice (the --aged takes)");
+// scenes 1, 2 and 72 (the director, 24 October 2026: "the camera pans left on almost every [shot] with cutouts"): the depth moves vary,
+// and no two pictures in a row make the same move
+for (const id of ["nw_s1", "nw_s2", "nw_s72"]) {
+  const moves: string[] = [];
+  let last = "";
+  for (const { scene, b } of allBeats) {
+    if (scene !== id || !b.background || !b.cinematic?.depthMap || b.background === last) continue;
+    last = b.background;
+    moves.push(`${b.cinematic.depthMotion ?? "truck"}${b.cinematic.depthMotion === "push" ? "" : b.cinematic.depthDirection ?? "right"}`);
+  }
+  check(moves.length > 0 && moves.every((m, i) => i === 0 || m !== moves[i - 1]), `${id}: the depth camera never makes the same move twice in a row`);
+}
 // scene 5 (the director, 24 October 2026): the young officer's phone call is a cautious whisper Vera isn't meant to hear; his four
 // lines are in one voice (the deleted 29 September voice replaced by its stand-in, "Young Detective - NEONOIRE")
 const s5 = allBeats.filter(({ scene }) => scene === "nw_s5").map(({ b }) => b);
