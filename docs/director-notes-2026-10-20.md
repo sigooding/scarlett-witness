@@ -32,9 +32,10 @@ scene 80 pictures at their slot paths in `s80/`; where its file names differ fro
 | 15 | A sound for Kaneko banging the pipe with the spanner | Raid run, 86-02: "Kaneko strikes the iron pipe three times" | Done 22 October, from the director's uploads |
 | 16 | (21 October) Jack's "Three feet away." should say "Right behind the curtain." | 84, Jack and Vera at Kaneko's | Done; take recorded 24 October |
 | 17 | (21 October) Jack's confession goes on "I trusted him. I'm so sorry." | 84 | Done; take recorded 24 October |
-| 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 to redo |
+| 18 | (21 October) The picks of the brief's 17 pictures: three need redoing | 51, 59, 53A, 72, 74, 78, 80, 82, 83, 6, 61, 2 | 13 in the film; 316, 367, 468 redone 24 October (note 21) |
 | 19 | (21 October) Pictures too low resolution; no picture may ever be downscaled | the 26 below | Listed; rule written |
 | 20 | (24 October) In the storeroom, Jack's answer to "I don't know if I'm as good as he was." should be "No one's asking you to be." (was "I'm not asking you to be.") | 84 | Done; take recorded |
+| 21 | (24 October) Redo 316, 367 and 468 (note 18), and 352 at full size | 78, 59, 53A, 23 | Done; nobody has seen them in the film yet |
 
 ---
 
@@ -390,6 +391,7 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     Attach 88 and 89 and say: the door at the very end of the walkway, the end wall just beyond it, nothing past it.
   - **367** ("needs redo again"): Mrs. Sakai's furnished room with nobody in it, as 365-r1 now shows it. Attach 365-r1 for the
     room.
+  - **Redone 24 October; see note 21.**
   - **468** ("needs redo again"): the journalist's photo on Harada's own desk in her glass office. Attach 107-r1, which the
     director accepted, so the photograph matches.
 
@@ -434,3 +436,24 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
   `public/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3`), both takes of each in that scene's `raw/`, about 170
   credits. No line in the film waits for a take now.
 - **Outside this repository:** PlayFrame's screenplay still has "I'm not asking you to be." with the rest of notes 16 and 17.
+
+## 21. 316, 367 and 468 redone, and 352 at full size (24 October)
+Made with `gemini-3-pro-image` as edits of the reference pictures, asked for its **2K** size (2752×1536) and installed as they
+came with `tools/install-film-picture.mjs` (cropped to 2730×1536, nothing shrunk). Two takes each; the other take of each is in
+`public/film/img/retakes_2026_10_24/<name>--alt1.jpg`, and every replaced picture is archived. About 17,000 credits
+(about 1,830 a take, 3,050 for 316's with three references). Picked by eye at contact-sheet size; **nobody has seen them in
+the film yet.**
+- **316 "Squared to the door" (78):** her door is now in the **end wall**, facing straight down the walkway, as 88 and 89
+  have it; the mat and the tied envelope in front of it, Jack walking away from it toward the camera. References: 88, 89 and
+  Jack's sheet. Old picture: `archive/s78/316-squared-to-the-door--v2.jpg`. The other take has him still on the mat.
+- **367 "The phone rings" (59):** Mrs. Sakai's own room, as 365-r1 shows it (the windows and shoji, the television, the
+  altar with the same photograph), nobody in it, the cream telephone ringing on the kotatsu quilt in the foreground.
+  Reference: 365-r1. Old picture: `archive/s59/367-the-phone-rings--v1.jpg`. The other take has the phone on the kotatsu
+  top but a different, older face in the altar photograph. **Its depth map is remade** with Depth Anything from the new
+  picture (the old one was made for the bare room); the move is unchanged (push 0.32 over 5 s).
+- **468 "The photograph on her desk" (53A):** the photograph from 107-r1 (the journalist with glasses, laughing at the
+  office party) in its dark frame on Harada's desk, her glass office and the newsroom behind. Reference: 107-r1. Old picture:
+  `archive/s53a/468-the-photograph-on-her-desk--v1.jpg`.
+- **352 "The address" (23):** the same picture made again at full size (it was 1360×768); the napkin now carries a short
+  handwritten line in Japanese. Old picture: `archive/s23/352-the-address--v2.jpg`. The other take writes the address out
+  in English ("Tokyo, Shinjuku West Alley 3-4"), readable on screen; not used because the script never gives the address.

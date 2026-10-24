@@ -408,7 +408,7 @@
    "picture": "public/film/img/s59/367-the-phone-rings.jpg",
    "depthMap": "/film/depth/s59/367-the-phone-rings/depth.png",
    "smooth": 0,
-   "note": "Redone 23 October 2026 (the director: \"everything in the room had disappeared and it's just the phone\"): the first map was soft and near-uniform, so the truck had nothing to move. This one separates the phone and table (white) from the room, the curtains and the window (dark), so the whole room now reads in depth. Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible."
+   "note": "Remade 24 October 2026 with Depth Anything V2 Small from the new picture (the director's note 18: Mrs. Sakai's furnished room, nobody in it, as 365-r1 shows it; the telephone ringing on the kotatsu quilt in the foreground). The 23 October map was made for the previous picture and no longer matched it. No people visible."
   },
   "402-the-windows-wake": {
    "picture": "public/film/img/s71/402-the-windows-wake.jpg",

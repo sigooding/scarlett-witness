@@ -91,7 +91,7 @@ Frames of the move (`tools/depth-frames.mjs`) show her moving as one piece. The 
 
 **Sizes.** Nothing was resized — each file is installed at the size it came out at: 243 2816×1584, 336 1920×1072,
 164 and 346 1672×941, 352 1360×768. Three are now below the 1920×1080 the rest of the film uses; regenerate any that
-look soft on screen.
+look soft on screen. **352 was made again at full size (2730×1536) on 24 October** (director notes, item 21).
 
 No builder run was needed — every path is unchanged and `src/data/nobodysWitnessFilm.ts` already points at them.
 All five are local replacements in this checkout; sync them into PlayFrame before the next `build-film-story.mjs`.
