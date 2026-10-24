@@ -11230,8 +11230,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b729",
      "characterId": "nw_mrs_sakai",
-     "text": "Every January. Cash, in an envelope. Twenty years. Even after he left, the receipts kept coming here.",
-     "audioUrl": "/film/voice/s29/273-mrssakai-every-january-cash-in-an-envelope.mp3"
+     "text": "Every January. Cash, in an envelope. For years. Even after he left, the receipts kept coming here.",
+     "audioUrl": "/film/voice/s29/273-mrssakai-every-january-for-years.mp3"
     },
     {
      "id": "nw_b730",
@@ -11792,7 +11792,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b758",
      "characterId": "nw_narrator",
-     "text": "KATO RENTAL LOCKERS - UENO. No. 114. Twenty years of Januaries.",
+     "text": "KATO RENTAL LOCKERS - UENO. No. 114. Years of Januaries.",
      "silent": true,
      "background": "/film/img/s34/173-no-114.jpg",
      "cinematic": {
@@ -22137,8 +22137,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s82/new-jack-walks-in-4.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "65% 50%",
-      "zoomDuration": 22,
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
@@ -28043,5 +28043,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "7d412114fb1e"
+ "builtinRevision": "32082e8c2177"
 } as unknown as Story;
