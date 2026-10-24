@@ -429,6 +429,8 @@ The director picked the 17 pictures made from `docs/image-brief-2026-10-20.md` a
     `docs/film-voice-generations-2026-10-24.json`.
   - **Picked by measurement, not by ear** (the take with more energy; the two takes of each are the same length, so neither
     says its line twice). Listen to the three in place; swap in the other take from `raw/` if it reads better.
-- **Still waiting for a take:** scene 1's "Hold on, I'll call an ambulance." (Mara) and scene 2's "Are you okay? Where's Sakai?"
-  (the journalist). Their prompts are in `story.json` (`takePending`).
+- **The last two waiting lines, recorded the same day:** scene 1's "Hold on, I'll call an ambulance." (Mara's voice,
+  `public/film/voice/s1/14-mara-breathless-hold-on-i-ll-call.mp3`) and scene 2's "Are you okay? Where's Sakai?" (the journalist's,
+  `public/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3`), both takes of each in that scene's `raw/`, about 170
+  credits. No line in the film waits for a take now.
 - **Outside this repository:** PlayFrame's screenplay still has "I'm not asking you to be." with the rest of notes 16 and 17.

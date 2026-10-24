@@ -1,6 +1,5 @@
 {
-  "note": "Scene 84's three Jack takes, recorded 24 October 2026 with Jack's saved voice \"Narrator Lead\" (MZhx7pKflsc0sAwciDEy) and eleven_v4, two takes each, in ElevenLabs flow HVkZ9QY5mo9uj9DYFAkc. The pick is measured, not heard (the take with more energy; the lengths agree, so no repeat). Raw takes are in public/film/voice/s84/raw/ (ElevenLabs does not keep audio); the picks are leveled to Jack's other lines in the scene (about -21.5 dB average). About 210 credits.",
-  "voice_id": "MZhx7pKflsc0sAwciDEy",
+  "note": "The five takes recorded 24 October 2026 with eleven_v4: scene 84's three Jack lines (Jack's saved voice \"Narrator Lead\", MZhx7pKflsc0sAwciDEy), Mara's in scene 1 (\"Mara Voss - NEONOIRE\", 2NE3noNVoL0UyxXHLs7w) and the journalist's in scene 2 (\"Journalist (Kondo) - NEONOIRE\", EEYUewEB5w5R0IPnszO5), two takes each, in ElevenLabs flow HVkZ9QY5mo9uj9DYFAkc. The pick is measured, not heard (the take with more energy; the lengths agree, so no repeat). Raw takes are in public/film/voice/<scene>/raw/ (ElevenLabs does not keep audio); the picks are leveled to the speaker's other lines in the scene. About 380 credits in all.",
   "model_id": "eleven_v4",
   "lines": [
     {
@@ -9,9 +8,23 @@
       "installed": "public/film/voice/s84/118-jack-flatly-right-behind-the-curtain.mp3",
       "gain_db": -1.6,
       "takes": [
-        { "generation_id": "G1hvTmmySNKA8Nh2fRFf", "file": "raw/118-jack-flatly-right-behind-the-curtain--take1.mp3", "seconds": 1.80, "mean_db": -19.4, "peak_db": -2.6, "picked": true },
-        { "generation_id": "0vzuEwf6GKetyxUPMoqY", "file": "raw/118-jack-flatly-right-behind-the-curtain--take2.mp3", "seconds": 1.80, "mean_db": -19.7, "peak_db": -2.8 }
-      ]
+        {
+          "generation_id": "G1hvTmmySNKA8Nh2fRFf",
+          "file": "public/film/voice/s84/raw/118-jack-flatly-right-behind-the-curtain--take1.mp3",
+          "seconds": 1.8,
+          "mean_db": -19.4,
+          "peak_db": -2.6,
+          "picked": true
+        },
+        {
+          "generation_id": "0vzuEwf6GKetyxUPMoqY",
+          "file": "public/film/voice/s84/raw/118-jack-flatly-right-behind-the-curtain--take2.mp3",
+          "seconds": 1.8,
+          "mean_db": -19.7,
+          "peak_db": -2.8
+        }
+      ],
+      "voice_id": "MZhx7pKflsc0sAwciDEy"
     },
     {
       "step": "scene 84, step 27 (after \"I told him. Where she'd be, and when. He arranged the car. It was his driver. That's mine.\")",
@@ -19,9 +32,23 @@
       "installed": "public/film/voice/s84/119-jack-sadly-i-trusted-him-i-m-so-sorry.mp3",
       "gain_db": 4.4,
       "takes": [
-        { "generation_id": "IjMRMJ1ziL0opym6x0f0", "file": "raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take1.mp3", "seconds": 3.40, "mean_db": -25.6, "peak_db": -7.2, "picked": true },
-        { "generation_id": "CoWSv01UfRDFwOufmcNm", "file": "raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take2.mp3", "seconds": 3.55, "mean_db": -26.3, "peak_db": -6.8 }
-      ]
+        {
+          "generation_id": "IjMRMJ1ziL0opym6x0f0",
+          "file": "public/film/voice/s84/raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take1.mp3",
+          "seconds": 3.4,
+          "mean_db": -25.6,
+          "peak_db": -7.2,
+          "picked": true
+        },
+        {
+          "generation_id": "CoWSv01UfRDFwOufmcNm",
+          "file": "public/film/voice/s84/raw/119-jack-sadly-i-trusted-him-i-m-so-sorry--take2.mp3",
+          "seconds": 3.55,
+          "mean_db": -26.3,
+          "peak_db": -6.8
+        }
+      ],
+      "voice_id": "MZhx7pKflsc0sAwciDEy"
     },
     {
       "step": "scene 84, step 44 (answers \"I don't know if I'm as good as he was.\"; was \"I'm not asking you to be.\", the director 24 October)",
@@ -29,8 +56,70 @@
       "installed": "public/film/voice/s84/119-jack-gently-no-one-s-asking-you.mp3",
       "gain_db": -1.2,
       "takes": [
-        { "generation_id": "rUqgq3nruDMcXWXhNjOK", "file": "raw/119-jack-gently-no-one-s-asking-you--take1.mp3", "seconds": 2.12, "mean_db": -19.8, "peak_db": -6.4, "picked": true },
-        { "generation_id": "QPnk49ZhS6v10sTQfo1d", "file": "raw/119-jack-gently-no-one-s-asking-you--take2.mp3", "seconds": 2.12, "mean_db": -20.0, "peak_db": -5.7 }
+        {
+          "generation_id": "rUqgq3nruDMcXWXhNjOK",
+          "file": "public/film/voice/s84/raw/119-jack-gently-no-one-s-asking-you--take1.mp3",
+          "seconds": 2.12,
+          "mean_db": -19.8,
+          "peak_db": -6.4,
+          "picked": true
+        },
+        {
+          "generation_id": "QPnk49ZhS6v10sTQfo1d",
+          "file": "public/film/voice/s84/raw/119-jack-gently-no-one-s-asking-you--take2.mp3",
+          "seconds": 2.12,
+          "mean_db": -20.0,
+          "peak_db": -5.7
+        }
+      ],
+      "voice_id": "MZhx7pKflsc0sAwciDEy"
+    },
+    {
+      "step": "scene 1, step 49 (Mara, kneeling by the old man)",
+      "voice_id": "2NE3noNVoL0UyxXHLs7w",
+      "prompt": "[breathless] Hold on, I'll call an ambulance.",
+      "installed": "public/film/voice/s1/14-mara-breathless-hold-on-i-ll-call.mp3",
+      "gain_db": -1.9,
+      "takes": [
+        {
+          "generation_id": "Ynea0uy2hyFUsVSA2Ajc",
+          "file": "public/film/voice/s1/raw/14-mara-breathless-hold-on-i-ll-call--take1.mp3",
+          "seconds": 2.85,
+          "mean_db": -17.0,
+          "peak_db": -1.6,
+          "picked": true
+        },
+        {
+          "generation_id": "dDFw7rqrKKXPIPBm0WCW",
+          "file": "public/film/voice/s1/raw/14-mara-breathless-hold-on-i-ll-call--take2.mp3",
+          "seconds": 2.77,
+          "mean_db": -17.6,
+          "peak_db": -1.2
+        }
+      ]
+    },
+    {
+      "step": "scene 2, step 9 (the journalist, after \"Miss Voss?\")",
+      "voice_id": "EEYUewEB5w5R0IPnszO5",
+      "prompt": "[concerned] Are you okay? Where's Sakai?",
+      "installed": "public/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3",
+      "gain_db": 0.6,
+      "takes": [
+        {
+          "generation_id": "sZLAuPSMYg5JDfhckWou",
+          "file": "public/film/voice/s2/raw/21-journalist-concerned-are-you-okay-where--take1.mp3",
+          "seconds": 2.51,
+          "mean_db": -20.7,
+          "peak_db": -7.8
+        },
+        {
+          "generation_id": "mykGvZDOD9iqWcqnhZPa",
+          "file": "public/film/voice/s2/raw/21-journalist-concerned-are-you-okay-where--take2.mp3",
+          "seconds": 2.43,
+          "mean_db": -20.3,
+          "peak_db": -5.8,
+          "picked": true
+        }
       ]
     }
   ]

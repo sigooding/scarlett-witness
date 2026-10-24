@@ -400,12 +400,12 @@ check(!!midFall && midFall.sfxUrl === "/film/sfx/suppressed-shot.mp3" && existsS
 check(s1Beats.find((b) => (b.text ?? "").startsWith("The old man folds"))?.sfxUrl === undefined, "scene 1: no door-like thud on the old man folding");
 check(s1Beats.find((b) => (b.text ?? "").startsWith("They walk back to the sedan"))?.sfxUrl === "/film/sfx/car-door-heavy.mp3", "scene 1: the car door shuts as the men walk back to the sedan");
 const ambulance = s1Beats.find((b) => b.text === "Hold on, I'll call an ambulance.");
-check(!!ambulance && ambulance.characterId === "nw_mara" && ambulance.silent === true && !ambulance.audioUrl, "scene 1: Mara says \"Hold on, I'll call an ambulance.\" (silent until its take is recorded)");
+check(!!ambulance && ambulance.characterId === "nw_mara" && !ambulance.silent && !!ambulance.audioUrl && existsSync(join(ROOT, "public", ambulance.audioUrl)), "scene 1: Mara says \"Hold on, I'll call an ambulance.\", with its take (recorded 24 October)");
 const s2Beats = FILM.scenes.filter((s) => /^nw_s2(_|$)/.test(s.id)).flatMap((s) => s.dialogueBeats ?? []);
 const s2PicBeats = s2Beats.filter((b) => b.background);
 check(s2PicBeats.length > 1 && s2PicBeats[0].background === s2PicBeats[1].background && s2PicBeats[0].background === "/film/img/s2/20-the-journalist.jpg", "scene 2 opens on the journalist's picture for its first two picture beats");
 const okaySakai = s2Beats.find((b) => b.text === "Are you okay? Where's Sakai?");
-check(!!okaySakai && okaySakai.characterId === "nw_journalist" && okaySakai.silent === true && !okaySakai.audioUrl, "scene 2: the journalist asks \"Are you okay? Where's Sakai?\" (silent until its take is recorded)");
+check(!!okaySakai && okaySakai.characterId === "nw_journalist" && !okaySakai.silent && !!okaySakai.audioUrl && existsSync(join(ROOT, "public", okaySakai.audioUrl)), "scene 2: the journalist asks \"Are you okay? Where's Sakai?\", with its take (recorded 24 October)");
 check(!s2Beats.some((b) => b.text === "Where is he?"), "scene 2: \"Where is he?\" is out");
 check(s2Beats.find((b) => (b.text ?? "").startsWith("Before she can answer"))?.background === "/film/img/s2_picks/23-behind-the-counter-s2new2.jpg" && s2Beats.find((b) => (b.text ?? "").startsWith("Mara is behind the counter"))?.background === "/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg", "scene 2: the men-outside picture plays on the door opening, and the stepping-in picture on Mara behind the counter");
 eq(byId.get("nw_title")?.credits?.montage?.length, 12, "the opening titles' montage runs twelve stills");

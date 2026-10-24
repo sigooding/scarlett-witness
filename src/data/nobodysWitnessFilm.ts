@@ -2431,7 +2431,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b41",
      "characterId": "nw_mara",
      "text": "Hold on, I'll call an ambulance.",
-     "silent": true
+     "audioUrl": "/film/voice/s1/14-mara-breathless-hold-on-i-ll-call.mp3"
     },
     {
      "id": "nw_b42",
@@ -2779,7 +2779,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "id": "nw_b56",
      "characterId": "nw_journalist",
      "text": "Are you okay? Where's Sakai?",
-     "silent": true
+     "audioUrl": "/film/voice/s2/21-journalist-concerned-are-you-okay-where.mp3"
     },
     {
      "id": "nw_b57",
@@ -27899,5 +27899,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "23e654ed714b"
+ "builtinRevision": "130e46cd28c2"
 } as unknown as Story;
