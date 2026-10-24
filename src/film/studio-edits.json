@@ -1945,7 +1945,8 @@
       "image": "/film/depth/s1/10-the-shot/cutout-2.png",
       "depth": 0.422
      }
-    ]
+    ],
+    "depthDirection": "right"
    },
    "backgroundTransition": "zoom",
    "backgroundTransitionSpeed": 0.3
@@ -1983,7 +1984,8 @@
       "image": "/film/depth/s1/17-she-runs/cutout-1.png",
       "depth": 0.336
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "26-the-variety-show": {
@@ -2028,7 +2030,8 @@
       "image": "/film/depth/s1/332-the-sedan-blocks-the-lane/cutout-1.png",
       "depth": 0.415
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "333-the-white-light": {
@@ -2044,7 +2047,7 @@
      "pulseAmount": 0.15
     },
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/333-the-white-light/depth.png",
@@ -2066,7 +2069,8 @@
       "image": "/film/depth/s1/333-the-white-light/cutout-4.png",
       "depth": 0.667
      }
-    ]
+    ],
+    "focalPoint": "28% 59%"
    }
   },
   "177-behind-the-counter": {
@@ -2240,7 +2244,8 @@
       "image": "/film/depth/s1/02-vending/cutout-1.png",
       "depth": 0.141
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "329-the-lane-the-watch": {
@@ -2267,7 +2272,7 @@
     ],
     "mode": "static",
     "zoomDuration": 18,
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
@@ -2277,7 +2282,8 @@
       "image": "/film/depth/s1/329-the-lane-the-watch/cutout-1.png",
       "depth": 0.209
      }
-    ]
+    ],
+    "focalPoint": "40% 35%"
    }
   },
   "383-the-empty-lane": {
@@ -2303,9 +2309,9 @@
      }
     ],
     "mode": "static",
-    "focalPoint": "50% 52%",
+    "focalPoint": "74% 68%",
     "zoomDuration": 18,
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
@@ -3373,7 +3379,7 @@
      }
     ],
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s72/69-the-wait/depth.png",
@@ -3387,7 +3393,8 @@
       "image": "/film/depth/s72/69-the-wait/cutout-2.png",
       "depth": 0.261
      }
-    ]
+    ],
+    "focalPoint": "63% 40%"
    }
   },
   "70-the-call": {
@@ -4679,7 +4686,7 @@
   "03-mara-walks": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/03-mara-walks/depth.png",
@@ -4689,7 +4696,8 @@
       "image": "/film/depth/s1/03-mara-walks/cutout-1.png",
       "depth": 0.885
      }
-    ]
+    ],
+    "focalPoint": "52% 48%"
    }
   },
   "04-mara-phone": {
@@ -4705,13 +4713,14 @@
       "image": "/film/depth/s1/04-mara-phone/cutout-1.png",
       "depth": 0.171
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "05-phone-off": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/05-phone-off/depth.png",
@@ -4721,7 +4730,8 @@
       "image": "/film/depth/s1/05-phone-off/cutout-1.png",
       "depth": 0.34
      }
-    ]
+    ],
+    "focalPoint": "37% 37%"
    }
   },
   "328-the-scrap": {
@@ -4737,7 +4747,8 @@
       "image": "/film/depth/s1/328-the-scrap/cutout-1.png",
       "depth": 0.201
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "06-barbershop-doorway": {
@@ -4757,7 +4768,8 @@
       "image": "/film/depth/s1/06-barbershop-doorway/cutout-2.png",
       "depth": 0.654
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "07-old-man": {
@@ -4773,13 +4785,14 @@
       "image": "/film/depth/s1/07-old-man/cutout-1.png",
       "depth": 0.711
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "330-the-red-clip": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/330-the-red-clip/depth.png",
@@ -4789,7 +4802,8 @@
       "image": "/film/depth/s1/330-the-red-clip/cutout-1.png",
       "depth": 0.529
      }
-    ]
+    ],
+    "focalPoint": "60% 40%"
    }
   },
   "09-old-man-stops": {
@@ -4805,7 +4819,8 @@
       "image": "/film/depth/s1/09-old-man-stops/cutout-1.png",
       "depth": 0.094
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "331-he-refuses": {
@@ -4821,7 +4836,8 @@
       "image": "/film/depth/s1/331-he-refuses/cutout-1.png",
       "depth": 0.338
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "11-sakai-mid-fall": {
@@ -4837,13 +4853,14 @@
       "image": "/film/depth/s1/11-sakai-mid-fall/cutout-1.png",
       "depth": 0.856
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "12-masked-man-radio": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/12-masked-man-radio/depth.png",
@@ -4853,7 +4870,8 @@
       "image": "/film/depth/s1/12-masked-man-radio/cutout-1.png",
       "depth": 0.876
      }
-    ]
+    ],
+    "focalPoint": "49% 36%"
    }
   },
   "13-taillights-gone": {
@@ -4881,13 +4899,14 @@
       "image": "/film/depth/s1/13-taillights-gone/cutout-4.png",
       "depth": 0.43
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "14-she-kneels": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
@@ -4897,7 +4916,8 @@
       "image": "/film/depth/s1/14-she-kneels/cutout-1.png",
       "depth": 0.622
      }
-    ]
+    ],
+    "focalPoint": "57% 38%"
    }
   },
   "15-the-grip": {
@@ -4913,13 +4933,14 @@
       "image": "/film/depth/s1/15-the-grip/cutout-1.png",
       "depth": 0.058
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "16-the-key": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/16-the-key/depth.png",
@@ -4929,13 +4950,14 @@
       "image": "/film/depth/s1/16-the-key/cutout-1.png",
       "depth": 0.454
      }
-    ]
+    ],
+    "focalPoint": "58% 41%"
    }
   },
   "18-the-flashlight": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s1/18-the-flashlight/depth.png",
@@ -4945,13 +4967,14 @@
       "image": "/film/depth/s1/18-the-flashlight/cutout-1.png",
       "depth": 0.658
      }
-    ]
+    ],
+    "focalPoint": "59% 61%"
    }
   },
   "20-the-journalist": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
@@ -4961,7 +4984,8 @@
       "image": "/film/depth/s2/20-the-journalist/cutout-1.png",
       "depth": 0.705
      }
-    ]
+    ],
+    "focalPoint": "48% 42%"
    }
   },
   "21-mara-bursts-in-v1": {
@@ -4977,7 +5001,9 @@
       "image": "/film/depth/s2_picks/21-mara-bursts-in-v1/cutout-1.png",
       "depth": 0.554
      }
-    ]
+    ],
+    "focalPoint": "37% 49%",
+    "depthDirection": "left"
    }
   },
   "22-not-his-business": {
@@ -4993,13 +5019,14 @@
       "image": "/film/depth/s2/22-not-his-business/cutout-1.png",
       "depth": 0.426
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "23-behind-the-counter-s2new2": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s2_picks/23-behind-the-counter-s2new2/depth.png",
@@ -5013,7 +5040,8 @@
       "image": "/film/depth/s2_picks/23-behind-the-counter-s2new2/cutout-2.png",
       "depth": 0.213
      }
-    ]
+    ],
+    "focalPoint": "32% 51%"
    }
   },
   "25-two-pairs-of-shoes-v2": {
@@ -5033,13 +5061,14 @@
       "image": "/film/depth/s2_picks/25-two-pairs-of-shoes-v2/cutout-2.png",
       "depth": 0.434
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "24-from-the-floor-s2new2": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
@@ -5053,7 +5082,8 @@
       "image": "/film/depth/s2_picks/24-from-the-floor-s2new2/cutout-2.png",
       "depth": 0.11
      }
-    ]
+    ],
+    "focalPoint": "38% 46%"
    }
   },
   "26-the-variety-show-s2new2": {
@@ -5069,13 +5099,14 @@
       "image": "/film/depth/s2_picks/26-the-variety-show-s2new2/cutout-1.png",
       "depth": 0.187
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "308-clip-under-the-shelf": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s2/308-clip-under-the-shelf/depth.png",
@@ -5085,7 +5116,8 @@
       "image": "/film/depth/s2/308-clip-under-the-shelf/cutout-1.png",
       "depth": 0.465
      }
-    ]
+    ],
+    "focalPoint": "81% 47%"
    }
   },
   "27-the-notebook-v1": {
@@ -5106,7 +5138,8 @@
       "image": "/film/depth/s2_picks/28-the-blue-glow-s2new2/cutout-1.png",
       "depth": 0.269
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "497-eleven-fifty-two": {
@@ -5122,7 +5155,8 @@
       "image": "/film/depth/s72/497-eleven-fifty-two/cutout-1.png",
       "depth": 0.434
      }
-    ]
+    ],
+    "depthDirection": "left"
    }
   },
   "498-open-shut": {
@@ -5138,13 +5172,14 @@
       "image": "/film/depth/s72/498-open-shut/cutout-1.png",
       "depth": 0.417
      }
-    ]
+    ],
+    "depthDirection": "right"
    }
   },
   "499-the-screen": {
    "cinematic": {
     "mode": "static",
-    "depthMotion": "truck",
+    "depthMotion": "push",
     "depthAmount": 0.4,
     "depthSeconds": 5,
     "depthMap": "/film/depth/s72/499-the-screen/depth.png",
@@ -5154,7 +5189,8 @@
       "image": "/film/depth/s72/499-the-screen/cutout-1.png",
       "depth": 0.37
      }
-    ]
+    ],
+    "focalPoint": "50% 35%"
    }
   },
   "72-01-the-piano-plays-on": {

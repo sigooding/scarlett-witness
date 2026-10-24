@@ -630,3 +630,9 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   (his other three lines keep their old directions). Old takes stay on disk. About 530 credits. Nobody has listened.
 - Review page for every picture in play order with its other versions: https://claude.ai/artifact/T2WkAqbiei2XaUMUxf9ngh
   (marks save to its `picks` collection).
+
+## 29. Scene 1's camera always went the same way (24 October)
+- "in scene 1 the camera pans left on almost every scene with cutouts its a bit repetative": every depth shot in scene 1 (23),
+  scene 2 (10) and scene 72 (4) was a sideways truck with no direction set, so all of them took the default and slid the same way.
+  They now alternate: push-ins toward the person on close shots (the focal point from the cut-out), sideways trucks left and right
+  on wider ones, never the same move twice in a row (`pictureLook`; `test:film-backend` checks it).

@@ -1437,9 +1437,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "mode": "static",
-      "focalPoint": "50% 52%",
+      "focalPoint": "74% 68%",
       "zoomDuration": 18,
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
@@ -1637,6 +1637,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.141
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1651,13 +1652,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/03-mara-walks.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "35% 50%",
+      "focalPoint": "52% 48%",
       "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/03-mara-walks/depth.png",
@@ -1699,6 +1700,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.171
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1721,13 +1723,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/05-phone-off.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "35% 50%",
+      "focalPoint": "37% 37%",
       "zoomDuration": 15,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/05-phone-off/depth.png",
@@ -1769,6 +1771,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.201
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1783,7 +1786,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/329-the-lane-the-watch.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "42% 38%",
+      "focalPoint": "40% 35%",
       "zoomDuration": 18,
       "dollyDirection": "right",
       "dollyDistance": 3,
@@ -1809,7 +1812,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.1
        }
       ],
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/329-the-lane-the-watch/depth.png",
@@ -1855,6 +1858,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.654
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1881,7 +1885,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/383-the-empty-lane.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 52%",
+      "focalPoint": "74% 68%",
       "zoomDuration": 18,
       "dollyDirection": "right",
       "dollyDistance": 3,
@@ -1907,7 +1911,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.1
        }
       ],
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/383-the-empty-lane/depth.png",
@@ -1962,6 +1966,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.711
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -1988,13 +1993,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/330-the-red-clip.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 45%",
+      "focalPoint": "60% 40%",
       "zoomDuration": 14,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/330-the-red-clip/depth.png",
@@ -2036,6 +2041,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.094
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2067,6 +2073,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.338
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2108,6 +2115,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.415
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2138,7 +2146,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/333-the-white-light.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "35% 50%",
+      "focalPoint": "28% 59%",
       "zoomDuration": 21,
       "dollyDirection": "left",
       "dollyDistance": 3,
@@ -2154,7 +2162,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        "ghostIntensity": 0.3,
        "pulseAmount": 0.15
       },
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/333-the-white-light/depth.png",
@@ -2220,6 +2228,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.856
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2256,6 +2265,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.422
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2276,13 +2286,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/12-masked-man-radio.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 60%",
+      "focalPoint": "49% 36%",
       "zoomDuration": 20,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/12-masked-man-radio/depth.png",
@@ -2342,6 +2352,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.43
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2366,13 +2377,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/14-she-kneels.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 45%",
+      "focalPoint": "57% 38%",
       "zoomDuration": 17,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
@@ -2428,6 +2439,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.058
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2460,13 +2472,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/16-the-key.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "65% 50%",
+      "focalPoint": "58% 41%",
       "zoomDuration": 16,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/16-the-key/depth.png",
@@ -2528,6 +2540,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.336
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2542,13 +2555,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s1/18-the-flashlight.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "35% 50%",
+      "focalPoint": "59% 61%",
       "zoomDuration": 21,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/18-the-flashlight/depth.png",
@@ -2603,13 +2616,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2/20-the-journalist.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "65% 50%",
+      "focalPoint": "48% 42%",
       "zoomDuration": 22,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
@@ -2640,13 +2653,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2/20-the-journalist.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "65% 50%",
+      "focalPoint": "48% 42%",
       "zoomDuration": 22,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s2/20-the-journalist/depth.png",
@@ -2679,7 +2692,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2_picks/21-mara-bursts-in-v1.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 45%",
+      "focalPoint": "37% 49%",
       "zoomDuration": 20,
       "dollyDirection": "right",
       "dollyDistance": 3,
@@ -2696,6 +2709,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.554
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2735,6 +2749,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.426
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2755,13 +2770,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2_picks/23-behind-the-counter-s2new2.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 45%",
+      "focalPoint": "32% 51%",
       "zoomDuration": 14,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s2_picks/23-behind-the-counter-s2new2/depth.png",
@@ -2820,6 +2835,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.434
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2834,13 +2850,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2_picks/24-from-the-floor-s2new2.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "60% 42%",
+      "focalPoint": "38% 46%",
       "zoomDuration": 16,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s2_picks/24-from-the-floor-s2new2/depth.png",
@@ -2887,6 +2903,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.187
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2903,13 +2920,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s2/308-clip-under-the-shelf.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "42% 38%",
+      "focalPoint": "81% 47%",
       "zoomDuration": 18,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s2/308-clip-under-the-shelf/depth.png",
@@ -2985,6 +3002,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.269
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -18070,6 +18088,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.434
        }
       ],
+      "depthDirection": "left",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -18084,7 +18103,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s72/69-the-wait.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "65% 50%",
+      "focalPoint": "63% 40%",
       "zoomDuration": 19,
       "dollyDirection": "right",
       "dollyDistance": 3,
@@ -18110,7 +18129,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "pulseAmount": 0.15
        }
       ],
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s72/69-the-wait/depth.png",
@@ -18168,6 +18187,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.417
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -18210,13 +18230,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s72/499-the-screen.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "50% 45%",
+      "focalPoint": "50% 35%",
       "zoomDuration": 17,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s72/499-the-screen/depth.png",
@@ -28020,7 +28040,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
        }
       ],
       "mode": "static",
-      "depthMotion": "truck",
+      "depthMotion": "push",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s72/69-the-wait/depth.png",
@@ -28035,6 +28055,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.261
        }
       ],
+      "focalPoint": "63% 40%",
       "filmGrade": false,
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
@@ -28099,5 +28120,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "f65a57c916f2"
+ "builtinRevision": "d8688e979e15"
 } as unknown as Story;
