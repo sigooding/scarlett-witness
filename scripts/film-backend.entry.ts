@@ -440,6 +440,10 @@ check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's
 // Okada (the director, 24 October 2026: "too deep for old japanese man"): all his lines are the takes in his new, older voice
 const okadaLines = allBeats.filter(({ b }) => b.characterId === "nw_okada" && !!b.audioUrl).map(({ b }) => b.audioUrl!);
 check(okadaLines.length >= 19 && okadaLines.every((u) => /--aged\.mp3$/.test(u) && existsSync(join(ROOT, "public", u))), "Okada speaks every line in his new, older voice (the --aged takes)");
+// scene 5 (the director, 24 October 2026): the young officer's phone call is a cautious whisper Vera isn't meant to hear; his four
+// lines are in one voice (the deleted 29 September voice replaced by its stand-in, "Young Detective - NEONOIRE")
+const s5 = allBeats.filter(({ scene }) => scene === "nw_s5").map(({ b }) => b);
+check(s5.some((b) => b.text === "Yes. That name. Yes — the sister is here now." && b.audioUrl === "/film/voice/s5/48-youngofficer-whisper-yes-that-name.mp3") && s5.filter((b) => (b.audioUrl ?? "").includes("youngofficer")).every((b) => /(--yd|whisper)/.test(b.audioUrl!)), "scene 5: the young officer whispers into the phone, all four of his lines in one voice");
 // sound effects (24 October 2026): the shot that hits Mara in scene 70 is heard, and every phone that rings on screen rings
 check(allBeats.some(({ scene, b }) => scene === "nw_s70" && b.text === "A shot." && b.sfxUrl === "/film/sfx/suppressed-shot.mp3"), "scene 70: the shot that hits Mara is heard");
 check(["The phone rings in the empty room.", "The desk phone rings. He picks it up."].every((t) => allBeats.some(({ b }) => b.text?.startsWith(t) && b.sfxUrl === "/film/sfx/phone.mp3")), "the phones ringing in scenes 59 and 96 are heard");

@@ -621,3 +621,12 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   placements and 2 new beds; the one that mattered most is the shot that hits Mara in scene 70, which was silent. Eight new
   effects generated. Details and the full list: FILM.md, "Mara's drawing in 369 and 445; 25 more effects".
 - Credits: about 9,740 for the four picture takes, about 250 for the effects. Nobody has heard the new effects.
+
+## 28. Scene 5: the young officer whispers (24 October)
+- "when young officer says 'yes, that name, yes, the sister is here now' he should be saying that as if vera cant hear him",
+  "may be a cautious whisper?": re-recorded as a cautious whisper into the phone, turned away (about 7 dB under his other lines).
+- His voice from 29 September is deleted from the ElevenLabs workspace, so one new line would have changed voice mid-scene. All
+  four of his scene 5 lines are re-recorded in "Young Detective - NEONOIRE", the voice designed on 7 October to stand in for him
+  (his other three lines keep their old directions). Old takes stay on disk. About 530 credits. Nobody has listened.
+- Review page for every picture in play order with its other versions: https://claude.ai/artifact/T2WkAqbiei2XaUMUxf9ngh
+  (marks save to its `picks` collection).
