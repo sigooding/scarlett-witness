@@ -5046,7 +5046,7 @@
     "depthCutouts": [
      {
       "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
-      "depth": 0.385
+      "depth": 0.638
      }
     ]
    }
@@ -5278,11 +5278,7 @@
     "depthCutouts": [
      {
       "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
-      "depth": 0.097
-     },
-     {
-      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
-      "depth": 0.416
+      "depth": 0.085
      }
     ]
    }

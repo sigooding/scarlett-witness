@@ -18492,7 +18492,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "depthCutouts": [
      {
       "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
-      "depth": 0.385
+      "depth": 0.638
      }
     ],
     "filmGrade": false,
@@ -20231,11 +20231,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "depthCutouts": [
      {
       "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
-      "depth": 0.097
-     },
-     {
-      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
-      "depth": 0.416
+      "depth": 0.085
      }
     ],
     "filmGrade": false,
@@ -28047,5 +28043,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "1b79b67cda35"
+ "builtinRevision": "7d412114fb1e"
 } as unknown as Story;

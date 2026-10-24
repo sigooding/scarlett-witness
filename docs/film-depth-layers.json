@@ -1116,13 +1116,19 @@
    "picture": "public/film/img/vera_run_takes/72-04-walking-very-carefully--r1.jpg",
    "cutouts": [
     {
-     "name": "person 1",
-     "box": [814, 23, 497, 1057],
+     "name": "Vera",
+     "box": [1060, 60, 660, 1476],
+     "people": true,
      "image": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/cutout-1.png",
-     "depth": 0.385
+     "depth": 0.638,
+     "exclude": [
+      [1280, 90, 180, 118],
+      [1285, 195, 68, 90],
+      [1353, 190, 30, 36]
+     ]
     }
    ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "note": "Picture retaken 24 October (the director: \"wheres the rail come from?\" \u2014 the 20 October retake had invented a brass standing rail in the lounge); cut-out remade for the new picture.",
    "depthMap": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/depth.png",
    "depthPlate": "/film/depth/vera_run_takes/72-04-walking-very-carefully--r1/plate.jpg"
   },
@@ -1436,19 +1442,13 @@
    "picture": "public/film/img/vera_run_new/74-17-the-reflection.jpg",
    "cutouts": [
     {
-     "name": "person 1",
-     "box": [582, 156, 133, 171],
+     "name": "Vera",
+     "box": [828, 222, 189, 243],
      "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-1.png",
-     "depth": 0.097
-    },
-    {
-     "name": "person 2",
-     "box": [1403, 361, 79, 261],
-     "image": "/film/depth/vera_run_new/74-17-the-reflection/cutout-2.png",
-     "depth": 0.416
+     "depth": 0.085
     }
    ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "note": "Picture retaken 24 October (the director: \"it has blue umbrella\" \u2014 she left it at the lounge); cut-out remade, the umbrella's cut-out gone.",
    "depthMap": "/film/depth/vera_run_new/74-17-the-reflection/depth.png",
    "depthPlate": "/film/depth/vera_run_new/74-17-the-reflection/plate.jpg"
   },
