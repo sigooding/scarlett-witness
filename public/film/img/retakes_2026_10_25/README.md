@@ -344,3 +344,66 @@ hands, so editing it would inherit them; that entry starts from the in-film fram
 To run one: edit mode (not text-to-image), base first, then the sheets, at the generator's largest landscape size; save
 under the filename above; keep the delivered size. The pictures are **not** installed in the film and still need the
 Topaz upscale pass where they come out under 1920 wide, then `tools/install-film-picture.mjs`.
+
+## Ten follow-up retakes made (25 October 2026)
+
+Generated the ten queued edits from `docs/retakes-2026-10-25-ten-more.md`. Each edit used its specified existing frame
+as the first image reference, followed by the listed character/continuity references. **Storage only:** all originals and
+prior takes are untouched; nothing was deleted, installed into the film, or merged to `main`.
+
+| Stored file | Check / review note |
+|---|---|
+| `194-he-holds-it-without-drinking-r2.jpg` (1376×768) | Cream sketchbook; desk, lamp, cups and Jack's side-on pose retained. |
+| `87-he-writes-nothing-r2.jpg` (1376×768) | Cream book. The pen/page gap is not especially clear; see `87-he-writes-nothing-r2--alt1.jpg` (1376×768), where the blank page and lifted pen are clearer. |
+| `462-a-finger-to-his-lips-r4.jpg` (1376×768) | Hush gesture rebuilt with one hand visible at the lips. The vending machine still appears marked/damaged; see `462-a-finger-to-his-lips-r4--alt1.jpg` (1376×768), a tighter crop with the damaged panel out of view. |
+| `207-the-pink-payphone-r2.jpg` (1376×768) | One pink handset at Jack's ear; Noda and the desk remain in frame. |
+| `538-the-receipts-in-his-hand-r3.jpg` (1376×768) | Close-up restored, with the fan of receipts fully in frame and handset at ear. |
+| `384-the-room-too-big-r2.jpg` (880×1196) | Kept as delivered, although it came out portrait. The landscape `384-the-room-too-big-r2--alt1.jpg` (1376×768) removes the smartphone and retains Vera, the two cups and the apartment. Prefer the alt for review. |
+| `285-the-inside-pocket-r2.jpg` (1376×768) | Jack's hand is flat on the counter and away from his lapel. The generated framing shifts more than the prompt intended; compare with the scene's in-film counter position before use. |
+| `289-for-making-me-r2.jpg` (1376×768) | Two folded notes; they read more like Japanese notes than US dollars, with no clear lettering. |
+| `445-exactly-where-it-was-r2.jpg` (1376×768) | `1:07` removed from the drawing; the `EXCUSE ME` caption remains. |
+| `354-the-altar-photograph-r2.jpg` (1376×768) | Jack and Mrs. Sakai both present. Eye-line is still subtle; `354-the-altar-photograph-r2--alt1.jpg` (1376×768) turns her gaze/head farther toward the altar portrait. |
+
+Four additional alternatives are retained under the `--alt1` names above; none replaces its corresponding primary take.
+All files are unchanged at their generated dimensions (the 1376×768 frames are below the film's 1920-pixel house width).
+No upscaling, resizing, or installation was done. These are review candidates, not approved film assets.
+
+### Item 6 / 384: vote follow-up
+
+Ran a two-option image vote using the landscape 384-r1 base, the room reference and Vera's face sheet. The director selected
+**option 2**, saved without overwriting any prior take as `384-the-room-too-big-r2--alt2.jpg` (1376×768). It keeps Vera and
+the two cups, removes the smartphone, and replaces it with an open notebook. Review/storage only; no resize or film install.
+The rejected option is available in the vote UI's **Unselected files** area; it was not exposed as a local file under this
+repository, so it has not been copied into the retake folder.
+
+## Six additional retakes, two-option votes (25 October 2026)
+
+The director requested six **distinct shots**, each made with a two-option vote. Selected options are saved as new files below;
+all existing takes remain untouched. Four other vote rounds (137, 138, 140 and 213) received no selection and produced no
+saved takes, so they were skipped rather than installed or substituted. Selected alternatives are review-only: nothing was
+installed in the film, resized, or merged to `main`.
+
+| Shot / selected file | Vote | Continuity check / review note |
+|---|---:|---|
+| 139 `139-only-tea-r5.jpg` (1376×768) | Option 1 | Kurose in far-side rear seat, near seat empty, rear door open. **Check orientation:** the car nose appears screen-left, while the brief specifies screen-right for this camera. |
+| 94-01 `94-01-the-clean-hand-r5.jpg` (2848×1600) | Option 1 | Kurose seated across the empty near seat, offering the tea; face kept in shadow. |
+| 368 `368-the-door-closes-r2.jpg` (2048×1152) | Option 2 | Ishida screen-left with cup; Kurose screen-right, watch visible. |
+| 469 `469-what-they-are-told-r2.jpg` (1344×768) | Option 1 | Harada has no glasses on her face. **Check:** glasses in her hand are not clearly visible, and framing remains wide. |
+| 141 `141-he-drinks-r3.jpg` (1536×1024) | Option 1 | Interior positions and tea handoff preserved; watch strap and split lip requested. Delivered at native 3:2, not resized. |
+| 285 `285-the-inside-pocket-r3.jpg` (2784×1504) | Option 2 | Jack at the counter's right end, hand flat on counter and away from lapel; Vera remains soft at the edge. |
+
+The vote tool saves rejected alternatives in its **Unselected files** area; those files were not exposed under this repository
+for copying. The six selected files above are present locally and were not altered after selection.
+
+## Three further retakes before review (25 October 2026)
+
+Three more requested images are stored as new files; no existing take was replaced. The two-option rounds for 87 and 354
+had no selection, so those were saved as single corrective edits after review feedback. The 462 vote selected option 1.
+
+| File | Vote / note |
+|---|---|
+| `87-he-writes-nothing-r3.jpg` | Single corrective edit after both vote options were rejected. Jack's base face was preserved with his actor sheets attached; cream notebook and a visible pen/page gap requested. |
+| `354-the-altar-photograph-r2-jackfix.jpg` | Single corrective edit after the director noted Jack did not look like himself. Started from the existing frame and attached Jack's face/body sheets to reinforce his established identity. Review his likeness and Mrs. Sakai's eye-line before any future film use. |
+| `462-a-finger-to-his-lips-r5.jpg` | Option 1 selected. Jack's face references retained; close crop keeps the vending machine out of frame, with one hush hand visible. |
+
+These are stored for review only. No picture was installed into the film, and no application code or story wiring changed.
