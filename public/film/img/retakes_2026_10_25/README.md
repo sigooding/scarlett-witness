@@ -490,3 +490,57 @@ The director picked all 42 shots on the picker ("done selecting") and said to le
 - **Lamp glows:** 246's two still sit on its street lamp and vending machine, so they are back as they were. 139 has one new
   glow on the car's courtesy light.
 - **The four redos** are briefed as section 7 of `docs/image-brief-2026-10-25.md`, with the faults left in the picks.
+
+## The four redos (§7), made by 2-option vote
+
+Each made with the image-vote option; the director selected one of two. Review-only — nothing installed
+in the film, resized or upscaled. Rejected vote options live in the vote UI's Unselected files.
+
+- `374-the-dead-television-r2.jpg` (7a, 1672×941, option 1) — Vera now wears her long dark charcoal
+  coat open over the cream knit; TV high at the far end stays dark with no face in it. Clean.
+- `175-the-curtain-gap-r2.jpg` (7b, 1360×768, option 2 of the first vote) — still 8 men (two per car),
+  so the director asked for 5 instead; superseded by r3.
+- `175-the-curtain-gap-r3.jpg` (7b again, 2729×1536, option 2) — curtain pull restored: lace curtain
+  and a hand pulling it aside fill the left foreground, outside composed fresh (four cars, headlights
+  in rain). **Flag: on a count only 4 walking men are visible, not the 5 asked for** — the leftmost car
+  is half-hidden behind the curtain. Director to say whether to run it again for five.
+- `213-clutch-each-other-r4.jpg` (7c, 1536×1024, option 2) — no torch and no beam; only the bare
+  kitchen bulb, pantry black behind the couple. **Flag: 3:2, needs the install tool's 16:9 crop; a
+  small dark object still sits just behind Jack's head.**
+- `87-he-writes-nothing-r4.jpg` (7d, 1376×768, option 1) — built from the earlier desk pictures
+  (87-r1 + room master 164 for orientation, 86 overhead for the props). Desk orientation kept as the
+  master: long side to camera, Jack at the right end in profile facing left, sofa behind him. Green
+  lamp at the left end, black rotary phone at the right end in the foreground, envelope bare with no
+  book on top, pen held off the paper. Clean.
+- Depth for 374 must be re-made if r2 is installed; 374-r2 and 87-r4 are under 1920 wide.
+
+## Inn raid inserts (scenes 39–49), stored for review — NOT installed
+
+Director, later on 25 October: "leave it — don't install just log them and save the images — don't
+replace or delete anything. just store images for review." So: **review-only. Nothing has been
+installed, wired, resized, upscaled, replaced or deleted; no `src/` or story file was touched.**
+Intended slots (if the director later says install) and intended plays-on lines are noted for reference
+only. Each was made with the 2-option image vote, edited from a neighbouring frame at the director's
+request so rooms, light and Jack do not drift. Rejected options (fresh first attempts for all three
+first beats; `raid-43-gutter` and `raid-44-corridor-low` in the second batch) were selected by neither
+side and were not saved.
+
+- `raid-39-they-split-r1.jpg` (2848×1600, option 1; edited from `175-the-curtain-gap-r3.jpg`) —
+  intended for scene 39 on "They don't rush. They split without speaking." Curtain pull kept in the
+  left foreground, four cars in headlights. Men are dispersed, no longer a line: 4 visible, one at the
+  far right walking away round a car. Clean as a review still.
+- `raid-41-corridor-r1.jpg` (1365×768, option 2; edited from `s41/177-boots-below.jpg`) — intended
+  for scene 41 on "Jack at the top of the stairs. He hears boots below. He goes the other way, toward
+  the bath." Same stairwell shot with the foreground gunman removed: empty stairs, Jack alone at the
+  top landing turning away. Clean; under 1920 wide.
+- `raid-42-first-hit-r1.jpg` (1344×768, option 1; edited from `s42/210-the-third-time.jpg`) —
+  intended for scene 42 on "Once. Twice. It won't move.", before 210's third hit. Same bathroom/tub,
+  window whole, corridor empty. **Flags: Jack strikes with an open hand flat on the glass rather than
+  the heel of his hand on the frame, and faint crack lines are already in the glass; under 1920 wide.**
+- `raid-47-behind-truck-r1.jpg` (2752×1536, option 2; edited from `s47/222-mud-and-impacts.jpg`) —
+  intended for scene 47 on "Jack runs. Gunfire kicks up mud behind him. He dives behind the truck."
+  Jack mid-dive for the pickup, mud impacts behind him, one gunman small at the building behind.
+  **Flag: the distant gunman fires with a visible muzzle flash, reading unsuppressed.**
+
+Not made / not saved: `raid-43-gutter` (roof slide, scene 43) and `raid-44-corridor-low` (Jack low
+along the corridor, scene 44→45) — both vote pairs were passed on, so no file exists for either.
