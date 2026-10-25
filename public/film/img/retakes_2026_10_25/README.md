@@ -262,3 +262,57 @@ verified landscape 16:9.
   in. The door closes.", 368 quote trimmed, lamp glows re-placed for 139/140).
 - §5 (5a–5u) and the unchosen 2c/4d/4e/4g/4j retakes remain unmade; 161's extra leg, 303's office and 519's bun among them.
 - Depth remakes (374, 73-09, 512, 460, and 354/364 if their new takes change again) still wait on the final pictures.
+
+## Tinted-window car retakes, director-voted (25 October 2026)
+
+The director requested retakes with voting, tinted car windows, and consistent characters. Three distinct shots were
+made with two-option votes; originals were not overwritten. These are review takes, **not installed in the film**.
+Generator was asked for its largest landscape 16:9 output; files are preserved as delivered, without resizing.
+
+| File | Vote | Continuity instructions / references |
+|---|---|---|
+| `137-he-knows-this-car-r4.jpg` | Option 2 | Edit of 137-r3, with Ishida's body and face sheets attached. Dark smoked glazing hides occupants; all doors shut; no raincoat. |
+| `138-the-door-opens-r3.jpg` | Option 1 | Uses the selected 137-r4 plus Ishida's body and face sheets. Same setup and opaque tint; only far-side pavement light changes, visible doors stay shut. |
+| `139-only-tea-r4.jpg` | Option 2 | Selected 137-r4 for car/look plus Ishida body/face and Kurose sheet. Close doorway crop excludes hinge/door panel; near seat empty, Kurose far rear-left; tinted background glazing. |
+
+Remaining work: review full-resolution outputs for geometry/identity, continue the other requested retakes and car
+continuity shots (140, 94-01, interiors and 142 as needed). Film installation, dimension checks/upscaling, story wiring
+and any depth rebuilds remain pending. No application code or live-film assets were changed in this batch.
+
+## Next three tinted-window continuity shots (25 October 2026)
+
+Director requested storage only: no overwrite, deletion or installation. Saved original generator outputs at new paths:
+
+| File | Vote | References / intended continuity |
+|---|---|---|
+| `140-where-are-we-going-r5.jpg` | Option 2 | Selected 137-r4 plus Ishida body/face sheets; outside looking up at station, opaque tinted glazing. |
+| `94-01-the-clean-hand-r4.jpg` | Option 1 | Selected 139-r4, Kurose sheet, model-hand/watch reference; near seat empty, tea offered across it, black leather watch strap. |
+| `141-he-drinks-r2.jpg` | Option 2 | Ishida body/face, Kurose sheet, selected 139-r4 cabin, watch reference; inside looking back, Ishida screen-left, Kurose screen-right, dark tinted windows. |
+
+All prompts requested largest available landscape output. No resizing or film installation performed.
+The vote tool returned selected files only; its documented “Unselected files” folder was not found under /home/user,
+so unselected candidates could not be copied into the repository. Do not describe them as preserved locally.
+Full-resolution quality/dimension checks and remaining retakes are pending.
+
+## Later inn shots, director-voted (25 October 2026)
+
+Storage only; new filenames, no overwrite, deletion, resizing or film installation. All three votes selected option 2.
+
+| File | Brief | References / requested correction |
+|---|---|---|
+| `177-behind-the-counter-r2.jpg` | 4f follow-up | Existing 177-r1, lobby 176, masked-man and Mr Noda sheets. Suppressed upward burst without muzzle flash, same desk and character continuity. |
+| `178-staff-side-r1.jpg` | 4g | Lobby 176, selected 177-r2, masked-man sheet. Souvenir case shattering, masked gunman advancing toward stairs, Noda hidden, CRT baseball. |
+| `462-a-finger-to-his-lips-r1.jpg` | 4j | Original 462 and Jack face/body sheets. Natural vertical shushing finger, intact vending machine before later gunfire. |
+
+Largest available landscape resolution requested; delivered files retained unchanged. Detailed visual/dimension review
+remains pending. Vote tool returned selected files only, not local paths for rejected alternatives.
+
+### 462: looser original-shot reference
+
+`462-a-finger-to-his-lips-r3.jpg`: director selected option 1. Original s45/462 supplied only as loose framing/location/
+atmosphere reference, plus Jack face/body sheets. New prompt allowed stance, head angle and framing changes and requested
+fresh hand/wrist/arm anatomy rather than preserving the faulty original gesture. Stored as delivered under a new filename;
+no overwrite, deletion, resizing or installation. Previous sheets-only r2 vote selected neither option and saved no file.
+
+**Director review of 462-r3:** still has two right hands. This take is faulty, retained for review/history only,
+not approved for installation. Director requested merging the stored assets as-is without further generation.
