@@ -219,6 +219,36 @@ installed. The per-turn image limit cut the batch at ten pictures; 5k (469) and 
   (office continuity), 5u `161-stool-three-r1` (two legs, correct stool).
 - After §5: the five unchosen retakes (87, 460, 175, 178, 462) and the small in-film faults (194 sketchbook colour,
   177 suppressed burst, 207 handset height, 354 gaze).
+
+## Fifth batch, 25 October (night): brief §5 part 2 (5k–5u) — §5 now complete
+
+**Orientation fix.** The director reported portrait outputs. Those were the *rejected* options of the two-option votes and
+were discarded; every saved file was re-measured and is landscape, 1.77–1.79:1. From this batch on every prompt opens with
+"WIDE 16:9 HORIZONTAL LANDSCAPE FILM FRAME — strictly horizontal, never portrait or square". 469, 231 and 232 were made as
+votes; the director picked 469 option 1, 231 option 1, 232 option 2. Rejected alternatives are not kept on disk.
+
+| File | Item | Result / flags |
+|---|---|---|
+| `469-what-they-are-told-r1.jpg` | 5k, voted | No glasses on her face; the pair is held in her hand at chin level. **Flag: the frame is a wider newsroom set-up with wall TVs, not the original desk close-up.** |
+| `231-the-box-r1.jpg` | 5l, voted then superseded | Director: "tape and book too small". Kept as the small-alt. `231-the-box-r2.jpg` is the working take: the SHIOHAMA cassette in its cracked case and the plain black notebook now dominate the frame on the perforated bench, torn padded envelope in his hands, no cardboard box. |
+| `232-the-wine-red-dress-r1.jpg` | 5m, voted | Held, not worn: the wine-red slip hangs over her cream knit by its straps, knit collar/sleeves visible; mirror framing, bed/box/window/lamp behind. Clean. |
+| `70-the-call-r1.jpg` | 5n, superseded | Face/dress consistent, but chest-up and reads seated. `70-the-call-r2.jpg` is the working take: wide, she is mid-rise off the bar stool, receiver to ear, one hand on the bar; the phone is now a period corded bar phone (no mobile), pianist/clock/bottles kept. |
+| `73-09-she-cannot-breathe-r1.jpg` | 5o | Original rain-street frame and pose kept exactly; the black mascara streaks are gone, only faint under-eye smudges. Clean. |
+| `88-the-walkway-r1.jpg` | 5p | Last door closed, bare doormat, nobody in frame; dawn walkway, dripping rail, rail lines beyond. Clean. |
+| `106-play-r1.jpg` | 5q | Same silver-grey portable recorder as 105/509 (tape window left, round speaker right, red piano key), white cuff pressing PLAY, journalist photo frame beside it. Clean. |
+| `512-he-hasnt-stopped-r1.jpg` | 5r | Harada and Vera both turned to the glass office, where Jack talks with a moving hand. Note: Harada keeps her glasses here — the no-glasses note applies only to 469. |
+| `519-not-all-right-r1.jpg` | 5s | Hair in a low loose bun with loose strands, white collared shirt under the dark coat, storeroom/bulb/drawings/cloth bag kept. Clean. |
+| `303-he-left-a-statement-r1.jpg` | 5t | Same room language as 143: windows right, serving hatch/clock back wall, steel desks; young detective with receiver, open box and radio on the desk. Clean. |
+| `161-stool-three-r1.jpg` | 5u | Exactly two natural legs; Vera lowering onto the stool on Jack's LEFT (between him and Kaneko), red bird clip in place. Kaneko matches her sheet (elderly woman, cardigan/apron). **Flag: the location's hand-painted kanji sign is legible, as it is in the s100 plates; confirm that stays.** |
+
+### Remaining after §5
+
+- The five unchosen retakes, fresh attempts: 2c `87-he-writes-nothing-r1`, 4d `460-parked-crooked-r1`, 4e `175-the-curtain-gap-r1`,
+  4g `178-staff-side-r1`, 4j `462-a-finger-to-his-lips-r1`.
+- Small faults in pictures already in the film (no scene rebuilds): 194 cream sketchbook, 177 suppressed burst without flash,
+  207 handset up at the ear, 354 Mrs. Sakai's gaze past Jack to the altar photo.
+- Director's review of all parked takes before any install; then upscale + `install-film-picture.mjs`, depth remakes (374,
+  73-09, 512, 460), and the story.json/lamp-glow wiring from the 25-October handoff.
 - At install: upscale the sub-1920 pictures (Topaz, as the morning batch had), then `tools/install-film-picture.mjs`; the
   story.json/`studio-edits.json` wiring in the 25-October handoff still applies (94-01 new step, 141 moved onto "Ishida gets
   in. The door closes.", 368 quote trimmed, lamp glows re-placed for 139/140).
