@@ -744,6 +744,25 @@ size, and never overwrite. For edits, attach the base first, then the references
 - Check: the lamp is on his left in the picture and the phone on his right; the pen does not touch the paper; no book on the
   envelope.
 
+**7e.** `retakes_2026_10_25/271-not-yet-r3.jpg` (scene 21). The director, 25 October (night): "the office in that picture
+should look like" 194.
+- Plays on: "The sketchbook is on the desk between them. Jack's hand rests on its cover." (through "She nods. Believes him.")
+- Today's 271 (r2, picked for Vera seated, by day, with the two paper cups) has a different room: a wide window with a train
+  outside, no lamp, the phone on the cupboard. `271-not-yet-r1` has 194's room, but it is night and Vera stands.
+- An edit of the film's `s21/271-not-yet.jpg`. Attach that base, then `s21/194-he-holds-it-without-drinking.jpg` (the room).
+- Prompt: *Keep this picture exactly: the same camera, the same two people in the same places and poses (Vera seated on the
+  left in her dark coat and cream knit, hands clasped; Jack seated on the right, his hand on the closed sketchbook), the same
+  two paper coffee cups, the same grey daylight. Change only the room, so it is the office in the second picture: one window
+  with venetian blinds and rain on the glass; under it the grey steel cupboard with a row of binders; the frosted-glass door
+  left of the window; the grey filing cabinet with the small CRT on top, right of the window; the brown sofa on the right;
+  the worn dark walnut desk with the green-shaded brass banker's lamp at its left end and the black rotary telephone on the
+  desk at its back right corner, and no telephone anywhere else. Match the second picture's light and colour.* + section 2's
+  style line (day).
+- Cost: about 675 credits at the default size and about 1,100 at 4K. It was priced on 25 October (ElevenLabs flow
+  `Cdr6jFrlEMdFCGnXGoOI`, with both pictures attached) but not run: the director stopped it to review the other new pictures
+  first, and about 11 credits are left.
+- Check: Vera seated, two paper cups, daylight, the lamp at the desk's left end, the phone on the desk.
+
 **Faults left in the picks now in the film** (optional; the director chose these takes knowing them):
 - **204 (r2):** Mrs. Sakai no longer pours, though the line is "pours Jack tea she doesn't want to pour". An edit of the film's
   `s29/204-the-tea-she-does-not-want-to-pour.jpg` could put the pot in her hands, mid-pour, changing nothing else.
