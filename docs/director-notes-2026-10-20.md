@@ -726,3 +726,22 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   They are saved in `public/film/img/retakes_2026_10_25/`, not in the film: they go in as one sequence once 138 and 139
   exist. The next 139 leaves the door out of frame (the brief, 6e).
 - **The ElevenLabs account is out of credits:** 659 left, and a 4K picture costs 1,100 to 1,600.
+
+## 37. The picks from the picker, and the last shot (25 October, night)
+- **"done some they need a review", "maybe a picker?", "done selecting".** Each of the 82 new takes was checked, and a picker
+  page showed every take of the 42 shots beside the film's picture. The director picked all 42.
+  - 33 are in the film, including a new picture in montage 53 where the window goes dark.
+  - Five stay as they were.
+  - Four are to be redone, with the director's notes:
+    - 374: "she has no coat on";
+    - 175: "too many bad guys";
+    - 213: "ignore the torch it keeps floating mid air";
+    - 87: "lamp to left of him phone to right".
+- **"leave upscaling for now."** The 27 small picks are only enlarged to 1920 wide, with no Topaz.
+- **"can you merge first."** The picks were merged before anything else. Depth was off on three shots until it was made again
+  the same night.
+- **"ok add the flags."** The four redos and the faults left in the picks (204: she no longer pours; 70: Vera still seated) are
+  written into the image brief, section 7.
+- **"on very last shot at kenekos have close shot thats slowly pulls out in the pause on them part."** The last picture now
+  starts close on Vera and Jack and pulls slowly out to all three at the counter. The hold is longer, so it rests on them before
+  the credits.

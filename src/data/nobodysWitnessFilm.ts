@@ -6282,6 +6282,26 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "lights": [
+       {
+        "x": 76,
+        "y": 12.5,
+        "color": "#e3f1ff",
+        "size": 14,
+        "intensity": 0.35,
+        "pulseSeconds": 2.2,
+        "pulseAmount": 0.12
+       },
+       {
+        "x": 54,
+        "y": 8,
+        "color": "#ffcf8a",
+        "size": 6,
+        "intensity": 0.35,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.1
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -12398,13 +12418,29 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s37/460-parked-crooked.jpg",
      "cinematic": {
-      "mode": "zoom-hold",
+      "mode": "static",
       "focalPoint": "50% 45%",
       "zoomDuration": 20,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.34,
+      "depthSeconds": 5,
+      "depthDirection": "left",
+      "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+      "depthPlate": "/film/depth/s37/460-parked-crooked/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s37/460-parked-crooked/cutout-1.png",
+        "depth": 0.514
+       },
+       {
+        "image": "/film/depth/s37/460-parked-crooked/cutout-2.png",
+        "depth": 0.594
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -19219,13 +19255,24 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "animaticMark": "73",
    "background": "/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
    "cinematic": {
-    "mode": "zoom-hold",
+    "mode": "static",
     "focalPoint": "50% 60%",
     "zoomDuration": 17,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 5,
+    "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
+      "depth": 0.825
+     }
+    ],
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -22807,6 +22854,30 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "depthMotion": "truck",
+      "depthAmount": 0.4,
+      "depthSeconds": 12,
+      "depthDirection": "right",
+      "depthMap": "/film/depth/s82a/512-he-hasnt-stopped/depth.png",
+      "depthPlate": "/film/depth/s82a/512-he-hasnt-stopped/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-1.png",
+        "depth": 0.364
+       },
+       {
+        "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-2.png",
+        "depth": 0.714
+       },
+       {
+        "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-3.png",
+        "depth": 0.549
+       },
+       {
+        "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-4.png",
+        "depth": 0.102
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -25491,6 +25562,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "lights": [
+       {
+        "x": 54,
+        "y": 18.5,
+        "color": "#ffc56b",
+        "size": 8,
+        "intensity": 0.4,
+        "pulseSeconds": 6,
+        "pulseAmount": 0.15
+       }
+      ],
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -28099,13 +28181,17 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s100/159-she-doesnt-turn.jpg",
      "cinematic": {
-      "mode": "dolly",
+      "mode": "dolly-zoom",
       "focalPoint": "35% 50%",
       "zoomDuration": 21,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
+      "dollyZoomDirection": "pull",
+      "dollyZoomAmount": 1.7,
+      "dollyZoomDuration": 9.5,
+      "dollyZoomOrigin": "89% 55%",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -28113,7 +28199,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "backgroundTransitionSpeed": 0.9,
      "afterBeatTargetSceneId": "nw_credits",
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 6
+     "afterBeatDelaySeconds": 11.5
     }
    ],
    "hotspots": [],
@@ -28317,6 +28403,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "volumetricShafts": false,
       "colorGrade": "midnight-teal"
      },
+     "/film/img/s37/460-parked-crooked.jpg": {
+      "mode": "static",
+      "depthMotion": "truck",
+      "depthAmount": 0.34,
+      "depthSeconds": 5,
+      "depthDirection": "left",
+      "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+      "depthPlate": "/film/depth/s37/460-parked-crooked/plate.jpg",
+      "depthCutouts": [
+       {
+        "image": "/film/depth/s37/460-parked-crooked/cutout-1.png",
+        "depth": 0.514
+       },
+       {
+        "image": "/film/depth/s37/460-parked-crooked/cutout-2.png",
+        "depth": 0.594
+       }
+      ],
+      "filmGrade": false,
+      "volumetricShafts": false,
+      "colorGrade": "midnight-teal"
+     },
      "/film/img/s72/69-the-wait.jpg": {
       "lights": [
        {
@@ -28441,5 +28549,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "5857f12f5585"
+ "builtinRevision": "2b8fdf7e7e1a"
 } as unknown as Story;

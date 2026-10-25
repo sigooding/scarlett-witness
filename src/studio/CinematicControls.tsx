@@ -626,6 +626,15 @@ export function CinematicControls({
                 </Field>
               </div>
 
+              <Field label="Zoom centre (where it pushes toward or pulls out from — CSS % e.g. '88% 55%')">
+                <input
+                  className={inputCls}
+                  placeholder="50% 50%"
+                  value={c.dollyZoomOrigin ?? ""}
+                  onChange={(e) => set({ dollyZoomOrigin: e.target.value || undefined })}
+                />
+              </Field>
+
               <p className="border border-cyan-neon/20 bg-cyan-neon/5 p-2 font-type text-[9px] text-paper/55">
                 The classic <b className="text-cyan-neon">Hitchcock vertigo</b>: push in, pull out, or breathe both ways. Add{" "}
                 <b className="text-cyan-neon">blur</b> to soften the moving background — pair it with a{" "}

@@ -481,7 +481,12 @@ The director picked all 42 shots on the picker ("done selecting") and said to le
   - 175 "too many bad guys";
   - 213 "ignore the torch it keeps floating mid air";
   - 87 "lamp to left of him phone to right".
-- **Pending:**
-  - **Depth:** turned off on 460, 73-09 and 512 until their layers are made again from the new pictures. The old plates and
-    cut-outs would have shown the old pictures.
-  - **Lamp glows:** turned off on 139 and 246 until they are placed again.
+- **Depth, made again the same night** from the new pictures (Depth Anything V2 Small, BiRefNet or U2-Net cut-outs, LaMa
+  plates), each checked with `tools/review-depth-maps.py` and its move recorded with `tools/depth-frames.mjs`:
+  - **460:** now has people, so it has a cut-out each for Jack (0.514) and Mrs. Noda (0.594).
+  - **73-09:** Vera at 0.825 (`"cutoutDepth": "matte"`, her feet out of shot).
+  - **512:** Harada and Vera (0.364), the two men at desks (0.714, 0.549), and Jack in the glass office (0.102, his box drawn by
+    hand).
+- **Lamp glows:** 246's two still sit on its street lamp and vending machine, so they are back as they were. 139 has one new
+  glow on the car's courtesy light.
+- **The four redos** are briefed as section 7 of `docs/image-brief-2026-10-25.md`, with the faults left in the picks.

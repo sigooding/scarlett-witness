@@ -701,6 +701,60 @@ The film's maintainer made section 1's pictures the same day. Their check is at 
 
 ---
 
+# 7. After the director's picks (25 October, night): four redos, and the faults left in the film
+
+The director picked every shot on the picker; 33 picks are in the film (see the end of `retakes_2026_10_25/README.md`). These four
+were marked "redo", with the note quoted. Save each as the next free `rN` beside its earlier takes, at the generator's largest
+size, and never overwrite. For edits, attach the base first, then the references.
+
+**7a.** `retakes_2026_10_25/374-the-dead-television-r2.jpg` (scene 27A). The director: "she has no coat on".
+- Plays on: "Vera looks up at the dead television. Somewhere in the dark glass, her own face."
+- An edit of `retakes_2026_10_25/374-the-dead-television-r1.jpg`, which has the television in the right place.
+- Attach: that base, then `s27a/292-she-was-here.jpg` (the shot just before, her coat) and `sheets/vera.jpg`.
+- Prompt: *Keep this picture exactly: the bar's storeroom, the beer crates, the television high on its shelf at the far end, dark
+  and switched off, with no reflection in it, and Vera crouched looking up at it. Change only her clothes: she wears her long dark
+  charcoal wool coat, open over the cream knit, as in the second image.* + section 5's style line.
+- Check: the coat is the one in 292; the screen stays dark with no face in it.
+
+**7b.** `retakes_2026_10_25/175-the-curtain-gap-r2.jpg` (scene 39). The director: "too many bad guys".
+- Plays on: "Four black cars in an arc across the lot, headlights on, rain visible only inside the beams. Eight men step out, two
+  from each car."
+- An edit of `retakes_2026_10_25/175-the-curtain-gap-r1.jpg`.
+- Prompt: *Keep this picture exactly: the curtain edge and fingertips in the foreground, the four black saloons, their headlights
+  through the rain. Change only the men: exactly eight, two standing by each car, no more. Nobody else anywhere in the lot.* +
+  section 4's style line.
+- Check: count them, eight; two to a car.
+
+**7c.** `retakes_2026_10_25/213-clutch-each-other-r4.jpg` (scene 46). The director: "ignore the torch it keeps floating mid air".
+- Plays on: "Jack pushes Mr. Noda into the pantry beside his wife. The old couple clutch each other in the dark."
+- An edit of `retakes_2026_10_25/213-clutch-each-other-r3.jpg`, the most rushed of the three.
+- Prompt: *Keep this picture exactly: Jack mid-shove with his coat swinging, the old couple clinging to each other in the pantry
+  doorway. Change only the light: there is no torch and no torch beam anywhere in the picture. The only light is the bare bulb
+  in the kitchen, hard and low, and the pantry behind them is black.* + section 4's style line.
+- Check: no torch, no beam, no glowing object in the air.
+
+**7d.** `retakes_2026_10_25/87-he-writes-nothing-r4.jpg` (scene 77). The director: "lamp to left of him phone to right".
+- Plays on: "He picks up a pen to write something on the envelope. He holds it over the paper for a long time."
+- An edit of `retakes_2026_10_25/87-he-writes-nothing-r1.jpg` (the director's earlier vote: the desk the room master's way).
+- Attach: that base, then `s77/86-the-clean-envelope.jpg` (the shot just before, from above).
+- Prompt: *Keep this picture exactly: the room, the desk, Jack's pose with the pen held still above the envelope. Change only the
+  things on the desk. The green banker's lamp stands on the desk to the left of him and the black rotary telephone to the right
+  of him, as in the second image, where the lamp is top left and the telephone top right. The green notebook is already inside
+  the kraft envelope (it shows only as a bulge); nothing lies on top of the envelope.* + section 2's style line.
+- Check: the lamp is on his left in the picture and the phone on his right; the pen does not touch the paper; no book on the
+  envelope.
+
+**Faults left in the picks now in the film** (optional; the director chose these takes knowing them):
+- **204 (r2):** Mrs. Sakai no longer pours, though the line is "pours Jack tea she doesn't want to pour". An edit of the film's
+  `s29/204-the-tea-she-does-not-want-to-pour.jpg` could put the pot in her hands, mid-pour, changing nothing else.
+- **70 (r1):** Vera is still seated on "She stands up."
+- **140 and 141, kept as they were:** both show Ishida inside the car already, before "Ishida gets in". The director kept them,
+  and 94-01 was not added.
+- **27 pictures were enlarged, not upscaled:** they went in at 1920×1080, enlarged from about 1376×768 by the install tool. A
+  Topaz pass can replace them later. The list is in the README.
+
+---
+
 # Not for you: free fixes, no new picture
 
 Listed in `docs/director-picks-2026-10-25.md` and applied by the film's maintainer once the director agrees:

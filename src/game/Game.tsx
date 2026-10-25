@@ -476,6 +476,9 @@ export function cinematicLayer(c: CinematicSettings | undefined, url: string, op
     style.backgroundSize = "auto 122%";
     style.backgroundPosition = "center center";
   }
+  // A dolly-zoom scales about its origin: the frame's centre unless the shot names one, so a pull-out can start close on
+  // people away from the middle. Keyed on rawMode so a `still` layer freezes about the same point.
+  if (rawMode === "dolly-zoom" && c?.dollyZoomOrigin) style.transformOrigin = c.dollyZoomOrigin;
   const className = [
     mode === "pan"
       ? "cin-pan"

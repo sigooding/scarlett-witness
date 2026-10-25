@@ -9,6 +9,28 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The director's 25 October picks; the last shot pulls out (25 October 2026, night)
+
+* **The picks.** The director chose a take for each of 42 shots on the picker page (its `picks` store; the list and the check
+  are at the end of `public/film/img/retakes_2026_10_25/README.md`).
+  * 33 are in the film, each old picture archived first, including `montage53/05b.jpg`, the window gone dark, after 05 in
+    montage 53.
+  * Five stay as they were (354, 140, 141, 142, and no 94-01).
+  * Four are to be redone (374, 175, 213, 87), briefed as section 7 of `docs/image-brief-2026-10-25.md`.
+  * No Topaz this time, as the director asked: the 27 under 1920 wide are enlarged to 1920×1080 by `install-film-picture.mjs`.
+* **Depth made again** for 460 (now with Jack and Mrs. Noda cut out), 73-09 and 512. 246's lamp glows are back, and 139 has one
+  new glow on the car's courtesy light.
+* **The last shot pulls out.** The director: "on very last shot at Kaneko's have close shot that slowly pulls out in the pause".
+  * 159 ("The three of them in the steam.") is a dolly-zoom pull, set in its `pictureLook`. It starts at 1.7× close on Vera and
+    Jack and eases out over 9.5 s to the whole counter, Kaneko coming in from the left.
+  * The hold is now 11.5 s (`beats.nw_s100.last.afterBeatDelaySeconds`), so the full frame rests about 2 s before the fade to
+    the credits.
+  * The pull scales about a new cinematic field, `dollyZoomOrigin` (a CSS transform-origin, here "89% 55%"), because Jack and
+    Vera sit right of centre. It has a Studio control ("Zoom centre", in the dolly-zoom settings) and is in the film backend's
+    registry. Without it a dolly-zoom still scales about the frame's centre.
+  * The start is 1.7× on a 1920-wide picture, so the first frames are softer than the rest. A Topaz pass on 159 would sharpen
+    them.
+
 ## Nine of the 25 October retakes in the film; Kurose's car tried (25 October 2026, later)
 
 * **The nine.** The director said yes to the retakes that passed the check of `public/film/img/retakes_2026_10_25/`. They

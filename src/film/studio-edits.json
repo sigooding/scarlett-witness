@@ -256,7 +256,7 @@
   },
   "nw_s100": {
    "last": {
-    "afterBeatDelaySeconds": 6
+    "afterBeatDelaySeconds": 11.5
    }
   }
  },
@@ -6107,6 +6107,120 @@
       "depth": 0.769
      }
     ]
+   }
+  },
+  "460-parked-crooked": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.34,
+    "depthSeconds": 5,
+    "depthDirection": "left",
+    "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+    "depthPlate": "/film/depth/s37/460-parked-crooked/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s37/460-parked-crooked/cutout-1.png",
+      "depth": 0.514
+     },
+     {
+      "image": "/film/depth/s37/460-parked-crooked/cutout-2.png",
+      "depth": 0.594
+     }
+    ]
+   }
+  },
+  "73-09-she-cannot-breathe": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 5,
+    "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
+      "depth": 0.825
+     }
+    ]
+   }
+  },
+  "512-he-hasnt-stopped": {
+   "cinematic": {
+    "mode": "static",
+    "depthMotion": "truck",
+    "depthAmount": 0.4,
+    "depthSeconds": 12,
+    "depthDirection": "right",
+    "depthMap": "/film/depth/s82a/512-he-hasnt-stopped/depth.png",
+    "depthPlate": "/film/depth/s82a/512-he-hasnt-stopped/plate.jpg",
+    "depthCutouts": [
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-1.png",
+      "depth": 0.364
+     },
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-2.png",
+      "depth": 0.714
+     },
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-3.png",
+      "depth": 0.549
+     },
+     {
+      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-4.png",
+      "depth": 0.102
+     }
+    ]
+   }
+  },
+  "246-the-can": {
+   "cinematic": {
+    "lights": [
+     {
+      "x": 76,
+      "y": 12.5,
+      "color": "#e3f1ff",
+      "size": 14,
+      "intensity": 0.35,
+      "pulseSeconds": 2.2,
+      "pulseAmount": 0.12
+     },
+     {
+      "x": 54,
+      "y": 8,
+      "color": "#ffcf8a",
+      "size": 6,
+      "intensity": 0.35,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.1
+     }
+    ]
+   }
+  },
+  "139-only-tea": {
+   "cinematic": {
+    "lights": [
+     {
+      "x": 54,
+      "y": 18.5,
+      "color": "#ffc56b",
+      "size": 8,
+      "intensity": 0.4,
+      "pulseSeconds": 6,
+      "pulseAmount": 0.15
+     }
+    ]
+   }
+  },
+  "159-she-doesnt-turn": {
+   "cinematic": {
+    "mode": "dolly-zoom",
+    "dollyZoomDirection": "pull",
+    "dollyZoomAmount": 1.7,
+    "dollyZoomDuration": 9.5,
+    "dollyZoomOrigin": "89% 55%"
    }
   }
  },

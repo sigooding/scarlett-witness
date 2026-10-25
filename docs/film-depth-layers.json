@@ -4,7 +4,6 @@
   "73-two-small-figures": "Vera and Jack, small",
   "74-twenty-metres-apart": "Vera and Jack",
   "75-one-desperate-blow": "Vera and Jack",
-  "88-the-walkway": "Vera",
   "91-grey-light": "Vera",
   "104-the-newsroom": "the newsroom staff",
   "109-the-fortieth-floor": "two at the desk",
@@ -82,7 +81,7 @@
   "73-06-her-face--70-not-elegantly-badly-playframe": "automatic: 1 found",
   "73-07-heels-on-wet-pavement": "automatic: 1 found",
   "73-08-she-slips--70-not-elegantly-badly-playframe": "automatic: 1 found",
-  "73-09-she-cannot-breathe": "automatic: 1 found",
+  "73-09-she-cannot-breathe": "Vera",
   "73-10-a-car-passes": "automatic: 1 found",
   "73-11-the-vending-machine--71-the-machine-glows-v2": "automatic: 1 found",
   "73-13-on-red": "automatic: 1 found",
@@ -128,7 +127,8 @@
   "521-somebody-has-to-look": "vera, jack",
   "436-he-wrote-to-vera": "mara",
   "186-everybody-sees-him": "repairman, jack, sleeping woman, family",
-  "512-he-hasnt-stopped": "harada and vera, man at desk, man on phone"
+  "512-he-hasnt-stopped": "Harada and Vera, two men at desks, Jack in the glass office",
+  "460-parked-crooked": "Jack and Mrs. Noda"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -473,9 +473,24 @@
   },
   "460-parked-crooked": {
    "picture": "public/film/img/s37/460-parked-crooked.jpg",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [360, 165, 226, 749],
+     "image": "/film/depth/s37/460-parked-crooked/cutout-1.png",
+     "depth": 0.514
+    },
+    {
+     "name": "mrs noda",
+     "box": [587, 533, 211, 547],
+     "people": true,
+     "image": "/film/depth/s37/460-parked-crooked/cutout-2.png",
+     "depth": 0.594
+    }
+   ],
+   "note": "Remade 25 October 2026 (night) for the director's pick 460-r1, which brings back Jack in the doorway and Mrs. Noda on the step: Depth Anything V2 Small from the new picture, a cut-out for each of them. The old map was made for a picture with nobody in it.",
    "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
-   "smooth": 2.0,
-   "note": "Image-tool-generated grayscale map; visually reviewed against the still, not Depth Anything-validated. No people visible: Empty rural yard with pickup, gate, muddy ground and a farm track."
+   "depthPlate": "/film/depth/s37/460-parked-crooked/plate.jpg"
   },
   "452-the-loop": {
    "picture": "public/film/img/s26/452-the-loop.jpg",
@@ -1268,13 +1283,14 @@
    "picture": "public/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
    "cutouts": [
     {
-     "name": "person 1",
-     "box": [201, 3, 1047, 1149],
+     "name": "vera",
+     "box": [236, 58, 887, 1022],
      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
-     "depth": 0.392
+     "depth": 0.825
     }
    ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
+   "cutoutDepth": "matte",
+   "note": "Remade 25 October 2026 (night) for the director's pick 73-09-r1 (the mascara toned down): Depth Anything V2 Small from the new picture. Her feet are out of shot, so she takes the model's median under her (cutoutDepth: matte).",
    "depthMap": "/film/depth/vera_run_new/73-09-she-cannot-breathe/depth.png",
    "depthPlate": "/film/depth/vera_run_new/73-09-she-cannot-breathe/plate.jpg"
   },
@@ -2102,25 +2118,33 @@
    "cutouts": [
     {
      "name": "harada and vera",
-     "box": [917, 145, 703, 935],
+     "box": [1325, 302, 416, 778],
      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-1.png",
-     "depth": 0.458
+     "depth": 0.364
     },
     {
      "name": "man at desk",
-     "box": [0, 500, 330, 280],
+     "box": [0, 484, 392, 596],
      "people": true,
      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-2.png",
-     "depth": 0.438
+     "depth": 0.714
     },
     {
-     "name": "man on phone",
-     "box": [500, 430, 210, 200],
+     "name": "man at middle desk",
+     "box": [696, 473, 267, 306],
      "people": true,
      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-3.png",
-     "depth": 0.047
+     "depth": 0.549
+    },
+    {
+     "name": "jack in the glass office",
+     "box": [1085, 450, 125, 135],
+     "people": true,
+     "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-4.png",
+     "depth": 0.102
     }
    ],
+   "note": "Remade 25 October 2026 (night) for the director's pick 512-r1 (Harada and Vera turned toward Jack in the glass office): Depth Anything V2 Small from the new picture; Jack's box was drawn by hand (U2-Net missed him behind the glass).",
    "depthMap": "/film/depth/s82a/512-he-hasnt-stopped/depth.png",
    "depthPlate": "/film/depth/s82a/512-he-hasnt-stopped/plate.jpg"
   },

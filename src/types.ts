@@ -1086,6 +1086,10 @@ export interface CinematicSettings {
    * The foreground subject is a separate layer, so it stays sharp while the
    * world blurs behind it — the classic soft-focus dolly-zoom. */
   dollyZoomBlur?: number;
+  /** where the dolly-zoom pushes toward or pulls out from, as a CSS
+   * transform-origin ("88% 55%"; default "50% 50%", the frame's centre). A
+   * pull-out that starts close on people away from the centre needs it. */
+  dollyZoomOrigin?: string;
   /** transparent foreground overlay (subject) that stays fixed while the
    * camera moves — the vertigo/dolly-zoom anchor. Also renders over any other
    * moving camera mode when set. */

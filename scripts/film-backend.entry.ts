@@ -70,6 +70,7 @@ const REGISTRY: Record<string, Record<string, RegExp | null>> = {
     depthSeconds: /depthSeconds/, depthPlate: /depthPlate/, depthCutouts: /depthCutouts/, depthDirection: /depthDirection/, depthFocus: /depthFocus/,
     volumetricShafts: /volumetricShafts/, shaftsIntensity: /shaftsIntensity/, lensFlare: /lensFlare/, dimAmount: /dimAmount/, rainOnLens: /rainOnLens/,
     rainLensIntensity: /rainLensIntensity/, dollyZoomAmount: /dollyZoomAmount/, dollyZoomDuration: /dollyZoomDuration/, dollyZoomDirection: /dollyZoomDirection/,
+    dollyZoomOrigin: /dollyZoomOrigin/,
   },
   light: { x: /\bx:/, y: /\by:/, color: /color/, size: /size/, intensity: /intensity/, pulseSeconds: /pulseSeconds/, pulseAmount: /pulseAmount/ },
   credits: {
