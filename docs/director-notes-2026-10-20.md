@@ -781,3 +781,22 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
     Check the balance first: 659 at the last count.
   - **Not recommended:** that she was already dead when he found her. Then Jack could never have said "Safe", so 64 would
     have to change too.
+
+## 39. The plate number in 14A: chosen, to add later (25 October, night)
+- **"need some how to explain the plate number a way in jack and vera car."** In 14A Jack writes the white car's plate on
+  the paper bag ("We have a plate number."), and nothing pays it off. The story bible already lists it as an open thread.
+- **The director chose to pay it off in scene 23, with Ishida. Not made yet:** the ElevenLabs account has about 11 credits,
+  and the two lines need about 60–80.
+- **The change.** In 23, after Ishida's "Whatever Sakai hid, Jack, if you find it, bring it to me…", Jack slides the folded
+  paper bag across the table:
+  - JACK: "A white car. Watching the bar."
+  - Ishida pockets it without looking. ISHIDA: "I'll run it."
+- **Nothing else changes.** Ishida never reports back, and Jack never asks. The payoff is his existing line in 80, "You
+  told me yourself, Jack. You always tell the wrong person.": Jack gave the plate to the man who sent the car. It also
+  explains why the watchers stay a step ahead.
+- **To do, once there are credits:**
+  1. Add the two lines and one action line to scene 23 in `src/film/story.json`, where the napkin is slid across.
+  2. Record Jack in his saved voice and Ishida in his, eleven_v4, two takes each, picked by measurement.
+  3. Rebuild the film, and add a check to `npm run test:film-backend`.
+
+  Until the takes exist, the lines can go in as `takePending` and play silent.
