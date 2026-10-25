@@ -9,6 +9,43 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## No picture under full size; the close-ups' depth (25 October 2026)
+
+* **Upscaled.** The director: "fix pics". Every picture the film shows that was under 1920 wide (17 of 630: the opening
+  montage's four, 310, 164, the rice going cold, 293–295, 72, 88, the empty newsroom, 556 and the three of Vera's mother at
+  the service) was upscaled with Topaz (`topaz-image-upscale-v2`, "High Fidelity V3", face enhancement off, so nobody's face
+  is redrawn) to about 2752 wide and installed with `tools/install-film-picture.mjs`, which archived each old picture
+  first and cropped the non-16:9 ones (the montage's, 310 and 88) to 16:9, which is what the screen showed of them anyway.
+  The empty newsroom was a PNG; it is now `s82/new-empty-newsroom.jpg` (the PNG stays on disk). m2's depth map was re-made
+  for its new shape. Generation ids, sizes and archive paths: `docs/film-picture-upscales-2026-10-25.json`.
+  `test:film-backend` now reads every picture's width from its header and fails on one under 1920.
+* **The close-ups' depth.** `tools/make-depth-layers.py` set a cut-out's depth from the ground just under the person's feet.
+  In a close-up the feet are out of frame and that "ground" is the far wall, so a person moved like the wall behind them
+  (Jack in 511 at 0.004). A picture marked `"cutoutDepth": "matte"` in `docs/film-depth-layers.json` now takes the depth
+  model's own median under each person; the nine close-ups (511, 116, 232, 524, 535, 58, 521, 227, 45) are marked and
+  re-made (`docs/depth-camera.md`).
+
+## No shake, the service song into the rooftop, a longer last hold (24 October 2026)
+
+* **No shake.** `noShake` in `tools/build-film-story.mjs` now applies to every camera in the film (scenes 1 and 2 only, since 15
+  October), and every `credits` block (the title, montages 18 and 53, the credits) gets `gateWeave: "off"`.
+* **The service song runs on.** The `service` soundtrack has `slack: 27` and `songRunsOn: true`, and the `nw_s98` Studio edit
+  removes the rooftop's "music off" (`musicMode`/`musicFadeSeconds` null), so the rooftop inherits the song: the service plays
+  166 s of the song's 196 and the rest (with its own fade, 190–199 s) plays under the rooftop's opening, about 23 s to Vera's
+  first line in the animatic.
+* **The last hold.** `beats.nw_s100.last.afterBeatDelaySeconds` is 6 (every scene's last beat moves on after 1 s): the final
+  picture, 159, holds about 8.5 s. Its caption no longer starts with the screenplay's "HOLD on".
+
+## No black between scenes: the dissolve (24 October 2026)
+
+The director: "Get rid of black transitions, a black then image happens quite a lot." Every scene used to enter with `fade`, which
+covers the screen in black, swaps the scene and lifts the black. There is now a scene transition **`dissolve`** (`src/types.ts`; the
+Studio offers it as "〰 Dissolve"): the overlay shows the *next* scene's picture, frozen, and fades it in over the current one, the
+same way slide and zoom already used the destination's art, so the cut happens under a picture and never under black.
+`tools/build-film-story.mjs` gives it to every scene (0.9 s), to the montages (1.2 s) and to the song cutscenes' shots; parts of
+one scene still `cut`. Only the opening titles, the prologue and the credits fade through black. `test:film-backend` fails if any
+other scene goes back to a fade.
+
 ## The Black Cove intro before the logo; the cinematic Show under scene 14 (24 October 2026)
 
 * **Black Cove intro.** The director's upload (`a__A_Black_Cove___Feat.mp4`, 8 s, 1920×1080, with sound) plays first, before the

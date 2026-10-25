@@ -357,7 +357,7 @@ check(newsroom?.musicMode === "track" && newsroom?.musicUrl === "/film/audio/bab
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/baby-fool.mp3").map((s) => s.id), ["nw_s82"], "and nothing else starts it");
 eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "inherit", "the notebook's photocopying (82A) continues the song without restarting");
 eq(FILM.scenes.find((s) => s.id === "nw_s83")?.musicMode, "none", "the Kurose meeting (83) fades the song out");
-eq(newsroom?.background, "/film/img/s82/new-empty-newsroom.png", "the newsroom opens without Jack already seated");
+eq(newsroom?.background, "/film/img/s82/new-empty-newsroom.jpg", "the newsroom opens without Jack already seated");
 check(newsroom?.dialogueBeats?.some((b) => b.background === "/film/img/s82/new-jack-walks-in-4.jpg" && b.text === "He reaches the glass office without slowing."), "Jack's extra determined walk plays before the cassette scene");
 check(existsSync(join(ROOT, "public/film/audio/baby-fool.mp3")), "the song is on disk");
 
@@ -386,12 +386,14 @@ eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/what-made-you-you.mp3")
 check(service[0].musicLoop === false, "and plays once");
 eq(FILM.scenes.filter((s) => /^nw_s97a/.test(s.id)).map((s) => s.id), [], "nothing of 97A is left to click through: the whole scene plays to the song");
 eq(service.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s98", "the run hands on to the rooftop");
-eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, "none", "which fades the song out");
+// 24 October 2026, the director: "the service audio track should continue to rooftop scene": the rooftop no longer fades the song;
+// it plays on under the rooftop's opening (about 23 s to Vera's first line in the animatic) and ends by itself
+eq(FILM.scenes.find((s) => s.id === "nw_s98")?.musicMode, undefined, "the rooftop lets the song play on (it no longer fades it out)");
 check(service.every((s) => s.hideHud && s.dialogueBeats?.every((b) => b.silent)), "every node is a silent cutscene node: nobody speaks at the service");
 // each node also takes its fade-in and the engine's lag (0.3 + 0.1 + 0.18 s), which the builder takes off its delay: with 34 pictures
 // the delays alone add up to about 170 s of a run that plays about 190 s (18 October 2026)
 const playedSeconds = (nodes: typeof service) => songSeconds(nodes) + nodes.length * 0.58;
-check(playedSeconds(service) > 180 && playedSeconds(service) < 199.15, `the run is timed to the song's 3:19 (${playedSeconds(service).toFixed(0)} s)`);
+check(playedSeconds(service) > 160 && playedSeconds(service) < 180, `the run ends about half a minute before the song's 3:19, which carries on over the rooftop (${playedSeconds(service).toFixed(0)} s)`);
 // the raid on the Hive (85 to 92, "Coins Measure-Time") plays the director's picks (19 October 2026): 11 pictures of the thehiveescape
 // set and 5 earlier versions (hive_raid_takes/) among the film's own, nothing left out
 const raidPics = [...new Set(runOf("raid").map((s) => s.background ?? ""))];
@@ -460,6 +462,17 @@ for (const id of ["nw_s1", "nw_s2", "nw_s72"]) {
   }
   check(moves.length > 0 && moves.every((m, i) => i === 0 || m !== moves[i - 1]), `${id}: the depth camera never makes the same move twice in a row`);
 }
+// the director's notes of 24 October 2026 (evening)
+{
+  const S = (id: string) => byId.get(id)!;
+  check(["nw_s20", "nw_s20_b", "nw_s20_c"].every((id) => !S(id).ambientAudio), "scene 20: no room sound under Mara's lullaby");
+  check(!/(^|\+)rain(\+|$)/.test(S("nw_s23").ambientAudio ?? "") && S("nw_s23").particles !== "rain", "scene 23: no rain");
+  check(allBeats.some(({ scene, b }) => scene === "nw_s78" && b.text === "Jack at Vera's door. He knocks once." && b.sfxUrl === "/film/sfx/door-knock-wood.mp3") && !allBeats.some(({ b }) => /He doesn't knock/.test(b.text ?? "")), "scene 78: Jack knocks once and walks away");
+  check(S("nw_s84").background === "/film/img/s84/318-the-dried-stack.jpg", "scene 84 opens on the storeroom before Vera arrives");
+  const said = (t: string, url: string) => allBeats.some(({ b }) => b.text === t && b.audioUrl === url);
+  check(said("We have a plate number.", "/film/voice/s14a/342-jack-dryly-we-have-a-plate-number.mp3") && said("Call me if you plan on going somewhere next time.", "/film/voice/s14a/343-jack-evenly-call-me-if-you-plan.mp3"), "scene 14A: Jack's two changed lines have takes that say them");
+  check(allBeats.some(({ b }) => (b.text ?? "").startsWith("I threw it in the bin. A stranger, after twenty years") && b.audioUrl === "/film/voice/s22/197-vera-i-threw-it-in-the-bin-money.mp3"), "scene 22: Vera gives a reason for binning the letter, with its take");
+}
 // scene 5 (the director, 24 October 2026): the young officer's phone call is a cautious whisper Vera isn't meant to hear; his four
 // lines are in one voice (the deleted 29 September voice replaced by its stand-in, "Young Detective - NEONOIRE")
 const s5 = allBeats.filter(({ scene }) => scene === "nw_s5").map(({ b }) => b);
@@ -513,4 +526,32 @@ check(animS1.dialogueBeats!.some((b) => /^\d+–\d+$/.test(b.animaticBeat ?? "")
 eq(animaticMarkFor(anim.scenes, animS1, 0, undefined, animS1.dialogueBeats![0].animaticBeat)?.beat, "1", "the mark shows the stamped number, not the joined count");
 eq(animaticMarkFor(anim.scenes, animS1, -1, undefined, undefined)?.beat, "–", "the scene heading shows no beat number (it used to borrow beat 1's)");
 check(!FILM.scenes.some((s) => (s.dialogueBeats ?? []).some((b) => b.animaticBeat)), "the stamp is runtime-only: the shipped film's beats carry no animaticBeat field");
+// no black between scenes (24 October 2026, the director: "Get rid of black transitions, a black then image happens quite a lot"):
+// every scene and song/cutscene shot enters with a dissolve (the next picture over this one) or a cut; only the opening titles,
+// the prologue and the credits still fade through black.
+const throughBlack = FILM.scenes.filter((s) => s.transition !== "dissolve" && s.transition !== "cut" && !/^nw_(title|prologue|credits|intro|end)$/.test(s.id)).map((s) => s.id);
+eq(throughBlack, [], "no scene fades through black on its way in (only the titles, the prologue and the credits do)");
+check(FILM.scenes.filter((s) => s.transition === "dissolve").length > 200, "the scenes dissolve picture into picture");
+// the director, 24 October 2026: nothing shakes; the service song carries into the rooftop (checked above); a longer last hold
+const everyCamera = FILM.scenes.flatMap((s) => [s.cinematic, ...(s.dialogueBeats ?? []).map((b) => b.cinematic), ...Object.values(s.credits?.montageLooks ?? {})]);
+check(everyCamera.every((c) => c?.mode !== "shake"), "no camera in the film shakes (\"don't use shake cam settings, turn them off\")");
+check(FILM.scenes.filter((s) => s.credits).every((s) => s.credits!.gateWeave === "off"), "the title, the montages and the credits no longer weave like a projector gate");
+const lastBeat = FILM.scenes.find((s) => s.id === "nw_s100")!.dialogueBeats!.at(-1)!;
+check(lastBeat.background?.endsWith("/159-she-doesnt-turn.jpg") && (lastBeat.afterBeatDelaySeconds ?? 0) >= 5 && lastBeat.afterBeatTargetSceneId === "nw_credits", "the film holds longer on Jack, Vera and Kaneko before the credits");
+eq(lastBeat.text, "The three of them in the steam.", "and its last caption is the picture, not the screenplay's camera direction (\"HOLD on…\")");
+// pictures are never smaller than 1920 wide (the director, 17 October 2026; the last 17 under it were upscaled with Topaz on
+// 25 October 2026 and installed with tools/install-film-picture.mjs): widths read from the JPEG and PNG headers
+const pictureWidth = (file: string): number => {
+  const b = readFileSync(file);
+  if (b[0] === 0x89 && b.toString("latin1", 1, 4) === "PNG") return b.readUInt32BE(16);
+  for (let i = 2; i + 9 < b.length; ) {
+    if (b[i] !== 0xff || b[i + 1] === 0xff) { i++; continue; }
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return b.readUInt16BE(i + 7);
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  return 0;
+};
+const narrow = filmPictures.filter((p) => existsSync(join(ROOT, "public", p)) && pictureWidth(join(ROOT, "public", p)) < 1920);
+eq(narrow, [], `none of the film's ${filmPictures.length} pictures is narrower than 1920 pixels`);
 console.log(`\nfilm backend: ${checks} checks passed`);

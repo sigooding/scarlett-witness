@@ -98,7 +98,9 @@ In `pictureLook` (or the Studio's 🧊 panel), for the picture:
    picture, BiRefNet), `plate.jpg` (the picture with the people painted out, LaMa) and `depth.png` (the map with the
    people filled in from around them, so the background does not bend round where they stood). It writes each cut-out's
    depth back into the JSON: the map's median under the person when there is a `depthSource`, else the ground's depth at
-   their feet. It took about 25 seconds a picture on a processor (no graphics card) and up to 13 GB of memory on 10
+   their feet. **A close-up or anyone cut off by the frame has no feet in shot**, and the "ground under their feet" is then
+   the far background (Jack in 511 came out at 0.004, so he moved like the wall behind him): mark such a picture
+   `"cutoutDepth": "matte"` and each person's depth is the depth model's own median under them instead (25 October 2026). It took about 25 seconds a picture on a processor (no graphics card) and up to 13 GB of memory on 10
    October; run a long list in the background.
 4. **Look at what it made**: the plate should have nobody in it and a believable wall or street where they stood; each
    cut-out should be one whole person with clean edges. Lay the cut-outs over the picture in a colour each and put the

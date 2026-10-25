@@ -1938,9 +1938,10 @@ export interface SceneNode {
    *  Classic: fade, fade-black, cut
    *  Cinematic: iris (circle wipe), wipe-left/right/up/down, slide-left/right,
    *  zoom (scale punch), glitch (chromatic aberration), burn (film burn flash)
-   *  Defaults to "fade". */
+   *  Defaults to "fade". "dissolve" crossfades the next scene's picture over this one, with no black between them. */
   transition?:
     | "fade"
+    | "dissolve"
     | "fade-black"
     | "cut"
     | "iris"

@@ -1425,6 +1425,14 @@ body,
 }
 .scene-fade[data-transitioning="0"] { opacity: 0; }
 
+/* Dissolve: the overlay carries the next scene's picture (not black) and fades in over this scene, the plate swaps
+   underneath it, and it fades out over the same picture: one picture crossfades into the next with no black between. */
+.scene-dissolve {
+  opacity: 1;
+  transition: opacity var(--scene-transition-ms, 500ms) ease-in-out;
+}
+.scene-dissolve[data-transitioning="0"] { opacity: 0; }
+
 /* Fade to black first, then reveal — a dip through black. */
 .scene-fade-black {
   opacity: 1;

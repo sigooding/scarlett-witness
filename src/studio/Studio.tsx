@@ -8252,6 +8252,7 @@ function StudioInner({
                         onChange={(e) => updateScene(scene.id, { transition: e.target.value as SceneNode["transition"] })}
                       >
                         <option value="fade">⬛ Fade (dissolve)</option>
+                        <option value="dissolve">〰 Dissolve — picture into picture, no black</option>
                         <option value="fade-black">🌑 Fade to black then back</option>
                         <option value="cut">⚡ Cut (instant)</option>
                         <option value="iris">⭕ Iris — circle wipe from center</option>

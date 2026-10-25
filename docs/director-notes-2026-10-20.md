@@ -643,3 +643,46 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - "the new song is a cinematic version of the end credit song", "put it somewhere it would fit", "isnt it the early parts with no
   music", "its sad": it plays under scene 14, Mara's empty apartment, quietly under the dialogue. Easy to move: one Studio edit
   (`nw_s14` in `src/film/studio-edits.json`).
+
+## 31. The evening's notes (24 October)
+- **Scene 14A, "we have a plate number"**: the script had changed after the takes were made. A check of every line in the film
+  against the words its take says found exactly two: Jack's "We have a plate number." (the take said "I think it's a plate
+  number.") and "Call me if you plan on going somewhere next time." (it said "Call me when you go somewhere."). Both re-recorded.
+- **Scene 20**: no room sound (`amb-hive`) under Mara's lullaby, in all three parts of the scene.
+- **Scene 23**: the rain sound is gone (there were no falling-rain particles; the smoke stays).
+- **Scene 22, Vera's reason for binning the letter** ("not a real reason"): now "I threw it in the bin. A stranger, after
+  twenty years, saying he can prove it? I thought he wanted money. And if he didn't… then nobody looked. Twenty years, and
+  nobody even looked. I couldn't." New take in her voice. Mara's line in 20 ("She threw it in the bin without even
+  answering.") still agrees.
+- **Scene 78, the notebook**: Jack knocks once, sets the envelope down and walks away (was "He doesn't knock"); a knock is heard.
+- **Scene 84**: it opened on 115, Vera and Jack in the storeroom, before she arrives. It now opens on 318 (the dried stack,
+  nobody in it); 115 comes in when she looks round the room at the drawings.
+- Outside this repository: PlayFrame's screenplay still has the old scene 22 line, "He doesn't knock" in 78, and the 14A lines.
+
+## 32. No black between scenes (24 October)
+- "Get rid of black transitions, a black then image happens quite a lot": every scene went to black and came back up. Now each
+  scene, and each shot of the song cutscenes and montages, **dissolves**: the next scene's picture comes up over the last one,
+  with no black between them (0.9 s between scenes). Parts of the same scene still cut. Only the opening titles, the prologue
+  and the credits fade through black. Checked in a browser on scene 3 into 4: the lit window melts into Vera's apartment and
+  the screen never goes dark. A new "Dissolve" choice is in the Studio's scene transition list.
+
+## 33. No shake, the service song into the rooftop, the last hold (24 October)
+- **No shake anywhere.** The handheld shake was already gone from every shot (23 October); the builder now refuses one on any
+  scene, beat or picture, and the title, the two montages (18, 53) and the credits no longer weave like a projector gate (a
+  small jitter, out of step with the film's no-film-grade look).
+- **"What Made You, You" carries on into the rooftop.** The service ends about half a minute before the song does (each still
+  about 4.7 s instead of 5.4 s) and the rooftop no longer fades it: its last part plays over "Five days later", the washed sky,
+  the trains and Vera coming out to the railing, and it ends by itself around her first line (music already dips under voices).
+- **The last picture holds longer**: Kaneko, Vera eating, Jack beside her, now about 8.5 s before the credits (it was 4.6 s).
+  Its caption was the screenplay's camera direction, "HOLD on the three of them in the steam."; it now reads "The three of
+  them in the steam."
+
+## 34. The pictures: none under full size, and the close-ups' depth (25 October)
+- **"fix pics."** The 17 pictures still under 1920 wide (the opening montage's four, 310, 164, the rice going cold, 293–295,
+  72, 88, the empty newsroom, 556 and Vera's mother at the service) are upscaled with Topaz, faces untouched, to about 2730
+  wide, and sharper rather than just bigger. Old pictures archived; details in FILM.md. A test now fails on any picture under
+  1920 wide.
+- **The nine close-ups' depth.** In 511, 116, 232, 524, 535, 58, 521, 227 and 45 the people were set as if they were as far
+  away as the wall behind them (or, in 227, as near as the lens), because the depth was read from the ground under their
+  feet and their feet are out of frame. Each person's depth now comes from the depth model's reading of the person
+  themselves, so the one nearest the camera moves most.

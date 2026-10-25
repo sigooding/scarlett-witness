@@ -2736,6 +2736,8 @@ function DeductionBoard({
  * entry pass and an in-flight scene change (see goToScene) can never drift. */
 function sceneTransitionClass(t: string): string {
   switch (t) {
+    case "dissolve":
+      return "scene-dissolve";
     case "fade-black":
       return "scene-fade-black";
     case "cut":
@@ -6671,7 +6673,7 @@ function CasePlayer({
         // `fading` is the cover in flight. At rest (neither) the art stack
         // unmounts — see "Overlay art lifecycle" above goToScene.
         const showArt =
-          (activeTransition === "slide-left" || activeTransition === "slide-right" || activeTransition === "zoom") &&
+          (activeTransition === "slide-left" || activeTransition === "slide-right" || activeTransition === "zoom" || activeTransition === "dissolve") &&
           (fading || overlayArtLive) &&
           !prefersReducedMotion &&
           !!artScene &&

@@ -107,7 +107,28 @@
   "315-the-number-pressed": "automatic: 1 found",
   "76-05-vera-honey": "automatic: 1 found",
   "76-06-the-screen-goes-dark": "automatic: 1 found",
-  "84-cries-without-a-sound": "automatic: 1 found"
+  "84-cries-without-a-sound": "automatic: 1 found",
+  "435-the-last-page": "jack",
+  "524-the-only-eyewitness": "vera, jack",
+  "166-by-its-edges": "jack",
+  "517-neither-moves": "vera, jack",
+  "208-come-back-safe-anyway": "vera",
+  "320-the-news-nobody-watches": "kaneko, jack",
+  "317-the-envelope-on-the-glass": "kurose hand, vera",
+  "535-the-shiohama-fire": "ishida, jack, diners",
+  "440-she-rests-her-head": "vera, jack, cook",
+  "511-twenty-years-ago": "jack, harada",
+  "58-why-kanda": "vera, ishida",
+  "45-the-young-officer": "vera, officer",
+  "288-you-sound-like-my-sister": "jack hand",
+  "232-the-cassette": "okada hand",
+  "545-you-dont-smoke": "vera, jack",
+  "116-thats-me": "vera",
+  "227-i-want-my-sister": "mara, jack",
+  "521-somebody-has-to-look": "vera, jack",
+  "436-he-wrote-to-vera": "mara",
+  "186-everybody-sees-him": "repairman, jack, sleeping woman, family",
+  "512-he-hasnt-stopped": "harada and vera, man at desk, man on phone"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -1627,6 +1648,474 @@
   "m2-the-hive": {
    "picture": "public/film/img/montage/m2-the-hive.jpg",
    "depthMap": "/film/depth/montage/m2-the-hive/depth.png"
+  },
+  "435-the-last-page": {
+   "picture": "public/film/img/s18/435-the-last-page.jpg",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [1001, 328, 538, 752],
+     "image": "/film/depth/s18/435-the-last-page/cutout-1.png",
+     "depth": 0.74
+    }
+   ],
+   "depthMap": "/film/depth/s18/435-the-last-page/depth.png",
+   "depthPlate": "/film/depth/s18/435-the-last-page/plate.jpg"
+  },
+  "524-the-only-eyewitness": {
+   "picture": "public/film/img/s98/524-the-only-eyewitness.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [330, 0, 960, 1080],
+     "image": "/film/depth/s98/524-the-only-eyewitness/cutout-1.png",
+     "depth": 0.465
+    },
+    {
+     "name": "jack",
+     "box": [1250, 200, 670, 880],
+     "image": "/film/depth/s98/524-the-only-eyewitness/cutout-2.png",
+     "depth": 0.925
+    }
+   ],
+   "depthMap": "/film/depth/s98/524-the-only-eyewitness/depth.png",
+   "depthPlate": "/film/depth/s98/524-the-only-eyewitness/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "160-were-closed": {
+   "picture": "public/film/img/s8/160-were-closed.jpg",
+   "cutouts": [
+    {
+     "name": "okada",
+     "box": [590, 245, 350, 835],
+     "image": "/film/depth/s8/160-were-closed/cutout-1.png",
+     "depth": 0.262
+    },
+    {
+     "name": "vera",
+     "box": [978, 325, 162, 449],
+     "image": "/film/depth/s8/160-were-closed/cutout-2.png",
+     "depth": 0.06
+    }
+   ],
+   "depthMap": "/film/depth/s8/160-were-closed/depth.png",
+   "depthPlate": "/film/depth/s8/160-were-closed/plate.jpg"
+  },
+  "369-the-drawing": {
+   "picture": "public/film/img/s25/369-the-drawing.jpg",
+   "depthMap": "/film/depth/s25/369-the-drawing/depth.png"
+  },
+  "166-by-its-edges": {
+   "picture": "public/film/img/s10/166-by-its-edges.jpg",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [710, 118, 1183, 962],
+     "image": "/film/depth/s10/166-by-its-edges/cutout-1.png",
+     "depth": 0.644
+    }
+   ],
+   "depthMap": "/film/depth/s10/166-by-its-edges/depth.png",
+   "depthPlate": "/film/depth/s10/166-by-its-edges/plate.jpg"
+  },
+  "517-neither-moves": {
+   "picture": "public/film/img/s84/517-neither-moves.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [169, 277, 223, 803],
+     "image": "/film/depth/s84/517-neither-moves/cutout-1.png",
+     "depth": 0.354
+    },
+    {
+     "name": "jack",
+     "box": [1440, 162, 326, 918],
+     "image": "/film/depth/s84/517-neither-moves/cutout-2.png",
+     "depth": 0.569
+    }
+   ],
+   "depthMap": "/film/depth/s84/517-neither-moves/depth.png",
+   "depthPlate": "/film/depth/s84/517-neither-moves/plate.jpg"
+  },
+  "208-come-back-safe-anyway": {
+   "picture": "public/film/img/s36/208-come-back-safe-anyway.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [467, 456, 519, 624],
+     "image": "/film/depth/s36/208-come-back-safe-anyway/cutout-1.png",
+     "depth": 0.384
+    }
+   ],
+   "depthMap": "/film/depth/s36/208-come-back-safe-anyway/depth.png",
+   "depthPlate": "/film/depth/s36/208-come-back-safe-anyway/plate.jpg"
+  },
+  "320-the-news-nobody-watches": {
+   "picture": "public/film/img/s100/320-the-news-nobody-watches.jpg",
+   "cutouts": [
+    {
+     "name": "kaneko",
+     "box": [285, 590, 215, 290],
+     "people": true,
+     "image": "/film/depth/s100/320-the-news-nobody-watches/cutout-1.png",
+     "depth": 0.112
+    },
+    {
+     "name": "jack",
+     "box": [650, 620, 330, 330],
+     "image": "/film/depth/s100/320-the-news-nobody-watches/cutout-2.png",
+     "depth": 0.169
+    }
+   ],
+   "depthMap": "/film/depth/s100/320-the-news-nobody-watches/depth.png",
+   "depthPlate": "/film/depth/s100/320-the-news-nobody-watches/plate.jpg"
+  },
+  "317-the-envelope-on-the-glass": {
+   "picture": "public/film/img/s83/317-the-envelope-on-the-glass.jpg",
+   "cutouts": [
+    {
+     "name": "kurose hand",
+     "box": [0, 645, 633, 398],
+     "people": true,
+     "image": "/film/depth/s83/317-the-envelope-on-the-glass/cutout-1.png",
+     "depth": 0.996
+    },
+    {
+     "name": "vera",
+     "box": [1564, 253, 356, 827],
+     "image": "/film/depth/s83/317-the-envelope-on-the-glass/cutout-2.png",
+     "depth": 0.512
+    }
+   ],
+   "depthMap": "/film/depth/s83/317-the-envelope-on-the-glass/depth.png",
+   "depthPlate": "/film/depth/s83/317-the-envelope-on-the-glass/plate.jpg"
+  },
+  "337-engine-off": {
+   "picture": "public/film/img/s14a/337-engine-off.jpg",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [308, 208, 586, 848],
+     "image": "/film/depth/s14a/337-engine-off/cutout-1.png",
+     "depth": 0.72
+    },
+    {
+     "name": "vera",
+     "box": [1089, 261, 580, 545],
+     "image": "/film/depth/s14a/337-engine-off/cutout-2.png",
+     "depth": 0.772
+    }
+   ],
+   "depthMap": "/film/depth/s14a/337-engine-off/depth.png",
+   "depthPlate": "/film/depth/s14a/337-engine-off/plate.jpg"
+  },
+  "535-the-shiohama-fire": {
+   "picture": "public/film/img/s23/535-the-shiohama-fire.jpg",
+   "cutouts": [
+    {
+     "name": "ishida",
+     "box": [0, 0, 700, 1080],
+     "image": "/film/depth/s23/535-the-shiohama-fire/cutout-1.png",
+     "depth": 0.783
+    },
+    {
+     "name": "jack",
+     "box": [640, 40, 1100, 1040],
+     "image": "/film/depth/s23/535-the-shiohama-fire/cutout-2.png",
+     "depth": 0.256
+    },
+    {
+     "name": "diners",
+     "box": [380, 420, 600, 320],
+     "people": true,
+     "image": "/film/depth/s23/535-the-shiohama-fire/cutout-3.png",
+     "depth": 0.041
+    }
+   ],
+   "depthMap": "/film/depth/s23/535-the-shiohama-fire/depth.png",
+   "depthPlate": "/film/depth/s23/535-the-shiohama-fire/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "440-she-rests-her-head": {
+   "picture": "public/film/img/s22/440-she-rests-her-head.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [220, 409, 880, 456],
+     "image": "/film/depth/s22/440-she-rests-her-head/cutout-1.png",
+     "depth": 0.602
+    },
+    {
+     "name": "jack",
+     "box": [1297, 148, 623, 932],
+     "image": "/film/depth/s22/440-she-rests-her-head/cutout-2.png",
+     "depth": 0.734
+    },
+    {
+     "name": "cook",
+     "box": [1090, 360, 210, 390],
+     "people": true,
+     "image": "/film/depth/s22/440-she-rests-her-head/cutout-3.png",
+     "depth": 0.046
+    }
+   ],
+   "depthMap": "/film/depth/s22/440-she-rests-her-head/depth.png",
+   "depthPlate": "/film/depth/s22/440-she-rests-her-head/plate.jpg"
+  },
+  "511-twenty-years-ago": {
+   "picture": "public/film/img/s82/511-twenty-years-ago.jpg",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [63, 43, 1292, 1037],
+     "image": "/film/depth/s82/511-twenty-years-ago/cutout-1.png",
+     "depth": 0.23
+    },
+    {
+     "name": "harada",
+     "box": [1443, 0, 477, 816],
+     "image": "/film/depth/s82/511-twenty-years-ago/cutout-2.png",
+     "depth": 0.778
+    }
+   ],
+   "depthMap": "/film/depth/s82/511-twenty-years-ago/depth.png",
+   "depthPlate": "/film/depth/s82/511-twenty-years-ago/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "58-why-kanda": {
+   "picture": "public/film/img/s6/58-why-kanda.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [314, 232, 639, 692],
+     "image": "/film/depth/s6/58-why-kanda/cutout-1.png",
+     "depth": 0.132
+    },
+    {
+     "name": "ishida",
+     "box": [1207, 0, 713, 1080],
+     "image": "/film/depth/s6/58-why-kanda/cutout-2.png",
+     "depth": 0.928
+    }
+   ],
+   "depthMap": "/film/depth/s6/58-why-kanda/depth.png",
+   "depthPlate": "/film/depth/s6/58-why-kanda/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "45-the-young-officer": {
+   "picture": "public/film/img/s5/45-the-young-officer.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [248, 143, 538, 937],
+     "image": "/film/depth/s5/45-the-young-officer/cutout-1.png",
+     "depth": 0.621
+    },
+    {
+     "name": "officer",
+     "box": [938, 436, 335, 429],
+     "image": "/film/depth/s5/45-the-young-officer/cutout-2.png",
+     "depth": 0.158
+    }
+   ],
+   "depthMap": "/film/depth/s5/45-the-young-officer/depth.png",
+   "depthPlate": "/film/depth/s5/45-the-young-officer/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "288-you-sound-like-my-sister": {
+   "picture": "public/film/img/s25a/288-you-sound-like-my-sister.jpg",
+   "cutouts": [
+    {
+     "name": "jack hand",
+     "box": [614, 454, 1306, 626],
+     "people": true,
+     "image": "/film/depth/s25a/288-you-sound-like-my-sister/cutout-1.png",
+     "depth": 0.937
+    }
+   ],
+   "depthMap": "/film/depth/s25a/288-you-sound-like-my-sister/depth.png",
+   "depthPlate": "/film/depth/s25a/288-you-sound-like-my-sister/plate.jpg"
+  },
+  "232-the-cassette": {
+   "picture": "public/film/img/s64/232-the-cassette.jpg",
+   "cutouts": [
+    {
+     "name": "okada hand",
+     "box": [548, 0, 1372, 1080],
+     "people": true,
+     "image": "/film/depth/s64/232-the-cassette/cutout-1.png",
+     "depth": 0.329
+    }
+   ],
+   "depthMap": "/film/depth/s64/232-the-cassette/depth.png",
+   "depthPlate": "/film/depth/s64/232-the-cassette/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "545-you-dont-smoke": {
+   "picture": "public/film/img/s26/545-you-dont-smoke.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [90, 170, 870, 910],
+     "image": "/film/depth/s26/545-you-dont-smoke/cutout-1.png",
+     "depth": 0.54
+    },
+    {
+     "name": "jack",
+     "box": [870, 60, 1050, 1020],
+     "image": "/film/depth/s26/545-you-dont-smoke/cutout-2.png",
+     "depth": 0.405
+    }
+   ],
+   "depthMap": "/film/depth/s26/545-you-dont-smoke/depth.png",
+   "depthPlate": "/film/depth/s26/545-you-dont-smoke/plate.jpg"
+  },
+  "153-the-rain-has-stopped": {
+   "picture": "public/film/img/s98/153-the-rain-has-stopped.jpg",
+   "cutouts": [
+    {
+     "name": "jack",
+     "box": [630, 333, 415, 747],
+     "image": "/film/depth/s98/153-the-rain-has-stopped/cutout-1.png",
+     "depth": 0.497
+    },
+    {
+     "name": "vera",
+     "box": [1096, 461, 144, 417],
+     "image": "/film/depth/s98/153-the-rain-has-stopped/cutout-2.png",
+     "depth": 0.261
+    }
+   ],
+   "depthMap": "/film/depth/s98/153-the-rain-has-stopped/depth.png",
+   "depthPlate": "/film/depth/s98/153-the-rain-has-stopped/plate.jpg"
+  },
+  "116-thats-me": {
+   "picture": "public/film/img/s84/116-thats-me.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [576, 76, 1344, 1004],
+     "image": "/film/depth/s84/116-thats-me/cutout-1.png",
+     "depth": 0.389
+    }
+   ],
+   "depthMap": "/film/depth/s84/116-thats-me/depth.png",
+   "depthPlate": "/film/depth/s84/116-thats-me/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "227-i-want-my-sister": {
+   "picture": "public/film/img/s60/227-i-want-my-sister.jpg",
+   "cutouts": [
+    {
+     "name": "mara",
+     "box": [367, 367, 678, 678],
+     "image": "/film/depth/s60/227-i-want-my-sister/cutout-1.png",
+     "depth": 0.254
+    },
+    {
+     "name": "jack",
+     "box": [1082, 311, 582, 737],
+     "image": "/film/depth/s60/227-i-want-my-sister/cutout-2.png",
+     "depth": 0.262
+    }
+   ],
+   "depthMap": "/film/depth/s60/227-i-want-my-sister/depth.png",
+   "depthPlate": "/film/depth/s60/227-i-want-my-sister/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "521-somebody-has-to-look": {
+   "picture": "public/film/img/s84/521-somebody-has-to-look.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [136, 44, 860, 1036],
+     "image": "/film/depth/s84/521-somebody-has-to-look/cutout-1.png",
+     "depth": 0.8
+    },
+    {
+     "name": "jack",
+     "box": [1529, 95, 352, 985],
+     "image": "/film/depth/s84/521-somebody-has-to-look/cutout-2.png",
+     "depth": 0.351
+    }
+   ],
+   "depthMap": "/film/depth/s84/521-somebody-has-to-look/depth.png",
+   "depthPlate": "/film/depth/s84/521-somebody-has-to-look/plate.jpg",
+   "cutoutDepth": "matte"
+  },
+  "436-he-wrote-to-vera": {
+   "picture": "public/film/img/s20/436-he-wrote-to-vera.jpg",
+   "cutouts": [
+    {
+     "name": "mara",
+     "box": [578, 85, 739, 995],
+     "image": "/film/depth/s20/436-he-wrote-to-vera/cutout-1.png",
+     "depth": 0.769
+    }
+   ],
+   "depthMap": "/film/depth/s20/436-he-wrote-to-vera/depth.png",
+   "depthPlate": "/film/depth/s20/436-he-wrote-to-vera/plate.jpg"
+  },
+  "186-everybody-sees-him": {
+   "picture": "public/film/img/s16/186-everybody-sees-him.jpg",
+   "cutouts": [
+    {
+     "name": "repairman",
+     "box": [170, 537, 178, 213],
+     "people": true,
+     "image": "/film/depth/s16/186-everybody-sees-him/cutout-1.png",
+     "depth": 0.508
+    },
+    {
+     "name": "jack",
+     "box": [868, 355, 230, 692],
+     "image": "/film/depth/s16/186-everybody-sees-him/cutout-2.png",
+     "depth": 0.406
+    },
+    {
+     "name": "sleeping woman",
+     "box": [630, 600, 250, 280],
+     "people": true,
+     "image": "/film/depth/s16/186-everybody-sees-him/cutout-3.png",
+     "depth": 0.188
+    },
+    {
+     "name": "family",
+     "box": [1440, 620, 400, 360],
+     "people": true,
+     "image": "/film/depth/s16/186-everybody-sees-him/cutout-4.png",
+     "depth": 0.698
+    }
+   ],
+   "depthMap": "/film/depth/s16/186-everybody-sees-him/depth.png",
+   "depthPlate": "/film/depth/s16/186-everybody-sees-him/plate.jpg"
+  },
+  "512-he-hasnt-stopped": {
+   "picture": "public/film/img/s82a/512-he-hasnt-stopped.jpg",
+   "cutouts": [
+    {
+     "name": "harada and vera",
+     "box": [917, 145, 703, 935],
+     "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-1.png",
+     "depth": 0.458
+    },
+    {
+     "name": "man at desk",
+     "box": [0, 500, 330, 280],
+     "people": true,
+     "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-2.png",
+     "depth": 0.438
+    },
+    {
+     "name": "man on phone",
+     "box": [500, 430, 210, 200],
+     "people": true,
+     "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-3.png",
+     "depth": 0.047
+    }
+   ],
+   "depthMap": "/film/depth/s82a/512-he-hasnt-stopped/depth.png",
+   "depthPlate": "/film/depth/s82a/512-he-hasnt-stopped/plate.jpg"
   }
  }
 }
