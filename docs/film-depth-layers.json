@@ -351,17 +351,24 @@
   },
   "354-the-altar-photograph": {
    "picture": "public/film/img/s29/354-the-altar-photograph.jpg",
-   "depthSource": "public/film/depth/s29/354-the-altar-photograph/source-depth.png",
    "cutouts": [
     {
      "name": "mrs sakai",
-     "box": [304, 215, 382, 813],
+     "box": [460, 327, 525, 1138],
      "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
-     "depth": 0.718
+     "depth": 0.594
+    },
+    {
+     "name": "jack",
+     "box": [1721, 362, 529, 942],
+     "image": "/film/depth/s29/354-the-altar-photograph/cutout-2.png",
+     "depth": 0.346
     }
    ],
    "depthMap": "/film/depth/s29/354-the-altar-photograph/depth.png",
-   "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg"
+   "depthPlate": "/film/depth/s29/354-the-altar-photograph/plate.jpg",
+   "cutoutDepth": "matte",
+   "note": "Remade 25 October 2026 for the new picture (the director's note: Jack was missing; he now kneels at the right of the kotatsu). Depth Anything V2 Small from the new picture; the old map, made for the picture without Jack, is no longer used. Both kneel behind the kotatsu with no feet in shot, so each takes the model's median under them (cutoutDepth: matte)."
   },
   "374-the-dead-television": {
    "picture": "public/film/img/s27a/374-the-dead-television.jpg",
@@ -2116,6 +2123,12 @@
    ],
    "depthMap": "/film/depth/s82a/512-he-hasnt-stopped/depth.png",
    "depthPlate": "/film/depth/s82a/512-he-hasnt-stopped/plate.jpg"
+  },
+  "364-the-kotatsu": {
+   "picture": "public/film/img/s59/364-the-kotatsu.jpg",
+   "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
+   "smooth": 0,
+   "note": "Remade 25 October 2026 with Depth Anything V2 Small from the new picture (the director's note: the altar was on the wrong side; the room now matches 365-r1, which plays next, with the altar on the right). No people visible."
   }
  }
 }

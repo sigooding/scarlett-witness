@@ -164,5 +164,90 @@
    "kept_alongside": null,
    "generation_id": "tD6OS2UpXY919JLZqmjW"
   }
- ]
+ ],
+ "retakes_2026_10_25": {
+  "why": "The nine retakes of 25 October that passed the maintainer's check were swapped into the film the same day (the director: \"yes\"). Six were under 1920 wide and were upscaled the same way as the 17 above before installing; the other three (194, 177, 210) were big enough and went in as they were, cropped to 16:9.",
+  "tool": "ElevenLabs flow ddG3jYttqFHgDlSoJRqg (\"Nobody's Witness: 25 Oct retakes upscale\"), model topaz-image-upscale-v2, the same settings",
+  "cost": "6 x 485 credits, about 2,910",
+  "sources": "each retake at commit b59770a, attached by its raw.githubusercontent URL under public/film/img/retakes_2026_10_25/",
+  "pictures": [
+   {
+    "picture": "public/film/img/montage18/01.jpg",
+    "source": "public/film/img/retakes_2026_10_25/montage18-01-r1.jpg",
+    "before": "1376x768",
+    "upscaled": "2752x1536",
+    "installed": "2730x1536",
+    "archived": "public/film/img/archive/montage18/01--v1.jpg",
+    "generation_id": "XRyyYeuZZvdDa2V8Q7a9"
+   },
+   {
+    "picture": "public/film/img/s29/354-the-altar-photograph.jpg",
+    "source": "public/film/img/retakes_2026_10_25/354-the-altar-photograph-r1.jpg",
+    "before": "1376x768",
+    "upscaled": "2752x1536",
+    "installed": "2730x1536",
+    "archived": "public/film/img/archive/s29/354-the-altar-photograph--v1.jpg",
+    "generation_id": "cOcsuKZHTOvT3jcOHbmf"
+   },
+   {
+    "picture": "public/film/img/s59/364-the-kotatsu.jpg",
+    "source": "public/film/img/retakes_2026_10_25/364-the-kotatsu-r1.jpg",
+    "before": "1376x768",
+    "upscaled": "2752x1536",
+    "installed": "2730x1536",
+    "archived": "public/film/img/archive/s59/364-the-kotatsu--v1.jpg",
+    "generation_id": "zngnCIIzMEC1lw9PmddQ"
+   },
+   {
+    "picture": "public/film/img/s35/207-the-pink-payphone.jpg",
+    "source": "public/film/img/retakes_2026_10_25/207-the-pink-payphone-r1.jpg",
+    "before": "1672x941",
+    "upscaled": "2752x1548",
+    "installed": "2752x1548",
+    "archived": "public/film/img/archive/s35/207-the-pink-payphone--v2.jpg",
+    "generation_id": "TedIVmWXykrPmaPhFm1b"
+   },
+   {
+    "picture": "public/film/img/s11/249-the-line.jpg",
+    "source": "public/film/img/retakes_2026_10_25/249-the-line-r1.jpg",
+    "before": "1672x941",
+    "upscaled": "2752x1548",
+    "installed": "2752x1548",
+    "archived": "public/film/img/archive/s11/249-the-line--v2.jpg",
+    "generation_id": "G0TYEL4iC3ctySqTT5p5"
+   },
+   {
+    "picture": "public/film/img/s36/376-the-coins-run-out.jpg",
+    "source": "public/film/img/retakes_2026_10_25/376-the-coins-run-out-r1.jpg",
+    "before": "1672x941",
+    "upscaled": "2752x1548",
+    "installed": "2752x1548",
+    "archived": "public/film/img/archive/s36/376-the-coins-run-out--v1.jpg",
+    "generation_id": "QmdfDEfgITGYVEsonewN"
+   }
+  ],
+  "not_upscaled": [
+   {
+    "picture": "public/film/img/s21/194-he-holds-it-without-drinking.jpg",
+    "source": "public/film/img/retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg",
+    "before": "2096x1184",
+    "installed": "2096x1178",
+    "archived": "public/film/img/archive/s21/194-he-holds-it-without-drinking--v3.jpg"
+   },
+   {
+    "picture": "public/film/img/s40/177-behind-the-counter.jpg",
+    "source": "public/film/img/retakes_2026_10_25/177-behind-the-counter-r1.jpg",
+    "before": "2848x1600",
+    "installed": "2844x1600",
+    "archived": "public/film/img/archive/s40/177-behind-the-counter--v2.jpg"
+   },
+   {
+    "picture": "public/film/img/s42/210-the-third-time.jpg",
+    "source": "public/film/img/retakes_2026_10_25/210-the-third-time-r1.jpg",
+    "before": "2848x1600",
+    "installed": "2844x1600",
+    "archived": "public/film/img/archive/s42/210-the-third-time--v2.jpg"
+   }
+  ]
+ }
 }

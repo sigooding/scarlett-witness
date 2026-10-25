@@ -9,6 +9,28 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Nine of the 25 October retakes in the film; Kurose's car tried (25 October 2026, later)
+
+* **The nine.** The director said yes to the retakes that passed the check of `public/film/img/retakes_2026_10_25/`. They
+  are in the film at their old paths, each old picture archived first:
+  * montage 18's first picture, 194 and 249: Jack's office with the desk the room master's way;
+  * 354 and 364: Mrs. Sakai's room with the altar on the right;
+  * 207 and 376: the inn's payphone with one handset, Mr. Noda's desk back;
+  * 177: Noda behind the counter;
+  * 210: Jack's coat restored.
+
+  The six under 1920 wide were upscaled with Topaz first, with the same settings as the 17 above. 194, 177 and 210 went in
+  as they came, cropped to 16:9. Record: `docs/film-picture-upscales-2026-10-25.json`, under `retakes_2026_10_25`.
+* **354 now has Jack in it.** Its depth was made again with a cut-out for each of them (`"cutoutDepth": "matte"`, since
+  neither's feet are in shot), so Mrs. Sakai (0.594) and Jack (0.346) move apart. Its two lights still sit on the television
+  and the altar. 364's map was made again from its new picture. Both moves were recorded with `tools/depth-frames.mjs`.
+* **Kurose's car (scenes 93–94).** Five of the brief's pictures are made and checked: 137 without the coat, 140, 141 with the
+  model's watch, 368 and the new insert 94-01. They are in `public/film/img/retakes_2026_10_25/` but **not in the film**. The
+  brief's sequence moves 141 to "Ishida gets in. The door closes." and adds 94-01, so they go in together once 138 and 139
+  exist.
+  * 139 failed four times; that folder's README says how.
+  * 138 was not made: the ElevenLabs account ran out of credits.
+
 ## No picture under full size; the close-ups' depth (25 October 2026)
 
 * **Upscaled.** The director: "fix pics". Every picture the film shows that was under 1920 wide (17 of 630: the opening

@@ -702,3 +702,27 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   redone with the desk the room master's way, like 271 before it; montage 53 keeps 05 and gains a light-off picture after
   it. A check of every office picture found only 249 (scene 11) also with the desk the wrong way; the director wants it redone
   too. Later the same day: 462 (Jack's finger to his lips, scene 45), his hand at the wrong angle.
+
+## 36. Nine retakes in the film; Kurose's car tried (25 October)
+- **"yes"** (to swapping in the nine retakes that passed the check). In the film now:
+  - montage 18's first picture, 194, 249 (the office);
+  - 354, 364 (Mrs. Sakai's room);
+  - 207, 376, 177, 210 (the inn).
+
+  The six small ones were upscaled first. 354's cut-outs (now two, Mrs. Sakai and Jack) and 364's depth map were made again
+  from the new pictures. The old pictures are archived.
+- **"the image generator had trouble doing ishida and kuroso in car do you want to try."** Eleven pictures were made at
+  3840×2160 before the credits ran out.
+  - **Right:**
+    - 137 without the coat;
+    - 140, Ishida looking up at the lit window across the car's roof;
+    - 141 with the model's watch;
+    - 368, the two of them in the right seats, Ishida with the cup, eyes down;
+    - the new 94-01, the tea held out across the empty seat. Kurose's face shows here, where the brief kept it in shadow.
+  - **Not right:** 139, four times. Either the door was hinged at the back, or the car was turned round with its left side at
+    the kerb.
+  - **Not made:** 138.
+
+  They are saved in `public/film/img/retakes_2026_10_25/`, not in the film: they go in as one sequence once 138 and 139
+  exist. The next 139 leaves the door out of frame (the brief, 6e).
+- **The ElevenLabs account is out of credits:** 659 left, and a 4K picture costs 1,100 to 1,600.

@@ -665,6 +665,40 @@ go. Save each as `<name>-r2.jpg`.
 - Prompt: *Keep this picture exactly: the close-up, the receipts in his hand, the pink handset at his ear. Change only the
   payphone: its cradle is empty; the handset at his ear is its only handset, on its coiled pink cord.* + section 4's style line.
 
+## Kurose's car, after the maintainer's try (25 October)
+
+The film's maintainer made section 1's pictures the same day. Their check is at the end of `retakes_2026_10_25/README.md`:
+- **Right:** 137, 140, 141, 368 and 94-01.
+- **Failed:** 139, four times. Edits of the current 139 kept the door hinged at its back. Fresh pictures hinged it right but
+  turned the car round, with its left side at the kerb. Whenever the door is in shot, the generator puts it on the side it
+  likes.
+- **Not made:** 138.
+
+**6e.** `retakes_2026_10_25/139-only-tea-r2.jpg` (1c again, with the door out of frame)
+- Plays on: "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going." and "Its rear door
+  stands open: warm amber light, leather."
+- Attach:
+  - `s94/141-he-drinks.jpg` (the interior and Kurose);
+  - `sheets/kurose.jpg`;
+  - `retakes_2026_10_25/94-01-the-clean-hand-r1.jpg` (the doorway that the next shot of the car, 94-01, looks through).
+- Prompt: *From the wet pavement at night, at standing height, looking straight in through the open rear doorway of a black
+  1990s Japanese saloon parked at the kerb; the car's front is to the RIGHT. The doorway fills the middle of the frame, framed
+  by the black car body and the edge of the roof, rain falling across it; the open door itself is out of frame. Inside, warm
+  amber courtesy light and tan leather. The near half of the back seat, nearest us, is EMPTY, the armrest down. On the far side
+  of the back seat, by the far window, a white-haired man in a charcoal suit sits still and upright, looking ahead toward the
+  front of the car, his face in shadow, his hands out of sight. At the right edge of the doorway, the back of the front seat
+  nearest us, and the dark shoulder of the driver at the wheel.* + CAR + LOOK.
+- Check: no door in shot; the near seat is empty; the man faces the right of frame; the driver's shoulder at the right.
+
+**6f.** `retakes_2026_10_25/138-the-door-opens-r1.jpg` (1b, not made yet)
+- Exactly as 1b in section 1. Its base, `retakes_2026_10_25/137-he-knows-this-car-r1.jpg`, now exists.
+
+**6g. (optional)** `retakes_2026_10_25/94-01-the-clean-hand-r2.jpg` (1e again)
+- r1 is right, but Kurose's face is in full light, where the brief keeps it in shadow.
+- An edit of r1 (attach it as the base).
+- Prompt: *Keep this picture exactly. Change only the light on the man's face: it falls into shadow above the cup, only his
+  swept-back white hair catching the amber light.* + LOOK.
+
 ---
 
 # Not for you: free fixes, no new picture

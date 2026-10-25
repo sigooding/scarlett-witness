@@ -3162,7 +3162,11 @@
     "depthCutouts": [
      {
       "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
-      "depth": 0.718
+      "depth": 0.594
+     },
+     {
+      "image": "/film/depth/s29/354-the-altar-photograph/cutout-2.png",
+      "depth": 0.346
      }
     ],
     "depthMotion": "drift",

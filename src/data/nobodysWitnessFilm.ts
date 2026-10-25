@@ -11424,7 +11424,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
-        "depth": 0.718
+        "depth": 0.594
+       },
+       {
+        "image": "/film/depth/s29/354-the-altar-photograph/cutout-2.png",
+        "depth": 0.346
        }
       ],
       "depthMotion": "drift",
@@ -28543,5 +28547,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "108750a506a2"
+ "builtinRevision": "8df81a20e660"
 } as unknown as Story;
