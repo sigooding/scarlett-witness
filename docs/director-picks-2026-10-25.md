@@ -113,6 +113,7 @@ re-made. So must 354's (section 4).
 
 | Scene | Picture | Line on screen | The note | What it needs |
 |---|---|---|---|---|
+| 45 — The lobby goes dark | `s45/462-a-finger-to-his-lips.jpg` | Jack puts a finger to his lips. | needs redoing his hand wrong angle | An edit: the hand turned to hush Mr. Noda (back of the hand toward him, not the camera). Also, the vending machine already has the bullet holes it only gets in the next shot. |
 | 84 — Three feet away | `s84/519-not-all-right.jpg` | Vera says nothing for a while. She does not say it's all right. | her hair should be in a bun like the others in the scene | An edit: her hair in the low bun of 116 and 521, and their white collared shirt instead of a cream turtleneck. |
 | 96 — A minute fast | `s96/303-he-left-a-statement.jpg` | He left a note. | the office changes from the previous shot | The room is flipped against 143 (windows left instead of right, filing cabinets instead of the hatch and door). Remake it as 143's room. |
 | 100 — The city goes on | `s100/161-stool-three.jpg` | She stands a moment. Then she sits down beside him. | vera has extra leg | A third leg; she is also on Jack's right, reaching across him for the stool, while 160 and 159 seat her on his left. |
@@ -129,6 +130,6 @@ wants it off (an edit).
 - **Free, can be done now:** the 17 swaps, the 9 unused takes, 336's extra beat and scene 28's sound. Three of the
   swaps (15, 73-06, 134) need their depth layers re-made, and one (new-jack-walks-in-3 v1) needs upscaling to full size.
 - **Needs new pictures (none made):** the 30 marked retakes (two of them are the questions in section 5), seven of the notes
-  (246, 285, 349, 354, 469, 87 and 88), the three chat notes (519, 303, 161) and the car's 137 (the raincoat), 140 and 94-01:
+  (246, 285, 349, 354, 469, 87 and 88), the four chat notes (462, 519, 303, 161) and the car's 137 (the raincoat), 140 and 94-01:
   and 249 (scene 11), which a check of every office picture found with the desk the wrong way and the director wants redone
-  too: 44 pictures, most of them edits of the picture as it is. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).
+  too: 45 pictures, most of them edits of the picture as it is. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).

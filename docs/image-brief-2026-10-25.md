@@ -421,6 +421,19 @@ Attach for each: its base, `sheets/jack-face.jpg`, `sheets/mr-noda.jpg`.
   pulls her husband in and the old couple clutch each other. A torch beam sweeps in from the corridor behind; dust in the air.
   Seconds left.* + style line.
 
+**4j.** `retakes_2026_10_25/462-a-finger-to-his-lips-r1.jpg` (from the director in chat, 25 October)
+- Plays on: "Jack puts a finger to his lips." (Mr. Noda, behind the counter off to the left, has seen him; one gunman stands
+  in the middle of the lobby.) The director: his hand is at the wrong angle. (Also: the vending machine behind him already
+  has bullet holes; the gunman shoots it in the next shot, after the lights go out.)
+- An edit of `s45/462-a-finger-to-his-lips.jpg` (attach it as the base).
+- Prompt: *Keep this picture exactly: Jack at the corridor's edge in his dark overcoat, looking off to the left toward the
+  counter, his other hand by the light switch on the door frame, the lobby behind him. Change only his right hand: raised
+  close to his face, the index finger upright and pressed straight up across the middle of his closed lips, the other
+  fingers folded loosely, the back of the hand turned to the left, toward the man he is hushing, the palm toward his own
+  chin; the wrist straight, the elbow down by his side. And the vending machine behind him is whole: no bullet holes yet.* +
+  style line.
+- Check: five fingers; the gesture reads as "quiet" at a glance.
+
 ---
 
 # 5. The rest, in film order

@@ -701,4 +701,4 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - **The director's answers, 25 October:** Ishida's raincoat in 137 goes (an edit of the pick; 138 is made from it); 194 is
   redone with the desk the room master's way, like 271 before it; montage 53 keeps 05 and gains a light-off picture after
   it. A check of every office picture found only 249 (scene 11) also with the desk the wrong way; the director wants it redone
-  too.
+  too. Later the same day: 462 (Jack's finger to his lips, scene 45), his hand at the wrong angle.
