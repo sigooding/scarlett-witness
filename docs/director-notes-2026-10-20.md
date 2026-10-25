@@ -686,3 +686,9 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   away as the wall behind them (or, in 227, as near as the lens), because the depth was read from the ground under their
   feet and their feet are out of frame. Each person's depth now comes from the depth model's reading of the person
   themselves, so the one nearest the camera moves most.
+
+## 35. The picks from "Every picture, in order" (25 October): listed, not applied
+- **"don't create any new images but list the changes needed and add to repo for urgent review."** The review page's 56
+  changes (30 retakes, 17 swaps to a version that already exists, 9 notes) and 9 unused takes wanted are listed in
+  `docs/director-picks-2026-10-25.md`, with what each needs and two picks to confirm (194's note, montage 53's picture 05).
+  Nothing in the film is changed by it. The depth cut-outs needed no integrating: all were in the film already.

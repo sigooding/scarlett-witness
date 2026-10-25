@@ -1,0 +1,601 @@
+[
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/01-backstreet.jpg",
+  "line": "A narrow street of shuttered shops."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/02-vending.jpg",
+  "line": "A vending machine hums on the corner. High up, one lit window, a radio playing behind it."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/03-mara-walks.jpg",
+  "line": "MARA VOSS (24) walks fast, arms folded, soaked, no umbrella."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/04-mara-phone.jpg",
+  "line": "Her phone lights up: VERA. She watches it ring."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/05-phone-off.jpg",
+  "line": "She declines it."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/328-the-scrap.jpg",
+  "line": "THE SCRAP\n\nThe note in her hands. Her handwriting, in biro: 1.00 Sakai. Underneath is an address. Beneath that, underlined twice: \"just listen.\""
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/329-the-lane-the-watch.jpg",
+  "line": "She looks down the lane. At the far end, the bar sign. She checks her watch (12.45). Early."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/06-barbershop-doorway.jpg",
+  "line": "The rain thickens."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/383-the-empty-lane.jpg",
+  "line": "Somewhere nearby, a pedestrian crossing CHIMES its old melody for an empty intersection. Over and over. No one crosses."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/07-old-man.jpg",
+  "line": "An OLD MAN (70s) in a cheap raincoat and a grey flat cap comes in from the road, one hand pressed to his side as if something is hidden there."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/330-the-red-clip.jpg",
+  "line": "She leans out of the shadow. The red bird clip catches the street light."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/09-old-man-stops.jpg",
+  "line": "He sees it. He stops, six metres short of her. For one second his whole face changes."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/331-he-refuses.jpg",
+  "line": "Then he shakes his head. Barely. A man refusing a stranger. And he turns his back on her, slowly, to face the road."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/332-the-sedan-blocks-the-lane.jpg",
+  "line": "Behind him, at the mouth of the lane, headlights. A black sedan pulls across the opening and stops, blocking it."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/333-the-white-light.jpg",
+  "line": "The old man doesn't move."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/11-sakai-mid-fall.jpg",
+  "line": "A suppressed SHOT."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/10-the-shot.jpg",
+  "line": "Flat and ordinary, like a door closing."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/12-masked-man-radio.jpg",
+  "line": "One of the masked men touches his ear."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/13-taillights-gone.jpg",
+  "line": "They walk back to the sedan. They don't hurry. They never look at the doorway."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/14-she-kneels.jpg",
+  "line": "Mara runs to the old man. Her bag slides off her shoulder and spills across the wet street. She doesn't notice."
+ },
+ {
+  "state": "alt",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/15-the-grip.jpg",
+  "alt": "PlayFrame:s1/15-the-grip.jpg",
+  "line": "His hand comes out of his coat with something small and brass in it. He presses it into her palm and closes her fingers over it."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/16-the-key.jpg",
+  "line": "In her hand: a small brass key on a stamped number tag."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/17-she-runs.jpg",
+  "line": "At the other end of the street, the amber glow of a bar. Mara runs for it."
+ },
+ {
+  "state": "keep",
+  "scene": "1 — The backstreet",
+  "pic": "/film/img/s1/18-the-flashlight.jpg",
+  "line": "Behind her, on the street: her purse, open in the rain."
+ },
+ {
+  "state": "keep",
+  "scene": "2 — The small bar",
+  "pic": "/film/img/s2_picks/25-two-pairs-of-shoes-v2.jpg",
+  "line": "Mara is behind the counter before she knows she's moved."
+ },
+ {
+  "state": "keep",
+  "scene": "2 — The small bar",
+  "pic": "/film/img/s2_picks/24-from-the-floor-s2new2.jpg",
+  "line": "Two shots."
+ },
+ {
+  "state": "keep",
+  "scene": "2 — The small bar",
+  "pic": "/film/img/s2_picks/26-the-variety-show-s2new2.jpg",
+  "line": "On the high shelf, the television audience laughs."
+ },
+ {
+  "state": "keep",
+  "scene": "2 — The small bar",
+  "pic": "/film/img/s2/308-clip-under-the-shelf.jpg",
+  "line": "Behind the counter, Mara folds herself into the gap between the crates and the ice bin."
+ },
+ {
+  "state": "keep",
+  "scene": "2 — The small bar",
+  "pic": "/film/img/s2_picks/27-the-notebook-v1.jpg",
+  "line": "He takes one step toward the counter. A voice in his earpiece: one word. He turns and goes."
+ },
+ {
+  "state": "keep",
+  "scene": "2 — The small bar",
+  "pic": "/film/img/s2_picks/28-the-blue-glow-s2new2.jpg",
+  "line": "The door swings shut. The television laughs again."
+ },
+ {
+  "state": "retake",
+  "scene": "Opening titles",
+  "pic": "/film/img/montage/m1-neon-backstreet.jpg",
+  "note": "poor quality image"
+ },
+ {
+  "state": "retake",
+  "scene": "4 — Vera's apartment",
+  "pic": "/film/img/s4/384-the-room-too-big.jpg",
+  "note": "bit too wide angled room looks empty",
+  "line": "VERA VOSS (29) sits at the low table."
+ },
+ {
+  "state": "retake",
+  "scene": "11 — Two men laughing",
+  "pic": "/film/img/s11/419-twenty-years.jpg",
+  "note": "he lost character consistancy",
+  "line": "Twenty years, Ishida."
+ },
+ {
+  "state": "",
+  "scene": "12 — The strap",
+  "pic": "/film/img/s12/246-the-can.jpg",
+  "note": "its beer can not coffee",
+  "line": "Jack drops the unopened coffee into the recycling bin. The can CLANKS. The crossing melody starts up somewhere, for no one."
+ },
+ {
+  "state": "",
+  "scene": "14 — Forty metres",
+  "pic": "/film/img/s14a/336-the-lighter.jpg",
+  "note": "keep but also add v1 after in new beat as its a good image",
+  "line": "He takes his hand from his pocket. The old steel lighter, open, unlit."
+ },
+ {
+  "state": "alt",
+  "scene": "14 — Forty metres",
+  "pic": "/film/img/s14a/339-not-running-from-you.jpg",
+  "alt": "scarlett-witness:archive/s14a/339-not-running-from-you--v1.jpg",
+  "line": "Runners don't pack. They leave with what they're wearing. Your sister had a suitcase zipped under the bed and a flight booked home. Whatever happened to her, she wasn't running from you."
+ },
+ {
+  "state": "alt",
+  "scene": "18 — After the last train",
+  "pic": "/film/img/s18/283-the-letter.jpg",
+  "alt": "scarlett-witness:archive/s18/283-the-letter--v1.jpg",
+  "line": "The envelope folded inside it is addressed to VERA VOSS."
+ },
+ {
+  "state": "alt",
+  "scene": "18 — After the last train",
+  "pic": "/film/img/s18/189-after-the-last-train.jpg",
+  "alt": "scarlett-witness:archive/s18/189-after-the-last-train--v2.jpg",
+  "note": "missing a lamp",
+  "line": "Come back. Alone. After the last train."
+ },
+ {
+  "state": "retake",
+  "scene": "Montage — to the Hive, after the last train",
+  "pic": "/film/img/montage18/01.jpg",
+  "note": "remove replace without reflection and correct desk orientation"
+ },
+ {
+  "state": "retake",
+  "scene": "21 — Footsteps on the stairs",
+  "pic": "/film/img/s21/271-not-yet.jpg",
+  "note": "desk wronk orientation compared to earlier shoots",
+  "line": "The sketchbook is on the desk between them. Jack's hand rests on its cover."
+ },
+ {
+  "state": "retake",
+  "scene": "21 — Footsteps on the stairs",
+  "pic": "/film/img/s21/194-he-holds-it-without-drinking.jpg",
+  "note": "its already built the image previewer with all images?",
+  "line": "Jack sits very still. He picks up the coffee she brought him and holds it without drinking, the way he held the can at the vending machine."
+ },
+ {
+  "state": "",
+  "scene": "22 — Somewhere like this",
+  "pic": "/film/img/s22/285-the-inside-pocket.jpg",
+  "note": "jack moved from main counter",
+  "line": "Jack is very still. The letter is in the inside pocket of his coat. He doesn't move to touch it."
+ },
+ {
+  "state": "",
+  "scene": "22 — Somewhere like this",
+  "pic": "/film/img/s22/349-paid-to-listen.jpg",
+  "note": "jack moved from main counter",
+  "line": "I get paid to listen."
+ },
+ {
+  "state": "retake",
+  "scene": "25 — The number 114",
+  "pic": "/film/img/s25/445-exactly-where-it-was.jpg",
+  "note": "jack looks like art not like a film still",
+  "line": "Jack sets the page down exactly where it was."
+ },
+ {
+  "state": "retake",
+  "scene": "25 — Breakfast",
+  "pic": "/film/img/s25a/289-for-making-me.jpg",
+  "note": "too much money",
+  "line": "For making me."
+ },
+ {
+  "state": "alt",
+  "scene": "26 — The second hand",
+  "pic": "/film/img/s26/454-keep-it.jpg",
+  "alt": "scarlett-witness:archive/s26/454-keep-it--v2.jpg",
+  "line": "She tries to give it back. He closes her fingers around it."
+ },
+ {
+  "state": "retake",
+  "scene": "27 — She was here",
+  "pic": "/film/img/s27a/374-the-dead-television.jpg",
+  "note": "tv in wrong place - don't use reflection",
+  "line": "Vera looks up at the dead television. Somewhere in the dark glass, her own face."
+ },
+ {
+  "state": "",
+  "scene": "28 — The sea wall steps",
+  "pic": "/film/img/s28/203-the-sea-wall-steps.jpg",
+  "note": "but add japanese coastal sounds if not already there",
+  "line": "Jack's old car, parked on the sea wall. He gets out, pulls up his collar against the wind, and walks."
+ },
+ {
+  "state": "retake",
+  "scene": "29 — The tea she does not want to pour",
+  "pic": "/film/img/s29/204-the-tea-she-does-not-want-to-pour.jpg",
+  "note": "memorial on wrong side",
+  "line": "MRS. SAKAI (70s), small and hard, pours Jack tea she doesn't want to pour."
+ },
+ {
+  "state": "",
+  "scene": "29 — The tea she does not want to pour",
+  "pic": "/film/img/s29/354-the-altar-photograph.jpg",
+  "note": "jack is miising",
+  "line": "She studies him. Then she looks at the photograph on the altar."
+ },
+ {
+  "state": "alt",
+  "scene": "32 — Just one night",
+  "pic": "/film/img/s32/171-upstairs-at-the-end.jpg",
+  "alt": "scarlett-witness:archive/s32/171-upstairs-at-the-end--v2.jpg",
+  "line": "Upstairs, at the end. The bath is shared, I'm sorry. I'll show you. The light doesn't work properly."
+ },
+ {
+  "state": "retake",
+  "scene": "35 — The pink payphone",
+  "pic": "/film/img/s35/207-the-pink-payphone.jpg",
+  "note": "theres 2 x receiver phone handset. one to his ear and one hung",
+  "line": "Mr. Noda asleep in front of the baseball. Jack at the pink payphone, feeding it coins."
+ },
+ {
+  "state": "retake",
+  "scene": "36 — Come back safe anyway",
+  "pic": "/film/img/s36/538-the-receipts-in-his-hand.jpg",
+  "note": "theres 2 x receiver phone handset. one to his ear and one hungup",
+  "line": "Jack looks at the receipts in his hand."
+ },
+ {
+  "state": "retake",
+  "scene": "36 — Come back safe anyway",
+  "pic": "/film/img/s36/376-the-coins-run-out.jpg",
+  "note": "theres 2 x receiver phone handset. one to his ear and one hungup and he has extra arm",
+  "line": "The coins run out. The line goes dead."
+ },
+ {
+  "state": "retake",
+  "scene": "37 — The keys are always in it",
+  "pic": "/film/img/s37/460-parked-crooked.jpg",
+  "note": "missing jack and noda",
+  "line": "She offers the pack anyway. He shakes his head."
+ },
+ {
+  "state": "retake",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "/film/img/s39/175-the-curtain-gap.jpg",
+  "note": "bad quality"
+ },
+ {
+  "state": "retake",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "/film/img/s40/177-behind-the-counter.jpg",
+  "note": "fix desk like previous shot and add a bad guy"
+ },
+ {
+  "state": "retake",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "/film/img/s40/178-staff-side.jpg",
+  "note": "add a bad guy walking to stairs"
+ },
+ {
+  "state": "retake",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "/film/img/s42/210-the-third-time.jpg",
+  "note": "jack missing his jacket"
+ },
+ {
+  "state": "retake",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "/film/img/s46/213-clutch-each-other.jpg",
+  "note": "make more dynamic. more rushed"
+ },
+ {
+  "state": "alt",
+  "scene": "51 — The model, corrected",
+  "pic": "/film/img/retakes_2026_10_20/311-the-hand-on-the-model-r1.jpg",
+  "alt": "scarlett-witness:retakes_2026_10_20/311-the-hand-on-the-model-r1--alt1.jpg",
+  "line": "The plaza underneath is already finished. Tiny painted people cross it."
+ },
+ {
+  "state": "retake",
+  "scene": "Montage — the night after Pink water",
+  "pic": "/film/img/montage53/05.jpg",
+  "note": "actually keep it but add beat after with light off"
+ },
+ {
+  "state": "",
+  "scene": "53 — There was no car",
+  "pic": "/film/img/s53a/469-what-they-are-told.jpg",
+  "note": "shes took glasses of but she still wearing them.",
+  "line": "The police say what they are told."
+ },
+ {
+  "state": "retake",
+  "scene": "59 — It rings. Nobody answers.",
+  "pic": "/film/img/s59/364-the-kotatsu.jpg",
+  "note": "memorial on wrong side",
+  "line": "MRS. SAKAI'S HOUSE\n\nThe kotatsu."
+ },
+ {
+  "state": "alt",
+  "scene": "59 — It rings. Nobody answers.",
+  "pic": "/film/img/s59/478-a-detective.jpg",
+  "alt": "scarlett-witness:archive/s59/478-a-detective--v1.jpg",
+  "line": "Jack. A detective."
+ },
+ {
+  "state": "retake",
+  "scene": "63 — No questions",
+  "pic": "/film/img/s63/231-the-box.jpg",
+  "note": "remove box also correct orientation of table",
+  "line": "In the envelope, a single cassette tape in a cracked plastic case, labelled in a shaking hand: SHIOHAMA."
+ },
+ {
+  "state": "alt",
+  "scene": "63 — Not another day",
+  "pic": "/film/img/s63a/293-the-sedan-waits.jpg",
+  "alt": "scarlett-witness:archive/s63a/293-the-sedan-waits--v2.jpg",
+  "line": "At the far end of the arch, a black sedan sits with its lights off and its engine running."
+ },
+ {
+  "state": "retake",
+  "scene": "65 — The wine-red dress",
+  "pic": "/film/img/s65/232-the-wine-red-dress.jpg",
+  "note": "looks like shes wearing it",
+  "line": "Vera holds it up against herself in the mirror. For a moment she is someone else. Her mother, maybe."
+ },
+ {
+  "state": "retake",
+  "scene": "72 — The call",
+  "pic": "/film/img/s72/70-the-call.jpg",
+  "note": "lost character consistancy",
+  "line": "She knows. From his voice, she already knows. She stands up."
+ },
+ {
+  "state": "alt",
+  "scene": "Vera runs (scenes 72–77, to the song)",
+  "pic": "/film/img/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe.jpg",
+  "alt": "scarlett-witness:vera_run_new/73-06-her-face.jpg"
+ },
+ {
+  "state": "retake",
+  "scene": "Vera runs (scenes 72–77, to the song)",
+  "pic": "/film/img/vera_run_new/73-09-she-cannot-breathe.jpg",
+  "note": "too much mascara"
+ },
+ {
+  "state": "alt",
+  "scene": "Vera runs (scenes 72–77, to the song)",
+  "pic": "/film/img/s77/85-the-desk-lamp.jpg",
+  "alt": "scarlett-witness:archive/s77/85-the-desk-lamp--v2.jpg"
+ },
+ {
+  "state": "",
+  "scene": "77 — The envelope (after the song)",
+  "pic": "/film/img/s77/87-he-writes-nothing.jpg",
+  "note": "desk in wrong orientation",
+  "line": "He picks up a pen to write something on the envelope. He holds it over the paper for a long time."
+ },
+ {
+  "state": "",
+  "scene": "78 — No name",
+  "pic": "/film/img/s78/88-the-walkway.jpg",
+  "note": "don't put vera in shot just closed doo",
+  "line": "Grey light. An open-air walkway along the third floor. Rain dripping from the railing."
+ },
+ {
+  "state": "alt",
+  "scene": "82 — Start with my part",
+  "pic": "/film/img/s82/new-jack-walks-in-3.jpg",
+  "alt": "scarlett-witness:archive/s82/new-jack-walks-in-3--v1.jpg",
+  "line": "Nobody stops him."
+ },
+ {
+  "state": "retake",
+  "scene": "82 — Start with my part",
+  "pic": "/film/img/s82/106-play.jpg",
+  "note": "different cassette player to previous shot",
+  "line": "Harada presses PLAY."
+ },
+ {
+  "state": "retake",
+  "scene": "82 — The notebook photocopied",
+  "pic": "/film/img/s82a/512-he-hasnt-stopped.jpg",
+  "note": "they should be looking towards jack",
+  "line": "Two hours. He hasn't stopped."
+ },
+ {
+  "state": "alt",
+  "scene": "The Hive raid (scenes 85–92, to the song)",
+  "pic": "/film/img/s91/134-the-walkway-is-empty.jpg",
+  "alt": "scarlett-witness:archive/s91/134-the-walkway-is-empty--v1.jpg"
+ },
+ {
+  "state": "alt",
+  "scene": "The Hive raid (scenes 85–92, to the song)",
+  "pic": "/film/img/s92/135-below-the-viaduct.jpg",
+  "alt": "scarlett-witness:archive/s92/135-below-the-viaduct--v1.jpg"
+ },
+ {
+  "state": "alt",
+  "scene": "93 — He knows this car",
+  "pic": "/film/img/s93/137-he-knows-this-car.jpg",
+  "alt": "scarlett-witness:reshoot-1080/137-he-knows-this-car.jpg",
+  "line": "At the kerb, a black sedan. Engine running. Wipers beating slowly."
+ },
+ {
+  "state": "retake",
+  "scene": "93 — He knows this car",
+  "pic": "/film/img/s93/138-the-door-opens.jpg",
+  "note": "car looks wrong, keep doors shut",
+  "line": "A long moment. Then the rear door opens from inside."
+ },
+ {
+  "state": "retake",
+  "scene": "94 — The lit window",
+  "pic": "/film/img/s94/139-only-tea.jpg",
+  "note": "door open wrong way",
+  "line": "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going."
+ },
+ {
+  "state": "retake",
+  "scene": "94 — The lit window",
+  "pic": "/film/img/s94/368-the-door-closes.jpg",
+  "note": "they need to switch seats",
+  "line": "Ishida gets in. The door closes. The rain is suddenly very far away."
+ },
+ {
+  "state": "alt",
+  "scene": "99 — The Hive coming down, then the plaza",
+  "pic": "/film/img/s99/156-cut-open.jpg",
+  "alt": "scarlett-witness:archive/s99/156-cut-open--v1.jpg",
+  "line": "The Hive is coming down."
+ },
+ {
+  "state": "alt",
+  "scene": "99 — The Hive coming down, then the plaza",
+  "pic": "/film/img/s99/157-the-sign.jpg",
+  "alt": "scarlett-witness:archive/s99/157-the-sign--v1.jpg",
+  "line": "Kaneko stands among them, holding the old noodle-shop sign against her chest, wrapped in a blanket."
+ },
+ {
+  "state": "want",
+  "scene": "59 — It rings. Nobody answers.",
+  "pic": "UNUSED scarlett-witness:s59/477-it-rings.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The Hive raid (scenes 85–92, to the song)",
+  "pic": "UNUSED scarlett-witness:thehiveescape/s85/85-02-single-file.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The Hive raid (scenes 85–92, to the song)",
+  "pic": "UNUSED scarlett-witness:thehiveescape/s92/92-01-off-the-last-rung.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The Hive raid (scenes 85–92, to the song)",
+  "pic": "UNUSED scarlett-witness:thehiveescape/s92/92-02-the-hive-lit-again.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "UNUSED scarlett-witness:roadside/s40/40-02-plaster-rains-down.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "UNUSED scarlett-witness:roadside/s49/49-01-through-the-farm-gate.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "UNUSED scarlett-witness:roadside/s49/49-02-fishtails-onto-the-track.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "The inn raid (scenes 39–49, cutscene)",
+  "pic": "UNUSED scarlett-witness:roadside/s49/49-03-no-need-to-chase.jpg"
+ },
+ {
+  "state": "want",
+  "scene": "Vera runs (scenes 72–77, to the song)",
+  "pic": "UNUSED scarlett-witness:vera_run_new/74-12-she-was-waiting-for-me.jpg"
+ }
+]
