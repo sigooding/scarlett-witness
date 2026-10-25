@@ -130,5 +130,5 @@ wants it off (an edit).
   swaps (15, 73-06, 134) need their depth layers re-made, and one (new-jack-walks-in-3 v1) needs upscaling to full size.
 - **Needs new pictures (none made):** the 30 marked retakes (two of them are the questions in section 5), seven of the notes
   (246, 285, 349, 354, 469, 87 and 88), the three chat notes (519, 303, 161) and the car's 137 (the raincoat), 140 and 94-01:
-  43 pictures, most of them edits of the picture as it is. A check of every office picture found one more with the desk the
-  wrong way, 249 (scene 11), briefed in case the director wants it. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).
+  and 249 (scene 11), which a check of every office picture found with the desk the wrong way and the director wants redone
+  too: 44 pictures, most of them edits of the picture as it is. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).
