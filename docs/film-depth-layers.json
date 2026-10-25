@@ -1889,13 +1889,13 @@
      "name": "vera",
      "box": [314, 232, 639, 692],
      "image": "/film/depth/s6/58-why-kanda/cutout-1.png",
-     "depth": 0.328
+     "depth": 0.132
     },
     {
      "name": "ishida",
      "box": [1207, 0, 713, 1080],
      "image": "/film/depth/s6/58-why-kanda/cutout-2.png",
-     "depth": 0.281
+     "depth": 0.928
     }
    ],
    "depthMap": "/film/depth/s6/58-why-kanda/depth.png",
@@ -1909,13 +1909,13 @@
      "name": "vera",
      "box": [248, 143, 538, 937],
      "image": "/film/depth/s5/45-the-young-officer/cutout-1.png",
-     "depth": 0.485
+     "depth": 0.621
     },
     {
      "name": "officer",
      "box": [938, 436, 335, 429],
      "image": "/film/depth/s5/45-the-young-officer/cutout-2.png",
-     "depth": 0.451
+     "depth": 0.158
     }
    ],
    "depthMap": "/film/depth/s5/45-the-young-officer/depth.png",
@@ -2010,13 +2010,13 @@
      "name": "mara",
      "box": [367, 367, 678, 678],
      "image": "/film/depth/s60/227-i-want-my-sister/cutout-1.png",
-     "depth": 0.98
+     "depth": 0.254
     },
     {
      "name": "jack",
      "box": [1082, 311, 582, 737],
      "image": "/film/depth/s60/227-i-want-my-sister/cutout-2.png",
-     "depth": 1.0
+     "depth": 0.262
     }
    ],
    "depthMap": "/film/depth/s60/227-i-want-my-sister/depth.png",
@@ -2030,13 +2030,13 @@
      "name": "vera",
      "box": [136, 44, 860, 1036],
      "image": "/film/depth/s84/521-somebody-has-to-look/cutout-1.png",
-     "depth": 0.221
+     "depth": 0.8
     },
     {
      "name": "jack",
      "box": [1529, 95, 352, 985],
      "image": "/film/depth/s84/521-somebody-has-to-look/cutout-2.png",
-     "depth": 0.23
+     "depth": 0.351
     }
    ],
    "depthMap": "/film/depth/s84/521-somebody-has-to-look/depth.png",

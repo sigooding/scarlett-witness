@@ -3692,11 +3692,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s5/45-the-young-officer/cutout-1.png",
-        "depth": 0.485
+        "depth": 0.621
        },
        {
         "image": "/film/depth/s5/45-the-young-officer/cutout-2.png",
-        "depth": 0.451
+        "depth": 0.158
        }
       ],
       "filmGrade": false,
@@ -4289,11 +4289,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s6/58-why-kanda/cutout-1.png",
-        "depth": 0.328
+        "depth": 0.132
        },
        {
         "image": "/film/depth/s6/58-why-kanda/cutout-2.png",
-        "depth": 0.281
+        "depth": 0.928
        }
       ],
       "filmGrade": false,
@@ -15897,11 +15897,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s60/227-i-want-my-sister/cutout-1.png",
-        "depth": 0.98
+        "depth": 0.254
        },
        {
         "image": "/film/depth/s60/227-i-want-my-sister/cutout-2.png",
-        "depth": 1
+        "depth": 0.262
        }
       ],
       "filmGrade": false,
@@ -23696,11 +23696,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s84/521-somebody-has-to-look/cutout-1.png",
-        "depth": 0.221
+        "depth": 0.8
        },
        {
         "image": "/film/depth/s84/521-somebody-has-to-look/cutout-2.png",
-        "depth": 0.23
+        "depth": 0.351
        }
       ],
       "filmGrade": false,
@@ -28543,5 +28543,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "dd057ce51358"
+ "builtinRevision": "108750a506a2"
 } as unknown as Story;
