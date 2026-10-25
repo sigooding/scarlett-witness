@@ -1,0 +1,326 @@
+{
+  "_": "Ten retakes of pictures already made, 25 October 2026. Ready to run: one edit per shot, base attached first. Pinned references, prompts and checks. Nothing here is installed in the film.",
+  "branch": "arena/34040801-scarlett-witness",
+  "pinned_commit": "00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6",
+  "generator": {
+    "model": "GPT Image 2.5 (Sunburst)",
+    "aspect_ratio": "16:9",
+    "resolution": "4K",
+    "quality": "high",
+    "note": "Ask for the largest landscape size; edit mode, not text-to-image. Keep the delivered size; never downscale."
+  },
+  "rules": [
+    "Never overwrite or delete a picture: every filename here is the first free rN for its shot.",
+    "If two versions are usable, the better keeps the name and the other is saved beside it as --altN.jpg.",
+    "Keep character consistency: the base picture is attached first, then the actor sheets, exactly as listed.",
+    "Never mirror a picture. No legible text unless a prompt asks for it.",
+    "Install nothing: the film's maintainer wires pictures in once the director has seen them."
+  ],
+  "pictures": [
+    {
+      "n": 1,
+      "title": "194 — the cream sketchbook",
+      "file": "retakes_2026_10_25/194-he-holds-it-without-drinking-r2.jpg",
+      "post": "edit of retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg — i.e. 194's frame, corrected",
+      "why": "194-r1 is right in every way except its sketchbook, which came out dark green. The sketchbook is cream in 271 and in every other office shot, and the object is the spine of scene 21 — it has to read as the same book.",
+      "prompt": "Keep this picture exactly: the office, the grey daylight through the blinds, the worn walnut desk, the brass lamp with the\ngreen shade at the left end, the black rotary telephone, the two paper coffee cups, Jack at the desk's right end in his\ncharcoal jacket and off-white shirt, seen side-on, holding his cup without drinking. Change only the closed sketchbook on the\ndesk in front of him: a plain, thick, CREAM linen-bound sketchbook, worn and soft at the corners, no lettering, its cover\nthe pale cream of the reference 271. Light warm grey daylight from the window, flat; nothing else in the frame moves.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, flat grey rainy daylight through the blinds, restrained 35mm\ngrain. No legible text, signage, logos or watermarks.",
+      "check": "the book is cream, closed, in the same place on the desk; both paper cups still present; Jack's face unchanged; Vera's empty chair still in frame.",
+      "base": {
+        "path": "retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "s21/271-not-yet.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s21/271-not-yet.jpg",
+          "why": "the cream sketchbook, the same room by day"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        }
+      ],
+      "install_to": "public/film/img/s21/194-he-holds-it-without-drinking.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/194-he-holds-it-without-drinking-r2.jpg"
+    },
+    {
+      "n": 2,
+      "title": "87 — the notebook, and the pen held still",
+      "file": "retakes_2026_10_25/87-he-writes-nothing-r2.jpg",
+      "post": "edit of retakes_2026_10_25/87-he-writes-nothing-r1.jpg — i.e. 87's frame, corrected",
+      "why": "two faults in 87-r1. The notebook on the kraft envelope is dark green — the same cream-book fault as 194 — and the pen tip touches the paper, where the beat is a man holding a pen over a letter he does not write.",
+      "prompt": "Keep this picture exactly: the office at night, the rain on the window and the elevated railway beyond, the blinds, the CRT\non the grey filing cabinet, the brass lamp with the green shade lit at the left end of the desk, the black rotary telephone,\nthe worn brown sofa at the right, Jack at the desk's right end in his soaked dark overcoat, side-on and facing left, his\nbloodied knuckles on the kraft envelope. Change only two things. One: the small notebook lying on the envelope is a plain\nCREAM linen-bound sketchbook, worn at the corners, no lettering, as in the reference. Two: the pen is held still in the air\nABOVE the paper, its tip a clear centimetre above the page — he is not writing anything, and the page beneath it is\nblank. Warm light only from the green-shaded lamp; cold blue-grey from the window.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, restrained 35mm grain. No legible text, signage, logos or\nwatermarks.",
+      "check": "cream book, no lettering; pen visibly clear of a blank page; the bloodied knuckles and the envelope unchanged; desk still the room master's way — Jack at the right end, facing left, his back to the sofa, not to the window.",
+      "base": {
+        "path": "retakes_2026_10_25/87-he-writes-nothing-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/87-he-writes-nothing-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg",
+          "why": "the room by day, the cream sketchbook"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        },
+        {
+          "path": "sheets/jack.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack.jpg",
+          "why": "Jack's build and coat"
+        }
+      ],
+      "install_to": "public/film/img/s77/87-he-writes-nothing.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/87-he-writes-nothing-r2.jpg"
+    },
+    {
+      "n": 3,
+      "title": "462 — the hushing hand, rebuilt",
+      "file": "retakes_2026_10_25/462-a-finger-to-his-lips-r4.jpg",
+      "post": "edit of s45/462-a-finger-to-his-lips.jpg — the in-film frame, not r3 (r3 has the two hands)",
+      "why": "462-r3 still shows two right hands, and an edit of r3 would inherit them. This take goes back to the in-film frame — which has the location, the light and the stance right — and rebuilds the hand and forearm from the actor's sheet, with the palm turned toward Mr. Noda rather than the camera. It also keeps the vending machine intact: the bullet holes belong to the next shot only.",
+      "prompt": "Keep this picture: the inn's lobby at night, the corridor behind him leading to the darkened staircase, the lamp glowing\non the wall, the keys and fobs in their glass case at the left, the CRT at the right, the vending machine in the\nbackground WHOLLY INTACT — no bullet holes, no damage of any kind — and Jack in the doorway at the right of frame in his\ndark coat and off-white open-collar shirt, his face to match the actor sheets. Change only the gesture: ONE hand, his LEFT,\ncomes up to his lips, the palm turned TOWARD the room and toward Mr. Noda behind him, the back of the hand toward the\ncamera; index finger vertical against his lips in a natural hush. One hand, one wrist, one forearm, five fingers, correctly\njoined; his other hand stays down at his side, out of the light. Body turned three-quarters away from the doorway, head\nturned back over his shoulder.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, at night. Cold slate and teal-blue-green shadows, warm amber\npractical light only, restrained 35mm grain. No legible text, signage, logos or watermarks.",
+      "check": "count the hands — one at the lips, one at his side, no third; the palm faces the room, not the camera; the vending machine is undamaged; the face and coat match 178 and the sheets.",
+      "base": {
+        "path": "s45/462-a-finger-to-his-lips.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s45/462-a-finger-to-his-lips.jpg"
+      },
+      "references": [
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        },
+        {
+          "path": "sheets/jack.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack.jpg",
+          "why": "Jack's build and coat"
+        },
+        {
+          "path": "s45/178-thank-you-very-much.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s45/178-thank-you-very-much.jpg",
+          "why": "the intact vending machine"
+        }
+      ],
+      "install_to": "public/film/img/s45/462-a-finger-to-his-lips.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/462-a-finger-to-his-lips-r4.jpg"
+    },
+    {
+      "n": 4,
+      "title": "207 — the handset up at his ear",
+      "file": "retakes_2026_10_25/207-the-pink-payphone-r2.jpg",
+      "post": "edit of retakes_2026_10_25/207-the-pink-payphone-r1.jpg — i.e. 207's frame, corrected",
+      "why": "207-r1 got the count right — one pink handset, empty cradle, no second receiver, Mr. Noda's desk restored — but the handset is held low, at his mouth. On screen it has to be a man listening.",
+      "prompt": "Keep this picture exactly: the inn's lobby at night, the pink payphone on the wall at the left with its empty cradle, the\nglass case of keys and fobs beside it, the two vinyl armchairs, the staircase at the back, Mr. Noda asleep behind his\nwooden desk at the right under the baseball on the CRT. Change only Jack's arms: he holds the payphone's own pink handset UP\nat his EAR, pressed to it, listening, his head slightly tilted into it, the coiled pink cord running from the phone box up\nto the handset; his other hand rests at the coin slot. No second receiver, no second handset.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, at night. Cold slate and teal-blue-green shadows, warm amber\npractical light only, restrained 35mm grain. No legible text, signage, logos or watermarks.",
+      "check": "the handset is at his ear, not his mouth; exactly one handset in the picture; the desk, Noda and the CRT untouched.",
+      "base": {
+        "path": "retakes_2026_10_25/207-the-pink-payphone-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/207-the-pink-payphone-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "retakes_2026_10_25/376-the-coins-run-out-r1.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/376-the-coins-run-out-r1.jpg",
+          "why": "the handset up at the ear, done right"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        },
+        {
+          "path": "sheets/mr-noda.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/mr-noda.jpg",
+          "why": "Mr. Noda"
+        }
+      ],
+      "install_to": "public/film/img/s35/207-the-pink-payphone.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/207-the-pink-payphone-r2.jpg"
+    },
+    {
+      "n": 5,
+      "title": "538 — the close-up back",
+      "file": "retakes_2026_10_25/538-the-receipts-in-his-hand-r3.jpg",
+      "post": "edit of retakes_2026_10_25/538-the-receipts-in-his-hand-r2.jpg — i.e. 538's frame, corrected",
+      "why": "538-r2 is correct on the phone and correct on the hands, but it came out tight to the payphone and cropped the receipts — the one thing the shot is about. (The r1 fault was the opposite: it lost the close-up and turned into 207's wide lobby shot.)",
+      "prompt": "Keep this picture exactly: the pink payphone at the left, its empty cradle, the fanned receipt slips lit warm, Mr. Noda\nasleep in the background, the lobby behind. Change only the framing: pull back and shift the frame RIGHT so the whole of\nJack's raised hand and the FANNED RECEIPTS fill the centre of the picture, every slip complete to its torn edge, the pink\nhandset at his ear on its coiled cord at the right of frame. A close-up — the payphone at the left edge, the receipts the\nsubject — not the wide lobby shot.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, at night. Cold slate and teal-blue-green shadows, warm amber\npractical light only, restrained 35mm grain. No legible text, signage, logos or watermarks.",
+      "check": "every receipt slip inside the frame; one handset, at his ear; the picture is a close-up, not 207's wide shot; Noda remains soft in the background.",
+      "base": {
+        "path": "retakes_2026_10_25/538-the-receipts-in-his-hand-r2.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/538-the-receipts-in-his-hand-r2.jpg"
+      },
+      "references": [
+        {
+          "path": "s36/538-the-receipts-in-his-hand.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s36/538-the-receipts-in-his-hand.jpg",
+          "why": "the framing to return to"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        }
+      ],
+      "install_to": "public/film/img/s36/538-the-receipts-in-his-hand.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/538-the-receipts-in-his-hand-r3.jpg"
+    },
+    {
+      "n": 6,
+      "title": "384 — the phone off the table",
+      "file": "retakes_2026_10_25/384-the-room-too-big-r2.jpg",
+      "post": "edit of retakes_2026_10_25/384-the-room-too-big-r1.jpg — i.e. 384's frame, corrected",
+      "why": "384-r1 fixed the wide-angle emptiness and the lived-in room, but a black smartphone lies on the low table. The film is set before them: Vera's world here is the CRT, the radio-cassette and the landline, and a smartphone on the table breaks the shot.",
+      "prompt": "Keep this picture exactly: Vera's small apartment in grey rainy evening light, the normal lens, the room close and\nlived-in, Vera at the low table in her cream knit with two cups on it, the wooden cabinet with the lamp and the framed\nphotograph at the left, the umbrella in its stand, the window with the building opposite in the rain, the CRT on its stand\nat the right. Change only what lies on the table: the black smartphone is GONE. In its place, a small open notebook and a\npencil, and nothing modern or electronic anywhere in the room — no phone, no tablet, no charger, no cable.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, grey rainy evening light and one warm lamp, restrained 35mm\ngrain. No legible text, signage, logos or watermarks.",
+      "check": "no phone anywhere in frame; the two cups, the umbrella, the lamp and the CRT unchanged; Vera's face and knit untouched; the room still reads close, not wide.",
+      "base": {
+        "path": "retakes_2026_10_25/384-the-room-too-big-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/384-the-room-too-big-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "s4/36-vera-at-the-table.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s4/36-vera-at-the-table.jpg",
+          "why": "the room's props as they are"
+        },
+        {
+          "path": "sheets/vera-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/vera-face.jpg",
+          "why": "Vera's face"
+        }
+      ],
+      "install_to": "public/film/img/s4/384-the-room-too-big.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/384-the-room-too-big-r2.jpg"
+    },
+    {
+      "n": 7,
+      "title": "285 — the hand at rest on the counter",
+      "file": "retakes_2026_10_25/285-the-inside-pocket-r2.jpg",
+      "post": "edit of s22/285-the-inside-pocket.jpg — i.e. the in-film 285 (r1 moved his hand)'s frame, corrected",
+      "why": "the in-film 285 has the seat and the frame right, and the brief's note is about the letter: \"The letter is in the inside pocket of his coat. He doesn't move to touch it.\" In 285-r1 his hand came up to his chest and lapel, which reads as touching it. This take starts from the in-film picture so the counter, the arch and Jack's place stay exactly as the rest of scene 22 has them.",
+      "prompt": "Keep this picture exactly: the tiled underground noodle counter under the brick arch, the cook behind it in the steam, the\nmenu sheets on the tiles, the radio, the ticket machine at the right end, Jack's stool at that end with Vera soft at the edge\nof frame. Change only Jack's hand: it rests FLAT AND STILL on the counter in front of him, fingers relaxed and slightly\napart, well away from his coat — nothing near the lapel or the chest, no hand at the inside pocket. He does not move.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, warm tungsten light in a tiled underground noodle counter,\nrestrained 35mm grain. No legible text, signage, logos or watermarks.",
+      "check": "the hand is on the counter, not at the coat; his seat is the one in 348 and 440; the coat is still closed over the inside pocket; Vera soft at the edge, unchanged.",
+      "base": {
+        "path": "s22/285-the-inside-pocket.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s22/285-the-inside-pocket.jpg"
+      },
+      "references": [
+        {
+          "path": "s22/348-easy-to-talk-to.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s22/348-easy-to-talk-to.jpg",
+          "why": "Jack's seat at the counter's right end"
+        },
+        {
+          "path": "s22/440-she-rests-her-head.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s22/440-she-rests-her-head.jpg",
+          "why": "the same seat, his posture"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        },
+        {
+          "path": "sheets/vera-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/vera-face.jpg",
+          "why": "Vera's face"
+        }
+      ],
+      "install_to": "public/film/img/s22/285-the-inside-pocket.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/285-the-inside-pocket-r2.jpg"
+    },
+    {
+      "n": 8,
+      "title": "289 — yen, not dollars",
+      "file": "retakes_2026_10_25/289-for-making-me-r2.jpg",
+      "post": "edit of retakes_2026_10_25/289-for-making-me-r1.jpg — i.e. 289's frame, corrected",
+      "why": "289-r1 cut the money down to two folded notes, as asked, but the notes read as American dollars. He is at a Japanese till, paying for breakfast; the notes have to be yen.",
+      "prompt": "Keep this picture exactly: the little shop's wooden counter, the coffee siphon, the plates and paper napkins, the CRT high\nin the right corner, the woman behind the counter, Vera seated at the left, Jack standing at the till with his back\nthree-quarters to us, the grey morning light at the door. Change only the notes in Jack's hand: TWO folded JAPANESE banknotes,\nthe pale green-cream and light brown paper of yen, plain and worn, with no readable numbers, portraits or lettering — not\ndollar bills, and no other money anywhere.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, grey morning light, restrained 35mm grain. No legible text,\nsignage, logos or watermarks.",
+      "check": "the paper reads as yen (colour, proportion, folded); two notes only; no greenback engraving; the counter, the siphon and Vera unchanged.",
+      "base": {
+        "path": "retakes_2026_10_25/289-for-making-me-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/289-for-making-me-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "s25a/448-breakfast-nobody-asked-for.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s25a/448-breakfast-nobody-asked-for.jpg",
+          "why": "the same counter and till"
+        },
+        {
+          "path": "sheets/vera-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/vera-face.jpg",
+          "why": "Vera's face"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        }
+      ],
+      "install_to": "public/film/img/s25a/289-for-making-me.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/289-for-making-me-r2.jpg"
+    },
+    {
+      "n": 9,
+      "title": "445 — no \"1:07\"",
+      "file": "retakes_2026_10_25/445-exactly-where-it-was-r2.jpg",
+      "post": "edit of retakes_2026_10_25/445-exactly-where-it-was-r1.jpg — i.e. 445's frame, corrected",
+      "why": "445-r1 made Jack photographic rather than painted, which was the director's note, and kept the storeroom and the drawing — but it added \"1:07\" to the drawing, which reference 520 does not have. The drawing is a prop the audience has already seen; it must match.",
+      "prompt": "Keep this picture exactly: the flour store, the one bare bulb, the flour sacks with their stencil, the scoop, the stack of\npages, Jack crouched at the left in his dark coat, a real man photographed rather than painted, his hand setting the page\ndown. Change only the drawing: it is the drawing of the reference 520 and nothing else — the toppled stool, the shoes, the\ncounter and bottles, the hand hanging down, and the single caption EXCUSE ME along the bottom. Remove the figures \"1:07\"\nentirely; no other numbers, timestamps or marks anywhere on the page, and no lettering anywhere else in the frame.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, at night. Cold slate and teal-blue-green shadows, warm amber\npractical light only, restrained 35mm grain. No legible text, signage, logos or watermarks other than the drawing's caption.",
+      "check": "the drawing matches 520 line for line, including its folds, with no \"1:07\"; the sacks and scoop unchanged; Jack still photographic.",
+      "base": {
+        "path": "retakes_2026_10_25/445-exactly-where-it-was-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/445-exactly-where-it-was-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "s84/520-excuse-me.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s84/520-excuse-me.jpg",
+          "why": "the drawing, as it is in the film"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        }
+      ],
+      "install_to": "public/film/img/s25/445-exactly-where-it-was.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/445-exactly-where-it-was-r2.jpg"
+    },
+    {
+      "n": 10,
+      "title": "354 — her gaze past him, to the photograph",
+      "file": "retakes_2026_10_25/354-the-altar-photograph-r2.jpg",
+      "post": "edit of retakes_2026_10_25/354-the-altar-photograph-r1.jpg — i.e. 354's frame, corrected",
+      "why": "354-r1 has Jack kneeling on the right, the altar and its photograph on the right — the composition is right. What is wrong is the look: Mrs. Sakai's eyes land on Jack, where the script has her looking past him, at her dead husband's photograph. It changes what the shot means: she is not talking to Jack, she is talking to the photograph.",
+      "prompt": "Keep this picture exactly: the tatami room, the shoji screens, the old CRT to the left of the altar, the kotatsu in the\nforeground, the black-and-gold Buddhist altar at the right of the back wall with the framed portrait of her husband on it\nand the candle beside it, Mrs. Sakai kneeling at the left of the kotatsu in her dark blue kimono, Jack kneeling at the right\nin his charcoal jacket. Change only her eyes and the set of her head: she looks PAST Jack, over his shoulder, to the framed\nphotograph of her husband on the altar — her gaze on the photograph, off frame-right of Jack's head, her face still and\nhard, speaking to the dead man and not to the visitor. Jack stays exactly as he is.\nPhotorealistic contemporary Tokyo neo-noir film still, 16:9, grey rainy daylight, restrained 35mm grain. No legible text,\nsignage, logos or watermarks.",
+      "check": "her eye-line ends on the photograph, not on Jack's face; Jack's pose unchanged; the altar still on the right; the candle, CRT and kotatsu unchanged.",
+      "base": {
+        "path": "retakes_2026_10_25/354-the-altar-photograph-r1.jpg",
+        "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/retakes_2026_10_25/354-the-altar-photograph-r1.jpg"
+      },
+      "references": [
+        {
+          "path": "s29/273-the-receipts.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/s29/273-the-receipts.jpg",
+          "why": "her face and her stillness"
+        },
+        {
+          "path": "sheets/sakai.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/sakai.jpg",
+          "why": "Sakai, the man in the photograph"
+        },
+        {
+          "path": "sheets/jack-face.jpg",
+          "url": "https://raw.githubusercontent.com/sigooding/scarlett-witness/00c86ced04b6e5b39c095e7212e7c4c3c7f2efc6/public/film/img/sheets/jack-face.jpg",
+          "why": "Jack's face"
+        }
+      ],
+      "install_to": "public/film/img/s29/354-the-altar-photograph.jpg",
+      "save_to": "public/film/img/retakes_2026_10_25/354-the-altar-photograph-r2.jpg"
+    }
+  ]
+}

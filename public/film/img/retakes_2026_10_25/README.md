@@ -316,3 +316,31 @@ no overwrite, deletion, resizing or installation. Previous sheets-only r2 vote s
 
 **Director review of 462-r3:** still has two right hands. This take is faulty, retained for review/history only,
 not approved for installation. Director requested merging the stored assets as-is without further generation.
+
+## Ten more retakes, queued (25 October 2026)
+
+The director asked for ten further takes of the pictures already made — the ones whose last take still carried a fault.
+**Nothing was generated and nothing was overwritten or deleted:** every filename below is the first free `rN` for its shot,
+and no existing picture in this folder was touched. The brief for all ten, with prompts, pinned references and per-shot
+checks, is `docs/retakes-2026-10-25-ten-more.md` (machine-readable: `docs/retakes-2026-10-25-ten-more.json`).
+
+| File to make | Fixes the fault left in | Base |
+|---|---|---|
+| `194-he-holds-it-without-drinking-r2.jpg` | 194-r1's dark green sketchbook (cream elsewhere) | 194-r1 |
+| `87-he-writes-nothing-r2.jpg` | 87-r1's green notebook, and the pen touching the paper | 87-r1 |
+| `462-a-finger-to-his-lips-r4.jpg` | 462-r3's two right hands | the in-film `s45/462`, **not** r3 |
+| `207-the-pink-payphone-r2.jpg` | 207-r1's handset held low at the mouth | 207-r1 |
+| `538-the-receipts-in-his-hand-r3.jpg` | 538-r2's lost close-up on the receipts | 538-r2 |
+| `384-the-room-too-big-r2.jpg` | 384-r1's period-wrong smartphone on the table | 384-r1 |
+| `285-the-inside-pocket-r2.jpg` | 285-r1's hand up at the lapel | the in-film `s22/285` |
+| `289-for-making-me-r2.jpg` | 289-r1's notes reading as US dollars | 289-r1 |
+| `445-exactly-where-it-was-r2.jpg` | 445-r1's "1:07" added to the drawing | 445-r1 |
+| `354-the-altar-photograph-r2.jpg` | 354-r1's gaze on Jack instead of the photograph | 354-r1 |
+
+Character consistency comes from the right base: nine of the ten are *keep this picture exactly, change only…* edits of
+the take they follow, with the actor sheets attached behind it. 462 is the exception — its r3 take is the one with the two
+hands, so editing it would inherit them; that entry starts from the in-film frame instead.
+
+To run one: edit mode (not text-to-image), base first, then the sheets, at the generator's largest landscape size; save
+under the filename above; keep the delivered size. The pictures are **not** installed in the film and still need the
+Topaz upscale pass where they come out under 1920 wide, then `tools/install-film-picture.mjs`.
