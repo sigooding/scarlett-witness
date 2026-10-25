@@ -1,0 +1,72 @@
+{
+ "note": "25 October 2026, the director said yes to Okada's daughter dying (director-notes item 38): she was alive when Jack found her and dead by morning. Two of Okada's lines in scene 27A were rewritten and recorded in his voice \"Okada (old) - NEONOIRE\" (2jGSM3CPT3ls23VwBLPJ), eleven_v4, two takes each, in the same ElevenLabs flow as his 24 October takes. The pick is measured, not heard (fewer stray silences, then more energy), leveled to the take it replaces (limiter at -1 dBFS) and installed as a new file; the replaced takes stay on disk, unused. Each take has one gap per sentence and the old take's speaking rate (about 14.5 characters a second), so none repeats a phrase; nobody has listened. 647.9 credits.",
+ "model_id": "eleven_v4",
+ "voice_id": "2jGSM3CPT3ls23VwBLPJ",
+ "flow": "9N634BI6o5vBv3spdsGA",
+ "okada_daughter": [
+  {
+   "step": "scene 27A, step 7",
+   "prompt": "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. [pause] She didn't want to come home. He telephoned me that night. [pause] Safe, he said. Tomorrow it'll be over.",
+   "replaces": "public/film/voice/s27a/290-okada-she-was-fifteen-she-went-to--aged.mp3",
+   "installed": "public/film/voice/s27a/290-okada-she-was-fifteen-safe-he-said--aged.mp3",
+   "gain_db": 0.8,
+   "seconds": 19.8,
+   "takes": [
+    {
+     "generation_id": "xy8k4jVf45xFPUsOFeDX",
+     "session": "Z0Of567sj6RivJzFTPEp",
+     "file": "public/film/voice/s27a/raw/290-okada-she-was-fifteen-safe-he-said--okada-old-take1.mp3",
+     "seconds": 20.11,
+     "mean_db": -20.1,
+     "peak_db": -1.0,
+     "silence_s": 6.34,
+     "credits": 216.9783,
+     "picked": false
+    },
+    {
+     "generation_id": "dZgYXvQXOS1XmI2V5pjZ",
+     "session": "2faqmwQQagg8mOtkefW1",
+     "file": "public/film/voice/s27a/raw/290-okada-she-was-fifteen-safe-he-said--okada-old-take2.mp3",
+     "seconds": 19.8,
+     "mean_db": -20.3,
+     "peak_db": -1.1,
+     "silence_s": 5.9,
+     "credits": 216.9783,
+     "picked": true
+    }
+   ]
+  },
+  {
+   "step": "scene 27A, step 9",
+   "prompt": "They took her out of the river in the morning. [pause] I hated him for a year. Nobody else had even looked.",
+   "replaces": "public/film/voice/s27a/290-okada-she-has-two-children-now-pause--aged.mp3",
+   "installed": "public/film/voice/s27a/290-okada-they-took-her-out-of-the-river--aged.mp3",
+   "gain_db": 0.8,
+   "seconds": 8.67,
+   "takes": [
+    {
+     "generation_id": "NCdkWJFsBkE6SQDZWeSA",
+     "session": "02DLfRcxhDiqtC5arOwZ",
+     "file": "public/film/voice/s27a/raw/290-okada-they-took-her-out-of-the-river--okada-old-take1.mp3",
+     "seconds": 8.75,
+     "mean_db": -19.5,
+     "peak_db": -1.6,
+     "silence_s": 1.89,
+     "credits": 106.9893,
+     "picked": false
+    },
+    {
+     "generation_id": "ncIzEMcUGBrVD3UtYGba",
+     "session": "DX3tZOdi7dQsAS19fkt2",
+     "file": "public/film/voice/s27a/raw/290-okada-they-took-her-out-of-the-river--okada-old-take2.mp3",
+     "seconds": 8.67,
+     "mean_db": -19.3,
+     "peak_db": -1.5,
+     "silence_s": 1.9,
+     "credits": 106.9893,
+     "picked": true
+    }
+   ]
+  }
+ ]
+}

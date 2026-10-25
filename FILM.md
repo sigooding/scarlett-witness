@@ -9,6 +9,32 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Okada's daughter died (25 October 2026, night)
+
+* **The note.** The director: in scene 10 Vera asks whether Okada's daughter was alive, and "the honest answer is in the
+  pause". 27A had her alive in Osaka with two children, so the pause hid nothing. The director asked that she died somehow,
+  with Okada still on speaking terms with Jack, and said yes to the change recommended in director-notes item 38.
+* **The story now.** She was alive when Jack found her and dead by morning. In scene 27A, Okada says:
+  * "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. She didn't want
+    to come home. He telephoned me that night. Safe, he said. Tomorrow it'll be over."
+  * Vera: "Was he right?" (unchanged)
+  * "They took her out of the river in the morning. I hated him for a year. Nobody else had even looked."
+* **Nothing else changed.** Scene 9 ("He found my daughter once. When no one else would look."), 64 (Jack's "Safe.
+  Tomorrow it'll be over." and Okada's bitter "You said that about my daughter.") and 81 ("The girl?") keep their words
+  and takes. In 64 Okada now quotes the words Jack said the night before she died.
+* **The takes.** Both lines are recorded in Okada's 24 October voice ("Okada (old) - NEONOIRE"), two takes each. The
+  pick is measured, not heard, and leveled to the take it replaces.
+  * The new files are `public/film/voice/s27a/290-okada-she-was-fifteen-safe-he-said--aged.mp3` (19.8 s, was 23.2 s) and
+    `290-okada-they-took-her-out-of-the-river--aged.mp3` (8.7 s, was 5.6 s).
+  * The raw takes are in `raw/`. The old takes stay on disk, unused.
+  * The generation ids are in `docs/film-voice-generations-2026-10-25.json`. It cost 648 credits.
+  * 455 still covers all three lines, now about 0.3 s shorter in all.
+  * Nobody has listened.
+* **Guarded.** `npm run test:film-backend` checks that 27A has both new lines with their takes and that no line says "two
+  children".
+* **Outside this repository.** PlayFrame's screenplay and voice manifest still have the old lines. An import from it would
+  bring them back, and the check would fail.
+
 ## Scene 2: the shots come once the gun is on him (25 October 2026, night)
 
 * **The note.** The director: "scene 2 silencer shot sfx is too early." The two shots sounded as 24 came up (the men just

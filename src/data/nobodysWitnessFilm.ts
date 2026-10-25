@@ -11047,8 +11047,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b693",
      "characterId": "nw_okada",
-     "text": "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. He didn't bring her home. She didn't want to come. He told me where she was, and he told me not to go. Write, he said. Wait.",
-     "audioUrl": "/film/voice/s27a/290-okada-she-was-fifteen-she-went-to--aged.mp3",
+     "text": "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. She didn't want to come home. He telephoned me that night. Safe, he said. Tomorrow it'll be over.",
+     "audioUrl": "/film/voice/s27a/290-okada-she-was-fifteen-safe-he-said--aged.mp3",
      "background": "/film/img/s27a/455-she-was-fifteen.jpg",
      "cinematic": {
       "mode": "dolly",
@@ -11073,8 +11073,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_b695",
      "characterId": "nw_okada",
-     "text": "She has two children now. I hated him for a year.",
-     "audioUrl": "/film/voice/s27a/290-okada-she-has-two-children-now-pause--aged.mp3"
+     "text": "They took her out of the river in the morning. I hated him for a year. Nobody else had even looked.",
+     "audioUrl": "/film/voice/s27a/290-okada-they-took-her-out-of-the-river--aged.mp3"
     },
     {
      "id": "nw_b696",
@@ -28555,5 +28555,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "0ca87942f7fb"
+ "builtinRevision": "40a0e6582e1c"
 } as unknown as Story;

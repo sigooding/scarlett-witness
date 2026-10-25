@@ -451,6 +451,12 @@ check(!s84.some((b) => b.text === "I'm not asking you to be.") && at84("No one's
 // Okada (the director, 24 October 2026: "too deep for old japanese man"): all his lines are the takes in his new, older voice
 const okadaLines = allBeats.filter(({ b }) => b.characterId === "nw_okada" && !!b.audioUrl).map(({ b }) => b.audioUrl!);
 check(okadaLines.length >= 19 && okadaLines.every((u) => /--aged\.mp3$/.test(u) && existsSync(join(ROOT, "public", u))), "Okada speaks every line in his new, older voice (the --aged takes)");
+// Okada's daughter (the director, 25 October 2026): she was alive when Jack found her and dead by morning, so the pause after Vera's
+// "Was she alive?" (scene 10) hides both answers. PlayFrame's screenplay still has her alive in Osaka with two children: an import
+// from it would bring that back
+const s27a = allBeats.filter(({ scene }) => /^nw_s27a(_|$)/.test(scene)).map(({ b }) => b);
+const okadaSays = (t: string) => s27a.some((b) => b.characterId === "nw_okada" && (b.text ?? "").includes(t) && !!b.audioUrl && existsSync(join(ROOT, "public", b.audioUrl)));
+check(okadaSays("Safe, he said. Tomorrow it'll be over.") && okadaSays("They took her out of the river in the morning.") && !allBeats.some(({ b }) => /two children/.test(b.text ?? "")), "scene 27A: Okada's daughter died the night Jack said she was safe, with his takes");
 // scenes 1, 2 and 72 (the director, 24 October 2026: "the camera pans left on almost every [shot] with cutouts"): the depth moves vary,
 // and no two pictures in a row make the same move
 for (const id of ["nw_s1", "nw_s2", "nw_s72"]) {

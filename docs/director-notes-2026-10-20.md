@@ -756,7 +756,8 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   FILM.md, first section.
 - **"vera asks jack … about okadas daughter … was she alive? jacks honest answer is in the pause. so the later okada plot
   about his daughter dosent match. make sure his daughter died some how but hes still needs to be on speaking terms with
-  jack. recommend before making plot change."** Recommended, not made. It waits for the director's yes.
+  jack. recommend before making plot change."** Recommended first, then **"yes"**: done the same night as recommended below
+  (FILM.md, "Okada's daughter died"). The two lines are recorded in Okada's voice, 648 credits, and nobody has listened.
   - **Today's mismatch.** In 27A the daughter ran off to Osaka, Jack found her, and "She has two children now." That leaves
     nothing to hide in the pause of scene 10.
   - **The recommendation.** She was alive when Jack found her and dead by morning:
