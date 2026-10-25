@@ -789,7 +789,8 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   and the two lines need about 60–80.
 - **The change.** In 23, after Ishida's "Whatever Sakai hid, Jack, if you find it, bring it to me…", Jack slides the folded
   paper bag across the table:
-  - JACK: "A white car. Watching the bar."
+  - JACK: "A white car. Where they shot Sakai." (14A parks at the mouth of Sakai's lane, exactly where the sedan stopped;
+    the bar is at the far end of the same lane, and the white car waits further up the road.)
   - Ishida pockets it without looking. ISHIDA: "I'll run it."
 - **Nothing else changes.** Ishida never reports back, and Jack never asks. The payoff is his existing line in 80, "You
   told me yourself, Jack. You always tell the wrong person.": Jack gave the plate to the man who sent the car. It also
