@@ -763,6 +763,22 @@ should look like" 194.
   first, and about 11 credits are left.
 - Check: Vera seated, two paper cups, daylight, the lamp at the desk's left end, the phone on the desk.
 
+**7f.** `retakes_2026_10_25/297-the-glass-office-r1.jpg` (scene 53A). The director, 25 October (night): "vera loses character
+consistency, her hair is wrong".
+- Plays on: the newsroom's opening, through "Vera stands at the door of a glass-walled office at the back, KONDO's card in
+  hand." and Harada finishing her call.
+- The fault: Vera, standing at the glass office door with her back half to us, has long grey hair, nearly Harada's. Her sheet
+  and 298, later in the same scene, have her ash-blonde, shoulder-length, with a fringe.
+- An edit of the film's `s53a/297-the-glass-office.jpg`. Attach that base, then `sheets/vera.jpg` and `s53a/298-there-was-no-car.jpg`
+  (her in this scene).
+- Prompt: *Keep this picture exactly: the newsroom, the desks, every member of staff, the televisions, the glass office at the
+  back with the grey-haired editor on the phone, and the young woman in the long dark charcoal coat standing at its door.
+  Change only that young woman's hair: ash-blonde, straight, shoulder-length, with a fringe, as in the second and third images.
+  She is in her late twenties; nothing about her is grey.* + section 5's style line.
+- Check: her hair matches 298; Harada behind the glass stays grey-haired; nobody else changes.
+- No depth layers to remake: 297 has none (it is in `peopleInShot`, "the office staff").
+- Cost: about 675 credits at the default size and about 1,100 at 4K; about 11 credits are left.
+
 **Faults left in the picks now in the film** (optional; the director chose these takes knowing them):
 - **204 (r2):** Mrs. Sakai no longer pours, though the line is "pours Jack tea she doesn't want to pour". An edit of the film's
   `s29/204-the-tea-she-does-not-want-to-pour.jpg` could put the pot in her hands, mid-pour, changing nothing else.
