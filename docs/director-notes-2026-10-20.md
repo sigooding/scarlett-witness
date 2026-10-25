@@ -676,3 +676,13 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - **The last picture holds longer**: Kaneko, Vera eating, Jack beside her, now about 8.5 s before the credits (it was 4.6 s).
   Its caption was the screenplay's camera direction, "HOLD on the three of them in the steam."; it now reads "The three of
   them in the steam."
+
+## 34. The pictures: none under full size, and the close-ups' depth (25 October)
+- **"fix pics."** The 17 pictures still under 1920 wide (the opening montage's four, 310, 164, the rice going cold, 293–295,
+  72, 88, the empty newsroom, 556 and Vera's mother at the service) are upscaled with Topaz, faces untouched, to about 2730
+  wide, and sharper rather than just bigger. Old pictures archived; details in FILM.md. A test now fails on any picture under
+  1920 wide.
+- **The nine close-ups' depth.** In 511, 116, 232, 524, 535, 58, 521, 227 and 45 the people were set as if they were as far
+  away as the wall behind them (or, in 227, as near as the lens), because the depth was read from the ground under their
+  feet and their feet are out of frame. Each person's depth now comes from the depth model's reading of the person
+  themselves, so the one nearest the camera moves most.

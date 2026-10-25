@@ -9,6 +9,22 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## No picture under full size; the close-ups' depth (25 October 2026)
+
+* **Upscaled.** The director: "fix pics". Every picture the film shows that was under 1920 wide (17 of 630: the opening
+  montage's four, 310, 164, the rice going cold, 293–295, 72, 88, the empty newsroom, 556 and the three of Vera's mother at
+  the service) was upscaled with Topaz (`topaz-image-upscale-v2`, "High Fidelity V3", face enhancement off, so nobody's face
+  is redrawn) to about 2752 wide and installed with `tools/install-film-picture.mjs`, which archived each old picture
+  first and cropped the non-16:9 ones (the montage's, 310 and 88) to 16:9, which is what the screen showed of them anyway.
+  The empty newsroom was a PNG; it is now `s82/new-empty-newsroom.jpg` (the PNG stays on disk). m2's depth map was re-made
+  for its new shape. Generation ids, sizes and archive paths: `docs/film-picture-upscales-2026-10-25.json`.
+  `test:film-backend` now reads every picture's width from its header and fails on one under 1920.
+* **The close-ups' depth.** `tools/make-depth-layers.py` set a cut-out's depth from the ground just under the person's feet.
+  In a close-up the feet are out of frame and that "ground" is the far wall, so a person moved like the wall behind them
+  (Jack in 511 at 0.004). A picture marked `"cutoutDepth": "matte"` in `docs/film-depth-layers.json` now takes the depth
+  model's own median under each person; the nine close-ups (511, 116, 232, 524, 535, 58, 521, 227, 45) are marked and
+  re-made (`docs/depth-camera.md`).
+
 ## No shake, the service song into the rooftop, a longer last hold (24 October 2026)
 
 * **No shake.** `noShake` in `tools/build-film-story.mjs` now applies to every camera in the film (scenes 1 and 2 only, since 15

@@ -1,0 +1,168 @@
+{
+ "date": "2026-10-25",
+ "why": "The director: \"fix pics\". Every picture the film shows that was under 1920 wide (the house size since 17 October 2026) was upscaled with Topaz, keeping the picture as drawn, and installed with tools/install-film-picture.mjs, which cropped it to 16:9 where needed and archived the old picture first.",
+ "tool": "ElevenLabs flow f1joMK075BUigrl8tCav (\"Nobody's Witness: soft pictures upscale\"), model topaz-image-upscale-v2",
+ "settings": {
+  "model": "High Fidelity V3",
+  "enhance_faces": false,
+  "crop_to_fill": false,
+  "upscale_factor": "about 2752 / the picture's width (1.646 to 2)"
+ },
+ "cost": "17 x 485 credits, about 8,240",
+ "sources": "each picture at commit 3597e57, attached by its raw.githubusercontent URL",
+ "pictures": [
+  {
+   "picture": "public/film/img/montage/m1-neon-backstreet.jpg",
+   "before": "1584x672",
+   "upscaled": "2751x1167",
+   "installed": "2074x1166",
+   "archived": "public/film/img/archive/montage/m1-neon-backstreet--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "R2rzfT25OizLD1QTdOgU"
+  },
+  {
+   "picture": "public/film/img/montage/m2-the-hive.jpg",
+   "before": "1408x768",
+   "upscaled": "2752x1501",
+   "installed": "2668x1500",
+   "archived": "public/film/img/archive/montage/m2-the-hive--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "f2b2lVAlz9h4dphcQoWp"
+  },
+  {
+   "picture": "public/film/img/montage/m3-umbrella-bridge.jpg",
+   "before": "1408x768",
+   "upscaled": "2752x1501",
+   "installed": "2668x1500",
+   "archived": "public/film/img/archive/montage/m3-umbrella-bridge--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "bjzATKTXuTuPBNKYwkSy"
+  },
+  {
+   "picture": "public/film/img/montage/m4-railway-rain.jpg",
+   "before": "1408x768",
+   "upscaled": "2752x1501",
+   "installed": "2668x1500",
+   "archived": "public/film/img/archive/montage/m4-railway-rain--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "TjAk1JONdn2m29MaPzde"
+  },
+  {
+   "picture": "public/film/img/retakes_2026_10_20/310-the-model-at-dawn-r1.jpg",
+   "before": "1536x1024",
+   "upscaled": "2752x1835",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/retakes_2026_10_20/310-the-model-at-dawn-r1--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "QcdHqBVRyT6XzAF8HJDN"
+  },
+  {
+   "picture": "public/film/img/s10/164-depends-whos-calling.jpg",
+   "before": "1672x941",
+   "upscaled": "2752x1548",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/s10/164-depends-whos-calling--v3.jpg",
+   "kept_alongside": null,
+   "generation_id": "98QUTYqbMFFuFJQP7EL9"
+  },
+  {
+   "picture": "public/film/img/s25/the-rice-goes-cold.jpg",
+   "before": "1376x768",
+   "upscaled": "2752x1536",
+   "installed": "2730x1536",
+   "archived": "public/film/img/archive/s25/the-rice-goes-cold--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "Qd022R80uaaxumaxrop6"
+  },
+  {
+   "picture": "public/film/img/s63a/293-the-sedan-waits.jpg",
+   "before": "1672x941",
+   "upscaled": "2752x1548",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/s63a/293-the-sedan-waits--v3.jpg",
+   "kept_alongside": null,
+   "generation_id": "JygCrA0OvndvhLWCET00"
+  },
+  {
+   "picture": "public/film/img/s63a/294-through-the-parlour.jpg",
+   "before": "1672x941",
+   "upscaled": "2752x1548",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/s63a/294-through-the-parlour--v3.jpg",
+   "kept_alongside": null,
+   "generation_id": "M3GPVUDqlDnKP0q1zzW1"
+  },
+  {
+   "picture": "public/film/img/s63a/295-they-give-up.jpg",
+   "before": "1672x941",
+   "upscaled": "2752x1548",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/s63a/295-they-give-up--v3.jpg",
+   "kept_alongside": null,
+   "generation_id": "3egoYVEnHdro3vkPHcQf"
+  },
+  {
+   "picture": "public/film/img/s73/72-the-lost-heel.jpg",
+   "before": "1672x941",
+   "upscaled": "2752x1548",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/s73/72-the-lost-heel--v4.jpg",
+   "kept_alongside": null,
+   "generation_id": "sXSF49WhHEAUIM7D6rfI"
+  },
+  {
+   "picture": "public/film/img/s78/88-the-walkway.jpg",
+   "before": "1536x1024",
+   "upscaled": "2752x1835",
+   "installed": "2752x1548",
+   "archived": "public/film/img/archive/s78/88-the-walkway--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "YP8iYbSgC8jwTBJJLQ14"
+  },
+  {
+   "picture": "public/film/img/s82/new-empty-newsroom.jpg",
+   "before": "1376x768",
+   "upscaled": "2752x1536",
+   "installed": "2730x1536",
+   "archived": null,
+   "kept_alongside": "public/film/img/s82/new-empty-newsroom.png",
+   "generation_id": "L4Ni6WvB9hXNvslNz7bB"
+  },
+  {
+   "picture": "public/film/img/service_new/556-the-lane-from-above.jpg",
+   "before": "1376x768",
+   "upscaled": "2752x1536",
+   "installed": "2730x1536",
+   "archived": "public/film/img/archive/service_new/556-the-lane-from-above--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "qaN513B8yRZC8gNzOgxQ"
+  },
+  {
+   "picture": "public/film/img/service_new/extras/mom-01-her-face-at-the-table.jpg",
+   "before": "1376x768",
+   "upscaled": "2752x1536",
+   "installed": "2730x1536",
+   "archived": "public/film/img/archive/service_new/extras/mom-01-her-face-at-the-table--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "ptsYsm8DoTDiAtjScNtd"
+  },
+  {
+   "picture": "public/film/img/service_new/extras/mom-02-mother-and-daughter.jpg",
+   "before": "1376x768",
+   "upscaled": "2752x1536",
+   "installed": "2730x1536",
+   "archived": "public/film/img/archive/service_new/extras/mom-02-mother-and-daughter--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "l03MqC7dnjKtL4cbsgDE"
+  },
+  {
+   "picture": "public/film/img/service_new/extras/mom-03-what-she-wears-home.jpg",
+   "before": "1376x768",
+   "upscaled": "2752x1536",
+   "installed": "2730x1536",
+   "archived": "public/film/img/archive/service_new/extras/mom-03-what-she-wears-home--v1.jpg",
+   "kept_alongside": null,
+   "generation_id": "tD6OS2UpXY919JLZqmjW"
+  }
+ ]
+}

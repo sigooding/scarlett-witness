@@ -11,6 +11,8 @@ Pictures with people and "cutouts" get:
   cutout-N.png  each person, or group that touches, as a transparent PNG the size of the picture (BiRefNet), moved by the
                 engine as one solid layer so nobody stretches. Its depth is the source map's median under the person when
                 there is a source, else the smoothed background's depth just under their feet (so the feet stay planted).
+                A picture marked "cutoutDepth": "matte" (close-ups, people cut off by the frame) takes the depth model's
+                median under each person instead of their feet.
 Pictures with no people and no "cutouts" are depth-only: they get just an exact-picture-size grayscale depth.png, and need
 only Depth Anything (unless they have a "depthSource"). The script writes the map path and each cut-out's depth back into
 the JSON, ready for src/film/studio-edits.json (pictureLook).
@@ -390,7 +392,11 @@ def main():
                 rgba = np.dstack([rgb * (alpha > 0)[..., None], alpha]).astype(np.uint8)
                 cv2.imwrite(os.path.join(out, f"cutout-{k}.png"), cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGRA), [cv2.IMWRITE_PNG_COMPRESSION, 9])
                 c["image"] = f"/{rel}/cutout-{k}.png"
-                c["depth"] = round(matte_depth(m, source) if source is not None else feet_depth(m, bg), 3)
+                # A close-up or half-framed person has no feet in shot, and the ground "under their feet" is then the far
+                # background (Jack in 511 came out at 0.004): "cutoutDepth": "matte" takes the depth model's own median under
+                # the person instead (25 October 2026).
+                under = source if source is not None else depth if pic.get("cutoutDepth") == "matte" else None
+                c["depth"] = round(matte_depth(m, under) if under is not None else feet_depth(m, bg), 3)
         else:
             pic.pop("depthPlate", None)
         print(name, "->", rel, [(c["name"], c["depth"]) for c in cutouts])

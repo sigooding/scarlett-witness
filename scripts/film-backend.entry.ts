@@ -357,7 +357,7 @@ check(newsroom?.musicMode === "track" && newsroom?.musicUrl === "/film/audio/bab
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/baby-fool.mp3").map((s) => s.id), ["nw_s82"], "and nothing else starts it");
 eq(FILM.scenes.find((s) => s.id === "nw_s82a")?.musicMode, "inherit", "the notebook's photocopying (82A) continues the song without restarting");
 eq(FILM.scenes.find((s) => s.id === "nw_s83")?.musicMode, "none", "the Kurose meeting (83) fades the song out");
-eq(newsroom?.background, "/film/img/s82/new-empty-newsroom.png", "the newsroom opens without Jack already seated");
+eq(newsroom?.background, "/film/img/s82/new-empty-newsroom.jpg", "the newsroom opens without Jack already seated");
 check(newsroom?.dialogueBeats?.some((b) => b.background === "/film/img/s82/new-jack-walks-in-4.jpg" && b.text === "He reaches the glass office without slowing."), "Jack's extra determined walk plays before the cassette scene");
 check(existsSync(join(ROOT, "public/film/audio/baby-fool.mp3")), "the song is on disk");
 
@@ -539,4 +539,19 @@ check(FILM.scenes.filter((s) => s.credits).every((s) => s.credits!.gateWeave ===
 const lastBeat = FILM.scenes.find((s) => s.id === "nw_s100")!.dialogueBeats!.at(-1)!;
 check(lastBeat.background?.endsWith("/159-she-doesnt-turn.jpg") && (lastBeat.afterBeatDelaySeconds ?? 0) >= 5 && lastBeat.afterBeatTargetSceneId === "nw_credits", "the film holds longer on Jack, Vera and Kaneko before the credits");
 eq(lastBeat.text, "The three of them in the steam.", "and its last caption is the picture, not the screenplay's camera direction (\"HOLD on…\")");
+// pictures are never smaller than 1920 wide (the director, 17 October 2026; the last 17 under it were upscaled with Topaz on
+// 25 October 2026 and installed with tools/install-film-picture.mjs): widths read from the JPEG and PNG headers
+const pictureWidth = (file: string): number => {
+  const b = readFileSync(file);
+  if (b[0] === 0x89 && b.toString("latin1", 1, 4) === "PNG") return b.readUInt32BE(16);
+  for (let i = 2; i + 9 < b.length; ) {
+    if (b[i] !== 0xff || b[i + 1] === 0xff) { i++; continue; }
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return b.readUInt16BE(i + 7);
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  return 0;
+};
+const narrow = filmPictures.filter((p) => existsSync(join(ROOT, "public", p)) && pictureWidth(join(ROOT, "public", p)) < 1920);
+eq(narrow, [], `none of the film's ${filmPictures.length} pictures is narrower than 1920 pixels`);
 console.log(`\nfilm backend: ${checks} checks passed`);

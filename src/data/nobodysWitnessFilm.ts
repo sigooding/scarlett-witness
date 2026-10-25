@@ -9545,15 +9545,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s23/535-the-shiohama-fire/cutout-1.png",
-        "depth": 0.46
+        "depth": 0.783
        },
        {
         "image": "/film/depth/s23/535-the-shiohama-fire/cutout-2.png",
-        "depth": 0.504
+        "depth": 0.256
        },
        {
         "image": "/film/depth/s23/535-the-shiohama-fire/cutout-3.png",
-        "depth": 0.105
+        "depth": 0.041
        }
       ],
       "filmGrade": false,
@@ -16785,7 +16785,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s64/232-the-cassette/cutout-1.png",
-        "depth": 0.063
+        "depth": 0.329
        }
       ],
       "filmGrade": false,
@@ -22347,7 +22347,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_s82",
    "title": "82 — Start with my part",
    "animaticMark": "82",
-   "background": "/film/img/s82/new-empty-newsroom.png",
+   "background": "/film/img/s82/new-empty-newsroom.jpg",
    "prose": "INT. TOTO SHIMBUN NEWSROOM - DAY",
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-newsroom.mp3",
    "particles": "motes",
@@ -22365,11 +22365,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "An old newspaper office. Stacks of paper. Desks jammed together. Televisions on the walls showing three different channels.",
      "silent": true,
-     "background": "/film/img/s82/new-empty-newsroom.png",
+     "background": "/film/img/s82/new-empty-newsroom.jpg",
      "cinematic": {
       "mode": "dolly",
-      "focalPoint": "35% 50%",
-      "zoomDuration": 18,
+      "focalPoint": "50% 60%",
+      "zoomDuration": 20,
       "dollyDirection": "left",
       "dollyDistance": 3,
       "dollyDuration": 24,
@@ -22642,11 +22642,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s82/511-twenty-years-ago/cutout-1.png",
-        "depth": 0.004
+        "depth": 0.23
        },
        {
         "image": "/film/depth/s82/511-twenty-years-ago/cutout-2.png",
-        "depth": 0.315
+        "depth": 0.778
        }
       ],
       "filmGrade": false,
@@ -23495,7 +23495,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s84/116-thats-me/cutout-1.png",
-        "depth": 0.065
+        "depth": 0.389
        }
       ],
       "filmGrade": false,
@@ -27379,11 +27379,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s98/524-the-only-eyewitness/cutout-1.png",
-        "depth": 0.407
+        "depth": 0.465
        },
        {
         "image": "/film/depth/s98/524-the-only-eyewitness/cutout-2.png",
-        "depth": 0.218
+        "depth": 0.925
        }
       ],
       "filmGrade": false,
@@ -28495,11 +28495,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "depthCutouts": [
        {
         "image": "/film/depth/s82/511-twenty-years-ago/cutout-1.png",
-        "depth": 0.004
+        "depth": 0.23
        },
        {
         "image": "/film/depth/s82/511-twenty-years-ago/cutout-2.png",
-        "depth": 0.315
+        "depth": 0.778
        }
       ],
       "filmGrade": false,
@@ -28543,5 +28543,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "ad4961f02ba9"
+ "builtinRevision": "dd057ce51358"
 } as unknown as Story;
