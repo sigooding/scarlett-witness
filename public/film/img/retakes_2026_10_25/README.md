@@ -49,3 +49,35 @@ Files are saved at the size the generator produced them and were never downscale
 - All of §5 (5a–5u) — not reached in this session.
 - Depth layers for any of these that carry them in the film today (see `docs/director-picks-2026-10-25.md`)
   have not been remade.
+
+## Check by the film's maintainer, 25 October
+
+Each picture was compared with the picture it replaces, the shots either side of it and its brief entry.
+
+**Ready to swap in (9):**
+
+| Picture | Check |
+|---|---|
+| `montage18-01-r1` | Desk the room master's way, no reflection, night. Good. |
+| `194-...-r1` | Desk, daylight, paper cups right. One small thing: the sketchbook is dark green; it is cream in 271 and elsewhere. |
+| `249-the-line-r1` | Clean. |
+| `354-the-altar-photograph-r1` | Jack added, altar right. Good. |
+| `364-the-kotatsu-r1` | Clean; matches 365-r1, which plays next. |
+| `207-the-pink-payphone-r1` | One handset, two arms, the desk restored. Good. |
+| `376-the-coins-run-out-r1` | One handset, two arms, the tray bare. Good. |
+| `177-behind-the-counter-r1` | Good. One note: the gunman fires a pistol with a big flash where the script has a suppressed burst. |
+| `210-the-third-time-r1` | The coat restored, nothing else changed. Good. |
+
+**Another go needed (briefed as section 6 of `docs/image-brief-2026-10-25.md`):**
+- `271-not-yet-r1`: Vera stands, though the script says "She sits"; one mug, not two paper cups; and it is night, in a day
+  scene, between two day shots.
+- `204-...-r1`: the altar is fixed, but Jack kneels with his back to the camera, facing the wall rather than her. (The brief's
+  "his back to the altar" was ambiguous; now reworded.)
+- `213-clutch-each-other-r1`: the torch beam comes from inside the pantry, behind the couple.
+- `538-...-r1` (optional): right, but it came out as the same wide shot as 207 and lost its close-up on the receipts.
+
+**When swapping in:**
+- Eight are under 1920 wide. Give them the Topaz upscale the 17 small pictures had on 25 October rather than a plain enlarge:
+  `montage18-01`, 271, 354, 364 and 538 are about 1376×768; 207, 249 and 376 are 1672×941.
+- 354 and 364 carry depth layers in the film today (354 cut-outs, 364 a map); make them again for the new pictures.
+

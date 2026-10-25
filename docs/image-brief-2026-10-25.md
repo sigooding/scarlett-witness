@@ -321,7 +321,7 @@ legible text, signage, logos or watermarks.*
 - Attach: `s29/204-the-tea-she-does-not-want-to-pour.jpg` (composition), `sheets/jack-face.jpg`.
 - Prompt: *Mrs. Sakai's small tatami room, the wide view of the reference: lace-curtained windows along the back wall, the
   kotatsu with its patterned quilt in the middle. Mrs. Sakai (70s, short grey hair, dark navy cardigan) kneels on the LEFT side
-  of the kotatsu, pouring tea from a brown clay pot without warmth; Jack kneels on the RIGHT side, his back to the altar. The
+  of the kotatsu, pouring tea from a brown clay pot without warmth; Jack kneels on the RIGHT side in profile, facing her across the kotatsu as in the reference 273, the altar behind him. The
   black-and-gold Buddhist altar with its candles and the framed photograph of Sakai stands on the RIGHT of the back wall,
   behind Jack; the old CRT television on its low stand is to the left of the altar, nearer the middle. Nothing on the left of
   the back wall but the window.* + style line.
@@ -626,6 +626,44 @@ the ticket machine and the dark door, beside Vera.
   onto the empty stool on his LEFT (screen-left of him, between him and Kaneko), one hand on the edge of the counter. Two legs,
   both on her side of the stool; her coat, hair and small red bird clip as in the references.* + style line.
 - Check: two legs; Vera ends up where she sits in 160.
+
+---
+
+# 6. Second attempts, after the check of 25 October
+
+The first batch is in `retakes_2026_10_25/` and its check is at the end of that folder's `README.md`. These four need another
+go. Save each as `<name>-r2.jpg`.
+
+**6a.** `retakes_2026_10_25/271-not-yet-r2.jpg` (2b again)
+- r1 had three faults:
+  - Vera stands, but the script says "She sits";
+  - it shows one mug, not the two paper cups she brought up the stairs;
+  - it is night, while scene 21 is grey day, as 193 and 194-r1 on either side of it are.
+- Attach: `s10/415-four-days.jpg` (the composition: Vera seated at the desk's left end, Jack at its right end),
+  `retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg` (this room by day, the paper cups), `sheets/vera.jpg`,
+  `sheets/vera-face.jpg`, `sheets/jack-face.jpg`.
+- Prompt: as 2b, with *Vera SEATED on a chair at the desk's left end*, *two paper coffee cups, one in front of each of them*,
+  and *grey daylight, no lamp lit, nothing outside the window but rain and a passing train in daylight*.
+
+**6b.** `retakes_2026_10_25/204-the-tea-she-does-not-want-to-pour-r2.jpg` (3a again)
+- r1 put the altar right, but Jack kneels with his back to the camera, facing the wall instead of her.
+- An edit of `retakes_2026_10_25/204-the-tea-she-does-not-want-to-pour-r1.jpg` (attach it as the base) with
+  `s29/273-the-receipts.jpg` (how he sits).
+- Prompt: *Keep this picture exactly. Change only Jack: he kneels at the right side of the kotatsu, turned to face Mrs.
+  Sakai across it, seen in profile from his right, as in the reference 273.* + section 3's style line.
+
+**6c.** `retakes_2026_10_25/213-clutch-each-other-r2.jpg` (4i again)
+- r1's torch beam comes from inside the dark pantry, behind the couple, as if someone were in there with them.
+- An edit of `retakes_2026_10_25/213-clutch-each-other-r1.jpg` (attach it as the base).
+- Prompt: *Keep this picture exactly. Change only the light: the pantry behind the old couple is dark, with no torch in it; a
+  torch beam comes instead from off-frame behind the camera, the corridor side, sweeping across the kitchen wall toward Jack.
+  The old couple hold each other tightly.* + section 4's style line.
+
+**6d. (optional)** `retakes_2026_10_25/538-the-receipts-in-his-hand-r2.jpg` (4b again)
+- r1 is right, but it came out as the same wide shot as 207; the close-up on the receipts is gone.
+- An edit of the original `s36/538-the-receipts-in-his-hand.jpg` (attach it as the base).
+- Prompt: *Keep this picture exactly: the close-up, the receipts in his hand, the pink handset at his ear. Change only the
+  payphone: its cradle is empty; the handset at his ear is its only handset, on its coiled pink cord.* + section 4's style line.
 
 ---
 
