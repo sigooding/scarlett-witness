@@ -239,6 +239,24 @@ votes; the director picked 469 option 1, 231 option 1, 232 option 2. Rejected al
   207 handset up at the ear, 354 Mrs. Sakai's gaze past Jack to the altar photo.
 - Director's review of all parked takes before any install; then upscale + `install-film-picture.mjs`, depth remakes (374,
   73-09, 512, 460), and the story.json/lamp-glow wiring from the 25-October handoff.
+
+## Sixth batch, 25 October (night): first three unchosen retakes, director-voted
+
+Made as two-option votes; rejected options were discarded by the vote tool and are not on disk. All three saved files
+verified landscape 16:9.
+
+| File | Item | Vote / flags |
+|---|---|---|
+| `87-he-writes-nothing-r1.jpg` | 2c | Director picked option 2 (2848×1600). Correct room-master layout: Jack side-on at the desk's right end facing left, green lamp at the left end, rotary phone, CRT on the filing cabinet, railway through rainy blinds, blood in his knuckles. **Flags: the notebook on the kraft envelope is dark green — same cream-sketchbook issue noted for 194; and the pen tip nearly touches the paper where the brief has it held still above, not writing.** |
+| `460-parked-crooked-r1.jpg` | 4d | Director picked option 1 (1376×768). Both characters restored: Jack in the back doorway in his long coat, back three-quarters, head shaking; Mrs. Noda on the step offering the cigarette pack; muddy yard, farm-track gate, old pickup parked crooked under the pole lamp in rain. Clean. (Maintainer: move its quote to "She offers the pack anyway.") |
+| `175-the-curtain-gap-r1.jpg` | 4e | Director picked option 1 (1672×941). Curtain edge and fingertips in the foreground, four black saloons in an arc facing the inn with headlights glaring, rain only inside the beams, eight masked men stepping out and splitting up, nothing beyond but darkness and the highway. Clean. |
+
+### Still queued
+
+- 4g `178-staff-side-r1` and 4j `462-a-finger-to-his-lips-r1` (the last two unchosen retakes).
+- The four small in-film faults: 194 cream sketchbook (the same green-book issue appears in the new 87), 177 suppressed
+  burst, 207 handset height, 354 gaze.
+- Review, upscale, install, depth remakes and wiring as above.
 - At install: upscale the sub-1920 pictures (Topaz, as the morning batch had), then `tools/install-film-picture.mjs`; the
   story.json/`studio-edits.json` wiring in the 25-October handoff still applies (94-01 new step, 141 moved onto "Ishida gets
   in. The door closes.", 368 quote trimmed, lamp glows re-placed for 139/140).
