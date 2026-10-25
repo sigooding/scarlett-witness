@@ -785,18 +785,25 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 ## 39. The plate number in 14A: chosen, to add later (25 October, night)
 - **"need some how to explain the plate number a way in jack and vera car."** In 14A Jack writes the white car's plate on
   the paper bag ("We have a plate number."), and nothing pays it off. The story bible already lists it as an open thread.
-- **The director chose to pay it off in scene 23, with Ishida. Not made yet:** the ElevenLabs account has about 11 credits,
-  and the two lines need about 60–80.
-- **The change.** In 23, after Ishida's "Whatever Sakai hid, Jack, if you find it, bring it to me…", Jack slides the folded
-  paper bag across the table:
-  - JACK: "A white car. Where they shot Sakai." (14A parks at the mouth of Sakai's lane, exactly where the sedan stopped;
-    the bar is at the far end of the same lane, and the white car waits further up the road.)
-  - Ishida pockets it without looking. ISHIDA: "I'll run it."
-- **Nothing else changes.** Ishida never reports back, and Jack never asks. The payoff is his existing line in 80, "You
-  told me yourself, Jack. You always tell the wrong person.": Jack gave the plate to the man who sent the car. It also
-  explains why the watchers stay a step ahead.
+- **Where they are.** 14A parks at the mouth of Sakai's lane, exactly where the sedan stopped the night he was shot. The
+  bar is at the far end of the same lane, and the white car waits further up the road.
+- **The director chose to close it in scene 23, with Ishida.** Not made yet: the ElevenLabs account has about 11 credits,
+  and the two lines need about 170 (two takes each).
+- **The change.** In 23, straight after Ishida's "Whatever Sakai hid, Jack, if you find it, bring it to me… I'll know what
+  to do with it this time.", Jack slides the folded paper bag across the table:
+  - JACK: "A white car. Where they shot Sakai."
+  - Ishida pockets it without looking. ISHIDA: "I'll run it. It'll be stolen. They always are."
+
+  Then the scene goes on as written: "Sakai had a wife.", and the napkin with her address.
+- **Why this way:**
+  - **First viewing:** it closes the thread. A seasoned detective calls it a stolen car, and nobody waits for a payoff.
+  - **Second viewing:** after 80 ("You told me yourself, Jack. You always tell the wrong person."), the plate went into
+    the traitor's pocket, and "It'll be stolen" was him burying it.
+  - **The papers trade:** Jack gives him the plate, and he gives Jack the widow's address. One disappears; the other leads
+    to the inn.
+  - **Nothing else changes.** 14A keeps the watcher anonymous and Sakai's name unsaid.
 - **To do, once there are credits:**
-  1. Add the two lines and one action line to scene 23 in `src/film/story.json`, where the napkin is slid across.
+  1. Add the two lines and the action line to scene 23 in `src/film/story.json`, after Ishida's "…this time." line.
   2. Record Jack in his saved voice and Ishida in his, eleven_v4, two takes each, picked by measurement.
   3. Rebuild the film, and add a check to `npm run test:film-backend`.
 
