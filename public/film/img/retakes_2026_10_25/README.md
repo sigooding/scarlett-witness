@@ -465,3 +465,23 @@ The director: "done some they need a review", then "maybe a picker?".
 - **Wire the car sequence** as `docs/handoff-2026-10-25.md` says: 94-01 is a new step, 141 moves, 368's quote is trimmed, and
   139/140's lamp glows are re-placed.
 - **montage53-05b** is a new picture: add it after `montage53/05.jpg` in the `nw_m53` montage in `src/film/studio-edits.json`.
+
+## The director's picks, installed, 25 October (night)
+
+The director picked all 42 shots on the picker ("done selecting") and said to leave upscaling for now.
+- **Installed (33):** m1, 384-r1, 419, 246, 271-r2, 194-r2, 285-r2, 349, 445-r1, 289-r2, 204-r2, 207-r2, 538-r2, 460, 177-r2,
+  178, 462-r5, 469-r1, 231-r2, 232, 70-r1, 73-09, 88, 106, 512, 519, 137-r4, 138-r3, 139-r2, 368-r1--alt1, 303 and 161, plus
+  `montage53/05b.jpg`, the new light-off picture, after 05 in montage 53.
+  - Each went in with `tools/install-film-picture.mjs`, which archived the old picture first.
+  - No Topaz: the 27 under 1920 wide were only enlarged to 1920×1080 by the install tool. A Topaz pass can replace them later.
+- **Kept as they are (5):** 354, 140, 141 and 142. 94-01 is not added, so 141 still plays on "From inside the car, a man's clean
+  hand…".
+- **Redo (4), with the director's notes:**
+  - 374 "she has no coat on";
+  - 175 "too many bad guys";
+  - 213 "ignore the torch it keeps floating mid air";
+  - 87 "lamp to left of him phone to right".
+- **Pending:**
+  - **Depth:** turned off on 460, 73-09 and 512 until their layers are made again from the new pictures. The old plates and
+    cut-outs would have shown the old pictures.
+  - **Lamp glows:** turned off on 139 and 246 until they are placed again.
