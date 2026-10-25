@@ -88,13 +88,13 @@ The screenplay's words stay as they are; what changes is which picture plays on 
 | # | Plays on (the screenplay, unchanged) | Picture | What it shows |
 |---|---|---|---|
 | 1 | "Rain. Ishida comes down the front steps without an umbrella." | `s93/93-00-down-the-steps.jpg` (keep) | From the road: Ishida coming down the steps. |
-| 2 | "At the kerb, a black sedan. Engine running. Wipers beating slowly." / "He stops. He knows this car." | 137 (keep, the director's pick from `reshoot-1080/`) | From the road: Ishida on the pavement, the car at the kerb with its nose toward him, every door shut. |
-| 3 | "A long moment. Then the rear door opens from inside." | **1a** `138-the-door-opens-r1` | The same set-up as 137. The doors we can see stay shut; the door opens on the far side and shows only as warm light spilling onto the pavement. The film's door sound carries it. |
-| 4 | "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going." / "Its rear door stands open: warm amber light, leather." | **1b** `139-only-tea-r1` | Over Ishida's shoulder from the pavement: the open rear door nearest us (front-hinged), the near seat EMPTY, Kurose on the far side of the back seat in shadow, the driver at the wheel. |
-| 5 | "Ishida stands in the rain. He looks back up at the station, at one lit window on the second floor where somebody is still working." | **1c** `140-where-are-we-going-r1` | From the road, across the car's roof: Ishida on the pavement beside the open door, turned back, looking up at the one lit window. |
-| 6 | "From inside the car, a man's clean hand holds out a cup of tea. The watch from the model." / KUROSE: "It's only tea." | **1d** `94-01-the-clean-hand-r1` (new) | Ishida's view into the car: across the empty seat, Kurose's clean hand holds out the cup; the watch from the model on his wrist; his face in shadow. |
+| 2 | "At the kerb, a black sedan. Engine running. Wipers beating slowly." / "He stops. He knows this car." | **1a** `137-he-knows-this-car-r1` | The director's pick (`reshoot-1080/`) with Ishida's raincoat taken off. From the road: Ishida on the pavement, the car at the kerb with its nose toward him, every door shut. |
+| 3 | "A long moment. Then the rear door opens from inside." | **1b** `138-the-door-opens-r1` | The same set-up as 137. The doors we can see stay shut; the door opens on the far side and shows only as warm light spilling onto the pavement. The film's door sound carries it. |
+| 4 | "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going." / "Its rear door stands open: warm amber light, leather." | **1c** `139-only-tea-r1` | Over Ishida's shoulder from the pavement: the open rear door nearest us (front-hinged), the near seat EMPTY, Kurose on the far side of the back seat in shadow, the driver at the wheel. |
+| 5 | "Ishida stands in the rain. He looks back up at the station, at one lit window on the second floor where somebody is still working." | **1d** `140-where-are-we-going-r1` | From the road, across the car's roof: Ishida on the pavement beside the open door, turned back, looking up at the one lit window. |
+| 6 | "From inside the car, a man's clean hand holds out a cup of tea. The watch from the model." / KUROSE: "It's only tea." | **1e** `94-01-the-clean-hand-r1` (new) | Ishida's view into the car: across the empty seat, Kurose's clean hand holds out the cup; the watch from the model on his wrist; his face in shadow. |
 | 7 | "Ishida gets in. The door closes." | `s94/141-he-drinks.jpg` (keep, **moves here**) | Inside, looking back: Ishida (screen-left) now seated; Kurose (screen-right) hands him the cup he did not take outside. |
-| 8 | "The rain is suddenly very far away." | **1e** `368-the-door-closes-r1` | The same set-up as 141: Ishida holds the cup in both hands, eyes down; Kurose looks straight ahead. |
+| 8 | "The rain is suddenly very far away." | **1f** `368-the-door-closes-r1` | The same set-up as 141: Ishida holds the cup in both hands, eyes down; Kurose looks straight ahead. |
 
 - **The current 140** (Ishida alone inside with the cup, the city passing) has no place in the script as written: scene 95
   is the car seen from outside. It stays on disk as an unused take.
@@ -136,16 +136,27 @@ The screenplay's words stay as they are; what changes is which picture plays on 
 **Attach for all of 1:** `reshoot-1080/137-he-knows-this-car.jpg` (the car and the street), `s93/93-00-down-the-steps.jpg`
 (the station), `sheets/ishida.jpg`, `sheets/ishida-face.jpg`, `sheets/kurose.jpg`, plus each recipe's own.
 
-**1a.** `retakes_2026_10_25/138-the-door-opens-r1.jpg`
+**1a.** `retakes_2026_10_25/137-he-knows-this-car-r1.jpg`
+- Plays on: "At the kerb, a black sedan. Engine running. Wipers beating slowly." and "He stops. He knows this car." The
+  director: it shouldn't be a raincoat.
+- An edit of `reshoot-1080/137-he-knows-this-car.jpg`, the director's pick (attach it as the base). Attach also
+  `s93/93-00-down-the-steps.jpg` for his clothes.
+- Prompt: *Keep this picture exactly: the police station, the black saloon at the kerb with its nose toward him, the rain,
+  Ishida standing on the pavement at the foot of the steps looking at the car. Change only Ishida's clothes: no coat. He
+  wears his charcoal-grey jacket and trousers and a light grey open-collar shirt, as in the reference 93-00, soaked by the
+  rain.* + LOOK.
+- Check: no coat; nothing else changed.
+
+**1b.** `retakes_2026_10_25/138-the-door-opens-r1.jpg`
 - Plays on: "A long moment. Then the rear door opens from inside." The director: keep the doors shut.
-- An edit of `reshoot-1080/137-he-knows-this-car.jpg` (attach it as the base).
+- An edit of 1a once made (attach it as the base), so Ishida has no coat here either.
 - Prompt: *Keep this picture exactly: the police station, Ishida standing still on the pavement at the foot of the steps
   looking at the car, the black saloon at the kerb with its nose toward him, every door we can see shut, the rain. Change
   only the light: the car's interior lights are now on, warm amber glowing through its windows, and warm light spills out
   from the far side of the car onto the wet pavement beyond it, as if a door on that side has just opened.* + LOOK.
 - Check: no door on the near side open; nobody new in shot.
 
-**1b.** `retakes_2026_10_25/139-only-tea-r1.jpg`
+**1c.** `retakes_2026_10_25/139-only-tea-r1.jpg`
 - Plays on: "At the foot of the steps, a black sedan waits at the kerb, engine running, wipers going." and "Its rear door
   stands open: warm amber light, leather." The director: the door opens the wrong way.
 - Attach: `s94/139-only-tea.jpg` (composition only), `s94/141-he-drinks.jpg` (the interior).
@@ -162,7 +173,7 @@ The screenplay's words stay as they are; what changes is which picture plays on 
   - the near seat is empty;
   - the wheel is in front of the nearest front seat.
 
-**1c.** `retakes_2026_10_25/140-where-are-we-going-r1.jpg`
+**1d.** `retakes_2026_10_25/140-where-are-we-going-r1.jpg`
 - Plays on: "Ishida stands in the rain. He looks back up at the station, at one lit window on the second floor where somebody
   is still working."
 - Attach: `s80/the-blood-on-his-hand.jpg` (the split lip).
@@ -175,10 +186,10 @@ The screenplay's words stay as they are; what changes is which picture plays on 
   rain on it.* + ISHIDA + LOCATION + LOOK.
 - Check: the car is between the camera and Ishida; he is on the pavement side.
 
-**1d.** `retakes_2026_10_25/94-01-the-clean-hand-r1.jpg` (a new picture for the film; it takes the beat 141 played on)
+**1e.** `retakes_2026_10_25/94-01-the-clean-hand-r1.jpg` (a new picture for the film; it takes the beat 141 played on)
 - Plays on: "From inside the car, a man's clean hand holds out a cup of tea. The watch from the model." and "It's only tea."
 - Attach: `retakes_2026_10_20/311-the-hand-on-the-model-r1--alt1.jpg` (the hand and the watch), `s94/141-he-drinks.jpg`
-  (the cup and the interior), 1b once made (the doorway).
+  (the cup and the interior), 1c once made (the doorway).
 - Prompt: *Ishida's view, standing on the pavement at the open rear door of the black saloon, looking in: the car's front
   screen-RIGHT. Across the empty near seat of tan leather, from the far side of the back seat, a man leans across and holds
   out a small stainless-steel cup of tea toward us, steam rising from it. His clean, manicured hand; a white shirt cuff and a
@@ -187,7 +198,7 @@ The screenplay's words stay as they are; what changes is which picture plays on 
   doorway in the foreground, catching the light.* + KUROSE + LOOK.
 - Check: the strap is black leather, not a steel bracelet; nobody else's hands in shot.
 
-**1e.** `retakes_2026_10_25/368-the-door-closes-r1.jpg`
+**1f.** `retakes_2026_10_25/368-the-door-closes-r1.jpg`
 - Plays on: "The rain is suddenly very far away." The director: they need to switch seats.
 - An edit of `s94/141-he-drinks.jpg` (attach it as the base), which already has them in the right seats.
 - Prompt: *Keep this picture exactly: the same car interior, the same camera between the front seats looking back, Ishida
@@ -197,15 +208,14 @@ The screenplay's words stay as they are; what changes is which picture plays on 
   the street is a blur of light.* Give Ishida the split lip (ISHIDA block). + LOOK.
 - Check: Ishida screen-left, Kurose screen-right; one cup.
 
-**1f. (optional, small) `retakes_2026_10_25/141-he-drinks-r1.jpg`**, an edit of `s94/141-he-drinks.jpg`. 141 shows Kurose's
+**1g. (optional, small) `retakes_2026_10_25/141-he-drinks-r1.jpg`**, an edit of `s94/141-he-drinks.jpg`. 141 shows Kurose's
 watch on a steel bracelet, not the model's black leather strap, and gives Ishida no split lip.
 - Prompt: *Keep this picture exactly. Change only Kurose's watch: a slim silver watch with a white dial on a black leather
   strap, as in the reference; and give Ishida a small fresh split at the left corner of his mouth, a little dried blood.*
 - Attach: `retakes_2026_10_20/311-the-hand-on-the-model-r1--alt1.jpg`, `s80/the-blood-on-his-hand.jpg`.
 
-**Note for the director:** in 137 as picked (`reshoot-1080/`), Ishida wears a long dark raincoat. In 93-00 and every other
-shot he wears only his jacket ("without an umbrella"). 1a, as an edit of 137, inherits the coat. If the coat should go, 137
-and 1a both need it removed: an edit of each, *change only Ishida's clothes: no coat, his charcoal jacket soaked*.
+**The raincoat:** in 137 as picked, Ishida wears a long dark raincoat he has in no other shot. The director, 25 October: it
+shouldn't be a raincoat. 1a takes it off, and 1b is made from 1a.
 
 ---
 
@@ -256,8 +266,8 @@ day: *flat grey rainy daylight through the blinds.*
 
 **2b.** `retakes_2026_10_25/271-not-yet-r1.jpg`
 - Plays on: "The sketchbook is on the desk between them. Jack's hand rests on its cover."
-- Attach: `s21/271-not-yet.jpg` (the cups and the sketchbook), `s21/194-he-holds-it-without-drinking.jpg`,
-  `sheets/vera.jpg`, `sheets/vera-face.jpg`.
+- Attach: `s10/415-four-days.jpg` (the model: this two-shot already has them at the two ends of the desk),
+  `s21/271-not-yet.jpg` (the cups and the sketchbook), `sheets/vera.jpg`, `sheets/vera-face.jpg`.
 - Prompt: *Day. A side two-shot from the front of the desk: Vera at the desk's LEFT end, near the door, facing right, in her
   dark charcoal wool coat (still on) over a cream high-neck knit, ash-blonde shoulder-length hair, waiting. Jack at the RIGHT
   end, facing her, his hand resting flat on the cover of Mara's closed sketchbook in the middle of the desk between them. Two
@@ -272,13 +282,23 @@ day: *flat grey rainy daylight through the blinds.*
   writing. His hands as in the reference: dark dried blood in the creases of the knuckles. The lamp lit at the far (left)
   end, the black rotary phone at the back edge.* + OFFICE + JACK + style line (night).
 
-**2d. Only if the director confirms 194** (its note was a chat message, see `docs/director-picks-2026-10-25.md`, section 5):
-`retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg`.
+**2d.** `retakes_2026_10_25/194-he-holds-it-without-drinking-r1.jpg`. The director, 25 October: 194 and the shot before it
+(271) both have the desk the wrong way round.
 - Plays on: "Jack sits very still. He picks up the coffee she brought him and holds it without drinking, the way he held the
   can at the vending machine." Vera has just left.
 - Prompt: *Day. Jack alone at his end of the desk, side-on to the camera, facing left toward the door she went out of, holding
   a paper coffee cup in both hands without drinking. Her empty chair at the desk's left end; her own cup still on the desk;
   the closed sketchbook between.* + OFFICE + JACK + style line (day).
+
+**2e. Found in a check of every office picture, not flagged by the director:**
+`retakes_2026_10_25/249-the-line-r1.jpg`. Every other office picture already has the room master's layout, or shows too
+little of the room to tell. 249 has Jack behind the desk facing us, like 87. Make it only if the director wants it.
+- Plays on: "The line goes dead. Jack holds the receiver a moment longer."
+- Attach: `s11/249-the-line.jpg` (the moment), `s11/418-it-takes-a-long-time-to-dial.jpg` (the lamp and the phone, from his
+  end).
+- Prompt: *Night. Jack at his end of the desk, side-on to the camera, facing left, the black receiver still at his ear after
+  the line has gone dead, its cord running to the rotary phone on the desk's back edge; the lamp lit at the left end; behind
+  the desk the window dark with rain.* + OFFICE + JACK + style line (night).
 
 ---
 

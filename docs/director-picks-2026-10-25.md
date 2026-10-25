@@ -31,7 +31,7 @@ film plays and the other 2 belong to pictures it no longer uses (`104-the-newsro
 | 82 — Start with my part | `s82/new-jack-walks-in-3.jpg` | `archived · s82/new-jack-walks-in-3--v1.jpg` | Nobody stops him. | This version is 1672×941, under the 1920 house size: it needs upscaling (no new picture) before it goes in. |
 | The Hive raid (scenes 85–92, to the song) | `s91/134-the-walkway-is-empty.jpg` | `archived · s91/134-the-walkway-is-empty--v1.jpg` |  | The current picture has depth layers: re-make them for this one. |
 | The Hive raid (scenes 85–92, to the song) | `s92/135-below-the-viaduct.jpg` | `archived · s92/135-below-the-viaduct--v1.jpg` |  |  |
-| 93 — He knows this car | `s93/137-he-knows-this-car.jpg` | `reshoot-1080/137-he-knows-this-car.jpg` | At the kerb, a black sedan. Engine running. Wipers beating slowly. |  |
+| 93 — He knows this car | `s93/137-he-knows-this-car.jpg` | `reshoot-1080/137-he-knows-this-car.jpg` | At the kerb, a black sedan. Engine running. Wipers beating slowly. | Ishida wears a raincoat here he has in no other shot. The director, 25 October: take it off (an edit, brief 1a). |
 | 99 — The Hive coming down, then the plaza | `s99/156-cut-open.jpg` | `archived · s99/156-cut-open--v1.jpg` | The Hive is coming down. |  |
 | 99 — The Hive coming down, then the plaza | `s99/157-the-sign.jpg` | `archived · s99/157-the-sign--v1.jpg` | Kaneko stands among them, holding the old noodle-shop sign against her chest, wrapped in a blanket. |  |
 
@@ -103,7 +103,8 @@ re-made. So must 354's (section 4).
 ## 5. Two picks to confirm
 
 - **194 (scene 21, "He picks up the coffee she brought him")** is marked *retake*, but its note reads "its already built the image
-  previewer with all images?", which looks like a chat message typed into the note box. Retake it or keep it?
+  previewer with all images?", which looks like a chat message typed into the note box. **The director, 25 October: retake it;
+  194 and the shot before it (271) both have the desk the wrong way round.**
 - **Montage 53, picture 05** is marked *retake*, but its note says "actually keep it but add beat after with light off". Read as:
   keep 05 and add one new picture after it with the light off (that new picture is the only thing to make). **Confirmed by
   the director, 25 October.**
@@ -120,12 +121,14 @@ re-made. So must 354's (section 4).
 368): **140** shows Ishida already inside with the tea on "Ishida stands in the rain", so it is remade to its line; and **a
 new insert, 94-01**, of Kurose's clean hand holding out the tea, takes the beat 141 plays on today. **141 stays** and moves to
 "Ishida gets in. The door closes." (Kurose hands him the cup inside); its watch is on a steel bracelet, not the model's black
-strap, a small optional edit. And **137 as picked** has Ishida in a long raincoat that he wears in no other shot.
+strap, a small optional edit. And **137 as picked** has Ishida in a long raincoat he wears in no other shot: the director
+wants it off (an edit).
 
 ## In short
 
 - **Free, can be done now:** the 17 swaps, the 9 unused takes, 336's extra beat and scene 28's sound. Three of the
   swaps (15, 73-06, 134) need their depth layers re-made, and one (new-jack-walks-in-3 v1) needs upscaling to full size.
 - **Needs new pictures (none made):** the 30 marked retakes (two of them are the questions in section 5), seven of the notes
-  (246, 285, 349, 354, 469, 87 and 88), the three chat notes (519, 303, 161) and the car's 140 and 94-01: 42 pictures, most
-  of them edits of the picture as it is. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).
+  (246, 285, 349, 354, 469, 87 and 88), the three chat notes (519, 303, 161) and the car's 137 (the raincoat), 140 and 94-01:
+  43 pictures, most of them edits of the picture as it is. A check of every office picture found one more with the desk the
+  wrong way, 249 (scene 11), briefed in case the director wants it. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).
