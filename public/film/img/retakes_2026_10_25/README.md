@@ -166,9 +166,31 @@ car); they already pass their checks and keep clear glass, which is correct for 
 | `213-clutch-each-other-r2.jpg` | 6c | Pantry behind the couple now black, no torch inside; the torch beam enters from off-frame behind the camera (corridor side) across the kitchen wall and Jack's shoulder; the couple clutch each other. |
 | `538-the-receipts-in-his-hand-r2.jpg` | 6d | Tight close-up restored (receipts fanned in his hand, pink phone, coin tray); one pink handset at his ear on its coiled cord, empty cradle, no second receiver. |
 
+## Third batch, 25 October (night): third attempts, for review only — nothing installed
+
+Another from-scratch round addressing the weaknesses left in the second batch. All seven are saved beside the earlier
+takes, not cropped or resized (native 1376×768; 213-r3 is exact 16:9 at 1376×768), and nothing under `src/` changed. The
+director reviews and picks before any install.
+
+| File | Item | Result / flags |
+|---|---|---|
+| `137-he-knows-this-car-r3.jpg` | 1a, third attempt | Wider street view, fully opaque black tint on every window, all car doors shut, Ishida sheet-consistent and soaked. **Flag: the station's own glass entrance door is standing open** (no car door is). The r2 keeps the entrance shut and may be the safer pick; r3 is the stronger car/tint. |
+| `138-the-door-opens-r2.jpg` | 1b/6f, second attempt | Fixes r1's interior bleed: the glass is now solid black with nothing visible through it; the "door opens on the far side" reads only as an amber pool on the wet road around the rear of the car. All near doors shut. |
+| `139-only-tea-r3.jpg` | 1c/6e, third attempt | Tighter, more cinematic crop of the same correct geography: doorway fills frame, no door panel, empty near seat with armrest down, Kurose far side facing the front (right), face in shadow, driver silhouette at right, opaque tint on the closed glass. No new faults seen. |
+| `94-01-the-clean-hand-r3.jpg` | 1e/6g, third attempt | Stronger shadow on the face, black-strap watch and steaming steel cup clear, empty near seat, opaque tint. **Flag: he reads as half-risen/crouching at the doorway rather than seated leaning across, and the open door's edge intrudes at the bottom-right corner.** r2 keeps him seated and door-free; r3 has the better mood and watch. |
+| `140-where-are-we-going-r3.jpg` | 1d, third attempt | Fixes r2's hatch-like raised panel: the open door now stays below the roofline and reads only as a warm amber rectangle low at frame right; tint fully opaque; Ishida three-quarter looking up at the one lit window, figure at the desk visible. |
+| `142-taillights-r2.jpg` | scene 95, second attempt | Fixes r1's over-saturated stylized grade and busy signage: muted film-still colour, blank unreadable lanterns and neon, neutral vending machine, opaque rear/side glass, same taillights and red trails. |
+| `213-clutch-each-other-r3.jpg` | 6c, third attempt | Fixes the beam direction decisively: the pantry behind the couple is pitch black and a torch cone now enters head-on from off-frame behind the camera, lighting the door frame and the couple's shoulders; they clutch each other, Jack is mid-shove with the coat swinging. **Flags: the torch body peeks into the very bottom-left edge (brief said keep the torch itself out of frame), and a small dark cylindrical wall fitting behind Jack's head could misread — check at review.** |
+
+### Recommendation for the review (not a decision)
+
+- Prefer **137-r2** (shut entrance) unless the wider street of r3 is wanted; **138-r2**, **139-r3**, **140-r3**, **142-r2** and
+  **213-r3** are the strongest of their sets; for **94-01** choose r2 for seating/door correctness or r3 for mood.
+- The second-batch §6 retakes **271-r2, 204-r2, 538-r2** had no identified faults and were not regenerated.
+
 ### Still open after this batch
 
-- Director's review/vote on the six from-scratch car pictures and the four §6 retakes before any are installed.
+- Director's review/vote on the from-scratch car pictures (now r1–r3 where they exist) and the §6 retakes before any are installed.
 - At install: upscale the sub-1920 pictures (Topaz, as the morning batch had), then `tools/install-film-picture.mjs`; the
   story.json/`studio-edits.json` wiring in the 25-October handoff still applies (94-01 new step, 141 moved onto "Ishida gets
   in. The door closes.", 368 quote trimmed, lamp glows re-placed for 139/140).
