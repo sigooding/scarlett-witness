@@ -7,6 +7,9 @@ paths, are in `docs/director-picks-2026-10-25.json` (`state`: `retake`, `alt` sw
 The page shows *Changed 56 of 630*: 30 retakes, 17 swaps to another version and 9 notes on pictures that stay. Separately, 9 unused takes are marked *I want this in the film*. In scenes 1 and 2, 29 pictures are marked *keep*; their only change is
 scene 1's 15 (a swap, below).
 
+**Every picture this list needs is briefed for an image generator in `docs/image-brief-2026-10-25.md`** (exact file, references,
+prompt), with the car beats of scenes 93 and 94 rewritten shot by shot so the getting in and the seats make sense.
+
 **The depth cut-outs need no integrating: they were all in the film already.** All 114 cut-out sets are wired; 112 are on pictures the
 film plays and the other 2 belong to pictures it no longer uses (`104-the-newsroom`, `387-the-street-too-long`).
 
@@ -104,9 +107,24 @@ re-made. So must 354's (section 4).
 - **Montage 53, picture 05** is marked *retake*, but its note says "actually keep it but add beat after with light off". Read as:
   keep 05 and add one new picture after it with the light off (that new picture is the only thing to make).
 
+## 6. From the director in chat, 25 October (also retakes, not made)
+
+| Scene | Picture | Line on screen | The note | What it needs |
+|---|---|---|---|---|
+| 84 — Three feet away | `s84/519-not-all-right.jpg` | Vera says nothing for a while. She does not say it's all right. | her hair should be in a bun like the others in the scene | An edit: her hair in the low bun of 116 and 521, and their white collared shirt instead of a cream turtleneck. |
+| 96 — A minute fast | `s96/303-he-left-a-statement.jpg` | He left a note. | the office changes from the previous shot | The room is flipped against 143 (windows left instead of right, filing cabinets instead of the hatch and door). Remake it as 143's room. |
+| 100 — The city goes on | `s100/161-stool-three.jpg` | She stands a moment. Then she sits down beside him. | vera has extra leg | A third leg; she is also on Jack's right, reaching across him for the stool, while 160 and 159 seat her on his left. |
+
+**The car (scenes 93 and 94)**, rewritten in the brief's section 1. It needs two pictures beyond the director's three (138, 139,
+368): **140** shows Ishida already inside with the tea on "Ishida stands in the rain", so it is remade to its line; and **a
+new insert, 94-01**, of Kurose's clean hand holding out the tea, takes the beat 141 plays on today. **141 stays** and moves to
+"Ishida gets in. The door closes." (Kurose hands him the cup inside); its watch is on a steel bracelet, not the model's black
+strap, a small optional edit. And **137 as picked** has Ishida in a long raincoat that he wears in no other shot.
+
 ## In short
 
 - **Free, can be done now:** the 17 swaps, the 9 unused takes, 336's extra beat and scene 28's sound. Three of the
   swaps (15, 73-06, 134) need their depth layers re-made, and one (new-jack-walks-in-3 v1) needs upscaling to full size.
-- **Needs new pictures (none made):** the 30 marked retakes (two of them are the questions in section 5) and seven of the notes:
-  246, 285, 349, 354, 469, 87 and 88. Six of them carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).
+- **Needs new pictures (none made):** the 30 marked retakes (two of them are the questions in section 5), seven of the notes
+  (246, 285, 349, 354, 469, 87 and 88), the three chat notes (519, 303, 161) and the car's 140 and 94-01: 42 pictures, most
+  of them edits of the picture as it is. Six carry depth layers to re-make afterwards (374, 73-09, 512, 460, 364, 354).

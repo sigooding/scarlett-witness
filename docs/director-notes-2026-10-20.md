@@ -692,3 +692,9 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   changes (30 retakes, 17 swaps to a version that already exists, 9 notes) and 9 unused takes wanted are listed in
   `docs/director-picks-2026-10-25.md`, with what each needs and two picks to confirm (194's note, montage 53's picture 05).
   Nothing in the film is changed by it. The depth cut-outs needed no integrating: all were in the film already.
+- **"rewrite the beats so the getting in car and seated positions make sense for image gen. also any others flagged for
+  regen."** `docs/image-brief-2026-10-25.md` briefs every retake for an image generator (exact file, references, prompt).
+  Scenes 93 and 94 are rewritten shot by shot on one seat lock: the sedan's right side at the kerb, the rear right door the only
+  one that opens (hinged at the centre pillar), Kurose on the far side, Ishida getting in beside him. The office shots go back
+  to the room master's layout (Jack at the desk's right end, facing the door), as the director's own swaps of 85 and 189
+  have it. Three notes sent in chat (519, 303, 161) are in it too. No picture was made.
