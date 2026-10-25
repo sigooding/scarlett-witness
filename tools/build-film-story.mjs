@@ -46,7 +46,9 @@ function splitLine(text, voice) {
 
 // Body falls (8 October 2026, generated in ElevenLabs): "shot2" is the two shots with the journalist coming off his stool a second later
 // (shot2.mp3 + the bar fall, mixed once with ffmpeg), "fall-street" the old man in scene 1, "fall-door" Mara through the Hive door in scene 70.
-const SFX = { shot: "suppressed-shot", shot2: "shot2-fall", "fall-street": "body-fall-street", "fall-door": "body-fall-doorway", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", car: "car-pass" };
+// "shot2" plays shot2-fall-late (25 October 2026, the director: the shots came too early): the same mix after a second of silence, so the
+// shots land once the picture of the gun on the journalist's shoulder (26) has crossfaded in.
+const SFX = { shot: "suppressed-shot", shot2: "shot2-fall-late", "fall-street": "body-fall-street", "fall-door": "body-fall-doorway", train: "train", crossing: "crossing", clank: "clank", phone: "phone", chime: "shop-chime", car: "car-pass" };
 // Recorded atmosphere: copy the loops from the visual novel and pick one per scene from its slugline (same rule as the VN's beds.ts).
 mkdirSync(resolve(root, "public/film/sfx"), { recursive: true });
 for (const f of ["amb-city-traffic", "amb-room-tone", "amb-hive", "amb-bar", "amb-vending", "amb-office", "car-pass"]) {

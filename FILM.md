@@ -9,6 +9,25 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Scene 2: the shots come once the gun is on him (25 October 2026, night)
+
+* **The note.** The director: "scene 2 silencer shot sfx is too early." The two shots sounded as 24 came up (the men just
+  inside the door, the journalist still on his stool), a line before 26 shows the gun on his shoulder.
+* **The order now:**
+  1. 25 on "Mara is behind the counter before she knows she's moved."
+  2. 24 with a caption of its own (`pictureCaptions`): "Two men in masks, inside the door. The journalist doesn't get up."
+  3. 26 on "Two shots.", with the shots.
+  4. Still on 26, "On the high shelf, the television audience laughs." with the television's laugh.
+* **The shots are a second into their line.** The `shot2` cue now plays `shot2-fall-late.mp3`: the same mix as
+  `shot2-fall.mp3` (which stays on disk) after one second of silence. They land once 26 has crossfaded in (0.9 s).
+* **Checked in the animatic in a browser.** "Two shots." comes up 42.4 s into the scene. The shots are heard at 43.4 and
+  43.8 s, and the laugh's line comes up at 44.2 s.
+* **In `src/film/story.json`, scene 2:**
+  * 24's picture step moved ahead of "Mara is behind the counter…".
+  * "Two shots. On the high shelf…" is split into two text steps, so the shots and the laugh are separate lines.
+
+  Scene 2 now has 20 beats, so the corner marks after beat 11 are one higher than on the last export.
+
 ## The director's 25 October picks; the last shot pulls out (25 October 2026, night)
 
 * **The picks.** The director chose a take for each of 42 shots on the picker page (its `picks` store; the list and the check
@@ -259,7 +278,7 @@ From the animatic export of scenes 1–2 (beat numbers are the export's joined m
 - **Scene 1, new beat at SC 1 · BEAT 22:** `s1/11-sakai-mid-fall.jpg` (made for this; Sakai matched to `09-old-man-stops`, `07-old-man` and `14-she-kneels` — grey flat cap, beige raincoat, mid-fall, both masked men pointing suppressed pistols at him). It takes "A suppressed SHOT." and the `suppressed-shot` sound; `10-the-shot` now plays on "Flat and ordinary, like a door closing. The old man folds onto the street."
 - **Scene 1, sound:** the thud the director heard as a door shutting is off the fold; a car door shuts instead on "They walk back to the sedan" (SC 1 · BEAT 26, `car-door-heavy`), before the car pulls away. The old `fall-street` step is out of `story.json`.
 - **Scene 1, Mara at SC 1 · BEAT 30:** "Hold on, I'll call an ambulance." (the note's "I'll can" read as "I'll call"). Take recorded 24 October (Mara's voice, picked by measurement; `docs/film-voice-generations-2026-10-24.json`).
-- **Scene 2:** the first two picture beats both play `s2/20-the-journalist.jpg`; the picture files of the door-opening and behind-the-counter beats are swapped, so the men-outside frame (`23-behind-the-counter-s2new2`) plays as the door opens and the stepping-in frame (`25-two-pairs-of-shoes-v2`) plays on "Mara is behind the counter…" — by then the men are coming inside. `24-from-the-floor` (the men inside) now plays on "Two shots."
+- **Scene 2:** the first two picture beats both play `s2/20-the-journalist.jpg`; the picture files of the door-opening and behind-the-counter beats are swapped, so the men-outside frame (`23-behind-the-counter-s2new2`) plays as the door opens and the stepping-in frame (`25-two-pairs-of-shoes-v2`) plays on "Mara is behind the counter…" — by then the men are coming inside. `24-from-the-floor` (the men inside) now plays on "Two shots." (since 25 October it has a caption of its own, and "Two shots." plays on 26: first section)
 - **Scene 2, dialogue:** after "He knows her name." the journalist says "Are you okay? Where's Sakai?" (new line, take recorded 24 October in his voice; "Miss Voss?" stays before it), and his later "Where is he?" is out — picture, words and take. Note: Mara's scene 25 recall still quotes the old words ("the man said, 'Where is he?'"); it wants rewording when its take is next touched.
 - **Opening titles:** the montage is twelve stills, not six (the three `montage/` plates m1–m3, the backstreet, the elevated line and the empty lane added between the old six). It still loops inside the 110 s titles.
 

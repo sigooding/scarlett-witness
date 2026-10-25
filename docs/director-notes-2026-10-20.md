@@ -745,3 +745,38 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - **"on very last shot at kenekos have close shot thats slowly pulls out in the pause on them part."** The last picture now
   starts close on Vera and Jack and pulls slowly out to all three at the counter. The hold is longer, so it rests on them before
   the credits.
+
+## 38. Scene 2's shots, and Okada's daughter (25 October, night)
+- **"scene 2 silencer shot sfx is to early."** The shots were heard over 24, where the men have only just come in, a line
+  before 26 shows the gun on the journalist's shoulder.
+  - Now 24 comes up with a caption of its own: "Two men in masks, inside the door. The journalist doesn't get up."
+  - Then 26 takes "Two shots.", and the shots come a second after it is up.
+  - The laugh follows on the same picture.
+
+  FILM.md, first section.
+- **"vera asks jack … about okadas daughter … was she alive? jacks honest answer is in the pause. so the later okada plot
+  about his daughter dosent match. make sure his daughter died some how but hes still needs to be on speaking terms with
+  jack. recommend before making plot change."** Recommended, not made. It waits for the director's yes.
+  - **Today's mismatch.** In 27A the daughter ran off to Osaka, Jack found her, and "She has two children now." That leaves
+    nothing to hide in the pause of scene 10.
+  - **The recommendation.** She was alive when Jack found her and dead by morning:
+    - He rang her father that night: "Safe. Tomorrow it'll be over."
+    - She was taken out of the river in the morning.
+    - The pause in 10 then hides both answers.
+  - **Only two of Okada's lines in 27A change:**
+    - "She was fifteen. She went to Osaka with a boy. Everyone said she was gone. He found her in three weeks. She didn't want
+      to come home. He telephoned me that night. Safe, he said. Tomorrow it'll be over."
+    - Vera's "Was he right?" stays, with its take.
+    - "They took her out of the river in the morning. I hated him for a year. Nobody else had even looked."
+  - **Everything else stays as recorded, and some of it lands harder:**
+    - In 9, "He found my daughter once. When no one else would look."
+    - In 64, Jack's "Safe. Tomorrow it'll be over." about Mara, and Okada's bitter "You said that about my daughter.", now
+      the same words he said the night before she died.
+    - In 81, "The girl?", where Jack can't answer and Okada pours two glasses. It is the second time.
+    - Okada at the service in 97A.
+  - **Why he still speaks to Jack:** he was the only one who looked (9 and the new last sentence), the hatred lasted a year,
+    and "He finds things. And then he carries them by himself."
+  - **Cost.** The two lines re-recorded in "Okada (old) - NEONOIRE", eleven_v4, two takes each, about 600 credits.
+    Check the balance first: 659 at the last count.
+  - **Not recommended:** that she was already dead when he found her. Then Jack could never have said "Safe", so 64 would
+    have to change too.
