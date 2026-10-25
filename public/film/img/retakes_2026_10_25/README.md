@@ -210,16 +210,6 @@ installed. The per-turn image limit cut the batch at ten pictures; 5k (469) and 
 | `374-the-dead-television-r1.jpg` | 5i | Vera crouched among beer crates looking up at the high shelf CRT; screen dark grey, switched off, no reflection of her face. Clean. |
 | `montage53-05b-light-off-r1.jpg` | 5j | The one lit window is now dark like every window of the building; rain and framing kept. Clean. |
 
-### §5 still to generate (part 2, next)
-
-- 5k `469-what-they-are-told-r1` (glasses off her face, kept in her hand) and 5l `231-the-box-r1` (cassette on the perforated
-  bench, no cardboard box, plain notebook cover) — both failed on the image limit.
-- 5m `232-the-wine-red-dress-r1`, 5n `70-the-call-r1`, 5o `73-09-she-cannot-breathe-r1`, 5p `88-the-walkway-r1`,
-  5q `106-play-r1`, 5r `512-he-hasnt-stopped-r1`, 5s `519-not-all-right-r1` (bun + white collar), 5t `303-he-left-a-statement-r1`
-  (office continuity), 5u `161-stool-three-r1` (two legs, correct stool).
-- After §5: the five unchosen retakes (87, 460, 175, 178, 462) and the small in-film faults (194 sketchbook colour,
-  177 suppressed burst, 207 handset height, 354 gaze).
-
 ## Fifth batch, 25 October (night): brief §5 part 2 (5k–5u) — §5 now complete
 
 **Orientation fix.** The director reported portrait outputs. Those were the *rejected* options of the two-option votes and
