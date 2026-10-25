@@ -698,3 +698,6 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   one that opens (hinged at the centre pillar), Kurose on the far side, Ishida getting in beside him. The office shots go back
   to the room master's layout (Jack at the desk's right end, facing the door), as the director's own swaps of 85 and 189
   have it. Three notes sent in chat (519, 303, 161) are in it too. No picture was made.
+- **The director's answers, 25 October:** Ishida's raincoat in 137 goes (an edit of the pick; 138 is made from it); 194 is
+  redone with the desk the room master's way, like 271 before it; montage 53 keeps 05 and gains a light-off picture after
+  it. A check of every office picture found only 249 (scene 11) also with the desk the wrong way; it is briefed in case.
