@@ -2,6 +2,11 @@
 
 `FILM.md` explains how the Nobody's Witness film is built from PlayFrame's material; read it before changing the film.
 
+## Start here (25 October 2026)
+
+The director wants the work on their 25 October picks to carry on. `docs/handoff-2026-10-25.md` says what is wrong in the film,
+what is done and what to do next, in order. Kurose's car (scenes 93–94) comes first.
+
 ## Pictures are never downscaled
 
 The director's rule (17 October 2026): **never make a film picture smaller than it came.** Put every new picture or

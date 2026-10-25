@@ -1,5 +1,8 @@
 # Director's picks from "Every picture, in order" (25 October 2026)
 
+**Update, 25 October (later):** nine of the retakes below are now in the film, and five of the car's pictures are made but
+not in it. What is still open, and in what order, is in `docs/handoff-2026-10-25.md`.
+
 **For urgent review. Nothing in the film has been changed yet, and no picture has been made.** This is the list of what the
 picks on the review page (https://claude.ai/artifact/T2WkAqbiei2XaUMUxf9ngh, read from its `picks` store) ask for. The same picks, with exact
 paths, are in `docs/director-picks-2026-10-25.json` (`state`: `retake`, `alt` swap, `want` unused take, `keep`, empty for a note only).
