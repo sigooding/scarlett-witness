@@ -407,3 +407,61 @@ had no selection, so those were saved as single corrective edits after review fe
 | `462-a-finger-to-his-lips-r5.jpg` | Option 1 selected. Jack's face references retained; close crop keeps the vending machine out of frame, with one hush hand visible. |
 
 These are stored for review only. No picture was installed into the film, and no application code or story wiring changed.
+
+## Second check by the film's maintainer, 25 October (night), and a picker
+
+The director: "done some they need a review", then "maybe a picker?".
+- **What was checked:** every take added since the first check (82 pictures for 42 shots). Each was compared with the picture
+  in the film, the shots either side of it and the screenplay line it plays on.
+- **The picker:** https://claude.ai/artifact/FXTrEWv6UARyPtwun3xQLp ("25 October Retakes"). For each shot it shows the film's
+  picture, the shots either side, every take with a note and the recommended take marked. The director's picks save in the
+  page's `picks` store, one document per shot: `choice` is a take id (`r2`, `r2--alt2`…), `film` (keep the film's) or `redo`,
+  plus a `note`. Read it with `ArtifactData` `list` on collection `picks`.
+- **Nothing is installed until the director has picked.**
+- **Left off the picker:** the five `--alt1-edit` takes the director rejected, 384-r2 (portrait) and 462-r3 (two right hands).
+
+**Corrections to flags earlier in this file:**
+- **The voted 139-r4 and 139-r5 show the car the wrong way round.**
+  - Seen from the road (137, 138, 140) the car's front points left, so seen from the pavement it must point right.
+  - 139-r2 and r3 point right.
+  - r1 (mine), r4 and r5 point left, so the car would seem to turn round between cuts.
+  - For 94-01: r5 is right (front to the right, the door hung from its front edge, Kurose's face in shadow); r2, r3 and r4
+    point left; r1 points right but lights his face.
+- **87's green notebook is right.** The book on the envelope is Daniel Voss's notebook, which is green in 86 and 90. Cream is
+  the colour of Mara's sketchbook (194, 271). So the director's 87-r1 is the take to use; the cream r2, r2--alt1 and r3 came
+  from a wrong flag. In all of them the notebook lies on the envelope, though 86 has just put it inside.
+- **445's "1:07" belongs.** The drawing has it in 369, the shot just before. r1 keeps it; r2 took it off.
+- **384's phone is not an anachronism.** The film's phones are mobiles (499: "The screen: ISHIDA"), and Vera holds hers in 36,
+  the next shot. The director voted r2--alt2 (a notebook instead); r1 keeps the phone.
+- **70-r2's corded bar phone contradicts 499**, where the call comes on her mobile. r1 keeps the mobile, but she is still seated.
+
+**Other findings:**
+- **204-r2:** Jack is fixed (in profile, facing her), but she no longer pours.
+- **538-r3:** the coin tray is empty a shot before the coins run out (376). r2 keeps the coins.
+- **354:** the r2 takes are near copies of the picture in the film, Jack's face included. Keeping the film's saves redoing its
+  depth layers.
+- **142:** the film's picture keeps the scene 1 street (barber's pole, vending machine) that its line points back to ("exactly
+  like the car in the first scene of the film"). r1 and r2 are another alley.
+- **462:** r5 is the clean hush. r1 has sparks at the vending machine before any gunfire, and r4 its bullet holes.
+- **Interior pairs:** 141-r2 or r3 go with 368-r2; 141-r1 goes with 368-r1.
+
+**Recommended take per shot** (marked on the picker; the director decides):
+
+| Shots | Recommended |
+|---|---|
+| m1, 419, 246, 349, 445, 374, 460, 175, 178, 469, 232, 70, 73-09, 87, 88, 106, 512, 519, 303, 161, montage53-05b (new) | r1 |
+| 271, 194, 289, 204, 207, 538, 177, 231, 139, 368 | r2 |
+| 285, 213, 138, 141 | r3 |
+| 137 | r4 |
+| 462, 140, 94-01 (new) | r5 |
+| 384 | r2--alt2 (the director's vote) |
+| 354, 142 | keep the film's picture |
+
+**When the picks are in:**
+- **Upscale** every pick under 1920 wide with Topaz (most are 1376×768), with the settings in
+  `docs/film-picture-upscales-2026-10-25.json`.
+- **Install** with `tools/install-film-picture.mjs`, which also crops 138-r3 (1408×736) and 141-r2/r3 (3:2) to 16:9.
+- **Remake depth** for 374, 73-09, 512 and 460, and any other pick whose film picture carries layers.
+- **Wire the car sequence** as `docs/handoff-2026-10-25.md` says: 94-01 is a new step, 141 moves, 368's quote is trimmed, and
+  139/140's lamp glows are re-placed.
+- **montage53-05b** is a new picture: add it after `montage53/05.jpg` in the `nw_m53` montage in `src/film/studio-edits.json`.
