@@ -105,7 +105,8 @@ re-made. So must 354's (section 4).
 - **194 (scene 21, "He picks up the coffee she brought him")** is marked *retake*, but its note reads "its already built the image
   previewer with all images?", which looks like a chat message typed into the note box. Retake it or keep it?
 - **Montage 53, picture 05** is marked *retake*, but its note says "actually keep it but add beat after with light off". Read as:
-  keep 05 and add one new picture after it with the light off (that new picture is the only thing to make).
+  keep 05 and add one new picture after it with the light off (that new picture is the only thing to make). **Confirmed by
+  the director, 25 October.**
 
 ## 6. From the director in chat, 25 October (also retakes, not made)
 
