@@ -700,4 +700,5 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   have it. Three notes sent in chat (519, 303, 161) are in it too. No picture was made.
 - **The director's answers, 25 October:** Ishida's raincoat in 137 goes (an edit of the pick; 138 is made from it); 194 is
   redone with the desk the room master's way, like 271 before it; montage 53 keeps 05 and gains a light-off picture after
-  it. A check of every office picture found only 249 (scene 11) also with the desk the wrong way; it is briefed in case.
+  it. A check of every office picture found only 249 (scene 11) also with the desk the wrong way; the director wants it redone
+  too.

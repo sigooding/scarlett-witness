@@ -290,9 +290,9 @@ day: *flat grey rainy daylight through the blinds.*
   a paper coffee cup in both hands without drinking. Her empty chair at the desk's left end; her own cup still on the desk;
   the closed sketchbook between.* + OFFICE + JACK + style line (day).
 
-**2e. Found in a check of every office picture, not flagged by the director:**
-`retakes_2026_10_25/249-the-line-r1.jpg`. Every other office picture already has the room master's layout, or shows too
-little of the room to tell. 249 has Jack behind the desk facing us, like 87. Make it only if the director wants it.
+**2e.** `retakes_2026_10_25/249-the-line-r1.jpg`. Found in a check of every office picture: 249 has Jack behind the desk
+facing us, like 87. The director, 25 October: redo it too. (Every other office picture already has the room master's
+layout, or shows too little of the room to tell.)
 - Plays on: "The line goes dead. Jack holds the receiver a moment longer."
 - Attach: `s11/249-the-line.jpg` (the moment), `s11/418-it-takes-a-long-time-to-dial.jpg` (the lamp and the phone, from his
   end).
