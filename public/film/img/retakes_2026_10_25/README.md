@@ -128,3 +128,49 @@ The director: "the image generator had trouble doing ishida and kuroso in car do
 **Still to make:** 1b (138, an edit of `137-he-knows-this-car-r1.jpg`, now that it exists) and 139 again. The next 139 should
 leave the door out of frame: the generator turns the car round whenever the door is in shot. Both are briefed as 6e and 6f in
 `docs/image-brief-2026-10-25.md`.
+
+## Second batch, 25 October (evening): from-scratch car set with tinted glass, and the §6 retakes
+
+Director's two new instructions for this batch:
+1. **The car has dark tinted windows in every exterior.** The old attempts kept failing because edit models inherited the
+   clear-glass look (and, for 139, the wrong door hinge / car orientation). So these were all **generated from scratch** — no
+   previous car still used as a base — with only the character sheets (`sheets/ishida*.jpg`, `sheets/kurose.jpg`) attached as
+   references, to hold faces and wardrobe. The tint, the seat lock and the camera side are written into every prompt.
+2. **Keep character consistency:** Ishida and Kurose are matched to their sheets in every new picture.
+
+The first, edit-based attempts from this session were rejected by the director ("images are bad … generate from scratch") and
+are kept beside the new ones as `--alt1-edit.jpg`. Nothing was overwritten or deleted. Per the director, the new files are
+**not cropped or resized**; they sit at the generator's native size (mostly 1376×768, so a Topaz/house upscale is still owed
+at install time, as for the small 25-October pictures). None is wired into the film — no `src/` changes.
+
+### Car set (brief §1 and §6e–6g), all with dark tinted glass on the closed windows
+
+| File | Item | Result / flags |
+|---|---|---|
+| `137-he-knows-this-car-r2.jpg` | 1a, from scratch | Ishida in his sheet face/wardrobe, no coat, soaked; black saloon nose-left at the kerb, all doors shut, rear and side glass near-black and reflective. Blank number-plate panel. Station reads as the same concrete station but is a fresh design, not pixel-matched to the old still. |
+| `138-the-door-opens-r1.jpg` | 1b / 6f | Same from-scratch set-up as the new 137. Every near-side door shut; faint amber behind the tint and a warm light spill under/behind the car onto the wet pavement, per "the door opens on the far side". No open door visible. |
+| `139-only-tea-r2.jpg` | 1c / 6e | **The four-time failure, now right.** Open doorway fills frame, the open door itself out of shot; near half of the back seat empty (armrest down); Kurose on the far side by the far window, facing the front (right of frame), face in shadow, white hair catching amber; driver's dark silhouette at the right edge; closed glass tinted. Side-on exterior rather than a strict over-shoulder, which is what finally kept the car from turning round. |
+| `94-01-the-clean-hand-r2.jpg` | 1e / 6g | Steel cup with steam held across the empty near seat, black-leather-strap watch, white cuff; Kurose's face now in deep shadow (the 6g fix), only his hair lit; closed windows tinted; rain through the doorway. |
+| `140-where-are-we-going-r2.jpg` | 1d, from scratch | Across the wet roof, nose-left; windscreen and side glass tinted; open rear door only as a frame above the roofline at right with amber below it; Ishida three-quarter, looking up at the one lit second-floor window with a figure at the desk. |
+| `142-taillights-r1.jpg` | new, outside the brief | The saloon driving away down the rain alley (scene 95) remade so its rear and side glass are opaque tint — no driver or interior visible — keeping the taillights and red light trails. |
+
+The tint cannot apply to the interior two-shots `141-he-drinks-r1` and `368-the-door-closes-r1` (the camera is inside the
+car); they already pass their checks and keep clear glass, which is correct for an in-car viewpoint.
+
+### §6 second attempts
+
+| File | Item | Result |
+|---|---|---|
+| `271-not-yet-r2.jpg` | 6a | Now grey DAY (no lamp lit, daylight train through the blinds), Vera **seated** at the desk's left end in her dark coat and cream knit, Jack at the right end with his hand on the closed sketchbook, **two paper cups**, one each. Face matches the Vera sheet. |
+| `204-the-tea-she-does-not-want-to-pour-r2.jpg` | 6b | Same room/altar-right composition; Jack now kneels upright at the right of the kotatsu in right profile, facing Mrs. Sakai across it (as 273 has him), not facing the wall. |
+| `213-clutch-each-other-r2.jpg` | 6c | Pantry behind the couple now black, no torch inside; the torch beam enters from off-frame behind the camera (corridor side) across the kitchen wall and Jack's shoulder; the couple clutch each other. |
+| `538-the-receipts-in-his-hand-r2.jpg` | 6d | Tight close-up restored (receipts fanned in his hand, pink phone, coin tray); one pink handset at his ear on its coiled cord, empty cradle, no second receiver. |
+
+### Still open after this batch
+
+- Director's review/vote on the six from-scratch car pictures and the four §6 retakes before any are installed.
+- At install: upscale the sub-1920 pictures (Topaz, as the morning batch had), then `tools/install-film-picture.mjs`; the
+  story.json/`studio-edits.json` wiring in the 25-October handoff still applies (94-01 new step, 141 moved onto "Ishida gets
+  in. The door closes.", 368 quote trimmed, lamp glows re-placed for 139/140).
+- §5 (5a–5u) and the unchosen 2c/4d/4e/4g/4j retakes remain unmade; 161's extra leg, 303's office and 519's bun among them.
+- Depth remakes (374, 73-09, 512, 460, and 354/364 if their new takes change again) still wait on the final pictures.
