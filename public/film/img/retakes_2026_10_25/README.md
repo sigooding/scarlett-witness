@@ -191,6 +191,34 @@ director reviews and picks before any install.
 ### Still open after this batch
 
 - Director's review/vote on the from-scratch car pictures (now r1–r3 where they exist) and the §6 retakes before any are installed.
+
+## Fourth batch, 25 October (night): brief §5, the remaining retakes — part 1 (5a–5j)
+
+Made from the briefs in `docs/image-brief-2026-10-25.md` §5, character sheets attached for faces, native sizes, nothing
+installed. The per-turn image limit cut the batch at ten pictures; 5k (469) and 5l (231) did not generate and lead part 2.
+
+| File | Item | Result / flags |
+|---|---|---|
+| `m1-neon-backstreet-r1.jpg` | 5a | Crisp empty rain-soaked Kanda alley, vending machine right, lanterns/neon with no readable writing, deep perspective. Clean. |
+| `384-the-room-too-big-r1.jpg` | 5b | Normal-lens lived-in room, Vera at the low table, cabinet/lamp/photo/umbrella left, CRT right. **Flag: a black smartphone lies on the table — period-anachronistic; remove at review/next pass.** Two cups present. |
+| `419-twenty-years-r1.jpg` | 5c | Face/hair rebuilt to the Jack sheet (grey-streaked swept-back hair, stubble), office/lamp/phone/rain window kept. Clean. |
+| `246-the-can-r1.jpg` | 5d | The dropped can is now a short dark-brown/cream steel coffee can, unopened, no label; everything else kept. Clean. |
+| `285-the-inside-pocket-r1.jpg` | 5e | Correct counter end by the ticket machine, cook and tile arch, Vera soft at frame edge. **Flag: his hand is up at his chest/lapel rather than resting on the counter near it; close to the "doesn't touch the pocket" intent but worth a look.** Some menu sheets carry faint unreadable print. |
+| `349-paid-to-listen-r1.jpg` | 5f | Same seat, turned to Vera in the near foreground, bowl and cup on the counter, cook behind. Clean. |
+| `445-exactly-where-it-was-r1.jpg` | 5g | Jack now photographic, not painted; storeroom/bulb/flour sacks/scoop kept. Checked against `s84/520-excuse-me.jpg`: the drawing's "EXCUSE ME" caption and the sack's "FLOUR" stencil both exist in the in-film reference, so they match. **Only flag: an added "1:07" on the drawing that 520 does not have.** |
+| `289-for-making-me-r1.jpg` | 5h | Note count reduced to a small folded pair. **Flag: the notes read as US dollar bills, not Japanese yen.** |
+| `374-the-dead-television-r1.jpg` | 5i | Vera crouched among beer crates looking up at the high shelf CRT; screen dark grey, switched off, no reflection of her face. Clean. |
+| `montage53-05b-light-off-r1.jpg` | 5j | The one lit window is now dark like every window of the building; rain and framing kept. Clean. |
+
+### §5 still to generate (part 2, next)
+
+- 5k `469-what-they-are-told-r1` (glasses off her face, kept in her hand) and 5l `231-the-box-r1` (cassette on the perforated
+  bench, no cardboard box, plain notebook cover) — both failed on the image limit.
+- 5m `232-the-wine-red-dress-r1`, 5n `70-the-call-r1`, 5o `73-09-she-cannot-breathe-r1`, 5p `88-the-walkway-r1`,
+  5q `106-play-r1`, 5r `512-he-hasnt-stopped-r1`, 5s `519-not-all-right-r1` (bun + white collar), 5t `303-he-left-a-statement-r1`
+  (office continuity), 5u `161-stool-three-r1` (two legs, correct stool).
+- After §5: the five unchosen retakes (87, 460, 175, 178, 462) and the small in-film faults (194 sketchbook colour,
+  177 suppressed burst, 207 handset height, 354 gaze).
 - At install: upscale the sub-1920 pictures (Topaz, as the morning batch had), then `tools/install-film-picture.mjs`; the
   story.json/`studio-edits.json` wiring in the 25-October handoff still applies (94-01 new step, 141 moved onto "Ishida gets
   in. The door closes.", 368 quote trimmed, lamp glows re-placed for 139/140).
