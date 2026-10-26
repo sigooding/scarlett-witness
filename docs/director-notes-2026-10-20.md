@@ -914,3 +914,22 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   3. **Put them in:** each picture as a `bg` step with its quote, each take as the line's `voice` in place of `takePending`.
      Then rebuild and check each picture's depth.
 - **Only in the film for now.** PlayFrame's screenplay (`Neonoire (3).fountain`) doesn't have this scene.
+
+## 46. One reference per location (26 October)
+- **The director:** "add a note to make one consistent reference to jacks office. also the hive carpark with map of where
+  jack and mara are and shooter and driver so we can fix images. and a reminder to do for other locations".
+- **Then:** "don't make anymore maps you mapped jacks desk the wrong way". The plans Claude drew were not installed, and
+  the tool that drew them was deleted. The director makes the pictures and the references.
+- **All of it is in `docs/location-references.md`:**
+  1. **Jack's office:** the one reference still to make, and what it has to settle. The office pictures show two different
+     doors (in scene 10 Vera comes in through one and leaves through the other). JACK reads the right way round from
+     inside in four of them. 85 puts the sofa by the door. 413, 166 and 419 put Jack behind the desk, facing the camera.
+     The brief's OFFICE block now carries a warning.
+  2. **The service road behind the Hive (67, 70):** who stands where, in words: the car, the driver, the shooter, Jack and
+     Mara, and the dumpster. Four pictures need fixing:
+     - **396:** Mara runs away from the door toward the car;
+     - **394:** the car is seen from behind and on the wrong side, with two muzzle flashes;
+     - **395:** the car is in plain view beside them;
+     - **393:** Jack stands by the door, not halfway up the road.
+  3. **The other locations:** which already have a reference sheet, and which still need one, those with the most
+     pictures first (Vera's apartment, about 57; the police station, about 48; Kaneko's room, 35).

@@ -231,6 +231,11 @@ shouldn't be a raincoat. 1a takes it off, and 1b is made from 1a.
 Jack at the desk's right end, side-on, facing left toward the door. The current 85, 87 and 189 put him behind the desk's
 long side with his back to the window; 271 seats Vera there and Jack on the near side, his back to the camera.
 
+> **Warning (26 October).** The director says a plan of the office that Claude drew from this description has the desk the
+> wrong way. The office pictures also disagree about the door (`docs/location-references.md`, section 1). Make no office
+> picture from this block until the director's own office reference exists. Then attach that reference and follow it,
+> not this block.
+
 **OFFICE** (paste in every office prompt)
 > Jack's office, one small grey room, never mirrored. Back wall: a wide window with grey venetian blinds, rain on the glass,
 > an elevated railway outside. Under the window, a low grey steel cupboard with a few binders on it. Left wall: the door,
