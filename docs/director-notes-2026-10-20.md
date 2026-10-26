@@ -851,3 +851,29 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 ## 44. The raid inserts are in (26 October)
 - **"ok add them".** raid-39, raid-41, raid-42 and raid-47 play in the inn raid on the beats they were made for. FILM.md,
   first section.
+
+## 45. Kurose meets Jack: a scene to add later (26 October)
+- **"does jack need to be antagonised or something at some point".**
+  - **The gap.** Jack is pressed by Ishida (hidden until 80), the faceless hit team, Vera and his own past, but he never meets
+    Kurose. Kurose faces only Vera (83), and Jack only hears him on the tape (82).
+  - **The fix.** One short scene where the man at the top looks at him.
+- **The director chose this wording** ("I'm not on any ones pay roll anymore", meaning the police payroll). It came after
+  turning down a shouted threat, which is not how Jack talks and would give his plan away; his real blow is scene 82.
+- **The scene.** It goes after Mrs. Sakai (29), before the inn. A black sedan pulls up beside Jack in the rain; the rear door
+  opens; Kurose's clean hand holds out a cup of tea.
+  - KUROSE: Detective. You signed a report for me once. I never thanked you.
+  - JACK: You didn't need to.
+  - KUROSE (holding out the cup): It's only tea.
+  - JACK: I'm not on the police payroll any more. Nobody tells me what to sign.
+  - He walks away into the rain. The door closes.
+- **Why it works:**
+  - The hero and the villain meet once.
+  - In 94 Ishida is offered the same tea at the same door, with the same line, and gets in: Jack refused, Ishida accepted,
+    so his end in 96 is felt before it is told.
+  - It needs no new characters.
+- **To do, once there are credits:**
+  1. Write the scene into `src/film/story.json`, between 29 and 30.
+  2. Make three or four pictures to the car lock in the image brief, section 1: the same sedan as 93–94.
+  3. Record the four lines in Jack's and Kurose's saved voices.
+  4. Rebuild and add a film check.
+- **Cost.** About 1,100 credits a picture at 4K and about 100–200 for the lines; about 11 credits are left.
