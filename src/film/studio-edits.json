@@ -6248,10 +6248,11 @@
      "seconds": 3
     },
     {
-     "pic": "175-the-curtain-gap",
+     "pic": "raid-39-they-split",
      "text": "They split up without a word.",
      "sfx": "car-doors-open",
-     "seconds": 2.2
+     "seconds": 2.2,
+     "src": "/img/s39/raid-39-they-split.jpg"
     },
     {
      "pic": "461-takes-nothing-else",
@@ -6282,8 +6283,14 @@
     },
     {
      "pic": "177-boots-below",
-     "text": "Boots on the stairs. Jack goes the other way.",
-     "seconds": 2.4,
+     "text": "Boots on the stairs.",
+     "seconds": 1.8
+    },
+    {
+     "pic": "raid-41-corridor",
+     "src": "/img/s41/raid-41-corridor.jpg",
+     "text": "Jack goes the other way, toward the bath.",
+     "seconds": 2.2,
      "sfx": "jack-running"
     },
     {
@@ -6298,10 +6305,16 @@
      "seconds": 1.6
     },
     {
+     "pic": "raid-42-first-hit",
+     "src": "/img/s42/raid-42-first-hit.jpg",
+     "text": "Once. Twice. It won't move.",
+     "seconds": 2.2
+    },
+    {
      "pic": "210-the-third-time",
-     "text": "Once. Twice. The third time, the window gives.",
+     "text": "The third time, the window gives.",
      "sfx": "window-forced",
-     "seconds": 2.4
+     "seconds": 2
     },
     {
      "pic": "211-wet-tin",
@@ -6375,10 +6388,11 @@
      "seconds": 2
     },
     {
-     "pic": "222-mud-and-impacts",
-     "text": "Rounds punch through the truck.",
+     "pic": "raid-47-behind-truck",
+     "text": "He dives behind the truck. Rounds punch through it.",
      "sfx": "bullets-car",
-     "seconds": 1.6
+     "seconds": 2.2,
+     "src": "/img/s47/raid-47-behind-truck.jpg"
     },
     {
      "pic": "214-come-on-come-on",
@@ -6431,7 +6445,8 @@
    "fadeIn": 1,
    "fadeOut": 3,
    "slack": 1,
-   "songRunsOn": true
+   "songRunsOn": true,
+   "insertsNote": "26 October 2026, the director: \"ok add them\". The four raid inserts made by 2-option vote on 25 October (retakes_2026_10_25/raid-*-r1) play on the beats they were made for, from their scene folders (`src`)."
   }
  ],
  "readPace": {

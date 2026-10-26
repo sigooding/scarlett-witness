@@ -334,692 +334,700 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "x": 3080,
    "y": 1600
   },
-  "nw_s50": {
+  "nw_cut_inn-raid_36": {
    "x": 3460,
+   "y": 1600
+  },
+  "nw_cut_inn-raid_37": {
+   "x": 3840,
+   "y": 1600
+  },
+  "nw_s50": {
+   "x": 4220,
    "y": 1600
   },
   "nw_s51": {
-   "x": 3840,
-   "y": 1600
+   "x": 40,
+   "y": 1860
   },
   "nw_s52": {
-   "x": 4220,
-   "y": 1600
+   "x": 420,
+   "y": 1860
   },
   "nw_s53": {
-   "x": 40,
+   "x": 800,
    "y": 1860
   },
   "nw_m53": {
-   "x": 420,
+   "x": 1180,
    "y": 1860
   },
   "nw_s53a": {
-   "x": 800,
+   "x": 1560,
    "y": 1860
   },
   "nw_s54": {
-   "x": 1180,
+   "x": 1940,
    "y": 1860
   },
   "nw_s55": {
-   "x": 1560,
+   "x": 2320,
    "y": 1860
   },
   "nw_s56": {
-   "x": 1940,
+   "x": 2700,
    "y": 1860
   },
   "nw_s57": {
-   "x": 2320,
+   "x": 3080,
    "y": 1860
   },
   "nw_s58": {
-   "x": 2700,
+   "x": 3460,
    "y": 1860
   },
   "nw_s59": {
-   "x": 3080,
+   "x": 3840,
    "y": 1860
   },
   "nw_s60": {
-   "x": 3460,
+   "x": 4220,
    "y": 1860
   },
   "nw_s61": {
-   "x": 3840,
-   "y": 1860
+   "x": 40,
+   "y": 2120
   },
   "nw_s62": {
-   "x": 4220,
-   "y": 1860
+   "x": 420,
+   "y": 2120
   },
   "nw_s63": {
-   "x": 40,
+   "x": 800,
    "y": 2120
   },
   "nw_s63a": {
-   "x": 420,
+   "x": 1180,
    "y": 2120
   },
   "nw_s64": {
-   "x": 800,
+   "x": 1560,
    "y": 2120
   },
   "nw_s65": {
-   "x": 1180,
+   "x": 1940,
    "y": 2120
   },
   "nw_s65_b": {
-   "x": 1560,
+   "x": 2320,
    "y": 2120
   },
   "nw_s66": {
-   "x": 1940,
+   "x": 2700,
    "y": 2120
   },
   "nw_s67": {
-   "x": 2320,
+   "x": 3080,
    "y": 2120
   },
   "nw_s68": {
-   "x": 2700,
+   "x": 3460,
    "y": 2120
   },
   "nw_s69": {
-   "x": 3080,
+   "x": 3840,
    "y": 2120
   },
   "nw_s70": {
-   "x": 3460,
+   "x": 4220,
    "y": 2120
   },
   "nw_s71": {
-   "x": 3840,
-   "y": 2120
+   "x": 40,
+   "y": 2380
   },
   "nw_s72": {
-   "x": 4220,
-   "y": 2120
+   "x": 420,
+   "y": 2380
   },
   "nw_song_bad-guy_01": {
-   "x": 40,
+   "x": 800,
    "y": 2380
   },
   "nw_song_bad-guy_02": {
-   "x": 420,
+   "x": 1180,
    "y": 2380
   },
   "nw_song_bad-guy_03": {
-   "x": 800,
+   "x": 1560,
    "y": 2380
   },
   "nw_song_bad-guy_04": {
-   "x": 1180,
+   "x": 1940,
    "y": 2380
   },
   "nw_song_bad-guy_05": {
-   "x": 1560,
+   "x": 2320,
    "y": 2380
   },
   "nw_song_bad-guy_06": {
-   "x": 1940,
+   "x": 2700,
    "y": 2380
   },
   "nw_song_bad-guy_07": {
-   "x": 2320,
+   "x": 3080,
    "y": 2380
   },
   "nw_song_bad-guy_08": {
-   "x": 2700,
+   "x": 3460,
    "y": 2380
   },
   "nw_song_bad-guy_09": {
-   "x": 3080,
+   "x": 3840,
    "y": 2380
   },
   "nw_song_bad-guy_10": {
-   "x": 3460,
+   "x": 4220,
    "y": 2380
   },
   "nw_song_bad-guy_11": {
-   "x": 3840,
-   "y": 2380
+   "x": 40,
+   "y": 2640
   },
   "nw_song_bad-guy_12": {
-   "x": 4220,
-   "y": 2380
+   "x": 420,
+   "y": 2640
   },
   "nw_song_bad-guy_13": {
-   "x": 40,
+   "x": 800,
    "y": 2640
   },
   "nw_song_bad-guy_14": {
-   "x": 420,
+   "x": 1180,
    "y": 2640
   },
   "nw_song_bad-guy_15": {
-   "x": 800,
+   "x": 1560,
    "y": 2640
   },
   "nw_song_bad-guy_16": {
-   "x": 1180,
+   "x": 1940,
    "y": 2640
   },
   "nw_song_bad-guy_17": {
-   "x": 1560,
+   "x": 2320,
    "y": 2640
   },
   "nw_song_bad-guy_18": {
-   "x": 1940,
+   "x": 2700,
    "y": 2640
   },
   "nw_song_bad-guy_19": {
-   "x": 2320,
+   "x": 3080,
    "y": 2640
   },
   "nw_song_bad-guy_20": {
-   "x": 2700,
+   "x": 3460,
    "y": 2640
   },
   "nw_song_bad-guy_21": {
-   "x": 3080,
+   "x": 3840,
    "y": 2640
   },
   "nw_song_bad-guy_22": {
-   "x": 3460,
+   "x": 4220,
    "y": 2640
   },
   "nw_song_bad-guy_23": {
-   "x": 3840,
-   "y": 2640
+   "x": 40,
+   "y": 2900
   },
   "nw_song_bad-guy_24": {
-   "x": 4220,
-   "y": 2640
+   "x": 420,
+   "y": 2900
   },
   "nw_song_bad-guy_25": {
-   "x": 40,
+   "x": 800,
    "y": 2900
   },
   "nw_song_bad-guy_26": {
-   "x": 420,
+   "x": 1180,
    "y": 2900
   },
   "nw_song_bad-guy_27": {
-   "x": 800,
+   "x": 1560,
    "y": 2900
   },
   "nw_song_bad-guy_28": {
-   "x": 1180,
+   "x": 1940,
    "y": 2900
   },
   "nw_song_bad-guy_29": {
-   "x": 1560,
+   "x": 2320,
    "y": 2900
   },
   "nw_song_bad-guy_30": {
-   "x": 1940,
+   "x": 2700,
    "y": 2900
   },
   "nw_song_bad-guy_31": {
-   "x": 2320,
+   "x": 3080,
    "y": 2900
   },
   "nw_song_bad-guy_32": {
-   "x": 2700,
+   "x": 3460,
    "y": 2900
   },
   "nw_song_bad-guy_33": {
-   "x": 3080,
+   "x": 3840,
    "y": 2900
   },
   "nw_song_bad-guy_34": {
-   "x": 3460,
+   "x": 4220,
    "y": 2900
   },
   "nw_song_bad-guy_35": {
-   "x": 3840,
-   "y": 2900
+   "x": 40,
+   "y": 3160
   },
   "nw_song_bad-guy_36": {
-   "x": 4220,
-   "y": 2900
+   "x": 420,
+   "y": 3160
   },
   "nw_song_bad-guy_37": {
-   "x": 40,
+   "x": 800,
    "y": 3160
   },
   "nw_song_bad-guy_38": {
-   "x": 420,
+   "x": 1180,
    "y": 3160
   },
   "nw_song_bad-guy_39": {
-   "x": 800,
+   "x": 1560,
    "y": 3160
   },
   "nw_song_bad-guy_40": {
-   "x": 1180,
+   "x": 1940,
    "y": 3160
   },
   "nw_song_bad-guy_41": {
-   "x": 1560,
+   "x": 2320,
    "y": 3160
   },
   "nw_song_bad-guy_42": {
-   "x": 1940,
+   "x": 2700,
    "y": 3160
   },
   "nw_song_bad-guy_43": {
-   "x": 2320,
+   "x": 3080,
    "y": 3160
   },
   "nw_song_bad-guy_44": {
-   "x": 2700,
+   "x": 3460,
    "y": 3160
   },
   "nw_song_bad-guy_45": {
-   "x": 3080,
+   "x": 3840,
    "y": 3160
   },
   "nw_song_bad-guy_46": {
-   "x": 3460,
+   "x": 4220,
    "y": 3160
   },
   "nw_song_bad-guy_47": {
-   "x": 3840,
-   "y": 3160
+   "x": 40,
+   "y": 3420
   },
   "nw_song_bad-guy_48": {
-   "x": 4220,
-   "y": 3160
+   "x": 420,
+   "y": 3420
   },
   "nw_song_bad-guy_49": {
-   "x": 40,
+   "x": 800,
    "y": 3420
   },
   "nw_song_bad-guy_50": {
-   "x": 420,
+   "x": 1180,
    "y": 3420
   },
   "nw_song_bad-guy_51": {
-   "x": 800,
+   "x": 1560,
    "y": 3420
   },
   "nw_song_bad-guy_52": {
-   "x": 1180,
+   "x": 1940,
    "y": 3420
   },
   "nw_song_bad-guy_53": {
-   "x": 1560,
+   "x": 2320,
    "y": 3420
   },
   "nw_song_bad-guy_54": {
-   "x": 1940,
+   "x": 2700,
    "y": 3420
   },
   "nw_song_bad-guy_55": {
-   "x": 2320,
+   "x": 3080,
    "y": 3420
   },
   "nw_song_bad-guy_56": {
-   "x": 2700,
+   "x": 3460,
    "y": 3420
   },
   "nw_s77_after": {
-   "x": 3080,
+   "x": 3840,
    "y": 3420
   },
   "nw_s78": {
-   "x": 3460,
+   "x": 4220,
    "y": 3420
   },
   "nw_s79": {
-   "x": 3840,
-   "y": 3420
+   "x": 40,
+   "y": 3680
   },
   "nw_s80": {
-   "x": 4220,
-   "y": 3420
+   "x": 420,
+   "y": 3680
   },
   "nw_s81": {
-   "x": 40,
+   "x": 800,
    "y": 3680
   },
   "nw_s82": {
-   "x": 420,
+   "x": 1180,
    "y": 3680
   },
   "nw_s82a": {
-   "x": 800,
+   "x": 1560,
    "y": 3680
   },
   "nw_s83": {
-   "x": 1180,
+   "x": 1940,
    "y": 3680
   },
   "nw_s84": {
-   "x": 1560,
+   "x": 2320,
    "y": 3680
   },
   "nw_song_raid_01": {
-   "x": 1940,
+   "x": 2700,
    "y": 3680
   },
   "nw_song_raid_02": {
-   "x": 2320,
+   "x": 3080,
    "y": 3680
   },
   "nw_song_raid_03": {
-   "x": 2700,
+   "x": 3460,
    "y": 3680
   },
   "nw_song_raid_04": {
-   "x": 3080,
+   "x": 3840,
    "y": 3680
   },
   "nw_song_raid_05": {
-   "x": 3460,
+   "x": 4220,
    "y": 3680
   },
   "nw_song_raid_06": {
-   "x": 3840,
-   "y": 3680
+   "x": 40,
+   "y": 3940
   },
   "nw_song_raid_07": {
-   "x": 4220,
-   "y": 3680
+   "x": 420,
+   "y": 3940
   },
   "nw_song_raid_08": {
-   "x": 40,
+   "x": 800,
    "y": 3940
   },
   "nw_song_raid_09": {
-   "x": 420,
+   "x": 1180,
    "y": 3940
   },
   "nw_song_raid_10": {
-   "x": 800,
+   "x": 1560,
    "y": 3940
   },
   "nw_song_raid_11": {
-   "x": 1180,
+   "x": 1940,
    "y": 3940
   },
   "nw_song_raid_12": {
-   "x": 1560,
+   "x": 2320,
    "y": 3940
   },
   "nw_song_raid_13": {
-   "x": 1940,
+   "x": 2700,
    "y": 3940
   },
   "nw_song_raid_14": {
-   "x": 2320,
+   "x": 3080,
    "y": 3940
   },
   "nw_song_raid_15": {
-   "x": 2700,
+   "x": 3460,
    "y": 3940
   },
   "nw_song_raid_16": {
-   "x": 3080,
+   "x": 3840,
    "y": 3940
   },
   "nw_song_raid_17": {
-   "x": 3460,
+   "x": 4220,
    "y": 3940
   },
   "nw_song_raid_18": {
-   "x": 3840,
-   "y": 3940
+   "x": 40,
+   "y": 4200
   },
   "nw_song_raid_19": {
-   "x": 4220,
-   "y": 3940
+   "x": 420,
+   "y": 4200
   },
   "nw_song_raid_20": {
-   "x": 40,
+   "x": 800,
    "y": 4200
   },
   "nw_song_raid_21": {
-   "x": 420,
+   "x": 1180,
    "y": 4200
   },
   "nw_song_raid_22": {
-   "x": 800,
+   "x": 1560,
    "y": 4200
   },
   "nw_song_raid_23": {
-   "x": 1180,
+   "x": 1940,
    "y": 4200
   },
   "nw_song_raid_24": {
-   "x": 1560,
+   "x": 2320,
    "y": 4200
   },
   "nw_song_raid_25": {
-   "x": 1940,
+   "x": 2700,
    "y": 4200
   },
   "nw_song_raid_26": {
-   "x": 2320,
+   "x": 3080,
    "y": 4200
   },
   "nw_song_raid_27": {
-   "x": 2700,
+   "x": 3460,
    "y": 4200
   },
   "nw_song_raid_28": {
-   "x": 3080,
+   "x": 3840,
    "y": 4200
   },
   "nw_song_raid_29": {
-   "x": 3460,
+   "x": 4220,
    "y": 4200
   },
   "nw_song_raid_30": {
-   "x": 3840,
-   "y": 4200
+   "x": 40,
+   "y": 4460
   },
   "nw_song_raid_31": {
-   "x": 4220,
-   "y": 4200
+   "x": 420,
+   "y": 4460
   },
   "nw_song_raid_32": {
-   "x": 40,
+   "x": 800,
    "y": 4460
   },
   "nw_song_raid_33": {
-   "x": 420,
+   "x": 1180,
    "y": 4460
   },
   "nw_song_raid_34": {
-   "x": 800,
+   "x": 1560,
    "y": 4460
   },
   "nw_song_raid_35": {
-   "x": 1180,
+   "x": 1940,
    "y": 4460
   },
   "nw_s92_after": {
-   "x": 1560,
+   "x": 2320,
    "y": 4460
   },
   "nw_s93": {
-   "x": 1940,
+   "x": 2700,
    "y": 4460
   },
   "nw_s94": {
-   "x": 2320,
+   "x": 3080,
    "y": 4460
   },
   "nw_s95": {
-   "x": 2700,
+   "x": 3460,
    "y": 4460
   },
   "nw_s96": {
-   "x": 3080,
+   "x": 3840,
    "y": 4460
   },
   "nw_song_service_01": {
-   "x": 3460,
+   "x": 4220,
    "y": 4460
   },
   "nw_song_service_02": {
-   "x": 3840,
-   "y": 4460
+   "x": 40,
+   "y": 4720
   },
   "nw_song_service_03": {
-   "x": 4220,
-   "y": 4460
+   "x": 420,
+   "y": 4720
   },
   "nw_song_service_04": {
-   "x": 40,
+   "x": 800,
    "y": 4720
   },
   "nw_song_service_05": {
-   "x": 420,
+   "x": 1180,
    "y": 4720
   },
   "nw_song_service_06": {
-   "x": 800,
+   "x": 1560,
    "y": 4720
   },
   "nw_song_service_07": {
-   "x": 1180,
+   "x": 1940,
    "y": 4720
   },
   "nw_song_service_08": {
-   "x": 1560,
+   "x": 2320,
    "y": 4720
   },
   "nw_song_service_09": {
-   "x": 1940,
+   "x": 2700,
    "y": 4720
   },
   "nw_song_service_10": {
-   "x": 2320,
+   "x": 3080,
    "y": 4720
   },
   "nw_song_service_11": {
-   "x": 2700,
+   "x": 3460,
    "y": 4720
   },
   "nw_song_service_12": {
-   "x": 3080,
+   "x": 3840,
    "y": 4720
   },
   "nw_song_service_13": {
-   "x": 3460,
+   "x": 4220,
    "y": 4720
   },
   "nw_song_service_14": {
-   "x": 3840,
-   "y": 4720
+   "x": 40,
+   "y": 4980
   },
   "nw_song_service_15": {
-   "x": 4220,
-   "y": 4720
+   "x": 420,
+   "y": 4980
   },
   "nw_song_service_16": {
-   "x": 40,
+   "x": 800,
    "y": 4980
   },
   "nw_song_service_17": {
-   "x": 420,
+   "x": 1180,
    "y": 4980
   },
   "nw_song_service_18": {
-   "x": 800,
+   "x": 1560,
    "y": 4980
   },
   "nw_song_service_19": {
-   "x": 1180,
+   "x": 1940,
    "y": 4980
   },
   "nw_song_service_20": {
-   "x": 1560,
+   "x": 2320,
    "y": 4980
   },
   "nw_song_service_21": {
-   "x": 1940,
+   "x": 2700,
    "y": 4980
   },
   "nw_song_service_22": {
-   "x": 2320,
+   "x": 3080,
    "y": 4980
   },
   "nw_song_service_23": {
-   "x": 2700,
+   "x": 3460,
    "y": 4980
   },
   "nw_song_service_24": {
-   "x": 3080,
+   "x": 3840,
    "y": 4980
   },
   "nw_song_service_25": {
-   "x": 3460,
+   "x": 4220,
    "y": 4980
   },
   "nw_song_service_26": {
-   "x": 3840,
-   "y": 4980
-  },
-  "nw_song_service_27": {
-   "x": 4220,
-   "y": 4980
-  },
-  "nw_song_service_28": {
    "x": 40,
    "y": 5240
   },
-  "nw_song_service_29": {
+  "nw_song_service_27": {
    "x": 420,
    "y": 5240
   },
-  "nw_song_service_30": {
+  "nw_song_service_28": {
    "x": 800,
    "y": 5240
   },
-  "nw_song_service_31": {
+  "nw_song_service_29": {
    "x": 1180,
    "y": 5240
   },
-  "nw_song_service_32": {
+  "nw_song_service_30": {
    "x": 1560,
    "y": 5240
   },
-  "nw_song_service_33": {
+  "nw_song_service_31": {
    "x": 1940,
    "y": 5240
   },
-  "nw_song_service_34": {
+  "nw_song_service_32": {
    "x": 2320,
    "y": 5240
   },
-  "nw_song_service_35": {
+  "nw_song_service_33": {
    "x": 2700,
    "y": 5240
   },
-  "nw_s98": {
+  "nw_song_service_34": {
    "x": 3080,
    "y": 5240
   },
-  "nw_s99a": {
+  "nw_song_service_35": {
    "x": 3460,
    "y": 5240
   },
-  "nw_s100": {
+  "nw_s98": {
    "x": 3840,
    "y": 5240
   },
-  "nw_credits": {
+  "nw_s99a": {
    "x": 4220,
    "y": 5240
   },
-  "nw_end": {
+  "nw_s100": {
    "x": 40,
+   "y": 5500
+  },
+  "nw_credits": {
+   "x": 420,
+   "y": 5500
+  },
+  "nw_end": {
+   "x": 800,
    "y": 5500
   }
  },
@@ -12688,81 +12696,15 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_cut_inn-raid_03",
    "title": "The raid on the inn: They split up without a word.",
    "animaticMark": "39",
-   "background": "/film/img/s39/175-the-curtain-gap.jpg",
+   "background": "/film/img/s39/raid-39-they-split.jpg",
    "cinematic": {
     "mode": "zoom-hold",
     "focalPoint": "50% 60%",
-    "zoomDuration": 20,
+    "zoomDuration": 17,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
     "colorGrade": "midnight-teal",
-    "lights": [
-     {
-      "color": "#eef4ff",
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05,
-      "x": 31.5,
-      "y": 51,
-      "size": 7,
-      "intensity": 0.4
-     },
-     {
-      "color": "#eef4ff",
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05,
-      "x": 47,
-      "y": 48,
-      "size": 7,
-      "intensity": 0.4
-     },
-     {
-      "color": "#eef4ff",
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05,
-      "x": 58.5,
-      "y": 47.5,
-      "size": 6,
-      "intensity": 0.4
-     },
-     {
-      "color": "#eef4ff",
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05,
-      "x": 66.5,
-      "y": 48,
-      "size": 6,
-      "intensity": 0.4
-     },
-     {
-      "color": "#eef4ff",
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05,
-      "x": 76.5,
-      "y": 52,
-      "size": 7,
-      "intensity": 0.45
-     },
-     {
-      "color": "#eef4ff",
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05,
-      "x": 84,
-      "y": 52.5,
-      "size": 7,
-      "intensity": 0.45
-     }
-    ],
-    "lensFlare": {
-     "preset": "anamorphic-blue",
-     "x": 76.5,
-     "y": 52,
-     "intensity": 0.3,
-     "streakIntensity": 0.55,
-     "starburstIntensity": 0.2,
-     "ghostIntensity": 0.3,
-     "pulseAmount": 0.15
-    },
     "filmGrade": false,
     "volumetricShafts": false
    },
@@ -12770,8 +12712,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "file:/film/sfx/tv-murmur.mp3+file:/film/sfx/loop-inn-night.mp3",
    "particles": "motes",
    "hideHud": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "dissolve",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
@@ -12785,7 +12727,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxUrl": "/film/sfx/car-doors-open.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.92,
+     "afterBeatDelaySeconds": 1.62,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_04"
     }
    ]
@@ -12988,7 +12930,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_cut_inn-raid_09",
-   "title": "The raid on the inn: Boots on the stairs. Jack goes the other",
+   "title": "The raid on the inn: Boots on the stairs.",
    "animaticMark": "41",
    "background": "/film/img/s41/177-boots-below.jpg",
    "cinematic": {
@@ -13016,18 +12958,56 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_cut_inn-raid_b9",
      "characterId": "nw_narrator",
-     "text": "Boots on the stairs. Jack goes the other way.",
+     "text": "Boots on the stairs.",
      "silent": true,
-     "sfxUrl": "/film/sfx/jack-running.mp3",
-     "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.82,
+     "afterBeatDelaySeconds": 1.22,
      "afterBeatTargetSceneId": "nw_cut_inn-raid_10"
     }
    ]
   },
   {
    "id": "nw_cut_inn-raid_10",
+   "title": "The raid on the inn: Jack goes the other way, toward the bath",
+   "animaticMark": "41",
+   "background": "/film/img/s41/raid-41-corridor.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "midnight-teal",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "dissolve",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b10",
+     "characterId": "nw_narrator",
+     "text": "Jack goes the other way, toward the bath.",
+     "silent": true,
+     "sfxUrl": "/film/sfx/jack-running.mp3",
+     "sfxVolume": 0.8,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_11"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_11",
    "title": "The raid on the inn: Gunfire down the corridor. The screens b",
    "animaticMark": "41",
    "background": "/film/img/s41/178-the-screens.jpg",
@@ -13054,7 +13034,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b10",
+     "id": "nw_cut_inn-raid_b11",
      "characterId": "nw_narrator",
      "text": "Gunfire down the corridor. The screens burst apart.",
      "silent": true,
@@ -13062,12 +13042,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.62,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_11"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_11",
+   "id": "nw_cut_inn-raid_12",
    "title": "The raid on the inn: Through the bathroom door.",
    "animaticMark": "41",
    "background": "/film/img/s41/179-same-wood.jpg",
@@ -13107,19 +13087,57 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b11",
+     "id": "nw_cut_inn-raid_b12",
      "characterId": "nw_narrator",
      "text": "Through the bathroom door.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.02,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_12"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_13"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_12",
-   "title": "The raid on the inn: Once. Twice. The third time, the window ",
+   "id": "nw_cut_inn-raid_13",
+   "title": "The raid on the inn: Once. Twice. It won't move.",
+   "animaticMark": "41",
+   "background": "/film/img/s42/raid-42-first-hit.jpg",
+   "cinematic": {
+    "mode": "zoom-hold",
+    "focalPoint": "50% 45%",
+    "zoomDuration": 20,
+    "dollyDirection": "right",
+    "dollyDistance": 3,
+    "dollyDuration": 24,
+    "colorGrade": "midnight-teal",
+    "filmGrade": false,
+    "volumetricShafts": false
+   },
+   "prose": "",
+   "ambientAudio": "file:/film/sfx/loop-inn-night.mp3",
+   "particles": "motes",
+   "hideHud": true,
+   "transition": "dissolve",
+   "transitionSpeed": 0.3,
+   "noTypewriter": true,
+   "autoNarrate": false,
+   "hotspots": [],
+   "choices": [],
+   "dialogueBeats": [
+    {
+     "id": "nw_cut_inn-raid_b13",
+     "characterId": "nw_narrator",
+     "text": "Once. Twice. It won't move.",
+     "silent": true,
+     "afterBeatMode": "auto",
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_14"
+    }
+   ]
+  },
+  {
+   "id": "nw_cut_inn-raid_14",
+   "title": "The raid on the inn: The third time, the window gives.",
    "animaticMark": "42",
    "background": "/film/img/s42/210-the-third-time.jpg",
    "cinematic": {
@@ -13145,20 +13163,20 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b12",
+     "id": "nw_cut_inn-raid_b14",
      "characterId": "nw_narrator",
-     "text": "Once. Twice. The third time, the window gives.",
+     "text": "The third time, the window gives.",
      "silent": true,
      "sfxUrl": "/film/sfx/window-forced.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.82,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_13"
+     "afterBeatDelaySeconds": 1.42,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_15"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_13",
+   "id": "nw_cut_inn-raid_15",
    "title": "The raid on the inn: Down the wet tin. He catches the gutter.",
    "animaticMark": "43",
    "background": "/film/img/s43/211-wet-tin.jpg",
@@ -13185,7 +13203,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b13",
+     "id": "nw_cut_inn-raid_b15",
      "characterId": "nw_narrator",
      "text": "Down the wet tin. He catches the gutter.",
      "silent": true,
@@ -13193,12 +13211,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.62,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_14"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_16"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_14",
+   "id": "nw_cut_inn-raid_16",
    "title": "The raid on the inn: Mrs. Noda, crouched in the kitchen. Into",
    "animaticMark": "44",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
@@ -13225,18 +13243,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b14",
+     "id": "nw_cut_inn-raid_b16",
      "characterId": "nw_narrator",
      "text": "Mrs. Noda, crouched in the kitchen. Into the pantry.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.82,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_15"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_17"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_15",
+   "id": "nw_cut_inn-raid_17",
    "title": "The raid on the inn: Stay. Whatever you hear.",
    "animaticMark": "44",
    "background": "/film/img/s44/212-stay-whatever-you-hear.jpg",
@@ -13269,12 +13287,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s44/214-jack-stay-whatever-you-hear.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.57,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_16"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_18"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_16",
+   "id": "nw_cut_inn-raid_18",
    "title": "The raid on the inn: My husband —",
    "animaticMark": "44",
    "background": "/film/img/s44/44-02-my-husband.jpg",
@@ -13307,12 +13325,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s44/214-mrsnoda-my-husband.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.57,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_17"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_19"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_17",
+   "id": "nw_cut_inn-raid_19",
    "title": "The raid on the inn: I'll get him.",
    "animaticMark": "44",
    "background": "/film/img/s44/44-02-my-husband.jpg",
@@ -13345,12 +13363,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s44/214-jack-i-ll-get-him.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.57,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_18"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_20"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_18",
+   "id": "nw_cut_inn-raid_20",
    "title": "The raid on the inn: One gunman in the lobby. Mr. Noda behind",
    "animaticMark": "45",
    "background": "/film/img/s45/462-a-finger-to-his-lips.jpg",
@@ -13377,18 +13395,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b18",
+     "id": "nw_cut_inn-raid_b20",
      "characterId": "nw_narrator",
      "text": "One gunman in the lobby. Mr. Noda behind the counter.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.82,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_19"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_21"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_19",
+   "id": "nw_cut_inn-raid_21",
    "title": "The raid on the inn: Jack kills the lights.",
    "animaticMark": "45",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
@@ -13436,7 +13454,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b19",
+     "id": "nw_cut_inn-raid_b21",
      "characterId": "nw_narrator",
      "text": "Jack kills the lights.",
      "silent": true,
@@ -13444,12 +13462,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.02,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_20"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_22"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_20",
+   "id": "nw_cut_inn-raid_22",
    "title": "The raid on the inn: The gunman fires blind into the dark.",
    "animaticMark": "45",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
@@ -13497,7 +13515,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b20",
+     "id": "nw_cut_inn-raid_b22",
      "characterId": "nw_narrator",
      "text": "The gunman fires blind into the dark.",
      "silent": true,
@@ -13505,12 +13523,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.72,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_21"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_21",
+   "id": "nw_cut_inn-raid_23",
    "title": "The raid on the inn: Thank you very much.",
    "animaticMark": "45",
    "background": "/film/img/s45/178-thank-you-very-much.jpg",
@@ -13567,12 +13585,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.6,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.57,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_22"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_24"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_22",
+   "id": "nw_cut_inn-raid_24",
    "title": "The raid on the inn: In that half-second, Jack has him.",
    "animaticMark": "45",
    "background": "/film/img/s45/180-the-shoulder.jpg",
@@ -13599,18 +13617,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b22",
+     "id": "nw_cut_inn-raid_b24",
      "characterId": "nw_narrator",
      "text": "In that half-second, Jack has him.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.42,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_23"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_25"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_23",
+   "id": "nw_cut_inn-raid_25",
    "title": "The raid on the inn: The pink payphone starts to ring.",
    "animaticMark": "45",
    "background": "/film/img/s45/179-it-rings.jpg",
@@ -13637,7 +13655,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b23",
+     "id": "nw_cut_inn-raid_b25",
      "characterId": "nw_narrator",
      "text": "The pink payphone starts to ring.",
      "silent": true,
@@ -13645,12 +13663,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.42,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_24"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_26"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_24",
+   "id": "nw_cut_inn-raid_26",
    "title": "The raid on the inn: The old couple, together in the dark.",
    "animaticMark": "46",
    "background": "/film/img/s46/213-clutch-each-other.jpg",
@@ -13677,18 +13695,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b24",
+     "id": "nw_cut_inn-raid_b26",
      "characterId": "nw_narrator",
      "text": "The old couple, together in the dark.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.42,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_25"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_27"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_25",
+   "id": "nw_cut_inn-raid_27",
    "title": "The raid on the inn: I'm sorry.",
    "animaticMark": "46",
    "background": "/film/img/s46/213-clutch-each-other.jpg",
@@ -13721,12 +13739,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s46/215-jack-i-m-sorry.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.57,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_26"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_28"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_26",
+   "id": "nw_cut_inn-raid_28",
    "title": "The raid on the inn: Gunfire chases him through the mud.",
    "animaticMark": "47",
    "background": "/film/img/s47/222-mud-and-impacts.jpg",
@@ -13753,7 +13771,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b26",
+     "id": "nw_cut_inn-raid_b28",
      "characterId": "nw_narrator",
      "text": "Gunfire chases him through the mud.",
      "silent": true,
@@ -13761,19 +13779,19 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.7,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.42,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_27"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_29"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_27",
-   "title": "The raid on the inn: Rounds punch through the truck.",
+   "id": "nw_cut_inn-raid_29",
+   "title": "The raid on the inn: He dives behind the truck. Rounds punch ",
    "animaticMark": "47",
-   "background": "/film/img/s47/222-mud-and-impacts.jpg",
+   "background": "/film/img/s47/raid-47-behind-truck.jpg",
    "cinematic": {
     "mode": "static",
-    "focalPoint": "65% 50%",
-    "zoomDuration": 22,
+    "focalPoint": "42% 38%",
+    "zoomDuration": 18,
     "dollyDirection": "right",
     "dollyDistance": 3,
     "dollyDuration": 24,
@@ -13785,28 +13803,28 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "ambientAudio": "rain+file:/film/sfx/amb-city-traffic.mp3+file:/film/sfx/loop-roadside-night.mp3",
    "particles": "rain",
    "hideHud": true,
-   "transition": "cut",
-   "transitionSpeed": 0.05,
+   "transition": "dissolve",
+   "transitionSpeed": 0.3,
    "noTypewriter": true,
    "autoNarrate": false,
    "hotspots": [],
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b27",
+     "id": "nw_cut_inn-raid_b29",
      "characterId": "nw_narrator",
-     "text": "Rounds punch through the truck.",
+     "text": "He dives behind the truck. Rounds punch through it.",
      "silent": true,
      "sfxUrl": "/film/sfx/bullets-car.mp3",
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
-     "afterBeatDelaySeconds": 1.32,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_28"
+     "afterBeatDelaySeconds": 1.62,
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_30"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_28",
+   "id": "nw_cut_inn-raid_30",
    "title": "The raid on the inn: The keys are in it. The engine coughs. D",
    "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
@@ -13833,7 +13851,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b28",
+     "id": "nw_cut_inn-raid_b30",
      "characterId": "nw_narrator",
      "text": "The keys are in it. The engine coughs. Dies.",
      "silent": true,
@@ -13841,12 +13859,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.82,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_29"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_31"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_29",
+   "id": "nw_cut_inn-raid_31",
    "title": "The raid on the inn: A round through the windscreen.",
    "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
@@ -13873,7 +13891,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b29",
+     "id": "nw_cut_inn-raid_b31",
      "characterId": "nw_narrator",
      "text": "A round through the windscreen.",
      "silent": true,
@@ -13881,12 +13899,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.12,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_30"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_32"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_30",
+   "id": "nw_cut_inn-raid_32",
    "title": "The raid on the inn: Come on. Come on.",
    "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
@@ -13919,12 +13937,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s48/216-jack-come-on-come-on.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.57,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_31"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_33"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_31",
+   "id": "nw_cut_inn-raid_33",
    "title": "The raid on the inn: It catches. Roars.",
    "animaticMark": "48",
    "background": "/film/img/s48/214-come-on-come-on.jpg",
@@ -13951,7 +13969,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b31",
+     "id": "nw_cut_inn-raid_b33",
      "characterId": "nw_narrator",
      "text": "It catches. Roars.",
      "silent": true,
@@ -13959,12 +13977,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.8,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.52,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_32"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_34"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_32",
+   "id": "nw_cut_inn-raid_34",
    "title": "The raid on the inn: Through the farm gate.",
    "animaticMark": "49",
    "background": "/film/img/s49/463-through-the-farm-gate.jpg",
@@ -13991,7 +14009,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b32",
+     "id": "nw_cut_inn-raid_b34",
      "characterId": "nw_narrator",
      "text": "Through the farm gate.",
      "silent": true,
@@ -13999,12 +14017,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "sfxVolume": 0.9,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 1.62,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_33"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_35"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_33",
+   "id": "nw_cut_inn-raid_35",
    "title": "The raid on the inn: They don't chase him. They don't need to",
    "animaticMark": "49",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
@@ -14031,18 +14049,18 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b33",
+     "id": "nw_cut_inn-raid_b35",
      "characterId": "nw_narrator",
      "text": "They don't chase him. They don't need to.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.42,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_34"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_36"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_34",
+   "id": "nw_cut_inn-raid_36",
    "title": "The raid on the inn: He's gone. He has what she gave him.",
    "animaticMark": "49",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
@@ -14075,12 +14093,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "audioUrl": "/film/voice/s49/217-maskedleader-he-s-gone-he-has-what.mp3",
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 0.87,
-     "afterBeatTargetSceneId": "nw_cut_inn-raid_35"
+     "afterBeatTargetSceneId": "nw_cut_inn-raid_37"
     }
    ]
   },
   {
-   "id": "nw_cut_inn-raid_35",
+   "id": "nw_cut_inn-raid_37",
    "title": "The raid on the inn: Inside, the payphone is still ringing.",
    "animaticMark": "49",
    "background": "/film/img/s49/215-no-need-to-chase.jpg",
@@ -14107,7 +14125,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "choices": [],
    "dialogueBeats": [
     {
-     "id": "nw_cut_inn-raid_b35",
+     "id": "nw_cut_inn-raid_b37",
      "characterId": "nw_narrator",
      "text": "Inside, the payphone is still ringing.",
      "silent": true,
@@ -28570,5 +28588,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "53aec18282d0"
+ "builtinRevision": "88a2dabe8808"
 } as unknown as Story;

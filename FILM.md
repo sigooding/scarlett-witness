@@ -9,6 +9,22 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The four inn-raid inserts (26 October 2026)
+
+* **The note.** The director: "ok add them". They are in the raid cutscene (scenes 39–49), on the beats they were made for,
+  installed in their scene folders:
+  * `s39/raid-39-they-split.jpg`, on "They split up without a word.";
+  * `s41/raid-41-corridor.jpg`, on "Jack goes the other way, toward the bath.", after "Boots on the stairs." on 177;
+  * `s42/raid-42-first-hit.jpg`, on "Once. Twice. It won't move.", before 210's "The third time, the window gives.";
+  * `s47/raid-47-behind-truck.jpg`, on "He dives behind the truck. Rounds punch through it."
+* **Timing.** The raid now has 37 shots, about 4 s longer. Hounds runs on under it as before.
+* **Builder.** A cutscene shot can now name its own picture with `src`, a path under `public/film`, and it takes the look
+  of the shot before it.
+* **Size.** raid-41 and raid-42 were under 1920 wide, so they are only enlarged.
+* **Flags from when they were made:**
+  * in raid-42 Jack strikes with an open hand, and the glass already shows cracks;
+  * in raid-47 the gunman's muzzle flash reads unsuppressed.
+
 ## Five men at the inn, and three more redos (26 October 2026)
 
 * **175-r3** (the lace curtain pulled aside, the men walking in) replaces 175. Its headlight glows and lens flare moved

@@ -557,6 +557,8 @@ for (const seg of edits.soundtracks ?? []) {
 // scenes replaced by an authored list of quick shots that plays hands-off, with no song. Each entry of `shots` is a picture (`pic`, its file
 // name without extension) with either a short caption (`text`, held `seconds`, default `shotSeconds`) or a recorded line of the run (`line`,
 // the start of its words; the take plays and the shot moves on just after it), and an optional sound (`sfx`, a file in public/film/sfx).
+// A picture made for the run itself, not shown in its scenes (the inn-raid inserts, 26 October 2026), is named with `src` (its path
+// under public/film, "/img/s39/…") and takes the look of the shot before it.
 // Several shots on one picture cut straight to each other, so one picture can carry several sounds. The captions are the narration; the
 // run's own beats are left out. The scene after the run follows as usual. With a song (`musicUrl` under public/film, `seconds` its length;
 // the inn raid plays to "Hounds" since 11 October 2026) the song starts on the first shot, every caption shot is stretched or shortened by
@@ -582,7 +584,7 @@ for (const seg of edits.cutscenes ?? []) {
   const norm = t => (t ?? "").replace(/[—–-]+/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
   const TRAN = 0.3, LAG = seg.lag ?? 0.18, GAP = 0.65;
   const chain = [], used = new Set();
-  let prev = null, total = 0;
+  let prev = null, prevNode = block[0], total = 0;
   // fit to the song: the recorded lines keep their length, the caption shots share the rest
   // songRunsOn: the shots keep their own pace and the song is not fitted to them; it plays once and runs on under the scenes
   // after the run until it ends by itself (or the next music cue takes over)
@@ -598,7 +600,9 @@ for (const seg of edits.cutscenes ?? []) {
     fit = Math.max(0.6, (seg.seconds - (seg.fadeOut ?? 3) - (seg.slack ?? 1) - voiced) / silent);
   }
   for (const sh of seg.shots) {
-    const pic = pics.get(sh.pic);
+    const own = sh.src && existsSync(resolve(root, "public/film", sh.src.slice(1))) ? { bg: P(sh.src), node: prevNode } : null;
+    if (sh.src && !own) console.warn(`cutscene ${seg.id}: picture ${sh.src} is not in public/film`);
+    const pic = own ?? pics.get(sh.pic);
     if (!pic) { console.warn(`cutscene ${seg.id}: no picture ${sh.pic} in ${seg.from}–${seg.to}`); continue; }
     const look = Object.fromEntries(LOOK.filter(k => pic.node[k] !== undefined).map(k => [k, pic.node[k]]));
     const same = prev === sh.pic;
@@ -623,6 +627,7 @@ for (const seg of edits.cutscenes ?? []) {
       transition: same ? "cut" : "dissolve", transitionSpeed: same ? 0.05 : TRAN, noTypewriter: true, autoNarrate: false, hotspots: [], choices: [], dialogueBeats: [beat],
     });
     prev = sh.pic;
+    prevNode = pic.node;
   }
   const missed = lines.filter(l => !used.has(l));
   if (missed.length) console.warn(`cutscene ${seg.id}: ${missed.length} recorded line(s) of the run not used: ${missed.map(l => `"${l.text}"`).join(", ")}`);

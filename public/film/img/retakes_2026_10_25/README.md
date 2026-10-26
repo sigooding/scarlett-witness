@@ -556,3 +556,9 @@ The other three §7 redos (374-r2, 213-r4, 87-r4) and the raid inserts are still
 
 As the director asked: 374-r2 (with its depth move taken off) and 213-r4 are installed, and `montage18-01-r1.jpg` is now
 `s77/87-he-writes-nothing.jpg` in place of 87-r4, which is not used. The raid inserts are still not installed.
+
+## The raid inserts in the film (26 October 2026)
+
+The director: "ok add them". raid-39, raid-41, raid-42 and raid-47 are installed as `s39/raid-39-they-split.jpg`,
+`s41/raid-41-corridor.jpg`, `s42/raid-42-first-hit.jpg` and `s47/raid-47-behind-truck.jpg`, and play in the raid cutscene
+(FILM.md, "The four inn-raid inserts").

@@ -847,3 +847,7 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   - 87 is now `montage18-01-r1`.
 - **"just remove depth map for that one".** 374 has no depth move now.
 - FILM.md, first section.
+
+## 44. The raid inserts are in (26 October)
+- **"ok add them".** raid-39, raid-41, raid-42 and raid-47 play in the inn raid on the beats they were made for. FILM.md,
+  first section.
