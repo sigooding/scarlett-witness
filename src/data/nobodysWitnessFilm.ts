@@ -18637,9 +18637,9 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "musicMode": "track",
    "musicUrl": "/film/audio/bad-guy.mp3",
    "musicLevel": 0.9,
-   "musicFadeSeconds": 6,
+   "musicFadeSeconds": 4,
    "musicLoop": false,
-   "musicFadeOutSeconds": 10
+   "musicFadeOutSeconds": 5
   },
   {
    "id": "nw_song_bad-guy_02",
@@ -28545,5 +28545,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "e092b2e7f432"
+ "builtinRevision": "171d385fb48f"
 } as unknown as Story;

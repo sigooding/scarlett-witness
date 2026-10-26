@@ -41,17 +41,24 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
   in second", "they're the same song, one's instrumental", and "i want overlap".
   * The piano "Bad Guy" (`bad-guy-piano.mp3`) plays from scene 66, the lounge, through Mara dying (71) and the call (72).
   * The sung "Bad Guy" comes in at "Vera doesn't move. The piano plays on."
-* **Now the piano carries on under the song for 10 s and dies away, while the song comes in over 6 s.** Before, both
-  faded over the same 5 s. The two versions share a tempo (86 bpm) and a key, so they can sit together. The files aren't in
+* **Now the piano dies away over 5 s while the song comes in over 4 s.** Both play together while they cross. The first try
+  was 10 s of piano under 6 s of song, and the director found it too long. Before that, both faded over the same 5 s. The two versions share a tempo (86 bpm) and a key, so they can sit together. The files aren't in
   step, and the song can't start part-way in, because the shots after the call are timed from its start.
 * **Engine.** There is a new scene field, `musicFadeOutSeconds`: how long the outgoing track takes to fade, which
   defaults to `musicFadeSeconds`.
   * Its Studio control is "Outgoing track fades over…", next to the music hand-off; both sliders now go to 15 s.
-  * The soundtrack setting `fadeOutPrevious` sets it on a song's first node. Bad Guy has `fadeIn: 6`, `fadeOutPrevious: 10`.
+  * The soundtrack setting `fadeOutPrevious` sets it on a song's first node. Bad Guy has `fadeIn: 4`, `fadeOutPrevious: 5`.
 * **Music fades follow the voice duck now.** Until now the duck skipped a track while it faded, so a long crossfade would
   have played at full level under Ishida's next line, which starts about 2 s into the song. Both sides of a crossfade now
   dip under a line spoken in the middle of it (`fadeAudio`'s `follow`).
 * **Tests.** `npm run test:engine` covers the following fades, and `npm run test:film-backend` pins the overlap.
+* **An animatic from a later scene had no piano at all**, so the song faded in over silence. The director: "music doesn't
+  fade in to each other". The engine only started a track on the scene that sets it, and the piano starts in scene 66, so an
+  animatic, Resume or chapter from scene 67 to 72 played those scenes silent.
+  * Now the first scene of a play picks up the loop the scenes before it would have left playing. `src/game/inheritedMusic.ts`
+    walks the running order from the start.
+  * A song that plays once is not restarted from its top.
+  * Checked: an animatic from scene 71 starts with the piano and merges it into the song. `npm run test:film-backend` pins it.
 
 ## Okada's daughter died (25 October 2026, night)
 

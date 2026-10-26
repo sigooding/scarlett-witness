@@ -162,6 +162,7 @@ import { adjustedConsequences, choiceRepeats, gambleFlag, getPerks, rollGamble, 
 import { canRewindDecision, emptyRewind, popRewind, pushRewind, rewindLabel, sealRewind, type RewindStack } from "./rewind";
 import { simFromRuntime, strandedNow, STRANDED_GRACE_MS } from "./stranded";
 import { deepLinkFromUrl, describeDeepLink, resolveDeepLink } from "./deepLink";
+import { inheritedMusicScene } from "./inheritedMusic";
 import { AFTER_VOICE_SECONDS, ANIMATIC, AnimaticCaptions, AnimaticEnd, AnimaticMark, animaticMarkFor, captionFor, untilNextMusicBeat, headingSeconds, noteCaption, noteScene, readingSeconds } from "./animatic";
 
 /* SEEDED RUNS — ?seed=1234 on the URL pins every gameplay draw (minigame
@@ -3136,6 +3137,8 @@ function CasePlayer({
     fadeAudio(el, 0, ms, finish, follow);
   }, []);
   const musicSrcRef = useRef<string | null>(null);
+  // true until the first scene of this play has set its music (see the inherit branch of the music effect)
+  const firstMusicSceneRef = useRef(true);
   const bgVideoRef = useRef<HTMLVideoElement | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
   // Stable ref to leaveFor so earlier callbacks (advanceBeat) can call it
@@ -3588,7 +3591,8 @@ function CasePlayer({
     // Both sides of a crossfade still dip under a line spoken in the middle of it (the duck skips a track while it fades).
     const duck = () => audio.duckFactor;
 
-    const startTrack = (url: string) => {
+    // `from` is the scene whose cue this is, when the track is picked up from an earlier scene (its loop and level)
+    const startTrack = (url: string, from: SceneNode = scene) => {
       // Ramp the outgoing track down rather than cutting it. It is detached
       // from sceneAudioRef immediately so the incoming track can be wired up
       // straight away — the two overlap and read as a crossfade.
@@ -3607,13 +3611,13 @@ function CasePlayer({
       if (primedMusic && !reuse && !primedMusic.el.paused) primedMusic.el.pause();
       const a = reuse ?? new Audio(assetUrl(url));
       // a song (musicLoop: false) plays once; a bed loops until changed or silenced
-      a.loop = scene.musicLoop !== false;
+      a.loop = from.musicLoop !== false;
       a.muted = !soundOnRef.current;
       // The voice-duck envelope multiplies in here too, so a track that
       // starts mid-dialogue comes in already ducked. A per-scene music level
       // lets the author start this track louder/lower than the player's
       // default music volume.
-      const trackLevel = scene.musicLevel !== undefined && scene.musicLevel >= 0 ? scene.musicLevel : 1;
+      const trackLevel = from.musicLevel !== undefined && from.musicLevel >= 0 ? from.musicLevel : 1;
       musicLevelRef.current = trackLevel;
       const target = audio.volumes.master * audio.volumes.music * trackLevel * audio.duckFactor;
       // Start silent and ramp in. A track adopted from the priming click may
@@ -3700,8 +3704,14 @@ function CasePlayer({
       // a chapter, an animatic from a later scene) on a scene that inherits would leave that primer looping, unowned,
       // under the whole film: stop it unless it is the soundtrack this player adopted.
       if (primedMusic && primedMusic.el !== a && !primedMusic.el.paused) fadeOutAndStop(primedMusic.el, fadeMs);
-      setMusicTrack(musicSrcRef.current);
+      // Entered part-way through (an animatic of scenes 70 to 72, Resume, a chapter): start the loop the scenes before this
+      // one would have left playing, so the music is there to hand over from (inheritedMusic.ts).
+      const inherited = firstMusicSceneRef.current && !a ? inheritedMusicScene(story, scene.id) : null;
+      const inheritedUrl = inherited?.musicUrl ?? inherited?.sceneAudioUrl;
+      if (inherited && inheritedUrl) startTrack(inheritedUrl, inherited);
+      else setMusicTrack(musicSrcRef.current);
     }
+    firstMusicSceneRef.current = false;
     audio.setAmbient(soundOnRef.current ? scene.ambientAudio ?? null : null);
     // Video cutscenes: start via a JS play() (not the autoplay attribute), the
     // same way music starts — the attribute is blocked by stricter autoplay

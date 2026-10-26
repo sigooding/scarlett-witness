@@ -827,3 +827,13 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   - **Flagged.** 189 v2 has no lamp, as the director's note says.
   - FILM.md, first section.
 - **Still waiting for a yes, free:** the 9 unused takes, 336's first take as an extra beat, and scene 28's sound.
+
+## 42. The merge again: no piano in the animatic, and 10 s too long (26 October)
+- **"music doesn't fade in to each other", "10 secs too long".**
+  - An animatic that starts after scene 66 had no piano: the engine never picked up a loop set by an earlier scene. Now it does
+    (`src/game/inheritedMusic.ts`).
+  - The overlap is shorter: the piano dies away over 5 s while the song comes in over 4 s.
+  - Checked from scene 71. FILM.md, "The piano Bad Guy merges into the sung one".
+- **"some pics missing like the bad guys outside inn".** In the film as it plays, 173 (the four sedans arriving) and 175 (the
+  cars and the masked men, through the curtain) both show, 175 for about 5 s. The new inn-raid inserts (raid-39/41/42/47) are
+  not in the film, as the director asked. Waiting to hear which pictures the director meant.

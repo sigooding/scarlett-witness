@@ -14,6 +14,7 @@
  *   6. the engine reads what the Studio writes (particleConfig, musicLoop, animaticReadPace, montageLooks, depth fields).
  */
 import assert from "node:assert/strict";
+import { inheritedMusicScene } from "../src/game/inheritedMusic";
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { NOBODYS_WITNESS_FILM as FILM } from "../src/data/nobodysWitnessFilm";
@@ -142,7 +143,7 @@ console.log("The engine reads what the Studio writes");
 const particles = read("src/game/AmbientParticles.tsx");
 check(/config\?\.density/.test(particles) && /config\?\.opacity/.test(particles) && /config\?\.wind/.test(particles), "particleConfig density, opacity and wind are applied by the renderer");
 check(/config=\{scene\.particleConfig\}/.test(read("src/game/Game.tsx")), "and the player hands the scene's particleConfig to it");
-check(/scene\.musicLoop !== false/.test(read("src/game/Game.tsx")), "musicLoop: false makes a track play once");
+check(/a\.loop = from\.musicLoop !== false/.test(read("src/game/Game.tsx")), "musicLoop: false makes a track play once (the cue's own scene, or the earlier scene it is picked up from)");
 check(/animaticReadPace/.test(read("src/game/Game.tsx")) && /animaticReadPace/.test(read("tools/export-animatic.mjs")), "animaticReadPace is read by the player and the exporter");
 check(/looks\?\.\[img\]/.test(read("src/game/Game.tsx")), "montageLooks are looked up per still");
 check(/sfxUrl/.test(read("src/game/Game.tsx")) && /audio\.playSfx\(currentBeat\.sfxUrl/.test(read("src/game/Game.tsx")), "a beat's sfxUrl is played when the beat starts");
@@ -326,7 +327,11 @@ check(badGuy[0].musicLoop === false, "and plays once");
 // overlap") the piano Bad Guy, playing since scene 66, carries on under the sung one and dies away more slowly than the song comes in
 const pianoFrom = FILM.scenes.findIndex((s) => s.id === "nw_s66"), songAt = FILM.scenes.indexOf(badGuy[0]);
 check(FILM.scenes[pianoFrom]?.musicUrl === "/film/audio/bad-guy-piano.mp3" && FILM.scenes.slice(pianoFrom + 1, songAt).every((s) => s.musicMode === undefined && !s.musicUrl), "the piano Bad Guy plays from scene 66 to the sung one, through Mara dying and the call");
-check((badGuy[0].musicFadeSeconds ?? 0) >= 5 && (badGuy[0].musicFadeOutSeconds ?? 0) > (badGuy[0].musicFadeSeconds ?? 0), `the two versions overlap: the piano dies away over ${badGuy[0].musicFadeOutSeconds} s while the song comes in over ${badGuy[0].musicFadeSeconds} s`);
+check((badGuy[0].musicFadeSeconds ?? 0) >= 3 && (badGuy[0].musicFadeOutSeconds ?? 0) > (badGuy[0].musicFadeSeconds ?? 0), `the two versions overlap: the piano dies away over ${badGuy[0].musicFadeOutSeconds} s while the song comes in over ${badGuy[0].musicFadeSeconds} s`);
+// an animatic or a Resume that starts after scene 66 picks the piano up, so the sung one has something to merge with
+// ("music doesn't fade in to each other", 26 October 2026: an animatic from scene 70 had silence until the song)
+check(["nw_s67", "nw_s70", "nw_s71", "nw_s72"].every((id) => inheritedMusicScene(FILM, id)?.musicUrl === "/film/audio/bad-guy-piano.mp3") && inheritedMusicScene(FILM, "nw_s66")?.musicUrl !== "/film/audio/bad-guy-piano.mp3", "a film started anywhere from scene 67 to 72 starts with the piano Bad Guy playing");
+check(inheritedMusicScene(FILM, badGuy[1].id) === null, "but not part-way through the sung one (a song that plays once is not restarted from its top)");
 eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s77_after", "the run hands on to the rest of Jack's office (the clean envelope, the pen), an ordinary click-through node");
 eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, undefined, "which lets the song play on to its own end (20 October 2026: \"don't end bad guy song at jack just play till end\")");
 eq(runOf("midnight").map((s) => s.id), [], "the midnight song's run is gone");
