@@ -9,14 +9,18 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
-## Scene 77A, "The black glass": beats only (26 October 2026)
+## Scene 77A, "The black glass": beats-only scene; picture set in progress (26 October 2026)
 
 * **The note.** The director: "does jack need to be antagonised or something at some point". After several drafts: "write
   the beats only - no images or sounds", at night, on a new street.
 * **What it is.** Kurose's car finds Jack on an empty avenue before dawn, the night Mara dies, as he walks to Vera's door
   with the envelope. It sits between 77 and 78. Kurose's hand rests on the window sill; his face stays in the dark.
-* **What it plays as for now.** Black, with the rain particles and the builder's default exterior ambience. The six lines
-  carry `takePending` and are shown silent, and the build lists them as waiting.
+* **What it plays as for now.** Still black, with the rain particles and the builder's default exterior ambience: the selected
+  plates are staged in `public/film/img/s77a/` but not yet wired into the story. The six lines carry `takePending` and are
+  shown silent, and the build lists them as waiting.
+* **Pictures so far.** Three essential plates were selected by vote (the avenue, headlights, and Jack's close single), along
+  with a separate dark-windowed car continuity reference. The hand-on-sill, black-glass reflection and tail-lights options
+  were not selected, so those scene files remain missing. See the folder README and image-brief section 8 for status.
 * **Recorded check.** An animatic of the scene alone ran 49 s with 12 captions and handed on to 78. It had no page errors,
   and the browser's voice read nothing.
 * **Tests.** `test:film-backend` checks:
@@ -24,8 +28,9 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
   * the six lines and who speaks them;
   * that no line is ever read by the browser's voice;
   * that there is no face, inn, tea or report in it.
-* **Next.** Image brief section 8 has the pictures to make and the sheets to attach. Director-notes 45 says why the scene is
-  here and not before the inn (scene 50's "Only two people knew…").
+* **Next.** Finish the unselected picture slots in image-brief section 8 and then wire the picked plates into the story. The
+  brief documents the hidden-face and tinted-window constraints; director-notes 45 says why the scene is here and not before
+  the inn (scene 50's "Only two people knew…").
 
 ## The four inn-raid inserts (26 October 2026)
 
