@@ -808,3 +808,12 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   3. Rebuild the film, and add a check to `npm run test:film-backend`.
 
   Until the takes exist, the lines can go in as `takePending` and play silent.
+
+## 40. The piano Bad Guy merges into the sung one (26 October)
+- **"scene mara dying to vera bar the songs should merge in to each other so fade out 1st fade in second", "theyre the same
+  song ones instrumental", "i want overlap".**
+  - The piano version plays from scene 66 through Mara dying and the call.
+  - At "The piano plays on." it now carries on under the sung version for 10 s and dies away, while the song comes in over
+    6 s. Before, both faded over the same 5 s.
+  - Both dip under Ishida's next line.
+  - FILM.md, first section. Nobody has listened yet.

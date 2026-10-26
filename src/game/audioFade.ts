@@ -73,12 +73,17 @@ if (typeof document !== "undefined" && typeof document.addEventListener === "fun
  * makes it certain. `onDone` fires exactly once either way — the music code
  * hangs "pause this track and release it" on it, so a ramp that never
  * finished was a track that never stopped.
+ *
+ * `follow`, when given, is a live multiplier read every frame (the voice duck):
+ * the ramp is scaled by how far it has moved since the ramp began, so a long
+ * crossfade still dips under a line spoken in the middle of it.
  */
 export function fadeAudio(
   el: HTMLAudioElement,
   to: number,
   ms: number,
-  onDone?: () => void
+  onDone?: () => void,
+  follow?: () => number
 ): FadeHandle {
   activeFades.get(el)?.cancel();
   const from = el.volume;
@@ -94,6 +99,8 @@ export function fadeAudio(
     return noop;
   }
   const start = performance.now();
+  const follow0 = follow?.() || 1;
+  const scale = () => (follow ? Math.max(0, follow()) / follow0 : 1);
   let frame: number | null = null;
   let timer: ReturnType<typeof setTimeout> | null = null;
   let cancelled = false;
@@ -105,7 +112,7 @@ export function fadeAudio(
     if (timer !== null) clearTimeout(timer);
     runningFades.delete(settle);
     try {
-      el.volume = clamp01(to);
+      el.volume = clamp01(to * scale());
     } catch {
       /* element detached */
     }
@@ -122,7 +129,7 @@ export function fadeAudio(
         ? to + (from - to) * fadeDownCurve(t)
         : from + (to - from) * fadeUpCurve(t);
     try {
-      el.volume = clamp01(v);
+      el.volume = clamp01(v * scale());
     } catch {
       /* element detached mid-ramp */
     }

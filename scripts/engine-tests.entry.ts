@@ -6639,6 +6639,27 @@ console.log("\n=== CONVERSATION TIMERS — the dialogue clock ===");
   await sleep(80);
   check("fade: a cancelled ramp leaves the volume alone and reports nothing", el.volume === 0.5 && cancelledDone === 0);
 
+  // 4b. A ramp that follows a live multiplier (the voice duck) dips with it mid-ramp and lands on the live value
+  //     (26 October 2026: the piano "Bad Guy" dies away under the sung one for 10 s, across a spoken line).
+  let duckNow = 1;
+  el.volume = 0.8;
+  let followed = 0;
+  fadeAudio(el, 0, 300, () => followed++, () => duckNow);
+  await sleep(40);
+  const beforeDuck = el.volume;
+  duckNow = 0.35;
+  await sleep(40);
+  const underDuck = el.volume;
+  check("fade: a following ramp dips when the duck comes in mid-ramp", beforeDuck > 0.5 && underDuck < beforeDuck * 0.45, [beforeDuck, underDuck]);
+  await sleep(400);
+  check("fade: and still lands at its target", el.volume === 0 && followed === 1, [el.volume, followed]);
+  el.volume = 0;
+  duckNow = 0.35;
+  fadeAudio(el, 0.35, 200, undefined, () => duckNow); // a track coming in while a line is spoken
+  duckNow = 1;
+  await sleep(320);
+  check("fade: a ramp that began under the duck rises to full once the line ends", Math.abs(el.volume - 1) < 1e-9, el.volume);
+
   if (savedRaf === undefined) delete frameGlobals.requestAnimationFrame;
   else frameGlobals.requestAnimationFrame = savedRaf;
   if (savedCancel === undefined) delete frameGlobals.cancelAnimationFrame;

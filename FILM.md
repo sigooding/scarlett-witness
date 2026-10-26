@@ -9,6 +9,24 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## The piano Bad Guy merges into the sung one (26 October 2026)
+
+* **The note.** The director: "scene mara dying to vera bar the songs should merge in to each other so fade out 1st fade
+  in second", "they're the same song, one's instrumental", and "i want overlap".
+  * The piano "Bad Guy" (`bad-guy-piano.mp3`) plays from scene 66, the lounge, through Mara dying (71) and the call (72).
+  * The sung "Bad Guy" comes in at "Vera doesn't move. The piano plays on."
+* **Now the piano carries on under the song for 10 s and dies away, while the song comes in over 6 s.** Before, both
+  faded over the same 5 s. The two versions share a tempo (86 bpm) and a key, so they can sit together. The files aren't in
+  step, and the song can't start part-way in, because the shots after the call are timed from its start.
+* **Engine.** There is a new scene field, `musicFadeOutSeconds`: how long the outgoing track takes to fade, which
+  defaults to `musicFadeSeconds`.
+  * Its Studio control is "Outgoing track fades over…", next to the music hand-off; both sliders now go to 15 s.
+  * The soundtrack setting `fadeOutPrevious` sets it on a song's first node. Bad Guy has `fadeIn: 6`, `fadeOutPrevious: 10`.
+* **Music fades follow the voice duck now.** Until now the duck skipped a track while it faded, so a long crossfade would
+  have played at full level under Ishida's next line, which starts about 2 s into the song. Both sides of a crossfade now
+  dip under a line spoken in the middle of it (`fadeAudio`'s `follow`).
+* **Tests.** `npm run test:engine` covers the following fades, and `npm run test:film-backend` pins the overlap.
+
 ## Okada's daughter died (25 October 2026, night)
 
 * **The note.** The director: in scene 10 Vera asks whether Okada's daughter was alive, and "the honest answer is in the

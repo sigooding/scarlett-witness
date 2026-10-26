@@ -529,6 +529,8 @@ for (const seg of edits.soundtracks ?? []) {
     });
   }
   Object.assign(chain[0], { musicMode: "track", musicUrl: P(seg.musicUrl), musicLevel: seg.musicLevel ?? 0.9, musicFadeSeconds: seg.fadeIn ?? 1.5, musicLoop: false });
+  // fadeOutPrevious: the music playing before the song leaves over this long instead of crossfading for the whole fadeIn
+  if (seg.fadeOutPrevious !== undefined) chain[0].musicFadeOutSeconds = seg.fadeOutPrevious;
   // what is left of the last scene after the song plays as an ordinary node, and fades the song out
   let after = next;
   if (rest) {

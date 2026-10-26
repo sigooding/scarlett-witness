@@ -7201,7 +7201,7 @@ function StudioInner({
                     <input
                       type="range"
                       min={0}
-                      max={6}
+                      max={15}
                       step={0.1}
                       className="w-full"
                       value={scene.musicFadeSeconds ?? 1.4}
@@ -7214,6 +7214,31 @@ function StudioInner({
                       up (a crossfade). <b className="text-gold">0.0s = a hard cut</b> — the theme stops dead at the
                       scene boundary, the way a title card kills the music sharp. Use it for shock cuts and title
                       sequences; use 1–2s everywhere else.
+                    </p>
+                  </Field>
+                )}
+                {scene.musicMode && scene.musicMode !== "inherit" && (
+                  <Field label={`Outgoing track fades over ${(scene.musicFadeOutSeconds ?? scene.musicFadeSeconds ?? 1.4).toFixed(1)}s${scene.musicFadeOutSeconds === undefined ? " (same as the hand-off)" : ""}`}>
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="range"
+                        min={0}
+                        max={15}
+                        step={0.1}
+                        className="w-full"
+                        aria-label="musicFadeOutSeconds"
+                        value={scene.musicFadeOutSeconds ?? scene.musicFadeSeconds ?? 1.4}
+                        onChange={(e) => updateScene(scene.id, { musicFadeOutSeconds: parseFloat(e.target.value) })}
+                      />
+                      {scene.musicFadeOutSeconds !== undefined && (
+                        <button type="button" className="font-type text-[9px] text-paper/60 underline" onClick={() => updateScene(scene.id, { musicFadeOutSeconds: undefined })}>
+                          same as hand-off
+                        </button>
+                      )}
+                    </div>
+                    <p className="mt-1 font-type text-[9px] text-paper/40">
+                      Longer than the hand-off, the old track carries on under the new one and dies away slowly: two
+                      versions of the same song merge. Shorter, it has gone before the new one is up.
                     </p>
                   </Field>
                 )}

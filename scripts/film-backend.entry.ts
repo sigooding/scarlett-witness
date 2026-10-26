@@ -53,7 +53,7 @@ const REGISTRY: Record<string, Record<string, RegExp | null>> = {
     id: null, title: /title:/, background: /background/, prose: /prose/, dialogueBeats: /dialogueBeats/, hotspots: /hotspots/, choices: /choices/,
     noTypewriter: /noTypewriter/, autoNarrate: /autoNarrate/, transition: /transition/, transitionSpeed: /transitionSpeed/,
     ambientAudio: /AmbientLayers/, hideHud: /hideHud/, particles: /Particle Effects/, particleConfig: /aria-label=\{`Particle \$\{label/,
-    cinematic: /CinematicControls/, musicMode: /musicMode/, musicFadeSeconds: /musicFadeSeconds/, animaticReadPace: /Animatic reading pace/, animaticMark: /Animatic scene mark/, musicSync: /Music sync/,
+    cinematic: /CinematicControls/, musicMode: /musicMode/, musicFadeSeconds: /musicFadeSeconds/, musicFadeOutSeconds: /musicFadeOutSeconds/, animaticReadPace: /Animatic reading pace/, animaticMark: /Animatic scene mark/, musicSync: /Music sync/,
     musicUrl: /musicUrl/, musicLevel: /musicLevel/, musicLoop: /Loop this track/, nodeType: /nodeType/, credits: /credits/,
     autoAdvanceTargetSceneId: /autoAdvanceTargetSceneId/, autoAdvanceDelaySeconds: /autoAdvanceDelaySeconds/, autoAdvanceHideTimer: /autoAdvanceHideTimer/,
     isEnding: /isEnding/, endingData: /endingData/,
@@ -322,6 +322,11 @@ const badGuy = runOf("bad-guy");
 check(badGuy.length > 20, `Bad Guy's run has ${badGuy.length} timed nodes`);
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/bad-guy.mp3").map((s) => s.id), [badGuy[0].id], "Bad Guy is started once, on its run's first node (it never restarts)");
 check(badGuy[0].musicLoop === false, "and plays once");
+// (26 October 2026, the director: from Mara dying into Vera at the bar the two versions "should merge into each other", "i want
+// overlap") the piano Bad Guy, playing since scene 66, carries on under the sung one and dies away more slowly than the song comes in
+const pianoFrom = FILM.scenes.findIndex((s) => s.id === "nw_s66"), songAt = FILM.scenes.indexOf(badGuy[0]);
+check(FILM.scenes[pianoFrom]?.musicUrl === "/film/audio/bad-guy-piano.mp3" && FILM.scenes.slice(pianoFrom + 1, songAt).every((s) => s.musicMode === undefined && !s.musicUrl), "the piano Bad Guy plays from scene 66 to the sung one, through Mara dying and the call");
+check((badGuy[0].musicFadeSeconds ?? 0) >= 5 && (badGuy[0].musicFadeOutSeconds ?? 0) > (badGuy[0].musicFadeSeconds ?? 0), `the two versions overlap: the piano dies away over ${badGuy[0].musicFadeOutSeconds} s while the song comes in over ${badGuy[0].musicFadeSeconds} s`);
 eq(badGuy.at(-1)!.dialogueBeats!.at(-1)!.afterBeatTargetSceneId, "nw_s77_after", "the run hands on to the rest of Jack's office (the clean envelope, the pen), an ordinary click-through node");
 eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, undefined, "which lets the song play on to its own end (20 October 2026: \"don't end bad guy song at jack just play till end\")");
 eq(runOf("midnight").map((s) => s.id), [], "the midnight song's run is gone");

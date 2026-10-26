@@ -1883,6 +1883,11 @@ export interface SceneNode {
    *  Applies to both the outgoing track and the incoming one, so a switch is
    *  a true crossfade. Defaults to 1.4s. 0 = hard cut (the old behaviour). */
   musicFadeSeconds?: number;
+  /** Seconds the OUTGOING track takes to fade when this scene changes the music; defaults to `musicFadeSeconds`.
+   *  Longer than the fade-in, the old track carries on under the new one and dies away slowly, so two versions of the
+   *  same song merge (Nobody's Witness: the piano "Bad Guy" into the sung one); shorter, it has gone before the new
+   *  one is up. */
+  musicFadeOutSeconds?: number;
   /** Default level for this scene's music, 0–1 (a multiplier on the music
    *  channel). Lets a scene start a track louder (a title theme) or lower
    *  (ambient bed under dialogue) independent of the player's music volume.

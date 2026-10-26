@@ -3117,7 +3117,7 @@ function CasePlayer({
   /** Ramp a detached element down, then pause it and release it. Tracked in
    *  fadingOutRef so unmount can cut any fade still in flight — otherwise a
    *  player leaving mid-fade would hear the tail continue over the menu. */
-  const fadeOutAndStop = useCallback((el: HTMLAudioElement, ms = MUSIC_FADE_MS) => {
+  const fadeOutAndStop = useCallback((el: HTMLAudioElement, ms = MUSIC_FADE_MS, follow?: () => number) => {
     fadingOutRef.current.add(el);
     const finish = () => {
       try {
@@ -3133,7 +3133,7 @@ function CasePlayer({
       finish();
       return;
     }
-    fadeAudio(el, 0, ms, finish);
+    fadeAudio(el, 0, ms, finish, follow);
   }, []);
   const musicSrcRef = useRef<string | null>(null);
   const bgVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -3583,6 +3583,10 @@ function CasePlayer({
       scene.musicFadeSeconds === undefined
         ? MUSIC_FADE_MS
         : Math.max(0, scene.musicFadeSeconds) * 1000;
+    // The outgoing track's fade can differ (`musicFadeOutSeconds`): longer, it carries on under the new one and dies away.
+    const fadeOutMs = scene.musicFadeOutSeconds === undefined ? fadeMs : Math.max(0, scene.musicFadeOutSeconds) * 1000;
+    // Both sides of a crossfade still dip under a line spoken in the middle of it (the duck skips a track while it fades).
+    const duck = () => audio.duckFactor;
 
     const startTrack = (url: string) => {
       // Ramp the outgoing track down rather than cutting it. It is detached
@@ -3593,7 +3597,7 @@ function CasePlayer({
         outgoing.onplaying = null;
         outgoing.onpause = null;
         sceneAudioRef.current = null;
-        fadeOutAndStop(outgoing, fadeMs);
+        fadeOutAndStop(outgoing, fadeOutMs, duck);
       }
       // Adopt the element primed inside the user's click gesture (see App.tsx)
       // so the opening track plays even though this effect runs after the
@@ -3615,7 +3619,7 @@ function CasePlayer({
       // Start silent and ramp in. A track adopted from the priming click may
       // already be audible, so it fades from wherever it actually is.
       a.volume = reuse ? a.volume : 0;
-      fadeAudio(a, target, fadeMs);
+      fadeAudio(a, target, fadeMs, undefined, duck);
       a.onplaying = () => {
         setMusicPlaying(true);
         setSoundBlocked(false);
@@ -3671,7 +3675,7 @@ function CasePlayer({
         outgoing.onplaying = null;
         outgoing.onpause = null;
         sceneAudioRef.current = null;
-        fadeOutAndStop(outgoing, fadeMs);
+        fadeOutAndStop(outgoing, fadeOutMs, duck);
       }
       // A primed opening track that a "no music" scene won't use goes too.
       if (primedMusic && !primedMusic.el.paused) fadeOutAndStop(primedMusic.el, fadeMs);
