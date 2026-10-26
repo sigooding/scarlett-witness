@@ -5,10 +5,20 @@
 - "also the hive carpark with map of where jack and mara are and shooter and driver so we can fix images";
 - "and a reminder to do for other locations".
 
-**Then:** "don't make anymore maps you mapped jacks desk the wrong way". So this note has **no maps**:
-- the two plans Claude drew that day were not installed;
-- the tool that drew them was deleted;
-- the director makes the pictures and the references ("i'll do the images").
+**Then:**
+- "don't make anymore maps you mapped jacks desk the wrong way";
+- "oh you still got the tool? could be useful";
+- "the hive map was ok".
+
+**So:**
+- **The service road map is in:** `public/film/img/sheets/hive-service-road-plan.jpg`. It shows who stands where, as
+  section 2 below describes in words.
+- **The office plan is wrong** (the desk), and it is **not installed**.
+- **The tool is kept:** `tools/draw-location-plans.py`.
+  - Positions are in metres at the top of each plan.
+  - Draw with `python3 tools/draw-location-plans.py --out DIR`, then install with `tools/install-film-picture.mjs`.
+  - Its office plan must be corrected against the director's reference first.
+- **Claude draws no new maps unless asked.** The director makes the pictures and the references ("i'll do the images").
 
 **The idea:**
 - **One reference image per place,** attached to every picture of that place, so the place stops changing between shots.
@@ -44,6 +54,13 @@
 
 **Sources.** This comes from the screenplay and from what most of the pictures already show (234, 389, 390, 237). For the
 look of the road, `sheets/hive-exterior-night.jpg` has a panel of it ("Rear service road at NIGHT").
+
+**The map.** `sheets/hive-service-road-plan.jpg` is overhead, with north up. It marks:
+- Jack (J), Mara (M), the driver (D) and the shooter (S);
+- their moves, numbered 1 to 5;
+- cameras A, B and C (C is the angle for 394's fix, B for 396's).
+
+Attach it, with `hive-exterior-night.jpg`, to every retake of this scene.
 
 **The place.**
 - A narrow road under the elevated railway.
@@ -137,4 +154,4 @@ Fine as they are: 234, 389, 390, 391, 392, 237, 397 and 398.
 **Two more needing one reference each:**
 - **The small bar (scenes 2, 8, 27A, 64, 81, 28 pictures):** it has views but no plan of where the stools, the TV and the
   counter are.
-- **The service road:** it needs one reference made from section 2 above.
+- **The service road:** it has its map (section 2); a picture reference made from it would complete it.

@@ -918,8 +918,12 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 ## 46. One reference per location (26 October)
 - **The director:** "add a note to make one consistent reference to jacks office. also the hive carpark with map of where
   jack and mara are and shooter and driver so we can fix images. and a reminder to do for other locations".
-- **Then:** "don't make anymore maps you mapped jacks desk the wrong way". The plans Claude drew were not installed, and
-  the tool that drew them was deleted. The director makes the pictures and the references.
+- **Then:** "don't make anymore maps you mapped jacks desk the wrong way", "oh you still got the tool? could be useful", and
+  "the hive map was ok".
+  - **Installed:** the service road map, `sheets/hive-service-road-plan.jpg`.
+  - **Not installed:** the office plan (the desk is wrong).
+  - **Kept:** the tool, `tools/draw-location-plans.py`, with the office part marked wrong.
+  - The director makes the pictures and the references.
 - **All of it is in `docs/location-references.md`:**
   1. **Jack's office:** the one reference still to make, and what it has to settle. The office pictures show two different
      doors (in scene 10 Vera comes in through one and leaves through the other). JACK reads the right way round from
