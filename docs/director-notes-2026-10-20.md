@@ -837,3 +837,5 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - **"some pics missing like the bad guys outside inn".** In the film as it plays, 173 (the four sedans arriving) and 175 (the
   cars and the masked men, through the curtain) both show, 175 for about 5 s. The new inn-raid inserts (raid-39/41/42/47) are
   not in the film, as the director asked. Waiting to hear which pictures the director meant.
+- **"175-the-curtain-gap-r3.jpg".** That was the picture the director meant. It is in the film now as 175, with its
+  headlight glows moved onto the new headlights. The other §7 redos and the raid inserts are still not installed.

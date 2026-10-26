@@ -544,3 +544,10 @@ side and were not saved.
 
 Not made / not saved: `raid-43-gutter` (roof slide, scene 43) and `raid-44-corridor-low` (Jack low
 along the corridor, scene 44→45) — both vote pairs were passed on, so no file exists for either.
+
+## 175-r3 in the film, 26 October 2026
+
+The director asked for `175-the-curtain-gap-r3.jpg` (the lace curtain pulled aside, four cars, four men walking in; the redo
+for "too many bad guys"). It is installed as `s39/175-the-curtain-gap.jpg`, the old picture archived as
+`archive/s39/175-the-curtain-gap--v2.jpg`. Its headlight glows and lens flare were moved onto the new picture's headlights.
+The other three §7 redos (374-r2, 213-r4, 87-r4) and the raid inserts are still not installed.

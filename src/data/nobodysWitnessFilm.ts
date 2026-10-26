@@ -12606,46 +12606,64 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "lights": [
      {
-      "x": 28,
-      "y": 69,
       "color": "#eef4ff",
-      "size": 8,
-      "intensity": 0.45,
       "pulseSeconds": 8,
-      "pulseAmount": 0.05
-     },
-     {
-      "x": 41,
-      "y": 54,
-      "color": "#eef4ff",
+      "pulseAmount": 0.05,
+      "x": 31.5,
+      "y": 51,
       "size": 7,
-      "intensity": 0.4,
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05
+      "intensity": 0.4
      },
      {
-      "x": 61,
-      "y": 53,
       "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 47,
+      "y": 48,
       "size": 7,
-      "intensity": 0.4,
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05
+      "intensity": 0.4
      },
      {
-      "x": 76,
-      "y": 69,
       "color": "#eef4ff",
-      "size": 8,
-      "intensity": 0.45,
       "pulseSeconds": 8,
-      "pulseAmount": 0.05
+      "pulseAmount": 0.05,
+      "x": 58.5,
+      "y": 47.5,
+      "size": 6,
+      "intensity": 0.4
+     },
+     {
+      "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 66.5,
+      "y": 48,
+      "size": 6,
+      "intensity": 0.4
+     },
+     {
+      "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 76.5,
+      "y": 52,
+      "size": 7,
+      "intensity": 0.45
+     },
+     {
+      "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 84,
+      "y": 52.5,
+      "size": 7,
+      "intensity": 0.45
      }
     ],
     "lensFlare": {
      "preset": "anamorphic-blue",
-     "x": 28,
-     "y": 69,
+     "x": 76.5,
+     "y": 52,
      "intensity": 0.3,
      "streakIntensity": 0.55,
      "starburstIntensity": 0.2,
@@ -12692,46 +12710,64 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "lights": [
      {
-      "x": 28,
-      "y": 69,
       "color": "#eef4ff",
-      "size": 8,
-      "intensity": 0.45,
       "pulseSeconds": 8,
-      "pulseAmount": 0.05
-     },
-     {
-      "x": 41,
-      "y": 54,
-      "color": "#eef4ff",
+      "pulseAmount": 0.05,
+      "x": 31.5,
+      "y": 51,
       "size": 7,
-      "intensity": 0.4,
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05
+      "intensity": 0.4
      },
      {
-      "x": 61,
-      "y": 53,
       "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 47,
+      "y": 48,
       "size": 7,
-      "intensity": 0.4,
-      "pulseSeconds": 8,
-      "pulseAmount": 0.05
+      "intensity": 0.4
      },
      {
-      "x": 76,
-      "y": 69,
       "color": "#eef4ff",
-      "size": 8,
-      "intensity": 0.45,
       "pulseSeconds": 8,
-      "pulseAmount": 0.05
+      "pulseAmount": 0.05,
+      "x": 58.5,
+      "y": 47.5,
+      "size": 6,
+      "intensity": 0.4
+     },
+     {
+      "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 66.5,
+      "y": 48,
+      "size": 6,
+      "intensity": 0.4
+     },
+     {
+      "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 76.5,
+      "y": 52,
+      "size": 7,
+      "intensity": 0.45
+     },
+     {
+      "color": "#eef4ff",
+      "pulseSeconds": 8,
+      "pulseAmount": 0.05,
+      "x": 84,
+      "y": 52.5,
+      "size": 7,
+      "intensity": 0.45
      }
     ],
     "lensFlare": {
      "preset": "anamorphic-blue",
-     "x": 28,
-     "y": 69,
+     "x": 76.5,
+     "y": 52,
      "intensity": 0.3,
      "streakIntensity": 0.55,
      "starburstIntensity": 0.2,
@@ -28545,5 +28581,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "171d385fb48f"
+ "builtinRevision": "daaefe872043"
 } as unknown as Story;
