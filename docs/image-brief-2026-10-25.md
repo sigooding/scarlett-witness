@@ -795,11 +795,12 @@ consistency, her hair is wrong".
 
 ---
 
-# 8. Scene 77A, "The black glass" (26 October): a new scene, no pictures yet
+# 8. Scene 77A, "The black glass" (26 October): image set in progress
 
 **Scene 77A is new:** the night Mara dies, between Jack's office (77) and Vera's door at dawn (78). Its beats are in
-`src/film/story.json`, and it plays on black until these pictures exist. The scene, and why it is written this way, is in
-`docs/director-notes-2026-10-20.md`, item 45.
+`src/film/story.json`. Three selected plates and a tinted-car continuity reference are staged in `public/film/img/s77a/`,
+but the scene is not wired to them yet and still plays on black. The scene, and why it is written this way, is in
+`docs/director-notes-2026-10-20.md`, item 45; the current image status and continuity notes are in the folder README.
 
 **Rules that differ from the rest of this brief:**
 - **New pictures, not retakes.** Save them in `public/film/img/s77a/` under the names below, not in `retakes_2026_10_25/`.
@@ -838,6 +839,10 @@ consistency, her hair is wrong".
 > right-hand drive, moving at walking pace in the near lane. Every window is black glass. The driver is a dark silhouette
 > whose face is never seen. Nothing inside the car is lit.
 
+**New car continuity reference.** A vote-selected, vehicle-only reference is now in
+`public/film/img/s77a/style-sheets/kurose-sedan-tinted.jpg`. Attach it to the remaining car shots for the sedan's shape and
+opaque dark windows. The older 137 plate may still help with general body shape, but its cabin glow must not carry over.
+
 **THE HAND** (as `s51/311-the-hand-on-the-model.jpg`)
 > An old man's clean, manicured hand resting on the sill of a lowered rear car window: the slim silver watch with a white dial
 > on a dark leather strap, the dark navy suit sleeve and white shirt cuff, exactly as in the reference. Beyond the hand the
@@ -867,7 +872,7 @@ consistency, her hair is wrong".
 repeat; Jack is small, walking toward us, alone. Attach the Jack sheets and 85. LOOK + AVENUE + JACK.
 
 **8b. Headlights.** The same direction, closer, at Jack's chest height. Jack walks toward us, eyes ahead. Far behind him,
-two headlights come up the near lane, low and slow. Attach the Jack sheets, 85 and 137. LOOK + AVENUE + JACK + THE CAR.
+two headlights come up the near lane, low and slow. Attach the Jack sheets, 85, 137 and `s77a/style-sheets/kurose-sedan-tinted.jpg`. LOOK + AVENUE + JACK + THE CAR.
 
 **8c. Keeping pace** (optional). Side-on from across the road, both moving screen-left to screen-right: Jack on the far
 pavement, seen over the roof of the long black sedan that keeps pace in the lane beside him, every window still up, the
@@ -876,7 +881,7 @@ LOOK + AVENUE + JACK + THE CAR.
 
 **8d. The hand on the sill.** Close, from the pavement, over Jack's shoulder; his shoulder is soft in the near edge of the
 frame. The rear window is down; rain runs down the door. Beyond the hand on the sill, the back seat is black. Attach 311,
-137 and `sheets/jack.jpg` (for the shoulder only). LOOK + THE CAR + THE HAND.
+137, `sheets/jack.jpg` (for the shoulder only), and `s77a/style-sheets/kurose-sedan-tinted.jpg`. LOOK + THE CAR + THE HAND.
 
 **8e. Not any more.** An 85mm close single: Jack walking, three-quarter to the camera, eyes ahead, never toward the car;
 rain on his face; the black edge of the car's window soft and out of focus at the frame's edge. His face gives nothing away.
@@ -886,12 +891,12 @@ Attach the Jack sheets and 85. LOOK + JACK.
 flat against his shirt. Attach 85 and `s77/86-the-clean-envelope.jpg` (the envelope). LOOK + JACK.
 
 **8g. The black glass.** The rear window rising, close: black glass, rain on it, and in it the reflection of Jack's own face,
-with the streetlights doubled behind him. Nothing of the car's inside shows through. Attach the Jack sheets and 137.
-LOOK + THE CAR + JACK.
+with the streetlights doubled behind him. Nothing of the car's inside shows through. Attach the Jack sheets, 137, and
+`s77a/style-sheets/kurose-sedan-tinted.jpg`. LOOK + THE CAR + JACK.
 
 **8h. Tail lights.** From behind Jack at his shoulder height: Jack stands still on the wet pavement. Far ahead, the sedan's
 two red tail lights turn off the avenue into a side street. The streetlights repeat to the vanishing point. Attach the Jack
-sheets, 85 and 137. LOOK + AVENUE + JACK + THE CAR.
+sheets, 85, 137 and `s77a/style-sheets/kurose-sedan-tinted.jpg`. LOOK + AVENUE + JACK + THE CAR.
 
 **Check each picture before saving it:**
 - no face in the car;
