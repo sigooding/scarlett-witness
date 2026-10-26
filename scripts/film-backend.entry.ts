@@ -344,7 +344,10 @@ check(heels >= 0 && car > heels && /\/73-10-a-car-passes\.jpg$/.test(badGuy[car]
 // set, 15 of the shipped pictures and 5 earlier takes; the beat of 74-02 keeps no picture of its own, and 502 comes up on its own line again
 const runPics = [...new Set(badGuy.map((s) => s.background ?? ""))];
 const runFrom = (folder: string) => runPics.filter((b) => b.includes(`/${folder}/`)).length;
-eq([runFrom("vera_run_new"), runFrom("vera_run_takes")], [25, 8], "Bad Guy's run plays the director's picks: 25 new pictures and 8 earlier takes (three of them the 21 October retakes)");
+// (26 October 2026: the director's pick swaps 73-06 from the earlier take to the new set's own picture, which also ends 73-06 and
+// 73-08 being the same frame)
+eq([runFrom("vera_run_new"), runFrom("vera_run_takes")], [26, 7], "Bad Guy's run plays the director's picks: 26 new pictures and 7 earlier takes (three of them the 21 October retakes)");
+check(runPics.includes("/film/img/vera_run_new/73-06-her-face.jpg") && !runPics.some((b) => b.includes("73-06-her-face--70-not-elegantly-badly-playframe")), "73-06 is the new set's own picture, not the earlier take that repeated 73-08");
 check(!runPics.some((b) => /74-05-crying-almost-silently--|74-10-one-desperate-blow--|74-18-she-covers-her-face--/.test(b)) && runPics.includes("/film/img/s74/75-one-desperate-blow.jpg") && runPics.includes("/film/img/vera_run_new/74-18-she-covers-her-face.jpg"), "no take with the wrong Jack or the umbrella reflection: the shipped blow (75) and Vera covering her face (74-18) play instead");
 check(!runPics.some((b) => /74-02-jack-out-of-the-dark/.test(b)), "74-02 is left out; 74-01 holds while Jack walks out of the dark");
 const why = badGuy.find((s) => s.dialogueBeats?.[0]?.text?.startsWith("Why didn't you tell me?"));

@@ -128,7 +128,8 @@
   "436-he-wrote-to-vera": "mara",
   "186-everybody-sees-him": "repairman, jack, sleeping woman, family",
   "512-he-hasnt-stopped": "Harada and Vera, two men at desks, Jack in the glass office",
-  "460-parked-crooked": "Jack and Mrs. Noda"
+  "460-parked-crooked": "Jack and Mrs. Noda",
+  "73-06-her-face": "vera, waist up"
  },
  "peopleNote": "Pictures with people in them. A depth map alone stretches a person as the camera moves, so a depth entry on any of these must cut the people out (depthCutouts) and paint the gap in (depthPlate); scripts/film-depth.entry.ts fails otherwise. Add to it when a new picture with people gets depth.",
  "pictures": {
@@ -839,20 +840,6 @@
    "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
    "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
    "depthPlate": "/film/depth/s1/14-she-kneels/plate.jpg"
-  },
-  "15-the-grip": {
-   "picture": "public/film/img/s1/15-the-grip.jpg",
-   "cutouts": [
-    {
-     "name": "person 1",
-     "box": [0, 0, 1920, 1080],
-     "image": "/film/depth/s1/15-the-grip/cutout-1.png",
-     "depth": 0.058
-    }
-   ],
-   "note": "Automatic (tools/auto-cutouts.py, 22 October 2026): boxes from U2-Net, widened; not yet checked by eye. Review sheet in public/film/review/2026-10-22-auto-cutouts/.",
-   "depthMap": "/film/depth/s1/15-the-grip/depth.png",
-   "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg"
   },
   "16-the-key": {
    "picture": "public/film/img/s1/16-the-key.jpg",
@@ -2153,6 +2140,27 @@
    "depthMap": "/film/depth/s59/364-the-kotatsu/depth.png",
    "smooth": 0,
    "note": "Remade 25 October 2026 with Depth Anything V2 Small from the new picture (the director's note: the altar was on the wrong side; the room now matches 365-r1, which plays next, with the altar on the right). No people visible."
+  },
+  "73-06-her-face": {
+   "picture": "public/film/img/vera_run_new/73-06-her-face.jpg",
+   "cutouts": [
+    {
+     "name": "vera",
+     "box": [0, 0, 1308, 1504],
+     "people": true,
+     "image": "/film/depth/vera_run_new/73-06-her-face/cutout-1.png",
+     "depth": 0.687
+    }
+   ],
+   "note": "26 October 2026: the director picked the new 73-06 over the earlier take; layers made with Depth Anything V2 Small, BiRefNet with U2-Net, and LaMa. Waist up, so she takes the model's median under her (cutoutDepth: matte).",
+   "cutoutDepth": "matte",
+   "depthMap": "/film/depth/vera_run_new/73-06-her-face/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-06-her-face/plate.jpg"
+  },
+  "134-the-walkway-is-empty": {
+   "picture": "public/film/img/s91/134-the-walkway-is-empty.jpg",
+   "note": "26 October 2026: the director picked the earlier take (the walkway beside the tracks); nobody in it, so a map alone, made with Depth Anything. The map made for the picture it replaced is in git history.",
+   "depthMap": "/film/depth/s91/134-the-walkway-is-empty/depth.png"
   }
  }
 }

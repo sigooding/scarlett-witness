@@ -817,3 +817,13 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
     6 s. Before, both faded over the same 5 s.
   - Both dip under Ishida's next line.
   - FILM.md, first section. Nobody has listened yet.
+
+## 41. Sixteen swaps (26 October)
+- **"do 16 swaps".** All 16 versions chosen on "Every picture, in order" are in the film, each old picture archived first:
+  15, 339, 283, 189, 454, 171, 311, 478, 293, 73-06, 85, new-jack-walks-in-3, 134, 135, 156 and 157.
+  - **Depth.** 73-06 and 134 have new layers. 15 has no depth move now, because its map didn't follow the hands, and 14 moves
+    sideways so scene 1 never repeats a move.
+  - **Lamp glows.** 283's and 85's moved to the new lamps.
+  - **Flagged.** 189 v2 has no lamp, as the director's note says.
+  - FILM.md, first section.
+- **Still waiting for a yes, free:** the 9 unused takes, 336's first take as an extra beat, and scene 28's sound.

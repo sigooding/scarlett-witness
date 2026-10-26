@@ -137,7 +137,7 @@ export const PICKS = {
   "73-01-the-lobby": "original:69-vera-runs", "73-02-into-the-rain": "original:69-vera-runs",
   "73-03-she-runs": "take:73-03-she-runs--69-vera-runs-v2",
   "73-04-the-call-still-lit": "original:547-the-call-still-lit", "73-05-toward-the-tracks": "new",
-  "73-06-her-face": "take:73-06-her-face--70-not-elegantly-badly-playframe", "73-07-heels-on-wet-pavement": "new",
+  "73-06-her-face": "new", "73-07-heels-on-wet-pavement": "new",
   "73-08-she-slips": "take:73-08-she-slips--70-not-elegantly-badly-playframe", "73-09-she-cannot-breathe": "new",
   "73-10-a-car-passes": "new", "73-11-the-vending-machine": "take:73-11-the-vending-machine--71-the-machine-glows-v2",
   "73-12-the-crossing-chimes": "original:549-the-crossing-chimes", "73-13-on-red": "new",

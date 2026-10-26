@@ -1,5 +1,7 @@
 # Director's picks from "Every picture, in order" (25 October 2026)
 
+**Update, 26 October:** the 16 swaps of section 1 are in the film (137 was overtaken by 137-r4; FILM.md, "Sixteen of the director's swaps").
+
 **Update, 25 October (later):** nine of the retakes below are now in the film, and five of the car's pictures are made but
 not in it. What is still open, and in what order, is in `docs/handoff-2026-10-25.md`.
 

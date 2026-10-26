@@ -355,36 +355,11 @@
      "depth": 0.622
     }
    ],
-   "depthMotion": "push",
-   "depthAmount": 0.4,
-   "depthSeconds": 5,
-   "focalPoint": "57% 38%"
-  },
-  "people": "automatic: 1 found",
-  "cutoutCount": 1,
-  "review": {
-   "cutouts": "1",
-   "flags": "1 person-like shape(s) still found in the plate"
-  }
- },
- {
-  "name": "15-the-grip",
-  "scene": "s1",
-  "picture": "/film/img/s1/15-the-grip.jpg",
-  "cinematic": {
-   "mode": "static",
-   "depthMap": "/film/depth/s1/15-the-grip/depth.png",
-   "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg",
-   "depthCutouts": [
-    {
-     "image": "/film/depth/s1/15-the-grip/cutout-1.png",
-     "depth": 0.058
-    }
-   ],
    "depthMotion": "truck",
    "depthAmount": 0.4,
    "depthSeconds": 5,
-   "depthDirection": "right"
+   "depthDirection": "right",
+   "focalPoint": "57% 38%"
   },
   "people": "automatic: 1 found",
   "cutoutCount": 1,
@@ -1670,7 +1645,11 @@
    "depthCutouts": [
     {
      "image": "/film/depth/s29/354-the-altar-photograph/cutout-1.png",
-     "depth": 0.718
+     "depth": 0.594
+    },
+    {
+     "image": "/film/depth/s29/354-the-altar-photograph/cutout-2.png",
+     "depth": 0.346
     }
    ],
    "depthMotion": "drift",
@@ -1678,7 +1657,7 @@
    "depthSeconds": 6
   },
   "people": "Mrs. Sakai",
-  "cutoutCount": 1,
+  "cutoutCount": 2,
   "review": null
  },
  {
@@ -1727,14 +1706,24 @@
   "cinematic": {
    "mode": "static",
    "depthMap": "/film/depth/s37/460-parked-crooked/depth.png",
+   "depthPlate": "/film/depth/s37/460-parked-crooked/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/s37/460-parked-crooked/cutout-1.png",
+     "depth": 0.514
+    },
+    {
+     "image": "/film/depth/s37/460-parked-crooked/cutout-2.png",
+     "depth": 0.594
+    }
+   ],
    "depthMotion": "truck",
    "depthAmount": 0.34,
    "depthSeconds": 5,
-   "depthFocus": 0.58,
    "depthDirection": "left"
   },
-  "people": null,
-  "cutoutCount": 0,
+  "people": "Jack and Mrs. Noda",
+  "cutoutCount": 2,
   "review": null
  },
  {
@@ -2554,15 +2543,19 @@
    "depthCutouts": [
     {
      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-1.png",
-     "depth": 0.458
+     "depth": 0.364
     },
     {
      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-2.png",
-     "depth": 0.438
+     "depth": 0.714
     },
     {
      "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-3.png",
-     "depth": 0.047
+     "depth": 0.549
+    },
+    {
+     "image": "/film/depth/s82a/512-he-hasnt-stopped/cutout-4.png",
+     "depth": 0.102
     }
    ],
    "depthMotion": "truck",
@@ -2570,8 +2563,8 @@
    "depthSeconds": 12,
    "depthDirection": "right"
   },
-  "people": "harada and vera, man at desk, man on phone",
-  "cutoutCount": 3,
+  "people": "Harada and Vera, two men at desks, Jack in the glass office",
+  "cutoutCount": 4,
   "review": null
  },
  {
@@ -3067,6 +3060,28 @@
   "review": null
  },
  {
+  "name": "73-06-her-face",
+  "scene": "vera_run_new",
+  "picture": "/film/img/vera_run_new/73-06-her-face.jpg",
+  "cinematic": {
+   "mode": "static",
+   "depthMap": "/film/depth/vera_run_new/73-06-her-face/depth.png",
+   "depthPlate": "/film/depth/vera_run_new/73-06-her-face/plate.jpg",
+   "depthCutouts": [
+    {
+     "image": "/film/depth/vera_run_new/73-06-her-face/cutout-1.png",
+     "depth": 0.687
+    }
+   ],
+   "depthMotion": "truck",
+   "depthAmount": 0.4,
+   "depthSeconds": 5
+  },
+  "people": "vera, waist up",
+  "cutoutCount": 1,
+  "review": null
+ },
+ {
   "name": "73-07-heels-on-wet-pavement",
   "scene": "vera_run_new",
   "picture": "/film/img/vera_run_new/73-07-heels-on-wet-pavement.jpg",
@@ -3102,14 +3117,14 @@
    "depthCutouts": [
     {
      "image": "/film/depth/vera_run_new/73-09-she-cannot-breathe/cutout-1.png",
-     "depth": 0.392
+     "depth": 0.825
     }
    ],
    "depthMotion": "truck",
    "depthAmount": 0.4,
    "depthSeconds": 5
   },
-  "people": "automatic: 1 found",
+  "people": "Vera",
   "cutoutCount": 1,
   "review": {
    "cutouts": "1",

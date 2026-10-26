@@ -9,6 +9,32 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Sixteen of the director's swaps (26 October 2026)
+
+* **The swaps.** The director: "do 16 swaps". These are the versions already on disk that the director chose on "Every
+  picture, in order" (section 1 of `docs/director-picks-2026-10-25.md`; its 137 was overtaken by 137-r4). Each went in with
+  `tools/install-film-picture.mjs`, which archived the old picture first:
+  * 15, the PlayFrame take of the hands;
+  * 339 v1, 283 v1, 189 v2, 454 v2, 171 v2, 478 v1, 293 v2, 85 v2, 134 v1, 135 v1, 156 v1 and 157 v1, from the archive;
+  * new-jack-walks-in-3 v1, 1672 wide, enlarged to 1920×1080 by the tool (no Topaz, as the director asked);
+  * 311-r1--alt1. It is now the film's `s51/311-the-hand-on-the-model.jpg` (cropped to exact 16:9, full size), and
+    `story.json` points there instead of at the retake folder;
+  * 73-06, now the new set's own `vera_run_new/73-06-her-face.jpg`. This also ends 73-06 and 73-08 being the same frame. The
+    pick is in `tools/vera-run-cut.mjs` (PICKS), and `story.json` and the run's caption are changed by hand.
+* **Don't re-run `tools/vera-run-cut.mjs` as it is.** It would put the running shake back on six shots and drop three
+  sound cues added since (72-03's clock and glass, 75-04's vending hum, 73-03's heels).
+* **Depth.**
+  * 73-06 has new layers: Vera cut out, with `cutoutDepth: matte`.
+  * 134 has a new map alone, since nobody is in it. The map before it was made for the old picture and is in git history.
+  * 15 has no depth move now. Its map didn't follow the picture: two hands seen from above, over flat wet ground (review
+    +0.25). It takes the default slow camera, and its old layers stay on disk, unused.
+  * 14 now trucks right instead of pushing, so scene 1 still never makes the same move twice in a row. Without 15's move,
+    14 and 16 would both have pushed.
+  * Checked with `tools/review-depth-maps.py` (73-06 +0.75, 134 +0.99) and in `preview-depth/`.
+* **Lamp glows.** 283's glow moved to the new lamp (21%, 18%). 85's lamp glow moved to (43%, 50%), and its television
+  flicker is at (78%, 25%). 135's police lights and lit block are where they were.
+* **Flagged.** 189 v2 has no desk lamp (the director's own note on the pick: "missing a lamp").
+
 ## The piano Bad Guy merges into the sung one (26 October 2026)
 
 * **The note.** The director: "scene mara dying to vera bar the songs should merge in to each other so fade out 1st fade

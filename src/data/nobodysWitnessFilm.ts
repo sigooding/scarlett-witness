@@ -2411,7 +2411,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "push",
+      "depthMotion": "truck",
       "depthAmount": 0.4,
       "depthSeconds": 5,
       "depthMap": "/film/depth/s1/14-she-kneels/depth.png",
@@ -2422,6 +2422,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
         "depth": 0.622
        }
       ],
+      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -2449,25 +2450,13 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "silent": true,
      "background": "/film/img/s1/15-the-grip.jpg",
      "cinematic": {
-      "mode": "static",
+      "mode": "zoom-hold",
       "focalPoint": "50% 45%",
       "zoomDuration": 14,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMotion": "truck",
-      "depthAmount": 0.4,
-      "depthSeconds": 5,
-      "depthMap": "/film/depth/s1/15-the-grip/depth.png",
-      "depthPlate": "/film/depth/s1/15-the-grip/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s1/15-the-grip/cutout-1.png",
-        "depth": 0.058
-       }
-      ],
-      "depthDirection": "right",
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -8178,8 +8167,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "colorGrade": "midnight-teal",
       "lights": [
        {
-        "x": 27,
-        "y": 25,
+        "x": 21,
+        "y": 18,
         "color": "#ffd27a",
         "size": 20,
         "intensity": 0.4,
@@ -14298,7 +14287,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "characterId": "nw_narrator",
      "text": "The plaza underneath is already finished. Tiny painted people cross it.",
      "silent": true,
-     "background": "/film/img/retakes_2026_10_20/311-the-hand-on-the-model-r1.jpg",
+     "background": "/film/img/s51/311-the-hand-on-the-model.jpg",
      "cinematic": {
       "mode": "zoom-hold",
       "focalPoint": "50% 60%",
@@ -19111,11 +19100,11 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "id": "nw_song_bad-guy_11",
    "title": "The night after the call: Rain plasters her hair to her face.",
    "animaticMark": "73",
-   "background": "/film/img/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe.jpg",
+   "background": "/film/img/vera_run_new/73-06-her-face.jpg",
    "cinematic": {
     "mode": "static",
     "focalPoint": "35% 50%",
-    "zoomDuration": 18,
+    "zoomDuration": 15,
     "dollyDirection": "left",
     "dollyDistance": 3,
     "dollyDuration": 24,
@@ -19123,12 +19112,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "depthMotion": "truck",
     "depthAmount": 0.4,
     "depthSeconds": 5,
-    "depthMap": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/depth.png",
-    "depthPlate": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/plate.jpg",
+    "depthMap": "/film/depth/vera_run_new/73-06-her-face/depth.png",
+    "depthPlate": "/film/depth/vera_run_new/73-06-her-face/plate.jpg",
     "depthCutouts": [
      {
-      "image": "/film/depth/vera_run_takes/73-06-her-face--70-not-elegantly-badly-playframe/cutout-1.png",
-      "depth": 0.583
+      "image": "/film/depth/vera_run_new/73-06-her-face/cutout-1.png",
+      "depth": 0.687
      }
     ],
     "filmGrade": false,
@@ -21386,8 +21375,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
     "colorGrade": "midnight-teal",
     "lights": [
      {
-      "x": 31,
-      "y": 44,
+      "x": 43,
+      "y": 50,
       "color": "#ffd27a",
       "size": 16,
       "intensity": 0.45,
@@ -21395,8 +21384,8 @@ export const NOBODYS_WITNESS_FILM: Story = {
       "pulseAmount": 0.2
      },
      {
-      "x": 79,
-      "y": 24,
+      "x": 78,
+      "y": 25,
       "color": "#e6ecf5",
       "size": 10,
       "intensity": 0.3,
@@ -28556,5 +28545,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "2903374b4833"
+ "builtinRevision": "e092b2e7f432"
 } as unknown as Story;
