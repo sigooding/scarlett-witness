@@ -551,3 +551,8 @@ The director asked for `175-the-curtain-gap-r3.jpg` (the lace curtain pulled asi
 for "too many bad guys"). It is installed as `s39/175-the-curtain-gap.jpg`, the old picture archived as
 `archive/s39/175-the-curtain-gap--v2.jpg`. Its headlight glows and lens flare were moved onto the new picture's headlights.
 The other three §7 redos (374-r2, 213-r4, 87-r4) and the raid inserts are still not installed.
+
+## 374-r2 and 213-r4 in the film; 87 is montage18-01-r1 (26 October 2026)
+
+As the director asked: 374-r2 (with its depth move taken off) and 213-r4 are installed, and `montage18-01-r1.jpg` is now
+`s77/87-he-writes-nothing.jpg` in place of 87-r4, which is not used. The raid inserts are still not installed.

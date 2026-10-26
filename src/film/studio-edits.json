@@ -1911,24 +1911,6 @@
     "depthDirection": "left"
    }
   },
-  "374-the-dead-television": {
-   "cinematic": {
-    "mode": "static",
-    "zoomDuration": 18,
-    "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
-    "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg",
-    "depthCutouts": [
-     {
-      "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
-      "depth": 0.42
-     }
-    ],
-    "depthMotion": "push",
-    "depthAmount": 0.45,
-    "depthSeconds": 5,
-    "focalPoint": "60% 45%"
-   }
-  },
   "195-somewhere-like-this": {
    "cinematic": {
     "mode": "static",
@@ -6262,7 +6244,7 @@
     },
     {
      "pic": "175-the-curtain-gap",
-     "text": "Four black cars. Eight masked men.",
+     "text": "Four black cars. Five masked men.",
      "seconds": 3
     },
     {

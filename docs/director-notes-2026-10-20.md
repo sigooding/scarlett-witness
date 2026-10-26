@@ -839,3 +839,11 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
   not in the film, as the director asked. Waiting to hear which pictures the director meant.
 - **"175-the-curtain-gap-r3.jpg".** That was the picture the director meant. It is in the film now as 175, with its
   headlight glows moved onto the new headlights. The other §7 redos and the raid inserts are still not installed.
+
+## 43. Five men, and the redos in (26 October)
+- **"change to 5 men add the redos. except 87-r4 replace that one with montage18-01-r1".**
+  - 175-r3 is in, and the raid caption, scene 39 and scene 49 now say five men.
+  - 374-r2 and 213-r4 are in.
+  - 87 is now `montage18-01-r1`.
+- **"just remove depth map for that one".** 374 has no depth move now.
+- FILM.md, first section.

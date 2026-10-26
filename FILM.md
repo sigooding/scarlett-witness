@@ -9,6 +9,24 @@ One scene node per film scene; every shot is a dialogue beat's background, so th
 
 
 
+## Five men at the inn, and three more redos (26 October 2026)
+
+* **175-r3** (the lace curtain pulled aside, the men walking in) replaces 175. Its headlight glows and lens flare moved
+  onto the new headlights.
+* **Five men, not eight** (the director: "change to 5 men"). This changes three places:
+  * the raid's caption on 175, now "Four black cars. Five masked men.";
+  * scene 39's line, now "Five MEN step out.", which drops "two from each car";
+  * scene 49, now "The five men walk out into the lot…".
+
+  The picture shows four walking in; the fifth is behind the curtain.
+* **374-r2** (Vera crouched, her coat on). Its depth move is off, as the director asked. The old layers, made from a
+  hand-made source map for the old picture, stay on disk, unused.
+* **213-r4** (no floating torch). It was 3:2, so the install tool cropped it to 16:9.
+* **87 is `montage18-01-r1`**, as the director chose: Jack at the desk by lamplight with the sketchbook and the letter. That
+  picture also opens montage 18, so it plays twice. 87-r4 is not used.
+* All three were under 1920 wide and are only enlarged, not upscaled. Each old picture was archived first.
+* Still stored for review, not installed: the four inn-raid inserts.
+
 ## Sixteen of the director's swaps (26 October 2026)
 
 * **The swaps.** The director: "do 16 swaps". These are the versions already on disk that the director chose on "Every

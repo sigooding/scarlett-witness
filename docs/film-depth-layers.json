@@ -371,24 +371,6 @@
    "cutoutDepth": "matte",
    "note": "Remade 25 October 2026 for the new picture (the director's note: Jack was missing; he now kneels at the right of the kotatsu). Depth Anything V2 Small from the new picture; the old map, made for the picture without Jack, is no longer used. Both kneel behind the kotatsu with no feet in shot, so each takes the model's median under them (cutoutDepth: matte)."
   },
-  "374-the-dead-television": {
-   "picture": "public/film/img/s27a/374-the-dead-television.jpg",
-   "depthSource": "public/film/depth/s27a/374-the-dead-television/source-depth.png",
-   "cutouts": [
-    {
-     "name": "vera",
-     "box": [560, 400, 420, 680],
-     "exclude": [
-      [440, 770, 315, 310],
-      [440, 885, 395, 195]
-     ],
-     "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
-     "depth": 0.42
-    }
-   ],
-   "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
-   "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg"
-  },
   "379-the-laundry": {
    "picture": "public/film/img/s90/379-the-laundry.jpg",
    "depthSource": "public/film/depth/s90/379-the-laundry/source-depth.png",

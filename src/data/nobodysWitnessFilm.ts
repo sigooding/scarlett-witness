@@ -11201,23 +11201,12 @@ export const NOBODYS_WITNESS_FILM: Story = {
      "background": "/film/img/s27a/374-the-dead-television.jpg",
      "cinematic": {
       "mode": "static",
-      "focalPoint": "60% 45%",
-      "zoomDuration": 18,
+      "focalPoint": "50% 45%",
+      "zoomDuration": 20,
       "dollyDirection": "right",
       "dollyDistance": 3,
       "dollyDuration": 24,
       "colorGrade": "midnight-teal",
-      "depthMap": "/film/depth/s27a/374-the-dead-television/depth.png",
-      "depthPlate": "/film/depth/s27a/374-the-dead-television/plate.jpg",
-      "depthCutouts": [
-       {
-        "image": "/film/depth/s27a/374-the-dead-television/cutout-1.png",
-        "depth": 0.42
-       }
-      ],
-      "depthMotion": "push",
-      "depthAmount": 0.45,
-      "depthSeconds": 5,
       "filmGrade": false,
       "volumetricShafts": false
      },
@@ -12593,7 +12582,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
   },
   {
    "id": "nw_cut_inn-raid_02",
-   "title": "The raid on the inn: Four black cars. Eight masked men.",
+   "title": "The raid on the inn: Four black cars. Five masked men.",
    "animaticMark": "39",
    "background": "/film/img/s39/175-the-curtain-gap.jpg",
    "cinematic": {
@@ -12687,7 +12676,7 @@ export const NOBODYS_WITNESS_FILM: Story = {
     {
      "id": "nw_cut_inn-raid_b2",
      "characterId": "nw_narrator",
-     "text": "Four black cars. Eight masked men.",
+     "text": "Four black cars. Five masked men.",
      "silent": true,
      "afterBeatMode": "auto",
      "afterBeatDelaySeconds": 2.42,
@@ -28581,5 +28570,5 @@ export const NOBODYS_WITNESS_FILM: Story = {
    "autoNarrate": false
   }
  ],
- "builtinRevision": "daaefe872043"
+ "builtinRevision": "53aec18282d0"
 } as unknown as Story;
