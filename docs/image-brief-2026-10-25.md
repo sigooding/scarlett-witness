@@ -790,6 +790,116 @@ consistency, her hair is wrong".
 
 ---
 
+# 8. Scene 77A, "The black glass" (26 October): a new scene, no pictures yet
+
+**Scene 77A is new:** the night Mara dies, between Jack's office (77) and Vera's door at dawn (78). Its beats are in
+`src/film/story.json`, and it plays on black until these pictures exist. The scene, and why it is written this way, is in
+`docs/director-notes-2026-10-20.md`, item 45.
+
+**Rules that differ from the rest of this brief:**
+- **New pictures, not retakes.** Save them in `public/film/img/s77a/` under the names below, not in `retakes_2026_10_25/`.
+  Report them in that folder's README like the rest.
+- **A new street.** Attach no street from the film for the place: not the Kanda backstreet, not under the tracks, not the
+  station of 93–94.
+
+**Never, in any of these pictures:**
+- **Kurose's face:** no face, profile, hair or eyes, not even in shadow. The back seat is black, and only his hand shows.
+  Vera is the first to see his face, in 83.
+- **His sheet:** do not attach `sheets/kurose.jpg`. It is a face, and the generator will draw it.
+- **Light inside the car:** none, unlike 93–94. Nothing in the car is lit, so the back seat stays black.
+- **Anyone else on the street, or any other car.**
+- **Mirroring.** Never mirror a picture.
+
+**Prompt blocks (paste these, in this wording):**
+
+**LOOK**
+> Photorealistic contemporary Tokyo neo-noir film still, 16:9, before dawn in steady rain. Cold slate and teal-blue-green
+> shadows; hard white light from tall identical streetlights; wet black asphalt with long mirror reflections; restrained
+> 35mm grain, subtle highlight halation. No legible text, signage, logos, number plates or watermarks.
+
+**AVENUE**
+> A wide, straight Tokyo avenue before dawn, completely empty: shuttered bank fronts and dark glass office lobbies with
+> nobody inside, a long row of tall identical white streetlights running away to a vanishing point, wide wet pavements with
+> young bare trees in square iron grates. No traffic, no people, no lit signs. Clean, new, expensive and cold.
+
+**JACK, that night** (as `sheets/jack-face.jpg`, `sheets/jack.jpg` and `s77/85-the-desk-lamp.jpg`)
+> Western man, late 50s, tall and lean, lined weathered face, short grey stubble; dark hair greying at the sides, soaked and
+> slicked back by the rain. The same dark charcoal jacket as in the third image, open and dark with rain, over an off-white
+> open-collar shirt; dark trousers. No coat, no hat, no umbrella. His hands are not washed: dark dried stains in the creases
+> of his fingers.
+
+**THE CAR** (as `reshoot-1080/137-he-knows-this-car.jpg`)
+> Kurose's car: a long black 1990s Japanese luxury four-door saloon with a chrome grille, polished, rain beading on it,
+> right-hand drive, moving at walking pace in the near lane. Every window is black glass. The driver is a dark silhouette
+> whose face is never seen. Nothing inside the car is lit.
+
+**THE HAND** (as `s51/311-the-hand-on-the-model.jpg`)
+> An old man's clean, manicured hand resting on the sill of a lowered rear car window: the slim silver watch with a white dial
+> on a dark leather strap, the dark navy suit sleeve and white shirt cuff, exactly as in the reference. Beyond the hand the
+> back seat is pitch black: no face, no profile, no hair.
+
+**The geography:**
+- **The pavement.** Jack walks the left-hand pavement, and the sedan comes up the near lane on his right.
+- **The window.** Cars keep left in Japan, so the window that comes down is the car's rear LEFT one. That is Kurose's own
+  seat, as in the seat lock of section 1.
+- **The screen direction.** Hold the same direction in every picture:
+  - Jack walks toward the camera.
+  - The headlights come up behind him.
+  - In the side-on pictures, both move screen-left to screen-right.
+
+| # | File (`s77a/`) | Plays on (the scene's words) | Essential |
+|---|---|---|---|
+| 8a | `77a-01-the-avenue.jpg` | "Before dawn. A wide avenue of shuttered banks…" and "Jack walks with the envelope flat inside his jacket." | yes |
+| 8b | `77a-02-headlights.jpg` | "Headlights behind him. A long black sedan comes up slowly and keeps his pace. He doesn't look at it." | yes |
+| 8c | `77a-03-keeping-pace.jpg` | the same line, after 8b | no |
+| 8d | `77a-04-the-hand-on-the-sill.jpg` | "The rear window comes down… His face stays in the dark." and KUROSE: "Detective." | yes |
+| 8e | `77a-05-not-any-more.jpg` | JACK: "Not any more." up to KUROSE: "Everyone is allowed one." | yes |
+| 8f | `77a-06-the-envelope.jpg` | "Jack keeps walking. Inside his jacket, his hand closes on the envelope." | no |
+| 8g | `77a-07-the-black-glass.jpg` | "The window rises. In the black glass, Jack sees only his own face." | yes |
+| 8h | `77a-08-tail-lights.jpg` | "The sedan pulls ahead without hurry…" and "Jack stands in the rain a moment…" | yes |
+
+**8a. The avenue.** A long lens from far down the pavement. The avenue runs away to its vanishing point; the streetlights
+repeat; Jack is small, walking toward us, alone. Attach the Jack sheets and 85. LOOK + AVENUE + JACK.
+
+**8b. Headlights.** The same direction, closer, at Jack's chest height. Jack walks toward us, eyes ahead. Far behind him,
+two headlights come up the near lane, low and slow. Attach the Jack sheets, 85 and 137. LOOK + AVENUE + JACK + THE CAR.
+
+**8c. Keeping pace** (optional). Side-on from across the road, both moving screen-left to screen-right: Jack on the far
+pavement, seen over the roof of the long black sedan that keeps pace in the lane beside him, every window still up, the
+shuttered fronts behind him. Attach as 8b.
+LOOK + AVENUE + JACK + THE CAR.
+
+**8d. The hand on the sill.** Close, from the pavement, over Jack's shoulder; his shoulder is soft in the near edge of the
+frame. The rear window is down; rain runs down the door. Beyond the hand on the sill, the back seat is black. Attach 311,
+137 and `sheets/jack.jpg` (for the shoulder only). LOOK + THE CAR + THE HAND.
+
+**8e. Not any more.** An 85mm close single: Jack walking, three-quarter to the camera, eyes ahead, never toward the car;
+rain on his face; the black edge of the car's window soft and out of focus at the frame's edge. His face gives nothing away.
+Attach the Jack sheets and 85. LOOK + JACK.
+
+**8f. The envelope** (optional). An insert: inside his open jacket, his unwashed hand closes on a plain white envelope held
+flat against his shirt. Attach 85 and `s77/86-the-clean-envelope.jpg` (the envelope). LOOK + JACK.
+
+**8g. The black glass.** The rear window rising, close: black glass, rain on it, and in it the reflection of Jack's own face,
+with the streetlights doubled behind him. Nothing of the car's inside shows through. Attach the Jack sheets and 137.
+LOOK + THE CAR + JACK.
+
+**8h. Tail lights.** From behind Jack at his shoulder height: Jack stands still on the wet pavement. Far ahead, the sedan's
+two red tail lights turn off the avenue into a side street. The streetlights repeat to the vanishing point. Attach the Jack
+sheets, 85 and 137. LOOK + AVENUE + JACK + THE CAR.
+
+**Check each picture before saving it:**
+- no face in the car;
+- no lit interior;
+- no legible plate or sign;
+- Jack's jacket, hair and stubble as in 85;
+- the watch and cuff as in 311;
+- the same screen direction as the pictures before it.
+
+**Cost:** about 1,100 credits a picture at 4K, so about 6,600 for the six essential ones; about 11 credits are left.
+
+---
+
 # Not for you: free fixes, no new picture
 
 Listed in `docs/director-picks-2026-10-25.md` and applied by the film's maintainer once the director agrees:

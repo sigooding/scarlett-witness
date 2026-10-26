@@ -337,6 +337,15 @@ eq(FILM.scenes.find((s) => s.id === "nw_s77_after")?.musicMode, undefined, "whic
 eq(runOf("midnight").map((s) => s.id), [], "the midnight song's run is gone");
 eq(FILM.scenes.filter((s) => s.musicUrl === "/film/audio/midnight-in-the-rain.mp3").map((s) => s.id), [], "and nothing in the film starts the midnight song");
 eq(["nw_s78", "nw_s79"].map((id) => FILM.scenes.find((s) => s.id === id)?.musicMode), ["none", undefined], "scene 78 is music-off again and scene 79 plays on the silence");
+// scene 77A (26 October 2026, the director: "does jack need to be antagonised"): Kurose's car finds Jack on a new street the night
+// Mara dies. It plays after the inn, so scene 50's "Only two people knew where he was going tonight" still has only its two answers,
+// and Kurose's face stays dark for Vera to see first (83). Beats only for now: no picture yet, and the lines wait for their takes.
+const s77a = at("nw_s77a"), order77a = FILM.scenes.map((s) => s.id), beats77a = s77a?.dialogueBeats ?? [];
+check(!!s77a && at("nw_s77_after")?.dialogueBeats?.at(-1)?.afterBeatTargetSceneId === "nw_s77a" && beats77a.at(-1)?.afterBeatTargetSceneId === "nw_s78" && order77a.indexOf("nw_s77a") > order77a.indexOf("nw_s50"), "scene 77A plays between Jack's office and Vera's door, long after the inn");
+const lines77a = beats77a.filter((b) => b.characterId !== "nw_narrator");
+eq(lines77a.map((b) => b.characterId), ["nw_kurose", "nw_jack", "nw_kurose", "nw_kurose", "nw_jack", "nw_kurose"], "in 77A Kurose speaks four lines and Jack two");
+check(lines77a.every((b) => !!b.audioUrl !== !!b.silent), "each of them plays its take or waits for one, shown silent (never the browser's voice)");
+check(beats77a.some((b) => b.text === "His face stays in the dark.") && !beats77a.some((b) => /\b(tea|report|Sakai|coast|inn)\b/i.test(b.text ?? "")), "his face stays in the dark, and nothing in the scene points at the inn, the tea or the report");
 eq(FILM.scenes.filter((s) => /^nw_s7[3-6]/.test(s.id)).map((s) => s.id), [], "scenes 73 to 76 play inside the Bad Guy run (nothing of them is left to click through)");
 eq(badGuy.filter((s) => !s.hideHud).map((s) => s.id), [], "every node of the run is a cutscene node (no HUD; the builder takes the bars off every node last)");
 // the car that drives past while Vera runs (scene 73, "A car passing, its tyres hissing") plays after her heels; since the vera_run_new

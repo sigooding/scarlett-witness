@@ -852,28 +852,65 @@ The director: "i think his voice is too deep for old japanese man so redo." The 
 - **"ok add them".** raid-39, raid-41, raid-42 and raid-47 play in the inn raid on the beats they were made for. FILM.md,
   first section.
 
-## 45. Kurose meets Jack: a scene to add later (26 October)
-- **"does jack need to be antagonised or something at some point".**
-  - **The gap.** Jack is pressed by Ishida (hidden until 80), the faceless hit team, Vera and his own past, but he never meets
-    Kurose. Kurose faces only Vera (83), and Jack only hears him on the tape (82).
-  - **The fix.** One short scene where the man at the top looks at him.
-- **The director chose this wording** ("I'm not on any ones pay roll anymore", meaning the police payroll). It came after
-  turning down a shouted threat, which is not how Jack talks and would give his plan away; his real blow is scene 82.
-- **The scene.** It goes after Mrs. Sakai (29), before the inn. A black sedan pulls up beside Jack in the rain; the rear door
-  opens; Kurose's clean hand holds out a cup of tea.
-  - KUROSE: Detective. You signed a report for me once. I never thanked you.
-  - JACK: You didn't need to.
-  - KUROSE (holding out the cup): It's only tea.
-  - JACK: I'm not on the police payroll any more. Nobody tells me what to sign.
-  - He walks away into the rain. The door closes.
-- **Why it works:**
-  - The hero and the villain meet once.
-  - In 94 Ishida is offered the same tea at the same door, with the same line, and gets in: Jack refused, Ishida accepted,
-    so his end in 96 is felt before it is told.
-  - It needs no new characters.
-- **To do, once there are credits:**
-  1. Write the scene into `src/film/story.json`, between 29 and 30.
-  2. Make three or four pictures to the car lock in the image brief, section 1: the same sedan as 93–94.
-  3. Record the four lines in Jack's and Kurose's saved voices.
-  4. Rebuild and add a film check.
-- **Cost.** About 1,100 credits a picture at 4K and about 100–200 for the lines; about 11 credits are left.
+## 45. Scene 77A, "The black glass": Kurose meets Jack (26 October)
+- **The director: "does jack need to be antagonised or something at some point".** Jack never meets the man at the top:
+  Kurose faces only Vera (83), and Jack only hears him on the tape (82). This scene is the one time Kurose looks at Jack.
+- **How the director shaped it:** a confronting Jack, but not a shouted threat; "maybe it was a mistake"; "a bit longer and
+  forget the tea"; "shouldn't he be hard to temper"; "doesn't necessarily have to relate to past events"; night, a new street;
+  then "do what you choose". The tea, the report and "the police payroll" of the first drafts are all gone.
+- **In the film now, beats only:** scene 77A, `EXT. EMPTY AVENUE - NIGHT`, in `src/film/story.json`. It comes between Jack's
+  office (77) and the envelope at Vera's door (78).
+  - **No pictures:** it plays on black until they exist.
+  - **No takes:** the six lines are shown silent and carry `takePending`, the direction and words to record. The build lists
+    them as waiting.
+  - **The only sound is the builder's default rain and distant traffic,** the same as every other exterior in rain.
+  - `npm run test:film-backend` checks:
+    - where it sits;
+    - who speaks;
+    - that its lines are never read by the browser's voice;
+    - that it shows no face and mentions no inn, tea or report.
+- **The scene:**
+  > *Before dawn. A wide avenue of shuttered banks and dark office lobbies. White streetlights in a long straight row, each one
+  > the same. Rain on the asphalt. Nobody.*
+  > *Jack walks with the envelope flat inside his jacket. He still hasn't washed his hands.*
+  > *Headlights behind him. A long black sedan comes up slowly and keeps his pace. He doesn't look at it.*
+  > *The rear window comes down. The back seat is dark. A man's hand rests on the sill: clean, with the watch from the model.
+  > His face stays in the dark.*
+  > KUROSE: Detective.
+  > JACK: Not any more.
+  > KUROSE: No. I was sorry to hear about the girl.
+  > *Jack keeps walking. Inside his jacket, his hand closes on the envelope.*
+  > KUROSE: You were a sensible policeman, I'm told. You always knew when to stop.
+  > JACK: Maybe that was a mistake.
+  > KUROSE: Everyone is allowed one.
+  > *The window rises. In the black glass, Jack sees only his own face.*
+  > *The sedan pulls ahead without hurry and turns off into the dark.*
+  > *Jack stands in the rain a moment. Then he walks on, the way he was going.*
+- **Why after 77 and not before the inn,** where the first draft put it (after Mrs. Sakai, 29):
+  - **Scene 50's clue.** On the road at dawn Jack counts the two people who knew where he was going: Ishida and Vera.
+    - If Kurose's car had found him on the coast, or Kurose had said "You've been to see Mrs. Sakai", the raid would have a
+      third answer: they followed him.
+    - The doubt that keeps Jack and Vera apart until 74 would be gone.
+    - After 77 the raid is long over, and nothing in the scene explains it.
+  - **The face is Vera's to see.** Until Vera sits across from him in 83 ("I wanted to see your face." / "It's just a
+    face."), Kurose is only a hand (51). Here too he is the hand with the watch from the model, and his face stays in the dark.
+  - **The voice is Jack's to know.** When the tape plays in 82 and Harada says "That's Kurose.", Jack's "That's Kurose." is now
+    him recognising a voice he heard last night.
+  - **The worst night to meet him.** It is the night Mara dies, and "I was sorry to hear about the girl" is the cruellest
+    thing anyone could say to Jack. He gives back one line. At dawn he leaves the notebook at Vera's door (78), and in 82 he
+    speaks for the first time in twenty years. "You always knew when to stop" / "Maybe that was a mistake" is the hinge.
+  - **Neither man loses his temper.**
+    - Kurose has "the stillness of a man who has never had to hurry", and the first flicker of irritation anyone sees in him
+      is Vera's (83).
+    - Jack has kept quiet for twenty years.
+    - So nobody raises his voice, and the threat, "Everyone is allowed one.", is said amused.
+  - **No backstory spelled out.** There is no report and no tea: Kurose already pours Vera tea in 83 and offers Ishida a cup
+    in 94, so a third time would wear it out. "I'm told" leaves a thread to Ishida, Jack's old senior, for 80 to pull.
+- **Waiting for credits:**
+  1. **The pictures:** section 8 of `docs/image-brief-2026-10-25.md`, with the sheets to attach. There are eight, six of
+     them essential, at about 1,100 credits each at 4K.
+  2. **The six lines,** in the voices Jack and Kurose speak in elsewhere: about 150–250 credits. The directions are in the
+     scene's `takePending`.
+  3. **Put them in:** each picture as a `bg` step with its quote, each take as the line's `voice` in place of `takePending`.
+     Then rebuild and check each picture's depth.
+- **Only in the film for now.** PlayFrame's screenplay (`Neonoire (3).fountain`) doesn't have this scene.
