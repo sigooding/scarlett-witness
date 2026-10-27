@@ -166,8 +166,8 @@ a small threshold). Choose five that cover:
    plays a keyframe and checks a frame.
 7. **README.** How to import, edit, play and export, and what is not yet the same as Scarlet Reel.
 
-**Build it in this order, and stop to show the director after step 3.** Adding pictures and editing effects are the
-point of the app, so the review comes once they work, with the checks from the follow-up prompt below.
+**Build all of it, in this order, without stopping for review.** Adding pictures and editing effects (step 3) are the
+point of the app: build them in full, with the checks in the section below.
 1. the importer and the timeline list;
 2. preview and playback with the copied effects, and the parity check;
 3. editing: picking and uploading a picture for a keyframe, adding keyframes, and editing every effect (the follow-up
@@ -178,7 +178,7 @@ point of the app, so the review comes once they work, with the checks from the f
 
 ---
 
-## Follow-up prompt: adding pictures and editing effects (step 3)
+## Step 3 in full: adding pictures and editing effects
 
 **Why this is needed.** The first run stopped after step 2, as this prompt told it to, so it built no editing.
 
