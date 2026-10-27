@@ -170,72 +170,64 @@ a small threshold). Choose five that cover:
 point of the app: build them in full, with the checks in the section below.
 1. the importer and the timeline list;
 2. preview and playback with the copied effects, and the parity check;
-3. editing: picking and uploading a picture for a keyframe, adding keyframes, and editing every effect (the follow-up
-   prompt at the end lists exactly what);
+3. editing: picking and uploading a picture for a keyframe, adding keyframes, and editing every effect (the section after this list says exactly what);
 4. the audio tracks;
 5. MP4 export;
 6. export back to Scarlet Reel.
 
----
-
 ## Step 3 in full: adding pictures and editing effects
 
-**Why this is needed.** The first run stopped after step 2, as this prompt told it to, so it built no editing.
+These two features are the point of the app. Do not finish until every check below passes.
 
-**Paste this to the same agent, in the same repository:**
+**1. Adding a new picture to a keyframe.**
+- **The panel.** The selected keyframe's panel has a "Picture" section with a large thumbnail of its current picture and
+  two buttons: "Choose…" and "Upload…".
+- **Choose…** opens a picture browser:
+  - every image in the project and in the imported media folder, grouped by folder;
+  - a search box;
+  - thumbnails, loaded lazily, with a virtualised list (there are 800+);
+  - a larger preview on hover.
 
-> Continue with step 3 of the brief: editing. Two features are missing and are the point of the app. Build them both
-> before anything else, and do not stop until every check below passes.
->
-> **1. Adding a new picture to a keyframe.**
-> - **The panel.** The selected keyframe's panel has a "Picture" section with a large thumbnail of its current picture and
->   two buttons: "Choose…" and "Upload…".
-> - **Choose…** opens a picture browser:
->   - every image in the project and in the imported media folder, grouped by folder;
->   - a search box;
->   - thumbnails, loaded lazily, with a virtualised list (there are 800+);
->   - a larger preview on hover.
->
->   Clicking one puts it on the keyframe at once: the preview and the timeline thumbnail update, and it can be undone.
-> - **Upload…** (and dropping an image file anywhere on the panel or on a timeline row):
->   - stores the file byte for byte in the project's media, under a new name (never overwriting);
->   - adds it to the browser;
->   - puts it on that keyframe.
->
->   If it is not 16:9, offer to crop it to 16:9 (draggable crop box); never shrink it. Below 1920×1080, it may be enlarged.
-> - **Adding a keyframe.** "Add keyframe after" (and the + between timeline rows) inserts a new keyframe in the same scene,
->   with the same text split or no text, then opens "Choose…" for it.
-> - **Removing a picture.** "Remove picture" makes the keyframe carry the one before.
->
-> **2. Editing every effect of a keyframe.**
-> - **One control per field.** The panel has an "Effects" section with a control for every field of `CinematicSettings`
->   (in Scarlet Reel's `src/types.ts`) that the imported film uses or the copied renderer supports. List them all from the
->   type, so none is missed:
->   - camera mode, focal point (click on the preview to set it), zoom, its duration and easing;
->   - the start and end framing;
->   - the depth map: pick a map file, its move, amount and seconds; the cut-out layers listed;
->   - grade (the named presets), lights, lens flare, vignette and grain;
->   - particles (kind, density, opacity, wind);
->   - transition and its speed; hold and revert.
-> - **What a change does.** Every change shows in the live preview at once and can be undone. A "Reset to imported"
->   button sits on each field.
-> - **Copying effects.** "Copy effects" and "Paste effects" carry a keyframe's whole effects block to other selected
->   keyframes (shift-click to select several).
-> - **Sound effect.** In the same panel: choose from the project's sounds (with play on hover) or upload, set its volume,
->   and remove it.
->
-> **Checks (show me each, with a screenshot):**
-> - **A picture from the browser:** pick one for keyframe 1 of scene 77. The preview, the timeline thumbnail and the
->   played animatic all show it. Undo restores the old one.
-> - **An upload:** upload a new image and drop another onto a timeline row. Both are stored with their original bytes
->   (compare checksums) and both play.
-> - **Effects:** on one keyframe, change the zoom, the focal point, the grade and the depth move, and turn rain on. The
->   preview changes with each; play shows the same; undo reverses each.
-> - **Copy and paste:** copy the effects to three other keyframes, and they match.
-> - **They are saved:** reload the page; every change is still there (autosave).
-> - **Export:** export a `.reel.json` and the `studio-edits.json` patch, and show the changed keyframe's entries in both.
-> - **Tests:** add unit tests for "set picture", "upload keeps bytes", "set effect field", "copy/paste effects", and undo
->   for each. Run all the tests and show the output.
->
-> Report what works and what doesn't, plainly.
+  Clicking one puts it on the keyframe at once: the preview and the timeline thumbnail update, and it can be undone.
+- **Upload…** (and dropping an image file anywhere on the panel or on a timeline row):
+  - stores the file byte for byte in the project's media, under a new name (never overwriting);
+  - adds it to the browser;
+  - puts it on that keyframe.
+
+  If it is not 16:9, offer to crop it to 16:9 (draggable crop box); never shrink it. Below 1920×1080, it may be enlarged.
+- **Adding a keyframe.** "Add keyframe after" (and the + between timeline rows) inserts a new keyframe in the same scene,
+  with the same text split or no text, then opens "Choose…" for it.
+- **Removing a picture.** "Remove picture" makes the keyframe carry the one before.
+
+**2. Editing every effect of a keyframe.**
+- **One control per field.** The panel has an "Effects" section with a control for every field of `CinematicSettings`
+  (in Scarlet Reel's `src/types.ts`) that the imported film uses or the copied renderer supports. List them all from the
+  type, so none is missed:
+  - camera mode, focal point (click on the preview to set it), zoom, its duration and easing;
+  - the start and end framing;
+  - the depth map: pick a map file, its move, amount and seconds; the cut-out layers listed;
+  - grade (the named presets), lights, lens flare, vignette and grain;
+  - particles (kind, density, opacity, wind);
+  - transition and its speed; hold and revert.
+- **What a change does.** Every change shows in the live preview at once and can be undone. A "Reset to imported"
+  button sits on each field.
+- **Copying effects.** "Copy effects" and "Paste effects" carry a keyframe's whole effects block to other selected
+  keyframes (shift-click to select several).
+- **Sound effect.** In the same panel: choose from the project's sounds (with play on hover) or upload, set its volume,
+  and remove it.
+
+**Checks (show each, with a screenshot, in your report):**
+- **A picture from the browser:** pick one for keyframe 1 of scene 77. The preview, the timeline thumbnail and the
+  played animatic all show it. Undo restores the old one.
+- **An upload:** upload a new image and drop another onto a timeline row. Both are stored with their original bytes
+  (compare checksums) and both play.
+- **Effects:** on one keyframe, change the zoom, the focal point, the grade and the depth move, and turn rain on. The
+  preview changes with each; play shows the same; undo reverses each.
+- **Copy and paste:** copy the effects to three other keyframes, and they match.
+- **They are saved:** reload the page; every change is still there (autosave).
+- **Export:** export a `.reel.json` and the `studio-edits.json` patch, and show the changed keyframe's entries in both.
+- **Tests:** add unit tests for "set picture", "upload keeps bytes", "set effect field", "copy/paste effects", and undo
+  for each. Run all the tests and show the output.
+
+Report what works and what doesn't, plainly.
 
